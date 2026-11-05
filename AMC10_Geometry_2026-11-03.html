@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AMC 10 几何复习｜2026-11-03</title>
+<style>
+:root{--ink:#203047;--muted:#5d6b7d;--blue:#245b8f;--pale:#eef5fb;--line:#d8e2ec;--gold:#fff7df;--green:#edf7f1}
+*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:var(--ink);font:16px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:900px;margin:32px auto;padding:0 20px 48px}header{padding:30px 32px;background:#fff;border:1px solid var(--line);border-radius:16px;margin-bottom:22px}h1{font-size:clamp(1.7rem,4vw,2.3rem);margin:0 0 6px;color:#173b60}header p{margin:0;color:var(--muted)}h2{font-size:1.4rem;margin:30px 0 12px}h3{font-size:1.1rem;margin:0 0 8px;color:#1d4f7d}.reminder{background:var(--gold);border-left:5px solid #e4ad32;padding:15px 18px;border-radius:8px;margin:18px 0 24px}.card{background:white;border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:12px 0}.formula{display:inline-block;background:var(--pale);color:#174b78;padding:6px 11px;border-radius:7px;font-weight:650;margin:3px 0 8px}.label{font-size:.85rem;text-transform:none;color:var(--blue);font-weight:700;margin:12px 0 2px}.card p{margin:4px 0}.trap{background:#fff8eb;padding:9px 12px;border-radius:7px;margin-top:10px!important}.example{background:var(--green);padding:10px 12px;border-radius:7px;margin-top:8px!important}.question{border-top:1px solid var(--line);padding:17px 0}.question:first-of-type{border-top:0}.question h3{display:inline}.question p{margin:6px 0}.question details{margin-top:9px}.question summary{cursor:pointer;color:var(--blue);font-weight:700;width:max-content}.solution{background:var(--pale);padding:12px 15px;border-radius:8px;margin-top:9px}.checklist{background:white;border:1px solid var(--line);border-radius:12px;padding:17px 22px;margin-top:14px}.checklist ul{margin:6px 0 0;padding-left:23px}footer{color:var(--muted);font-size:.9rem;margin-top:22px}
+@media(max-width:560px){main{padding:0 13px 32px;margin-top:16px}header,.card{padding:17px}}
+</style>
+</head>
+<body>
+<main>
+<header>
+<h1>AMC 10 几何复习</h1>
+<p>几何日 · 2026-11-03｜公式、图形关系与审题习惯</p>
+</header>
+<div class="reminder"><strong>审题提醒：</strong>算出结果后，重新读一遍题目，确认题目实际问的是什么。答案正确但答错量（或坐标分量）仍然会失分。</div>
+
+<h2>六个知识点</h2>
+<section class="card">
+<h3>1. 直角三角形斜边上的高</h3>
+<div class="formula">若两直角边为 a、b，斜边为 c，则 h = ab / c</div>
+<p class="label">关键想法</p><p>同一三角形面积可写成 ab/2，也可写成 ch/2；令两者相等即可得到斜边上的高。先用勾股定理求 c（若尚未知）。</p>
+<p class="example"><strong>例：</strong>两直角边为 9、12，斜边为 15。高 h = 9×12/15 = 36/5。</p>
+<p class="trap"><strong>常见陷阱：</strong>把斜边误当作高，或用 ab/c 时忘记先确认 c 是斜边。</p>
+</section>
+<section class="card">
+<h3>2. 弧长与扇形面积</h3>
+<div class="formula">θ 以弧度计：弧长 L = rθ；扇形面积 A = ½r²θ</div>
+<p class="label">关键想法</p><p>若中心角以度数给出，先转弧度：θ =（角度数）× π/180。弧长是长度，扇形面积是平方单位。</p>
+<p class="example"><strong>例：</strong>半径 3、中心角 60° = π/3，则 L = 3·π/3 = π；A = ½·9·π/3 = 3π/2。</p>
+<p class="trap"><strong>常见陷阱：</strong>题目问 arc length 却计算 sector area；还要避免直接把度数代入弧度公式。</p>
+</section>
+<section class="card">
+<h3>3. 由正方形对角线求面积</h3>
+<div class="formula">A = d² / 2</div>
+<p class="label">关键想法</p><p>正方形边长为 s 时，勾股定理给出 d² = 2s²；面积 A = s²，所以 A = d²/2。</p>
+<p class="example"><strong>例：</strong>对角线 d = 14，面积 A = 14²/2 = 98。</p>
+<p class="trap"><strong>常见陷阱：</strong>把对角线当成边长直接平方；面积单位也应是平方单位。</p>
+</section>
+<section class="card">
+<h3>4. 等腰三角形面积：先求高</h3>
+<div class="formula">A = ½bh；高 h = √(ℓ² − (b/2)²)</div>
+<p class="label">关键想法</p><p>从顶点向底边作高，会垂直平分底边。用 Pythagorean theorem（勾股定理）在形成的直角三角形中求高，再代入面积公式。</p>
+<p class="example"><strong>例：</strong>腰长 10、底边 12。半底边为 6，高为 √(10²−6²)=8，面积为 ½·12·8=48。</p>
+<p class="trap"><strong>常见陷阱：</strong>用整条底边而非半条底边做勾股计算，或忘记面积公式中的 1/2。</p>
+</section>
+<section class="card">
+<h3>5. 正六边形面积</h3>
+<div class="formula">A = 6 ×（√3/4）s² = (3√3/2)s²</div>
+<p class="label">关键想法</p><p>连接中心与六个顶点，可分成六个边长为 s 的等边三角形；每个面积为 √3s²/4。</p>
+<p class="example"><strong>例：</strong>边长 s = 4，则面积 A = (3√3/2)·16 = 24√3。</p>
+<p class="trap"><strong>常见陷阱：</strong>只算一个等边三角形的面积，忘记乘 6；别把周长当作边长。</p>
+</section>
+<section class="card">
+<h3>6. 中点公式与坐标分量</h3>
+<div class="formula">(x₁,y₁)、(x₂,y₂) 的中点 M = ((x₁+x₂)/2, (y₁+y₂)/2)</div>
+<p class="label">关键想法</p><p>x 坐标取两个 x 值的平均数，y 坐标取两个 y 值的平均数。逐项对应计算。</p>
+<p class="example"><strong>例：</strong>(−2, 5) 与 (4, 9) 的中点为 ((−2+4)/2, (5+9)/2) = (1, 7)。</p>
+<p class="trap"><strong>常见陷阱：</strong>题目只问 x-coordinate 时，只回答 x 值，不必把完整中点坐标当作答案。</p>
+</section>
+
+<h2>练习题</h2>
+<p>先独立作答；点击每题下方的按钮查看答案与完整过程。</p>
+<section class="card">
+<div class="question"><h3>Q1</h3><p>A right triangle has legs 6 and 8. What is the length of the altitude to the hypotenuse?</p><details><summary>显示答案与解答</summary><div class="solution"><strong>答案：4.8</strong><br>斜边 c = √(6²+8²)=10。用面积相等：½·6·8 = ½·10·h，因此 h = 48/10 = 24/5 = 4.8。</div></details></div>
+<div class="question"><h3>Q2</h3><p>A sector has radius 6 and central angle 120 degrees. What is the length of its arc?</p><details><summary>显示答案与解答</summary><div class="solution"><strong>答案：4π</strong><br>120° = 2π/3 弧度。弧长 L = rθ = 6·(2π/3) = 4π。</div></details></div>
+<div class="question"><h3>Q3</h3><p>A square has diagonal 10. What is its area?</p><details><summary>显示答案与解答</summary><div class="solution"><strong>答案：50</strong><br>正方形面积 A = d²/2，所以 A = 10²/2 = 50。</div></details></div>
+<div class="question"><h3>Q4</h3><p>An isosceles triangle has sides 13, 13, and 10. What is its area?</p><details><summary>显示答案与解答</summary><div class="solution"><strong>答案：60</strong><br>作高后，底边 10 被平分为两段 5。由勾股定理，高 h = √(13²−5²)=√144=12。面积 = ½·10·12 = 60。</div></details></div>
+<div class="question"><h3>Q5</h3><p>A regular hexagon has side length 2. What is its area?</p><details><summary>显示答案与解答</summary><div class="solution"><strong>答案：6√3</strong><br>面积 A = (3√3/2)s²。代入 s=2：A = (3√3/2)·4 = 6√3。</div></details></div>
+<div class="question"><h3>Q6</h3><p>What is the x-coordinate of the midpoint of the segment joining (2, 3) and (8, 11)?</p><details><summary>显示答案与解答</summary><div class="solution"><strong>答案：5</strong><br>中点的 x 坐标为 (2+8)/2 = 5。题目只问 x-coordinate，因此答案只写 5。</div></details></div>
+</section>
+<h2>收尾检查</h2>
+<div class="checklist"><ul><li>检查单位是否合适。</li><li>检查题目问的是哪一个量。</li><li>检查是否踩中了对应的常见陷阱。</li></ul></div>
+<footer>AMC 10 几何复习 · 2026-11-03</footer>
+</main>
+</body>
+</html>

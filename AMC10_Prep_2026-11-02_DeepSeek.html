@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMC 10 Trap Drill — 2026-11-02 Algebra Day</title>
+<style>
+  :root {
+    --bg: #f4f7fb;
+    --card: #ffffff;
+    --ink: #1f2937;
+    --muted: #5b6778;
+    --line: #d9e2ef;
+    --accent: #1d4ed8;
+    --accent-soft: #e8efff;
+    --warn: #b45309;
+    --warn-soft: #fff7e6;
+    --ok: #0f766e;
+    --ok-soft: #e8f7f4;
+    --shadow: 0 10px 28px rgba(31, 41, 55, 0.08);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 28px 16px 48px;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+    line-height: 1.65;
+  }
+
+  .container {
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+
+  .hero {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 24px 26px;
+    box-shadow: var(--shadow);
+  }
+
+  .eyebrow {
+    color: var(--accent);
+    font-weight: 800;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin: 8px 0 10px;
+    font-size: clamp(1.65rem, 3.6vw, 2.35rem);
+    line-height: 1.2;
+  }
+
+  h2 {
+    margin: 0 0 10px;
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+
+  h3 {
+    margin: 0 0 8px;
+    font-size: 1.05rem;
+    line-height: 1.35;
+  }
+
+  p {
+    margin: 8px 0;
+  }
+
+  ul {
+    margin: 8px 0 0 1.2em;
+    padding: 0;
+  }
+
+  li {
+    margin: 5px 0;
+  }
+
+  .sub {
+    color: var(--muted);
+  }
+
+  .method {
+    margin-top: 18px;
+    padding: 18px 18px 16px;
+    border-left: 6px solid var(--accent);
+    border-radius: 14px;
+    background: var(--accent-soft);
+  }
+
+  .method h2 {
+    margin-bottom: 8px;
+  }
+
+  .method strong {
+    color: var(--accent);
+  }
+
+  .section {
+    margin-top: 28px;
+  }
+
+  .section-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+
+  .section-heading h2 {
+    margin: 0;
+    font-size: 1.45rem;
+  }
+
+  .section-heading span {
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 6px 18px rgba(31, 41, 55, 0.05);
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 3px 9px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .trap {
+    margin-top: 10px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: var(--warn-soft);
+    color: var(--warn);
+    font-size: 0.95rem;
+  }
+
+  .example {
+    margin-top: 12px;
+    padding: 12px 13px;
+    border-radius: 12px;
+    background: #f8fafc;
+    border: 1px dashed #c8d4e6;
+  }
+
+  .example-title {
+    font-weight: 800;
+    color: var(--ok);
+  }
+
+  .practice-list {
+    display: grid;
+    gap: 14px;
+  }
+
+  .question {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 6px 18px rgba(31, 41, 55, 0.05);
+  }
+
+  .question p {
+    margin-top: 0;
+  }
+
+  .toggle-btn {
+    margin-top: 10px;
+    border: 0;
+    border-radius: 10px;
+    padding: 9px 14px;
+    background: var(--accent);
+    color: #ffffff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.15s ease;
+  }
+
+  .toggle-btn:hover {
+    background: #173fb3;
+  }
+
+  .toggle-btn:active {
+    transform: translateY(1px);
+  }
+
+  .answer {
+    margin-top: 12px;
+    padding: 13px 14px;
+    border-radius: 12px;
+    background: var(--ok-soft);
+    border: 1px solid #bfe8e1;
+    color: #134e4a;
+  }
+
+  .answer[hidden] {
+    display: none;
+  }
+
+  .answer strong {
+    color: var(--ok);
+  }
+
+  .footer {
+    margin-top: 30px;
+    color: var(--muted);
+    text-align: center;
+    font-size: 0.92rem;
+  }
+
+  @media (max-width: 520px) {
+    body {
+      padding: 18px 12px 36px;
+    }
+
+    .hero,
+    .card,
+    .question {
+      padding: 16px;
+    }
+  }
+</style>
+</head>
+<body>
+<main class="container">
+  <header class="hero">
+    <div class="eyebrow">AMC 10 Trap Drill · 2026-11-02 · Algebra Day</div>
+    <h1>先算对，再答对：重读问题</h1>
+    <p class="sub">2026-11-01 成绩：13/15。错误类型：algebra slip；ratio 题问 girls，却答成 boys count。今天专门训练“最后问什么就答什么”。</p>
+
+    <div class="method">
+      <h2>Method at top（每题必做）</h2>
+      <p><strong>After computing, re-read what the question asks before answering.</strong></p>
+      <p>中文：算出结果后，停一下，重读题目最后问的是什么，再写答案。</p>
+      <ul>
+        <li>问 <strong>x</strong> 还是 <strong>x−2</strong>？</li>
+        <li>问 <strong>girls</strong> 还是 <strong>boys</strong>？</li>
+        <li>问 <strong>smaller number</strong> 还是 <strong>larger number</strong>？</li>
+        <li>问 <strong>width</strong> 还是 <strong>length</strong>？</li>
+        <li>问 <strong>event</strong> 还是 <strong>NOT event</strong>？</li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="section" aria-labelledby="knowledge-title">
+    <div class="section-heading">
+      <h2 id="knowledge-title">6 个 Knowledge Points（每个配一个 Worked Example）</h2>
+      <span>先看方法，再做练习</span>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <div class="badge">Knowledge Point 1</div>
+        <h3>Ratio parts（比例份数）</h3>
+        <p>把 ratio 化成 total parts（总份数），再求 one part（一份）代表多少。最后只取题目问的那一类。</p>
+        <div class="example">
+          <div class="example-title">Worked example</div>
+          <p>Boys : girls = 4 : 5，total students = 45。问 girls 有多少？</p>
+          <p>Total parts = 4 + 5 = 9；one part = 45 ÷ 9 = 5；girls = 5 × 5 = <strong>25</strong>。</p>
+        </div>
+        <div class="trap">Trap：如果题目问 girls，不要因为 boys 先出现就写 boys 的 20。</div>
+      </article>
+
+      <article class="card">
+        <div class="badge">Knowledge Point 2</div>
+        <h3>Smaller vs larger number（较小数与较大数）</h3>
+        <p>已知 sum 和 difference 时：smaller = (sum − difference) ÷ 2；larger = (sum + difference) ÷ 2。</p>
+        <div class="example">
+          <div class="example-title">Worked example</div>
+          <p>两数 sum = 24，difference = 8，问 smaller number。</p>
+          <p>smaller = (24 − 8) ÷ 2 = 16 ÷ 2 = <strong>8</strong>；larger = 16。</p>
+        </div>
+        <div class="trap">Trap：算出 larger = 16 后，要再看题目问的是不是 smaller。</div>
+      </article>
+
+      <article class="card">
+        <div class="badge">Knowledge Point 3</div>
+        <h3>Ask for x−2, not x（问的是 x−2，不是 x）</h3>
+        <p>方程解出 x 后，不要立刻交卷。看题目最后要求的 expression 是什么。</p>
+        <div class="example">
+          <div class="example-title">Worked example</div>
+          <p>4x − 6 = 18，问 x − 2 的值。</p>
+          <p>4x = 24，所以 x = 6；然后 x − 2 = 6 − 2 = <strong>4</strong>。</p>
+        </div>
+        <div class="trap">Trap：x = 6 只是中间结果；题目问 x−2 时，答案不是 6。</div>
+      </article>
+
+      <article class="card">
+        <div class="badge">Knowledge Point 4</div>
+        <h3>Rectangle perimeter and width（长方形周长与宽）</h3>
+        <p>Rectangle perimeter：P = 2(length + width)。设 width = w，再把 length 用 w 表示。</p>
+        <div class="example">
+          <div class="example-title">Worked example</div>
+          <p>Length is 3 times width，perimeter = 48。问 width。</p>
+          <p>设 width = w，则 length = 3w。2(w + 3w) = 48，所以 8w = 48，w = <strong>6</strong>。</p>
+        </div>
+        <div class="trap">Trap：算出 width 后，若题目问 width 就写 6，不要写 length = 18。</div>
+      </article>
+
+      <article class="card">
+        <div class="badge">Knowledge Point 5</div>
+        <h3>Arithmetic sequence nth term（等差数列第 n 项）</h3>
+        <p>Formula：a<sub>n</sub> = a<sub>1</sub> + (n − 1)d。注意是 n − 1，不是 n。</p>
+        <div class="example">
+          <div class="example-title">Worked example</div>
+          <p>Sequence：7, 11, 15, …，问 10th term。</p>
+          <p>a<sub>1</sub> = 7，d = 4；a<sub>10</sub> = 7 + (10 − 1)×4 = 7 + 36 = <strong>43</strong>。</p>
+        </div>
+        <div class="trap">Trap：第 10 项只加了 9 次 common difference。</div>
+      </article>
+
+      <article class="card">
+        <div class="badge">Knowledge Point 6</div>
+        <h3>Probability of NOT an event（非某事件的概率）</h3>
+        <p>P(NOT event) = 1 − P(event)，也可以直接数“不是该事件”的 favorable outcomes（有利结果）。</p>
+        <div class="example">
+          <div class="example-title">Worked example</div>
+          <p>Bag 中有 2 red balls 和 7 blue balls。问 P(NOT red)。</p>
+          <p>Total = 9；not red = blue = 7；P(NOT red) = <strong>7/9</strong>。</p>
+        </div>
+        <div class="trap">Trap：题目问 NOT red 时，不要回答 P(red) = 2/9。</div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="practice-title">
+    <div class="section-heading">
+      <h2 id="practice-title">6 道 Practice Questions</h2>
+      <span>先自己算，再点击显示答案</span>
+    </div>
+
+    <div class="practice-list">
+      <article class="question">
+        <p><strong>1.</strong> Boys : girls = 2 : 3，total students = 40。问 girls 有多少人？</p>
+        <button class="toggle-btn" type="button" aria-expanded="false" aria-controls="ans1" onclick="toggleAnswer('ans1', this)">显示答案</button>
+        <div class="answer" id="ans1" hidden>
+          <p><strong>Answer: 24</strong></p>
+          <p>Total parts = 2 + 3 = 5；one part = 40 ÷ 5 = 8；girls = 3 × 8 = 24。</p>
+          <p>提醒：boys = 16，但题目问的是 girls。</p>
+        </div>
+      </article>
+
+      <article class="question">
+        <p><strong>2.</strong> 两数 sum = 30，difference = 6。问 smaller number 是多少？</p>
+        <button class="toggle-btn" type="button" aria-expanded="false" aria-controls="ans2" onclick="toggleAnswer('ans2', this)">显示答案</button>
+        <div class="answer" id="ans2" hidden>
+          <p><strong>Answer: 12</strong></p>
+          <p>smaller = (30 − 6) ÷ 2 = 24 ÷ 2 = 12；larger = 18。</p>
+          <p>提醒：题目问 smaller，不要写 18。</p>
+        </div>
+      </article>
+
+      <article class="question">
+        <p><strong>3.</strong> 已知 3x − 7 = 20，问 x − 2 的值是多少？</p>
+        <button class="toggle-btn" type="button" aria-expanded="false" aria-controls="ans3" onclick="toggleAnswer('ans3', this)">显示答案</button>
+        <div class="answer" id="ans3" hidden>
+          <p><strong>Answer: 7</strong></p>
+          <p>3x = 27，所以 x = 9；x − 2 = 9 − 2 = 7。</p>
+          <p>提醒：题目问 x−2，不是 x。</p>
+        </div>
+      </article>
+
+      <article class="question">
+        <p><strong>4.</strong> 一个 rectangle 的 length 是 width 的 2 倍，perimeter = 36。问 width 是多少？</p>
+        <button class="toggle-btn" type="button" aria-expanded="false" aria-controls="ans4" onclick="toggleAnswer('ans4', this)">显示答案</button>
+        <div class="answer" id="ans4" hidden>
+          <p><strong>Answer: 6</strong></p>
+          <p>设 width = w，则 length = 2w。2(w + 2w) = 36，所以 6w = 36，w = 6。</p>
+          <p>提醒：length = 12，但题目问 width。</p>
+        </div>
+      </article>
+
+      <article class="question">
+        <p><strong>5.</strong> Arithmetic sequence：5, 9, 13, …，问 8th term 是多少？</p>
+        <button class="toggle-btn" type="button" aria-expanded="false" aria-controls="ans5" onclick="toggleAnswer('ans5', this)">显示答案</button>
+        <div class="answer" id="ans5" hidden>
+          <p><strong>Answer: 33</strong></p>
+          <p>a<sub>1</sub> = 5，d = 4；a<sub>8</sub> = 5 + (8 − 1)×4 = 5 + 28 = 33。</p>
+          <p>提醒：nth term 中用的是 n−1。</p>
+        </div>
+      </article>
+
+      <article class="question">
+        <p><strong>6.</strong> Bag 中有 4 red balls 和 6 blue balls。问 probability of NOT red 是多少？</p>
+        <button class="toggle-btn" type="button" aria-expanded="false" aria-controls="ans6" onclick="toggleAnswer('ans6', this)">显示答案</button>
+        <div class="answer" id="ans6" hidden>
+          <p><strong>Answer: 3/5</strong></p>
+          <p>Total = 4 + 6 = 10；not red = blue = 6；P(NOT red) = 6/10 = 3/5。</p>
+          <p>提醒：P(red) = 2/5，但题目问的是 NOT red。</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <div class="footer">
+    AMC 10 Trap Drill · Algebra Day · 2026-11-02 · 每题最后 3 秒：Re-read what the question asks.
+  </div>
+</main>
+
+<script>
+  function toggleAnswer(id, button) {
+    var answer = document.getElementById(id);
+    if (!answer || !button) return;
+
+    var isHidden = answer.hasAttribute('hidden');
+    if (isHidden) {
+      answer.removeAttribute('hidden');
+      button.textContent = '隐藏答案';
+      button.setAttribute('aria-expanded', 'true');
+    } else {
+      answer.setAttribute('hidden', '');
+      button.textContent = '显示答案';
+      button.setAttribute('aria-expanded', 'false');
+    }
+  }
+</script>
+</body>
+</html>

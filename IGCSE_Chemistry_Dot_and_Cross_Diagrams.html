@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dot-and-Cross 图演示 · 离子键与共价键</title>
+<style>
+body{margin:0;background:#f6f7f9;color:#161b26;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;font-size:15px;line-height:1.7}
+.wrap{max-width:980px;margin:0 auto;padding:24px 20px 70px}
+h1{font-size:23px;margin:0 0 8px} .sub{color:#6b7484;font-size:14px;margin-bottom:20px}
+h2{font-size:19px;margin:30px 0 10px} h3{font-size:16px;margin:0 0 6px}
+.card{background:#fff;border:1px solid #e3e7ee;border-radius:14px;padding:18px 20px;margin-bottom:16px}
+.rule{background:#e6f4f8;border:1px solid #bfe3ec;border-radius:10px;padding:12px 15px;margin:12px 0}
+.warn{background:#fdf3e3;border:1px solid #f0d9a8;border-radius:10px;padding:12px 15px;margin:12px 0}
+.good{background:#e9f7ee;border:1px solid #c8e6d2;border-radius:10px;padding:12px 15px;margin:12px 0}
+svg{width:100%;height:auto;display:block;background:#fcfdfe;border:1px solid #eef1f5;border-radius:10px}
+.atom{font-size:22px;font-weight:700;text-anchor:middle;dominant-baseline:middle}
+.e{font-size:20px;font-weight:700;text-anchor:middle;dominant-baseline:middle}
+.e2{font-size:17px;font-weight:700;text-anchor:middle;dominant-baseline:middle}
+.br{font-size:52px;font-weight:400;text-anchor:middle;dominant-baseline:middle}
+.ch{font-size:18px;font-weight:700;text-anchor:middle}
+.note{font-size:13.5px;color:#3d4657} code{background:#eef2f7;padding:1px 6px;border-radius:5px}
+@media print{body{background:#fff}.card{box-shadow:none;break-inside:avoid}}
+</style>
+</head>
+<body><div class="wrap">
+<h1>Dot-and-Cross 图演示</h1>
+<p class="sub">离子键与共价键 · 考试画法 · • 是一个原子的电子，× 是另一个原子的电子，全卷要保持一致</p>
+
+<div class="card">
+<h3>画图前先记住 6 条规则</h3>
+<ol>
+<li><strong>先判断键的类型：</strong>金属 + 非金属 → 离子键；非金属 + 非金属 → 共价键。</li>
+<li><strong>• 和 × 分工固定：</strong>比如全程用 • 表示金属 / 第一个原子，用 × 表示非金属 / 第二个原子，不要中途换。</li>
+<li><strong>离子键：电子要“搬家”。</strong>失去电子的离子里不能再留着那个电子，得到电子的离子里要把搬来的电子画进去，还要加方括号和电荷。</li>
+<li><strong>共价键：共用电子对画在两个原子中间。</strong>数最外层：H 是 2 个，其他原子一般是 8 个（孤对电子也要数）。</li>
+<li><strong>个数要配平：</strong>MgCl₂ 需要 2 个 Cl⁻，Al₂O₃ 需要 2 个 Al³⁺ 和 3 个 O²⁻，不能只画 1 个。</li>
+<li><strong>考试用铅笔画图，电荷写清楚。</strong>方括号、电荷、• × 缺一个都可能扣分。</li>
+</ol>
+</div>
+
+<h2>一、离子键 Ionic Bond：电子转移 + 方括号 + 电荷</h2>
+
+<div class="card">
+<h3>1. NaCl —— 最基础的例子</h3>
+<p>Na（2,8,1）失去 1 个电子 → Na⁺（2,8）；Cl（2,8,7）得到 1 个电子 → Cl⁻（2,8,8）。</p>
+<svg viewBox="0 0 720 220">
+<circle cx="80" cy="110" r="30" fill="#fff" stroke="#161b26" stroke-width="2"/><text class="atom" x="80" y="110">Na</text><text class="e" x="118" y="110">•</text>
+<circle cx="220" cy="110" r="30" fill="#fff" stroke="#161b26" stroke-width="2"/><text class="atom" x="220" y="110">Cl</text>
+<text class="e2" x="220" y="68">×</text><text class="e2" x="252" y="82">×</text><text class="e2" x="262" y="110">×</text><text class="e2" x="252" y="138">×</text><text class="e2" x="220" y="152">×</text><text class="e2" x="188" y="138">×</text><text class="e2" x="178" y="110">×</text>
+<text x="330" y="118" font-size="34" text-anchor="middle">→</text>
+<text class="br" x="400" y="112">[</text><text class="atom" x="435" y="110">Na</text><text class="br" x="470" y="112">]</text><text class="ch" x="488" y="88">+</text>
+<text class="br" x="525" y="112">[</text><text class="atom" x="570" y="110">Cl</text><text class="br" x="615" y="112">]</text><text class="ch" x="633" y="88">−</text>
+<text class="e2" x="570" y="68">×</text><text class="e2" x="602" y="82">×</text><text class="e2" x="612" y="110">×</text><text class="e2" x="602" y="138">×</text><text class="e2" x="570" y="152">×</text><text class="e2" x="538" y="138">×</text><text class="e2" x="528" y="110">×</text><text class="e" x="538" y="82">•</text>
+</svg>
+<p class="note">右边 Cl⁻ 外层一共 8 个电子：原来自己的 7 个 ×，加上从 Na 搬来的 1 个 •。Na⁺ 里面不再画那个 •。</p>
+</div>
+
+<div class="card">
+<h3>2. MgO —— 失去 / 得到 2 个电子</h3>
+<p>Mg（2,8,2）失去 2 个电子 → Mg²⁺（2,8）；O（2,6）得到 2 个电子 → O²⁻（2,8）。</p>
+<svg viewBox="0 0 720 220">
+<circle cx="80" cy="110" r="30" fill="#fff" stroke="#161b26" stroke-width="2"/><text class="atom" x="80" y="110">Mg</text><text class="e" x="118" y="88">•</text><text class="e" x="118" y="132">•</text>
+<circle cx="220" cy="110" r="30" fill="#fff" stroke="#161b26" stroke-width="2"/><text class="atom" x="220" y="110">O</text>
+<text class="e2" x="220" y="68">×</text><text class="e2" x="252" y="82">×</text><text class="e2" x="262" y="110">×</text><text class="e2" x="252" y="138">×</text><text class="e2" x="220" y="152">×</text><text class="e2" x="188" y="138">×</text>
+<text x="330" y="118" font-size="34" text-anchor="middle">→</text>
+<text class="br" x="400" y="112">[</text><text class="atom" x="435" y="110">Mg</text><text class="br" x="470" y="112">]</text><text class="ch" x="490" y="88">2+</text>
+<text class="br" x="525" y="112">[</text><text class="atom" x="570" y="110">O</text><text class="br" x="615" y="112">]</text><text class="ch" x="635" y="88">2−</text>
+<text class="e2" x="570" y="68">×</text><text class="e2" x="602" y="82">×</text><text class="e2" x="612" y="110">×</text><text class="e2" x="602" y="138">×</text><text class="e2" x="570" y="152">×</text><text class="e2" x="538" y="138">×</text><text class="e" x="538" y="82">•</text><text class="e" x="528" y="110">•</text>
+</svg>
+<p class="note">右边 O²⁻ 外层也是 8 个：原来 6 个 ×，加上从 Mg 搬来的 2 个 •。电荷是 2−，不是 1−，别漏写 2。</p>
+</div>
+
+<div class="card">
+<h3>3. MgCl₂ —— 为什么需要 2 个 Cl？</h3>
+<p>Mg 失去 2 个电子，但 1 个 Cl 只能接受 1 个，所以需要 2 个 Cl，每个都变成 Cl⁻。画图时 2 个 Cl⁻ 都要画出来，不能只画 1 个然后写个 2 字了事。</p>
+<svg viewBox="0 0 760 320">
+<circle cx="80" cy="160" r="30" fill="#fff" stroke="#161b26" stroke-width="2"/><text class="atom" x="80" y="160">Mg</text><text class="e" x="118" y="138">•</text><text class="e" x="118" y="182">•</text>
+<circle cx="230" cy="80" r="28" fill="#fff" stroke="#161b26" stroke-width="2"/><text class="atom" x="230" y="80">Cl</text>
+<circle cx="230" cy="240" r="28" fill="#fff" stroke="#161b26" stroke-width="2"/><text class="atom" x="230" y="240">Cl</text>
+<text class="e2" x="230" y="38">×</text><text class="e2" x="262" y="52">×</text><text class="e2" x="272" y="80">×</text><text class="e2" x="262" y="108">×</text><text class="e2" x="230" y="122">×</text><text class="e2" x="198" y="108">×</text><text class="e2" x="188" y="80">×</text>
+<text class="e2" x="230" y="198">×</text><text class="e2" x="262" y="212">×</text><text class="e2" x="272" y="240">×</text><text class="e2" x="262" y="268">×</text><text class="e2" x="230" y="282">×</text><text class="e2" x="198" y="268">×</text><text class="e2" x="188" y="240">×</text>
+<text x="330" y="168" font-size="34" text-anchor="middle">→</text>
+<text class="br" x="400" y="162">[</text><text class="atom" x="435" y="160">Mg</text><text class="br" x="470" y="162">]</text><text class="ch" x="490" y="138">2+</text>
+<text class="br" x="530" y="82">[</text><text class="atom" x="575" y="80">Cl</text><text class="br" x="620" y="82">]</text><text class="ch" x="638" y="58">−</text>
+<text class="br" x="530" y="242">[</text><text class="atom" x="575" y="240">Cl</text><text class="br" x="620" y="242">]</text><text class="ch" x="638" y="218">−</text>
+<text class="e" x="545" y="52">•</text><text class="e2" x="575" y="38">×</text><text class="e2" x="607" y="52">×</text><text class="e2" x="617" y="80">×</text><text class="e2" x="607" y="108">×</text><text class="e2" x="575" y="122">×</text><text class="e2" x="543" y="108">×</text><text class="e2" x="533" y="80">×</text>
+<text class="e" x="545" y="212">•</text><text class="e2" x="575" y="198">×</text><text class="e2" x="607" y="212">×</text><text class="e2" x="617" y="240">×</text><text class="e2" x="607" y="268">×</text><text class="e2" x="575" y="282">×</text><text class="e2" x="543" y="268">×</text><text class="e2" x="533" y="240">×</text>
+</svg>
+<p class="note">左边每个 Cl 原来只有 7 个 ×，左上方空着一个位置；右边每个 Cl⁻ 外层都是 8 个：7 个 × 加上从 Mg 搬来的 1 个 •，正好填满那个空位。两个 Cl⁻ 都要画出来。</p>
+</div>
+
+<h2>二、共价键 Covalent Bond：共用电子对画在中间</h2>
+
+<div class="card">
+<h3>4. H₂O —— 有孤对电子的经典例子</h3>
+<p>O 在中间，2 个 H 各和 O 共用 1 对电子；O 还剩下 2 对孤对电子，外层一共 8 个。每个 H 外层 2 个。</p>
+<svg viewBox="0 0 340 260">
+<line x1="160" y1="90" x2="90" y2="190" stroke="#161b26" stroke-width="2"/><line x1="160" y1="90" x2="230" y2="190" stroke="#161b26" stroke-width="2"/>
+<circle cx="160" cy="90" r="30" fill="#fff" stroke="#161b26" stroke-width="2"/><text class="atom" x="160" y="90">O</text>
+<circle cx="80" cy="205" r="26" fill="#fff" stroke="#161b26" stroke-width="2"/><text class="atom" x="80" y="205">H</text>
+<circle cx="240" cy="205" r="26" fill="#fff" stroke="#161b26" stroke-width="2"/><text class="atom" x="240" y="205">H</text>
+<text class="e" x="118" y="82">•</text><text class="e" x="118" y="102">•</text><text class="e" x="202" y="82">•</text><text class="e" x="202" y="102">•</text>
+<text class="e" x="118" y="150">•</text><text class="e2" x="102" y="168">×</text>
+<text class="e" x="202" y="150">•</text><text class="e2" x="218" y="168">×</text>
+</svg>
+<p class="note">左右两边各 2 个 • 是 O 的孤对电子；斜线上的 • × 各是一对共用电子：• 来自 O，× 来自 H。</p>
+</div>
+
+<div class="card">
+<h3>5. CH₄ —— 中心原子和 4 个 H 各共用 1 对</h3>
+<p>C 在中间，4 个 H 各和 C 共用 1 对电子；C 外层一共 8 个，每个 H 外层 2 个。</p>
+<svg viewBox="0 0 340 260">
+<line x1="170" y1="130" x2="80" y2="55" stroke="#161b26" stroke-width="2"/><line x1="170" y1="130" x2="260" y2="55" stroke="#161b26" stroke-width="2"/><line x1="170" y1="130" x2="80" y2="205" stroke="#161b26" stroke-width="2"/><line x1="170" y1="130" x2="260" y2="205" stroke="#161b26" stroke-width="2"/>
+<circle cx="170" cy="130" r="30" fill="#fff" stroke="#161b26" stroke-width="2"/><text class="atom" x="170" y="130">C</text>
+<circle cx="70" cy="45" r="24" fill="#fff" stroke="#161b26" stroke-width="2"/><text class="atom" x="70" y="45">H</text>
+<circle cx="270" cy="45" r="24" fill="#fff" stroke="#161b26" stroke-width="2"/><text class="atom" x="270" y="45">H</text>
+<circle cx="70" cy="215" r="24" fill="#fff" stroke="#161b26" stroke-width="2"/><text class="atom" x="70" y="215">H</text>
+<circle cx="270" cy="215" r="24" fill="#fff" stroke="#161b26" stroke-width="2"/><text class="atom" x="270" y="215">H</text>
+<text class="e" x="115" y="85">•</text><text class="e2" x="100" y="70">×</text>
+<text class="e" x="225" y="85">•</text><text class="e2" x="240" y="70">×</text>
+<text class="e" x="115" y="175">•</text><text class="e2" x="100" y="190">×</text>
+<text class="e" x="225" y="175">•</text><text class="e2" x="240" y="190">×</text>
+</svg>
+<p class="note">每条斜线上的 • × 就是一对共用电子，4 条线一共 4 对，C 的外层正好 8 个。</p>
+</div>
+
+<div class="card">
+<h3>6. CO₂ —— 双键要画 2 对共用电子</h3>
+<p>C 在中间，和每个 O 各共用 2 对电子；C 外层 8 个，每个 O 外层也是 8 个（2 对共用 + 2 对孤对）。</p>
+<svg viewBox="0 0 340 220">
+<line x1="100" y1="100" x2="145" y2="100" stroke="#161b26" stroke-width="2"/><line x1="100" y1="120" x2="145" y2="120" stroke="#161b26" stroke-width="2"/>
+<line x1="195" y1="100" x2="240" y2="100" stroke="#161b26" stroke-width="2"/><line x1="195" y1="120" x2="240" y2="120" stroke="#161b26" stroke-width="2"/>
+<circle cx="70" cy="110" r="28" fill="#fff" stroke="#161b26" stroke-width="2"/><text class="atom" x="70" y="110">O</text>
+<circle cx="170" cy="110" r="28" fill="#fff" stroke="#161b26" stroke-width="2"/><text class="atom" x="170" y="110">C</text>
+<circle cx="270" cy="110" r="28" fill="#fff" stroke="#161b26" stroke-width="2"/><text class="atom" x="270" y="110">O</text>
+<text class="e2" x="108" y="92">×</text><text class="e" x="128" y="92">•</text>
+<text class="e2" x="108" y="132">×</text><text class="e" x="128" y="132">•</text>
+<text class="e" x="212" y="92">•</text><text class="e2" x="232" y="92">×</text>
+<text class="e" x="212" y="132">•</text><text class="e2" x="232" y="132">×</text>
+<text class="e2" x="58" y="72">×</text><text class="e2" x="82" y="72">×</text><text class="e2" x="58" y="148">×</text><text class="e2" x="82" y="148">×</text><text class="e2" x="258" y="72">×</text><text class="e2" x="282" y="72">×</text><text class="e2" x="258" y="148">×</text><text class="e2" x="282" y="148">×</text>
+</svg>
+<p class="note">每个 O 上下各有 2 对孤对电子（共 4 个 ×）；中间每边各 2 对 • × 是双键。只画 1 对就是单键，错了。</p>
+</div>
+
+<div class="card">
+<h3>7. NH₃ —— 1 对孤对电子 + 3 对共用电子</h3>
+<p>N 在中间，3 个 H 各和 N 共用 1 对电子；N 还剩下 1 对孤对电子，外层一共 8 个。</p>
+<svg viewBox="0 0 340 260">
+<line x1="170" y1="95" x2="80" y2="190" stroke="#161b26" stroke-width="2"/><line x1="170" y1="95" x2="260" y2="190" stroke="#161b26" stroke-width="2"/><line x1="170" y1="95" x2="170" y2="195" stroke="#161b26" stroke-width="2"/>
+<circle cx="170" cy="95" r="30" fill="#fff" stroke="#161b26" stroke-width="2"/><text class="atom" x="170" y="95">N</text>
+<circle cx="70" cy="205" r="26" fill="#fff" stroke="#161b26" stroke-width="2"/><text class="atom" x="70" y="205">H</text>
+<circle cx="270" cy="205" r="26" fill="#fff" stroke="#161b26" stroke-width="2"/><text class="atom" x="270" y="205">H</text>
+<circle cx="170" cy="215" r="26" fill="#fff" stroke="#161b26" stroke-width="2"/><text class="atom" x="170" y="215">H</text>
+<text class="e" x="170" y="52">•</text><text class="e" x="170" y="32">•</text>
+<text class="e" x="118" y="150">•</text><text class="e2" x="102" y="168">×</text>
+<text class="e" x="222" y="150">•</text><text class="e2" x="238" y="168">×</text>
+<text class="e" x="152" y="150">•</text><text class="e2" x="188" y="150">×</text>
+</svg>
+<p class="note">上面 2 个 • 是 N 的孤对电子；下面 3 组 • × 是 3 对共用电子。</p>
+</div>
+
+<div class="card">
+<h3>8. Cl₂ 和 O₂ —— 单键和双键的对比</h3>
+<p>Cl₂：两个 Cl 各出 1 个电子，共用 1 对；每个 Cl 外层都是 8 个（1 对共用 + 3 对孤对）。<br>
+O₂：两个 O 各出 2 个电子，共用 2 对；每个 O 外层都是 8 个（2 对共用 + 2 对孤对）。</p>
+<svg viewBox="0 0 340 220">
+<line x1="105" y1="60" x2="235" y2="60" stroke="#161b26" stroke-width="2"/>
+<circle cx="75" cy="60" r="28" fill="#fff" stroke="#161b26" stroke-width="2"/><text class="atom" x="75" y="60">Cl</text>
+<circle cx="265" cy="60" r="28" fill="#fff" stroke="#161b26" stroke-width="2"/><text class="atom" x="265" y="60">Cl</text>
+<text class="e" x="155" y="60">•</text><text class="e2" x="185" y="60">×</text>
+<text class="e2" x="63" y="24">×</text><text class="e2" x="87" y="24">×</text><text class="e2" x="63" y="96">×</text><text class="e2" x="87" y="96">×</text><text class="e2" x="37" y="50">×</text><text class="e2" x="37" y="70">×</text><text class="e2" x="253" y="24">×</text><text class="e2" x="277" y="24">×</text><text class="e2" x="253" y="96">×</text><text class="e2" x="277" y="96">×</text><text class="e2" x="303" y="50">×</text><text class="e2" x="303" y="70">×</text>
+<line x1="105" y1="155" x2="235" y2="155" stroke="#161b26" stroke-width="2"/><line x1="105" y1="175" x2="235" y2="175" stroke="#161b26" stroke-width="2"/>
+<circle cx="75" cy="165" r="28" fill="#fff" stroke="#161b26" stroke-width="2"/><text class="atom" x="75" y="165">O</text>
+<circle cx="265" cy="165" r="28" fill="#fff" stroke="#161b26" stroke-width="2"/><text class="atom" x="265" y="165">O</text>
+<text class="e" x="155" y="145">•</text><text class="e2" x="185" y="145">×</text>
+<text class="e" x="155" y="185">•</text><text class="e2" x="185" y="185">×</text>
+<text class="e2" x="63" y="127">×</text><text class="e2" x="87" y="127">×</text><text class="e2" x="63" y="203">×</text><text class="e2" x="87" y="203">×</text><text class="e2" x="253" y="127">×</text><text class="e2" x="277" y="127">×</text><text class="e2" x="253" y="203">×</text><text class="e2" x="277" y="203">×</text>
+</svg>
+<p class="note">上面是 Cl₂，下面是 O₂。看中间有几对 • ×，就是单键还是双键。</p>
+</div>
+
+<div class="card">
+<h3>自己动手检查清单</h3>
+<ul>
+<li>离子图：有没有方括号？电荷对不对？转移的电子有没有搬过去？个数配平了吗？</li>
+<li>共价图：共用电子对是不是在两个原子中间？H 外层是不是 2 个，其他原子外层是不是 8 个？孤对电子数对了吗？</li>
+<li>双键 / 三键：是不是画了 2 对 / 3 对，而不是只画 1 对？</li>
+<li>• 和 × 有没有全卷保持一致的分工？</li>
+</ul>
+<div class="warn"><strong>最容易丢分的 3 个地方：</strong>① 离子图漏方括号或漏电荷；② 共价图把孤对电子漏画，导致外层不到 8 个；③ MgCl₂、Al₂O₃ 这类需要多个离子的，只画了 1 个。</div>
+</div>
+
+<p class="note">金属键没有 dot-and-cross 图，考试画的是“正离子规则排列 + 离域电子海”的示意图：画一排带 + 的圆圈，周围画一群可以自由移动的小电子，不要画成共价的共用电子对。</p>
+</div></body></html>
