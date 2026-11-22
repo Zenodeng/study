@@ -1,0 +1,2920 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cambridge IGCSE Global Perspectives (0457) 完整知识点精讲与高分宝典</title>
+  <style>
+/* ==========================================================================
+   Cambridge IGCSE Global Perspectives (0457) Study Guide — Stylesheet
+   Zero external dependencies, print-ready, responsive, Light & Dark themes
+   ========================================================================== */
+
+:root {
+  --bg-page: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --bg-sidebar: #FFFFFF;
+  --bg-code: #EFF6FF;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-faint: #64748B;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+
+  --accent: #0369A1;
+  --accent-hover: #075985;
+  --accent-soft: #E0F2FE;
+
+  --u1: #0369A1;
+  --u2: #0F766E;
+  --u3: #B45309;
+  --uapp: #4F46E5;
+
+  --c1-bg: #E0F2FE;
+  --c1-text: #075985;
+  --c1-border: #BAE6FD;
+  --cw-bg: #FEF3C7;
+  --cw-text: #92400E;
+  --cw-border: #FDE68A;
+
+  --deep-bg: #EFF6FF;
+  --deep-border: #2563EB;
+  --tip-bg: #FFFBEB;
+  --tip-border: #D97706;
+  --mistake-bg: #FFF1F2;
+  --mistake-border: #E11D48;
+  --example-bg: #F0FDF4;
+  --example-border: #16A34A;
+
+  --ok-bg: #DCFCE7;
+  --ok-text: #166534;
+  --ok-border: #86EFAC;
+  --err-bg: #FEE2E2;
+  --err-text: #991B1B;
+  --err-border: #FCA5A5;
+
+  --svg-bg: #FFFFFF;
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.07);
+  --shadow-lg: 0 10px 26px rgba(15, 23, 42, 0.11);
+
+  --sidebar-w: 292px;
+  --topbar-h: 60px;
+  --radius-sm: 7px;
+  --radius-md: 11px;
+  --radius-lg: 16px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Songti SC", "Noto Serif SC", Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+[data-theme="dark"] {
+  --bg-page: #0B1120;
+  --bg-surface: #111827;
+  --bg-subtle: #1E293B;
+  --bg-sidebar: #0F172A;
+  --bg-code: #1E293B;
+  --text-main: #F1F5F9;
+  --text-muted: #CBD5E1;
+  --text-faint: #94A3B8;
+  --border: #1E293B;
+  --border-strong: #334155;
+
+  --accent: #38BDF8;
+  --accent-hover: #7DD3FC;
+  --accent-soft: rgba(56, 189, 248, 0.16);
+
+  --c1-bg: rgba(56, 189, 248, 0.16);
+  --c1-text: #BAE6FD;
+  --c1-border: rgba(56, 189, 248, 0.35);
+  --cw-bg: rgba(245, 158, 11, 0.16);
+  --cw-text: #FDE68A;
+  --cw-border: rgba(245, 158, 11, 0.35);
+
+  --deep-bg: rgba(37, 99, 235, 0.13);
+  --deep-border: #60A5FA;
+  --tip-bg: rgba(217, 119, 6, 0.13);
+  --tip-border: #FBBF24;
+  --mistake-bg: rgba(225, 29, 72, 0.14);
+  --mistake-border: #FB7185;
+  --example-bg: rgba(22, 163, 74, 0.12);
+  --example-border: #4ADE80;
+
+  --ok-bg: rgba(22, 163, 74, 0.22);
+  --ok-text: #BBF7D0;
+  --ok-border: #22C55E;
+  --err-bg: rgba(220, 38, 38, 0.22);
+  --err-text: #FECACA;
+  --err-border: #EF4444;
+
+  --svg-bg: #1E293B;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--topbar-h) + 18px); }
+body { margin: 0; font-family: var(--font-sans); background: var(--bg-page); color: var(--text-main); line-height: 1.72; font-size: 15.5px; -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4 { margin: 0 0 0.55em 0; line-height: 1.32; font-weight: 700; color: var(--text-main); }
+p { margin: 0 0 0.9em 0; }
+ul, ol { margin: 0 0 1em 0; padding-left: 1.45em; }
+li { margin-bottom: 0.35em; }
+code { font-family: var(--font-mono); font-size: 0.9em; background: var(--bg-code); color: var(--accent); padding: 2px 6px; border-radius: 4px; }
+
+/* Filter C1 vs Coursework visibility */
+body.mode-c1 .cw-section { display: none !important; }
+body.mode-cw .c1-section { display: none !important; }
+
+.topbar {
+  position: sticky; top: 0; z-index: 100; height: var(--topbar-h);
+  background: var(--bg-surface); border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm); display: flex; align-items: center;
+  justify-content: space-between; gap: 10px; padding: 0 16px;
+}
+.topbar-left { display: flex; align-items: center; gap: 10px; min-width: 0; flex-shrink: 0; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 34px; padding: 0 11px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--bg-surface); color: var(--text-main); font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; }
+.icon-btn:hover { background: var(--bg-subtle); border-color: var(--accent); }
+.icon-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.menu-toggle { display: none; }
+.brand-pill { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14.5px; white-space: nowrap; flex-shrink: 0; }
+.brand-code { background: var(--accent); color: #fff; padding: 2px 7px; border-radius: 5px; font-size: 12px; letter-spacing: 0.4px; white-space: nowrap; flex-shrink: 0; }
+.search-wrap { position: relative; flex: 1 1 160px; min-width: 140px; max-width: 300px; }
+.search-input { width: 100%; height: 34px; padding: 0 30px 0 32px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--bg-subtle); color: var(--text-main); font-size: 13.5px; outline: none; }
+.search-input:focus { border-color: var(--accent); background: var(--bg-surface); }
+.search-icon { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); color: var(--text-faint); font-size: 13px; pointer-events: none; }
+.search-clear { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); border: none; background: transparent; color: var(--text-faint); cursor: pointer; font-size: 14px; display: none; }
+.search-results-bar { display: none; background: var(--accent-soft); border-bottom: 1px solid var(--border); padding: 8px 20px; font-size: 13.5px; color: var(--text-main); align-items: center; justify-content: space-between; gap: 12px; }
+.search-results-bar.visible { display: flex; }
+.topbar-controls { display: flex; align-items: center; gap: 8px; }
+.seg-group { display: inline-flex; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); overflow: hidden; background: var(--bg-subtle); }
+.seg-btn { border: none; background: transparent; color: var(--text-muted); padding: 6px 10px; font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.seg-btn.active { background: var(--accent); color: #fff; }
+.progress-chip { display: flex; align-items: center; gap: 8px; padding: 4px 10px; border-radius: 999px; background: var(--bg-subtle); border: 1px solid var(--border); font-size: 12.5px; font-weight: 600; white-space: nowrap; }
+.progress-track { width: 60px; height: 7px; background: var(--border-strong); border-radius: 99px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #0369A1, #D97706); transition: width 0.25s ease; }
+
+.app-layout { display: flex; min-height: calc(100vh - var(--topbar-h)); }
+.sidebar { width: var(--sidebar-w); flex-shrink: 0; background: var(--bg-sidebar); border-right: 1px solid var(--border); position: sticky; top: var(--topbar-h); height: calc(100vh - var(--topbar-h)); overflow-y: auto; padding: 14px 10px 44px 10px; }
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 99px; }
+.nav-unit { margin-bottom: 8px; }
+.nav-unit-btn { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border: none; border-radius: var(--radius-sm); background: transparent; color: var(--text-main); font-size: 13px; font-weight: 700; text-align: left; cursor: pointer; }
+.nav-unit-btn:hover { background: var(--bg-subtle); }
+.nav-unit-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.nav-unit-title { flex: 1; display: flex; align-items: center; gap: 7px; line-height: 1.3; }
+.nav-chevron { font-size: 11px; color: var(--text-faint); transition: transform 0.2s; }
+.nav-unit.collapsed .nav-chevron { transform: rotate(-90deg); }
+.nav-unit.collapsed .nav-links { display: none; }
+.nav-links { list-style: none; padding: 2px 0 4px 12px; margin: 0 0 0 14px; border-left: 2px solid var(--border); }
+.nav-link { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 5px 9px; margin: 2px 0; border-radius: var(--radius-sm); color: var(--text-muted); font-size: 12.6px; line-height: 1.35; text-decoration: none; }
+.nav-link:hover { background: var(--bg-subtle); color: var(--text-main); text-decoration: none; }
+.nav-link.active { background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+.nav-done-mark { color: #10B981; font-weight: 800; font-size: 12px; opacity: 0; }
+.nav-link.mastered .nav-done-mark { opacity: 1; }
+.main-content { flex: 1; min-width: 0; padding: 26px 32px 80px 32px; }
+.content-inner { max-width: 960px; margin: 0 auto; }
+
+.hero-card { background: linear-gradient(135deg, #0F172A 0%, #0369A1 55%, #B45309 100%); color: #fff; border-radius: var(--radius-lg); padding: 32px 34px; margin-bottom: 28px; box-shadow: var(--shadow-lg); }
+.hero-card h1 { color: #fff; font-size: 27px; margin-bottom: 10px; letter-spacing: -0.3px; }
+.hero-sub { color: rgba(255,255,255,0.92); font-size: 15px; max-width: 800px; margin-bottom: 18px; }
+.hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.hero-pill { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.28); color: #fff; padding: 4px 11px; border-radius: 999px; font-size: 12.5px; font-weight: 600; }
+.unit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.unit-tile { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.24); border-radius: var(--radius-md); padding: 12px 14px; color: #fff; text-decoration: none; display: block; transition: transform 0.15s, background 0.15s; }
+.unit-tile:hover { transform: translateY(-2px); background: rgba(255,255,255,0.22); text-decoration: none; }
+.unit-tile-num { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.7px; opacity: 0.85; font-weight: 700; }
+.unit-tile-title { font-size: 14.5px; font-weight: 700; margin: 3px 0; }
+.unit-tile-meta { font-size: 12px; opacity: 0.88; }
+
+.unit-block { margin-bottom: 46px; }
+.unit-banner { background: var(--bg-surface); border: 1px solid var(--border); border-top: 5px solid var(--unit-color, var(--accent)); border-radius: var(--radius-md); padding: 22px 24px; margin-bottom: 22px; box-shadow: var(--shadow-sm); }
+.unit-kicker { font-size: 12.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--unit-color, var(--accent)); margin-bottom: 4px; }
+.unit-banner h2 { font-size: 24px; margin-bottom: 6px; }
+.unit-banner p { color: var(--text-muted); margin-bottom: 0; font-size: 14.5px; }
+
+.topic-section { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 26px 28px; margin-bottom: 26px; box-shadow: var(--shadow-sm); }
+.topic-section.search-dim { display: none; }
+.section-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding-bottom: 14px; margin-bottom: 20px; border-bottom: 2px solid var(--border); }
+.section-title-group h3 { font-size: 20px; margin-bottom: 5px; }
+.section-en-sub { font-size: 13.5px; color: var(--text-faint); font-weight: 600; }
+.tier-row { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 7px; }
+.badge-c1, .badge-cw { display: inline-block; font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.badge-c1 { background: var(--c1-bg); color: var(--c1-text); border: 1px solid var(--c1-border); }
+.badge-cw { background: var(--cw-bg); color: var(--cw-text); border: 1px solid var(--cw-border); }
+.master-btn { flex-shrink: 0; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-muted); font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.master-btn:hover { border-color: #10B981; color: #10B981; }
+.master-btn.is-mastered { background: var(--ok-bg); color: var(--ok-text); border-color: var(--ok-border); }
+.subtopic { margin-bottom: 24px; }
+.subtopic:last-of-type { margin-bottom: 16px; }
+.subtopic h4 { font-size: 16.5px; color: var(--accent); margin: 0 0 10px 0; padding-bottom: 4px; border-bottom: 1px dashed var(--border); display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+
+.model-box { background: var(--example-bg); border: 1px solid var(--border); border-left: 4px solid var(--example-border); border-radius: var(--radius-md); padding: 16px 18px; margin: 14px 0; }
+.model-en { font-family: var(--font-serif); font-size: 15.2px; line-height: 1.75; color: var(--text-main); }
+.model-cn { font-size: 13.5px; color: var(--text-muted); margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--border); }
+
+.callout { border-radius: var(--radius-sm); padding: 13px 16px; margin: 14px 0; border-left: 4px solid var(--border-strong); font-size: 14.5px; }
+.callout-title { font-weight: 800; font-size: 13.5px; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+.deep-dive { background: var(--deep-bg); border-left-color: var(--deep-border); }
+.deep-dive .callout-title { color: var(--deep-border); }
+.examiner-tip { background: var(--tip-bg); border-left-color: var(--tip-border); }
+.examiner-tip .callout-title { color: var(--tip-border); }
+.common-mistake { background: var(--mistake-bg); border-left-color: var(--mistake-border); }
+.common-mistake .callout-title { color: var(--mistake-border); }
+
+.table-wrap { width: 100%; overflow-x: auto; margin: 14px 0; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+table.gp-table { width: 100%; border-collapse: collapse; font-size: 13.8px; text-align: left; }
+table.gp-table th { background: var(--bg-subtle); color: var(--text-main); font-weight: 700; padding: 9px 12px; border-bottom: 2px solid var(--border-strong); white-space: nowrap; }
+table.gp-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.gp-table tr:last-child td { border-bottom: none; }
+table.gp-table tbody tr:hover { background: var(--bg-subtle); }
+
+.svg-figure { background: var(--svg-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px; margin: 16px 0; text-align: center; break-inside: avoid; }
+.svg-figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.svg-caption { margin-top: 8px; font-size: 13px; color: var(--text-faint); font-weight: 600; }
+
+/* Interactive GP Labs */
+.lab-box { background: var(--bg-subtle); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px; margin: 18px 0; break-inside: avoid; }
+.lab-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+.lab-title { font-size: 15.5px; font-weight: 800; color: var(--accent); display: flex; align-items: center; gap: 7px; }
+.lab-panel { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; }
+.lab-controls { display: flex; flex-wrap: wrap; gap: 8px 12px; margin-bottom: 12px; align-items: center; }
+.lab-controls select, .lab-controls input { padding: 6px 10px; border-radius: 6px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-main); font-size: 13.2px; }
+.cw-textarea { width: 100%; min-height: 110px; padding: 10px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-page); color: var(--text-main); font-family: var(--font-sans); font-size: 14px; line-height: 1.65; resize: vertical; }
+.tab-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.tab-btn { border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-muted); padding: 4px 10px; border-radius: 6px; font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.tab-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.lab-readout { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px; font-size: 13px; font-weight: 600; }
+.readout-pill { background: var(--bg-surface); border: 1px solid var(--border); padding: 5px 10px; border-radius: 6px; }
+.raven-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(175px, 1fr)); gap: 10px; margin-top: 10px; }
+.raven-card { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-sm); padding: 10px 12px; font-size: 13.3px; }
+.raven-card strong { color: var(--accent); display: block; margin-bottom: 4px; font-size: 12.5px; }
+
+/* Practice Questions & Concepts */
+.practice-block { margin-top: 24px; padding-top: 18px; border-top: 2px dashed var(--border-strong); }
+.practice-heading { font-size: 16px; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.exam-q { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 14px; break-inside: avoid; }
+.exam-q-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; font-size: 12.5px; }
+.q-tag { font-weight: 800; color: var(--accent); background: var(--accent-soft); padding: 2px 8px; border-radius: 5px; }
+.q-marks { font-weight: 700; color: var(--text-faint); }
+.q-stem-en { font-size: 14.8px; font-weight: 600; color: var(--text-main); margin-bottom: 6px; }
+.q-stem-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 12px; }
+.mcq-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin-bottom: 10px; }
+.mcq-opt { text-align: left; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 13.8px; cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.mcq-opt:hover { border-color: var(--accent); background: var(--bg-subtle); }
+.mcq-opt.correct { background: var(--ok-bg); border-color: var(--ok-border); color: var(--ok-text); font-weight: 700; }
+.mcq-opt.wrong { background: var(--err-bg); border-color: var(--err-border); color: var(--err-text); }
+.mcq-feedback { display: none; font-size: 13.5px; padding: 10px 12px; border-radius: var(--radius-sm); margin-top: 8px; }
+.mcq-feedback.visible { display: block; }
+.mcq-feedback.ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.mcq-feedback.err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+details.ms-details { margin-top: 10px; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 12px; }
+details.ms-details summary { cursor: pointer; font-weight: 700; font-size: 13.5px; color: var(--accent); user-select: none; }
+.ms-body { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 13.8px; }
+.ms-mark { display: inline-block; font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--c1-text); background: var(--c1-bg); padding: 1px 5px; border-radius: 4px; margin-right: 4px; }
+.ms-cn { color: var(--text-muted); margin-top: 4px; }
+
+.concept-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 14px; margin-bottom: 18px; }
+.concept-filter-group { display: flex; flex-wrap: wrap; gap: 6px; }
+.concept-actions { display: flex; align-items: center; gap: 10px; }
+.concept-count-pill { font-size: 12.5px; font-weight: 700; color: var(--text-muted); }
+.concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 14px; }
+.concept-card { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; gap: 8px; break-inside: avoid; }
+.concept-card:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
+.concept-card.concept-hidden { display: none !important; }
+.cq-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.cq-meta { display: flex; align-items: center; gap: 6px; font-size: 12px; }
+.cq-en { font-weight: 700; font-size: 14.5px; color: var(--text-main); line-height: 1.45; }
+.cq-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 2px; }
+.cq-answer { position: relative; margin-top: auto; background: var(--bg-surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius-sm); padding: 11px 13px; font-size: 13.8px; line-height: 1.6; }
+.kw { color: var(--accent); background: var(--accent-soft); padding: 0 4px; border-radius: 3px; font-weight: 700; }
+.cq-mask-hint { display: none; }
+.concept-card.masked .cq-answer { cursor: pointer; }
+.concept-card.masked .cq-answer-inner { filter: blur(7px); opacity: 0.22; user-select: none; pointer-events: none; transition: filter 0.2s, opacity 0.2s; }
+.concept-card.masked .cq-mask-hint { display: flex; align-items: center; justify-content: center; position: absolute; inset: 0; font-size: 13.5px; font-weight: 700; color: var(--accent); background: rgba(255,255,255,0.25); border-radius: var(--radius-sm); }
+[data-theme="dark"] .concept-card.masked .cq-mask-hint { background: rgba(15,23,42,0.35); }
+
+.back-top-btn { position: fixed; right: 22px; bottom: 22px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); box-shadow: var(--shadow-md); cursor: pointer; display: none; align-items: center; justify-content: center; font-size: 17px; font-weight: 800; z-index: 80; }
+.back-top-btn.visible { display: flex; }
+
+@media (max-width: 1200px) {
+  .brand-title, .btn-label { display: none; }
+  .seg-btn { padding: 6px 8px; }
+}
+@media (max-width: 980px) {
+  .menu-toggle { display: inline-flex; }
+  .sidebar { position: fixed; left: 0; top: var(--topbar-h); z-index: 95; transform: translateX(-100%); transition: transform 0.22s ease; box-shadow: var(--shadow-lg); }
+  .sidebar.open { transform: translateX(0); }
+  .main-content { padding: 18px 14px 64px 14px; }
+  .topic-section { padding: 18px 16px; }
+  .progress-chip { display: none; }
+  .search-wrap { min-width: 130px; }
+}
+@media (max-width: 640px) {
+  .brand-title { display: none; }
+  .topbar { padding: 0 10px; gap: 6px; }
+  .search-wrap { max-width: none; }
+  .btn-label { display: none; }
+  .concept-grid { grid-template-columns: 1fr; }
+}
+@media print {
+  .topbar, .sidebar, .search-results-bar, .back-top-btn, .master-btn, .lab-controls button, .concept-toolbar, .cq-mask-hint { display: none !important; }
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  .main-content { padding: 0 !important; }
+  .content-inner { max-width: 100% !important; }
+  .topic-section, .unit-banner, .exam-q, .callout, .model-box, .svg-figure, .concept-card { box-shadow: none !important; break-inside: avoid; border-color: #CBD5E1 !important; }
+  details.ms-details, details.ms-details .ms-body, .mcq-feedback { display: block !important; }
+  .concept-card.masked .cq-answer-inner { filter: none !important; opacity: 1 !important; }
+}
+
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="展开目录">☰ 目录</button>
+      <div class="brand-pill">
+        <span class="brand-code">0457 GP</span>
+        <span class="brand-title">IGCSE Global Perspectives</span>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="search" id="searchInput" class="search-input" placeholder="搜索 RAVEN、vested interest、Q4、IR字数、Team Project..." autocomplete="off" />
+      <button type="button" class="search-clear" id="searchClear" title="清空搜索">✕</button>
+    </div>
+
+    <div class="topbar-controls">
+      <div class="seg-group" role="group" aria-label="评估组件筛选">
+        <button type="button" class="seg-btn active" data-gp-mode="all">All</button>
+        <button type="button" class="seg-btn" data-gp-mode="c1">Written Exam (C1)</button>
+        <button type="button" class="seg-btn" data-gp-mode="cw">Coursework (IR &amp; TP)</button>
+      </div>
+
+      <div class="progress-chip" title="全册 12 节核心模块掌握进度">
+        <span id="progressText">0/12</span>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+
+      <button type="button" class="icon-btn" id="toggleAllMs" title="展开或收起全部解析"><span>📝</span><span class="btn-label">展开解析</span></button>
+      <button type="button" class="icon-btn" id="themeToggle" title="切换亮色/暗色主题"><span id="themeIcon">🌙</span><span class="btn-label">主题</span></button>
+      <button type="button" class="icon-btn" id="printBtn" title="打印或导出为 PDF"><span>🖨️</span><span class="btn-label">导出 PDF</span></button>
+    </div>
+  </header>
+
+  <div class="search-results-bar" id="searchBar">
+    <span id="searchSummary">找到 0 个匹配章节</span>
+    <button type="button" class="icon-btn" id="searchResetBtn">重置过滤</button>
+  </div>
+
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="课程大纲导航">
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: var(--u1);"></span>Component 1 笔试基础 (Q1 &amp; Q2)</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#sec-g1"><span>1. 0457 考纲全景与 15 大议题</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-g2"><span>2. Q1 批判性概念与断言辨析</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-g3"><span>3. Q2A RAVEN/CRAAP 来源评估</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-g4"><span>4. Q2B 研究方法设计与测试 (8分)</span><span class="nav-done-mark">✓</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: var(--u2);"></span>Component 1 高分大题 (Q3 &amp; Q4)</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#sec-g5"><span>5. Q3 双源论证强度对比评估</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-g6"><span>6. Q4 政策权衡与压轴决策 (24分)</span><span class="nav-done-mark">✓</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: var(--u3);"></span>Coursework 课程作业 (65%总分)</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#sec-g7"><span>7. IR 个人报告选题黄金公式</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-g8"><span>8. IR 全球vs本土视角与架构分配</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-g9"><span>9. IR 个人立场、引注与反抄袭</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-g10"><span>10. Team Project 行动与计划书</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-g11"><span>11. TP 个人反思报告 (45分核心)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-g12"><span>12. 常见陷阱排查与冲刺清单</span><span class="nav-done-mark">✓</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: var(--uapp);"></span>考前冲刺附录 Appendix</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#app-topics"><span>附录 A · 15 大全球议题视角矩阵</span><span class="nav-done-mark"></span></a></li>
+          <li><a class="nav-link" href="#app-phrases"><span>附录 B · C1 &amp; IR 英文高分句型库</span><span class="nav-done-mark"></span></a></li>
+          <li><a class="nav-link" href="#app-concepts"><span>附录 C · 44道概念与套路默写库</span><span class="nav-done-mark"></span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-inner">
+        <section class="hero-card" id="top">
+          <h1>Cambridge IGCSE Global Perspectives (0457) 精讲宝典</h1>
+          <p class="hero-sub">
+            完整覆盖 <strong>2025–2027 最新考纲</strong>（Component 1 笔试 35% · Component 2 Individual Report 30% · Component 3 Team Project 35%）。彻底打通 Critical Thinking 术语、RAVEN 证据检验、Q3/Q4 满分论证评估框架与双课程作业 65% 高分通关路径！
+          </p>
+          <div class="hero-badges">
+            <span class="hero-pill">📝 Component 1: 1h25m (70m · 35%)</span>
+            <span class="hero-pill">📊 Component 2: IR 1500–2000w (60m · 30%)</span>
+            <span class="hero-pill">🤝 Component 3: Team Project (70m · 35%)</span>
+            <span class="hero-pill">🛠️ 4 个交互式 GP 批判思维实验室</span>
+            <a class="hero-pill" href="#app-concepts" style="text-decoration: none; background: rgba(255,255,255,0.24);">🧠 44 道英汉核心概念直接默写库 →</a>
+          </div>
+
+          <div class="unit-grid">
+            <a class="unit-tile" href="#mod-c1a">
+              <div class="unit-tile-num">Component 1 · Q1 &amp; Q2</div>
+              <div class="unit-tile-title">批判性概念与研究检验</div>
+              <div class="unit-tile-meta">Fact/Opinion/Bias · RAVEN 证据与 8 分实验设计</div>
+            </a>
+            <a class="unit-tile" href="#mod-c1b">
+              <div class="unit-tile-num">Component 1 · Q3 &amp; Q4</div>
+              <div class="unit-tile-title">论证评估与压轴政策权衡</div>
+              <div class="unit-tile-meta">Source A vs B 对比分析 · 20-24分决策矩阵</div>
+            </a>
+            <a class="unit-tile" href="#mod-cw">
+              <div class="unit-tile-num">Components 2 &amp; 3 · 65%</div>
+              <div class="unit-tile-title">IR 个人报告与团队项目</div>
+              <div class="unit-tile-meta">选题公式 / 全球本土视角 / 45分反思论文与字数检验</div>
+            </a>
+            <a class="unit-tile" href="#app-concepts">
+              <div class="unit-tile-num">Appendix A–C</div>
+              <div class="unit-tile-title">15大议题 / 句型 / 44概念库</div>
+              <div class="unit-tile-meta">考官直接采分中英模板 + 🙈 默写遮罩</div>
+            </a>
+          </div>
+        </section>
+
+        <div id="emptySearchNotice" class="callout deep-dive" style="display: none;">
+          <div class="callout-title">🔍 未找到匹配内容</div>
+          <p style="margin-bottom: 0;">请尝试更换关键词（如 <code>vested interest</code>、<code>RAVEN</code>、<code>generalisation</code>、<code>Reflective Paper</code>、<code>Harvard</code>）。</p>
+        </div>
+
+<section class="unit-block c1-section" id="mod-c1a" style="--unit-color: var(--u1);">
+  <div class="unit-banner">
+    <div class="unit-kicker">Component 1 · Written Examination · Q1 &amp; Q2 Foundation</div>
+    <h2>第一部分：GP 考纲全景、批判性思维术语与证据检验</h2>
+    <p>
+      Cambridge IGCSE Global Perspectives (0457) 不考死记硬背某一国家的地理历史事实，而考查你在复杂信息洪流中<strong>拆解视角 (Perspectives)、识别偏见与利益立场 (Bias &amp; Vested Interest)、设计实证检验与做出合乎证据的决策</strong>五大核心思维技能。
+    </p>
+  </div>
+
+  <!-- SEC G1 -->
+  <article class="topic-section c1-section" id="sec-g1">
+    <div class="section-header">
+      <div class="section-title-group">
+        <h3>1. 0457 (2025–2027) 最新考纲结构与 15 大全球议题</h3>
+        <div class="section-en-sub">Syllabus Weightings, Assessment Objectives (AO1–AO3) &amp; the 15 Official Topics</div>
+        <div class="tier-row">
+          <span class="badge-c1">Exam 35% + Coursework 65%</span>
+          <span class="badge-cw">2025–2027 考纲统一议题库</span>
+        </div>
+      </div>
+      <button type="button" class="master-btn" data-section-id="sec-g1">○ 标记掌握</button>
+    </div>
+
+    <div class="subtopic">
+      <h4>1.1 三大评估板块分值与时间构成 (2025–2027 考纲)</h4>
+      <div class="table-wrap">
+        <table class="gp-table">
+          <thead>
+            <tr>
+              <th>评估组件 Component</th>
+              <th>形式与限时/字数</th>
+              <th>总分与占总成绩权重</th>
+              <th>考核内容明细</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Component 1</strong><br>Written Examination (笔试)</td>
+              <td><strong>1 小时 25 分钟</strong><br>（随卷提供 Source Booklet 3–4 则材料）</td>
+              <td><strong>70 分 · 35%</strong></td>
+              <td>4 道必答题（Q1 信息与批判概念；Q2 来源可信度与研究设计；Q3 双源论证强度评估；Q4 政策方案决策评估）。</td>
+            </tr>
+            <tr>
+              <td><strong>Component 2</strong><br>Individual Report (个人报告)</td>
+              <td>学校指导独立完成<br><strong>1,500–2,000 词</strong>（不含参考文献）</td>
+              <td><strong>60 分 · 30%</strong></td>
+              <td>从官方 15 个议题任选其一，自拟开放性研究问题，深度比较全球、国家/本土多方视角、因果链与行动方案并得出证据支撑的个人立场。</td>
+            </tr>
+            <tr>
+              <td><strong>Component 3</strong><br>Team Project (团队项目)</td>
+              <td>2–5 人小组合作<br>行动计划 <strong>300–400 词</strong> + 个人反思论文 <strong>750–1,000 词</strong></td>
+              <td><strong>70 分 · 35%</strong><br>（Team 25分 + Personal 45分）</td>
+              <td><strong>Team Element (25分)</strong>：研发并落实一项针对本土现实问题的社区行动 + 提交研究与规划说明；<br><strong>Personal Element (45分)</strong>：独立撰写反思论文，深入剖析团队合作、行动实效、个人调研与观念蜕变。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="svg-figure">
+        <svg viewBox="0 0 740 215" width="740" height="215" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="IGCSE GP 0457 考核目标与三板块权重图">
+          <rect x="0" y="0" width="740" height="215" rx="10" fill="none" />
+          <text x="370" y="25" text-anchor="middle" font-size="14" font-weight="800" fill="currentColor">IGCSE 0457 三大组件分值结构与 Assessment Objectives (AO1–AO3)</text>
+
+          <rect x="20" y="42" width="224" height="114" rx="8" fill="#E0F2FE" stroke="#0369A1" stroke-width="2" />
+          <text x="132" y="66" text-anchor="middle" font-size="14" font-weight="800" fill="#0369A1">Component 1 · 35%</text>
+          <text x="132" y="86" text-anchor="middle" font-size="12" font-weight="700" fill="#0F172A">Written Exam (70m / 1h25m)</text>
+          <text x="132" y="108" text-anchor="middle" font-size="11.2" fill="#334155">Q1 提取与概念 (12–16分)</text>
+          <text x="132" y="125" text-anchor="middle" font-size="11.2" fill="#334155">Q2 评估来源+研究测试 (~16分)</text>
+          <text x="132" y="142" text-anchor="middle" font-size="11.2" fill="#334155">Q3 论证评估 + Q4 决策 (38–42分)</text>
+
+          <rect x="258" y="42" width="224" height="114" rx="8" fill="#ECFDF5" stroke="#0F766E" stroke-width="2" />
+          <text x="370" y="66" text-anchor="middle" font-size="14" font-weight="800" fill="#0F766E">Component 2 · 30%</text>
+          <text x="370" y="86" text-anchor="middle" font-size="12" font-weight="700" fill="#0F172A">Individual Report (60m)</text>
+          <text x="370" y="108" text-anchor="middle" font-size="11.2" fill="#334155">AO1 研究分析与视角评估 (40分)</text>
+          <text x="370" y="125" text-anchor="middle" font-size="11.2" fill="#334155">AO2 反思个人立场演变 (10分)</text>
+          <text x="370" y="142" text-anchor="middle" font-size="11.2" fill="#334155">AO3 学术表达与引注规范 (10分)</text>
+
+          <rect x="496" y="42" width="224" height="114" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="2" />
+          <text x="608" y="66" text-anchor="middle" font-size="14" font-weight="800" fill="#B45309">Component 3 · 35%</text>
+          <text x="608" y="86" text-anchor="middle" font-size="12" font-weight="700" fill="#0F172A">Team Project (70m)</text>
+          <text x="608" y="108" text-anchor="middle" font-size="11.2" fill="#334155">Team Element 规划+行动 (25分)</text>
+          <text x="608" y="125" text-anchor="middle" font-size="11.2" fill="#B45309" font-weight="700">Reflective Paper 个人反思 (45分!)</text>
+          <text x="608" y="142" text-anchor="middle" font-size="11.2" fill="#334155">占比极高：反思决定拿A还是拿A*！</text>
+
+          <rect x="20" y="168" width="700" height="34" rx="6" fill="#0F172A" />
+          <text x="370" y="190" text-anchor="middle" font-size="12" font-weight="700" fill="#F8FAFC">战略提醒：Coursework 占整科总成绩 65%，且 C3 个人反思论文单占 45/70 分——切忌重行动制作、轻反思文字！</text>
+        </svg>
+        <div class="svg-caption">图 1.1 · Global Perspectives 0457 (2025–2027) 分数分布与高分战略重点</div>
+      </div>
+
+      <p>
+        <strong>2025–2027 考纲关键更新</strong>：三部分现已<strong>统一使用同一张 15 大全球议题列表</strong>（取消旧版各板块主题割裂，全部 15 个主题完整清单与三视角灵感详见 <a href="#app-topics">附录 A</a>）：<em>Arts in society · Change in culture and communities · Climate change, energy and resources · Conflict and peace · Development, trade and aid · Digital world · Education for all · Employment · Environment, pollution and conservation · Globalisation · Health and wellbeing · Law and criminality · Media and communication · Migration and urbanisation · Political power and action</em>。
+      </p>
+    </div>
+  </article>
+
+  <!-- SEC G2 -->
+  <article class="topic-section c1-section" id="sec-g2">
+    <div class="section-header">
+      <div class="section-title-group">
+        <h3>2. Q1 核心批判性思维概念精辨与“声称/断言”精准识别</h3>
+        <div class="section-en-sub">Component 1 Q1: Fact, Opinion, Value Judgement, Prediction, Bias, Generalisation &amp; Vested Interest</div>
+        <div class="tier-row">
+          <span class="badge-c1">C1 Q1 送分防丢板块</span>
+          <span class="badge-cw">交互式句型诊断实验 #lab-gp-claim</span>
+        </div>
+      </div>
+      <button type="button" class="master-btn" data-section-id="sec-g2">○ 标记掌握</button>
+    </div>
+
+    <div class="subtopic">
+      <h4>2.1 必背 10 大批判性思维概念精讲（考场直接照定义判断）</h4>
+      <div class="table-wrap">
+        <table class="gp-table">
+          <thead>
+            <tr>
+              <th>英文术语</th>
+              <th>精准定义与识别标志词</th>
+              <th>真题句例示范</th>
+              <th>常见混淆陷阱</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Fact (事实)</strong></td>
+              <td>可被客观核实或测量为真/假的陈述（通常含日期、数据、历史事件）。</td>
+              <td><em>“According to the 2023 WHO report, air pollution caused 4.2 million premature deaths globally.”</em></td>
+              <td>只要句子<strong>原则上能核对真伪</strong>（哪怕写错数字）依然归为 Fact statement，而非 Opinion！</td>
+            </tr>
+            <tr>
+              <td><strong>Opinion (观点)</strong></td>
+              <td>基于个人信念、视角或喜好的判断，无法被客观证伪。</td>
+              <td><em>“In my view, urban cycling lanes are too narrow and inconvenient.”</em></td>
+              <td>常含评价性形容词（too narrow, boring, effective, outdated）。</td>
+            </tr>
+            <tr>
+              <td><strong>Value Judgement (价值判断)</strong></td>
+              <td>涉及<strong>道德伦理“应当 / 对错 / 公平 / 值得”</strong>的主观准则评价。</td>
+              <td><em>“Governments <strong>should prioritise</strong> clean water <strong>over</strong> luxury tourism; it is <strong>unfair</strong> to neglect rural clinics.”</em></td>
+              <td>比普通 Opinion 更强：必带 <em>should / ought to / morally wrong / unfair / justified / duty / right</em> 等价值标尺词。</td>
+            </tr>
+            <tr>
+              <td><strong>Prediction (预测)</strong></td>
+              <td>针对<strong>未来尚未发生之事</strong>做出的推测或预判。</td>
+              <td><em>“By 2035, automation <strong>will replace</strong> 40% of routine clerical roles.”</em></td>
+              <td>关注时态：<em>will / is likely to / may / is projected to / by 2040</em>。</td>
+            </tr>
+            <tr>
+              <td><strong>Bias (偏见)</strong></td>
+              <td>明显倾向于某一方，刻意夸大有利证据或隐藏、贬低对立面事实。</td>
+              <td>使用情绪化标签词（如“disastrous failure”“reckless activists”），只报喜不报忧。</td>
+              <td>作答时必须从原文<strong>摘引具体带情绪的词或失衡例证</strong>，不可仅写“Source A is biased”。</td>
+            </tr>
+            <tr>
+              <td><strong>Vested Interest (既得利益)</strong></td>
+              <td>作者或发布机构因<strong>金钱、声誉、选票、工作饭碗或商业利益</strong>而渴望得出某种结论。</td>
+              <td>煤炭协会发布报告断言“可再生能源永远不可靠”；手机厂商资助研究称“屏幕时间无关视力”。</td>
+              <td>答法模板：<em>“[Author/Org] has a vested interest because if [Policy X] happens, they will lose/gain profits/reputation.”</em></td>
+            </tr>
+            <tr>
+              <td><strong>Generalisation (以偏概全)</strong></td>
+              <td>从极其有限或个别的样本跳脱推论至“所有/绝大多数”群体。</td>
+              <td><em>“My two cousins found remote jobs easily, which proves <strong>every</strong> young person loves working from home.”</em></td>
+              <td>高频标志词：<em>All / Everyone / Always / Never / Young people today...</em></td>
+            </tr>
+            <tr>
+              <td><strong>Correlation vs Causation</strong></td>
+              <td>两现象同期变化（相关）被误当成前者直接引发后者（因果）。</td>
+              <td><em>“Cities with more cafes have higher wages, so opening coffee shops boosts economic growth.”</em></td>
+              <td>忽略第三混杂变量（Confounding factor，如富裕城市本来消费需求高）。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Interactive Widget 1: #lab-gp-claim -->
+    <div class="lab-box" id="lab-gp-claim">
+      <div class="lab-header">
+        <div class="lab-title">🔬 交互实验室 1 · Q1 批判性思维断言分类测试台 (10题闯关)</div>
+        <div class="lab-readout" style="margin-top: 0;">
+          <span class="readout-pill" id="gpClaimProg">第 1 / 10 句</span>
+          <span class="readout-pill" id="gpClaimScore">得分：0 / 0</span>
+        </div>
+      </div>
+      <div class="lab-panel">
+        <div class="model-box" style="margin: 0 0 12px 0;">
+          <div class="model-en" id="gpClaimQuote">Loading sentence...</div>
+          <div class="model-cn" id="gpClaimCtx">Context clue...</div>
+        </div>
+        <div class="tab-row" id="gpClaimBtns">
+          <button type="button" class="tab-btn" data-claim-ans="Fact">Fact (事实)</button>
+          <button type="button" class="tab-btn" data-claim-ans="Opinion">Opinion (普通观点)</button>
+          <button type="button" class="tab-btn" data-claim-ans="Value Judgement">Value Judgement (价值判断)</button>
+          <button type="button" class="tab-btn" data-claim-ans="Prediction">Prediction (预测)</button>
+          <button type="button" class="tab-btn" data-claim-ans="Generalisation">Generalisation (以偏概全)</button>
+          <button type="button" class="tab-btn" data-claim-ans="Vested Interest">Vested Interest (既得利益)</button>
+        </div>
+        <div class="mcq-feedback" id="gpClaimFb"></div>
+        <div class="lab-controls" style="margin-top: 12px; margin-bottom: 0;">
+          <button type="button" class="tab-btn" id="gpClaimPrev">← 上一题</button>
+          <button type="button" class="tab-btn active" id="gpClaimNext">下一题 →</button>
+          <button type="button" class="tab-btn" id="gpClaimReset">重置测试</button>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- SEC G3 -->
+  <article class="topic-section c1-section" id="sec-g3">
+    <div class="section-header">
+      <div class="section-title-group">
+        <h3>3. Q2A 来源可信度评估框架 (RAVEN) 与统计样本缺陷</h3>
+        <div class="section-en-sub">Component 1 Q2(a): Evaluating Source Reliability, Strength &amp; Limitations (~8 Marks)</div>
+        <div class="tier-row">
+          <span class="badge-c1">正反均衡分析 · 必须有Strengths与Weaknesses</span>
+        </div>
+      </div>
+      <button type="button" class="master-btn" data-section-id="sec-g3">○ 标记掌握</button>
+    </div>
+
+    <div class="subtopic">
+      <h4>3.1 考场秒杀来源评估法：R-A-V-E-N 五维框架</h4>
+      <p>
+        Component 1 Q2(a) 通常提问：<em>“How well does the evidence support [Source X]'s argument?”</em> 或 <em>“Explain one strength and one weakness of the evidence used by...”</em>。记住最高分原则：<strong>几乎任何材料既有可信长处 (Strength) 也有局限漏洞 (Weakness)</strong>，必须用<strong>具体原文细节</strong>支撑你的评价：
+      </p>
+      <div class="table-wrap">
+        <table class="gp-table">
+          <thead>
+            <tr>
+              <th>维度字母</th>
+              <th>英文核心考向</th>
+              <th>Strength 加分句型特征</th>
+              <th>Weakness 扣分批判抓手</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>R · Reputation</strong></td>
+              <td>来源声誉、独立性、出版时效 (Currency)</td>
+              <td>来自同行评审期刊、联合国/WHO/政府统计局、近 3 年最新数据。</td>
+              <td>无署名博客、过时十年以上的旧数据（如引用 2009 年数字评估如今 AI 行业）。</td>
+            </tr>
+            <tr>
+              <td><strong>A · Ability to See</strong></td>
+              <td>一手经历 vs 二手转述、样本代表性</td>
+              <td>大样本随机抽样（如 5,000 名多地区受访者）、一线亲历见证者且记录及时。</td>
+              <td><strong>小样本偏差 (Small/Unrepresentative sample)</strong>：仅采访自己朋友或特定群体；仅凭“朋友告诉我”的传闻。</td>
+            </tr>
+            <tr>
+              <td><strong>V · Vested Interest</strong></td>
+              <td>利益相关、赞助背景、隐藏议程</td>
+              <td>独立非营利机构资助、无商业关联的学术团队、披露利益冲突声明。</td>
+              <td>行业游说团体、广告公关、政治竞选人发布的单方利好数据（存在强烈经济/选票动机）。</td>
+            </tr>
+            <tr>
+              <td><strong>E · Expertise</strong></td>
+              <td>作者专业资质与跨领域匹配度</td>
+              <td>流行病学教授谈疫苗传播；教育经济学家谈职业培训投资回报。</td>
+              <td>跨界权威谬误（如明星演员谈气候物理模型）、缺乏实证支撑的个人经验之谈。</td>
+            </tr>
+            <tr>
+              <td><strong>N · Neutrality &amp; Corroboration</strong></td>
+              <td>语调客观度、反方承认、他源交叉印证</td>
+              <td>语气中立克制，主动承认自身统计误差或反方部分合理点，与独立多方数据互证。</td>
+              <td>情绪化煽动词（“total catastrophe”）、断章取义隐瞒百分比分母或绝对基数。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Interactive Widget 2: #lab-gp-eval -->
+    <div class="lab-box" id="lab-gp-eval">
+      <div class="lab-header">
+        <div class="lab-title">⚖️ 交互实验室 2 · RAVEN 证据可信度诊断仪</div>
+        <div class="tab-row" id="gpEvalTabs">
+          <button type="button" class="tab-btn active" data-eval-idx="0">材料A · 企业赞助白皮书</button>
+          <button type="button" class="tab-btn" data-eval-idx="1">材料B · 世卫多国普查</button>
+          <button type="button" class="tab-btn" data-eval-idx="2">材料C · 网红短视频博弈</button>
+          <button type="button" class="tab-btn" data-eval-idx="3">材料D · 退休教师专栏</button>
+        </div>
+      </div>
+      <div class="lab-panel">
+        <div class="model-box" style="margin: 0 0 12px 0;">
+          <div class="model-en" id="gpEvalSource">Loading source...</div>
+          <div class="model-cn" id="gpEvalClaim">Claim...</div>
+        </div>
+        <div class="raven-grid" id="gpEvalGrid"></div>
+        <div class="callout examiner-tip" style="margin-top: 12px; margin-bottom: 0;">
+          <div class="callout-title">✍️ 考场 Band 1 评价模版句自动生成</div>
+          <div id="gpEvalModel">...</div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- SEC G4 -->
+  <article class="topic-section c1-section" id="sec-g4">
+    <div class="section-header">
+      <div class="section-title-group">
+        <h3>4. Q2B 假设检验与社会研究方法设计 (Testing a Claim · 8 Marks)</h3>
+        <div class="section-en-sub">Component 1 Q2(b): Designing Primary &amp; Secondary Research to Test a Claim</div>
+        <div class="tier-row">
+          <span class="badge-c1">必写 8 分结构大题</span>
+          <span class="badge-cw">告别空泛“do a survey on the internet”</span>
+        </div>
+      </div>
+      <button type="button" class="master-btn" data-section-id="sec-g4">○ 标记掌握</button>
+    </div>
+
+    <div class="subtopic">
+      <h4>4.1 Q2(b) 为什么绝大部分考生只能拿 3–4 分？</h4>
+      <p>
+        Q2(b) 典型问法：<em>“Explain how you would test the claim that [e.g. banning smartphones in schools improves students' academic performance].” (8 marks)</em>。如果只写“我会发问卷调查问同学们，然后网上查资料”，缺少<strong>研究工具、具体样本规模与抽样方法、对照变量、要收集的特定指标数据、以及如何通过对比结果来验证或推翻原断言</strong>，通常被锁死在 Level 2 (3–4分)！
+      </p>
+      <div class="callout deep-dive">
+        <div class="callout-title">📐 Q2(b) 拿满 7–8/8 分的“五步满分骨架”</div>
+        <ol style="margin: 6px 0 0 18px;">
+          <li><strong>Step 1 · 选定且多样化研究方法 (Methods)</strong>：至少结合<strong>一种一手实证研究 (Primary) + 一种二手权威数据 (Secondary)</strong>，或<strong>定量统计 (Quantitative) + 定性访谈 (Qualitative)</strong>（如：对比试验/随机抽样问卷 + 教师半结构化访谈 + 校方三年客观成绩档案）。</li>
+          <li><strong>Step 2 · 明确样本、对照组与代表性 (Sample &amp; Control)</strong>：写出具体数量、年级/地区范围及<strong>随机或分层抽样</strong>（如：在 10 所城市与农村中学随机抽取 600 名学生，分实验组禁手机 vs 对照组正常带手机，持续 1 学期，排除家庭背景差异）。</li>
+          <li><strong>Step 3 · 说明精准采集的数据类型与提问内容 (Specific Data &amp; Questions)</strong>：写明具体量化指标（期中期末平均分、作业按时提交率、课堂走神次数）与问卷问题（用匿名 1–5 分制确保诚实作答）。</li>
+          <li><strong>Step 4 · 建立与原断言的检验逻辑 (How Results Test the Claim)</strong>：写清“如果实验组平均分显著提升且统计显著，则支持原断言；若无明显差异或出现课后焦虑升高，则削弱或推翻原断言”。</li>
+          <li><strong>Step 5 · 点明研究局限与伦理保障 (Limitations &amp; Ethics)</strong>：一两句带过自报偏差 (self-reporting bias)、霍桑效应（被观察改变行为）及匿名知情同意，瞬间迈入 Top Band 考官评价区！</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="practice-block">
+      <div class="practice-heading">📝 C1 Q2A &amp; Q2B 实战检测</div>
+      <div class="exam-q" data-mcq-answer="B">
+        <div class="exam-q-head">
+          <span class="q-tag">实战题 G4-1 · 研究设计样本辨析</span>
+          <span class="q-marks">[1 mark]</span>
+        </div>
+        <div class="q-stem-en">Which method design best avoids sampling bias when testing whether young adults prefer public transport over private cars?</div>
+        <div class="q-stem-cn">在检验“年轻人是否更偏爱公共交通而非私家车”时，下列哪种抽样方法最能有效避免样本偏差？</div>
+        <div class="mcq-options">
+          <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>在周一早高峰的地铁站出口随机拦访 500 名 18–25 岁青年。</span></button>
+          <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>结合多区域社区登记名单进行分层抽样，涵盖城市中心、郊区与乡村的 18–25 岁在职与在校群体共 600 人。</span></button>
+          <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>在本地汽车 4S 店周末试驾活动中发放 500 份匿名网络问卷。</span></button>
+          <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>在自己所在大学环保社团微信群发起接龙投票。</span></button>
+        </div>
+        <div class="mcq-feedback" data-ok="✅ 正确！A 在地铁站采样本就偏袒坐地铁的人；C 偏袒买车族；D 是环保积极分子。只有 B 兼顾城乡多职业人群实现真正代表性！" data-err="❌ 检查偏差陷阱：在地铁站抽样或汽车展抽样都会严重过滤掉另一类人群（Selection bias）。"></div>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-head">
+          <span class="q-tag">实战题 G4-2 · Q2(b) 8 分完整作答范例</span>
+          <span class="q-marks">[8 marks]</span>
+        </div>
+        <div class="q-stem-en">Claim: “Working from home (remote work) always reduces employee stress and boosts productivity.” Explain how you could test this claim. (8 marks)</div>
+        <div class="q-stem-cn">【真题演练】如何实证检验“居家远程办公总是能减轻员工压力并提高工作效率”这一断言？（8分）</div>
+        <details class="ms-details">
+          <summary>查看 Band 1 满分英文答案示范与中英采分拆解 (Mark Scheme)</summary>
+          <div class="ms-body">
+            <p><strong>Band 1 Model Response:</strong><br>
+              First, I would collect <strong>secondary data</strong> from HR performance records across 10 companies in different sectors (IT, finance, retail) over 12 months, comparing task-completion rates and sick-leave days between full-time remote and office-based staff (<span class="ms-mark">2m</span>). Second, I would conduct a <strong>stratified anonymous questionnaire</strong> with a representative sample of 400 employees spanning junior, senior, and parent caregivers across rural and urban areas, using a 1–5 Likert scale to rate burnout, work-life boundary stress, and home distraction levels (<span class="ms-mark">3m</span>). Next, I would run <strong>semi-structured interviews</strong> with 20 team managers to understand nuances such as isolation or collaboration delays that numbers miss (<span class="ms-mark">1m</span>). Finally, to test the absolute word <em>“always”</em>, if certain subgroups (e.g., parents in crowded apartments) report higher stress or lower output, the claim will be refuted as an overgeneralisation; ensuring anonymity also limits response bias (<span class="ms-mark">2m</span>).</p>
+            <p class="ms-cn">【中文给分逻辑】兼顾二手人事考勤数据 + 400人跨层级跨家庭结构匿名分层问卷 + 20名主管深度访谈（三角互证 triangulation），并直击题干绝对词 <code>“always”</code> 给出否定/支持检验判据！</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section class="unit-block c1-section" id="mod-c1b" style="--unit-color: var(--u2);">
+  <div class="unit-banner">
+    <div class="unit-kicker">Component 1 · Written Examination · Q3 &amp; Q4 Extended</div>
+    <h2>第二部分：双源论证比较评估与 24 分压轴政策决策</h2>
+    <p>
+      Q3（15–16 分）与 Q4（20–24 分）合占 Component 1 卷面总分的一半以上，是拉开 B 档与 A* 档的分水岭。本单元教你彻底摆脱“逐句复述原文”，掌握论证比较矩阵与五大政策决策标尺。
+    </p>
+  </div>
+
+  <!-- SEC G5 -->
+  <article class="topic-section c1-section" id="sec-g5">
+    <div class="section-header">
+      <div class="section-title-group">
+        <h3>5. Q3 双源论证强度对比评估 (Comparing Two Arguments · 15–16 Marks)</h3>
+        <div class="section-en-sub">Component 1 Q3: Structure, Evidence Quality, Balance, Tone &amp; Relative Strength</div>
+        <div class="tier-row">
+          <span class="badge-c1">必须“比较”，绝非分段孤立写</span>
+          <span class="badge-cw">明确判断哪一方更具说服力</span>
+        </div>
+      </div>
+      <button type="button" class="master-btn" data-section-id="sec-g5">○ 标记掌握</button>
+    </div>
+
+    <div class="subtopic">
+      <h4>5.1 Q3 考官最痛恨的两大致命错误</h4>
+      <div class="callout common-mistake">
+        <div class="callout-title">⚠️ 失分雷区：1. 只讨论“内容本身谁对”而不评“论证机制”；2. 分块写完 A 再写 B（毫无对比）</div>
+        <p style="margin-bottom: 0;">
+          Q3 的设问通常是：<em>“Which argument is more convincing, [Person A]'s or [Person B]'s? Your answer should consider both arguments and you should use examples from the source.”</em><br>
+          • <strong>雷区 1</strong>：陷入主题辩论（“我觉得 A 对，因为环保确实很重要”）。考官不在乎你的立场，只在乎<strong>谁的论证链条更严密、证据更硬核、偏见更少</strong>！<br>
+          • <strong>雷区 2</strong>：先花一半篇幅写 A 的优缺点，再花一半写 B 的优缺点，中间没有对比词（<code>Whereas / Conversely / Both rely on...</code>），这种只能拿到 Level 2/3。
+        </p>
+      </div>
+    </div>
+
+    <div class="subtopic">
+      <h4>5.2 Q3 对比五大维度 Checklist（用这些句子串起全篇！）</h4>
+      <div class="table-wrap">
+        <table class="gp-table">
+          <thead>
+            <tr>
+              <th>评估维度</th>
+              <th>高分比较写法（直接成段套用）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1. 证据实证力</strong><br>Evidence Quality</td>
+              <td>比谁有权威出处、最新量化统计、独立研究；比谁只有个人轶事 (anecdotal)、无出处数字或模糊传言 (<em>“some people say”</em>)。</td>
+            </tr>
+            <tr>
+              <td><strong>2. 逻辑结构与平衡度</strong><br>Structure &amp; Balance</td>
+              <td>评估哪一方有明确因果链条、<strong>承认了反方观点并给出妥协/反驳</strong>（Counter-argument &amp; balance），而另一方陷入滑坡谬误 (slippery slope) 或非黑即白二分法。</td>
+            </tr>
+            <tr>
+              <td><strong>3. 语调与情绪操弄</strong><br>Language &amp; Tone</td>
+              <td>对比中立克制语调 vs 煽动修辞、道德绑架或极端绝对词（<em>“catastrophe”“always”“only foolhardy people”</em>）。</td>
+            </tr>
+            <tr>
+              <td><strong>4. 利益立场与隐含预设</strong><br>Vested Interest &amp; Assumptions</td>
+              <td>拆穿某一方背后隐含的未证实前提（如默认“所有农村居民都买得起电动车”）或职业商业既得利益。</td>
+            </tr>
+            <tr>
+              <td><strong>5. 结论权衡判断</strong><br>Overall Judgement</td>
+              <td>最后一段不能和稀泥“各有千秋”，须明确指出：<em>“Overall, Source B is more convincing because despite having a smaller regional focus, it substantiates claims with verifiable data and avoids emotional generalisations…”</em></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="model-box">
+        <div class="model-en">
+          <strong>Q3 Band 1 Sample Opening &amp; Comparative Body Paragraph:</strong><br>
+          “Overall, Elena's argument against single-use plastic bans without subsidies is <strong>more convincing</strong> than Marcus's wholesale ban proposal, primarily because she integrates verifiable economic evidence and acknowledges trade-offs, whereas Marcus relies heavily on emotive rhetoric.<br><br>
+          First, in terms of <strong>evidence</strong>, Elena cites an independent 2024 University of Leeds life-cycle assessment showing that cotton tote bags must be reused 131 times to match plastic's carbon footprint, giving her warning credible academic authority. <em>In contrast</em>, Marcus bases his urgency on an unspecified newspaper quote and a personal anecdote about his local river, making his generalisation that ‘bans immediately save oceans’ empirically weak.<br><br>
+          Second, regarding <strong>balance and tone</strong>, Elena adopts a measured register and explicitly concedes that plastic marine litter demands urgent reduction before proposing targeted exemptions for small vendors. <em>Conversely</em>, Marcus employs alarmist language (‘poisoning every future child’) and exhibits a strong vested interest as founder of an eco-packaging consultancy that profits directly from mandatory plastic bans...”
+        </div>
+        <div class="model-cn">
+          【逐段拆解】每段只抓 1 个评估维度（① 证据力度对比、② 平衡度与既得利益对比），每一段内部同时对比两个人并用足原文细节（131次、Leeds报告、个人故事、环保包装公司老板身份），开篇即明断谁更 convincing，稳达 Level 4/5 最高档！
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- SEC G6 -->
+  <article class="topic-section c1-section" id="sec-g6">
+    <div class="section-header">
+      <div class="section-title-group">
+        <h3>6. Q4 压轴政策方案评估与决策写作 (20–24 Marks)</h3>
+        <div class="section-en-sub">Component 1 Q4: Assessing Courses of Action, Comparing Alternatives &amp; Reaching a Supported Judgement</div>
+        <div class="tier-row">
+          <span class="badge-c1">卷面最高分值单题 (20–24分)</span>
+          <span class="badge-cw">互动政策决策权衡器 #lab-gp-q4</span>
+        </div>
+      </div>
+      <button type="button" class="master-btn" data-section-id="sec-g6">○ 标记掌握</button>
+    </div>
+
+    <div class="subtopic">
+      <h4>6.1 Q4 五大黄金决策标尺与“拒绝孤立选一”铁律</h4>
+      <p>
+        Q4 通常给出 3 个可行政策或行动方案（例如应对城市空气污染：方案1 对高排放汽车加征高额进城费；方案2 大规模补贴并扩建免费电动公交；方案3 仅开展全民环保宣讲），问：<em>“Which course of action would you recommend? Explain your choice by considering the different options and using evidence from the sources.”</em>
+      </p>
+      <p>拿满 Level 5（20–24分中的 18+ 分）必须满足三条核心标准：</p>
+      <ul>
+        <li><strong>准则一：用五大标尺做透权衡分析</strong>——即 <strong>① Scale &amp; Impact</strong>（覆盖面是否够大，还是杯水车薪）、<strong>② Cost &amp; Resources</strong>（财政预算/人力维护是否可持续）、<strong>③ Timescale</strong>（短期应急 vs 长期治本）、<strong>④ Equity &amp; Stakeholder Resistance</strong>（会不会误伤低收入弱势群体或引发民怨拒不配合？）、<strong>⑤ Unintended Consequences &amp; Enforceability</strong>（执法漏洞、黑市/逃避效应或反效果）。</li>
+        <li><strong>准则二：必须比较并解释为何“淘汰其余方案”</strong>——只赞美你选中的 Option 2 最多拿一半分数！你必须点明 Option 1 的致命硬伤（如累退税负歧视穷人），并指出为什么 Option 2 比 Option 1 和 Option 3 更优（哪怕 Option 2 成本高）。</li>
+        <li><strong>准则三：承认所选方案的局限并提出缓释措施 (Mitigation)</strong>——展现出顶级决策思维：<em>“虽然方案2初期基建成本高昂且见效需3–5年，但可搭配分阶段试点与车票微额补贴予以缓冲……”</em>。</li>
+      </ul>
+    </div>
+
+    <!-- Interactive Widget 3: #lab-gp-q4 -->
+    <div class="lab-box" id="lab-gp-q4">
+      <div class="lab-header">
+        <div class="lab-title">🏛️ 交互实验室 3 · Q4 城市政策方案权衡决策矩阵 (Policy Evaluator)</div>
+        <div class="tab-row" id="gpQ4Tabs">
+          <button type="button" class="tab-btn active" data-q4-opt="0">方案 1 · 全面禁行燃油车</button>
+          <button type="button" class="tab-btn" data-q4-opt="1">方案 2 · 免费高速接驳微公交网</button>
+          <button type="button" class="tab-btn" data-q4-opt="2">方案 3 · 校园/社区低碳倡议宣讲</button>
+        </div>
+      </div>
+      <div class="lab-panel">
+        <div class="lab-controls">
+          <label for="gpQ4Priority"><strong>市政决策首要考量维度：</strong></label>
+          <select id="gpQ4Priority">
+            <option value="equity">社会公平与低收入通勤者承受力 (Equity)</option>
+            <option value="speed">短期内立竿见影降污染 (Short-term Speed)</option>
+            <option value="budget">政府财政低成本可控 (Budget Constraint)</option>
+          </select>
+        </div>
+        <div class="raven-grid" id="gpQ4Grid"></div>
+        <div class="callout deep-dive" style="margin-top: 12px; margin-bottom: 0;">
+          <div class="callout-title">📝 基于当前权重的 Q4 对比裁决结论</div>
+          <div id="gpQ4Verdict">...</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="practice-block">
+      <div class="practice-heading">📝 C1 Q3 &amp; Q4 高分架构自测</div>
+      <div class="exam-q">
+        <div class="exam-q-head">
+          <span class="q-tag">实战题 G6 · Q4 24分答题骨架规划</span>
+          <span class="q-marks">[24 marks structure check]</span>
+        </div>
+        <div class="q-stem-en">Scenario: A coastal city faces severe plastic waste. Options: (A) Total immediate ban on plastic bags with heavy fines; (B) Invest in city-wide recycling bins &amp; refund deposit machines; (C) Launch a school awareness campaign. Explain how to structure a Band 1 Q4 response recommending Option B.</div>
+        <div class="q-stem-cn">假设针对海滨城市塑料污染，推荐方案 B（全市回收+押金返还激励），应如何搭出满分 4 段结构来击败方案 A 与方案 C？</div>
+        <details class="ms-details">
+          <summary>查看 Q4 Band 1 满分四段结构与核心采分点 (Mark Scheme)</summary>
+          <div class="ms-body">
+            <p><span class="ms-mark">Para 1 · Stand &amp; Why Option B</span> 直截了当推荐 Option B，紧扣<strong>激励相容（positive financial incentive）与规模化闭环回收</strong>，引用材料中德国/北欧押金制 90%+ 回收率实证。</p>
+            <p><span class="ms-mark">Para 2 · Why Reject Option A</span> <strong>对比淘汰 A</strong>：虽然 A 短期看似见效快，但一刀切禁用并重罚会冲击无力采购替代包装的小摊贩（<strong>公平性/经济阻力</strong>），还可能导致执法成本飙升与改用高碳排放棉布袋的<strong>意外后果</strong>；相比之下 B 循序渐进，社会接受度更高。</p>
+            <p><span class="ms-mark">Para 3 · Why Reject Option C &amp; Concession on B</span> <strong>对比淘汰 C 并承认 B 的弱点</strong>：C 成本低但缺乏约束力，往往仅停留在学生意识层面、收效太慢（Scale/Timescale 不足）；随后<strong>坦承 B 初期财政投入高、需跨年建设</strong>，但指出押金自循环+减少海滩清污开销可在长期收回成本。</p>
+            <p><span class="ms-mark">Para 4 · Supported Conclusion</span> 回扣问题做出综合性总结判断，提议将 C 作为 B 的配套宣传辅助以实现效益最大化。</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section class="unit-block cw-section" id="mod-cw" style="--unit-color: var(--u3);">
+  <div class="unit-banner">
+    <div class="unit-kicker">Components 2 &amp; 3 · Coursework · 65% of Total Grade</div>
+    <h2>第三部分：IR 个人报告 (30%) 与 Team Project 团队项目 (35%) 通关全解</h2>
+    <p>
+      GP 总成绩的 <strong>65%</strong> 由校内完成的 Component 2 (IR) 与 Component 3 (Team Project) 决定。本单元将官方评分量表转化为可执行操作清单：从写出 A* 级研究问题、区分全球与本土底层价值观、团队本地化行动留证，到拿下 45 分制 Reflective Paper 满分。
+    </p>
+  </div>
+
+  <!-- SEC G7 -->
+  <article class="topic-section cw-section" id="sec-g7">
+    <div class="section-header">
+      <div class="section-title-group">
+        <h3>7. IR 个人报告选题黄金公式与“烂题 → A*题”8 组改造示范</h3>
+        <div class="section-en-sub">Component 2 Individual Report: Crafting a Focused, Debatable Global Research Question</div>
+        <div class="tier-row">
+          <span class="badge-cw">30% 总成绩 · 60 Marks</span>
+          <span class="badge-c1">好题目决定一半分数上限</span>
+        </div>
+      </div>
+      <button type="button" class="master-btn" data-section-id="sec-g7">○ 标记掌握</button>
+    </div>
+
+    <div class="subtopic">
+      <h4>7.1 合格 A* 研究问题 (Research Question) 四大硬指标</h4>
+      <p>
+        IR 必须围绕官方 15 个主题之一自拟标题（题目问句不计入 2,000 词正文上限，但必须直接引导分析、跨视角比对与解决方案评价）。理想句式多为：<code>To what extent does [具体驱动因素 X] affect [具体议题 Y] in [具体对象/对比语境]，and what are the most effective responses?</code> 或 <code>Should [具体全球干预措施] be prioritised over [替代路径] to address [具体全球性问题]?</code>
+      </p>
+      <ul>
+        <li><strong>指标 1 · 可争辩且开放 (Open-ended &amp; Debatable)</strong>：不能是“Does fast fashion pollute water?”（答案显而易见 Yes，写成科普说明书！），必须聚焦机制权重、政策两难或利弊权衡（如 <em>To what extent... / Should...</em>）。</li>
+        <li><strong>指标 2 · 既具全球性又可切入本土对比 (Global + Local Resonance)</strong>：避免“中国某区垃圾分类”纯地方问题，要选全球各国共性挑战（如 Fast fashion、AI in healthcare、Antibiotic resistance、Youth mental health）。</li>
+        <li><strong>指标 3 · 切口窄而深 (Narrow Enough for 2,000 Words)</strong>：不要写 <em>“How does climate change affect the world?”</em>（一本书都写不完！），要收束到特定子问题（如 <em>coastal agricultural livelihoods</em> 或 <em>fast fashion microplastics</em>）。</li>
+        <li><strong>指标 4 · 严禁“双头怪兽题 (Double-barrelled)”</strong>：一问里面包含两三个毫无联系的大课题，导致每块只写 200 字蜻蜓点水。</li>
+      </ul>
+
+      <div class="table-wrap">
+        <table class="gp-table">
+          <thead>
+            <tr>
+              <th>所属官方议题</th>
+              <th>常见低分“差题” (描述性/空泛/是非题)</th>
+              <th>A* 级精修研究问题示范</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Climate change &amp; energy</td>
+              <td>Is climate change bad for humans?</td>
+              <td><strong>Should</strong> high-income nations prioritise climate adaptation aid over domestic net-zero subsidies to protect developing coastal economies?</td>
+            </tr>
+            <tr>
+              <td>Digital world</td>
+              <td>How do teenagers use social media?</td>
+              <td><strong>To what extent</strong> do algorithmic social media platforms exacerbate adolescent anxiety, and can government age-gating laws effectively mitigate harm?</td>
+            </tr>
+            <tr>
+              <td>Employment</td>
+              <td>Will robots take all our jobs?</td>
+              <td><strong>Does</strong> rapid automation threaten economic stability more severely in developing manufacturing hubs than in post-industrial economies?</td>
+            </tr>
+            <tr>
+              <td>Health &amp; wellbeing</td>
+              <td>What causes obesity in cities?</td>
+              <td><strong>To what extent</strong> are sugar taxes more effective than school nutrition reform in curbing childhood obesity?</td>
+            </tr>
+            <tr>
+              <td>Migration &amp; urbanisation</td>
+              <td>Why do people move from villages to cities?</td>
+              <td><strong>Should</strong> governments restrict rural-to-urban migration through regional investment rather than expanding mega-city slums?</td>
+            </tr>
+            <tr>
+              <td>Media &amp; communication</td>
+              <td>Is fake news dangerous?</td>
+              <td><strong>Is</strong> state regulation or digital literacy education the more viable defence against election-related misinformation?</td>
+            </tr>
+            <tr>
+              <td>Environment &amp; conservation</td>
+              <td>How to reduce plastic waste?</td>
+              <td><strong>To what extent</strong> do international plastic export bans genuinely reduce ocean pollution versus shifting environmental burdens locally?</td>
+            </tr>
+            <tr>
+              <td>Education for all</td>
+              <td>Are online classes good for students?</td>
+              <td><strong>Does</strong> expanding AI-assisted remote schooling narrow educational inequality for rural learners, or deepen the digital divide?</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </article>
+
+  <!-- SEC G8 -->
+  <article class="topic-section cw-section" id="sec-g8">
+    <div class="section-header">
+      <div class="section-title-group">
+        <h3>8. IR 黄金篇幅分配 (1,500–2,000 Words) 与“真视角 vs 假观点”</h3>
+        <div class="section-en-sub">IR Structure Blueprint, Causes/Consequences &amp; Global vs National/Local Perspectives</div>
+        <div class="tier-row">
+          <span class="badge-cw">严格限 2,000 词（超词不改！）</span>
+          <span class="badge-c1">Global vs National 真正对撞</span>
+        </div>
+      </div>
+      <button type="button" class="master-btn" data-section-id="sec-g8">○ 标记掌握</button>
+    </div>
+
+    <div class="subtopic">
+      <h4>8.1 什么是真正的 “Perspective（视角）”？（切忌与 “Opinion/Example” 混为一谈！）</h4>
+      <p>
+        这是 IR 评分里最容易被考官扣成 Band 2/3 的隐形大坑：很多学生写“美国人认为……，中国人认为……，我认为……”，这只是把各国<strong>数据事例</strong>罗列了一遍！在 IGCSE 0457 术语体系里，<strong>Perspective（视角）= 一群利益相关者或地区受特定历史、经济水平、文化传统与价值观支配的深层看世界框架 (Underlying Worldview &amp; Values)</strong>。
+      </p>
+      <ul>
+        <li><strong>正确演示（深入底层逻辑）</strong>：例如探讨碳排放税时，<strong>全球科学/发达消费国视角</strong>往往从长期生态安全、代际正义与净零协议出发主张立刻征税；而<strong>发展中工业国视角</strong>基于“历史排放责任不均”与现阶段脱贫、能源主权的生存刚需，认为同比例碳税构成变相绿色贸易壁垒。两者在<strong>核心价值排序（气候优先 vs 发展权优先）</strong>上发生根本碰撞！</li>
+        <li><strong>跨层级对比</strong>：必须清清楚楚体现 <strong>Global perspective</strong>（联合国/WHO/跨国研究/超国家利益体）与 <strong>National / Local perspective</strong>（具体某国政策困境、某社区草根或弱势群体切身经历）的张力与共生关系。</li>
+      </ul>
+
+      <div class="svg-figure">
+        <svg viewBox="0 0 740 220" width="740" height="220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="IR 1800词推荐结构分配条形图">
+          <rect x="0" y="0" width="740" height="220" rx="10" fill="none" />
+          <text x="370" y="25" text-anchor="middle" font-size="14" font-weight="800" fill="currentColor">Individual Report (目标 ~1,800–1,900 词) 六大板块黄金配重模型</text>
+
+          <rect x="20" y="45" width="95" height="62" rx="6" fill="#0369A1" />
+          <text x="67" y="70" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">1. 引言界定</text>
+          <text x="67" y="90" text-anchor="middle" font-size="11" fill="#E0F2FE">~180–200w</text>
+
+          <rect x="121" y="45" width="135" height="62" rx="6" fill="#0F766E" />
+          <text x="188" y="70" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">2. 因果链深挖</text>
+          <text x="188" y="90" text-anchor="middle" font-size="11" fill="#CCFBF1">~320–350w</text>
+
+          <rect x="262" y="45" width="140" height="62" rx="6" fill="#2563EB" />
+          <text x="332" y="70" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">3. 全球视角+来源评</text>
+          <text x="332" y="90" text-anchor="middle" font-size="11" fill="#DBEAFE">~330–360w</text>
+
+          <rect x="408" y="45" width="140" height="62" rx="6" fill="#6D28D9" />
+          <text x="478" y="70" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">4. 本土/国家视角</text>
+          <text x="478" y="90" text-anchor="middle" font-size="11" fill="#EDE9FE">~330–360w</text>
+
+          <rect x="554" y="45" width="166" height="62" rx="6" fill="#B45309" />
+          <text x="637" y="70" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">5. 对策比对 + 6. 个人反思</text>
+          <text x="637" y="90" text-anchor="middle" font-size="11" fill="#FEF3C7">对策~320w + 个人立场~260w</text>
+
+          <rect x="20" y="122" width="700" height="82" rx="8" fill="#F1F5F9" stroke="#CBD5E1" />
+          <text x="36" y="144" font-size="12" font-weight="700" fill="#0F172A">算清字数账（2,000 词绝对硬上限，考官读至第 2,000 词即直接停笔截断，哪怕结尾个人结论在 2,050 词处也不计分！）：</text>
+          <text x="36" y="166" font-size="11.5" fill="#334155">✓ 计入字数：正文全部文字、小标题、文内括号引用 (Smith, 2024)、表格文字与图片注释。</text>
+          <text x="36" y="186" font-size="11.5" fill="#0369A1">✕ 不计入字数：封面标题、文末 Bibliography 参考文献清单、纯粹的页眉页脚编号。建议终稿定格在 1,850–1,950 词安全区间。</text>
+        </svg>
+        <div class="svg-caption">图 3.1 · IR 个人报告六板块配重与 2,000 词截断防线</div>
+      </div>
+    </div>
+  </article>
+
+  <!-- SEC G9 -->
+  <article class="topic-section cw-section" id="sec-g9">
+    <div class="section-header">
+      <div class="section-title-group">
+        <h3>9. IR 个人立场演变、来源批判嵌入与 Harvard 引用零抄袭</h3>
+        <div class="section-en-sub">AO2 Personal Perspective Development, Source Integration &amp; Referencing Integrity</div>
+        <div class="tier-row">
+          <span class="badge-cw">AO2 反思 10分 · AO3 引用规范 10分</span>
+        </div>
+      </div>
+      <button type="button" class="master-btn" data-section-id="sec-g9">○ 标记掌握</button>
+    </div>
+
+    <div class="subtopic">
+      <h4>9.1 AO2 “Personal Perspective” 如何写出令考官拍案叫绝的思维成长？</h4>
+      <p>
+        最后 250–300 词的 Personal Perspective 绝不是简单复述文章总结（“In conclusion, plastic is bad and we must recycle”）。拿满 AO2 高分需要展现<strong>“调研前后认知发生了何种具体的细化、修正或转变”</strong>：
+      </p>
+      <ul>
+        <li><strong>黄金模板</strong>：<em>“Before conducting this research, I assumed [初始单一直觉，如全面一刀切禁用一次性塑料就能彻底解决污染]. However, evaluating [作者名/机构]’s findings on informal waste-picker livelihoods in Southeast Asia forced me to reconsider that assumption. While I still believe regulatory phase-outs are necessary, my perspective has shifted toward favouring gradual deposit-return schemes paired with worker compensation…”</em></li>
+        <li><strong>来源批判不要堆在一起</strong>：不要在结尾单开一段“来源可靠性评估表”（极其生硬占字数），而是<strong>自然嵌在引用句里面</strong>！例：<em>“Although an industry-funded 2023 report by Packaging Europe claims recycling rates can hit 80% voluntarily, this projection should be treated cautiously due to clear commercial vested interest; in contrast, an independent UNEP assessment indicates…”</em></li>
+      </ul>
+    </div>
+
+    <div class="subtopic">
+      <h4>9.2 学术引注 (Harvard Referencing) 规范清单</h4>
+      <p>
+        0509 与 0457 均严格查重（包含 AI 生成文本与未署名复制）。IR 中所有非常识数据、专家论断、政策年份都必须给出文内引注 `(Author/Org, Year)`，并在末尾列出结构统一的 Reference List（作者/机构、出版年、文献名、网址与访问日期 Access Date），确保至少包含 <strong>6–10 个多元且独立核实过的来源</strong>（学术论文、国际组织、本土政策文本、可靠新闻，忌全部堆砌百科/无名博客）。
+      </p>
+    </div>
+  </article>
+
+  <!-- SEC G10 -->
+  <article class="topic-section cw-section" id="sec-g10">
+    <div class="section-header">
+      <div class="section-title-group">
+        <h3>10. Team Project (Component 3): 本地化行动与 300–400 词计划书</h3>
+        <div class="section-en-sub">Component 3 Team Element (25 Marks): Selecting a Local Issue, Measurable Action &amp; Planning</div>
+        <div class="tier-row">
+          <span class="badge-cw">35% 总成绩 · 2–5 人团队</span>
+          <span class="badge-c1">行动必须留“实效证据”而非单纯发传单</span>
+        </div>
+      </div>
+      <button type="button" class="master-btn" data-section-id="sec-g10">○ 标记掌握</button>
+    </div>
+
+    <div class="subtopic">
+      <h4>10.1 2025–2027 考纲下 Team Element (25分) 的两件交付物</h4>
+      <ul>
+        <li><strong>交付物 1 · Explanation of Research and Planning（300–400 词，全组共同提交一份）</strong>：绝不能超 400 词！需精准阐明：① 选题所属全球议题及本土切入口；② 团队研究发现的不同视角；③ 为何选定该特定行动（Goal/Action）；④ 每位成员的角色分工与时间表（含可衡量的成功标准 Success Criteria）。</li>
+        <li><strong>交付物 2 · Evidence of Action（行动留痕证据）</strong>：提交实实在在的产出与<strong>前后效果实证数据</strong>（如讲座现场照片+听众前后测知识提升对比柱状图、给校方/社区递交的可执行提案及官方回函、义卖捐款凭证与问卷反馈率），切忌只提交“一张精美海报图片”却拿不出任何人看过或发生改变的证明！</li>
+      </ul>
+      <div class="callout common-mistake">
+        <div class="callout-title">⚠️ 典型低分团队行动 vs 高分可量化行动对照</div>
+        <p style="margin-bottom: 0;">
+          • <strong>低分</strong>：“我们小组做了一个倡导节约粮食的海报贴在走廊，还拍了张合影。”（无对象反馈、无法衡量影响、与研究脱节）<br>
+          • <strong>高分</strong>：“针对学校食堂每日倾倒大量米饭的现象，我们调研了 80 名走读/寄宿生饮食习惯并采访了食堂经理（发掘双方矛盾视角：份量标准固定 vs 学生胃口差异），随之推行‘大小份半碗窗口试点+剩饭称重公示一周’，记录试点前后厨余重量下降 28% 的前后对比数据。”
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <!-- SEC G11 -->
+  <article class="topic-section cw-section" id="sec-g11">
+    <div class="section-header">
+      <div class="section-title-group">
+        <h3>11. TP 个人反思论文 (Reflective Paper · 750–1,000 Words · 45 Marks!)</h3>
+        <div class="section-en-sub">Component 3 Personal Element (45 / 70 Marks!): Honest Evaluation &amp; Official Word Checker</div>
+        <div class="tier-row">
+          <span class="badge-cw">单篇占 TP 64% 分值 (45/70分)</span>
+          <span class="badge-c1">Coursework 英文词数精测工具 #lab-gp-words</span>
+        </div>
+      </div>
+      <button type="button" class="master-btn" data-section-id="sec-g11">○ 标记掌握</button>
+    </div>
+
+    <div class="subtopic">
+      <h4>11.1 决定 A 还是 A* 的秘密武器：Reflective Paper 四大核心评估支柱</h4>
+      <p>
+        记住：Team Element 再花哨也只有 25 分，而你独自撰写的 <strong>750–1,000 词 Reflective Paper 独占惊人的 45 分</strong>！考官不是要看“我们团队无比和谐完美，大家齐心协力大获成功”的假大空表扬信——<strong>诚实剖析遇到什么挫折、哪些判断有误、协作如何产生摩擦又如何解决</strong>，才是拿满反思分的诀窍：
+      </p>
+      <div class="table-wrap">
+        <table class="gp-table">
+          <thead>
+            <tr>
+              <th>反思四大支柱</th>
+              <th>建议篇幅</th>
+              <th>高分切入动作（拒绝“流水账+彩虹屁”）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1. 行动项目实效评估</strong><br>Evaluation of Action</td>
+              <td>~250–300w</td>
+              <td>用证据评估行动是否达标：<strong>引用行动前后真实数据对比</strong>，同时坦承具体局限（如“虽然知晓率提升 40%，但未能触及高年级走读生；若重做会提前一周预约午休宣讲”）。</td>
+            </tr>
+            <tr>
+              <td><strong>2. 个人表现与团队协作</strong><br>Teamwork &amp; Personal Role</td>
+              <td>~250–300w</td>
+              <td>剖析分工利弊与<strong>真实沟通碰撞</strong>（如时间拖延、设计理念分歧、自己承担过多未及时委派任务），详述自己作为某角色的具体贡献、个人失误与补救举措。</td>
+            </tr>
+            <tr>
+              <td><strong>3. 调研与个人学习收获</strong><br>Learning &amp; Skills</td>
+              <td>~150–200w</td>
+              <td>哪些调研途径或来源最有用/最不可靠（如一手访谈如何颠覆网上二手统计），学到了什么可迁移的时间管理、问卷设计或沟通技能。</td>
+            </tr>
+            <tr>
+              <td><strong>4. 全球视野与个人观点演变</strong><br>Perspective Change</td>
+              <td>~150–200w</td>
+              <td>本项目如何刷新了你对这一全球/本土复杂议题的看法（由浅层归咎个人变为看清背后制度、经济利益纠葛）。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Interactive Widget 4: #lab-gp-words -->
+    <div class="lab-box" id="lab-gp-words">
+      <div class="lab-header">
+        <div class="lab-title">📏 交互实验室 4 · Coursework 官方英文词数规范检测仪 (Word-Limit Checker)</div>
+        <div class="tab-row" id="gpWordModeTabs">
+          <button type="button" class="tab-btn active" data-cw-mode="ir">Component 2 · IR (1,500–2,000w)</button>
+          <button type="button" class="tab-btn" data-cw-mode="tp_plan">TP · 计划书 (300–400w)</button>
+          <button type="button" class="tab-btn" data-cw-mode="tp_ref">TP · 反思论文 (750–1,000w)</button>
+        </div>
+      </div>
+      <div class="lab-panel">
+        <div class="lab-controls">
+          <button type="button" class="tab-btn" id="gpWordSampleIrBtn">载入 IR 个人立场反思范例段</button>
+          <button type="button" class="tab-btn" id="gpWordSampleRefBtn">载入 TP 诚实反思团队冲突范例段</button>
+          <button type="button" class="tab-btn" id="gpWordClearBtn">清空输入</button>
+        </div>
+        <textarea id="gpWordBox" class="cw-textarea" placeholder="Paste your Individual Report, Team Planning Explanation, or Reflective Paper draft here to verify Cambridge whitespace word counts (exclude bibliography!)..."></textarea>
+        <div class="lab-readout">
+          <span class="readout-pill" id="gpWordCount">英文词数 (Word Count)：0 words</span>
+          <span class="readout-pill" id="gpWordPara">段落数：0</span>
+          <span class="readout-pill" id="gpWordStatus">状态：等待粘贴（记住 Bibliography 不计入上限）</span>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- SEC G12 -->
+  <article class="topic-section cw-section" id="sec-g12">
+    <div class="section-header">
+      <div class="section-title-group">
+        <h3>12. GP 全卷核心避坑铁律与考前冲刺自测题库</h3>
+        <div class="section-en-sub">Common Examiners' Reports Traps &amp; Integrated Coursework Review</div>
+        <div class="tier-row">
+          <span class="badge-cw">避免硬伤降档</span>
+          <span class="badge-c1">真题实战检测</span>
+        </div>
+      </div>
+      <button type="button" class="master-btn" data-section-id="sec-g12">○ 标记掌握</button>
+    </div>
+
+    <div class="subtopic">
+      <h4>12.1 剑桥考官报告 (Principal Examiner Reports) 年年点名五大扣分坑</h4>
+      <ol>
+        <li><strong>把 GP 当成“道德说教论文”</strong>：使用大量空泛口号（<em>“We must all unite and love nature forever!”</em>），没有冷峻的实证因果分析与可行机制权衡。</li>
+        <li><strong>在 IR 里自己瞎编“全国民众想法”却零引注</strong>：写 <em>“Most developing countries do not care about climate change”</em> 是典型的无证据刻板印象与以偏概全！</li>
+        <li><strong>TP 计划书超 400 词 / Reflective Paper 超 1,000 词</strong>：超过硬性上限后，后面最关键的视角成长或反思结语会被考官画线截断<strong>不予阅卷计分</strong>。</li>
+        <li><strong>Reflective Paper 通篇只用“We”而不用“I”</strong>：忘了这是个人考核！务必说清“<strong>我</strong>负责什么、<strong>我</strong>当时犯了什么判断失误、<strong>我</strong>如何促成改变”。</li>
+        <li><strong>Component 1 Q4 忘记回应备选方案</strong>：哪怕选定的方案写得再好，不对另外两个没选的方案做出缺点剖析与对比淘汰，就必定丢失对比评估高分段。</li>
+      </ol>
+    </div>
+
+    <div class="practice-block">
+      <div class="practice-heading">📝 Coursework 高阶规范实战检测</div>
+      <div class="exam-q" data-mcq-answer="C">
+        <div class="exam-q-head">
+          <span class="q-tag">实战题 G12-1 · IR Perspective 理解检测</span>
+          <span class="q-marks">[1 mark]</span>
+        </div>
+        <div class="q-stem-en">Which sentence best demonstrates a “National/Economic Perspective” rather than a mere descriptive statistic in an Individual Report on fast fashion?</div>
+        <div class="q-stem-cn">在关于“快时尚环保代价”的个人报告中，下列哪句最能体现真正的“国家/经济底层视角 (Perspective)”而非纯数据罗列？</div>
+        <div class="mcq-options">
+          <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>“Bangladesh produced 8% of global garments in 2023 and employs 4 million workers.”</span></button>
+          <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>“Fast fashion is terrible because young people buy too many cheap T-shirts.”</span></button>
+          <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>“From the economic perspective of low-income manufacturing nations like Bangladesh, rapid textile exports remain prioritised for poverty alleviation and foreign exchange, often outweighing strict environmental enforcement.”</span></button>
+          <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>“My friend Sarah says she hates polyester shirts because they feel uncomfortable.”</span></button>
+        </div>
+        <div class="mcq-feedback" data-ok="✅ 完全正确！C 点明了“低收入制造国”之所以采取特定立场背后的经济优先级（脱贫与外汇创收 vs 环保执法取舍），这正是考纲定义的 Perspective！" data-err="❌ 辨析：A 是纯事实数据；B 是情绪化判断；D 是个人喜好（Opinion），都不是国家/群体视角。"></div>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-head">
+          <span class="q-tag">实战题 G12-2 · Reflective Paper 句式改写训练</span>
+          <span class="q-marks">[4 marks]</span>
+        </div>
+        <div class="q-stem-en">Weak Reflective Draft: <em>“Our team worked super well together and never argued. We gave out 100 flyers on water saving and everybody loved it. It taught me teamwork is very important.”</em> Rewrite this into a Top-Band 4-mark reflective extract.</div>
+        <div class="q-stem-cn">把上面空洞零分档草稿改写为具备实证对比、具体问题反思与自我剖析的 45 分制 Reflective Paper 满分段落。</div>
+        <details class="ms-details">
+          <summary>查看 Top-Band 改写范例与采分逻辑 (Mark Scheme)</summary>
+          <div class="ms-body">
+            <p><strong>Band 1 Rewrite:</strong><br>
+              “Initially, our team struggled with overlapping designs because I took over drafting the slides without consulting two peers, causing a two-day delay (<span class="ms-mark">1m honest conflict</span>). After holding a structured role-reallocation meeting where I stepped back to focus solely on survey data analysis, workflow efficiency improved markedly (<span class="ms-mark">1m personal adaptation</span>). While we distributed 100 water-saving flyers, our follow-up survey showed only 18% of recipients remembered any statistic a week later (<span class="ms-mark">1m evidence-based critique</span>). This revealed that passive leaflets create shallow awareness; if repeating the project, I would replace printed flyers with interactive canteen pledge boards to measure tangible behavioural change (<span class="ms-mark">1m realistic improvement</span>).”</p>
+            <p class="ms-cn">【精要】以具体冲突细节（越俎代庖+两天延误）、自我退让分工、后测冷冰冰的 18% 记忆留存率证据自我打脸，立刻跻身 Top Band！</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section class="unit-block" id="appendix" style="--unit-color: var(--uapp);">
+  <div class="unit-banner">
+    <div class="unit-kicker">Exam Revision Appendix A &amp; B</div>
+    <h2>考前冲刺附录 · 15 大全球议题视角矩阵与高分学术句型库</h2>
+    <p>
+      完整对照 <strong>2025–2027 最新官方 15 个议题列表</strong>提供 IR 破题方向与全球/本土冲突焦点，并整理 Component 1 (Q2–Q4) 与 Coursework 直接拿来下笔的高阶英文句型模版。
+    </p>
+  </div>
+
+  <!-- APPENDIX A: All 15 Official Global Topics -->
+  <article class="topic-section" id="app-topics">
+    <div class="section-header">
+      <div class="section-title-group">
+        <h3>附录 A · 2025–2027 官方 15 大全球议题 × 三视角破题矩阵</h3>
+        <div class="section-en-sub">Complete 15 Official Syllabus Topics (C1, C2 &amp; C3 Unified Topic List)</div>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table class="gp-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>官方英文议题名 &amp; 中文译名</th>
+            <th>A* 级 IR 参考研究问题示例</th>
+            <th>Global vs National / Local 视角对撞焦点</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>01</td>
+            <td><strong>Arts in society</strong><br>社会中的艺术</td>
+            <td><em>Should developing nations fund public arts preservation equally alongside STEM education?</em></td>
+            <td><strong>Global</strong>：联合国教科文组织强调非遗文化多样性保护；<strong>Local</strong>：财政紧缩城市优先医疗与就业基建，艺术预算往往首当其冲。</td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td><strong>Change in culture and communities</strong><br>文化与社区变迁</td>
+            <td><em>To what extent does global urbanisation erode indigenous linguistic heritage, and can digital archives preserve it?</em></td>
+            <td><strong>Global</strong>：跨国媒体语言趋同提高沟通效率；<strong>Local</strong>：长辈与乡村社群担忧母语、传统节庆失传导致身份认同断裂。</td>
+          </tr>
+          <tr>
+            <td>03</td>
+            <td><strong>Climate change, energy and resources</strong><br>气候变化、能源与资源</td>
+            <td><em>Should high-income countries finance clean-energy transitions in coal-reliant developing economies?</em></td>
+            <td><strong>Global</strong>：IPCC 呼吁全球立即退煤控温 1.5°C；<strong>National</strong>：发展中国家能源贫困家庭需要低成本稳定电力来推进工业化脱贫。</td>
+          </tr>
+          <tr>
+            <td>04</td>
+            <td><strong>Conflict and peace</strong><br>冲突与和平</td>
+            <td><em>Are economic sanctions an effective tool to deter armed conflict, or do they disproportionately harm civilians?</em></td>
+            <td><strong>Global</strong>：国际外交界主张非武力经济施压维护国际法；<strong>Local</strong>：受制裁区基层医院与普通居民承受药品短缺、恶性通胀等次生人道危机。</td>
+          </tr>
+          <tr>
+            <td>05</td>
+            <td><strong>Development, trade and aid</strong><br>发展、贸易与援助</td>
+            <td><em>Is direct infrastructure investment more sustainable than emergency foreign aid in reducing poverty?</em></td>
+            <td><strong>Global</strong>：多边机构强调公平贸易协定与长效造血能力；<strong>Local</strong>：受援国基层社群或质疑援助附带政治条件、易引发“援助依赖症”。</td>
+          </tr>
+          <tr>
+            <td>06</td>
+            <td><strong>Digital world</strong><br>数字世界</td>
+            <td><em>Should governments mandate strict age verification on social media platforms to protect youth mental health?</em></td>
+            <td><strong>Global</strong>：跨国平台主张技术自由创新与数字互联；<strong>Local</strong>：学校与家长忧虑算法成瘾与网络欺凌，部分青少年则反感隐私侵犯。</td>
+          </tr>
+          <tr>
+            <td>07</td>
+            <td><strong>Education for all</strong><br>全民教育</td>
+            <td><em>To what extent can generative AI tutoring close the achievement gap between urban and rural schools?</em></td>
+            <td><strong>Global</strong>：国际教育报告倡导低成本智能普及；<strong>Local</strong>：偏远乡村面临硬件与电力缺失，“技术平权”反而扩大城乡数字鸿沟。</td>
+          </tr>
+          <tr>
+            <td>08</td>
+            <td><strong>Employment</strong><br>就业</td>
+            <td><em>Are universal basic income trials a viable response to AI-driven white-collar job displacement?</em></td>
+            <td><strong>Global</strong>：经济学界关注生产率红利再分配；<strong>Local</strong>：中小企业担心税负转嫁降低雇佣意愿，劳动者担忧技能再培训脱节。</td>
+          </tr>
+          <tr>
+            <td>09</td>
+            <td><strong>Environment, pollution and conservation</strong><br>环境、污染与生态保护</td>
+            <td><em>Should coastal nations prioritise strict marine protected areas over short-term industrial fishing livelihoods?</em></td>
+            <td><strong>Global</strong>：海洋生物多样性公约呼吁 30% 海域禁渔恢复种群；<strong>Local</strong>：世代依赖近海捕捞的小渔村面临生计断裂与转型危机。</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td><strong>Globalisation</strong><br>全球化</td>
+            <td><em>Does multinational supply-chain offshoring lift wages in emerging economies or fuel a “race to the bottom”?</em></td>
+            <td><strong>Global</strong>：跨国资本依托比较优势压低全球消费价格；<strong>National/Local</strong>：东道国工人追求劳工权益与环保底线，发达国家产业工人担忧外流。</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td><strong>Health and wellbeing</strong><br>健康与福祉</td>
+            <td><em>To what extent should patent protections be waived during pandemics to guarantee global vaccine equity?</em></td>
+            <td><strong>Global</strong>：WHO 与人道组织主张公共健康高于商业垄断；<strong>National/Corporate</strong>：制药企业及所在国强调高额研发激励与知识产权保护。</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td><strong>Law and criminality</strong><br>法律与犯罪</td>
+            <td><em>Is rehabilitative justice more effective than mandatory minimum prison sentences in reducing youth reoffending?</em></td>
+            <td><strong>Global</strong>：联合国儿童司法准则侧重教育矫治与重返社会；<strong>Local</strong>：社区受害者与部分居民出于治安焦虑呼吁严刑峻法威慑。</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td><strong>Media and communication</strong><br>媒体与传播</td>
+            <td><em>Should social media platforms be held legally liable for algorithmic amplification of political misinformation?</em></td>
+            <td><strong>Global</strong>：民主监管机构探讨跨境平台问责制；<strong>Local</strong>：媒体学者警告政府过度审查可能压制独立公民新闻与言论边界。</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td><strong>Migration and urbanisation</strong><br>移民与城市化</td>
+            <td><em>Does skilled labour emigration create a crippling “brain drain” or a net remittance gain for home countries?</em></td>
+            <td><strong>Global</strong>：国际劳工流动填补发达国家医护与科技短缺；<strong>National/Local</strong>：输出国基层医疗、高校流失顶尖人才，家庭面临代际分离。</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td><strong>Political power and action</strong><br>政治权力与公民行动</td>
+            <td><em>Should voting be made compulsory for citizens over 18, or does mandatory voting undermine meaningful engagement?</em></td>
+            <td><strong>Global</strong>：民主制度比较研究聚焦投票率合法性；<strong>Local</strong>：青年选民往往质疑强制投票无法解决候选人脱离基层社区的本质冷漠。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+
+  <!-- APPENDIX B: High-Band Phrase Bank -->
+  <article class="topic-section" id="app-phrases">
+    <div class="section-header">
+      <div class="section-title-group">
+        <h3>附录 B · Component 1 &amp; Coursework 万能高分英文学术句型库</h3>
+        <div class="section-en-sub">Examiner-Rewarded Phrases for Evaluation, Comparison, Trade-Offs &amp; Reflection</div>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table class="gp-table">
+        <thead>
+          <tr>
+            <th>使用场景</th>
+            <th>地道高分英文表达模板</th>
+            <th>中文逻辑点睛与适用得分段</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Q2A / IR<br>来源可靠性批判</strong></td>
+            <td><em>“Although [Source A] draws on recent statistical figures, its reliability is weakened by clear commercial vested interest as it is funded by…”</em></td>
+            <td>先扬后抑，承认数据时效但精准切中“商业既得利益”，防止非黑即白评价。</td>
+          </tr>
+          <tr>
+            <td><strong>Q2A / IR<br>小样本与代表性不足</strong></td>
+            <td><em>“The sample of [N participants] interviewed exclusively within [one location/group] is unrepresentative and risks sweeping generalisation.”</em></td>
+            <td>直指抽样偏误与以偏概全缺陷（IR/Q2A 必备）。</td>
+          </tr>
+          <tr>
+            <td><strong>Q3<br>对比双方论证强度</strong></td>
+            <td><em>“Whereas [Author A] substantiates claims through peer-reviewed longitudinal studies, [Author B] relies primarily on emotive anecdotes and unverified assertions.”</em></td>
+            <td>单句内部用 <code>Whereas</code> 并列拉踩“学术纵向数据 vs 情绪化轶事”。</td>
+          </tr>
+          <tr>
+            <td><strong>Q3<br>揭露隐含前提假设</strong></td>
+            <td><em>“[Author]'s reasoning rests on the unstated assumption that all rural households possess reliable broadband access—an oversimplification that overlooks local inequality.”</em></td>
+            <td>最高阶批判（Level 4/5）：直接拆穿作者未明言的前提漏洞。</td>
+          </tr>
+          <tr>
+            <td><strong>Q4<br>核心政策对比推荐</strong></td>
+            <td><em>“Option B is the most viable course of action because it balances immediate scalability with long-term financial sustainability, unlike Option A which risks regressive economic harm to low-income residents.”</em></td>
+            <td>紧扣 Scale / Long-term sustainability 并同时对比拒绝 Option A（拿全对比分）。</td>
+          </tr>
+          <tr>
+            <td><strong>Q4<br>承认所选方案局限+缓解</strong></td>
+            <td><em>“Admittedly, this policy requires substantial upfront capital expenditure and 3–5 years to yield results; however, these drawbacks can be mitigated by phasing in pilot zones alongside targeted subsidies.”</em></td>
+            <td>展示辩证权衡与风险缓释意识，直接锁死 Top Band。</td>
+          </tr>
+          <tr>
+            <td><strong>IR / TP<br>观念转变与自我审视</strong></td>
+            <td><em>“Prior to investigating [Source X], I uncritically assumed that… Evaluating evidence on unintended economic fallout reshaped my view toward favouring…”</em></td>
+            <td>完美体现 AO2 “Personal Perspective Development”，严禁结尾喊口号。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+</section>
+
+<section class="unit-block" id="section-concepts" style="--unit-color: var(--accent);">
+  <div class="unit-banner">
+    <div class="unit-kicker">Appendix C · 考场直接背写答案库</div>
+    <h2>附录 C · 44 道 GP 核心术语定义、证据评估与答题框架默写库</h2>
+    <p>
+      完整涵盖 Component 1 批判性思维定义 (Q1–Q2)、论证评估与政策权衡模板 (Q3–Q4) 以及 Coursework (IR &amp; Team Project) 规则。点击<strong>「🙈 开启遮罩自测」</strong>即可遮蔽答案默写，<span class="kw">天蓝高亮词</span>为剑桥考官核心采分词。
+    </p>
+  </div>
+
+  <article class="topic-section" id="app-concepts">
+    <div class="concept-toolbar">
+      <div class="concept-filter-group" id="conceptFilterTabs">
+        <button type="button" class="tab-btn active" data-concept-part="all">全部 44 题</button>
+        <button type="button" class="tab-btn" data-concept-part="c1a">C1 · Q1 &amp; Q2 术语与研究 (16题)</button>
+        <button type="button" class="tab-btn" data-concept-part="c1b">C1 · Q3 &amp; Q4 评估与决策 (12题)</button>
+        <button type="button" class="tab-btn" data-concept-part="cw">Coursework · IR &amp; TP (16题)</button>
+      </div>
+      <div class="concept-actions">
+        <span class="concept-count-pill" id="conceptCountPill">显示 44 / 44 题</span>
+        <button type="button" class="icon-btn" id="conceptQuizToggle">🙈 开启遮罩自测</button>
+      </div>
+    </div>
+
+    <div class="concept-grid" id="conceptGrid">
+      <!-- C1A: Q1 & Q2 Concepts & Research Design (16 cards) -->
+      <div class="concept-card c1-section" data-part="c1a">
+        <div class="cq-head">
+          <span class="q-tag">GP01 · C1 Q1</span>
+          <div class="cq-meta"><span class="badge-c1">Critical Term</span></div>
+        </div>
+        <div class="cq-en">Define a Fact in Global Perspectives and state the common false-factual-claim trap.</div>
+        <div class="cq-cn">写出 Fact（事实）的标准定义，以及考试中“数字写错了算事实还是观点”的易错点。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            A <span class="kw">Fact</span> is a statement that can be <span class="kw">objectively verified or proven true/false</span> through reliable evidence (e.g. dates, statistics). 即使统计数值在现实中被记错，只要它在原则上可通过实证核验真伪，仍归为事实类陈述而非 Opinion。<br>
+            中文：可通过客观证据<span class="kw">核实真伪</span>的陈述。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card c1-section" data-part="c1a">
+        <div class="cq-head">
+          <span class="q-tag">GP02 · C1 Q1</span>
+          <div class="cq-meta"><span class="badge-c1">Critical Term</span></div>
+        </div>
+        <div class="cq-en">Distinguish an Opinion from a Value Judgement.</div>
+        <div class="cq-cn">精准区分普通 Opinion（观点）与 Value Judgement（价值判断）。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            An <span class="kw">Opinion</span> reflects personal preference or belief that cannot be proven true/false; a <span class="kw">Value Judgement</span> specifically evaluates what is <span class="kw">morally right, wrong, fair, unfair, or what society “should/ought to” do</span> based on ethical priorities.<br>
+            中文：价值判断特指涉及<span class="kw">道德对错、公平与否及“应当/不应该”</span>（should/ought to/unfair）的伦理裁定。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card c1-section" data-part="c1a">
+        <div class="cq-head">
+          <span class="q-tag">GP03 · C1 Q1</span>
+          <div class="cq-meta"><span class="badge-c1">Critical Term</span></div>
+        </div>
+        <div class="cq-en">Define a Prediction and list three grammatical markers used to identify it.</div>
+        <div class="cq-cn">写出 Prediction（预测）的定义与三大考场识别标志词。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            A <span class="kw">Prediction</span> states what someone believes will happen in the <span class="kw">future</span> (unverified until that time). Markers: <span class="kw">will / is likely to / is projected to / by 2040</span>.<br>
+            中文：针对<span class="kw">未来尚未发生之事</span>做出的推测或预判。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card c1-section" data-part="c1a">
+        <div class="cq-head">
+          <span class="q-tag">GP04 · C1 Q1/Q2</span>
+          <div class="cq-meta"><span class="badge-c1">Critical Term</span></div>
+        </div>
+        <div class="cq-en">Define Vested Interest and write the full exam explanation formula.</div>
+        <div class="cq-cn">写出 Vested Interest（既得利益）的考场满分作答公式。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            <span class="kw">Vested interest</span> exists when a person/organisation has a <span class="kw">personal, financial, political, or reputational stake</span> in the outcome of an argument. 答题必须写明：<span class="kw">具体谁会因为该结论受益/受损（如利润、选票或经费）</span>，而非只写一句“他们有利益”。<br>
+            中文：因<span class="kw">金钱利润、选票或声誉</span>而渴望特定结论获胜，须点明具体得失方得分。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card c1-section" data-part="c1a">
+        <div class="cq-head">
+          <span class="q-tag">GP05 · C1 Q1/Q2</span>
+          <div class="cq-meta"><span class="badge-c1">Critical Term</span></div>
+        </div>
+        <div class="cq-en">Explain Bias and how to prove it using text evidence in Component 1.</div>
+        <div class="cq-cn">什么是 Bias（偏见）？在 C1 试卷中如何拿全证明偏见的分数？</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            <span class="kw">Bias</span> is an unfair inclination toward one side while suppressing or distorting opposing views. To earn marks, quote <span class="kw">emotive/loaded words</span> (e.g. “catastrophic”) or cite <span class="kw">one-sided omission</span> of counter-evidence.<br>
+            中文：不公正地偏向一方并过滤反方事实；必须<span class="kw">摘引具体情绪词或单边失衡例证</span>。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card c1-section" data-part="c1a">
+        <div class="cq-head">
+          <span class="q-tag">GP06 · C1 Q1/Q2</span>
+          <div class="cq-meta"><span class="badge-c1">Logical Fallacy</span></div>
+        </div>
+        <div class="cq-en">Define Generalisation (Sweeping Generalisation) with trigger words.</div>
+        <div class="cq-cn">简述 Generalisation（以偏概全）及其典型绝对化信号词。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            <span class="kw">Generalisation</span> applies a conclusion drawn from <span class="kw">limited or atypical examples</span> universally to an entire population. Trigger words: <span class="kw">all, every, always, never, everyone</span>.<br>
+            中文：把<span class="kw">局部或个别案例</span>草率推广到“所有人/总是如此”的全部群体。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card c1-section" data-part="c1a">
+        <div class="cq-head">
+          <span class="q-tag">GP07 · C1 Q2</span>
+          <div class="cq-meta"><span class="badge-c1">Reasoning Flaw</span></div>
+        </div>
+        <div class="cq-en">Explain the difference between Correlation and Causation.</div>
+        <div class="cq-cn">如何向考官解释某一统计论证混淆了“相关性 (Correlation)”与“因果性 (Causation)”？</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Two trends rising together (<span class="kw">correlation</span>) does not prove one <span class="kw">caused</span> the other; a <span class="kw">third confounding factor</span> (or reverse causality) may explain both.<br>
+            中文：两变量同步变动并不证明甲引发乙，可能背后存在未控制的<span class="kw">第三混杂变量</span>。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card c1-section" data-part="c1a">
+        <div class="cq-head">
+          <span class="q-tag">GP08 · C1 Q2A</span>
+          <div class="cq-meta"><span class="badge-c1">Evaluation</span></div>
+        </div>
+        <div class="cq-en">What do the five letters of R-A-V-E-N stand for in source evaluation?</div>
+        <div class="cq-cn">默写来源可信度评估五步工具 R-A-V-E-N 的完整英文含义。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            <span class="kw">R</span>eputation (机构声誉与独立性), <span class="kw">A</span>bility to see (一手目击与样本代表性), <span class="kw">V</span>ested interest (既得利益), <span class="kw">E</span>xpertise (专业资质), <span class="kw">N</span>eutrality &amp; corroboration (客观语调与交叉印证).
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card c1-section" data-part="c1a">
+        <div class="cq-head">
+          <span class="q-tag">GP09 · C1 Q2A</span>
+          <div class="cq-meta"><span class="badge-c1">Evidence Check</span></div>
+        </div>
+        <div class="cq-en">Why is Anecdotal Evidence considered weak compared with large-scale statistical studies?</div>
+        <div class="cq-cn">为什么“个人故事/奇闻轶事证据 (Anecdotal Evidence)”在论证评估中通常被评为薄弱？</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            It reflects only <span class="kw">one individual's subjective experience</span>, lacks <span class="kw">statistical representativeness</span>, and may be cherry-picked or distorted by memory.<br>
+            中文：仅代表个案主观体验，缺少<span class="kw">随机样本代表性</span>，易属刻意挑选（cherry-picking）的极端例证。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card c1-section" data-part="c1a">
+        <div class="cq-head">
+          <span class="q-tag">GP10 · C1 Q2A</span>
+          <div class="cq-meta"><span class="badge-c1">Data Critique</span></div>
+        </div>
+        <div class="cq-en">Identify two ways percentages or averages can mislead readers in GP sources.</div>
+        <div class="cq-cn">列举 GP 阅读材料中百分比或平均数最常见的两种误导陷阱。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            ① <span class="kw">Missing raw baseline / denominator</span> (e.g. “sales doubled” from 2 to 4 units); ② <span class="kw">Extreme outliers skewing the mean</span> (e.g. billionaire wages lifting national average income).<br>
+            中文：① 隐瞒小基数（如“翻倍”实际基数极小）；② 极端离群高值拉高<span class="kw">算术平均数</span>掩盖多数人真相。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card c1-section" data-part="c1a">
+        <div class="cq-head">
+          <span class="q-tag">GP11 · C1 Q2B</span>
+          <div class="cq-meta"><span class="badge-c1">Research Design</span></div>
+        </div>
+        <div class="cq-en">List the 5 mandatory components of an 8-mark “How would you test this claim?” answer.</div>
+        <div class="cq-cn">写出 Q2(b) 8 分“假设检验方法设计题”拿满 7–8 分的五步结构。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            ① Mix of <span class="kw">Primary &amp; Secondary methods</span>; ② <span class="kw">Concrete representative sample</span> (size, stratified/random, control group); ③ <span class="kw">Specific quantitative/qualitative data</span> gathered; ④ <span class="kw">Decision criterion</span> (what finding supports/refutes claim); ⑤ <span class="kw">Limitations &amp; ethics</span> (anonymity/bias).
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card c1-section" data-part="c1a">
+        <div class="cq-head">
+          <span class="q-tag">GP12 · C1 Q2B</span>
+          <div class="cq-meta"><span class="badge-c1">Sampling</span></div>
+        </div>
+        <div class="cq-en">Define Stratified Sampling and explain why it strengthens Q2(b) designs.</div>
+        <div class="cq-cn">什么是 Stratified Sampling（分层抽样）？为什么它在 Q2(b) 设计中是高分加分词？</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Dividing the population into key <span class="kw">subgroups</span> (age, income, urban/rural) and randomly sampling proportionally from each, ensuring <span class="kw">representativeness</span> and eliminating subgroup skew.<br>
+            中文：按年龄、城乡、收入等比例划分亚群后再随机抽取，确保样本<span class="kw">具广泛代表性</span>。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card c1-section" data-part="c1a">
+        <div class="cq-head">
+          <span class="q-tag">GP13 · C1 Q2B</span>
+          <div class="cq-meta"><span class="badge-c1">Primary Research</span></div>
+        </div>
+        <div class="cq-en">Compare closed questionnaires (Quantitative) vs semi-structured interviews (Qualitative).</div>
+        <div class="cq-cn">对比封闭式问卷与半结构化访谈各自的优势与局限。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            <span class="kw">Closed questionnaires</span> collect large, easily comparable numerical patterns quickly, but miss underlying reasons; <span class="kw">semi-structured interviews</span> uncover deep motives and nuance (“why”), yet cover smaller samples and risk interviewer bias.<br>
+            中文：前者<span class="kw">大样本易量化</span>却浅表；后者<span class="kw">追问深层动因</span>却耗时小样本，两者结合最稳。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card c1-section" data-part="c1a">
+        <div class="cq-head">
+          <span class="q-tag">GP14 · C1 Q2B</span>
+          <div class="cq-meta"><span class="badge-c1">Research Bias</span></div>
+        </div>
+        <div class="cq-en">Explain Social Desirability Bias and how to reduce it in surveys.</div>
+        <div class="cq-cn">解释问卷调查中的“社会期许偏差 (Social Desirability Bias)”及规避办法。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Respondents give <span class="kw">socially acceptable rather than truthful answers</span> (e.g. overstating recycling habits). Mitigated by <span class="kw">strict anonymity</span>, neutral question phrasing, and cross-checking with objective observation.<br>
+            中文：受访者为显体面而不说实话；通过<span class="kw">严格匿名</span>、中性问法及结合客观观测予以控制。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card c1-section" data-part="c1a">
+        <div class="cq-head">
+          <span class="q-tag">GP15 · C1 Core Skill</span>
+          <div class="cq-meta"><span class="badge-c1">Perspective</span></div>
+        </div>
+        <div class="cq-en">Define a “Perspective” in Cambridge GP and contrast it with a mere Opinion.</div>
+        <div class="cq-cn">精准写出剑桥 GP 对“Perspective（视角）”的定义，并与普通个人观点区分。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            A <span class="kw">Perspective</span> is a <span class="kw">viewpoint rooted in a shared set of values, economic needs, cultural beliefs, or experiences</span> (e.g. a farmer vs urban commuter), whereas an opinion can be a detached personal whim.<br>
+            中文：视角不是孤立喜好，而是受某群体<span class="kw">特定经济利益、文化背景或核心价值观</span>塑造的看世界立场。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card c1-section" data-part="c1a">
+        <div class="cq-head">
+          <span class="q-tag">GP16 · C1 Exam</span>
+          <div class="cq-meta"><span class="badge-c1">Critical Term</span></div>
+        </div>
+        <div class="cq-en">What is an Unstated Assumption (隐含假设) in an argument?</div>
+        <div class="cq-cn">什么是论证中的 Unstated Assumption（未明言隐含假设）？</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            A <span class="kw">hidden premise</span> that is never explicitly stated by the author but <span class="kw">must be true for their conclusion to hold</span> (e.g. claiming EV mandates cut emissions instantly assumes the power grid itself is already green).<br>
+            中文：作者未明说、但若该前提不成立其整条论证就会<span class="kw">瞬间崩塌的默认假设</span>。
+          </div>
+        </div>
+      </div>
+
+      <!-- C1B: Q3 & Q4 Arguments & Action Evaluation (12 cards) -->
+      <div class="concept-card c1-section" data-part="c1b">
+        <div class="cq-head">
+          <span class="q-tag">GP17 · C1 Q3</span>
+          <div class="cq-meta"><span class="badge-c1">15–16 Marks</span></div>
+        </div>
+        <div class="cq-en">State the golden structural rule for scoring Top Band in Q3 “Which argument is more convincing?”.</div>
+        <div class="cq-cn">Q3（15–16分）双源论证对比评估拿高分的最重要结构原则是什么？</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Compare <span class="kw">both arguments directly side-by-side criterion by criterion</span> (Evidence, Balance, Tone, Assumptions), rather than summarising Source A in full then Source B separately; always state a <span class="kw">clear comparative verdict</span>.<br>
+            中文：按“证据/平衡/语调/假设”<span class="kw">逐维度交叉对比</span>，忌分段孤立复述，且必须明确给出谁更 convincing。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card c1-section" data-part="c1b">
+        <div class="cq-head">
+          <span class="q-tag">GP18 · C1 Q3</span>
+          <div class="cq-meta"><span class="badge-c1">Reasoning</span></div>
+        </div>
+        <div class="cq-en">Why is an argument that acknowledges a counter-argument stronger than a purely one-sided polemic?</div>
+        <div class="cq-cn">为什么包含让步反驳 (Counter-argument) 的论证通常比纯单边极力游说更令考官信服？</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Addressing opposing views shows <span class="kw">balance, critical awareness and lower bias</span>, proving the conclusion survives scrutiny against alternative interpretations.<br>
+            中文：回应反方展现了作者的<span class="kw">理性平衡度与极低偏见</span>，证明其立场经得起反面诘问。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card c1-section" data-part="c1b">
+        <div class="cq-head">
+          <span class="q-tag">GP19 · C1 Q3</span>
+          <div class="cq-meta"><span class="badge-c1">Language Analysis</span></div>
+        </div>
+        <div class="cq-en">Explain how Emotive Language weakens an argument's persuasiveness in GP.</div>
+        <div class="cq-cn">在 Q3 中如何精准指出“情绪化煽动语言 (Emotive Language)”反而削弱了说服力？</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Loaded phrases (e.g. “greedy corporations ruining youth”) attempt to <span class="kw">manipulate reader emotions</span> instead of supplying verifiable proof, signalling <span class="kw">bias and weak logical rigour</span>.<br>
+            中文：用煽动词汇代替实证推理，意在操纵情绪，暴露明显的<span class="kw">主观偏见与逻辑严谨性缺失</span>。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card c1-section" data-part="c1b">
+        <div class="cq-head">
+          <span class="q-tag">GP20 · C1 Q3</span>
+          <div class="cq-meta"><span class="badge-c1">Fallacy</span></div>
+        </div>
+        <div class="cq-en">Define False Dichotomy (Either/Or Fallacy) and Slippery Slope Fallacy.</div>
+        <div class="cq-cn">写出“非黑即白谬误 (False Dichotomy)”与“滑坡谬误 (Slippery Slope)”的定义。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            <span class="kw">False Dichotomy</span> forces a choice between only two extreme options while ignoring compromises; <span class="kw">Slippery Slope</span> claims one small step will inevitably trigger an extreme disaster without intermediate evidence.<br>
+            中文：前者假装只有两个极端选项；后者毫无依据地断言小步变动必然引发极端灾祸。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card c1-section" data-part="c1b">
+        <div class="cq-head">
+          <span class="q-tag">GP21 · C1 Q3</span>
+          <div class="cq-meta"><span class="badge-c1">Authority Check</span></div>
+        </div>
+        <div class="cq-en">Explain the flaw of “Appeal to False Authority” with an example.</div>
+        <div class="cq-cn">解释什么是 Appeal to False Authority（伪权威诉诸）并给一例。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Relying on a famous or respected figure whose <span class="kw">credentials lie outside the topic domain</span> (e.g. citing a pop singer or football star to validate complex macroeconomic tax policy).<br>
+            中文：引用其资质完全不属于当前专业领域（<span class="kw">跨界名望</span>）的人充当论证背书。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card c1-section" data-part="c1b">
+        <div class="cq-head">
+          <span class="q-tag">GP22 · C1 Q4</span>
+          <div class="cq-meta"><span class="badge-c1">20–24 Marks</span></div>
+        </div>
+        <div class="cq-en">List the 5 core evaluation lenses for Q4 “Which course of action would you recommend?”.</div>
+        <div class="cq-cn">背熟 Q4（20–24分压轴大题）评价任何行动方案的五大决策标尺。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            ① <span class="kw">Scale &amp; Effectiveness</span> (影响面与根本实效)；② <span class="kw">Cost &amp; Feasibility</span> (预算资金与师资落地难度)；③ <span class="kw">Timescale</span> (短期救急 vs 长期长效)；④ <span class="kw">Equity &amp; Stakeholder Resistance</span> (是否公平伤及弱势群体)；⑤ <span class="kw">Unintended Consequences &amp; Enforcement</span> (潜在副作用与执法漏洞)。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card c1-section" data-part="c1b">
+        <div class="cq-head">
+          <span class="q-tag">GP23 · C1 Q4</span>
+          <div class="cq-meta"><span class="badge-c1">Requirement</span></div>
+        </div>
+        <div class="cq-en">Why does recommending Option 2 thoroughly without discussing Options 1 and 3 cap Q4 marks?</div>
+        <div class="cq-cn">为什么 Q4 把自己推荐的那一个选项吹得天花乱坠，不谈另外两个落选方案仍会大失分？</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Q4 demands <span class="kw">comparative judgement across the options</span>; without proving why your chosen course is <span class="kw">more effective or feasible than rejected alternatives</span>, evaluation remains one-sided.<br>
+            中文：题干考核“权衡与比较决策”；必须用理由明确淘汰备选方案，证明选定方案的<span class="kw">相对优势</span>。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card c1-section" data-part="c1b">
+        <div class="cq-head">
+          <span class="q-tag">GP24 · C1 Q4</span>
+          <div class="cq-meta"><span class="badge-c1">Top Band Move</span></div>
+        </div>
+        <div class="cq-en">What is “Mitigation of Drawbacks” in a Q4 response, and why does it earn Level 5?</div>
+        <div class="cq-cn">什么是 Q4 中的“承认局限并给出缓解方案 (Mitigation)”？为什么它是 Level 5 利器？</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Openly conceding your recommended policy's main flaw (e.g. high upfront cost or slow onset) and proposing a <span class="kw">practical mitigation measure</span> (e.g. phased trials/subsidies for low-income citizens), demonstrating mature balanced evaluation.<br>
+            中文：坦承所选方案的软肋并匹配<span class="kw">配套缓冲机制</span>（如分期试点/穷人补贴），体现高层决策思辨。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card c1-section" data-part="c1b">
+        <div class="cq-head">
+          <span class="q-tag">GP25 · C1 Q4</span>
+          <div class="cq-meta"><span class="badge-c1">Policy Lens</span></div>
+        </div>
+        <div class="cq-en">Explain why Awareness Campaigns alone are rarely the strongest standalone Q4 policy.</div>
+        <div class="cq-cn">为什么 Q4 题中“仅靠公益宣传/学校讲座 (Awareness Campaign)”通常难以独自解决结构性大问题？</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Awareness campaigns are low-cost and low-resistance, but <span class="kw">lack legal enforceability and infrastructure support</span>, creating a slow, <span class="kw">attitude-behaviour gap</span> when economic incentives work against change.<br>
+            中文：缺少<span class="kw">强制约束力与替代基建</span>，极易陷入“认知提高但行为不改”的空转，常只宜作辅助手段。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card c1-section" data-part="c1b">
+        <div class="cq-head">
+          <span class="q-tag">GP26 · C1 Q4</span>
+          <div class="cq-meta"><span class="badge-c1">Policy Lens</span></div>
+        </div>
+        <div class="cq-en">Identify a typical Regressive Equity Risk of flat environmental taxes or fines.</div>
+        <div class="cq-cn">举例说明针对汽油、水电或塑料袋一律“重罚或加征定额税”的常见公平性漏洞 (Regressive Impact)。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Flat charges consume a far larger <span class="kw">proportion of low-income households' budgets</span> while barely deterring wealthy consumers, risking public backlash unless rebates or affordable alternatives exist.<br>
+            中文：定额重税在低收入群体收入中占比极大、实质成为<span class="kw">劫贫式累退税</span>，且往往无法阻吓高收入者。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card c1-section" data-part="c1b">
+        <div class="cq-head">
+          <span class="q-tag">GP27 · C1 Exam</span>
+          <div class="cq-meta"><span class="badge-c1">Use of Sources</span></div>
+        </div>
+        <div class="cq-en">How should evidence from the Source Booklet be referenced in Q3 and Q4?</div>
+        <div class="cq-cn">在 Component 1 的 Q3 与 Q4 中应如何引用资料册内容？（要不要背题外事实？）</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Synthesise and paraphrase <span class="kw">specific data, stakeholder examples and named authors from the provided sources</span> rather than long verbatim copying; outside facts are unnecessary unless smoothly supporting reasoning.<br>
+            中文：精准改写并指明出自哪一材料（Source 1/2/3/作者名）的具体证据，不必依赖题外背诵知识。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card c1-section" data-part="c1b">
+        <div class="cq-head">
+          <span class="q-tag">GP28 · C1 Strategy</span>
+          <div class="cq-meta"><span class="badge-c1">Timing</span></div>
+        </div>
+        <div class="cq-en">Give the ideal exam time allocation across Q1–Q4 in the 85-minute Component 1 paper.</div>
+        <div class="cq-cn">写出 85 分钟 Component 1 笔试在 Q1–Q4 之间的高分时间配比建议。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            ~10m reading sources + ~12–15m Q1 + ~15m Q2 + ~20m Q3 + <span class="kw">~25m Q4 (highest marks)</span>. Never overspend on 1–2 mark Q1 questions and run out of time on 24-mark Q4!<br>
+            中文：大约 1 分钟≈1 分配速，<span class="kw">压轴 Q4 至少预留 22–25 分钟</span>。
+          </div>
+        </div>
+      </div>
+
+      <!-- Coursework: Component 2 IR & Component 3 TP (16 cards) -->
+      <div class="concept-card cw-section" data-part="cw">
+        <div class="cq-head">
+          <span class="q-tag">GP29 · Comp 2 IR</span>
+          <div class="cq-meta"><span class="badge-cw">Weight: 30%</span></div>
+        </div>
+        <div class="cq-en">State the hard word limit and what is excluded from the Individual Report word count.</div>
+        <div class="cq-cn">写出 IR 个人报告的正式词数区间、硬截断规则以及不计入字数的部分。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            <span class="kw">1,500–2,000 words</span> continuous prose (examiners stop marking after 2,000 words!). <span class="kw">Excluded</span>: title, bibliography/reference list, purely structural page numbers. <span class="kw">Included</span>: body text, headings, in-text citations, tables.<br>
+            中文：正文含文内引注限 <span class="kw">1500–2000 词</span>（超 2000 截断不改）；文末 Bibliography 不计入。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card cw-section" data-part="cw">
+        <div class="cq-head">
+          <span class="q-tag">GP30 · Comp 2 IR</span>
+          <div class="cq-meta"><span class="badge-cw">Question Design</span></div>
+        </div>
+        <div class="cq-en">State three qualities of a Top-Band IR Research Question.</div>
+        <div class="cq-cn">列举 A* 级 IR 研究问题 (Research Question) 必须满足的三项核心准则。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            ① <span class="kw">Open-ended &amp; debatable</span> (“Should… / To what extent…” rather than yes/no descriptive fact check); ② <span class="kw">Focused scope</span> manageable within 2,000 words; ③ Clearly invites <span class="kw">global + national/local comparison</span>.<br>
+            中文：可争辩（非科普问答）、范围聚焦、天然支撑<span class="kw">全球与本土多视角对比</span>。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card cw-section" data-part="cw">
+        <div class="cq-head">
+          <span class="q-tag">GP31 · Comp 2 IR</span>
+          <div class="cq-meta"><span class="badge-cw">AO1</span></div>
+        </div>
+        <div class="cq-en">How must Global and National/Local perspectives be presented in the Individual Report?</div>
+        <div class="cq-cn">IR 中应当如何展开 Global 与 National/Local 视角？（避开假视角误区）</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Explain the <span class="kw">underlying economic, cultural or ethical values</span> driving each perspective (e.g. UN climate urgency vs developing nation industrial survival) and <span class="kw">explicitly contrast</span> where global agendas clash with local realities.<br>
+            中文：深入剖析立场背后的<span class="kw">价值优先级与利益诉求</span>，并直接对比两者之间的碰撞张力。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card cw-section" data-part="cw">
+        <div class="cq-head">
+          <span class="q-tag">GP32 · Comp 2 IR</span>
+          <div class="cq-meta"><span class="badge-cw">AO1</span></div>
+        </div>
+        <div class="cq-en">Distinguish between Causes and Consequences in an IR issue analysis.</div>
+        <div class="cq-cn">在 IR 病因拆解板块，如何体现 Causes（深层成因）与 Consequences（多维后果）的逻辑深度？</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Move beyond surface symptoms to analyse <span class="kw">root drivers</span> (economic incentives, policy gaps, demographics) and trace <span class="kw">multi-layered short- and long-term consequences</span> across social, environmental and economic spheres.<br>
+            中文：透过表象挖出制度/经济根源（Causes），并追踪跨领域<span class="kw">短中长期连锁后果</span>。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card cw-section" data-part="cw">
+        <div class="cq-head">
+          <span class="q-tag">GP33 · Comp 2 IR</span>
+          <div class="cq-meta"><span class="badge-cw">AO1 Source Eval</span></div>
+        </div>
+        <div class="cq-en">Where should Source Evaluation appear inside the Individual Report?</div>
+        <div class="cq-cn">在 2,000 词 IR 中，来源可靠性评价是单列一段好还是穿插嵌入正文好？</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Embed evaluation <span class="kw">concisely inline right beside key claims</span> (noting authority, date, sample limits or vested interest as you cite them), rather than writing a mechanical standalone bibliography commentary block.<br>
+            中文：<span class="kw">嵌入在引文当下顺手点评</span>（一两句指出资助来源或年份局限），比文末僵硬单列一段更流畅省词。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card cw-section" data-part="cw">
+        <div class="cq-head">
+          <span class="q-tag">GP34 · Comp 2 IR</span>
+          <div class="cq-meta"><span class="badge-cw">AO2 10m</span></div>
+        </div>
+        <div class="cq-en">What earns Top Band in the IR “Personal Perspective” section (AO2)?</div>
+        <div class="cq-cn">IR 结尾 10 分的 AO2 “Personal Perspective（个人立场反思）”拿满分的秘诀是什么？</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Demonstrate genuine <span class="kw">intellectual evolution</span>—state your initial assumption, pinpoint which <span class="kw">specific sources/evidence challenged or refined it</span>, and justify a nuanced, balanced final stance.<br>
+            中文：展现调研前后的<span class="kw">认知修正轨迹</span>，指明具体哪项证据打破了你的初始预设并引向折中新立场。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card cw-section" data-part="cw">
+        <div class="cq-head">
+          <span class="q-tag">GP35 · Comp 2 IR</span>
+          <div class="cq-meta"><span class="badge-cw">AO3 10m</span></div>
+        </div>
+        <div class="cq-en">State what a consistent Harvard-style Reference List &amp; In-Text Citation require.</div>
+        <div class="cq-cn">写出 IR 中防抄袭引注（文内括号引用 + 文末参考书目）的必备要素。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            In-text: <span class="kw">(Author/Org, Year)</span> matching every entry in the <span class="kw">alphabetised Bibliography</span>, which includes Author/Org, Year, Title, Publisher/URL, and <span class="kw">Access Date</span>.<br>
+            中文：文内 <code>(作者/机构, 年份)</code> 与文末按字母排序书目（含全标题、网址及访问日期）<span class="kw">一一对应</span>。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card cw-section" data-part="cw">
+        <div class="cq-head">
+          <span class="q-tag">GP36 · Comp 3 TP</span>
+          <div class="cq-meta"><span class="badge-cw">Weight: 35%</span></div>
+        </div>
+        <div class="cq-en">State the 2025–2027 mark split between Team Element and Personal Reflective Paper in Team Project.</div>
+        <div class="cq-cn">默写新版 0457 Team Project（共 70 分）中团体分与个人反思分的精确权重。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            <span class="kw">Team Element = 25 marks</span> (Explanation of Research &amp; Planning + Evidence of Action); <span class="kw">Personal Element = 45 marks</span> (Reflective Paper). Over 64% of Component 3 depends on your individual critical reflection!<br>
+            中文：团体规划与行动占 <span class="kw">25 分</span>，个人反思论文占 <span class="kw">45 分</span>（决定 TP 等级的核心）。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card cw-section" data-part="cw">
+        <div class="cq-head">
+          <span class="q-tag">GP37 · Comp 3 TP</span>
+          <div class="cq-meta"><span class="badge-cw">300–400w</span></div>
+        </div>
+        <div class="cq-en">What are the four items required in the 300–400 word Explanation of Research and Planning?</div>
+        <div class="cq-cn">全组共享的 300–400 词计划说明 (Explanation of Research and Planning) 须紧凑涵盖哪 4 点？</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            ① The <span class="kw">local issue</span> &amp; global topic link; ② <span class="kw">Different perspectives</span> uncovered by research; ③ <span class="kw">Goal &amp; rationale</span> of chosen Action; ④ Individual <span class="kw">roles, timeline &amp; measurable success criteria</span>.<br>
+            中文：本土问题与全球联系、研究揭示的不同视角、行动目标及选型依据、精确分工与衡量指标。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card cw-section" data-part="cw">
+        <div class="cq-head">
+          <span class="q-tag">GP38 · Comp 3 TP</span>
+          <div class="cq-meta"><span class="badge-cw">Action Evidence</span></div>
+        </div>
+        <div class="cq-en">Explain why submitting only a poster or flyer without impact data lowers Team Element marks.</div>
+        <div class="cq-cn">为什么团队行动仅交“一张精美海报图片”而没有其他留证会压低团体得分？</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Marks reward <span class="kw">active implementation and measurable community impact</span> rather than passive art design; teams should provide <span class="kw">pre/post surveys, attendance logs, tangible responses or output data</span>.<br>
+            中文：评分看重<span class="kw">实际社会落地与可衡量效果改变</span>，须配套受众前后测问卷、活动参与记录或官方/参与者回馈实证。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card cw-section" data-part="cw">
+        <div class="cq-head">
+          <span class="q-tag">GP39 · Comp 3 TP</span>
+          <div class="cq-meta"><span class="badge-cw">750–1,000w · 45m</span></div>
+        </div>
+        <div class="cq-en">State the word limit and the 4 mandatory reflection strands of the Reflective Paper.</div>
+        <div class="cq-cn">写出 45 分 TP 个人反思论文的词数规范与四大必写剖析维度。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Word limit: <span class="kw">750–1,000 words</span>. Four strands: ① <span class="kw">Action effectiveness</span> (strengths/weaknesses); ② <span class="kw">Teamwork &amp; own role</span> (conflicts &amp; compromises); ③ <span class="kw">Personal learning &amp; research reflection</span>; ④ <span class="kw">Perspective change</span>.<br>
+            中文：限 <span class="kw">750–1000 词</span>；写透行动实效、协作摩擦与个人职责、调研成长、观点蜕变。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card cw-section" data-part="cw">
+        <div class="cq-head">
+          <span class="q-tag">GP40 · Comp 3 TP</span>
+          <div class="cq-meta"><span class="badge-cw">Top Band Secret</span></div>
+        </div>
+        <div class="cq-en">Why does pretending “our team had zero problems” hurt your Reflective Paper grade?</div>
+        <div class="cq-cn">为什么在 Reflective Paper 中把团队夸成“毫无分歧、完美无瑕”反而拿不了高分？</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Uncritical praise shows zero <span class="kw">evaluative insight</span>. Examiners award Top Band to students who honestly analyse <span class="kw">specific bottlenecks, personal mistakes, how conflicts were resolved, and concrete improvements for next time</span>.<br>
+            中文：一味报喜会被判为浅层描述；高分靠诚实复盘<span class="kw">真实瓶颈、自身失误、冲突调解过程及改进方案</span>。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card cw-section" data-part="cw">
+        <div class="cq-head">
+          <span class="q-tag">GP41 · Comp 3 TP</span>
+          <div class="cq-meta"><span class="badge-cw">Pronoun Check</span></div>
+        </div>
+        <div class="cq-en">Explain the “We vs I” mistake in TP Reflective Papers.</div>
+        <div class="cq-cn">指出反思论文中“通篇只用 We 而不用 I”的扣分隐患。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            The 45-mark paper assesses <span class="kw">individual accountability</span>; you must clearly distinguish <span class="kw">“I”</span> (your specific research, mistakes, adaptations and perspective shifts) alongside how you interacted with teammates.<br>
+            中文：此文考核个人表现，须清晰界定 <span class="kw">“我 (I)”</span> 的独立贡献、具体失误与心智变化，不能全推给集体 “We”。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card cw-section" data-part="cw">
+        <div class="cq-head">
+          <span class="q-tag">GP42 · Syllabus 2025</span>
+          <div class="cq-meta"><span class="badge-cw">Update Rule</span></div>
+        </div>
+        <div class="cq-en">How did the 2025–2027 0457 syllabus unify topic selection across C1, C2 and C3?</div>
+        <div class="cq-cn">简述 2025–2027 最新考纲对三大组件选题池的核心整合调整。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            All three components (Written Exam, Individual Report, Team Project) now share the same unified list of <span class="kw">15 global topics</span>, streamlining skill transfer across coursework and exam prep.<br>
+            中文：现统一共用<span class="kw">同一份 15 大全球议题清单</span>，使课程作业积累的视角分析能力直接迁移至笔试。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card cw-section" data-part="cw">
+        <div class="cq-head">
+          <span class="q-tag">GP43 · Academic Integrity</span>
+          <div class="cq-meta"><span class="badge-cw">Coursework Rule</span></div>
+        </div>
+        <div class="cq-en">What are Cambridge's rules on Generative AI and independent work in IR and TP?</div>
+        <div class="cq-cn">写出剑桥对 IR 与 TP 中使用生成式 AI 及查重原创性的核心红线规定。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Submitting AI-generated prose as one's own constitutes <span class="kw">malpractice (unacknowledged aid)</span>; all writing, source synthesis and reflections must be the student's <span class="kw">authentic original work</span> verified by teacher checkpoints.<br>
+            中文：严禁直接生成代写段落；整篇分析、评估与个人反思须为学生<span class="kw">真实独立原创成果</span>。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card cw-section" data-part="cw">
+        <div class="cq-head">
+          <span class="q-tag">GP44 · Synthesis</span>
+          <div class="cq-meta"><span class="badge-cw">Golden Rule</span></div>
+        </div>
+        <div class="cq-en">Summarise the overarching difference between strong and weak GP answers across all 3 components.</div>
+        <div class="cq-cn">用一句话高度浓缩 0457 全科高分答卷与中低分答卷的本质区别。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Weak answers merely <span class="kw">describe facts and preach moral slogans</span>; A* answers <span class="kw">interrogate evidence quality, weigh conflicting value-based perspectives, and justify balanced decisions with concrete proof</span>.<br>
+            中文：低分停留在<span class="kw">罗列事实与道德口号</span>；A* 答卷始终坚持<span class="kw">拷问证据信度、对比价值冲突视角、并依托实证做出权衡</span>。
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+
+      </div>
+    </main>
+  </div>
+
+  <button type="button" class="back-top-btn" id="backTopBtn" title="返回顶部">↑</button>
+
+  <script>
+(function () {
+  'use strict';
+
+  const STORAGE_PREFIX = 'igcse_gp0457_';
+  const htmlEl = document.documentElement;
+  const bodyEl = document.body;
+
+  // Top-level state variables declared before any init functions (avoids TDZ errors)
+  let currentGpMode = localStorage.getItem(STORAGE_PREFIX + 'gpMode') || 'all';
+  let activeConceptPart = 'all';
+  let quizMasked = localStorage.getItem(STORAGE_PREFIX + 'quizMasked') === '1';
+  let allMsExpanded = false;
+  let claimIdx = 0;
+  let claimAnsweredMap = {};
+  let evalIdx = 0;
+  let q4OptIdx = 0;
+  let q4Priority = 'equity';
+  let cwWordMode = 'ir';
+  let masteredIds = [];
+  try {
+    masteredIds = JSON.parse(localStorage.getItem(STORAGE_PREFIX + 'mastered') || '[]');
+    if (!Array.isArray(masteredIds)) masteredIds = [];
+  } catch (e) {
+    masteredIds = [];
+  }
+
+  // ---------- 1. Theme & Component Filter ----------
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+
+  function applyTheme(theme) {
+    htmlEl.setAttribute('data-theme', theme);
+    if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem(STORAGE_PREFIX + 'theme', theme);
+  }
+  applyTheme(localStorage.getItem(STORAGE_PREFIX + 'theme') || 'light');
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      applyTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  }
+
+  function applyGpMode(mode) {
+    currentGpMode = mode;
+    bodyEl.classList.remove('mode-c1', 'mode-cw');
+    if (mode === 'c1') bodyEl.classList.add('mode-c1');
+    if (mode === 'cw') bodyEl.classList.add('mode-cw');
+    document.querySelectorAll('[data-gp-mode]').forEach(function (btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-gp-mode') === mode);
+    });
+    localStorage.setItem(STORAGE_PREFIX + 'gpMode', mode);
+    filterConcepts();
+  }
+
+  document.querySelectorAll('[data-gp-mode]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      applyGpMode(btn.getAttribute('data-gp-mode'));
+    });
+  });
+
+  // ---------- 2. Sidebar Drawer & Accordion ----------
+  const sidebar = document.getElementById('sidebar');
+  const menuToggle = document.getElementById('menuToggle');
+  if (menuToggle && sidebar) {
+    menuToggle.addEventListener('click', function () {
+      sidebar.classList.toggle('open');
+    });
+    sidebar.querySelectorAll('.nav-link').forEach(function (lnk) {
+      lnk.addEventListener('click', function () {
+        if (window.innerWidth <= 980) sidebar.classList.remove('open');
+      });
+    });
+  }
+  document.querySelectorAll('.nav-unit-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const unit = btn.closest('.nav-unit');
+      if (unit) unit.classList.toggle('collapsed');
+    });
+  });
+
+  // ---------- 3. Mastery Progress Tracker (0/12) ----------
+  const progressText = document.getElementById('progressText');
+  const progressFill = document.getElementById('progressFill');
+  const TOTAL_SECTIONS = 12;
+
+  function renderMastery() {
+    const valid = masteredIds.filter(function (id) {
+      return /^sec-g([1-9]|1[0-2])$/.test(id);
+    });
+    if (progressText) progressText.textContent = valid.length + '/' + TOTAL_SECTIONS;
+    if (progressFill) progressFill.style.width = Math.round((valid.length / TOTAL_SECTIONS) * 100) + '%';
+
+    document.querySelectorAll('.master-btn').forEach(function (btn) {
+      const sid = btn.getAttribute('data-section-id');
+      const done = valid.indexOf(sid) !== -1;
+      btn.classList.toggle('is-mastered', done);
+      btn.textContent = done ? '✓ 已掌握' : '○ 标记掌握';
+    });
+
+    document.querySelectorAll('.nav-link').forEach(function (lnk) {
+      const id = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('mastered', valid.indexOf(id) !== -1);
+    });
+  }
+
+  document.querySelectorAll('.master-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const sid = btn.getAttribute('data-section-id');
+      const idx = masteredIds.indexOf(sid);
+      if (idx === -1) masteredIds.push(sid);
+      else masteredIds.splice(idx, 1);
+      localStorage.setItem(STORAGE_PREFIX + 'mastered', JSON.stringify(masteredIds));
+      renderMastery();
+    });
+  });
+  renderMastery();
+
+  // ---------- 4. Global Mark Scheme Expand & Print ----------
+  const toggleAllMs = document.getElementById('toggleAllMs');
+  if (toggleAllMs) {
+    toggleAllMs.addEventListener('click', function () {
+      allMsExpanded = !allMsExpanded;
+      document.querySelectorAll('details.ms-details').forEach(function (det) {
+        det.open = allMsExpanded;
+      });
+      const lbl = toggleAllMs.querySelector('.btn-label');
+      if (lbl) lbl.textContent = allMsExpanded ? '收起解析' : '展开解析';
+      toggleAllMs.classList.toggle('active', allMsExpanded);
+    });
+  }
+  const printBtn = document.getElementById('printBtn');
+  if (printBtn) {
+    printBtn.addEventListener('click', function () { window.print(); });
+  }
+
+  // ---------- 5. Search Filter ----------
+  const searchInput = document.getElementById('searchInput');
+  const searchClear = document.getElementById('searchClear');
+  const searchBar = document.getElementById('searchBar');
+  const searchSummary = document.getElementById('searchSummary');
+  const searchResetBtn = document.getElementById('searchResetBtn');
+  const emptySearchNotice = document.getElementById('emptySearchNotice');
+
+  function runSearch() {
+    if (!searchInput) return;
+    const raw = searchInput.value.trim().toLowerCase();
+    if (searchClear) searchClear.style.display = raw ? 'block' : 'none';
+    const sections = Array.from(document.querySelectorAll('.topic-section'));
+    if (!raw) {
+      sections.forEach(function (s) { s.classList.remove('search-dim'); });
+      if (searchBar) searchBar.classList.remove('visible');
+      if (emptySearchNotice) emptySearchNotice.style.display = 'none';
+      return;
+    }
+    let hits = 0;
+    sections.forEach(function (sec) {
+      const ok = sec.textContent.toLowerCase().indexOf(raw) !== -1;
+      sec.classList.toggle('search-dim', !ok);
+      if (ok) hits++;
+    });
+    if (searchBar) searchBar.classList.add('visible');
+    if (searchSummary) searchSummary.textContent = '关键词 “' + searchInput.value.trim() + '” 匹配 ' + hits + ' 个知识板块';
+    if (emptySearchNotice) emptySearchNotice.style.display = hits === 0 ? 'block' : 'none';
+  }
+  if (searchInput) searchInput.addEventListener('input', runSearch);
+  function resetSearch() { if (searchInput) searchInput.value = ''; runSearch(); }
+  if (searchClear) searchClear.addEventListener('click', resetSearch);
+  if (searchResetBtn) searchResetBtn.addEventListener('click', resetSearch);
+
+  // ---------- 6. MCQ Practice Grading ----------
+  document.querySelectorAll('.exam-q[data-mcq-answer]').forEach(function (qBox) {
+    const ans = qBox.getAttribute('data-mcq-answer');
+    const fb = qBox.querySelector('.mcq-feedback');
+    const opts = qBox.querySelectorAll('.mcq-opt');
+    opts.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const picked = btn.getAttribute('data-opt');
+        opts.forEach(function (o) { o.classList.remove('correct', 'wrong'); });
+        if (picked === ans) {
+          btn.classList.add('correct');
+          if (fb) {
+            fb.textContent = fb.getAttribute('data-ok') || '✅ Correct!';
+            fb.className = 'mcq-feedback visible ok';
+          }
+        } else {
+          btn.classList.add('wrong');
+          opts.forEach(function (o) {
+            if (o.getAttribute('data-opt') === ans) o.classList.add('correct');
+          });
+          if (fb) {
+            fb.textContent = fb.getAttribute('data-err') || '❌ Incorrect.';
+            fb.className = 'mcq-feedback visible err';
+          }
+        }
+      });
+    });
+  });
+
+  // ---------- 7. Lab 1: Claim Classifier (#lab-gp-claim) ----------
+  const CLAIM_BANK = [
+    {
+      quote: '“According to the 2024 International Labour Organization report, youth unemployment in Region X fell by 1.8% between 2022 and 2023.”',
+      ctx: '出处：官方统计年鉴引用语句',
+      ans: 'Fact',
+      exp: '包含可客观查阅核实的年份、机构与统计涨幅，即使万一记错具体小数依然属于 Fact statement。'
+    },
+    {
+      quote: '“Wealthy nations have a moral duty to fund climate adaptation in low-lying island states; ignoring their crisis is unjust.”',
+      ctx: '出处：环境伦理专栏末尾段落',
+      ans: 'Value Judgement',
+      exp: '带有明确的道德义务词“moral duty”和“unjust（不公正）”，属于典型的 Value Judgement。'
+    },
+    {
+      quote: '“By 2040, automated delivery drones are likely to handle more than half of urban parcel drops.”',
+      ctx: '出处：物流科技峰会前瞻发言',
+      ans: 'Prediction',
+      exp: '围绕“By 2040”这一未来时间节点并搭配“are likely to”，是对未来事件的推测预判。'
+    },
+    {
+      quote: '“I met three teenagers on holiday who never read print books, which proves today’s entire younger generation has abandoned reading.”',
+      ctx: '出处：报纸读者来信栏目',
+      ans: 'Generalisation',
+      exp: '仅凭度假遇到的 3 名青少年就草率下结论推及“today’s entire younger generation”，是典型 Sweeping Generalisation（以偏概全）。'
+    },
+    {
+      quote: '“A report funded by National Airline Coalition concludes that high-speed rail expansion is a wasteful mistake and air travel taxes must be abolished.”',
+      ctx: '出处：交通行业游说简报',
+      ans: 'Vested Interest',
+      exp: '航空联盟与高铁存在直接商业竞争，取消航税及贬低高铁直接关系到其巨额经济利润，属于明显的 Vested Interest。'
+    },
+    {
+      quote: '“Modern open-plan offices feel noisy and far less inspiring than traditional private study rooms.”',
+      ctx: '出处：建筑设计评论博客',
+      ans: 'Opinion',
+      exp: '表达个人感受偏好（“feel noisy and less inspiring”），无从客观证实真伪，也非伦理“应当/正义”问题。'
+    },
+    {
+      quote: '“Governments ought to outlaw ultra-processed school lunches immediately, regardless of food suppliers’ profits.”',
+      ctx: '出处：家长协会请愿书',
+      ans: 'Value Judgement',
+      exp: '“ought to（应当）”将公共健康置于企业盈利之前，表达明确的政策伦理优先级判断。'
+    },
+    {
+      quote: '“Solar panel manufacturing capacity worldwide exceeded 800 GW in 2023.”',
+      ctx: '出处：国际能源署技术公报',
+      ans: 'Fact',
+      exp: '2023 年已发生的产能数值可以通过权威能源署报表核对真伪，属于 Fact。'
+    },
+    {
+      quote: '“If water shortages worsen over the next decade, food prices across the Mediterranean region will spike sharply.”',
+      ctx: '出处：农业气候模型简讯',
+      ans: 'Prediction',
+      exp: '条件假设指向“over the next decade”与“will spike”，典型未来趋势预测（Prediction）。'
+    },
+    {
+      quote: '“Electric vehicle lobbyists insist that strict urban bans on diesel vans will never harm rural delivery drivers.”',
+      ctx: '出处：新能源游说组织新闻稿',
+      ans: 'Vested Interest',
+      exp: '新能源游说集团（EV lobbyists）直接从燃油车禁令中获益，其单方面断言缺乏利益独立性。'
+    }
+  ];
+
+  function renderGpClaim() {
+    const q = CLAIM_BANK[claimIdx];
+    const prog = document.getElementById('gpClaimProg');
+    const score = document.getElementById('gpClaimScore');
+    const quoteEl = document.getElementById('gpClaimQuote');
+    const ctxEl = document.getElementById('gpClaimCtx');
+    const fbEl = document.getElementById('gpClaimFb');
+    const btns = document.querySelectorAll('#gpClaimBtns [data-claim-ans]');
+
+    const answeredKeys = Object.keys(claimAnsweredMap);
+    const okCount = answeredKeys.filter(function (k) {
+      return claimAnsweredMap[k] === CLAIM_BANK[Number(k)].ans;
+    }).length;
+
+    if (prog) prog.textContent = '第 ' + (claimIdx + 1) + ' / ' + CLAIM_BANK.length + ' 句';
+    if (score) score.textContent = '得分：' + okCount + ' / ' + answeredKeys.length;
+    if (quoteEl) quoteEl.innerHTML = q.quote;
+    if (ctxEl) ctxEl.textContent = q.ctx;
+
+    const chosen = claimAnsweredMap[claimIdx];
+    btns.forEach(function (b) {
+      const val = b.getAttribute('data-claim-ans');
+      b.classList.remove('active');
+      b.style.borderColor = '';
+      b.style.background = '';
+      b.style.color = '';
+      if (chosen !== undefined) {
+        if (val === q.ans) {
+          b.style.background = 'var(--ok-bg)';
+          b.style.borderColor = 'var(--ok-border)';
+          b.style.color = 'var(--ok-text)';
+        } else if (val === chosen) {
+          b.style.background = 'var(--err-bg)';
+          b.style.borderColor = 'var(--err-border)';
+          b.style.color = 'var(--err-text)';
+        }
+      }
+    });
+
+    if (fbEl) {
+      if (chosen === undefined) {
+        fbEl.className = 'mcq-feedback';
+        fbEl.textContent = '';
+      } else {
+        const right = chosen === q.ans;
+        fbEl.className = 'mcq-feedback visible ' + (right ? 'ok' : 'err');
+        fbEl.textContent = (right ? '✅ 识别精准 [' + q.ans + ']！' : '❌ 正解应为 [' + q.ans + ']。') + q.exp;
+      }
+    }
+  }
+
+  document.querySelectorAll('#gpClaimBtns [data-claim-ans]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      claimAnsweredMap[claimIdx] = btn.getAttribute('data-claim-ans');
+      renderGpClaim();
+    });
+  });
+  const gpClaimPrev = document.getElementById('gpClaimPrev');
+  const gpClaimNext = document.getElementById('gpClaimNext');
+  const gpClaimReset = document.getElementById('gpClaimReset');
+  if (gpClaimPrev) gpClaimPrev.addEventListener('click', function () {
+    claimIdx = (claimIdx - 1 + CLAIM_BANK.length) % CLAIM_BANK.length; renderGpClaim();
+  });
+  if (gpClaimNext) gpClaimNext.addEventListener('click', function () {
+    claimIdx = (claimIdx + 1) % CLAIM_BANK.length; renderGpClaim();
+  });
+  if (gpClaimReset) gpClaimReset.addEventListener('click', function () {
+    claimAnsweredMap = {}; claimIdx = 0; renderGpClaim();
+  });
+  renderGpClaim();
+
+  // ---------- 8. Lab 2: RAVEN Source Evaluator (#lab-gp-eval) ----------
+  const EVAL_SOURCES = [
+    {
+      source: 'Source A · White Paper funded by “Global Fast-Food Alliance” (2024)',
+      claim: '“Our industry survey of 120 customers shows that calorie labels have zero effect on obesity, so mandatory menu labelling laws should be repealed.”',
+      cards: [
+        { k: 'R · Reputation', v: '⚠️ Low — 行业游说联盟赞助发布，并非独立公共卫生期刊。' },
+        { k: 'A · Ability to See', v: '⚠️ Weak — 仅在自家门店随机问了 120 位已来消费的顾客（严重选择偏差）。' },
+        { k: 'V · Vested Interest', v: '❌ High Conflict — 若强制标示卡路里实施，高脂餐品销量与合规成本将直接受损。' },
+        { k: 'E · Expertise', v: '⚖️ Mixed — 企业熟悉消费零售运营，但无独立临床营养或流行病学长期追踪。' },
+        { k: 'N · Neutrality', v: '❌ One-sided — 只呼吁废除监管，回避独立医学界的多国纵向对比证据。' }
+      ],
+      model: '“While Source A uses recent 2024 customer data, its reliability is severely undermined by clear commercial vested interest as a fast-food alliance report. Moreover, surveying only 120 self-selected restaurant diners produces an unrepresentative sample that cannot support sweeping nationwide repeal.”'
+    },
+    {
+      source: 'Source B · World Health Organization (WHO) Multi-Country Longitudinal Brief (2024)',
+      claim: '“Across 18 countries tracked over five years, sugary-drink taxes reduced household sugar intake by 11%, though low-income rural regions saw smaller gains due to limited safe tap water.”',
+      cards: [
+        { k: 'R · Reputation', v: '✅ Very High — 联合国旗下 WHO 同行评审国际公共卫生报告（2024 最新）。' },
+        { k: 'A · Ability to See', v: '✅ Strong — 覆盖 18 国跨五年长期追踪大数据，非短期个案猜测。' },
+        { k: 'V · Vested Interest', v: '✅ Low/Neutral — 跨国非营利卫生机构，核心目标是减病防灾，无饮料商业盈利冲突。' },
+        { k: 'E · Expertise', v: '✅ High — 由营养流行病学专家与公共卫生政策学者联合审校。' },
+        { k: 'N · Neutrality', v: '✅ Balanced — 语调客观，并主动承认了安全饮水基建欠缺地区减糖幅度较小的政策局限。' }
+      ],
+      model: '“Source B is highly reliable because the WHO combines 5-year longitudinal evidence across 18 nations with explicit recognition of regional limitations—specifically rural water access gaps—demonstrating high academic neutrality and low commercial bias.”'
+    },
+    {
+      source: 'Source C · Anonymous Viral Short-Video Thread on Social Media (2023)',
+      claim: '“Schools banning smartphones caused student grades to crash everywhere! Look at my cousin’s school—they banned phones and exam scores dropped!”',
+      cards: [
+        { k: 'R · Reputation', v: '❌ Very Low — 匿名社交媒体贴文，无编辑审校与可验证档案出处。' },
+        { k: 'A · Ability to See', v: '❌ Very Weak — 依赖单一“表亲学校”二手传闻（Anecdotal Evidence），未核实真实成绩报表。' },
+        { k: 'V · Vested Interest', v: '⚠️ Unknown/Attention — 自媒体创作者靠极端吸睛标题赚取点击流量。' },
+        { k: 'E · Expertise', v: '❌ None Shown — 未提供任何教育统计学或实证对照研究资质。' },
+        { k: 'N · Neutrality', v: '❌ Emotive & Flawed — 用感叹号与“everywhere”以偏概全，忽略了其它混杂教学因素。' }
+      ],
+      model: '“Source C carries minimal evidential weight: it relies on unverified anonymous anecdote about a single relative’s school to assert an unjustified sweeping generalisation (‘everywhere’), amplified by sensationalist phrasing rather than controlled academic comparison.”'
+    },
+    {
+      source: 'Source D · Opinion Column by a Retired Secondary School Headmaster (2024)',
+      claim: '“In my 30 years of teaching, banning phones during break times visibly boosted face-to-face student friendships, though total home bans remain unrealistic for working parents.”',
+      cards: [
+        { k: 'R · Reputation', v: '⚖️ Moderate — 刊登于主流教育月刊专栏，署名透明可查。' },
+        { k: 'A · Ability to See', v: '✅ First-hand Experience — 30 年一线校园观察具有丰富日常直觉，但缺乏量化问卷统计。' },
+        { k: 'V · Vested Interest', v: '✅ Very Low — 已退休且无设备销售关联，不谋求在职选票或商业赞助。' },
+        { k: 'E · Expertise', v: '✅ Domain Relevant — 长期深耕中学教育管理，精准切中校园社交观察。' },
+        { k: 'N · Neutrality', v: '✅ Measured — 承认家庭通讯现实掣肘，提出“仅校内课间管控”的平衡观点，无绝对偏激措辞。' }
+      ],
+      model: '“Source D offers credible qualitative insight grounded in 30 years of first-hand school leadership with minimal vested interest and balanced acknowledgement of parental safety needs; however, as observational reflection lacking controlled metrics, it should be corroborated with quantitative student wellbeing data.”'
+    }
+  ];
+
+  function renderGpEval() {
+    const item = EVAL_SOURCES[evalIdx];
+    const sEl = document.getElementById('gpEvalSource');
+    const cEl = document.getElementById('gpEvalClaim');
+    const gEl = document.getElementById('gpEvalGrid');
+    const mEl = document.getElementById('gpEvalModel');
+    if (sEl) sEl.textContent = item.source;
+    if (cEl) cEl.textContent = item.claim;
+    if (gEl) {
+      gEl.innerHTML = item.cards.map(function (c) {
+        return '<div class="raven-card"><strong>' + c.k + '</strong><span>' + c.v + '</span></div>';
+      }).join('');
+    }
+    if (mEl) mEl.textContent = item.model;
+    document.querySelectorAll('#gpEvalTabs [data-eval-idx]').forEach(function (b) {
+      b.classList.toggle('active', Number(b.getAttribute('data-eval-idx')) === evalIdx);
+    });
+  }
+
+  document.querySelectorAll('#gpEvalTabs [data-eval-idx]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      evalIdx = Number(btn.getAttribute('data-eval-idx')) || 0;
+      renderGpEval();
+    });
+  });
+  renderGpEval();
+
+  // ---------- 9. Lab 3: Q4 Policy Trade-Off Matrix (#lab-gp-q4) ----------
+  const Q4_OPTIONS = [
+    {
+      name: '方案 1 · 全面严禁燃油车进城区（配高额罚款）',
+      metrics: [
+        { k: 'Scale & Impact', v: '⚡ High Immediate Impact — 直接削减市中心汽车尾气达 60% 以上。' },
+        { k: 'Cost & Resources', v: '⚖️ Moderate — 需大量摄像头与路面执法警力维护。' },
+        { k: 'Equity (公平性)', v: '❌ Severe Regressive Risk — 无力换购电动车的低收入工人、小货车商贩生计受重创。' },
+        { k: 'Unintended Harm', v: '⚠️ 郊区边界产生剧烈拥堵转嫁，且公众抵触情绪高，易引发违章抗法。' }
+      ]
+    },
+    {
+      name: '方案 2 · 扩建高频免费社区接驳电巴与微循环轨交',
+      metrics: [
+        { k: 'Scale & Impact', v: '✅ Long-term Structural Gain — 为全市民提供可持续低排放替代出行工具。' },
+        { k: 'Cost & Resources', v: '⚠️ High Upfront Budget — 需跨财政年度采购车辆与重划专用公交道。' },
+        { k: 'Equity (公平性)', v: '✅ Highly Progressive — 大幅降低工薪族、老人及学生交通支出，最公平惠民。' },
+        { k: 'Timescale & Mitigation', v: '⏳ 见效较慢（需 2–3 年）；可先从拥堵主干道试运行，用高峰拥堵费反哺公交。' }
+      ]
+    },
+    {
+      name: '方案 3 · 全市学校及写字楼倡导“绿色星期三”自愿少开车宣讲',
+      metrics: [
+        { k: 'Scale & Impact', v: '❌ Very Low Scale — 无替代交通与法律约束，实际私家车减排不足 3%。' },
+        { k: 'Cost & Resources', v: '✅ Very Cheap — 预算极低，短时间内可立即启动无阻力。' },
+        { k: 'Equity (公平性)', v: '✅ Neutral — 不强制惩罚穷人，但郊区无公交者“想配合也无路可走”。' },
+        { k: 'Enforceability', v: '❌ Attitude-Behaviour Gap — 通勤刚需面前口号极易失效，只适合作辅助配套。' }
+      ]
+    }
+  ];
+
+  const Q4_VERDICTS = {
+    equity: '👉 当首要考量【社会公平与低收入承受力】时：方案 2 最值得推荐！因为方案 1（一刀切禁行重罚）构成严重的累退性打击，迫使买不起新车的劳动者失去工作通道；方案 3 则解决不了远郊缺乏公共交通的本质矛盾。虽然方案 2 初期基建投入高，但可通过中心区商务停车税分阶段分担并优先覆盖工人密集区。',
+    speed: '👉 当首要考量【短期立竿见影降污染】时：可主张先在核心污染热点施行限时/分区管制（吸收方案 1 的快速效果），但须在 Q4 答卷明确指出方案 1 单独长期运行将激化民怨，唯有同步衔接方案 2 接驳电巴才不会沦为不可持续的死命令。方案 3 因纯属自愿宣讲，无法实现急迫减排目标而被淘汰。',
+    budget: '👉 当市政府【财政极度吃紧】时：千万不要推荐孤立的方案 3（虽然最省钱但解决不了空气危机的根本 Scale 问题）！更高分的 Q4 做法是推荐“以方案 2 为目标但分阶段低成本落地（例如先将现有燃油公交改用专用快车道提升准点率+辅以方案 3 宣传）”，展现既看预算限制又顾实效的高阶裁决！'
+  };
+
+  function renderGpQ4() {
+    const opt = Q4_OPTIONS[q4OptIdx];
+    const grid = document.getElementById('gpQ4Grid');
+    const verdict = document.getElementById('gpQ4Verdict');
+    if (grid) {
+      grid.innerHTML = opt.metrics.map(function (m) {
+        return '<div class="raven-card"><strong>' + m.k + '</strong><span>' + m.v + '</span></div>';
+      }).join('');
+    }
+    if (verdict) {
+      verdict.textContent = Q4_VERDICTS[q4Priority] || Q4_VERDICTS.equity;
+    }
+    document.querySelectorAll('#gpQ4Tabs [data-q4-opt]').forEach(function (b) {
+      b.classList.toggle('active', Number(b.getAttribute('data-q4-opt')) === q4OptIdx);
+    });
+  }
+
+  document.querySelectorAll('#gpQ4Tabs [data-q4-opt]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      q4OptIdx = Number(btn.getAttribute('data-q4-opt')) || 0;
+      renderGpQ4();
+    });
+  });
+  const gpQ4PriorityEl = document.getElementById('gpQ4Priority');
+  if (gpQ4PriorityEl) {
+    gpQ4PriorityEl.addEventListener('change', function () {
+      q4Priority = gpQ4PriorityEl.value;
+      renderGpQ4();
+    });
+  }
+  renderGpQ4();
+
+  // ---------- 10. Lab 4: Coursework Official Word-Limit Checker (#lab-gp-words) ----------
+  const gpWordBox = document.getElementById('gpWordBox');
+  const gpWordCount = document.getElementById('gpWordCount');
+  const gpWordPara = document.getElementById('gpWordPara');
+  const gpWordStatus = document.getElementById('gpWordStatus');
+
+  function updateGpWordMetrics() {
+    if (!gpWordBox) return;
+    const raw = gpWordBox.value.trim();
+    const words = raw ? raw.split(/\s+/).filter(Boolean).length : 0;
+    const paras = raw ? raw.split(/\n+/).filter(function (l) { return l.trim().length > 0; }).length : 0;
+
+    let minW = 1500, maxW = 2000, label = 'Component 2 IR';
+    if (cwWordMode === 'tp_plan') { minW = 300; maxW = 400; label = 'TP 计划说明'; }
+    if (cwWordMode === 'tp_ref') { minW = 750; maxW = 1000; label = 'TP 个人反思'; }
+
+    if (gpWordCount) gpWordCount.textContent = '英文词数 (Word Count)：' + words + ' words';
+    if (gpWordPara) gpWordPara.textContent = '段落数：' + paras;
+    if (gpWordStatus) {
+      if (words === 0) {
+        gpWordStatus.textContent = '状态：等待输入（' + label + ' 官方规定 ' + minW + '–' + maxW + ' words）';
+      } else if (words < minW) {
+        gpWordStatus.textContent = '⏳ 未达下限（还差 ' + (minW - words) + ' words 进入 ' + label + ' 规范区间）';
+      } else if (words <= maxW) {
+        gpWordStatus.textContent = '✅ 稳在 ' + minW + '–' + maxW + ' 词安全高分区间（不会截断）！';
+      } else {
+        gpWordStatus.textContent = '🚨 已超出 ' + maxW + ' 词硬性上限（超出 ' + (words - maxW) + ' 词将被考官截断不予批改！）';
+      }
+    }
+  }
+
+  document.querySelectorAll('#gpWordModeTabs [data-cw-mode]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      cwWordMode = btn.getAttribute('data-cw-mode');
+      document.querySelectorAll('#gpWordModeTabs [data-cw-mode]').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      updateGpWordMetrics();
+    });
+  });
+
+  if (gpWordBox) gpWordBox.addEventListener('input', updateGpWordMetrics);
+
+  const SAMPLE_IR_TEXT =
+    'Prior to conducting this research, I assumed that banning single-use plastics outright would solve coastal pollution cleanly and swiftly. However, evaluating empirical studies from Southeast Asian informal waste-management networks challenged this oversimplification by highlighting immediate income losses among street vendors and the unexpectedly high lifecycle carbon footprint of cotton bag alternatives (UNEP, 2024).\n\nAlthough industry-sponsored reports remain biased toward voluntary pledges, independent longitudinal evidence convinced me that a phased deposit-return scheme combined with targeted transitional subsidies for small traders offers a far more equitable and enforceable pathway than sudden punitive bans.';
+  const SAMPLE_REF_TEXT =
+    'Initially, our team suffered a two-day delay because I attempted to redraft all presentation slides individually rather than delegating survey coding clearly to my teammates. Realising this bottleneck, I initiated a structured check-in where we reassigned roles transparently according to strengths, resolving friction and recovering our timeline.\n\nWhen evaluating the action itself, although we distributed 150 leaflets, follow-up interviews with 25 students showed only 20% remembered our water-conservation targets five days later. This revealed that passive flyers yield limited behavioural traction; if I were to repeat this project, I would organise interactive canteen water-audit displays with measurable weekly meter readouts.';
+
+  const gpIrBtn = document.getElementById('gpWordSampleIrBtn');
+  const gpRefBtn = document.getElementById('gpWordSampleRefBtn');
+  const gpClrBtn = document.getElementById('gpWordClearBtn');
+  if (gpIrBtn && gpWordBox) {
+    gpIrBtn.addEventListener('click', function () {
+      gpWordBox.value = SAMPLE_IR_TEXT;
+      updateGpWordMetrics();
+    });
+  }
+  if (gpRefBtn && gpWordBox) {
+    gpRefBtn.addEventListener('click', function () {
+      gpWordBox.value = SAMPLE_REF_TEXT;
+      updateGpWordMetrics();
+    });
+  }
+  if (gpClrBtn && gpWordBox) {
+    gpClrBtn.addEventListener('click', function () {
+      gpWordBox.value = '';
+      updateGpWordMetrics();
+    });
+  }
+  updateGpWordMetrics();
+
+  // ---------- 11. Appendix C: 44 Concept Cards Filter & Quiz Mask ----------
+  const conceptCountPill = document.getElementById('conceptCountPill');
+  const conceptQuizToggle = document.getElementById('conceptQuizToggle');
+
+  function filterConcepts() {
+    const cards = Array.from(document.querySelectorAll('#conceptGrid .concept-card'));
+    let visible = 0;
+    cards.forEach(function (card) {
+      const part = card.getAttribute('data-part');
+      const matchesTab = activeConceptPart === 'all' || part === activeConceptPart;
+      const matchesMode =
+        currentGpMode === 'all' ||
+        (currentGpMode === 'c1' && (part === 'c1a' || part === 'c1b')) ||
+        (currentGpMode === 'cw' && part === 'cw');
+      const show = matchesTab && matchesMode;
+      card.classList.toggle('concept-hidden', !show);
+      if (show) visible++;
+    });
+    if (conceptCountPill) {
+      conceptCountPill.textContent = '显示 ' + visible + ' / ' + cards.length + ' 题';
+    }
+  }
+
+  document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      activeConceptPart = btn.getAttribute('data-concept-part');
+      document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      filterConcepts();
+    });
+  });
+
+  function applyQuizMask(masked) {
+    quizMasked = masked;
+    document.querySelectorAll('#conceptGrid .concept-card').forEach(function (card) {
+      card.classList.toggle('masked', masked);
+    });
+    if (conceptQuizToggle) {
+      conceptQuizToggle.textContent = masked ? '👁️ 显示全部答案' : '🙈 开启遮罩自测';
+      conceptQuizToggle.classList.toggle('active', masked);
+    }
+    localStorage.setItem(STORAGE_PREFIX + 'quizMasked', masked ? '1' : '0');
+  }
+
+  if (conceptQuizToggle) {
+    conceptQuizToggle.addEventListener('click', function () {
+      applyQuizMask(!quizMasked);
+    });
+  }
+
+  document.querySelectorAll('#conceptGrid .cq-answer').forEach(function (box) {
+    box.addEventListener('click', function () {
+      const card = box.closest('.concept-card');
+      if (card && card.classList.contains('masked')) {
+        card.classList.remove('masked');
+      }
+    });
+  });
+
+  applyGpMode(currentGpMode);
+  applyQuizMask(quizMasked);
+
+  // ---------- 12. Back-to-top & Active Sidebar Highlight ----------
+  const backTopBtn = document.getElementById('backTopBtn');
+  const trackedSections = Array.from(document.querySelectorAll('.topic-section[id]'));
+  const navLinks = Array.from(document.querySelectorAll('.sidebar .nav-link'));
+
+  window.addEventListener('scroll', function () {
+    if (backTopBtn) backTopBtn.classList.toggle('visible', window.scrollY > 360);
+    const y = window.scrollY + 110;
+    let currentId = '';
+    for (let i = 0; i < trackedSections.length; i++) {
+      if (trackedSections[i].offsetTop <= y && getComputedStyle(trackedSections[i]).display !== 'none') {
+        currentId = trackedSections[i].id;
+      }
+    }
+    navLinks.forEach(function (lnk) {
+      const h = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('active', h === currentId);
+    });
+  }, { passive: true });
+
+  if (backTopBtn) {
+    backTopBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+})();
+
+  </script>
+</body>
+</html>
