@@ -1,0 +1,2649 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cambridge IGCSE Add Maths (0606) Ch 6: Units 6.1–6.4 周二小测备考精讲</title>
+  <style>
+/* ==========================================================================
+   Cambridge IGCSE Add Maths (0606) Chapter 6 (Units 6.1–6.4) Quiz Prep
+   Zero external dependencies, responsive, Light & Dark modes, Print-ready
+   ========================================================================== */
+
+:root {
+  --bg-page: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --bg-sidebar: #FFFFFF;
+  --bg-code: #EFF6FF;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-faint: #64748B;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+
+  --accent: #4338CA;
+  --accent-hover: #3730A3;
+  --accent-soft: #E0E7FF;
+
+  --u1: #4338CA;
+  --u2: #0F766E;
+  --u3: #B45309;
+  --uapp: #1D4ED8;
+
+  --p1-bg: #E0E7FF;
+  --p1-text: #3730A3;
+  --p1-border: #C7D2FE;
+  --p2-bg: #FEF3C7;
+  --p2-text: #92400E;
+  --p2-border: #FDE68A;
+
+  --deep-bg: #EFF6FF;
+  --deep-border: #2563EB;
+  --tip-bg: #FFFBEB;
+  --tip-border: #D97706;
+  --mistake-bg: #FFF1F2;
+  --mistake-border: #E11D48;
+  --example-bg: #F0FDF4;
+  --example-border: #16A34A;
+  --formula-bg: #F8FAFC;
+  --formula-border: #4338CA;
+
+  --ok-bg: #DCFCE7;
+  --ok-text: #166534;
+  --ok-border: #86EFAC;
+  --err-bg: #FEE2E2;
+  --err-text: #991B1B;
+  --err-border: #FCA5A5;
+
+  --svg-bg: #FFFFFF;
+  --svg-grid: #E2E8F0;
+  --svg-ink: #0F172A;
+  --svg-muted: #64748B;
+  --svg-blue: #2563EB;
+  --svg-indigo: #4338CA;
+  --svg-teal: #0F766E;
+  --svg-amber: #D97706;
+  --svg-red: #DC2626;
+  --svg-green: #16A34A;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.07);
+  --shadow-lg: 0 10px 26px rgba(15, 23, 42, 0.11);
+
+  --sidebar-w: 288px;
+  --topbar-h: 58px;
+  --radius-sm: 7px;
+  --radius-md: 11px;
+  --radius-lg: 16px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Songti SC", "Noto Serif SC", Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+[data-theme="dark"] {
+  --bg-page: #0B1120;
+  --bg-surface: #111827;
+  --bg-subtle: #1E293B;
+  --bg-sidebar: #0F172A;
+  --bg-code: #1E293B;
+  --text-main: #F1F5F9;
+  --text-muted: #CBD5E1;
+  --text-faint: #94A3B8;
+  --border: #1E293B;
+  --border-strong: #334155;
+
+  --accent: #818CF8;
+  --accent-hover: #A5B4FC;
+  --accent-soft: rgba(129, 140, 248, 0.18);
+
+  --p1-bg: rgba(129, 140, 248, 0.18);
+  --p1-text: #C7D2FE;
+  --p1-border: rgba(129, 140, 248, 0.38);
+  --p2-bg: rgba(245, 158, 11, 0.16);
+  --p2-text: #FDE68A;
+  --p2-border: rgba(245, 158, 11, 0.35);
+
+  --deep-bg: rgba(37, 99, 235, 0.14);
+  --deep-border: #60A5FA;
+  --tip-bg: rgba(217, 119, 6, 0.14);
+  --tip-border: #FBBF24;
+  --mistake-bg: rgba(225, 29, 72, 0.15);
+  --mistake-border: #FB7185;
+  --example-bg: rgba(22, 163, 74, 0.13);
+  --example-border: #4ADE80;
+  --formula-bg: #172033;
+  --formula-border: #818CF8;
+
+  --ok-bg: rgba(22, 163, 74, 0.22);
+  --ok-text: #BBF7D0;
+  --ok-border: #22C55E;
+  --err-bg: rgba(220, 38, 38, 0.22);
+  --err-text: #FECACA;
+  --err-border: #EF4444;
+
+  --svg-bg: #0F172A;
+  --svg-grid: #334155;
+  --svg-ink: #F1F5F9;
+  --svg-muted: #94A3B8;
+  --svg-blue: #60A5FA;
+  --svg-indigo: #818CF8;
+  --svg-teal: #2DD4BF;
+  --svg-amber: #FBBF24;
+  --svg-red: #F87171;
+  --svg-green: #34D399;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--topbar-h) + 18px); }
+body { margin: 0; font-family: var(--font-sans); background: var(--bg-page); color: var(--text-main); line-height: 1.72; font-size: 15.5px; -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4 { margin: 0 0 0.55em 0; line-height: 1.32; font-weight: 700; color: var(--text-main); }
+p { margin: 0 0 0.9em 0; }
+ul, ol { margin: 0 0 1em 0; padding-left: 1.45em; }
+li { margin-bottom: 0.35em; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { font-family: var(--font-mono); font-size: 0.9em; background: var(--bg-code); color: var(--accent); padding: 2px 6px; border-radius: 4px; }
+
+/* View Filter Modes */
+body.mode-book .sme-section { display: none !important; }
+body.mode-sme .book-section { display: none !important; }
+
+/* Math Formatting Helpers (Pure CSS, Zero CDN) */
+.math { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 1.04em; letter-spacing: 0.01em; }
+.math-upright { font-family: Georgia, "Times New Roman", serif; font-style: normal; }
+.frac { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; font-size: 0.88em; line-height: 1.1; margin: 0 2px; font-style: normal; font-family: Georgia, "Times New Roman", serif; }
+.frac .num { border-bottom: 1.5px solid currentColor; padding: 0 4px 1px 4px; }
+.frac .den { padding: 1px 4px 0 4px; }
+.sqrt { display: inline-flex; align-items: baseline; font-family: Georgia, "Times New Roman", serif; }
+.sqrt-rad { border-top: 1.4px solid currentColor; padding: 0 3px 0 2px; margin-left: 1px; }
+.formula-card { background: var(--formula-bg); border: 1.5px solid var(--border-strong); border-left: 5px solid var(--formula-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; font-size: 15px; }
+.formula-main { font-family: Georgia, "Times New Roman", serif; font-size: 16.5px; font-weight: 700; color: var(--accent); margin: 4px 0 6px 0; }
+.matrix-shoe { display: inline-flex; align-items: center; gap: 6px; background: var(--bg-surface); border: 1px solid var(--border-strong); padding: 8px 14px; border-radius: 8px; font-family: Georgia, "Times New Roman", serif; font-size: 15.5px; margin: 8px 0; }
+.shoe-cols { display: inline-flex; gap: 16px; border-left: 2px solid var(--text-main); border-right: 2px solid var(--text-main); padding: 4px 12px; }
+.shoe-col { display: flex; flex-direction: column; align-items: center; line-height: 1.45; }
+
+/* Topbar, Sidebar, Layout */
+.topbar {
+  position: sticky; top: 0; z-index: 100; height: var(--topbar-h);
+  background: var(--bg-surface); border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm); display: flex; align-items: center;
+  justify-content: space-between; gap: 10px; padding: 0 16px;
+}
+.topbar-left { display: flex; align-items: center; gap: 10px; min-width: 0; flex-shrink: 0; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 34px; padding: 0 11px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--bg-surface); color: var(--text-main); font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; }
+.icon-btn:hover { background: var(--bg-subtle); border-color: var(--accent); }
+.icon-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.menu-toggle { display: none; }
+.brand-pill { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14.5px; white-space: nowrap; flex-shrink: 0; }
+.brand-code { background: var(--accent); color: #fff; padding: 2px 7px; border-radius: 5px; font-size: 12px; letter-spacing: 0.4px; white-space: nowrap; flex-shrink: 0; }
+.search-wrap { position: relative; flex: 1 1 160px; min-width: 140px; max-width: 300px; }
+.search-input { width: 100%; height: 34px; padding: 0 30px 0 32px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--bg-subtle); color: var(--text-main); font-size: 13.5px; outline: none; }
+.search-input:focus { border-color: var(--accent); background: var(--bg-surface); }
+.search-input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.search-icon { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); color: var(--text-faint); font-size: 13px; pointer-events: none; }
+.search-clear { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); border: none; background: transparent; color: var(--text-faint); cursor: pointer; font-size: 14px; display: none; }
+.search-results-bar { display: none; background: var(--accent-soft); border-bottom: 1px solid var(--border); padding: 8px 20px; font-size: 13.5px; color: var(--text-main); align-items: center; justify-content: space-between; gap: 12px; }
+.search-results-bar.visible { display: flex; }
+.topbar-controls { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.seg-group { display: inline-flex; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); overflow: hidden; background: var(--bg-subtle); }
+.seg-btn { border: none; background: transparent; color: var(--text-muted); padding: 6px 10px; font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.seg-btn.active { background: var(--accent); color: #fff; }
+.progress-chip { display: flex; align-items: center; gap: 8px; padding: 4px 10px; border-radius: 999px; background: var(--bg-subtle); border: 1px solid var(--border); font-size: 12.5px; font-weight: 600; white-space: nowrap; }
+.progress-track { width: 54px; height: 7px; background: var(--border-strong); border-radius: 99px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #4338CA, #0F766E); transition: width 0.25s ease; }
+
+.app-layout { display: flex; min-height: calc(100vh - var(--topbar-h)); }
+.sidebar { width: var(--sidebar-w); flex-shrink: 0; background: var(--bg-sidebar); border-right: 1px solid var(--border); position: sticky; top: var(--topbar-h); height: calc(100vh - var(--topbar-h)); overflow-y: auto; padding: 14px 10px 44px 10px; }
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 99px; }
+.nav-unit { margin-bottom: 8px; }
+.nav-unit-btn { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border: none; border-radius: var(--radius-sm); background: transparent; color: var(--text-main); font-size: 13px; font-weight: 700; text-align: left; cursor: pointer; }
+.nav-unit-btn:hover { background: var(--bg-subtle); }
+.nav-unit-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.nav-unit-title { flex: 1; display: flex; align-items: center; gap: 7px; line-height: 1.3; }
+.nav-chevron { font-size: 11px; color: var(--text-faint); transition: transform 0.2s; }
+.nav-unit.collapsed .nav-chevron { transform: rotate(-90deg); }
+.nav-unit.collapsed .nav-links { display: none; }
+.nav-links { list-style: none; padding: 2px 0 4px 12px; margin: 0 0 0 14px; border-left: 2px solid var(--border); }
+.nav-link { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 5px 9px; margin: 2px 0; border-radius: var(--radius-sm); color: var(--text-muted); font-size: 12.6px; line-height: 1.35; text-decoration: none; }
+.nav-link:hover { background: var(--bg-subtle); color: var(--text-main); text-decoration: none; }
+.nav-link.active { background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+.nav-done-mark { color: #10B981; font-weight: 800; font-size: 12px; opacity: 0; }
+.nav-link.mastered .nav-done-mark { opacity: 1; }
+.main-content { flex: 1; min-width: 0; padding: 26px 32px 80px 32px; }
+.content-inner { max-width: 960px; margin: 0 auto; }
+
+.hero-card { background: linear-gradient(135deg, #1E1B4B 0%, #3730A3 55%, #0F766E 100%); color: #fff; border-radius: var(--radius-lg); padding: 30px 32px; margin-bottom: 28px; box-shadow: var(--shadow-lg); }
+.hero-card h1 { color: #fff; font-size: 26px; margin-bottom: 10px; letter-spacing: -0.3px; }
+.hero-sub { color: rgba(255,255,255,0.92); font-size: 15px; max-width: 820px; margin-bottom: 16px; }
+.hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.hero-pill { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.28); color: #fff; padding: 4px 11px; border-radius: 999px; font-size: 12.5px; font-weight: 600; }
+.unit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+.unit-tile { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.24); border-radius: var(--radius-md); padding: 12px 14px; color: #fff; text-decoration: none; display: block; transition: transform 0.15s, background 0.15s; }
+.unit-tile:hover { transform: translateY(-2px); background: rgba(255,255,255,0.22); text-decoration: none; }
+.unit-tile-num { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.7px; opacity: 0.85; font-weight: 700; }
+.unit-tile-title { font-size: 14.5px; font-weight: 700; margin: 3px 0; }
+.unit-tile-meta { font-size: 12px; opacity: 0.88; }
+
+.unit-block { margin-bottom: 42px; }
+.unit-banner { background: var(--bg-surface); border: 1px solid var(--border); border-top: 5px solid var(--unit-color, var(--accent)); border-radius: var(--radius-md); padding: 20px 24px; margin-bottom: 20px; box-shadow: var(--shadow-sm); }
+.unit-kicker { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--unit-color, var(--accent)); margin-bottom: 4px; }
+.unit-banner h2 { font-size: 23px; margin-bottom: 6px; }
+.unit-banner p { color: var(--text-muted); margin-bottom: 0; font-size: 14.5px; }
+
+.topic-section { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px 26px; margin-bottom: 24px; box-shadow: var(--shadow-sm); }
+.topic-section.search-dim { display: none; }
+.section-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 2px solid var(--border); }
+.section-title-group h3 { font-size: 20px; margin-bottom: 5px; }
+.section-en-sub { font-size: 13.5px; color: var(--text-faint); font-weight: 600; }
+.tier-row { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 7px; }
+.badge-p1, .badge-p2 { display: inline-block; font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.badge-p1 { background: var(--p1-bg); color: var(--p1-text); border: 1px solid var(--p1-border); }
+.badge-p2 { background: var(--p2-bg); color: var(--p2-text); border: 1px solid var(--p2-border); }
+.master-btn { flex-shrink: 0; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-muted); font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.master-btn:hover { border-color: #10B981; color: #10B981; }
+.master-btn.is-mastered { background: var(--ok-bg); color: var(--ok-text); border-color: var(--ok-border); }
+.subtopic { margin-bottom: 22px; }
+.subtopic:last-of-type { margin-bottom: 14px; }
+.subtopic h4 { font-size: 16.5px; color: var(--accent); margin: 0 0 10px 0; padding-bottom: 4px; border-bottom: 1px dashed var(--border); display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+
+.worked-example { background: var(--example-bg); border: 1px solid var(--border); border-left: 4px solid var(--example-border); border-radius: var(--radius-md); padding: 15px 18px; margin: 14px 0; }
+.worked-title { font-weight: 800; font-size: 14px; color: var(--example-border); margin-bottom: 6px; }
+.callout { border-radius: var(--radius-sm); padding: 13px 16px; margin: 14px 0; border-left: 4px solid var(--border-strong); font-size: 14.5px; }
+.callout-title { font-weight: 800; font-size: 13.5px; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+.deep-dive { background: var(--deep-bg); border-left-color: var(--deep-border); }
+.deep-dive .callout-title { color: var(--deep-border); }
+.examiner-tip { background: var(--tip-bg); border-left-color: var(--tip-border); }
+.examiner-tip .callout-title { color: var(--tip-border); }
+.common-mistake { background: var(--mistake-bg); border-left-color: var(--mistake-border); }
+.common-mistake .callout-title { color: var(--mistake-border); }
+
+.table-wrap { width: 100%; overflow-x: auto; margin: 14px 0; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+table.am-table { width: 100%; border-collapse: collapse; font-size: 13.8px; text-align: left; }
+table.am-table th { background: var(--bg-subtle); color: var(--text-main); font-weight: 700; padding: 9px 12px; border-bottom: 2px solid var(--border-strong); white-space: nowrap; }
+table.am-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.am-table tr:last-child td { border-bottom: none; }
+table.am-table tbody tr:hover { background: var(--bg-subtle); }
+
+.svg-figure { background: var(--svg-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px; margin: 16px 0; text-align: center; break-inside: avoid; }
+.svg-figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.svg-caption { margin-top: 8px; font-size: 13px; color: var(--text-faint); font-weight: 600; }
+
+/* Interactive Coordinate Labs & Quiz Timer */
+.lab-box { background: var(--bg-subtle); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px; margin: 18px 0; break-inside: avoid; }
+.lab-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+.lab-title { font-size: 15.5px; font-weight: 800; color: var(--accent); display: flex; align-items: center; gap: 7px; }
+.lab-panel { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; }
+.lab-controls { display: flex; flex-wrap: wrap; gap: 8px 12px; margin-bottom: 12px; align-items: center; }
+.lab-controls label { font-size: 13px; font-weight: 700; color: var(--text-muted); display: inline-flex; align-items: center; gap: 5px; }
+.lab-controls input[type="number"] { width: 66px; padding: 5px 8px; border-radius: 6px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-main); font-size: 13.5px; font-weight: 700; text-align: center; }
+.lab-grid-2col { display: grid; grid-template-columns: 1.15fr 1fr; gap: 14px; align-items: start; }
+@media (max-width: 820px) { .lab-grid-2col { grid-template-columns: 1fr; } }
+.tab-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.tab-btn { border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-muted); padding: 5px 10px; border-radius: 6px; font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.tab-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.lab-readout { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px; font-size: 13px; font-weight: 600; }
+.readout-pill { background: var(--bg-page); border: 1px solid var(--border-strong); padding: 6px 10px; border-radius: 6px; width: 100%; }
+.alert-pill { padding: 8px 12px; border-radius: 6px; font-size: 13.5px; font-weight: 700; margin-bottom: 10px; }
+.alert-pill.warn { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+.alert-pill.ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+
+.quiz-timer-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; background: var(--accent-soft); border: 1px solid var(--p1-border); border-radius: var(--radius-md); padding: 12px 16px; margin-bottom: 18px; }
+.quiz-clock { font-family: var(--font-mono); font-size: 22px; font-weight: 800; color: var(--accent); }
+
+/* Practice Questions & Concepts */
+.practice-block { margin-top: 22px; padding-top: 16px; border-top: 2px dashed var(--border-strong); }
+.practice-heading { font-size: 16px; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.exam-q { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 14px; break-inside: avoid; }
+.exam-q-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; font-size: 12.5px; }
+.q-tag { font-weight: 800; color: var(--accent); background: var(--accent-soft); padding: 2px 8px; border-radius: 5px; }
+.q-marks { font-weight: 700; color: var(--text-faint); }
+.q-stem-en { font-size: 14.8px; font-weight: 600; color: var(--text-main); margin-bottom: 6px; }
+.q-stem-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 12px; }
+.mcq-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin-bottom: 10px; }
+.mcq-opt { text-align: left; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 13.8px; cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.mcq-opt:hover { border-color: var(--accent); background: var(--bg-subtle); }
+.mcq-opt.correct { background: var(--ok-bg); border-color: var(--ok-border); color: var(--ok-text); font-weight: 700; }
+.mcq-opt.wrong { background: var(--err-bg); border-color: var(--err-border); color: var(--err-text); }
+.mcq-feedback { display: none; font-size: 13.5px; padding: 10px 12px; border-radius: var(--radius-sm); margin-top: 8px; }
+.mcq-feedback.visible { display: block; }
+.mcq-feedback.ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.mcq-feedback.err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+details.ms-details { margin-top: 10px; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 12px; }
+details.ms-details summary { cursor: pointer; font-weight: 700; font-size: 13.5px; color: var(--accent); user-select: none; }
+.ms-body { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 13.8px; }
+.ms-mark { display: inline-block; font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--p1-text); background: var(--p1-bg); padding: 1px 5px; border-radius: 4px; margin-right: 4px; }
+.ms-cn { color: var(--text-muted); margin-top: 4px; }
+
+.concept-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 14px; margin-bottom: 18px; }
+.concept-filter-group { display: flex; flex-wrap: wrap; gap: 6px; }
+.concept-actions { display: flex; align-items: center; gap: 10px; }
+.concept-count-pill { font-size: 12.5px; font-weight: 700; color: var(--text-muted); }
+.concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 14px; }
+.concept-card { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; gap: 8px; break-inside: avoid; }
+.concept-card:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
+.concept-card.concept-hidden { display: none !important; }
+.cq-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.cq-meta { display: flex; align-items: center; gap: 6px; font-size: 12px; }
+.cq-en { font-weight: 700; font-size: 14.5px; color: var(--text-main); line-height: 1.45; }
+.cq-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 2px; }
+.cq-answer { position: relative; margin-top: auto; background: var(--bg-surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius-sm); padding: 11px 13px; font-size: 13.8px; line-height: 1.6; }
+.kw { color: var(--accent); background: var(--accent-soft); padding: 0 4px; border-radius: 3px; font-weight: 700; }
+.cq-mask-hint { display: none; }
+.concept-card.masked .cq-answer { cursor: pointer; }
+.concept-card.masked .cq-answer-inner { filter: blur(7px); opacity: 0.22; user-select: none; pointer-events: none; transition: filter 0.2s, opacity 0.2s; }
+.concept-card.masked .cq-mask-hint { display: flex; align-items: center; justify-content: center; position: absolute; inset: 0; font-size: 13.5px; font-weight: 700; color: var(--accent); background: rgba(255,255,255,0.25); border-radius: var(--radius-sm); }
+[data-theme="dark"] .concept-card.masked .cq-mask-hint { background: rgba(15,23,42,0.35); }
+
+.back-top-btn { position: fixed; right: 22px; bottom: 22px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); box-shadow: var(--shadow-md); cursor: pointer; display: none; align-items: center; justify-content: center; font-size: 17px; font-weight: 800; z-index: 80; }
+.back-top-btn.visible { display: flex; }
+
+@media (max-width: 1200px) {
+  .brand-title, .btn-label { display: none; }
+  .seg-btn { padding: 6px 8px; }
+}
+@media (max-width: 980px) {
+  .menu-toggle { display: inline-flex; }
+  .sidebar { position: fixed; left: 0; top: var(--topbar-h); z-index: 95; transform: translateX(-100%); transition: transform 0.22s ease; box-shadow: var(--shadow-lg); }
+  .sidebar.open { transform: translateX(0); }
+  .main-content { padding: 18px 14px 64px 14px; }
+  .topic-section { padding: 18px 16px; }
+  .progress-chip { display: none; }
+  .search-wrap { min-width: 130px; }
+}
+@media (max-width: 640px) {
+  .topbar { padding: 0 10px; gap: 6px; }
+  .search-wrap { max-width: none; }
+  .concept-grid { grid-template-columns: 1fr; }
+}
+@media print {
+  .topbar, .sidebar, .search-results-bar, .back-top-btn, .master-btn, .lab-controls button, .concept-toolbar, .cq-mask-hint, .quiz-timer-bar button { display: none !important; }
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  .main-content { padding: 0 !important; }
+  .content-inner { max-width: 100% !important; }
+  .topic-section, .unit-banner, .exam-q, .callout, .worked-example, .svg-figure, .concept-card { box-shadow: none !important; break-inside: avoid; border-color: #CBD5E1 !important; }
+  details.ms-details, details.ms-details .ms-body, .mcq-feedback { display: block !important; }
+  .concept-card.masked .cq-answer-inner { filter: none !important; opacity: 1 !important; }
+}
+
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="展开目录">☰ 目录</button>
+      <div class="brand-pill">
+        <span class="brand-code">0606 Ch 6 小测精讲</span>
+        <span class="brand-title">Straight-line Graphs (6.1–6.4)</span>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="search" id="searchInput" class="search-input" placeholder="搜索 垂直平分线、Shoelace、共线、对称点..." autocomplete="off" />
+      <button type="button" class="search-clear" id="searchClear" title="清空搜索">✕</button>
+    </div>
+
+    <div class="topbar-controls">
+      <div class="seg-group" role="group" aria-label="内容筛选">
+        <button type="button" class="seg-btn active" data-ch6-mode="all">All</button>
+        <button type="button" class="seg-btn" data-ch6-mode="book">教材 6.1–6.4</button>
+        <button type="button" class="seg-btn" data-ch6-mode="sme">SaveMyExams &amp; 模考</button>
+      </div>
+
+      <div class="progress-chip" title="全章 6 大冲刺模块掌握进度">
+        <span id="progressText">0/6</span>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+
+      <button type="button" class="icon-btn" id="toggleAllMs" title="展开或收起全部解析"><span>📝</span><span class="btn-label">展开解析</span></button>
+      <button type="button" class="icon-btn" id="themeToggle" title="切换亮色/暗色主题"><span id="themeIcon">🌙</span><span class="btn-label">主题</span></button>
+      <button type="button" class="icon-btn" id="printBtn" title="打印或导出为 PDF"><span>🖨️</span><span class="btn-label">导出 PDF</span></button>
+    </div>
+  </header>
+
+  <div class="search-results-bar" id="searchBar">
+    <span id="searchSummary">找到 0 个匹配板块</span>
+    <button type="button" class="icon-btn" id="searchResetBtn">重置过滤</button>
+  </div>
+
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="周二小测复习导航">
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: var(--u1);"></span>教材核心 Units 6.1–6.4</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#sec-61"><span>6.1 距离、中点与平行四边形顶点</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-62"><span>6.2 平行、垂直与共线四边形判定</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-63"><span>6.3 直线方程、垂直平分线与对称点</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-64"><span>6.4 多边形面积与鞋带公式 (Shoelace)</span><span class="nav-done-mark">✓</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: var(--u2);"></span>真题压轴与周二实战模考</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#sec-sme"><span>SaveMyExams 0606 高频综合大题</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-quiz"><span>周二小测全真模拟考场 (25min·35分)</span><span class="nav-done-mark">✓</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: var(--uapp);"></span>考前速查与 24 道默写库</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#app-formulas"><span>附录 A · 考前 1 分钟公式与红线表</span><span class="nav-done-mark"></span></a></li>
+          <li><a class="nav-link" href="#app-concepts"><span>附录 B · 24道英文证题句型与默写库</span><span class="nav-done-mark"></span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-inner">
+        <section class="hero-card" id="top">
+          <h1>IGCSE Add Maths (0606) · Units 6.1–6.4 周二小测特训宝典</h1>
+          <p class="hero-sub">
+            紧扣剑桥官方 <strong>Sue Pemberton 第 3 版教材（2025–2027 考纲）Chapter 6: Straight-line graphs</strong>（对应 Exercise 6.1–6.4 全部母题变形）与 <strong>SaveMyExams 0606 真题题库</strong>。牢记 <strong>2025–2027 Paper 1 全程禁用计算器（Non-Calculator）</strong>，所有答案均示范最简根式与精确分数解法！
+          </p>
+          <div class="hero-badges">
+            <span class="hero-pill">📐 Units 6.1–6.4 逐节全解</span>
+            <span class="hero-pill">⚡ Non-Calculator 最简根式特训</span>
+            <span class="hero-pill">🎯 2 个动态几何画板实验室</span>
+            <span class="hero-pill">⏱️ 25 分钟周二模拟测 (35分制)</span>
+            <a class="hero-pill" href="#app-concepts" style="text-decoration: none; background: rgba(255,255,255,0.24);">🧠 24 道证题英文句型与步骤默写 →</a>
+          </div>
+
+          <div class="unit-grid">
+            <a class="unit-tile" href="#sec-61">
+              <div class="unit-tile-num">Unit 6.1 · Exercise 6.1</div>
+              <div class="unit-tile-title">线段长度、中点与等距求解</div>
+              <div class="unit-tile-meta">根式化简 / PA²=PB² 去根号 / 平行四边形第四顶点</div>
+            </a>
+            <a class="unit-tile" href="#sec-62">
+              <div class="unit-tile-num">Unit 6.2 · Exercise 6.2</div>
+              <div class="unit-tile-title">平行、垂直与几何形状证明</div>
+              <div class="unit-tile-meta">三点共线满分句 / m₁m₂=−1 / 六大四边形决策树</div>
+            </a>
+            <a class="unit-tile" href="#sec-63">
+              <div class="unit-tile-num">Unit 6.3 · Exercise 6.3</div>
+              <div class="unit-tile-title">直线方程、垂直平分线与对称</div>
+              <div class="unit-tile-meta">点斜式整数化 / 垂足 F 与对称点 P' = 2F − P</div>
+            </a>
+            <a class="unit-tile" href="#sec-64">
+              <div class="unit-tile-num">Unit 6.4 · Exercise 6.4</div>
+              <div class="unit-tile-title">多边形面积与鞋带法 (Shoelace)</div>
+              <div class="unit-tile-meta">循环顺逆序警报 / 绝对值双解 / 交互矩阵计算台</div>
+            </a>
+          </div>
+        </section>
+
+        <div id="emptySearchNotice" class="callout deep-dive" style="display: none;">
+          <div class="callout-title">🔍 未找到匹配内容</div>
+          <p style="margin-bottom: 0;">请尝试更换关键词（如 <code>Shoelace</code>、<code>垂直平分线</code>、<code>共线</code>、<code>对称点</code>、<code>风筝</code>）。</p>
+        </div>
+
+<section class="unit-block book-section" id="mod-61-62" style="--unit-color: var(--u1);">
+  <div class="unit-banner">
+    <div class="unit-kicker">Sue Pemberton Coursebook (3rd Ed.) · Units 6.1 &amp; 6.2</div>
+    <h2>第一部分：线段长度、中点、平行与垂直关系</h2>
+    <p>
+      本部分覆盖教材 <strong>6.1 Problems involving length of a line and midpoint</strong> 与 <strong>6.2 Parallel and perpendicular lines</strong> 的全部公式、无计算器根式化简铁律、六大 Exercise 母题模板以及四边形证明决策树。
+    </p>
+  </div>
+
+  <!-- SEC 6.1 -->
+  <article class="topic-section book-section" id="sec-61">
+    <div class="section-header">
+      <div class="section-title-group">
+        <h3>Unit 6.1 · 线段长度、中点与等距顶点求解</h3>
+        <div class="section-en-sub">Length of a Line Segment, Midpoint &amp; Geometric Coordinate Problems</div>
+        <div class="tier-row">
+          <span class="badge-p1">Paper 1 无计算器：保留最简根式</span>
+          <span class="badge-p2">Exercise 6.1 全 6 大题型覆盖</span>
+        </div>
+      </div>
+      <button type="button" class="master-btn" data-section-id="sec-61">○ 标记掌握</button>
+    </div>
+
+    <div class="subtopic">
+      <h4>6.1.1 核心公式与“去根号平方”法则</h4>
+      <p>设坐标平面上任意两点 <span class="math">A(x₁, y₁)</span> 与 <span class="math">B(x₂, y₂)</span>：</p>
+      <div class="formula-card">
+        <div class="formula-main">
+          1. 两点间距离公式 (Distance / Length of AB)：<br>
+          AB = <span class="sqrt">√<span class="sqrt-rad">(x₂ − x₁)² + (y₂ − y₁)²</span></span>
+          &nbsp;&nbsp;|&nbsp;&nbsp; <strong>比较长度 / 解未知数时先写：</strong> AB² = (x₂ − x₁)² + (y₂ − y₁)²
+        </div>
+        <div class="formula-main" style="color: var(--u2);">
+          2. 线段中点公式 (Midpoint M of AB)：<br>
+          M = ( <span class="frac"><span class="num">x₁ + x₂</span><span class="den">2</span></span> , <span class="frac"><span class="num">y₁ + y₂</span><span class="den">2</span></span> )
+          &nbsp;&nbsp;|&nbsp;&nbsp; <strong>反求端点必杀技：</strong> B = 2M − A = (2x<sub>M</sub> − x<sub>A</sub>, 2y<sub>M</sub> − y<sub>A</sub>)
+        </div>
+      </div>
+
+      <div class="callout common-mistake">
+        <div class="callout-title">⚠️ 2025–2027 新考纲 Paper 1 禁用计算器：根式千万不能写成小数！</div>
+        <p style="margin-bottom: 0;">
+          算出的长度如果是 <span class="sqrt">√<span class="sqrt-rad">80</span></span>，不能按计算器写成 <code>8.94</code>，也不要停留在未化简的 <span class="sqrt">√<span class="sqrt-rad">80</span></span>！应拆出最大完全平方因数：<span class="sqrt">√<span class="sqrt-rad">80</span></span> = <span class="sqrt">√<span class="sqrt-rad">16 × 5</span></span> = <strong>4<span class="sqrt">√<span class="sqrt-rad">5</span></span></strong>。同样，<span class="sqrt">√<span class="sqrt-rad">180</span></span> = 6<span class="sqrt">√<span class="sqrt-rad">5</span></span>，<span class="sqrt">√<span class="sqrt-rad">72</span></span> = 6<span class="sqrt">√<span class="sqrt-rad">2</span></span>。
+        </p>
+      </div>
+    </div>
+
+    <div class="subtopic">
+      <h4>6.1.2 Exercise 6.1 六大必考母题精讲</h4>
+      <div class="table-wrap">
+        <table class="am-table">
+          <thead>
+            <tr>
+              <th>题型编号</th>
+              <th>常见题目设问方式</th>
+              <th>考场秒杀动作与关键示范</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>题型 1</strong><br>求长度与中点</td>
+              <td>Given <span class="math">A(−3, 5)</span> and <span class="math">B(5, 1)</span>, find exact length <span class="math">AB</span> and midpoint <span class="math">M</span>.</td>
+              <td><span class="math">Δx = 8, Δy = −4 ⇒ AB = <span class="sqrt">√<span class="sqrt-rad">64 + 16</span></span> = <span class="sqrt">√<span class="sqrt-rad">80</span></span> = 4<span class="sqrt">√<span class="sqrt-rad">5</span></span></span>；<span class="math">M = (1, 3)</span>。</td>
+            </tr>
+            <tr>
+              <td><strong>题型 2</strong><br>已知中点反求端点</td>
+              <td><span class="math">M(2, −1)</span> is the midpoint of <span class="math">P(−4, 3)</span> and <span class="math">Q</span>. Find <span class="math">Q</span>.</td>
+              <td>用向量翻倍：<code>x<sub>Q</sub> = 2(2) − (−4) = 8</code>，<code>y<sub>Q</sub> = 2(−1) − 3 = −5</code> ⇒ <span class="math">Q(8, −5)</span>（切忌代错顺序列成 <span class="math">M − P</span>）。</td>
+            </tr>
+            <tr>
+              <td><strong>题型 3</strong><br>已知距离求未知坐标 <span class="math">k</span>（双解！）</td>
+              <td>Distance between <span class="math">A(1, 2)</span> and <span class="math">B(k, 8)</span> is <span class="math">10</span>. Find <span class="math">k</span>.</td>
+              <td>列平方去根号：<span class="math">(k − 1)² + 6² = 100 ⇒ (k − 1)² = 64 ⇒ k − 1 = ±8</span> ⇒ <strong><span class="math">k = 9</span> 或 <span class="math">k = −7</span></strong>（漏掉负根丢一半 <span class="ms-mark">A1</span> 分！）。</td>
+            </tr>
+            <tr>
+              <td><strong>题型 4</strong><br>直线/坐标轴上等距点</td>
+              <td>Point <span class="math">P</span> on the <span class="math">x</span>-axis is equidistant from <span class="math">A(−1, 3)</span> and <span class="math">B(5, 5)</span>.</td>
+              <td>设 <span class="math">P(x, 0)</span>，列 <span class="math">PA² = PB²</span>：<span class="math">(x+1)² + 9 = (x−5)² + 25 ⇒ 12x = 40 ⇒ x = <span class="frac"><span class="num">10</span><span class="den">3</span></span></span>（记住二次项 <span class="math">x²</span> 会直接抵消！）。</td>
+            </tr>
+            <tr>
+              <td><strong>题型 5</strong><br>平行四边形第四顶点</td>
+              <td>Parallelogram <span class="math">ABCD</span> has <span class="math">A(1, 2), B(6, 3), C(8, 7)</span>. Find <span class="math">D</span>.</td>
+              <td>利用<strong>对角线互相平分（中点重合）</strong>：<span class="math">M<sub>AC</sub> = M<sub>BD</sub> ⇒ D = A + C − B = (1+8−6, 2+7−3) = (3, 6)</span>。<br>⚠️ 若题目没指定字母顺序 <span class="math">ABCD</span>，可能有三个解！</td>
+            </tr>
+            <tr>
+              <td><strong>题型 6</strong><br>三角形形状判定</td>
+              <td>Show whether <span class="math">ΔABC</span> is equilateral, isosceles, or right-angled.</td>
+              <td>算出三边平方 <span class="math">AB², BC², AC²</span>：两平方相等⇒等腰；若满足 <strong><span class="math">a² + b² = c²</span></strong>（勾股逆定理）⇒ 直角三角形。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="svg-figure">
+        <svg viewBox="0 0 740 215" width="740" height="215" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="两点距离直角三角形与平行四边形对角线中点定理">
+          <rect x="0" y="0" width="740" height="215" rx="10" fill="none" />
+          <!-- Left: Pythagoras distance + Midpoint -->
+          <rect x="14" y="10" width="346" height="195" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+          <text x="187" y="31" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-ink)">距离勾股定理与中点叠加模型</text>
+          <line x1="66" y1="162" x2="292" y2="162" stroke="var(--svg-muted)" stroke-width="1.8" stroke-dasharray="5,4" />
+          <line x1="292" y1="162" x2="292" y2="62" stroke="var(--svg-muted)" stroke-width="1.8" stroke-dasharray="5,4" />
+          <polyline points="278,162 278,148 292,148" fill="none" stroke="var(--svg-muted)" stroke-width="1.5" />
+          <line x1="66" y1="162" x2="292" y2="62" stroke="var(--svg-indigo)" stroke-width="3" />
+          <circle cx="66" cy="162" r="5.5" fill="var(--svg-blue)" />
+          <circle cx="292" cy="62" r="5.5" fill="var(--svg-blue)" />
+          <circle cx="179" cy="112" r="6" fill="var(--svg-red)" />
+          <text x="66" y="182" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-blue)">A(x₁, y₁)</text>
+          <text x="292" y="50" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-blue)">B(x₂, y₂)</text>
+          <text x="150" y="102" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-red)">M (中点)</text>
+          <text x="179" y="180" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-muted)">Δx = x₂ − x₁</text>
+          <text x="316" y="114" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-muted)">Δy</text>
+
+          <!-- Right: Parallelogram Diagonal Midpoint -->
+          <rect x="380" y="10" width="346" height="195" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+          <text x="553" y="31" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-ink)">平行四边形对角线交点 = 公共中点</text>
+          <polygon points="440,162 602,162 664,68 502,68" fill="rgba(67,56,202,0.08)" stroke="var(--svg-indigo)" stroke-width="2.2" />
+          <line x1="440" y1="162" x2="664" y2="68" stroke="var(--svg-teal)" stroke-width="2" stroke-dasharray="5,3" />
+          <line x1="602" y1="162" x2="502" y2="68" stroke="var(--svg-amber)" stroke-width="2" stroke-dasharray="5,3" />
+          <circle cx="552" cy="115" r="6" fill="var(--svg-red)" />
+          <text x="424" y="176" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-ink)">A</text>
+          <text x="618" y="176" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-ink)">B</text>
+          <text x="680" y="64" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-ink)">C</text>
+          <text x="486" y="64" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-ink)">D = A + C − B</text>
+          <text x="552" y="142" text-anchor="middle" font-size="11" font-weight="700" fill="var(--svg-red)">M<tspan dy="3" font-size="8.5">AC</tspan><tspan dy="-3"> = M</tspan><tspan dy="3" font-size="8.5">BD</tspan></text>
+          <text x="553" y="195" text-anchor="middle" font-size="11" font-weight="700" fill="var(--svg-teal)">按顺序 ABCD 逆/顺时针绕圈，绝不可交叉</text>
+        </svg>
+        <div class="svg-caption">图 6.1 · 线段长度/中点公式几何直觉与平行四边形第四顶点对角线平分口诀</div>
+      </div>
+    </div>
+
+    <!-- Interactive Lab 1: #lab-line-geo -->
+    <div class="lab-box" id="lab-line-geo">
+      <div class="lab-header">
+        <div class="lab-title">📐 交互实验室 1 · 线段几何、最简根式与垂直平分线动态验证台</div>
+        <div class="tab-row" id="lineGeoPresets">
+          <button type="button" class="tab-btn active" data-lg-preset="0">预设1 · 标准根式</button>
+          <button type="button" class="tab-btn" data-lg-preset="1">预设2 · 勾股整数</button>
+          <button type="button" class="tab-btn" data-lg-preset="2">预设3 · 垂直平分线分数</button>
+          <button type="button" class="tab-btn" data-lg-preset="3">预设4 · 水平特例</button>
+        </div>
+      </div>
+      <div class="lab-panel">
+        <div class="lab-controls">
+          <label>A(<input type="number" id="lgAx" value="-3"> , <input type="number" id="lgAy" value="5">)</label>
+          <label>B(<input type="number" id="lgBx" value="5"> , <input type="number" id="lgBy" value="1">)</label>
+        </div>
+        <div class="lab-grid-2col">
+          <div class="svg-figure" style="margin: 0; padding: 8px;">
+            <svg id="lgSvg" viewBox="0 0 360 280" width="360" height="280" xmlns="http://www.w3.org/2000/svg"></svg>
+          </div>
+          <div class="lab-readout" style="margin-top: 0;">
+            <div class="readout-pill" id="lgOutLen">精确长度 AB：—</div>
+            <div class="readout-pill" id="lgOutMid">中点 M：—</div>
+            <div class="readout-pill" id="lgOutGrad">斜率 m<sub>AB</sub> 与垂线 m<sub>⊥</sub>：—</div>
+            <div class="readout-pill" id="lgOutEqAB">直线 AB 方程：—</div>
+            <div class="readout-pill" id="lgOutEqPerp">AB 垂直平分线：—</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="practice-block">
+      <div class="practice-heading">📝 Exercise 6.1 典型母题与小测实战</div>
+      <div class="mcq-options" style="display: block; margin-bottom: 14px;">
+        <div class="exam-q" data-mcq-answer="B">
+          <div class="exam-q-head"><span class="q-tag">Ex 6.1 · MCQ 1 (反求端点)</span><span class="q-marks">[1 mark]</span></div>
+          <div class="q-stem-en">The midpoint of line segment <span class="math">AB</span> is <span class="math">M(3, −2)</span>. Given that <span class="math">A</span> has coordinates <span class="math">(−1, 4)</span>, what are the coordinates of <span class="math">B</span>?</div>
+          <div class="q-stem-cn">线段 <span class="math">AB</span> 的中点为 <span class="math">M(3, −2)</span>，已知 <span class="math">A(−1, 4)</span>，求 <span class="math">B</span> 坐标：</div>
+          <div class="mcq-options">
+            <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>(1, 1)</span></button>
+            <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>(7, −8)</span></button>
+            <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>(5, −10)</span></button>
+            <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>(−5, 10)</span></button>
+          </div>
+          <div class="mcq-feedback" data-ok="✅ 满分！x_B = 2(3) − (−1) = 7，y_B = 2(−2) − 4 = −8。" data-err="❌ 避坑提醒：选项 A 误求了 A 与 M 的中点；切记用 B = 2M − A！"></div>
+        </div>
+
+        <div class="exam-q" data-mcq-answer="C">
+          <div class="exam-q-head"><span class="q-tag">Ex 6.1 · MCQ 2 (无计算器根式)</span><span class="q-marks">[2 marks]</span></div>
+          <div class="q-stem-en">Paper 1 Non-Calculator: Find the exact length of the line segment joining <span class="math">P(−2, 7)</span> and <span class="math">Q(4, −5)</span> in simplest surd form.</div>
+          <div class="q-stem-cn">无计算器求连接 <span class="math">P(−2, 7)</span> 与 <span class="math">Q(4, −5)</span> 的线段精确最简根式长度：</div>
+          <div class="mcq-options">
+            <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><span class="math">3<span class="sqrt">√<span class="sqrt-rad">20</span></span></span></span></button>
+            <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><span class="math">2<span class="sqrt">√<span class="sqrt-rad">45</span></span></span></span></button>
+            <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><span class="math">6<span class="sqrt">√<span class="sqrt-rad">5</span></span></span></span></button>
+            <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><span class="math">12<span class="sqrt">√<span class="sqrt-rad">5</span></span></span></span></button>
+          </div>
+          <div class="mcq-feedback" data-ok="✅ 正确！Δx = 6，Δy = −12，PQ = √(36 + 144) = √180 = √(36×5) = 6√5。A 和 B 都没化简到最简！" data-err="❌ 注意：√180 必须分解出最大平方因子 36 × 5 = 6√5，A/B 未化简彻底在考场会扣 A1。"></div>
+        </div>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-head"><span class="q-tag">Ex 6.1 · 解答题 1 (未知坐标双解)</span><span class="q-marks">[3 marks]</span></div>
+        <div class="q-stem-en">The distance between points <span class="math">A(k, 1)</span> and <span class="math">B(3, −5)</span> is <span class="sqrt">√<span class="sqrt-rad">61</span></span>. Find the possible values of <span class="math">k</span>.</div>
+        <div class="q-stem-cn">已知 <span class="math">A(k, 1)</span> 与 <span class="math">B(3, −5)</span> 的距离为 <span class="sqrt">√<span class="sqrt-rad">61</span></span>，求 <span class="math">k</span> 的全部可能值。</div>
+        <details class="ms-details">
+          <summary>查看评分细则 (Mark Scheme · 3 Marks)</summary>
+          <div class="ms-body">
+            <p><span class="ms-mark">M1</span> <span class="math">(k − 3)² + (−5 − 1)² = 61</span></p>
+            <p><span class="ms-mark">M1</span> <span class="math">(k − 3)² + 36 = 61 ⇒ (k − 3)² = 25 ⇒ k − 3 = ±5</span></p>
+            <p><span class="ms-mark">A1</span> <span class="math">k = 8</span> or <span class="math">k = −2</span>（两解全部写全才得 <span class="ms-mark">A1</span>！）</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-head"><span class="q-tag">Ex 6.1 · 解答题 2 (直线上等距点)</span><span class="q-marks">[4 marks]</span></div>
+        <div class="q-stem-en">Point <span class="math">R</span> lies on the line <span class="math">y = 2x − 1</span> and is equidistant from <span class="math">A(0, 4)</span> and <span class="math">B(6, 2)</span>. Find the coordinates of <span class="math">R</span>.</div>
+        <div class="q-stem-cn">点 <span class="math">R</span> 在直线 <span class="math">y = 2x − 1</span> 上，且到 <span class="math">A(0, 4)</span> 与 <span class="math">B(6, 2)</span> 等距，求 <span class="math">R</span> 坐标。</div>
+        <details class="ms-details">
+          <summary>查看评分细则 (Mark Scheme · 4 Marks)</summary>
+          <div class="ms-body">
+            <p><span class="ms-mark">M1</span> Let <span class="math">R(t, 2t − 1)</span>. Set <span class="math">RA² = RB²</span>.</p>
+            <p><span class="ms-mark">M1</span> <span class="math">t² + (2t − 5)² = (t − 6)² + (2t − 3)²</span></p>
+            <p><span class="ms-mark">M1</span> Expand: <span class="math">5t² − 20t + 25 = 5t² − 24t + 45 ⇒ 4t = 20 ⇒ t = 5</span></p>
+            <p><span class="ms-mark">A1</span> <span class="math">y = 2(5) − 1 = 9 ⇒ R(5, 9)</span>（验算：<span class="math">RA² = 25+25=50, RB² = 1+49=50</span> ✓）</p>
+            <p class="ms-cn">【一题两解法】学完 6.3 后也可用“求 <span class="math">AB</span> 垂直平分线方程并跟 <span class="math">y = 2x − 1</span> 联立”求交点！</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-head"><span class="q-tag">Ex 6.1 · 解答题 3 (三角形形状与平行四边形顶点)</span><span class="q-marks">[4 marks]</span></div>
+        <div class="q-stem-en">Triangle <span class="math">ABC</span> has vertices <span class="math">A(−2, 1), B(4, 3), C(2, −3)</span>.<br>(a) Find the exact lengths of <span class="math">AB, BC</span> and <span class="math">AC</span>, and hence state the type of triangle. [3]<br>(b) Given <span class="math">ABCD</span> is a parallelogram, find the coordinates of <span class="math">D</span>. [1]</div>
+        <div class="q-stem-cn">已知 <span class="math">A(−2, 1), B(4, 3), C(2, −3)</span>，(a) 求三边精确长度并判断三角形类型；(b) 求平行四边形 <span class="math">ABCD</span> 的顶点 <span class="math">D</span>。</div>
+        <details class="ms-details">
+          <summary>查看评分细则 (Mark Scheme · 4 Marks)</summary>
+          <div class="ms-body">
+            <p><span class="ms-mark">M1</span> <span class="math">AB² = 6² + 2² = 40 ⇒ AB = 2<span class="sqrt">√<span class="sqrt-rad">10</span></span></span>；<span class="math">BC² = (−2)² + (−6)² = 40 ⇒ BC = 2<span class="sqrt">√<span class="sqrt-rad">10</span></span></span>；<span class="math">AC² = 4² + (−4)² = 32 ⇒ AC = 4<span class="sqrt">√<span class="sqrt-rad">2</span></span></span> (<span class="ms-mark">A1</span>).</p>
+            <p><span class="ms-mark">A1</span> Since <span class="math">AB = BC</span> and <span class="math">AB² + BC² = 80 ≠ 32</span>, <span class="math">ΔABC</span> is <strong>isosceles</strong>（等腰三角形，非直角）.</p>
+            <p><span class="ms-mark">B1</span> (b) <span class="math">D = A + C − B = (−2 + 2 − 4, 1 + (−3) − 3) = (−4, −5)</span>.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </article>
+
+  <!-- SEC 6.2 -->
+  <article class="topic-section book-section" id="sec-62">
+    <div class="section-header">
+      <div class="section-title-group">
+        <h3>Unit 6.2 · 斜率、平行垂直判定、共线与四边形证明</h3>
+        <div class="section-en-sub">Gradients, Parallel/Perpendicular Conditions, Collinearity &amp; Quadrilateral Classification</div>
+        <div class="tier-row">
+          <span class="badge-p1">必写证明句："share common point"</span>
+          <span class="badge-p2">Exercise 6.2 核心决策表</span>
+        </div>
+      </div>
+      <button type="button" class="master-btn" data-section-id="sec-62">○ 标记掌握</button>
+    </div>
+
+    <div class="subtopic">
+      <h4>6.2.1 斜率与平行/垂直/共线铁律</h4>
+      <div class="formula-card">
+        <div class="formula-main">
+          斜率 (Gradient)：<span class="math">m = <span class="frac"><span class="num">y₂ − y₁</span><span class="den">x₂ − x₁</span></span></span>
+          &nbsp;&nbsp;|&nbsp;&nbsp; <strong>平行 (Parallel)：</strong> <span class="math">m₁ = m₂</span>
+          &nbsp;&nbsp;|&nbsp;&nbsp; <strong>垂直 (Perpendicular)：</strong> <span class="math">m₁ × m₂ = −1</span> 或 <span class="math">m₂ = −<span class="frac"><span class="num">1</span><span class="den">m₁</span></span></span>
+        </div>
+        <p style="margin-bottom: 0; font-size: 13.8px;">
+          • <strong>零斜率 vs 无斜率特例：</strong>水平线 <span class="math">y = c</span>（斜率 <span class="math">m = 0</span>）与铅垂线 <span class="math">x = k</span>（斜率无定义 undefined）互相垂直！考场见 <span class="math">y = 5</span> 的垂线别硬代 <span class="math">−1/0</span>，直接写 <span class="math">x = x₀</span>。<br>
+          • <strong>证明三点 A, B, C 共线 (Collinear) 满分模板：</strong>必须算出两段斜率相等（如 <span class="math">m<sub>AB</sub> = m<sub>BC</sub></span>）<strong>并且明确写出“and they share a common point B”</strong>，否则必扣最后 1 分 <span class="ms-mark">A1</span>！
+        </p>
+      </div>
+
+      <div class="svg-figure">
+        <svg viewBox="0 0 740 195" width="740" height="195" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="平行、垂直负倒数与共线共享点对比">
+          <rect x="0" y="0" width="740" height="195" rx="10" fill="none" />
+          <!-- Parallel -->
+          <rect x="14" y="10" width="226" height="175" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+          <text x="127" y="30" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-ink)">1. 平行 Parallel (m₁ = m₂)</text>
+          <line x1="48" y1="122" x2="202" y2="62" stroke="var(--svg-indigo)" stroke-width="2.6" />
+          <line x1="48" y1="164" x2="202" y2="104" stroke="var(--svg-blue)" stroke-width="2.6" />
+          <text x="98" y="75" text-anchor="middle" font-size="11" font-weight="700" fill="var(--svg-indigo)">斜率 m = a/b</text>
+          <text x="155" y="160" text-anchor="middle" font-size="11" font-weight="700" fill="var(--svg-blue)">斜率同为 a/b</text>
+
+          <!-- Perpendicular -->
+          <rect x="257" y="10" width="226" height="175" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+          <text x="370" y="30" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-ink)">2. 垂直 (m₁ · m₂ = −1)</text>
+          <line x1="292" y1="145" x2="438" y2="75" stroke="var(--svg-indigo)" stroke-width="2.6" />
+          <line x1="330" y1="54" x2="395" y2="168" stroke="var(--svg-red)" stroke-width="2.6" />
+          <circle cx="366" cy="110" r="3" fill="var(--svg-ink)" />
+          <text x="305" y="162" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-indigo)">m₁ = p/q</text>
+          <text x="418" y="154" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-red)">m₂ = −q/p</text>
+          <text x="370" y="48" text-anchor="middle" font-size="10.8" fill="var(--svg-muted)">变号且分子分母倒转</text>
+
+          <!-- Collinear -->
+          <rect x="500" y="10" width="226" height="175" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+          <text x="613" y="30" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-ink)">3. 共线 Collinear</text>
+          <line x1="528" y1="144" x2="696" y2="66" stroke="var(--svg-teal)" stroke-width="2.6" />
+          <circle cx="550" cy="134" r="5" fill="var(--svg-teal)" />
+          <circle cx="613" cy="105" r="5.5" fill="var(--svg-amber)" />
+          <circle cx="678" cy="74" r="5" fill="var(--svg-teal)" />
+          <text x="550" y="153" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-ink)">A</text>
+          <text x="613" y="92" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-amber)">B (公共点)</text>
+          <text x="678" y="94" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-ink)">C</text>
+          <text x="613" y="170" text-anchor="middle" font-size="11" font-weight="700" fill="var(--svg-teal)">m<tspan dy="3" font-size="8.5">AB</tspan><tspan dy="-3"> = m</tspan><tspan dy="3" font-size="8.5">BC</tspan><tspan dy="-3"> + 共享点 B!</tspan></text>
+        </svg>
+        <div class="svg-caption">图 6.2 · 平行、垂直与共线的斜率几何判据（注意“共享点 B”的得分表达）</div>
+      </div>
+    </div>
+
+    <div class="subtopic">
+      <h4>6.2.2 考场必背：六大四边形坐标证明决策表</h4>
+      <div class="table-wrap">
+        <table class="am-table">
+          <thead>
+            <tr>
+              <th>目标四边形</th>
+              <th>Step 1 · 先查斜率 (Gradients)</th>
+              <th>Step 2 · 再补关键条件（最少计算拿满分！）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Trapezium (梯形)</strong></td>
+              <td>计算四条边斜率，证明<strong>恰好一对对边平行</strong>（<span class="math">m<sub>AB</sub> = m<sub>DC</sub></span>）且另一对<strong>不平行</strong>（<span class="math">m<sub>BC</sub> ≠ m<sub>AD</sub></span>）。</td>
+              <td>需写明另一对不平行（否则可能是平行四边形）。</td>
+            </tr>
+            <tr>
+              <td><strong>Parallelogram (平行四边形)</strong></td>
+              <td>证明<strong>两对对边分别平行</strong>：<span class="math">m<sub>AB</sub> = m<sub>DC</sub></span> 且 <span class="math">m<sub>BC</sub> = m<sub>AD</sub></span>。</td>
+              <td>或直接证明对角线中点重合：<span class="math">M<sub>AC</sub> = M<sub>BD</sub></span>。</td>
+            </tr>
+            <tr>
+              <td><strong>Rectangle (矩形)</strong></td>
+              <td>同上证明平行四边形，或算出相邻边斜率积为 <span class="math">−1</span>。</td>
+              <td>证明<strong>有一组邻边垂直</strong>（<span class="math">m<sub>AB</sub> × m<sub>BC</sub> = −1</span>）或对角线 <span class="math">AC = BD</span>。</td>
+            </tr>
+            <tr>
+              <td><strong>Rhombus (菱形)</strong></td>
+              <td>先证平行四边形，再验对角线垂直或邻边相等。</td>
+              <td>证明<strong>四边相等（或两邻边相等 <span class="math">AB = BC</span>）</strong>，或<strong>对角线垂直 <span class="math">m<sub>AC</sub> × m<sub>BD</sub> = −1</span></strong>。</td>
+            </tr>
+            <tr>
+              <td><strong>Square (正方形)</strong></td>
+              <td>证明两对对边平行 + 邻边垂直（<span class="math">m₁m₂ = −1</span>）。</td>
+              <td>再证<strong>邻边相等（<span class="math">AB = BC</span>）</strong>，或者证明对角线相等且互相垂直平分。</td>
+            </tr>
+            <tr>
+              <td><strong>Kite (风筝形)</strong></td>
+              <td>无须对边平行；常查对角线垂直平分特征！</td>
+              <td>证明<strong>两条对角线互相垂直（<span class="math">m<sub>AC</sub> × m<sub>BD</sub> = −1</span>）</strong>，且只有一条对角线平分另一条，搭配两对邻边分别相等（<span class="math">AB = AD, CB = CD</span>）。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="practice-block">
+      <div class="practice-heading">📝 Exercise 6.2 典型母题与真题实战</div>
+      <div class="exam-q" data-mcq-answer="A">
+        <div class="exam-q-head"><span class="q-tag">Ex 6.2 · MCQ 1 (一般式垂线斜率)</span><span class="q-marks">[2 marks]</span></div>
+        <div class="q-stem-en">The line joining <span class="math">(2, −3)</span> and <span class="math">(5, k)</span> is perpendicular to the line <span class="math">3x + 2y = 7</span>. Find the value of <span class="math">k</span>.</div>
+        <div class="q-stem-cn">过 <span class="math">(2, −3)</span> 与 <span class="math">(5, k)</span> 的直线垂直于 <span class="math">3x + 2y = 7</span>，求 <span class="math">k</span>：</div>
+        <div class="mcq-options">
+          <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><span class="math">k = −1</span></span></button>
+          <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><span class="math">k = −7.5</span></span></button>
+          <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><span class="math">k = 1</span></span></button>
+          <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><span class="math">k = −<span class="frac"><span class="num">15</span><span class="den">2</span></span></span></span></button>
+        </div>
+        <div class="mcq-feedback" data-ok="✅ 精准！先把 3x + 2y = 7 化为 y = −(3/2)x + 7/2 得 m = −3/2 ⇒ 垂线斜率 2/3 ⇒ (k + 3)/(5 − 2) = 2/3 ⇒ k + 3 = 2 ⇒ k = −1。" data-err="❌ 避坑提醒：不能直接拿 x 系数 3 当斜率！必须把 y 孤立出来得 m = −3/2，再取负倒数 2/3。"></div>
+      </div>
+
+      <div class="exam-q" data-mcq-answer="D">
+        <div class="exam-q-head"><span class="q-tag">Ex 6.2 · MCQ 2 (证明决策树)</span><span class="q-marks">[1 mark]</span></div>
+        <div class="q-stem-en">A student has already proved that quadrilateral <span class="math">PQRS</span> is a parallelogram (<span class="math">m<sub>PQ</sub> = m<sub>RS</sub></span> and <span class="math">m<sub>QR</sub> = m<sub>PS</sub></span>). Which single extra check proves it is specifically a <strong>rectangle</strong>?</div>
+        <div class="q-stem-cn">某生已证明四边形 <span class="math">PQRS</span> 是平行四边形，只需再补验以下哪项即可证明它是<strong>矩形 (Rectangle)</strong>？</div>
+        <div class="mcq-options">
+          <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>证明 <span class="math">PQ = QR</span></span></button>
+          <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>证明 <span class="math">M<sub>PR</sub> = M<sub>QS</sub></span></span></button>
+          <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>证明 <span class="math">m<sub>PR</sub> × m<sub>QS</sub> = −1</span></span></button>
+          <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>证明 <span class="math">m<sub>PQ</sub> × m<sub>QR</sub> = −1</span></span></button>
+        </div>
+        <div class="mcq-feedback" data-ok="✅ 完全正确！邻边斜率之积为 −1（证明 ∠Q = 90°）即可让平行四边形升级为矩形；A 与 C 证明的则是菱形！" data-err="❌ 检查几何性质：邻边相等或对角线垂直是菱形特征；矩形需要邻边垂直 (m_PQ · m_QR = −1)。"></div>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-head"><span class="q-tag">Ex 6.2 · 解答题 1 (共线与公共点表述)</span><span class="q-marks">[3 marks]</span></div>
+        <div class="q-stem-en">The points <span class="math">P(−3, 2)</span>, <span class="math">Q(1, 4)</span> and <span class="math">R(9, t)</span> are collinear. Find the value of <span class="math">t</span>.</div>
+        <div class="q-stem-cn">三点 <span class="math">P(−3, 2), Q(1, 4), R(9, t)</span> 共线，求 <span class="math">t</span> 值并写出完整推导。</div>
+        <details class="ms-details">
+          <summary>查看评分细则 (Mark Scheme · 3 Marks)</summary>
+          <div class="ms-body">
+            <p><span class="ms-mark">M1</span> <span class="math">m<sub>PQ</sub> = <span class="frac"><span class="num">4 − 2</span><span class="den">1 − (−3)</span></span> = <span class="frac"><span class="num">2</span><span class="den">4</span></span> = <span class="frac"><span class="num">1</span><span class="den">2</span></span></span></p>
+            <p><span class="ms-mark">M1</span> Since <span class="math">P, Q, R</span> are collinear, <span class="math">m<sub>QR</sub> = m<sub>PQ</sub> ⇒ <span class="frac"><span class="num">t − 4</span><span class="den">9 − 1</span></span> = <span class="frac"><span class="num">1</span><span class="den">2</span></span></span></p>
+            <p><span class="ms-mark">A1</span> <span class="math">t − 4 = 4 ⇒ t = 8</span></p>
+          </div>
+        </details>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-head"><span class="q-tag">Ex 6.2 · 解答题 2 (直角与菱形判定综合)</span><span class="q-marks">[5 marks]</span></div>
+        <div class="q-stem-en">The vertices of a quadrilateral <span class="math">ABCD</span> are <span class="math">A(1, 1), B(5, 3), C(7, 7), D(3, 5)</span>.<br>Prove that <span class="math">ABCD</span> is a <strong>rhombus</strong>, and state with a reason whether it is a square.</div>
+        <div class="q-stem-cn">证明以 <span class="math">A(1, 1), B(5, 3), C(7, 7), D(3, 5)</span> 为顶点的四边形是<strong>菱形 (Rhombus)</strong>，并说明它是否为正方形。</div>
+        <details class="ms-details">
+          <summary>查看评分细则 (Mark Scheme · 5 Marks)</summary>
+          <div class="ms-body">
+            <p><span class="ms-mark">M1</span> Opposite gradients: <span class="math">m<sub>AB</sub> = <span class="frac"><span class="num">3−1</span><span class="den">5−1</span></span> = <span class="frac"><span class="num">1</span><span class="den">2</span></span></span> and <span class="math">m<sub>DC</sub> = <span class="frac"><span class="num">7−5</span><span class="den">7−3</span></span> = <span class="frac"><span class="num">1</span><span class="den">2</span></span></span>; <span class="math">m<sub>BC</sub> = <span class="frac"><span class="num">7−3</span><span class="den">7−5</span></span> = 2</span> and <span class="math">m<sub>AD</sub> = <span class="frac"><span class="num">5−1</span><span class="den">3−1</span></span> = 2</span> ⇒ <span class="math">ABCD</span> is a parallelogram (<span class="ms-mark">A1</span>).</p>
+            <p><span class="ms-mark">M1</span> Adjacent side lengths: <span class="math">AB² = 4² + 2² = 20</span> and <span class="math">BC² = 2² + 4² = 20 ⇒ AB = BC = 2<span class="sqrt">√<span class="sqrt-rad">5</span></span></span> (or show diagonals <span class="math">m<sub>AC</sub> = 1, m<sub>BD</sub> = −1 ⇒ AC ⊥ BD</span>).</p>
+            <p><span class="ms-mark">A1</span> Parallelogram with equal adjacent sides ⇒ <strong>Rhombus</strong>.</p>
+            <p><span class="ms-mark">A1</span> Check angle: <span class="math">m<sub>AB</sub> × m<sub>BC</sub> = <span class="frac"><span class="num">1</span><span class="den">2</span></span> × 2 = 1 ≠ −1</span> ⇒ adjacent sides are not perpendicular, so it is <strong>not a square</strong>.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section class="unit-block book-section" id="mod-63-64" style="--unit-color: var(--u2);">
+  <div class="unit-banner">
+    <div class="unit-kicker">Sue Pemberton Coursebook (3rd Ed.) · Units 6.3 &amp; 6.4</div>
+    <h2>第二部分：直线方程、垂直平分线对称与多边形面积</h2>
+    <p>
+      本部分攻克教材最核心拿分板块：<strong>6.3 Equations of straight lines</strong>（点斜式一步成方程、垂直平分线、垂足与对称点）与 <strong>6.4 Areas of rectilinear figures</strong>（鞋带公式顺逆序铁律、防蝴蝶结错序与反求未知坐标绝对值双解）。
+    </p>
+  </div>
+
+  <!-- SEC 6.3 -->
+  <article class="topic-section book-section" id="sec-63">
+    <div class="section-header">
+      <div class="section-title-group">
+        <h3>Unit 6.3 · 直线方程、垂直平分线与垂足对称点</h3>
+        <div class="section-en-sub">Equations of Lines, Perpendicular Bisectors, Foot of Perpendicular &amp; Reflections</div>
+        <div class="tier-row">
+          <span class="badge-p1">推荐使用点斜式 y − y₁ = m(x − x₁)</span>
+          <span class="badge-p2">P' = 2F − P 对称点公式</span>
+        </div>
+      </div>
+      <button type="button" class="master-btn" data-section-id="sec-63">○ 标记掌握</button>
+    </div>
+
+    <div class="subtopic">
+      <h4>6.3.1 四种直线形式与考场推荐写法</h4>
+      <div class="table-wrap">
+        <table class="am-table">
+          <thead>
+            <tr>
+              <th>直线方程形式</th>
+              <th>适用场景</th>
+              <th>考场化简注意点</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1. 斜截式</strong><br><span class="math">y = mx + c</span></td>
+              <td>已知斜率与 <span class="math">y</span> 轴截距；需读出直线斜率 <span class="math">m</span>（先隔离 <span class="math">y</span>）。</td>
+              <td>如题干只写 <em>“Find the equation of the line”</em>，留成分数 <span class="math">y = mx + c</span> 即可；勿强改小数。</td>
+            </tr>
+            <tr>
+              <td><strong>2. 点斜式（强力推荐！）</strong><br><span class="math">y − y₁ = m(x − x₁)</span></td>
+              <td><strong>只要知道斜率 <span class="math">m</span> 和一个经过点 <span class="math">(x₁, y₁)</span></strong>（如垂直平分线、切线/法线）最快不易错。</td>
+              <td>若 <span class="math">m = <span class="frac"><span class="num">p</span><span class="den">q</span></span></span> 为分数，两边同乘分母 <span class="math">q</span> 立刻变整式，完全避免分数加减出错！</td>
+            </tr>
+            <tr>
+              <td><strong>3. 整数一般式</strong><br><span class="math">ax + by + c = 0</span></td>
+              <td>题目明确要求 <em>“where a, b, c are integers”</em>（在 <span class="math">0606</span> 中极为高频！）。</td>
+              <td>消去一切分数，使系数 <span class="math">a, b, c</span> 互质整数（通常习惯使 <span class="math">a &gt; 0</span>）。</td>
+            </tr>
+            <tr>
+              <td><strong>4. 水平/铅垂线特例</strong><br><span class="math">y = k</span> 与 <span class="math">x = h</span></td>
+              <td>过某点且平行于坐标轴，或垂直于坐标轴（切勿对铅垂线套斜率公式 <span class="math">Δy/0</span>！）。</td>
+              <td>过 <span class="math">(3, −5)</span> 且垂直 <span class="math">x</span> 轴 ⇒ <span class="math">x = 3</span>；平行 <span class="math">x</span> 轴 ⇒ <span class="math">y = −5</span>。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="subtopic">
+      <h4>6.3.2 Exercise 6.3 三大综合流程：垂直平分线、垂足与对称点</h4>
+      <div class="worked-example">
+        <div class="worked-title">例题 1 · 垂直平分线 (Perpendicular Bisector) 标准三步</div>
+        <p style="margin-bottom: 6px;">求连接 <span class="math">A(−1, 6)</span> 与 <span class="math">B(5, 2)</span> 的线段的垂直平分线，以 <span class="math">ax + by + c = 0</span>（整数）形式写出。</p>
+        <p style="margin-bottom: 0;">
+          <strong>Step 1 中点：</strong> <span class="math">M = (<span class="frac"><span class="num">−1+5</span><span class="den">2</span></span>, <span class="frac"><span class="num">6+2</span><span class="den">2</span></span>) = (2, 4)</span>。<br>
+          <strong>Step 2 负倒斜率：</strong> <span class="math">m<sub>AB</sub> = <span class="frac"><span class="num">2−6</span><span class="den">5−(−1)</span></span> = −<span class="frac"><span class="num">2</span><span class="den">3</span></span> ⇒ m<sub>⊥</sub> = <span class="frac"><span class="num">3</span><span class="den">2</span></span></span>。<br>
+          <strong>Step 3 过中点 <span class="math">M</span> 代入点斜式：</strong> <span class="math">y − 4 = <span class="frac"><span class="num">3</span><span class="den">2</span></span>(x − 2)</span> ⇒ 两边乘 2 得 <span class="math">2y − 8 = 3x − 6</span> ⇒ <strong><span class="math">3x − 2y + 2 = 0</span></strong>。
+        </p>
+      </div>
+
+      <div class="worked-example">
+        <div class="worked-title">例题 2 · 垂足 <span class="math">F</span>、最短距离 <span class="math">PF</span> 与对称点 <span class="math">P'</span> 压轴连环套</div>
+        <p style="margin-bottom: 6px;">已知点 <span class="math">P(6, 1)</span> 与直线 <span class="math">L: y = 2x − 1</span>。求：(a) 过 <span class="math">P</span> 垂足 <span class="math">F</span> 坐标；(b) <span class="math">P</span> 到 <span class="math">L</span> 最短距离；(c) <span class="math">P</span> 关于 <span class="math">L</span> 的对称点 <span class="math">P'</span>。</p>
+        <p style="margin-bottom: 0;">
+          (a) <span class="math">m<sub>L</sub> = 2 ⇒ m<sub>PF</sub> = −<span class="frac"><span class="num">1</span><span class="den">2</span></span></span>，垂线 <span class="math">PF</span>：<span class="math">y − 1 = −<span class="frac"><span class="num">1</span><span class="den">2</span></span>(x − 6) ⇒ y = −<span class="frac"><span class="num">1</span><span class="den">2</span></span>x + 4</span>。<br>
+          联立 <span class="math">2x − 1 = −<span class="frac"><span class="num">1</span><span class="den">2</span></span>x + 4 ⇒ <span class="frac"><span class="num">5</span><span class="den">2</span></span>x = 5 ⇒ x = 2, y = 3</span> ⇒ <strong>垂足 <span class="math">F(2, 3)</span></strong>。<br>
+          (b) <strong>最短距离</strong>即 <span class="math">PF = <span class="sqrt">√<span class="sqrt-rad">(6 − 2)² + (1 − 3)²</span></span> = <span class="sqrt">√<span class="sqrt-rad">20</span></span> = 2<span class="sqrt">√<span class="sqrt-rad">5</span></span></span>。<br>
+          (c) <strong>对称点 <span class="math">P'</span></strong>（以垂足 <span class="math">F</span> 为中点反推！）：<span class="math">P' = 2F − P = (2(2) − 6, 2(3) − 1) = <strong>(−2, 5)</strong></span>。
+        </p>
+      </div>
+
+      <div class="svg-figure">
+        <svg viewBox="0 0 740 215" width="740" height="215" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="垂直平分线、垂足与点对称几何模型">
+          <rect x="0" y="0" width="740" height="215" rx="10" fill="none" />
+          <!-- Left: Perpendicular Bisector -->
+          <rect x="14" y="10" width="346" height="195" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+          <text x="187" y="30" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-ink)">垂直平分线 (Perpendicular Bisector)</text>
+          <line x1="65" y1="150" x2="295" y2="85" stroke="var(--svg-blue)" stroke-width="2.6" />
+          <line x1="152" y1="45" x2="212" y2="185" stroke="var(--svg-red)" stroke-width="2.6" />
+          <circle cx="65" cy="150" r="5" fill="var(--svg-blue)" />
+          <circle cx="295" cy="85" r="5" fill="var(--svg-blue)" />
+          <circle cx="180" cy="117.5" r="5.5" fill="var(--svg-amber)" />
+          <text x="58" y="170" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-blue)">A</text>
+          <text x="304" y="80" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-blue)">B</text>
+          <text x="148" y="114" text-anchor="middle" font-size="11" font-weight="700" fill="var(--svg-amber)">M (中点)</text>
+          <text x="242" y="176" text-anchor="middle" font-size="11" font-weight="700" fill="var(--svg-red)">m<tspan dy="3" font-size="8.5">⊥</tspan><tspan dy="-3"> = −1/m</tspan><tspan dy="3" font-size="8.5">AB</tspan><tspan dy="-3"> 过点 M</tspan></text>
+
+          <!-- Right: Foot & Reflection -->
+          <rect x="380" y="10" width="346" height="195" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+          <text x="553" y="30" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-ink)">垂足 F、最短距离 PF 与对称点 P'</text>
+          <line x1="420" y1="168" x2="695" y2="68" stroke="var(--svg-indigo)" stroke-width="2.6" />
+          <line x1="510" y1="54" x2="604" y2="182" stroke="var(--svg-teal)" stroke-width="2.2" stroke-dasharray="5,3" />
+          <circle cx="510" cy="54" r="5.5" fill="var(--svg-blue)" />
+          <circle cx="557" cy="118" r="5.5" fill="var(--svg-red)" />
+          <circle cx="604" cy="182" r="5.5" fill="var(--svg-green)" />
+          <text x="492" y="54" text-anchor="end" font-size="11.5" font-weight="700" fill="var(--svg-blue)">P (原已知点)</text>
+          <text x="584" y="128" text-anchor="start" font-size="11" font-weight="700" fill="var(--svg-red)">F (两线联立垂足)</text>
+          <text x="618" y="185" text-anchor="start" font-size="11.5" font-weight="700" fill="var(--svg-green)">P' = 2F − P</text>
+          <text x="448" y="182" text-anchor="middle" font-size="11" font-weight="700" fill="var(--svg-indigo)">直线 L</text>
+        </svg>
+        <div class="svg-caption">图 6.3 · Unit 6.3 核心几何构造：垂直平分线不过原端点，而是必过中点 M；对称点必以垂足 F 为中点！</div>
+      </div>
+    </div>
+
+    <div class="practice-block">
+      <div class="practice-heading">📝 Exercise 6.3 典型母题与小测实战</div>
+      <div class="exam-q" data-mcq-answer="C">
+        <div class="exam-q-head"><span class="q-tag">Ex 6.3 · MCQ 1 (平行与整数一般式)</span><span class="q-marks">[2 marks]</span></div>
+        <div class="q-stem-en">Find the equation of the line passing through <span class="math">(−3, 4)</span> and parallel to <span class="math">2x − 5y + 9 = 0</span>, giving your answer in the form <span class="math">ax + by + c = 0</span> (<span class="math">a &gt; 0</span>).</div>
+        <div class="q-stem-cn">求过 <span class="math">(−3, 4)</span> 且平行于 <span class="math">2x − 5y + 9 = 0</span> 的直线一般式：</div>
+        <div class="mcq-options">
+          <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><span class="math">2x − 5y − 26 = 0</span></span></button>
+          <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><span class="math">5x + 2y + 7 = 0</span></span></button>
+          <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><span class="math">2x − 5y + 26 = 0</span></span></button>
+          <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><span class="math">2x − 5y + 14 = 0</span></span></button>
+        </div>
+        <div class="mcq-feedback" data-ok="✅ 满分！平行线必保持 2x − 5y 结构不变，代入 (−3, 4) 得 2(−3) − 5(4) + c = 0 ⇒ −26 + c = 0 ⇒ c = +26。" data-err="❌ 避坑提醒：B 是垂线方向；A 移项算错了符号！直接写 2x − 5y = 2(−3) − 5(4) = −26 ⇒ 2x − 5y + 26 = 0 更快更稳！"></div>
+      </div>
+
+      <div class="exam-q" data-mcq-answer="B">
+        <div class="exam-q-head"><span class="q-tag">Ex 6.3 · MCQ 2 (垂足反推对称点)</span><span class="q-marks">[1 mark]</span></div>
+        <div class="q-stem-en">The foot of the perpendicular from <span class="math">P(5, −2)</span> to a line <span class="math">L</span> is <span class="math">F(1, 4)</span>. What are the coordinates of the reflection <span class="math">P'</span> of <span class="math">P</span> in <span class="math">L</span>?</div>
+        <div class="q-stem-cn">已知 <span class="math">P(5, −2)</span> 到直线 <span class="math">L</span> 的垂足是 <span class="math">F(1, 4)</span>，则对称点 <span class="math">P'</span> 为：</div>
+        <div class="mcq-options">
+          <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>(3, 1)</span></button>
+          <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>(−3, 10)</span></button>
+          <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>(−4, 6)</span></button>
+          <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>(9, −8)</span></button>
+        </div>
+        <div class="mcq-feedback" data-ok="✅ 正确！F 是 PP' 中点 ⇒ P' = 2F − P = (2(1) − 5, 2(4) − (−2)) = (−3, 10)。" data-err="❌ 检查中点公式：P' = 2F − P，不要写成 F − P 或 (P + F)/2。"></div>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-head"><span class="q-tag">Ex 6.3 · 解答题 1 (一般式垂线 + x轴截距)</span><span class="q-marks">[4 marks]</span></div>
+        <div class="q-stem-en">A line passes through <span class="math">A(2, −1)</span> and is perpendicular to <span class="math">4x + 3y = 12</span>.<br>(a) Find its equation in the form <span class="math">ax + by + c = 0</span>. [3]<br>(b) Find the coordinates where this line crosses the <span class="math">x</span>-axis. [1]</div>
+        <div class="q-stem-cn">直线过 <span class="math">A(2, −1)</span> 且垂直于 <span class="math">4x + 3y = 12</span>，求一般式及 <span class="math">x</span> 轴交点坐标。</div>
+        <details class="ms-details">
+          <summary>查看评分细则 (Mark Scheme · 4 Marks)</summary>
+          <div class="ms-body">
+            <p><span class="ms-mark">M1</span> Given line: <span class="math">y = −<span class="frac"><span class="num">4</span><span class="den">3</span></span>x + 4 ⇒ m₁ = −<span class="frac"><span class="num">4</span><span class="den">3</span></span> ⇒ m<sub>⊥</sub> = <span class="frac"><span class="num">3</span><span class="den">4</span></span></span> (<span class="ms-mark">A1</span>).</p>
+            <p><span class="ms-mark">M1</span> <span class="math">y − (−1) = <span class="frac"><span class="num">3</span><span class="den">4</span></span>(x − 2) ⇒ 4y + 4 = 3x − 6 ⇒ <strong>3x − 4y − 10 = 0</strong></span> (<span class="ms-mark">A1</span>).</p>
+            <p><span class="ms-mark">B1</span> (b) Crosses <span class="math">x</span>-axis when <span class="math">y = 0 ⇒ 3x = 10 ⇒ (<span class="frac"><span class="num">10</span><span class="den">3</span></span>, 0)</span>.</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-head"><span class="q-tag">Ex 6.3 · 解答题 2 (垂直平分线代参数 k)</span><span class="q-marks">[5 marks]</span></div>
+        <div class="q-stem-en">Points <span class="math">A(1, −2)</span> and <span class="math">B(7, 4)</span> are given.<br>(a) Find the equation of the perpendicular bisector of <span class="math">AB</span>. [4]<br>(b) Given that this perpendicular bisector passes through <span class="math">(k, 5)</span>, find <span class="math">k</span>. [1]</div>
+        <div class="q-stem-cn">求 <span class="math">A(1, −2), B(7, 4)</span> 垂直平分线方程，并求其经过 <span class="math">(k, 5)</span> 时的 <span class="math">k</span> 值。</div>
+        <details class="ms-details">
+          <summary>查看评分细则 (Mark Scheme · 5 Marks)</summary>
+          <div class="ms-body">
+            <p><span class="ms-mark">B1</span> Midpoint <span class="math">M = (4, 1)</span>；<span class="ms-mark">M1</span> <span class="math">m<sub>AB</sub> = <span class="frac"><span class="num">4 − (−2)</span><span class="den">7 − 1</span></span> = 1 ⇒ m<sub>⊥</sub> = −1</span> (<span class="ms-mark">M1</span>).</p>
+            <p><span class="ms-mark">A1</span> Equation: <span class="math">y − 1 = −1(x − 4) ⇒ <strong>x + y = 5</strong></span> (or <span class="math">y = 5 − x</span>).</p>
+            <p><span class="ms-mark">B1</span> Sub <span class="math">(k, 5) ⇒ k + 5 = 5 ⇒ <strong>k = 0</strong></span>.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </article>
+
+  <!-- SEC 6.4 -->
+  <article class="topic-section book-section" id="sec-64">
+    <div class="section-header">
+      <div class="section-title-group">
+        <h3>Unit 6.4 · 直线多边形面积与“鞋带公式” (Shoelace Method)</h3>
+        <div class="section-en-sub">Areas of Triangles, Quadrilaterals &amp; Polygons Using Coordinate Geometry</div>
+        <div class="tier-row">
+          <span class="badge-p1">核心口诀：顺/逆时针绕圈 + 首尾闭合</span>
+          <span class="badge-p2">反求未知坐标必加绝对值取双解</span>
+        </div>
+      </div>
+      <button type="button" class="master-btn" data-section-id="sec-64">○ 标记掌握</button>
+    </div>
+
+    <div class="subtopic">
+      <h4>6.4.1 鞋带公式 (Shoelace Method) 的三道铁律与标准格式</h4>
+      <div class="formula-card">
+        <div><strong>对按顺序（顺时针或逆时针）排列的 <span class="math">n</span> 边形顶点 <span class="math">(x₁, y₁), (x₂, y₂), …, (x<sub>n</sub>, y<sub>n</sub>)</span>：</strong></div>
+        <div class="matrix-shoe">
+          <span>Area = <span class="frac"><span class="num">1</span><span class="den">2</span></span> · |</span>
+          <span class="shoe-cols">
+            <span class="shoe-col"><span>x₁</span><span>y₁</span></span>
+            <span class="shoe-col"><span>x₂</span><span>y₂</span></span>
+            <span class="shoe-col"><span>…</span><span>…</span></span>
+            <span class="shoe-col"><span>x<sub>n</sub></span><span>y<sub>n</sub></span></span>
+            <span class="shoe-col" style="color: var(--svg-red); font-weight: 800;"><span>x₁</span><span>y₁</span></span>
+          </span>
+          <span>| = <span class="frac"><span class="num">1</span><span class="den">2</span></span> |(x₁y₂ + x₂y₃ + … + x<sub>n</sub>y₁) − (y₁x₂ + y₂x₃ + … + y<sub>n</sub>x₁)|</span>
+        </div>
+        <ol style="margin: 8px 0 0 18px; font-size: 13.8px;">
+          <li><strong>铁律 1 · 四边形以上必须先在草稿纸画简图确认“逆时针或顺时针顺序”！</strong>（三角形任意 3 个点不管怎么排都是一个闭环所以不会错，但<strong>四边形/五边形一旦跨过对角线写成“蝴蝶结交叉序”算出来的面积一定是错的！</strong>）</li>
+          <li><strong>铁律 2 · 首列必须重新抄写一遍放在最后一列</strong>（首尾闭合，共 <span class="math">n + 1</span> 列）。</li>
+          <li><strong>铁律 3 · 当面积已知反求未知坐标 <span class="math">k</span> 时，绝对值符号 <span class="math">|…|</span> 会给出“正”与“负”两个等式，对应直线上/下两侧的两个合法点！</strong></li>
+        </ol>
+      </div>
+
+      <div class="callout examiner-tip">
+        <div class="callout-title">⚡ 考场更快绝招：何时可以不硬算 Shoelace？</div>
+        <ul style="margin: 4px 0 0 18px;">
+          <li><strong>出现水平或铅垂边时</strong>（两顶点同 <span class="math">y</span> 或同 <span class="math">x</span>）：直接 <span class="frac"><span class="num">1</span><span class="den">2</span></span> × 底 × 高，2 秒秒杀；</li>
+          <li><strong>题目刚让你证明过某直角三角形（如 ∠ABC = 90°）或风筝形/菱形对角线时</strong>：直接用 <span class="math"><span class="frac"><span class="num">1</span><span class="den">2</span></span> × AB × BC</span> 或 <span class="math"><span class="frac"><span class="num">1</span><span class="den">2</span></span> × d₁ × d₂</span>，往往两根式相乘直接消成漂亮整数！</li>
+        </ul>
+      </div>
+
+      <div class="svg-figure">
+        <svg viewBox="0 0 740 215" width="740" height="215" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="鞋带交叉箭头公式与顺逆时针vs蝴蝶结错序图解">
+          <rect x="0" y="0" width="740" height="215" rx="10" fill="none" />
+          <!-- Left: Matrix arrows -->
+          <rect x="14" y="10" width="350" height="195" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+          <text x="189" y="31" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-ink)">鞋带法交叉相乘方向 (先写 1 遍，末列回闭首点)</text>
+          <!-- Matrix numbers -->
+          <line x1="60" y1="54" x2="60" y2="146" stroke="var(--svg-ink)" stroke-width="2" />
+          <line x1="318" y1="54" x2="318" y2="146" stroke="var(--svg-ink)" stroke-width="2" />
+          <text x="86" y="76" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-ink)">x₁</text>
+          <text x="86" y="132" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-ink)">y₁</text>
+          <text x="140" y="76" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-ink)">x₂</text>
+          <text x="140" y="132" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-ink)">y₂</text>
+          <text x="194" y="76" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-ink)">x₃</text>
+          <text x="194" y="132" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-ink)">y₃</text>
+          <text x="248" y="76" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-ink)">x₄</text>
+          <text x="248" y="132" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-ink)">y₄</text>
+          <text x="296" y="76" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-red)">x₁</text>
+          <text x="296" y="132" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-red)">y₁</text>
+          <!-- Crossing lines -->
+          <line x1="94" y1="81" x2="132" y2="120" stroke="var(--svg-blue)" stroke-width="2" />
+          <line x1="148" y1="81" x2="186" y2="120" stroke="var(--svg-blue)" stroke-width="2" />
+          <line x1="202" y1="81" x2="240" y2="120" stroke="var(--svg-blue)" stroke-width="2" />
+          <line x1="256" y1="81" x2="288" y2="120" stroke="var(--svg-blue)" stroke-width="2" />
+          <line x1="94" y1="120" x2="132" y2="81" stroke="var(--svg-amber)" stroke-width="2" stroke-dasharray="4,2" />
+          <line x1="148" y1="120" x2="186" y2="81" stroke="var(--svg-amber)" stroke-width="2" stroke-dasharray="4,2" />
+          <line x1="202" y1="120" x2="240" y2="81" stroke="var(--svg-amber)" stroke-width="2" stroke-dasharray="4,2" />
+          <line x1="256" y1="120" x2="288" y2="81" stroke="var(--svg-amber)" stroke-width="2" stroke-dasharray="4,2" />
+          <text x="189" y="170" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-blue)">↘ 蓝线向下乘积总和 = S₁</text>
+          <text x="189" y="189" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-amber)">↗ 橙线向上乘积总和 = S₂ ⇒ Area = ½|S₁ − S₂|</text>
+
+          <!-- Right: Proper Loop vs Bowtie -->
+          <rect x="380" y="10" width="346" height="195" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+          <text x="553" y="31" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-ink)">四边形大坑：逆时针序 ✓ vs 蝴蝶结错序 ✕</text>
+          <polygon points="415,152 505,146 515,72 425,84" fill="rgba(22,163,74,0.12)" stroke="var(--svg-green)" stroke-width="2.2" />
+          <text x="465" y="176" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-green)">✓ A→B→C→D (不交叉)</text>
+          <polygon points="582,152 678,72 670,146 592,84" fill="rgba(220,38,38,0.12)" stroke="var(--svg-red)" stroke-width="2.2" />
+          <text x="635" y="176" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-red)">✕ A→C→B→D (蝴蝶结面积错!)</text>
+          <text x="553" y="195" text-anchor="middle" font-size="11" fill="var(--svg-muted)">先大体瞄一下四个点象限位置，绕一圈后再写进公式</text>
+        </svg>
+        <div class="svg-caption">图 6.4 · 鞋带矩阵法交叉乘积原理及自相交“蝴蝶结错序”致命错误警示</div>
+      </div>
+    </div>
+
+    <!-- Interactive Lab 2: #lab-shoelace -->
+    <div class="lab-box" id="lab-shoelace">
+      <div class="lab-header">
+        <div class="lab-title">👟 交互实验室 2 · 鞋带面积动态矩阵台与“蝴蝶结错序”警报器</div>
+        <div class="tab-row" id="shoePresets">
+          <button type="button" class="tab-btn active" data-sl-preset="0">三角形 (3点)</button>
+          <button type="button" class="tab-btn" data-sl-preset="1">逆时针四边形 ✓</button>
+          <button type="button" class="tab-btn" data-sl-preset="2">错序蝴蝶结示例 ⚠️</button>
+          <button type="button" class="tab-btn" data-sl-preset="3">风筝/菱形对角线</button>
+        </div>
+      </div>
+      <div class="lab-panel">
+        <div class="lab-controls">
+          <label>顶点数：<select id="slNumSelect"><option value="3">3 顶点 (三角形)</option><option value="4" selected>4 顶点 (四边形)</option></select></label>
+          <label>P₁(<input type="number" id="slX1" value="1">, <input type="number" id="slY1" value="1">)</label>
+          <label>P₂(<input type="number" id="slX2" value="5">, <input type="number" id="slY2" value="2">)</label>
+          <label>P₃(<input type="number" id="slX3" value="6">, <input type="number" id="slY3" value="6">)</label>
+          <label id="slP4Wrap">P₄(<input type="number" id="slX4" value="2">, <input type="number" id="slY4" value="4">)</label>
+          <button type="button" class="tab-btn active" id="slAutoOrderBtn" style="display: none;">一键排成逆时针序 ✓</button>
+        </div>
+        <div id="slOrderBanner" class="alert-pill ok">多边形绕序检测：正常逆时针/顺时针闭合，无边交叉 ✓</div>
+        <div class="lab-grid-2col">
+          <div class="svg-figure" style="margin: 0; padding: 8px;">
+            <svg id="slSvg" viewBox="0 0 360 280" width="360" height="280" xmlns="http://www.w3.org/2000/svg"></svg>
+          </div>
+          <div class="lab-readout" style="margin-top: 0;">
+            <div class="readout-pill" id="slOutS1">↘ 向下乘积和 S₁：—</div>
+            <div class="readout-pill" id="slOutS2">↗ 向上乘积和 S₂：—</div>
+            <div class="readout-pill" id="slOutFormula">展开算式 ½|S₁ − S₂|：—</div>
+            <div class="readout-pill" id="slOutArea" style="color: var(--accent); font-size: 15px;">精确面积 Area：—</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="practice-block">
+      <div class="practice-heading">📝 Exercise 6.4 典型母题与小测实战</div>
+      <div class="exam-q" data-mcq-answer="B">
+        <div class="exam-q-head"><span class="q-tag">Ex 6.4 · MCQ 1 (鞋带排列铁律)</span><span class="q-marks">[1 mark]</span></div>
+        <div class="q-stem-en">When using the shoelace matrix method to find the area of quadrilateral <span class="math">ABCD</span>, why does writing the columns in order <span class="math">A, C, B, D, A</span> produce the wrong answer?</div>
+        <div class="q-stem-cn">用鞋带法求四边形 <span class="math">ABCD</span> 面积时，将顶点误排成 <span class="math">A, C, B, D, A</span> 会错在哪？</div>
+        <div class="mcq-options">
+          <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>必须从最小横坐标的点开始排才对。</span></button>
+          <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><span class="math">A→C→B→D</span> 会沿对角线交叉形成“蝴蝶结”，正负有向面积相互抵消！</span></button>
+          <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>顺时针一定得出负数面积而公式不能用绝对值。</span></button>
+          <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>鞋带公式只适用于三角形，不能用于四边形。</span></button>
+        </div>
+        <div class="mcq-feedback" data-ok="✅ 精准！不管从哪点起笔、顺时针或逆时针都可以（有绝对值），但绝不能跨对角线穿插跳点导致边交叉。" data-err="❌ 检查规律：起点任意、顺逆均可，关键是要沿着外框连续绕圈，不可跳点交叉！"></div>
+      </div>
+
+      <div class="exam-q" data-mcq-answer="C">
+        <div class="exam-q-head"><span class="q-tag">Ex 6.4 · MCQ 2 (水平底高秒杀)</span><span class="q-marks">[1 mark]</span></div>
+        <div class="q-stem-en">Find the exact area of triangle <span class="math">PQR</span> with vertices <span class="math">P(0, 3), Q(4, 3), R(2, 9)</span>.</div>
+        <div class="q-stem-cn">求三顶点 <span class="math">P(0, 3), Q(4, 3), R(2, 9)</span> 围成的三角形面积：</div>
+        <div class="mcq-options">
+          <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>6</span></button>
+          <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>24</span></button>
+          <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>12</span></button>
+          <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>18</span></button>
+        </div>
+        <div class="mcq-feedback" data-ok="✅ 秒杀！P 和 Q 纵坐标同为 3 ⇒ 水平底长 4，高 = 9 − 3 = 6 ⇒ Area = ½ × 4 × 6 = 12。" data-err="❌ 别忘了三角形面积公式前面有 ½！"></div>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-head"><span class="q-tag">Ex 6.4 · 解答题 1 (含绝对值反求未知顶点 k)</span><span class="q-marks">[4 marks]</span></div>
+        <div class="q-stem-en">The triangle with vertices <span class="math">A(2, 1), B(6, 3)</span> and <span class="math">C(k, 9)</span> has an area of <span class="math">10</span> units². Find the two possible values of <span class="math">k</span>.</div>
+        <div class="q-stem-cn">已知 <span class="math">A(2, 1), B(6, 3), C(k, 9)</span> 围成的三角形面积为 <span class="math">10</span>，求 <span class="math">k</span> 的两个可能值。</div>
+        <details class="ms-details">
+          <summary>查看评分细则 (Mark Scheme · 4 Marks)</summary>
+          <div class="ms-body">
+            <p><span class="ms-mark">M1</span> Shoelace determinant: <span class="math"><span class="frac"><span class="num">1</span><span class="den">2</span></span> |(2·3 + 6·9 + k·1) − (1·6 + 3·k + 9·2)| = 10</span></p>
+            <p><span class="ms-mark">M1</span> Simplify inside modulus: <span class="math"><span class="frac"><span class="num">1</span><span class="den">2</span></span> |(60 + k) − (24 + 3k)| = <span class="frac"><span class="num">1</span><span class="den">2</span></span> |36 − 2k| = |18 − k| = 10</span></p>
+            <p><span class="ms-mark">M1</span> Split modulus into two cases: <span class="math">18 − k = 10</span> or <span class="math">18 − k = −10</span></p>
+            <p><span class="ms-mark">A1</span> <span class="math"><strong>k = 8</strong></span> or <span class="math"><strong>k = 28</strong></span>（漏绝对值负分支只拿 1 分 <span class="ms-mark">A0</span>！）。</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-head"><span class="q-tag">Ex 6.4 · 解答题 2 (斜置梯形鞋带法精确计算)</span><span class="q-marks">[4 marks]</span></div>
+        <div class="q-stem-en">Find the exact area of quadrilateral <span class="math">PQRS</span> with vertices in order <span class="math">P(1, 1), Q(7, 3), R(6, 6), S(3, 5)</span>.</div>
+        <div class="q-stem-cn">按顺序连接 <span class="math">P(1, 1), Q(7, 3), R(6, 6), S(3, 5)</span>，用鞋带法求其精确面积。</div>
+        <details class="ms-details">
+          <summary>查看评分细则 (Mark Scheme · 4 Marks)</summary>
+          <div class="ms-body">
+            <p><span class="ms-mark">M1</span> Write closed shoelace: <span class="math">(1,1) → (7,3) → (6,6) → (3,5) → (1,1)</span> (CCW non-intersecting order ✓).</p>
+            <p><span class="ms-mark">M1</span> Downward products: <span class="math">1(3) + 7(6) + 6(5) + 3(1) = 3 + 42 + 30 + 3 = 78</span>.</p>
+            <p><span class="ms-mark">M1</span> Upward products: <span class="math">1(7) + 3(6) + 6(3) + 5(1) = 7 + 18 + 18 + 5 = 48</span>.</p>
+            <p><span class="ms-mark">A1</span> Area = <span class="math"><span class="frac"><span class="num">1</span><span class="den">2</span></span> |78 − 48| = <span class="frac"><span class="num">30</span><span class="den">2</span></span> = <strong>15 units²</strong></span>.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section class="unit-block sme-section" id="mod-sme" style="--unit-color: var(--u3);">
+  <div class="unit-banner">
+    <div class="unit-kicker">SaveMyExams 0606 Past Paper Synthesis &amp; Tuesday Mock Quiz</div>
+    <h2>第三部分：SaveMyExams 高频压轴大题与周二 25 分钟全真模考</h2>
+    <p>
+      综合题往往把 <strong>6.1–6.4 全部串联在同一个多步图形里</strong>：前两问求垂直平分线和交点，最后一问用鞋带法或对角线算面积。先把 5 道 SaveMyExams 真题变式吃透，再开计时器实战 35 分周二模拟小测！
+    </p>
+  </div>
+
+  <!-- SEC SME -->
+  <article class="topic-section sme-section" id="sec-sme">
+    <div class="section-header">
+      <div class="section-title-group">
+        <h3>SaveMyExams 0606 高频综合大题精讲 (5 道压轴母题)</h3>
+        <div class="section-en-sub">Integrated Coordinate Geometry Exam Questions (2025–2027 Non-Calculator Style)</div>
+        <div class="tier-row">
+          <span class="badge-p1">多问联动：中点 → 垂直平分线 → 面积</span>
+          <span class="badge-p2">每道附精确分数步骤拆解</span>
+        </div>
+      </div>
+      <button type="button" class="master-btn" data-section-id="sec-sme">○ 标记掌握</button>
+    </div>
+
+    <div class="practice-block" style="margin-top: 0; padding-top: 0; border-top: none;">
+      <div class="exam-q">
+        <div class="exam-q-head"><span class="q-tag">SME 1 · Paper 1 垂直平分线与坐标轴围成面积</span><span class="q-marks">[7 marks]</span></div>
+        <div class="q-stem-en">
+          The points <span class="math">A</span> and <span class="math">B</span> have coordinates <span class="math">(2, 7)</span> and <span class="math">(10, 3)</span> respectively.<br>
+          (a) Find the equation of the perpendicular bisector of <span class="math">AB</span>, giving your answer in the form <span class="math">y = mx + c</span>. [4]<br>
+          (b) This perpendicular bisector cuts the <span class="math">x</span>-axis at <span class="math">P</span> and the <span class="math">y</span>-axis at <span class="math">Q</span>. Find the exact area of <span class="math">ΔOPQ</span>, where <span class="math">O</span> is the origin. [3]
+        </div>
+        <div class="q-stem-cn">无计算器：求 <span class="math">AB</span> 的垂直平分线，并求其与两坐标轴围成三角形 <span class="math">OPQ</span> 的精确面积。</div>
+        <details class="ms-details">
+          <summary>查看 SaveMyExams 标准采分步骤 (Mark Scheme)</summary>
+          <div class="ms-body">
+            <p><span class="ms-mark">B1</span> Midpoint of <span class="math">AB</span>: <span class="math">M = (<span class="frac"><span class="num">2+10</span><span class="den">2</span></span>, <span class="frac"><span class="num">7+3</span><span class="den">2</span></span>) = (6, 5)</span>.</p>
+            <p><span class="ms-mark">M1</span> <span class="math">m<sub>AB</sub> = <span class="frac"><span class="num">3 − 7</span><span class="den">10 − 2</span></span> = −<span class="frac"><span class="num">1</span><span class="den">2</span></span> ⇒ m<sub>⊥</sub> = 2</span> (<span class="ms-mark">M1</span>).</p>
+            <p><span class="ms-mark">A1</span> <span class="math">y − 5 = 2(x − 6) ⇒ <strong>y = 2x − 7</strong></span>.</p>
+            <p><span class="ms-mark">M1</span> Intercepts: when <span class="math">y = 0, x = <span class="frac"><span class="num">7</span><span class="den">2</span></span></span> (<span class="math">P(<span class="frac"><span class="num">7</span><span class="den">2</span></span>, 0)</span>); when <span class="math">x = 0, y = −7</span> (<span class="math">Q(0, −7)</span>).</p>
+            <p><span class="ms-mark">M1</span> Area <span class="math">ΔOPQ = <span class="frac"><span class="num">1</span><span class="den">2</span></span> × |OP| × |OQ| = <span class="frac"><span class="num">1</span><span class="den">2</span></span> × <span class="frac"><span class="num">7</span><span class="den">2</span></span> × 7 = <strong><span class="frac"><span class="num">49</span><span class="den">4</span></span></strong></span> (<span class="ms-mark">A1</span>, or <span class="math">12.25</span>; note lengths must be positive!).</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-head"><span class="q-tag">SME 2 · 双边方程联立求平行四边形全顶点与面积</span><span class="q-marks">[8 marks]</span></div>
+        <div class="q-stem-en">
+          <span class="math">PQRS</span> is a parallelogram where <span class="math">P</span> is <span class="math">(1, 2)</span> and <span class="math">Q</span> is <span class="math">(7, 4)</span>. The line <span class="math">QR</span> has equation <span class="math">2x + y = 18</span> and the line <span class="math">SR</span> has equation <span class="math">x − 3y + 19 = 0</span>.<br>
+          (a) Find the coordinates of <span class="math">R</span>. [3]<br>
+          (b) Find the coordinates of <span class="math">S</span>. [2]<br>
+          (c) Calculate the exact area of parallelogram <span class="math">PQRS</span>. [3]
+        </div>
+        <div class="q-stem-cn">平行四边形两条边所在直线已知，先联立求交点 <span class="math">R</span>，再用中点平分求 <span class="math">S</span>，最后求整图精确面积。</div>
+        <details class="ms-details">
+          <summary>查看评分细则 (Mark Scheme · 8 Marks)</summary>
+          <div class="ms-body">
+            <p><span class="ms-mark">M1</span> From <span class="math">SR</span>: <span class="math">x = 3y − 19</span>. Substitute into <span class="math">QR</span>: <span class="math">2(3y − 19) + y = 18</span> (<span class="ms-mark">M1</span>).</p>
+            <p><span class="ms-mark">A1</span> <span class="math">7y − 38 = 18 ⇒ 7y = 56 ⇒ y = 8, x = 5 ⇒ <strong>R(5, 8)</strong></span>.</p>
+            <p><span class="ms-mark">M1</span> Since <span class="math">PQRS</span> is a parallelogram, midpoint of <span class="math">PR</span> equals midpoint of <span class="math">QS</span>: <span class="math">S = P + R − Q</span>.</p>
+            <p><span class="ms-mark">A1</span> <span class="math">S = (1 + 5 − 7, 2 + 8 − 4) = <strong>(−1, 6)</strong></span> (check: <span class="math">−1 − 3(6) + 19 = 0</span> ✓).</p>
+            <p><span class="ms-mark">M1</span> Shoelace CCW: <span class="math">(1,2) → (7,4) → (5,8) → (−1,6) → (1,2)</span>.<br>
+              <span class="ms-mark">M1</span> <span class="math">S₁ = 4 + 56 + 30 − 2 = 88</span>；<span class="math">S₂ = 14 + 20 − 8 + 6 = 32</span>.<br>
+              <span class="ms-mark">A1</span> Area = <span class="math"><span class="frac"><span class="num">1</span><span class="den">2</span></span> |88 − 32| = <strong>28 units²</strong></span>.</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-head"><span class="q-tag">SME 3 · 风筝形 (Kite) 对角线垂直平分与 ½ d₁ d₂ 面积</span><span class="q-marks">[8 marks]</span></div>
+        <div class="q-stem-en">
+          In the kite <span class="math">ABCD</span>, <span class="math">AB = CB</span> and <span class="math">AD = CD</span>. The coordinates of <span class="math">A</span> and <span class="math">C</span> are <span class="math">(−1, 5)</span> and <span class="math">(5, −1)</span> respectively.<br>
+          (a) Show that the line of symmetry <span class="math">BD</span> has equation <span class="math">y = x</span>. [4]<br>
+          (b) Given that <span class="math">B</span> is <span class="math">(4, 4)</span> and <span class="math">D</span> is <span class="math">(−3, −3)</span>, find the exact length of diagonals <span class="math">AC</span> and <span class="math">BD</span> and hence the exact area of kite <span class="math">ABCD</span>. [4]
+        </div>
+        <div class="q-stem-cn">利用风筝对称轴即对角线 <span class="math">AC</span> 的垂直平分线，结合根式对角线秒算风筝精确面积。</div>
+        <details class="ms-details">
+          <summary>查看评分细则 (Mark Scheme · 8 Marks)</summary>
+          <div class="ms-body">
+            <p><span class="ms-mark">M1</span> Line of symmetry <span class="math">BD</span> is the perpendicular bisector of <span class="math">AC</span>. Midpoint <span class="math">M<sub>AC</sub> = (<span class="frac"><span class="num">−1+5</span><span class="den">2</span></span>, <span class="frac"><span class="num">5−1</span><span class="den">2</span></span>) = (2, 2)</span> (<span class="ms-mark">A1</span>).</p>
+            <p><span class="ms-mark">M1</span> <span class="math">m<sub>AC</sub> = <span class="frac"><span class="num">−1 − 5</span><span class="den">5 − (−1)</span></span> = −1 ⇒ m<sub>BD</sub> = 1</span>. Equation: <span class="math">y − 2 = 1(x − 2) ⇒ <strong>y = x</strong></span> (<span class="ms-mark">A1</span>).</p>
+            <p><span class="ms-mark">M1</span> <span class="math">AC = <span class="sqrt">√<span class="sqrt-rad">6² + (−6)²</span></span> = <span class="sqrt">√<span class="sqrt-rad">72</span></span> = 6<span class="sqrt">√<span class="sqrt-rad">2</span></span></span>；<span class="math">BD = <span class="sqrt">√<span class="sqrt-rad">7² + 7²</span></span> = <span class="sqrt">√<span class="sqrt-rad">98</span></span> = 7<span class="sqrt">√<span class="sqrt-rad">2</span></span></span> (<span class="ms-mark">A1</span>).</p>
+            <p><span class="ms-mark">M1</span> Since diagonals are perpendicular: Area = <span class="math"><span class="frac"><span class="num">1</span><span class="den">2</span></span> × 6<span class="sqrt">√<span class="sqrt-rad">2</span></span> × 7<span class="sqrt">√<span class="sqrt-rad">2</span></span> = <strong>42 units²</strong></span> (<span class="ms-mark">A1</span>).</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-head"><span class="q-tag">SME 4 · 两正交直线与坐标轴截出四边形面积</span><span class="q-marks">[7 marks]</span></div>
+        <div class="q-stem-en">
+          The line <span class="math">L₁: x + 2y = 12</span> crosses the <span class="math">x</span>-axis at <span class="math">A</span> and the <span class="math">y</span>-axis at <span class="math">B</span>. The line <span class="math">L₂</span> is perpendicular to <span class="math">L₁</span> and passes through <span class="math">D(4, 4)</span> on <span class="math">L₁</span>, meeting the <span class="math">x</span>-axis at <span class="math">E</span>.<br>
+          (a) Find the equation of <span class="math">L₂</span> and the coordinates of <span class="math">E</span>. [4]<br>
+          (b) Find the exact area of quadrilateral <span class="math">OEDB</span> (where <span class="math">O</span> is the origin). [3]
+        </div>
+        <div class="q-stem-cn">直线与坐标轴及垂线围出多边形 <span class="math">OEDB</span>，提供“外大减内小”与“鞋带公式”双路径验证。</div>
+        <details class="ms-details">
+          <summary>查看评分细则与双法示范 (Mark Scheme · 7 Marks)</summary>
+          <div class="ms-body">
+            <p><span class="ms-mark">M1</span> <span class="math">L₁: y = −<span class="frac"><span class="num">1</span><span class="den">2</span></span>x + 6 ⇒ m₁ = −<span class="frac"><span class="num">1</span><span class="den">2</span></span> ⇒ m₂ = 2</span> (<span class="ms-mark">A1</span>).</p>
+            <p><span class="ms-mark">M1</span> <span class="math">L₂</span> through <span class="math">(4, 4)</span>: <span class="math">y − 4 = 2(x − 4) ⇒ y = 2x − 4</span>. Set <span class="math">y = 0 ⇒ <strong>E(2, 0)</strong></span> (<span class="ms-mark">A1</span>).</p>
+            <p><span class="ms-mark">M1</span> Method 1 (大减法): <span class="math">A(12, 0), B(0, 6) ⇒ ΔOAB = <span class="frac"><span class="num">1</span><span class="den">2</span></span>(12)(6) = 36</span>；<span class="math">EA = 12 − 2 = 10, height y<sub>D</sub> = 4 ⇒ ΔEAD = <span class="frac"><span class="num">1</span><span class="den">2</span></span>(10)(4) = 20</span> (<span class="ms-mark">M1</span>).</p>
+            <p><span class="ms-mark">A1</span> Area <span class="math">OEDB = 36 − 20 = <strong>16 units²</strong></span>（用鞋带法 <span class="math">(0,0)→(2,0)→(4,4)→(0,6)→(0,0)</span> 同样得 <span class="math"><span class="frac"><span class="num">1</span><span class="den">2</span></span>(8 + 24) = 16</span> ✓）。</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-head"><span class="q-tag">SME 5 · 参数直线上面积双解与共线原理点睛</span><span class="q-marks">[7 marks]</span></div>
+        <div class="q-stem-en">
+          The points <span class="math">P</span> and <span class="math">Q</span> are <span class="math">(−2, 1)</span> and <span class="math">(4, 3)</span>. Point <span class="math">R(k, 2k)</span> lies on the line <span class="math">y = 2x</span>.<br>
+          (a) Express the area of <span class="math">ΔPQR</span> in terms of <span class="math">k</span>, and hence find the two values of <span class="math">k</span> for which the area is <span class="math">15</span>. [5]<br>
+          (b) State the value of <span class="math">k</span> for which <span class="math">P, Q</span> and <span class="math">R</span> are collinear, explaining why. [2]
+        </div>
+        <div class="q-stem-cn">含参数点在直线上滑动，用鞋带公式求指定面积双解并直接点出“面积为 0 ⇔ 共线”的本质！</div>
+        <details class="ms-details">
+          <summary>查看评分细则 (Mark Scheme · 7 Marks)</summary>
+          <div class="ms-body">
+            <p><span class="ms-mark">M1</span> Shoelace <span class="math">(−2, 1) → (4, 3) → (k, 2k) → (−2, 1)</span>:<br>
+              <span class="math">S₁ = (−2)(3) + 4(2k) + k(1) = 9k − 6</span>；<span class="math">S₂ = 1(4) + 3k + (2k)(−2) = 4 − k</span>.</p>
+            <p><span class="ms-mark">M1</span> Area <span class="math">= <span class="frac"><span class="num">1</span><span class="den">2</span></span> |(9k − 6) − (4 − k)| = <span class="frac"><span class="num">1</span><span class="den">2</span></span> |10k − 10| = 5|k − 1|</span> (<span class="ms-mark">A1</span>).</p>
+            <p><span class="ms-mark">M1</span> <span class="math">5|k − 1| = 15 ⇒ |k − 1| = 3 ⇒ k − 1 = 3</span> or <span class="math">−3 ⇒ <strong>k = 4</strong></span> or <span class="math"><strong>k = −2</strong></span> (<span class="ms-mark">A1</span>).</p>
+            <p><span class="ms-mark">M1</span> (b) Points are collinear when triangle area equals <span class="math">0</span>: <span class="math">5|k − 1| = 0 ⇒ <strong>k = 1</strong></span> (<span class="ms-mark">A1</span>, i.e. <span class="math">R(1, 2)</span> lies on <span class="math">PQ</span>).</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </article>
+
+  <!-- SEC QUIZ -->
+  <article class="topic-section sme-section" id="sec-quiz">
+    <div class="section-header">
+      <div class="section-title-group">
+        <h3>周二小测全真模拟考场 (25 分钟 · 满分 35 分 · Non-Calculator)</h3>
+        <div class="section-en-sub">Timed Diagnostic Quiz: 6 Speed MCQs (12 Marks) + 3 Extended Questions (23 Marks)</div>
+        <div class="tier-row">
+          <span class="badge-p1">请关闭计算器 · 按考场格式演草</span>
+          <span class="badge-p2">目标及格线 26+ / 35 · 冲刺 32+</span>
+        </div>
+      </div>
+      <button type="button" class="master-btn" data-section-id="sec-quiz">○ 标记掌握</button>
+    </div>
+
+    <!-- Interactive Module 3: #lab-quiz-timer -->
+    <div class="quiz-timer-bar" id="lab-quiz-timer">
+      <div>
+        <div style="font-size: 12.5px; font-weight: 800; color: var(--accent);">⏱️ 小测模拟倒计时 (建议 25 分钟交卷)</div>
+        <div class="quiz-clock" id="quizClockDisplay">25:00</div>
+      </div>
+      <div class="lab-controls" style="margin-bottom: 0;">
+        <button type="button" class="tab-btn active" id="quizStartBtn">▶ 开始计时</button>
+        <button type="button" class="tab-btn" id="quizPauseBtn">⏸ 暂停</button>
+        <button type="button" class="tab-btn" id="quizResetBtn">↺ 重置 25:00</button>
+        <span class="readout-pill" id="quizMcqScorePill" style="width: auto;">客观题已答：0 / 6 (0/12 分)</span>
+      </div>
+    </div>
+
+    <div class="subtopic">
+      <h4>Section A · 高频易错快答选择题（共 6 题，每题 2 分，计 12 分）</h4>
+      <div class="exam-q" data-mcq-answer="D" data-quiz-mcq="2">
+        <div class="exam-q-head"><span class="q-tag">Quiz A1 · 中点反推 + 最简根式</span><span class="q-marks">[2 marks]</span></div>
+        <div class="q-stem-en"><span class="math">M(−1, 5)</span> is the midpoint of <span class="math">A(3, 1)</span> and <span class="math">B</span>. Find the exact length of <span class="math">AB</span>.</div>
+        <div class="mcq-options">
+          <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><span class="math">4<span class="sqrt">√<span class="sqrt-rad">2</span></span></span></span></button>
+          <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><span class="math">16</span></span></button>
+          <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><span class="math">8</span></span></button>
+          <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><span class="math">8<span class="sqrt">√<span class="sqrt-rad">2</span></span></span></span></button>
+        </div>
+        <div class="mcq-feedback" data-ok="✅ AM = √((-4)² + 4²) = 4√2 ⇒ AB = 2 × AM = 8√2！（先算 AM 再翻倍快一倍！）" data-err="❌ 别停在 AM！B 是另一端，全长 AB = 2 × AM = 8√2。"></div>
+      </div>
+
+      <div class="exam-q" data-mcq-answer="B" data-quiz-mcq="2">
+        <div class="exam-q-head"><span class="q-tag">Quiz A2 · 零斜率特例陷阱</span><span class="q-marks">[2 marks]</span></div>
+        <div class="q-stem-en">Which line passes through <span class="math">(4, −2)</span> and is perpendicular to <span class="math">y = 4</span>?</div>
+        <div class="mcq-options">
+          <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><span class="math">y = −2</span></span></button>
+          <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><span class="math">x = 4</span></span></button>
+          <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><span class="math">x = −2</span></span></button>
+          <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><span class="math">y = −<span class="frac"><span class="num">1</span><span class="den">4</span></span>x − 1</span></span></button>
+        </div>
+        <div class="mcq-feedback" data-ok="✅ y = 4 是水平线，垂线必为铅垂线 x = 常数，过 (4, −2) 故为 x = 4！" data-err="❌ y = 4 的斜率是 0（不是 4！），它的垂线是竖直直线 x = 4。"></div>
+      </div>
+
+      <div class="exam-q" data-mcq-answer="C" data-quiz-mcq="2">
+        <div class="exam-q-head"><span class="q-tag">Quiz A3 · 三点共线参数</span><span class="q-marks">[2 marks]</span></div>
+        <div class="q-stem-en">The points <span class="math">(1, 3), (4, 9)</span> and <span class="math">(7, k)</span> are collinear. Find <span class="math">k</span>.</div>
+        <div class="mcq-options">
+          <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><span class="math">12</span></span></button>
+          <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><span class="math">13.5</span></span></button>
+          <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><span class="math">15</span></span></button>
+          <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><span class="math">18</span></span></button>
+        </div>
+        <div class="mcq-feedback" data-ok="✅ m = (9 − 3)/(4 − 1) = 2 ⇒ x 往右加 3，y 往上加 6 ⇒ 9 + 6 = 15！" data-err="❌ 斜率为 (9−3)/(4−1) = 2，所以 (k−9)/(7−4) = 2 ⇒ k = 15。"></div>
+      </div>
+
+      <div class="exam-q" data-mcq-answer="A" data-quiz-mcq="2">
+        <div class="exam-q-head"><span class="q-tag">Quiz A4 · 距离方程双解</span><span class="q-marks">[2 marks]</span></div>
+        <div class="q-stem-en">The distance between <span class="math">(k, 2)</span> and <span class="math">(1, −1)</span> is <span class="math">5</span>. What are all possible values of <span class="math">k</span>?</div>
+        <div class="mcq-options">
+          <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><span class="math">k = 5</span> 或 <span class="math">−3</span></span></button>
+          <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>仅 <span class="math">k = 5</span></span></button>
+          <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><span class="math">k = 4</span> 或 <span class="math">−4</span></span></button>
+          <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><span class="math">k = 6</span> 或 <span class="math">−2</span></span></button>
+        </div>
+        <div class="mcq-feedback" data-ok="✅ (k − 1)² + 3² = 25 ⇒ (k − 1)² = 16 ⇒ k − 1 = ±4 ⇒ 5 与 −3！" data-err="❌ 别忘记 3-4-5 直角勾股数的对称负根 (k − 1 = −4)。"></div>
+      </div>
+
+      <div class="exam-q" data-mcq-answer="B" data-quiz-mcq="2">
+        <div class="exam-q-head"><span class="q-tag">Quiz A5 · 正方形第四顶点</span><span class="q-marks">[2 marks]</span></div>
+        <div class="q-stem-en"><span class="math">PQRS</span> is a square with consecutive vertices <span class="math">P(0, 1), Q(3, 5), R(7, 2)</span>. Find <span class="math">S</span>.</div>
+        <div class="mcq-options">
+          <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>(10, 6)</span></button>
+          <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>(4, −2)</span></button>
+          <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>(−4, 4)</span></button>
+          <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>(3.5, 1.5)</span></button>
+        </div>
+        <div class="mcq-feedback" data-ok="✅ S = P + R − Q = (0+7−3, 1+2−5) = (4, −2)！且检查 vector QR = (4, −3) = vector PS ✓。" data-err="❌ 按顺序 PQRS，对角线是 PR 和 QS，故 S = P + R − Q。"></div>
+      </div>
+
+      <div class="exam-q" data-mcq-answer="D" data-quiz-mcq="2">
+        <div class="exam-q-head"><span class="q-tag">Quiz A6 · 三角形鞋带秒算</span><span class="q-marks">[2 marks]</span></div>
+        <div class="q-stem-en">Find the exact area of the triangle with vertices <span class="math">(0, 0), (6, 2)</span> and <span class="math">(2, 6)</span>.</div>
+        <div class="mcq-options">
+          <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>32</span></button>
+          <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>20</span></button>
+          <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>18</span></button>
+          <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>16</span></span></button>
+        </div>
+        <div class="mcq-feedback" data-ok="✅ S₁ = 6×6 = 36，S₂ = 2×2 = 4 ⇒ ½|36 − 4| = 16！" data-err="❌ 注意：有一个顶点在原点 (0,0) 时公式简化为 ½|x₁y₂ − x₂y₁| = ½|36 − 4| = 16。"></div>
+      </div>
+    </div>
+
+    <div class="subtopic">
+      <h4>Section B · 综合演算大题（共 3 题，计 23 分）</h4>
+      <div class="exam-q">
+        <div class="exam-q-head"><span class="q-tag">Quiz B1 · 动点等距与垂直平分线校验</span><span class="q-marks">[6 marks]</span></div>
+        <div class="q-stem-en">
+          Points <span class="math">A(−2, 4)</span> and <span class="math">B(4, −2)</span> are given. Point <span class="math">P(a, 2a − 3)</span> is equidistant from <span class="math">A</span> and <span class="math">B</span>.<br>
+          (a) Form an equation in <span class="math">a</span> and hence find the coordinates of <span class="math">P</span>. [4]<br>
+          (b) Verify that <span class="math">P</span> lies on the perpendicular bisector of <span class="math">AB</span>. [2]
+        </div>
+        <details class="ms-details">
+          <summary>查看评分细则 (Mark Scheme · 6 Marks)</summary>
+          <div class="ms-body">
+            <p><span class="ms-mark">M1</span> <span class="math">(a + 2)² + (2a − 7)² = (a − 4)² + (2a − 1)²</span> (<span class="ms-mark">M1</span> expand).</p>
+            <p><span class="ms-mark">M1</span> <span class="math">5a² − 24a + 53 = 5a² − 12a + 17 ⇒ 12a = 36 ⇒ a = 3</span> ⇒ <strong><span class="math">P(3, 3)</span></strong> (<span class="ms-mark">A1</span>).</p>
+            <p><span class="ms-mark">M1</span> (b) Midpoint <span class="math">M = (1, 1)</span>, <span class="math">m<sub>AB</sub> = −1 ⇒ m<sub>⊥</sub> = 1</span>, perp bisector is <span class="math">y = x</span>; since <span class="math">3 = 3</span>, <span class="math">P</span> lies on <span class="math">y = x</span> (<span class="ms-mark">A1</span>).</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-head"><span class="q-tag">Quiz B2 · 直角矩形构建与精确面积</span><span class="q-marks">[8 marks]</span></div>
+        <div class="q-stem-en">
+          Given <span class="math">A(1, 2), B(5, 4), C(3, 8)</span>:<br>
+          (a) Prove that <span class="math">∠ABC = 90°</span>. [3]<br>
+          (b) Find the equations of lines <span class="math">AD</span> (parallel to <span class="math">BC</span>) and <span class="math">CD</span> (parallel to <span class="math">AB</span>), and hence find <span class="math">D</span> so that <span class="math">ABCD</span> is a rectangle. [3]<br>
+          (c) Find the exact area of <span class="math">ABCD</span>. [2]
+        </div>
+        <details class="ms-details">
+          <summary>查看评分细则 (Mark Scheme · 8 Marks)</summary>
+          <div class="ms-body">
+            <p><span class="ms-mark">M1</span> <span class="math">m<sub>AB</sub> = <span class="frac"><span class="num">1</span><span class="den">2</span></span></span>, <span class="math">m<sub>BC</sub> = −2</span> (<span class="ms-mark">A1</span>). Since <span class="math"><span class="frac"><span class="num">1</span><span class="den">2</span></span> × (−2) = −1</span>, <span class="math">AB ⊥ BC ⇒ ∠ABC = 90°</span> (<span class="ms-mark">A1</span>).</p>
+            <p><span class="ms-mark">M1</span> Line <span class="math">AD</span>: <span class="math">y = −2x + 4</span>；Line <span class="math">CD</span>: <span class="math">y − 8 = <span class="frac"><span class="num">1</span><span class="den">2</span></span>(x − 3)</span> (<span class="ms-mark">M1</span> solve simultaneous) ⇒ <strong><span class="math">D(−1, 6)</span></strong> (<span class="ms-mark">A1</span>).</p>
+            <p><span class="ms-mark">M1</span> <span class="math">AB = <span class="sqrt">√<span class="sqrt-rad">20</span></span></span>, <span class="math">BC = <span class="sqrt">√<span class="sqrt-rad">20</span></span></span> ⇒ Area = <span class="math"><span class="sqrt">√<span class="sqrt-rad">20</span></span> × <span class="sqrt">√<span class="sqrt-rad">20</span></span> = <strong>20 units²</strong></span> (<span class="ms-mark">A1</span>, actually a square!).</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-head"><span class="q-tag">Quiz B3 · 截距、垂直平分线一般式与分数面积</span><span class="q-marks">[9 marks]</span></div>
+        <div class="q-stem-en">
+          The line <span class="math">2x + y = 10</span> meets the <span class="math">x</span>-axis at <span class="math">P</span> and the <span class="math">y</span>-axis at <span class="math">Q</span>. The perpendicular bisector <span class="math">L</span> of <span class="math">PQ</span> cuts <span class="math">PQ</span> at <span class="math">M</span> and the <span class="math">x</span>-axis at <span class="math">R</span>.<br>
+          (a) Find the coordinates of <span class="math">M</span> and the equation of <span class="math">L</span> in the form <span class="math">ax + by + c = 0</span> where <span class="math">a, b, c</span> are integers. [5]<br>
+          (b) Find the coordinates of <span class="math">R</span> and the exact area of <span class="math">ΔPMR</span>. [4]
+        </div>
+        <details class="ms-details">
+          <summary>查看评分细则 (Mark Scheme · 9 Marks)</summary>
+          <div class="ms-body">
+            <p><span class="ms-mark">B1</span> <span class="math">P(5, 0), Q(0, 10)</span> ⇒ <span class="math">M = (<span class="frac"><span class="num">5</span><span class="den">2</span></span>, 5)</span> (<span class="ms-mark">A1</span>).</p>
+            <p><span class="ms-mark">M1</span> <span class="math">m<sub>PQ</sub> = −2 ⇒ m<sub>L</sub> = <span class="frac"><span class="num">1</span><span class="den">2</span></span></span> (<span class="ms-mark">M1</span>): <span class="math">y − 5 = <span class="frac"><span class="num">1</span><span class="den">2</span></span>(x − <span class="frac"><span class="num">5</span><span class="den">2</span></span>) ⇒ 4y − 20 = 2x − 5 ⇒ <strong>2x − 4y + 15 = 0</strong></span> (<span class="ms-mark">A1</span>).</p>
+            <p><span class="ms-mark">B1</span> (b) Set <span class="math">y = 0 ⇒ R(−<span class="frac"><span class="num">15</span><span class="den">2</span></span>, 0)</span>.</p>
+            <p><span class="ms-mark">M1</span> Base <span class="math">PR = 5 − (−<span class="frac"><span class="num">15</span><span class="den">2</span></span>) = <span class="frac"><span class="num">25</span><span class="den">2</span></span></span>, vertical height <span class="math">y<sub>M</sub> = 5</span> (<span class="ms-mark">M1</span>).</p>
+            <p><span class="ms-mark">A1</span> Area <span class="math">ΔPMR = <span class="frac"><span class="num">1</span><span class="den">2</span></span> × <span class="frac"><span class="num">25</span><span class="den">2</span></span> × 5 = <strong><span class="frac"><span class="num">125</span><span class="den">4</span></span></strong></span> (<span class="math">31.25</span> units²).</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section class="unit-block" id="appendix" style="--unit-color: var(--uapp);">
+  <div class="unit-banner">
+    <div class="unit-kicker">Revision Appendix A &amp; B</div>
+    <h2>考前冲刺附录 · 1 分钟核心公式汇总与 24 道证题英文直接背写库</h2>
+    <p>
+      考前最后 10 分钟快速过一遍全部 6.1–6.4 公式与 8 大易错红线，再用 <strong>「🙈 开启遮罩自测」</strong>默写“证明共线”“证明风筝形/菱形”“鞋带公式防错”的剑桥考官得分标准句。
+    </p>
+  </div>
+
+  <!-- APPENDIX A -->
+  <article class="topic-section" id="app-formulas">
+    <div class="section-header">
+      <div class="section-title-group">
+        <h3>附录 A · Chapter 6 (Units 6.1–6.4) 公式速查表与 8 大周二小测避坑红线</h3>
+        <div class="section-en-sub">1-Minute Formula Sheet &amp; Top 8 Examiner Mark-Loss Traps</div>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table class="am-table">
+        <thead>
+          <tr>
+            <th>小节</th>
+            <th>核心公式 / 方法</th>
+            <th>周二小测考场防扣分红线 (Traps)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>6.1</strong></td>
+            <td>长度 <span class="math"><span class="sqrt">√<span class="sqrt-rad">(x₂−x₁)²+(y₂−y₁)²</span></span></span>；中点 <span class="math">(<span class="frac"><span class="num">x₁+x₂</span><span class="den">2</span></span>, <span class="frac"><span class="num">y₁+y₂</span><span class="den">2</span></span>)</span></td>
+            <td>1. <strong>无计算器必保留最简根式</strong>（<span class="math"><span class="sqrt">√<span class="sqrt-rad">80</span></span> = 4<span class="sqrt">√<span class="sqrt-rad">5</span></span></span>），忌小数；<br>2. 已知距离反求坐标 <span class="math">k</span> 必有 <strong>± 两个解</strong>；<br>3. 平行四边形第四顶点若给字母顺序 <span class="math">ABCD</span> ⇒ 唯一定为 <span class="math">A + C − B</span>。</td>
+          </tr>
+          <tr>
+            <td><strong>6.2</strong></td>
+            <td>斜率 <span class="math"><span class="frac"><span class="num">y₂−y₁</span><span class="den">x₂−x₁</span></span></span>；平行 <span class="math">m₁ = m₂</span>；垂直 <span class="math">m₁m₂ = −1</span></td>
+            <td>4. 证三点共线必须写完斜率相等后补一句 <strong>“and share common point B”</strong>；<br>5. 水平线 <span class="math">y = c</span> 的垂线直接写 <span class="math">x = h</span>，别强算 <span class="math">−1/0</span>。</td>
+          </tr>
+          <tr>
+            <td><strong>6.3</strong></td>
+            <td>点斜式 <span class="math">y − y₁ = m(x − x₁)</span>；对称点 <span class="math">P' = 2F − P</span></td>
+            <td>6. 垂直平分线<strong>必过中点 M，切忌错代端点 A 或 B</strong>；<br>7. 题干要求 <span class="math">ax + by + c = 0</span>（integers）务必通分消分母！</td>
+          </tr>
+          <tr>
+            <td><strong>6.4</strong></td>
+            <td>鞋带法 <span class="math"><span class="frac"><span class="num">1</span><span class="den">2</span></span> |S₁ − S₂|</span>；直角/风筝 <span class="math"><span class="frac"><span class="num">1</span><span class="den">2</span></span> d₁ d₂</span></td>
+            <td>8. 四边形以上必画草图确认<strong>顺/逆时针绕圈且末列回闭首点</strong>，防“蝴蝶结错序”；已知面积反求 <span class="math">k</span> 别忘绝对值 <strong>± 两分支</strong>！</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+
+  <!-- APPENDIX B -->
+  <article class="topic-section" id="app-concepts">
+    <div class="section-header">
+      <div class="section-title-group">
+        <h3>附录 B · 24 道 0606 证题标准句型与高频公式直接背写库</h3>
+        <div class="section-en-sub">Bilingual Direct-Write Geometry Reasoning &amp; Method Flashcards (Hide/Unmask Quiz)</div>
+      </div>
+    </div>
+
+    <div class="concept-toolbar">
+      <div class="concept-filter-group" id="conceptFilterTabs">
+        <button type="button" class="tab-btn active" data-concept-part="all">全部 24 题</button>
+        <button type="button" class="tab-btn" data-concept-part="61">6.1 距离与中点 (6题)</button>
+        <button type="button" class="tab-btn" data-concept-part="62">6.2 平行垂直与证明 (6题)</button>
+        <button type="button" class="tab-btn" data-concept-part="63">6.3 方程与平分对称 (6题)</button>
+        <button type="button" class="tab-btn" data-concept-part="64">6.4 鞋带多边形面积 (6题)</button>
+      </div>
+      <div class="concept-actions">
+        <span class="concept-count-pill" id="conceptCountPill">显示 24 / 24 题</span>
+        <button type="button" class="icon-btn" id="conceptQuizToggle">🙈 开启遮罩自测</button>
+      </div>
+    </div>
+
+    <div class="concept-grid" id="conceptGrid">
+      <!-- 6.1 -->
+      <div class="concept-card book-section" data-part="61">
+        <div class="cq-head"><span class="q-tag">CG01 · Unit 6.1</span><span class="badge-p1">Formula</span></div>
+        <div class="cq-en">State the distance formula between <span class="math">A(x₁, y₁)</span> and <span class="math">B(x₂, y₂)</span> and the Non-Calculator exact-form rule.</div>
+        <div class="cq-cn">默写两点距离公式及无计算器答卷的精确格式铁律。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            <span class="kw">AB = √[(x₂ − x₁)² + (y₂ − y₁)²]</span>. In Non-Calculator Paper 1, always leave irrational answers in <span class="kw">simplest surd form</span> (e.g. √80 = 4√5), never decimals.
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card book-section" data-part="61">
+        <div class="cq-head"><span class="q-tag">CG02 · Unit 6.1</span><span class="badge-p1">Reverse Endpoint</span></div>
+        <div class="cq-en">Given endpoint <span class="math">A</span> and midpoint <span class="math">M</span> of <span class="math">AB</span>, write the fastest direct formula for <span class="math">B</span>.</div>
+        <div class="cq-cn">已知端点 <span class="math">A</span> 与中点 <span class="math">M</span>，写出反求另一端点 <span class="math">B</span> 的最快公式。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            <span class="kw">B = 2M − A</span>, i.e., x<sub>B</sub> = <span class="kw">2x<sub>M</sub> − x<sub>A</sub></span> and y<sub>B</sub> = <span class="kw">2y<sub>M</sub> − y<sub>A</sub></span>（本质由 (x<sub>A</sub> + x<sub>B</sub>)/2 = x<sub>M</sub> 移项所得）。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card book-section" data-part="61">
+        <div class="cq-head"><span class="q-tag">CG03 · Unit 6.1</span><span class="badge-p1">Equidistant Trick</span></div>
+        <div class="cq-en">How should you set up an algebraic equation when a point <span class="math">P</span> is equidistant from <span class="math">A</span> and <span class="math">B</span>?</div>
+        <div class="cq-cn">遇到“动点 <span class="math">P</span> 到 <span class="math">A, B</span> 等距”时，如何列式避免带着根号硬算？</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Square both sides immediately: solve <span class="kw">PA² = PB²</span> instead of √(…) = √(…). On straight lines or axes, the quadratic terms cancel cleanly!
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card book-section" data-part="61">
+        <div class="cq-head"><span class="q-tag">CG04 · Unit 6.1</span><span class="badge-p1">Two Solutions</span></div>
+        <div class="cq-en">Why does finding an unknown coordinate <span class="math">k</span> from a fixed distance <span class="math">d</span> normally give two answers?</div>
+        <div class="cq-cn">已知两点距离反求坐标 <span class="math">k</span> 时，为什么绝大多数情况必出两个解？</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Solving (k − a)² = c yields <span class="kw">two square roots k − a = ±√c</span> (geometrically representing two symmetric intersections of a circle of radius d with the horizontal/vertical line).
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card book-section" data-part="61">
+        <div class="cq-head"><span class="q-tag">CG05 · Unit 6.1</span><span class="badge-p1">Parallelogram</span></div>
+        <div class="cq-en">Given vertices <span class="math">A, B, C</span> in order of parallelogram <span class="math">ABCD</span>, write the vector/midpoint rule for <span class="math">D</span>.</div>
+        <div class="cq-cn">写出求平行四边形 <span class="math">ABCD</span> 第四顶点 <span class="math">D</span> 的通用公式（注意顶点顺序）。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Diagonals AC and BD <span class="kw">bisect each other</span> (M<sub>AC</sub> = M<sub>BD</sub>), so <span class="kw">D = A + C − B</span>（对角相加减邻角！若题干未指定字母序则需分别减去三个点给出 3 种可能）。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card book-section" data-part="61">
+        <div class="cq-head"><span class="q-tag">CG06 · Unit 6.1</span><span class="badge-p1">Triangle Test</span></div>
+        <div class="cq-en">What are the two clean algebraic checks to test if triangle <span class="math">ABC</span> is right-angled using lengths?</div>
+        <div class="cq-cn">利用边长平方如何判断三角形是否为等腰或直角三角形？</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Compute <span class="kw">AB², BC², AC²</span> (no need to square root back!). Two equal squares ⇒ <span class="kw">isosceles</span>; if the sum of the smaller two equals the largest (<span class="kw">a² + b² = c²</span>) ⇒ <span class="kw">right-angled</span> by converse of Pythagoras.
+          </div>
+        </div>
+      </div>
+
+      <!-- 6.2 -->
+      <div class="concept-card book-section" data-part="62">
+        <div class="cq-head"><span class="q-tag">CG07 · Unit 6.2</span><span class="badge-p1">Collinearity Proof</span></div>
+        <div class="cq-en">Write the exact full-mark English statement proving three points <span class="math">A, B, C</span> are collinear.</div>
+        <div class="cq-cn">写出证明三点 <span class="math">A, B, C</span> 共线（Collinear）在剑桥 Mark Scheme 拿满分的标准英文句式。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            “Gradient <span class="kw">m<sub>AB</sub> = m<sub>BC</sub></span>, and the segments <span class="kw">share a common point B</span>, therefore A, B and C are collinear.”（漏写“共享公共点”必定丢最后的 <span class="kw">A1</span> 结论分！）。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card book-section" data-part="62">
+        <div class="cq-head"><span class="q-tag">CG08 · Unit 6.2</span><span class="badge-p1">Perpendicular Rule</span></div>
+        <div class="cq-en">State the perpendicular gradient condition and its special exception for horizontal/vertical lines.</div>
+        <div class="cq-cn">写出两线垂直的斜率判据及其唯一不适用乘积公式的特例。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            For non-vertical lines: <span class="kw">m₁ × m₂ = −1</span> (negative reciprocal). Exception: a <span class="kw">horizontal line (m = 0, y = c)</span> is perpendicular to a <span class="kw">vertical line (undefined gradient, x = h)</span>.
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card book-section" data-part="62">
+        <div class="cq-head"><span class="q-tag">CG09 · Unit 6.2</span><span class="badge-p1">Prove Rectangle</span></div>
+        <div class="cq-en">State the minimal coordinate steps to prove quadrilateral <span class="math">ABCD</span> is a rectangle.</div>
+        <div class="cq-cn">写出用坐标法证明矩形（Rectangle）最省时的两组校验。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            ① Prove opposite sides parallel (<span class="kw">m<sub>AB</sub> = m<sub>DC</sub></span> and <span class="kw">m<sub>BC</sub> = m<sub>AD</sub></span>); ② Prove one interior angle is 90° (<span class="kw">m<sub>AB</sub> × m<sub>BC</sub> = −1</span>).
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card book-section" data-part="62">
+        <div class="cq-head"><span class="q-tag">CG10 · Unit 6.2</span><span class="badge-p1">Prove Rhombus</span></div>
+        <div class="cq-en">How do you distinguish a Rhombus from a general Parallelogram, and from a Square?</div>
+        <div class="cq-cn">在证明了平行四边形基础上，如何进一步判定是菱形（Rhombus）而非正方形？</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Show <span class="kw">adjacent sides are equal (AB = BC)</span> or <span class="kw">diagonals are perpendicular (m<sub>AC</sub>·m<sub>BD</sub> = −1)</span> ⇒ Rhombus; then check <span class="kw">m<sub>AB</sub>·m<sub>BC</sub> ≠ −1</span> to confirm it is not a square.
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card book-section" data-part="62">
+        <div class="cq-head"><span class="q-tag">CG11 · Unit 6.2</span><span class="badge-p1">Prove Trapezium</span></div>
+        <div class="cq-en">What two gradient conditions prove <span class="math">ABCD</span> is specifically a trapezium (not a parallelogram)?</div>
+        <div class="cq-cn">证明一个四边形恰好是梯形（Trapezium）需要展示哪两项斜率对比？</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Show <span class="kw">exactly one pair of opposite sides is parallel</span> (e.g. m<sub>AB</sub> = m<sub>DC</sub>) <span class="kw">AND the other pair is NOT parallel</span> (m<sub>BC</sub> ≠ m<sub>AD</sub>).
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card book-section" data-part="62">
+        <div class="cq-head"><span class="q-tag">CG12 · Unit 6.2</span><span class="badge-p1">Prove Kite</span></div>
+        <div class="cq-en">State the diagonal and side properties that characterise a Kite in 0606 exam questions.</div>
+        <div class="cq-cn">写出 0606 真题证明风筝形（Kite）最常用的两条核心几何条件。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            ① <span class="kw">Diagonals are perpendicular</span> (m<sub>AC</sub> × m<sub>BD</sub> = −1) and only one diagonal bisects the other; ② <span class="kw">Two pairs of distinct adjacent sides are equal</span> (AB = AD and CB = CD, with AB ≠ CB).
+          </div>
+        </div>
+      </div>
+
+      <!-- 6.3 -->
+      <div class="concept-card book-section" data-part="63">
+        <div class="cq-head"><span class="q-tag">CG13 · Unit 6.3</span><span class="badge-p2">Perp Bisector</span></div>
+        <div class="cq-en">List the 3 mandatory steps to find the perpendicular bisector of segment <span class="math">AB</span>.</div>
+        <div class="cq-cn">默写求线段 <span class="math">AB</span> 垂直平分线方程的规范三步走。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            ① Find midpoint <span class="kw">M</span> of AB; ② Compute <span class="kw">m<sub>AB</sub></span> and take negative reciprocal <span class="kw">m<sub>⊥</sub> = −1/m<sub>AB</sub></span>; ③ Substitute <span class="kw">M</span> and m<sub>⊥</sub> into <span class="kw">y − y<sub>M</sub> = m<sub>⊥</sub>(x − x<sub>M</sub>)</span> (never sub A or B!).
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card book-section" data-part="63">
+        <div class="cq-head"><span class="q-tag">CG14 · Unit 6.3</span><span class="badge-p2">Line Equation</span></div>
+        <div class="cq-en">How do you quickly convert <span class="math">y − y₁ = (<span class="frac"><span class="num">p</span><span class="den">q</span></span>)(x − x₁)</span> into <span class="math">ax + by + c = 0</span> with integer coefficients?</div>
+        <div class="cq-cn">如何一步把含分数斜率的点斜式化为系数全为整数的一般式？</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Multiply both sides by the denominator <span class="kw">q</span> first: <span class="kw">q(y − y₁) = p(x − x₁)</span>, expand brackets, and collect all terms onto one side keeping the coefficient of x positive.
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card book-section" data-part="63">
+        <div class="cq-head"><span class="q-tag">CG15 · Unit 6.3</span><span class="badge-p2">Foot &amp; Shortest</span></div>
+        <div class="cq-en">Describe how to find the shortest distance from a point <span class="math">P</span> to a line <span class="math">L</span> using Ch 6 tools.</div>
+        <div class="cq-cn">写出求点 <span class="math">P</span> 到直线 <span class="math">L</span> 最短距离的三步坐标解法。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            ① Write the equation of the <span class="kw">perpendicular line through P</span>; ② Solve simultaneously with <span class="kw">L</span> to get the <span class="kw">foot of perpendicular F</span>; ③ Compute distance <span class="kw">PF</span>.
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card book-section" data-part="63">
+        <div class="cq-head"><span class="q-tag">CG16 · Unit 6.3</span><span class="badge-p2">Reflection</span></div>
+        <div class="cq-en">Given point <span class="math">P</span> and its foot of perpendicular <span class="math">F</span> onto line <span class="math">L</span>, state the formula for reflection <span class="math">P'</span>.</div>
+        <div class="cq-cn">写出点 <span class="math">P</span> 关于某直线 <span class="math">L</span> 的对称点 <span class="math">P'</span> 的最快计算关系式。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Since the foot F is the <span class="kw">exact midpoint of PP'</span>, use <span class="kw">P' = 2F − P</span>, i.e., x<sub>P'</sub> = 2x<sub>F</sub> − x<sub>P</sub> and y<sub>P'</sub> = 2y<sub>F</sub> − y<sub>P</sub>.
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card book-section" data-part="63">
+        <div class="cq-head"><span class="q-tag">CG17 · Unit 6.3</span><span class="badge-p2">General Line</span></div>
+        <div class="cq-en">How do you read the gradient and <span class="math">y</span>-intercept directly from <span class="math">ax + by + c = 0</span> (<span class="math">b ≠ 0</span>)?</div>
+        <div class="cq-cn">如何快速且零符号错误地从一般式 <span class="math">ax + by + c = 0</span> 读出斜率？</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Rearrange explicitly into <span class="kw">y = (−a/b)x + (−c/b)</span> so gradient <span class="kw">m = −a/b</span> and y-intercept is <span class="kw">−c/b</span>（切忌直接把 x 系数 a 当成斜率！）。
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card book-section" data-part="63">
+        <div class="cq-head"><span class="q-tag">CG18 · Unit 6.3</span><span class="badge-p2">Parallel Shortcut</span></div>
+        <div class="cq-en">Give the 5-second template for a line parallel to <span class="math">ax + by + c = 0</span> passing through <span class="math">(x₀, y₀)</span>.</div>
+        <div class="cq-cn">写出求平行于已知一般式直线 <span class="math">ax + by + c = 0</span> 且过点 <span class="math">(x₀, y₀)</span> 的 5 秒速成模板。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Keep <span class="kw">ax + by</span> unchanged and plug in the point directly: <span class="kw">ax + by = ax₀ + by₀</span>（例：平行于 2x − 5y + 9 = 0 且过 (−3, 4) 直接写 2x − 5y = 2(−3) − 5(4) = −26）。
+          </div>
+        </div>
+      </div>
+
+      <!-- 6.4 -->
+      <div class="concept-card book-section" data-part="64">
+        <div class="cq-head"><span class="q-tag">CG19 · Unit 6.4</span><span class="badge-p2">Shoelace Order</span></div>
+        <div class="cq-en">State the two golden formatting rules of the Shoelace area matrix method.</div>
+        <div class="cq-cn">默写鞋带法（Shoelace Method）排列表格时必须严格遵守的两条格式铁律。</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            ① Vertices must be ordered <span class="kw">consecutively clockwise or anticlockwise</span> around the perimeter (sketch first to avoid self-intersecting “bowtie” cross-order!); ② <span class="kw">Repeat the first vertex</span> at the final column to close the loop.
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card book-section" data-part="64">
+        <div class="cq-head"><span class="q-tag">CG20 · Unit 6.4</span><span class="badge-p2">Reverse Area</span></div>
+        <div class="cq-en">Why must you retain modulus bars <span class="math">|…|</span> when solving for an unknown vertex <span class="math">k</span> from a given polygon area?</div>
+        <div class="cq-cn">当已知多边形面积反求某个顶点里的未知数 <span class="math">k</span> 时，为什么绝对值竖线决不能随意去掉？</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Because ½|<span class="kw">S₁ − S₂</span>| = Area produces <span class="kw">two linear equations (S₁ − S₂ = +2·Area and −2·Area)</span> corresponding to points on both sides of the base line; dropping the negative branch loses half the marks!
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card book-section" data-part="64">
+        <div class="cq-head"><span class="q-tag">CG21 · Unit 6.4</span><span class="badge-p2">Kite / Rhombus Area</span></div>
+        <div class="cq-en">What is the fastest area formula for a Kite or Rhombus when diagonal endpoints are given?</div>
+        <div class="cq-cn">当已知菱形或风筝形四个顶点时，除了鞋带法外哪种特殊几何公式常把根式化为整洁整数？</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Because their diagonals meet at 90°, use <span class="kw">Area = ½ × d₁ × d₂</span>（如 AC = 6√2 且 BD = 7√2 时，½ × 6√2 × 7√2 = 42 一步出整解！）.
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card book-section" data-part="64">
+        <div class="cq-head"><span class="q-tag">CG22 · Unit 6.4</span><span class="badge-p2">Axes Intercept Area</span></div>
+        <div class="cq-en">Explain the fast area shortcut when two vertices share the same <span class="math">x</span>- or <span class="math">y</span>-coordinate (e.g. on an axis).</div>
+        <div class="cq-cn">当三角形有一条边落在坐标轴上或平行于坐标轴时，如何免去鞋带行列式 3 秒求面积？</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Treat that axis-aligned side as the <span class="kw">base</span> (|x₂ − x₁| or |y₂ − y₁|) and use the third vertex's perpendicular coordinate difference as the <span class="kw">height</span> in <span class="kw">Area = ½ × base × height</span>.
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card book-section" data-part="64">
+        <div class="cq-head"><span class="q-tag">CG23 · Unit 6.4</span><span class="badge-p2">Zero Area Link</span></div>
+        <div class="cq-en">What does a Shoelace determinant result of <span class="math">0</span> tell you about three points <span class="math">P, Q, R</span>?</div>
+        <div class="cq-cn">用鞋带公式算出的三角形面积如果恰好等于 0，这说明三点具有什么几何位置关系？</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Zero enclosed area means the three points <span class="kw">lie on the exact same straight line (are collinear)</span>!
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-card book-section" data-part="64">
+        <div class="cq-head"><span class="q-tag">CG24 · Unit 6.4</span><span class="badge-p2">Right Triangle Area</span></div>
+        <div class="cq-en">If Part (a) proves <span class="math">∠ABC = 90°</span> in <span class="math">ΔABC</span>, how should Part (b) compute its area?</div>
+        <div class="cq-cn">当大题第 (a) 问刚证明过 <span class="math">∠ABC = 90°</span>，第 (b) 问求该三角形面积的最优做法是？</div>
+        <div class="cq-answer">
+          <div class="cq-mask-hint">👆 点击查看参考答案</div>
+          <div class="cq-answer-inner">
+            Use the two perpendicular legs directly: <span class="kw">Area = ½ × AB × BC</span> (never pick the hypotenuse AC as base unless you also found its altitude!).
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+
+      </div>
+    </main>
+  </div>
+
+  <button type="button" class="back-top-btn" id="backTopBtn" title="返回顶部">↑</button>
+
+  <script>
+(function () {
+  'use strict';
+
+  const STORAGE_PREFIX = 'igcse_am0606_ch6_';
+  const htmlEl = document.documentElement;
+  const bodyEl = document.body;
+
+  // Declare all module-level state before any render/init calls (avoid TDZ errors)
+  let currentMode = localStorage.getItem(STORAGE_PREFIX + 'mode') || 'all';
+  let activeConceptPart = 'all';
+  let quizMasked = localStorage.getItem(STORAGE_PREFIX + 'quizMasked') === '1';
+  let allMsExpanded = false;
+  let quizSecondsLeft = 25 * 60;
+  let quizTimerHandle = null;
+  let quizMcqState = {};
+  let masteredIds = [];
+  try {
+    masteredIds = JSON.parse(localStorage.getItem(STORAGE_PREFIX + 'mastered') || '[]');
+    if (!Array.isArray(masteredIds)) masteredIds = [];
+  } catch (e) {
+    masteredIds = [];
+  }
+
+  // ---------- Pure Integer / Exact Fraction / Surd Helpers ----------
+  function gcd(a, b) {
+    a = Math.abs(Math.round(a));
+    b = Math.abs(Math.round(b));
+    while (b !== 0) {
+      const t = a % b;
+      a = b;
+      b = t;
+    }
+    return a || 1;
+  }
+
+  function formatFrac(num, den) {
+    if (den === 0) return 'undefined';
+    if (num === 0) return '0';
+    if (den < 0) { num = -num; den = -den; }
+    const g = gcd(num, den);
+    num /= g;
+    den /= g;
+    if (den === 1) return String(num);
+    return num + '/' + den;
+  }
+
+  function formatSurd(n) {
+    n = Math.round(n);
+    if (n <= 0) return '0';
+    let outside = 1;
+    let inside = n;
+    for (let f = 2; f * f <= inside; f++) {
+      while (inside % (f * f) === 0) {
+        outside *= f;
+        inside /= (f * f);
+      }
+    }
+    if (inside === 1) return String(outside);
+    if (outside === 1) return '√' + inside;
+    return outside + '√' + inside;
+  }
+
+  function formatLineEq(a, b, c) {
+    // a*x + b*y + c = 0 with integer simplification & leading positive coefficient
+    if (a === 0 && b === 0) return '重合两点（无法定直线）';
+    const g = gcd(gcd(a, b), c);
+    a /= g; b /= g; c /= g;
+    if (a < 0 || (a === 0 && b < 0)) { a = -a; b = -b; c = -c; }
+    const parts = [];
+    if (a !== 0) parts.push((a === 1 ? '' : a === -1 ? '−' : String(a)) + 'x');
+    if (b !== 0) {
+      const sign = b > 0 ? (parts.length ? ' + ' : '') : (parts.length ? ' − ' : '−');
+      const mag = Math.abs(b);
+      parts.push(sign + (mag === 1 ? '' : String(mag)) + 'y');
+    }
+    if (c !== 0) {
+      const sign = c > 0 ? ' + ' : ' − ';
+      parts.push(sign + Math.abs(c));
+    }
+    return parts.join('') + ' = 0';
+  }
+
+  // ---------- 1. Theme & Filter ----------
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+
+  function applyTheme(theme) {
+    htmlEl.setAttribute('data-theme', theme);
+    if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem(STORAGE_PREFIX + 'theme', theme);
+  }
+  applyTheme(localStorage.getItem(STORAGE_PREFIX + 'theme') || 'light');
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      applyTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  }
+
+  function applyMode(mode) {
+    currentMode = mode;
+    bodyEl.classList.remove('mode-book', 'mode-sme');
+    if (mode === 'book') bodyEl.classList.add('mode-book');
+    if (mode === 'sme') bodyEl.classList.add('mode-sme');
+    document.querySelectorAll('[data-ch6-mode]').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-ch6-mode') === mode);
+    });
+    localStorage.setItem(STORAGE_PREFIX + 'mode', mode);
+    filterConcepts();
+  }
+
+  document.querySelectorAll('[data-ch6-mode]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      applyMode(btn.getAttribute('data-ch6-mode'));
+    });
+  });
+
+  // ---------- 2. Sidebar Drawer & Accordion ----------
+  const sidebar = document.getElementById('sidebar');
+  const menuToggle = document.getElementById('menuToggle');
+  if (menuToggle && sidebar) {
+    menuToggle.addEventListener('click', function () {
+      sidebar.classList.toggle('open');
+    });
+    sidebar.querySelectorAll('.nav-link').forEach(function (lnk) {
+      lnk.addEventListener('click', function () {
+        if (window.innerWidth <= 980) sidebar.classList.remove('open');
+      });
+    });
+  }
+  document.querySelectorAll('.nav-unit-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const unit = btn.closest('.nav-unit');
+      if (unit) unit.classList.toggle('collapsed');
+    });
+  });
+
+  // ---------- 3. Mastery Progress (0/6) ----------
+  const progressText = document.getElementById('progressText');
+  const progressFill = document.getElementById('progressFill');
+  const TOTAL_SECTIONS = 6;
+
+  function renderMastery() {
+    const valid = masteredIds.filter(function (id) {
+      return /^sec-(6[1-4]|sme|quiz)$/.test(id);
+    });
+    if (progressText) progressText.textContent = valid.length + '/' + TOTAL_SECTIONS;
+    if (progressFill) progressFill.style.width = Math.round((valid.length / TOTAL_SECTIONS) * 100) + '%';
+
+    document.querySelectorAll('.master-btn').forEach(function (btn) {
+      const sid = btn.getAttribute('data-section-id');
+      const done = valid.indexOf(sid) !== -1;
+      btn.classList.toggle('is-mastered', done);
+      btn.textContent = done ? '✓ 已掌握' : '○ 标记掌握';
+    });
+
+    document.querySelectorAll('.nav-link').forEach(function (lnk) {
+      const id = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('mastered', valid.indexOf(id) !== -1);
+    });
+  }
+
+  document.querySelectorAll('.master-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const sid = btn.getAttribute('data-section-id');
+      const idx = masteredIds.indexOf(sid);
+      if (idx === -1) masteredIds.push(sid);
+      else masteredIds.splice(idx, 1);
+      localStorage.setItem(STORAGE_PREFIX + 'mastered', JSON.stringify(masteredIds));
+      renderMastery();
+    });
+  });
+  renderMastery();
+
+  // ---------- 4. Global Toggle All Mark Schemes & Print ----------
+  const toggleAllMs = document.getElementById('toggleAllMs');
+  if (toggleAllMs) {
+    toggleAllMs.addEventListener('click', function () {
+      allMsExpanded = !allMsExpanded;
+      document.querySelectorAll('details.ms-details').forEach(function (det) {
+        det.open = allMsExpanded;
+      });
+      const lbl = toggleAllMs.querySelector('.btn-label');
+      if (lbl) lbl.textContent = allMsExpanded ? '收起解析' : '展开解析';
+      toggleAllMs.classList.toggle('active', allMsExpanded);
+    });
+  }
+  const printBtn = document.getElementById('printBtn');
+  if (printBtn) printBtn.addEventListener('click', function () { window.print(); });
+
+  // ---------- 5. Search Filter ----------
+  const searchInput = document.getElementById('searchInput');
+  const searchClear = document.getElementById('searchClear');
+  const searchBar = document.getElementById('searchBar');
+  const searchSummary = document.getElementById('searchSummary');
+  const searchResetBtn = document.getElementById('searchResetBtn');
+  const emptySearchNotice = document.getElementById('emptySearchNotice');
+
+  function runSearch() {
+    if (!searchInput) return;
+    const raw = searchInput.value.trim().toLowerCase();
+    if (searchClear) searchClear.style.display = raw ? 'block' : 'none';
+    const sections = Array.from(document.querySelectorAll('.topic-section'));
+    if (!raw) {
+      sections.forEach(function (s) { s.classList.remove('search-dim'); });
+      if (searchBar) searchBar.classList.remove('visible');
+      if (emptySearchNotice) emptySearchNotice.style.display = 'none';
+      return;
+    }
+    let hits = 0;
+    sections.forEach(function (sec) {
+      const ok = sec.textContent.toLowerCase().indexOf(raw) !== -1;
+      sec.classList.toggle('search-dim', !ok);
+      if (ok) hits++;
+    });
+    if (searchBar) searchBar.classList.add('visible');
+    if (searchSummary) searchSummary.textContent = '关键词 “' + searchInput.value.trim() + '” 匹配 ' + hits + ' 个知识板块';
+    if (emptySearchNotice) emptySearchNotice.style.display = hits === 0 ? 'block' : 'none';
+  }
+  if (searchInput) searchInput.addEventListener('input', runSearch);
+  function resetSearch() { if (searchInput) searchInput.value = ''; runSearch(); }
+  if (searchClear) searchClear.addEventListener('click', resetSearch);
+  if (searchResetBtn) searchResetBtn.addEventListener('click', resetSearch);
+
+  // ---------- 6. MCQs & Timed Quiz Scoreboard ----------
+  const quizMcqScorePill = document.getElementById('quizMcqScorePill');
+
+  function updateQuizScoreboard() {
+    if (!quizMcqScorePill) return;
+    const keys = Object.keys(quizMcqState);
+    let marks = 0;
+    keys.forEach(function (k) { marks += quizMcqState[k] ? 2 : 0; });
+    quizMcqScorePill.textContent = '客观题已答：' + keys.length + ' / 6 (' + marks + '/12 分)';
+  }
+
+  document.querySelectorAll('.exam-q[data-mcq-answer]').forEach(function (qBox, qIdx) {
+    const ans = qBox.getAttribute('data-mcq-answer');
+    const isQuiz = qBox.hasAttribute('data-quiz-mcq');
+    const fb = qBox.querySelector('.mcq-feedback');
+    const opts = qBox.querySelectorAll('.mcq-opt');
+
+    opts.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const chosen = btn.getAttribute('data-opt');
+        opts.forEach(function (o) { o.classList.remove('correct', 'wrong'); });
+        const ok = chosen === ans;
+        if (ok) {
+          btn.classList.add('correct');
+          if (fb) {
+            fb.textContent = fb.getAttribute('data-ok') || '✅ Correct!';
+            fb.className = 'mcq-feedback visible ok';
+          }
+        } else {
+          btn.classList.add('wrong');
+          opts.forEach(function (o) {
+            if (o.getAttribute('data-opt') === ans) o.classList.add('correct');
+          });
+          if (fb) {
+            fb.textContent = fb.getAttribute('data-err') || '❌ Incorrect.';
+            fb.className = 'mcq-feedback visible err';
+          }
+        }
+        if (isQuiz) {
+          quizMcqState['q_' + qIdx] = ok;
+          updateQuizScoreboard();
+        }
+      });
+    });
+  });
+  updateQuizScoreboard();
+
+  // ---------- 7. Quiz Countdown Timer (#lab-quiz-timer) ----------
+  const quizClockDisplay = document.getElementById('quizClockDisplay');
+  const quizStartBtn = document.getElementById('quizStartBtn');
+  const quizPauseBtn = document.getElementById('quizPauseBtn');
+  const quizResetBtn = document.getElementById('quizResetBtn');
+
+  function renderClock() {
+    if (!quizClockDisplay) return;
+    const mm = String(Math.floor(quizSecondsLeft / 60)).padStart(2, '0');
+    const ss = String(quizSecondsLeft % 60).padStart(2, '0');
+    quizClockDisplay.textContent = mm + ':' + ss;
+    quizClockDisplay.style.color = quizSecondsLeft <= 180 ? 'var(--svg-red)' : 'var(--accent)';
+  }
+
+  if (quizStartBtn) {
+    quizStartBtn.addEventListener('click', function () {
+      if (quizTimerHandle) return;
+      quizTimerHandle = setInterval(function () {
+        if (quizSecondsLeft > 0) {
+          quizSecondsLeft--;
+          renderClock();
+        } else {
+          clearInterval(quizTimerHandle);
+          quizTimerHandle = null;
+        }
+      }, 1000);
+    });
+  }
+  if (quizPauseBtn) {
+    quizPauseBtn.addEventListener('click', function () {
+      if (quizTimerHandle) {
+        clearInterval(quizTimerHandle);
+        quizTimerHandle = null;
+      }
+    });
+  }
+  if (quizResetBtn) {
+    quizResetBtn.addEventListener('click', function () {
+      if (quizTimerHandle) {
+        clearInterval(quizTimerHandle);
+        quizTimerHandle = null;
+      }
+      quizSecondsLeft = 25 * 60;
+      renderClock();
+    });
+  }
+  renderClock();
+
+  // ---------- SVG Helper for Dynamic Coordinate Grid ----------
+  function makeCoordViewport(points, w, h, pad) {
+    let minX = 0, maxX = 0, minY = 0, maxY = 0;
+    points.forEach(function (p) {
+      if (p.x < minX) minX = p.x;
+      if (p.x > maxX) maxX = p.x;
+      if (p.y < minY) minY = p.y;
+      if (p.y > maxY) maxY = p.y;
+    });
+    minX -= 2; maxX += 2; minY -= 2; maxY += 2;
+    const spanX = Math.max(8, maxX - minX);
+    const spanY = Math.max(8, maxY - minY);
+    const scale = Math.min((w - 2 * pad) / spanX, (h - 2 * pad) / spanY);
+    const midDataX = (minX + maxX) / 2;
+    const midDataY = (minY + maxY) / 2;
+    return {
+      minX: Math.floor(minX),
+      maxX: Math.ceil(maxX),
+      minY: Math.floor(minY),
+      maxY: Math.ceil(maxY),
+      toPxX: function (x) { return w / 2 + (x - midDataX) * scale; },
+      toPxY: function (y) { return h / 2 - (y - midDataY) * scale; }
+    };
+  }
+
+  function buildGridMarkup(vp, w, h) {
+    let svg = '<rect x="2" y="2" width="' + (w - 4) + '" height="' + (h - 4) + '" rx="6" fill="none" stroke="var(--svg-grid)" stroke-width="1"/>';
+    const stepX = (vp.maxX - vp.minX) > 16 ? 2 : 1;
+    const stepY = (vp.maxY - vp.minY) > 16 ? 2 : 1;
+    for (let x = vp.minX; x <= vp.maxX; x += stepX) {
+      const px = vp.toPxX(x);
+      if (px >= 10 && px <= w - 10) {
+        svg += '<line x1="' + px.toFixed(1) + '" y1="10" x2="' + px.toFixed(1) + '" y2="' + (h - 10) + '" stroke="var(--svg-grid)" stroke-width="0.8"/>';
+      }
+    }
+    for (let y = vp.minY; y <= vp.maxY; y += stepY) {
+      const py = vp.toPxY(y);
+      if (py >= 10 && py <= h - 10) {
+        svg += '<line x1="10" y1="' + py.toFixed(1) + '" x2="' + (w - 10) + '" y2="' + py.toFixed(1) + '" stroke="var(--svg-grid)" stroke-width="0.8"/>';
+      }
+    }
+    const ox = vp.toPxX(0);
+    const oy = vp.toPxY(0);
+    if (ox >= 10 && ox <= w - 10) {
+      svg += '<line x1="' + ox.toFixed(1) + '" y1="10" x2="' + ox.toFixed(1) + '" y2="' + (h - 10) + '" stroke="var(--svg-muted)" stroke-width="1.5"/>';
+      svg += '<text x="' + Math.min(w - 14, ox + 7).toFixed(1) + '" y="22" font-size="10.5" font-weight="700" fill="var(--svg-muted)">y</text>';
+    }
+    if (oy >= 10 && oy <= h - 10) {
+      svg += '<line x1="10" y1="' + oy.toFixed(1) + '" x2="' + (w - 10) + '" y2="' + oy.toFixed(1) + '" stroke="var(--svg-muted)" stroke-width="1.5"/>';
+      svg += '<text x="' + (w - 18) + '" y="' + Math.max(22, oy - 5).toFixed(1) + '" font-size="10.5" font-weight="700" fill="var(--svg-muted)">x</text>';
+    }
+    return svg;
+  }
+
+  // ---------- 8. Lab 1: Line Geometry & Perp Bisector (#lab-line-geo) ----------
+  const LG_PRESETS = [
+    { ax: -3, ay: 5, bx: 5, by: 1 },
+    { ax: -2, ay: -1, bx: 4, by: 7 },
+    { ax: 2, ay: 7, bx: 10, by: 3 },
+    { ax: -2, ay: 4, bx: 6, by: 4 }
+  ];
+  const lgAxEl = document.getElementById('lgAx');
+  const lgAyEl = document.getElementById('lgAy');
+  const lgBxEl = document.getElementById('lgBx');
+  const lgByEl = document.getElementById('lgBy');
+
+  function updateLineGeo() {
+    if (!lgAxEl || !lgAyEl || !lgBxEl || !lgByEl) return;
+    const ax = Math.round(Number(lgAxEl.value) || 0);
+    const ay = Math.round(Number(lgAyEl.value) || 0);
+    const bx = Math.round(Number(lgBxEl.value) || 0);
+    const by = Math.round(Number(lgByEl.value) || 0);
+
+    const dx = bx - ax;
+    const dy = by - ay;
+    const distSq = dx * dx + dy * dy;
+    const midX = (ax + bx) / 2;
+    const midY = (ay + by) / 2;
+
+    const outLen = document.getElementById('lgOutLen');
+    const outMid = document.getElementById('lgOutMid');
+    const outGrad = document.getElementById('lgOutGrad');
+    const outEqAB = document.getElementById('lgOutEqAB');
+    const outEqPerp = document.getElementById('lgOutEqPerp');
+    const svgEl = document.getElementById('lgSvg');
+
+    if (outLen) {
+      outLen.textContent = distSq === 0 ? '精确长度 AB：0（两点重合）' : '精确长度 AB：√' + distSq + ' = ' + formatSurd(distSq);
+    }
+    if (outMid) {
+      outMid.textContent = '中点 M：(' + formatFrac(ax + bx, 2) + ', ' + formatFrac(ay + by, 2) + ')';
+    }
+    if (outGrad) {
+      if (distSq === 0) {
+        outGrad.textContent = '斜率：两点重合';
+      } else if (dx === 0) {
+        outGrad.textContent = '斜率：m_AB = undefined (铅垂线) | m_⊥ = 0';
+      } else if (dy === 0) {
+        outGrad.textContent = '斜率：m_AB = 0 (水平线) | m_⊥ = undefined (铅垂)';
+      } else {
+        outGrad.textContent = '斜率：m_AB = ' + formatFrac(dy, dx) + '  |  垂线 m_⊥ = ' + formatFrac(-dx, dy);
+      }
+    }
+    if (outEqAB) {
+      // (by - ay)*x - (bx - ax)*y + (bx*ay - ax*by) = 0
+      outEqAB.textContent = '直线 AB 一般式：' + formatLineEq(dy, -dx, bx * ay - ax * by);
+    }
+    if (outEqPerp) {
+      // Perp bisector: dx*(x - (ax+bx)/2) + dy*(y - (ay+by)/2) = 0 -> 2*dx*x + 2*dy*y - ((bx^2-ax^2)+(by^2-ay^2)) = 0
+      if (distSq === 0) {
+        outEqPerp.textContent = '垂直平分线：请设置两个不同点';
+      } else {
+        const cPerp = -(bx * bx - ax * ax + by * by - ay * ay);
+        outEqPerp.textContent = '垂直平分线：' + formatLineEq(2 * dx, 2 * dy, cPerp);
+      }
+    }
+
+    if (svgEl) {
+      const vp = makeCoordViewport([{ x: ax, y: ay }, { x: bx, y: by }, { x: midX, y: midY }], 360, 280, 34);
+      let markup = buildGridMarkup(vp, 360, 280);
+      const pxA = vp.toPxX(ax), pyA = vp.toPxY(ay);
+      const pxB = vp.toPxX(bx), pyB = vp.toPxY(by);
+      const pxM = vp.toPxX(midX), pyM = vp.toPxY(midY);
+
+      if (distSq > 0) {
+        // Draw extended perp bisector line through M with direction (-dy, dx)
+        const dirLen = Math.hypot(-dy, dx) || 1;
+        const ux = (-dy / dirLen) * 140;
+        const uy = (-dx / dirLen) * 140; // inverted screen y carefully: use math coords!
+        const mx1 = midX - (-dy / dirLen) * 12, my1 = midY - (dx / dirLen) * 12;
+        const mx2 = midX + (-dy / dirLen) * 12, my2 = midY + (dx / dirLen) * 12;
+        markup += '<line x1="' + vp.toPxX(mx1).toFixed(1) + '" y1="' + vp.toPxY(my1).toFixed(1) + '" x2="' + vp.toPxX(mx2).toFixed(1) + '" y2="' + vp.toPxY(my2).toFixed(1) + '" stroke="var(--svg-red)" stroke-width="2" stroke-dasharray="5,3"/>';
+        markup += '<line x1="' + pxA.toFixed(1) + '" y1="' + pyA.toFixed(1) + '" x2="' + pxB.toFixed(1) + '" y2="' + pyB.toFixed(1) + '" stroke="var(--svg-indigo)" stroke-width="2.8"/>';
+      }
+      markup += '<circle cx="' + pxA.toFixed(1) + '" cy="' + pyA.toFixed(1) + '" r="5" fill="var(--svg-blue)"/>';
+      markup += '<circle cx="' + pxB.toFixed(1) + '" cy="' + pyB.toFixed(1) + '" r="5" fill="var(--svg-blue)"/>';
+      markup += '<circle cx="' + pxM.toFixed(1) + '" cy="' + pyM.toFixed(1) + '" r="5" fill="var(--svg-red)"/>';
+      markup += '<text x="' + Math.min(310, Math.max(16, pxA + 7)).toFixed(1) + '" y="' + Math.max(20, pyA - 7).toFixed(1) + '" font-size="11" font-weight="700" fill="var(--svg-blue)">A(' + ax + ',' + ay + ')</text>';
+      markup += '<text x="' + Math.min(310, Math.max(16, pxB + 7)).toFixed(1) + '" y="' + Math.max(20, pyB - 7).toFixed(1) + '" font-size="11" font-weight="700" fill="var(--svg-blue)">B(' + bx + ',' + by + ')</text>';
+      markup += '<text x="' + Math.min(315, Math.max(16, pxM + 7)).toFixed(1) + '" y="' + Math.min(266, pyM + 15).toFixed(1) + '" font-size="10.5" font-weight="700" fill="var(--svg-red)">M</text>';
+      svgEl.innerHTML = markup;
+    }
+  }
+
+  [lgAxEl, lgAyEl, lgBxEl, lgByEl].forEach(function (el) {
+    if (el) el.addEventListener('input', updateLineGeo);
+  });
+  document.querySelectorAll('#lineGeoPresets [data-lg-preset]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const p = LG_PRESETS[Number(btn.getAttribute('data-lg-preset'))] || LG_PRESETS[0];
+      if (lgAxEl) lgAxEl.value = p.ax;
+      if (lgAyEl) lgAyEl.value = p.ay;
+      if (lgBxEl) lgBxEl.value = p.bx;
+      if (lgByEl) lgByEl.value = p.by;
+      document.querySelectorAll('#lineGeoPresets [data-lg-preset]').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      updateLineGeo();
+    });
+  });
+  updateLineGeo();
+
+  // ---------- 9. Lab 2: Shoelace Area & Bowtie Detector (#lab-shoelace) ----------
+  const SL_PRESETS = [
+    { n: 3, pts: [[-2, 1], [4, -1], [3, 5], [2, 4]] },
+    { n: 4, pts: [[1, 1], [5, 2], [6, 6], [2, 4]] },
+    { n: 4, pts: [[1, 1], [6, 6], [5, 2], [2, 4]] }, // Intentionally bowtie self-intersecting!
+    { n: 4, pts: [[-1, 5], [4, 4], [5, -1], [-3, -3]] }
+  ];
+
+  const slNumEl = document.getElementById('slNumSelect');
+  const slP4Wrap = document.getElementById('slP4Wrap');
+  const slInputs = [
+    [document.getElementById('slX1'), document.getElementById('slY1')],
+    [document.getElementById('slX2'), document.getElementById('slY2')],
+    [document.getElementById('slX3'), document.getElementById('slY3')],
+    [document.getElementById('slX4'), document.getElementById('slY4')]
+  ];
+  const slAutoOrderBtn = document.getElementById('slAutoOrderBtn');
+
+  function orientVal(a, b, c) {
+    return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
+  }
+  function segmentsCross(a, b, c, d) {
+    const o1 = orientVal(a, b, c), o2 = orientVal(a, b, d);
+    const o3 = orientVal(c, d, a), o4 = orientVal(c, d, b);
+    return (o1 * o2 < 0) && (o3 * o4 < 0);
+  }
+
+  function updateShoelace() {
+    if (!slNumEl) return;
+    const n = Number(slNumEl.value) === 3 ? 3 : 4;
+    if (slP4Wrap) slP4Wrap.style.display = n === 4 ? 'inline-flex' : 'none';
+
+    const pts = [];
+    for (let i = 0; i < n; i++) {
+      pts.push({
+        x: Math.round(Number(slInputs[i][0] && slInputs[i][0].value) || 0),
+        y: Math.round(Number(slInputs[i][1] && slInputs[i][1].value) || 0)
+      });
+    }
+
+    let s1 = 0, s2 = 0;
+    const s1Terms = [], s2Terms = [];
+    for (let i = 0; i < n; i++) {
+      const curr = pts[i];
+      const next = pts[(i + 1) % n];
+      const p1 = curr.x * next.y;
+      const p2 = curr.y * next.x;
+      s1 += p1;
+      s2 += p2;
+      s1Terms.push('(' + curr.x + ')(' + next.y + ')');
+      s2Terms.push('(' + curr.y + ')(' + next.x + ')');
+    }
+    const diff = Math.abs(s1 - s2);
+    const hasBowtie = n === 4 && (segmentsCross(pts[0], pts[1], pts[2], pts[3]) || segmentsCross(pts[1], pts[2], pts[3], pts[0]));
+
+    const banner = document.getElementById('slOrderBanner');
+    if (banner) {
+      if (hasBowtie) {
+        banner.className = 'alert-pill warn';
+        banner.textContent = '⚠️ 蝴蝶结错序警报：边发生对角交叉！所算面积被正负抵消，请先排成顺/逆时针序！';
+      } else if (diff === 0) {
+        banner.className = 'alert-pill warn';
+        banner.textContent = '⚠️ 共线提示：矩阵差为 0，顶点共线或退化，无法围成有效面积。';
+      } else {
+        banner.className = 'alert-pill ok';
+        banner.textContent = '多边形绕序检测：正常连续绕圈闭合，无边交叉 ✓';
+      }
+    }
+    if (slAutoOrderBtn) {
+      slAutoOrderBtn.style.display = hasBowtie ? 'inline-block' : 'none';
+    }
+
+    const outS1 = document.getElementById('slOutS1');
+    const outS2 = document.getElementById('slOutS2');
+    const outFormula = document.getElementById('slOutFormula');
+    const outArea = document.getElementById('slOutArea');
+    const svgEl = document.getElementById('slSvg');
+
+    if (outS1) outS1.textContent = '↘ 向下乘积 S₁ = ' + s1Terms.join(' + ') + ' = ' + s1;
+    if (outS2) outS2.textContent = '↗ 向上乘积 S₂ = ' + s2Terms.join(' + ') + ' = ' + s2;
+    if (outFormula) outFormula.textContent = '展开算式：½|' + s1 + ' − (' + s2 + ')| = ½ × ' + diff;
+    if (outArea) {
+      const areaExact = formatFrac(diff, 2);
+      const areaDec = (diff / 2).toFixed(diff % 2 === 0 ? 0 : 1);
+      outArea.textContent = (hasBowtie ? '⚠️ 错序虚假结果：' : '精确面积 Area：') + areaExact + (diff % 2 === 1 ? ' (' + areaDec + ')' : '') + ' units²';
+    }
+
+    if (svgEl) {
+      const vp = makeCoordViewport(pts, 360, 280, 34);
+      let markup = buildGridMarkup(vp, 360, 280);
+      const polyPts = pts.map(function (p) {
+        return vp.toPxX(p.x).toFixed(1) + ',' + vp.toPxY(p.y).toFixed(1);
+      }).join(' ');
+      const strokeCol = hasBowtie ? 'var(--svg-red)' : 'var(--svg-teal)';
+      const fillCol = hasBowtie ? 'rgba(220,38,38,0.16)' : 'rgba(15,118,110,0.15)';
+      markup += '<polygon points="' + polyPts + '" fill="' + fillCol + '" stroke="' + strokeCol + '" stroke-width="2.4"/>';
+      pts.forEach(function (p, idx) {
+        const px = vp.toPxX(p.x), py = vp.toPxY(p.y);
+        markup += '<circle cx="' + px.toFixed(1) + '" cy="' + py.toFixed(1) + '" r="5" fill="' + strokeCol + '"/>';
+        markup += '<text x="' + Math.min(308, Math.max(14, px + 7)).toFixed(1) + '" y="' + Math.max(20, py - 6).toFixed(1) + '" font-size="11" font-weight="700" fill="var(--svg-ink)">P' + (idx + 1) + '(' + p.x + ',' + p.y + ')</text>';
+      });
+      svgEl.innerHTML = markup;
+    }
+  }
+
+  if (slAutoOrderBtn) {
+    slAutoOrderBtn.addEventListener('click', function () {
+      const pts = [];
+      for (let i = 0; i < 4; i++) {
+        pts.push({
+          x: Math.round(Number(slInputs[i][0] && slInputs[i][0].value) || 0),
+          y: Math.round(Number(slInputs[i][1] && slInputs[i][1].value) || 0)
+        });
+      }
+      const cx = (pts[0].x + pts[1].x + pts[2].x + pts[3].x) / 4;
+      const cy = (pts[0].y + pts[1].y + pts[2].y + pts[3].y) / 4;
+      pts.sort(function (a, b) {
+        return Math.atan2(a.y - cy, a.x - cx) - Math.atan2(b.y - cy, b.x - cx);
+      });
+      pts.forEach(function (p, i) {
+        if (slInputs[i][0]) slInputs[i][0].value = p.x;
+        if (slInputs[i][1]) slInputs[i][1].value = p.y;
+      });
+      updateShoelace();
+    });
+  }
+
+  if (slNumEl) slNumEl.addEventListener('change', updateShoelace);
+  slInputs.forEach(function (pair) {
+    if (pair[0]) pair[0].addEventListener('input', updateShoelace);
+    if (pair[1]) pair[1].addEventListener('input', updateShoelace);
+  });
+  document.querySelectorAll('#shoePresets [data-sl-preset]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const pr = SL_PRESETS[Number(btn.getAttribute('data-sl-preset'))] || SL_PRESETS[0];
+      if (slNumEl) slNumEl.value = String(pr.n);
+      pr.pts.forEach(function (xy, i) {
+        if (slInputs[i][0]) slInputs[i][0].value = xy[0];
+        if (slInputs[i][1]) slInputs[i][1].value = xy[1];
+      });
+      document.querySelectorAll('#shoePresets [data-sl-preset]').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      updateShoelace();
+    });
+  });
+  updateShoelace();
+
+  // ---------- 10. Appendix B: 24 Concept Flashcards Filter & Mask Quiz ----------
+  const conceptCountPill = document.getElementById('conceptCountPill');
+  const conceptQuizToggle = document.getElementById('conceptQuizToggle');
+
+  function filterConcepts() {
+    const cards = Array.from(document.querySelectorAll('#conceptGrid .concept-card'));
+    let visible = 0;
+    cards.forEach(function (card) {
+      const part = card.getAttribute('data-part');
+      const show = activeConceptPart === 'all' || part === activeConceptPart;
+      card.classList.toggle('concept-hidden', !show);
+      if (show) visible++;
+    });
+    if (conceptCountPill) {
+      conceptCountPill.textContent = '显示 ' + visible + ' / ' + cards.length + ' 题';
+    }
+  }
+
+  document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      activeConceptPart = btn.getAttribute('data-concept-part');
+      document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      filterConcepts();
+    });
+  });
+
+  function applyQuizMask(masked) {
+    quizMasked = masked;
+    document.querySelectorAll('#conceptGrid .concept-card').forEach(function (card) {
+      card.classList.toggle('masked', masked);
+    });
+    if (conceptQuizToggle) {
+      conceptQuizToggle.textContent = masked ? '👁️ 显示全部答案' : '🙈 开启遮罩自测';
+      conceptQuizToggle.classList.toggle('active', masked);
+    }
+    localStorage.setItem(STORAGE_PREFIX + 'quizMasked', masked ? '1' : '0');
+  }
+
+  if (conceptQuizToggle) {
+    conceptQuizToggle.addEventListener('click', function () {
+      applyQuizMask(!quizMasked);
+    });
+  }
+
+  document.querySelectorAll('#conceptGrid .cq-answer').forEach(function (box) {
+    box.addEventListener('click', function () {
+      const card = box.closest('.concept-card');
+      if (card && card.classList.contains('masked')) {
+        card.classList.remove('masked');
+      }
+    });
+  });
+
+  applyMode(currentMode);
+  applyQuizMask(quizMasked);
+
+  // ---------- 11. Back-to-top & Active Sidebar Highlight ----------
+  const backTopBtn = document.getElementById('backTopBtn');
+  const trackedSections = Array.from(document.querySelectorAll('.topic-section[id]'));
+  const navLinks = Array.from(document.querySelectorAll('.sidebar .nav-link'));
+
+  window.addEventListener('scroll', function () {
+    if (backTopBtn) backTopBtn.classList.toggle('visible', window.scrollY > 360);
+    const y = window.scrollY + 110;
+    let currentId = '';
+    for (let i = 0; i < trackedSections.length; i++) {
+      if (trackedSections[i].offsetTop <= y && getComputedStyle(trackedSections[i]).display !== 'none') {
+        currentId = trackedSections[i].id;
+      }
+    }
+    navLinks.forEach(function (lnk) {
+      const h = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('active', h === currentId);
+    });
+  }, { passive: true });
+
+  if (backTopBtn) {
+    backTopBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+})();
+
+  </script>
+</body>
+</html>
