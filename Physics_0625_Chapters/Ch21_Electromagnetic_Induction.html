@@ -1,0 +1,2157 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="--accent: #DC2626;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch21 · Chapter 21: Electromagnetic induction — IGCSE Physics (0625) 精讲</title>
+  <style>
+/* ==========================================================================
+   Cambridge IGCSE Physics (0625 · David Sang 3rd Ed. 2023–2028)
+   25-Chapter Suite Shared Stylesheet (Offline, Zero CDN, Print-Ready)
+   ========================================================================== */
+
+:root {
+  --bg-page: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --bg-sidebar: #FFFFFF;
+  --bg-code: #EFF6FF;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-faint: #64748B;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+
+  --accent: #0284C7;
+  --accent-hover: #0369A1;
+  --accent-soft: #E0F2FE;
+
+  --core-bg: #E0F2FE;
+  --core-text: #075985;
+  --core-border: #BAE6FD;
+  --ext-bg: #FEF3C7;
+  --ext-text: #92400E;
+  --ext-border: #FDE68A;
+
+  --deep-bg: #EFF6FF;
+  --deep-border: #2563EB;
+  --tip-bg: #FFFBEB;
+  --tip-border: #D97706;
+  --mistake-bg: #FFF1F2;
+  --mistake-border: #E11D48;
+  --example-bg: #F0FDF4;
+  --example-border: #16A34A;
+  --formula-bg: #F8FAFC;
+  --formula-border: #0284C7;
+
+  --ok-bg: #DCFCE7;
+  --ok-text: #166534;
+  --ok-border: #86EFAC;
+  --err-bg: #FEE2E2;
+  --err-text: #991B1B;
+  --err-border: #FCA5A5;
+
+  --svg-bg: #FFFFFF;
+  --svg-grid: #E2E8F0;
+  --svg-ink: #0F172A;
+  --svg-muted: #64748B;
+  --svg-blue: #2563EB;
+  --svg-indigo: #4338CA;
+  --svg-teal: #0D9488;
+  --svg-amber: #D97706;
+  --svg-red: #DC2626;
+  --svg-green: #16A34A;
+  --svg-purple: #7C3AED;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.07);
+  --shadow-lg: 0 10px 26px rgba(15, 23, 42, 0.11);
+
+  --sidebar-w: 288px;
+  --topbar-h: 58px;
+  --radius-sm: 7px;
+  --radius-md: 11px;
+  --radius-lg: 16px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Songti SC", "Noto Serif SC", Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+[data-theme="dark"] {
+  --bg-page: #0B1120;
+  --bg-surface: #111827;
+  --bg-subtle: #1E293B;
+  --bg-sidebar: #0F172A;
+  --bg-code: #1E293B;
+  --text-main: #F1F5F9;
+  --text-muted: #CBD5E1;
+  --text-faint: #94A3B8;
+  --border: #1E293B;
+  --border-strong: #334155;
+
+  --accent: #38BDF8 !important;
+  --accent-hover: #7DD3FC;
+  --accent-soft: rgba(56, 189, 248, 0.18);
+
+  --core-bg: rgba(56, 189, 248, 0.16);
+  --core-text: #BAE6FD;
+  --core-border: rgba(56, 189, 248, 0.36);
+  --ext-bg: rgba(245, 158, 11, 0.16);
+  --ext-text: #FDE68A;
+  --ext-border: rgba(245, 158, 11, 0.36);
+
+  --deep-bg: rgba(37, 99, 235, 0.14);
+  --deep-border: #60A5FA;
+  --tip-bg: rgba(217, 119, 6, 0.14);
+  --tip-border: #FBBF24;
+  --mistake-bg: rgba(225, 29, 72, 0.15);
+  --mistake-border: #FB7185;
+  --example-bg: rgba(22, 163, 74, 0.13);
+  --example-border: #4ADE80;
+  --formula-bg: #172033;
+  --formula-border: #38BDF8;
+
+  --ok-bg: rgba(22, 163, 74, 0.22);
+  --ok-text: #BBF7D0;
+  --ok-border: #22C55E;
+  --err-bg: rgba(220, 38, 38, 0.22);
+  --err-text: #FECACA;
+  --err-border: #EF4444;
+
+  --svg-bg: #0F172A;
+  --svg-grid: #334155;
+  --svg-ink: #F1F5F9;
+  --svg-muted: #94A3B8;
+  --svg-blue: #60A5FA;
+  --svg-indigo: #818CF8;
+  --svg-teal: #2DD4BF;
+  --svg-amber: #FBBF24;
+  --svg-red: #F87171;
+  --svg-green: #34D399;
+  --svg-purple: #A78BFA;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .seg-btn.active,
+[data-theme="dark"] .tab-btn.active,
+[data-theme="dark"] .icon-btn.active,
+[data-theme="dark"] .brand-code,
+[data-theme="dark"] .pager-btn.primary { color: #0B1120; }
+[data-theme="dark"] .hub-foot { color: #38BDF8; }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--topbar-h) + 18px); }
+body { margin: 0; font-family: var(--font-sans); background: var(--bg-page); color: var(--text-main); line-height: 1.72; font-size: 15.5px; -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4 { margin: 0 0 0.55em 0; line-height: 1.32; font-weight: 700; color: var(--text-main); }
+p { margin: 0 0 0.9em 0; }
+ul, ol { margin: 0 0 1em 0; padding-left: 1.45em; }
+li { margin-bottom: 0.35em; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { font-family: var(--font-mono); font-size: 0.9em; background: var(--bg-code); color: var(--accent); padding: 2px 6px; border-radius: 4px; }
+
+/* View Mode Filters (Core / Extended / SME) */
+body.mode-core .ext-only,
+body.mode-core .badge-ext { display: none !important; }
+body.mode-ext .ext-only { border-left: 3px solid var(--ext-border); padding-left: 10px; background: rgba(245, 158, 11, 0.06); border-radius: 4px; }
+body.mode-book .sme-section { display: none !important; }
+body.mode-sme .book-section { display: none !important; }
+
+/* Physics Formula & Nuclide Formatting */
+.math { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 1.04em; }
+.frac { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; font-size: 0.88em; line-height: 1.1; margin: 0 2px; font-style: normal; font-family: Georgia, "Times New Roman", serif; }
+.frac .num { border-bottom: 1.5px solid currentColor; padding: 0 4px 1px 4px; }
+.frac .den { padding: 1px 4px 0 4px; }
+.sqrt { display: inline-flex; align-items: baseline; font-family: Georgia, "Times New Roman", serif; }
+.sqrt-rad { border-top: 1.4px solid currentColor; padding: 0 3px 0 2px; margin-left: 1px; }
+.nuclide { display: inline-flex; align-items: center; gap: 1px; font-family: Georgia, "Times New Roman", serif; font-weight: 700; vertical-align: middle; margin: 0 2px; }
+.nuc-nums { display: inline-flex; flex-direction: column; text-align: right; font-size: 0.72em; line-height: 1.05; }
+.formula-card { background: var(--formula-bg); border: 1.5px solid var(--border-strong); border-left: 5px solid var(--formula-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; font-size: 15px; }
+.formula-main { font-family: Georgia, "Times New Roman", serif; font-size: 16.5px; font-weight: 700; color: var(--accent); margin: 4px 0 6px 0; }
+
+/* Topbar */
+.topbar {
+  position: sticky; top: 0; z-index: 100; height: var(--topbar-h);
+  background: var(--bg-surface); border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm); display: flex; align-items: center;
+  justify-content: space-between; gap: 10px; padding: 0 16px;
+}
+.topbar-left { display: flex; align-items: center; gap: 8px; min-width: 0; flex-shrink: 1; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 34px; padding: 0 10px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--bg-surface); color: var(--text-main); font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; text-decoration: none; }
+.icon-btn:hover { background: var(--bg-subtle); border-color: var(--accent); text-decoration: none; }
+.icon-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.menu-toggle { display: none; }
+.brand-pill { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; white-space: nowrap; flex-shrink: 1; min-width: 0; }
+.brand-code { background: var(--accent); color: #fff; padding: 2px 8px; border-radius: 5px; font-size: 12px; letter-spacing: 0.4px; white-space: nowrap; flex-shrink: 0; }
+.brand-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 215px; }
+.search-wrap { position: relative; flex: 1 1 150px; min-width: 130px; max-width: 260px; }
+.search-input { width: 100%; height: 34px; padding: 0 30px 0 32px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--bg-subtle); color: var(--text-main); font-size: 13.5px; outline: none; }
+.search-input:focus { border-color: var(--accent); background: var(--bg-surface); }
+.search-input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.search-icon { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); color: var(--text-faint); font-size: 13px; pointer-events: none; }
+.search-clear { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); border: none; background: transparent; color: var(--text-faint); cursor: pointer; font-size: 14px; display: none; }
+.search-results-bar { display: none; background: var(--accent-soft); border-bottom: 1px solid var(--border); padding: 8px 20px; font-size: 13.5px; color: var(--text-main); align-items: center; justify-content: space-between; gap: 12px; }
+.search-results-bar.visible { display: flex; }
+.topbar-controls { display: flex; align-items: center; gap: 7px; flex-shrink: 0; }
+.seg-group { display: inline-flex; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); overflow: hidden; background: var(--bg-subtle); }
+.seg-btn { border: none; background: transparent; color: var(--text-muted); padding: 6px 8px; font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.seg-btn.active { background: var(--accent); color: #fff; }
+.progress-chip { display: flex; align-items: center; gap: 7px; padding: 4px 10px; border-radius: 999px; background: var(--bg-subtle); border: 1px solid var(--border); font-size: 12.5px; font-weight: 600; white-space: nowrap; }
+.progress-track { width: 50px; height: 7px; background: var(--border-strong); border-radius: 99px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), #0D9488); transition: width 0.25s ease; }
+
+.app-layout { display: flex; min-height: calc(100vh - var(--topbar-h)); }
+.sidebar { width: var(--sidebar-w); flex-shrink: 0; background: var(--bg-sidebar); border-right: 1px solid var(--border); position: sticky; top: var(--topbar-h); height: calc(100vh - var(--topbar-h)); overflow-y: auto; padding: 14px 10px 44px 10px; }
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 99px; }
+.nav-unit { margin-bottom: 8px; }
+.nav-unit-btn { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border: none; border-radius: var(--radius-sm); background: transparent; color: var(--text-main); font-size: 13px; font-weight: 700; text-align: left; cursor: pointer; }
+.nav-unit-btn:hover { background: var(--bg-subtle); }
+.nav-unit-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.nav-unit-title { flex: 1; display: flex; align-items: center; gap: 7px; line-height: 1.3; }
+.nav-chevron { font-size: 11px; color: var(--text-faint); transition: transform 0.2s; }
+.nav-unit.collapsed .nav-chevron { transform: rotate(-90deg); }
+.nav-unit.collapsed .nav-links { display: none; }
+.nav-links { list-style: none; padding: 2px 0 4px 12px; margin: 0 0 0 14px; border-left: 2px solid var(--border); }
+.nav-link { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 5px 9px; margin: 2px 0; border-radius: var(--radius-sm); color: var(--text-muted); font-size: 12.6px; line-height: 1.35; text-decoration: none; }
+.nav-link:hover { background: var(--bg-subtle); color: var(--text-main); text-decoration: none; }
+.nav-link.active { background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+.nav-done-mark { color: #10B981; font-weight: 800; font-size: 12px; opacity: 0; }
+.nav-link.mastered .nav-done-mark { opacity: 1; }
+.main-content { flex: 1; min-width: 0; padding: 26px 32px 80px 32px; }
+.content-inner { max-width: 960px; margin: 0 auto; }
+
+.hero-card { background: linear-gradient(135deg, #0F172A 0%, var(--accent) 58%, #0F766E 100%); color: #fff; border-radius: var(--radius-lg); padding: 28px 32px; margin-bottom: 26px; box-shadow: var(--shadow-lg); }
+.hero-card h1 { color: #fff; font-size: 25px; margin-bottom: 8px; letter-spacing: -0.3px; }
+.hero-sub { color: rgba(255,255,255,0.92); font-size: 14.8px; max-width: 820px; margin-bottom: 16px; }
+.hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.hero-pill { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.28); color: #fff; padding: 4px 11px; border-radius: 999px; font-size: 12.5px; font-weight: 600; }
+.unit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+.unit-tile { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.24); border-radius: var(--radius-md); padding: 12px 14px; color: #fff; text-decoration: none; display: block; transition: transform 0.15s, background 0.15s; }
+.unit-tile:hover { transform: translateY(-2px); background: rgba(255,255,255,0.22); text-decoration: none; }
+.unit-tile-num { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.7px; opacity: 0.85; font-weight: 700; }
+.unit-tile-title { font-size: 14.5px; font-weight: 700; margin: 3px 0; }
+
+.topic-section { background: var(--bg-surface); border: 1px solid var(--border); border-top: 4px solid var(--accent); border-radius: var(--radius-md); padding: 24px 26px; margin-bottom: 24px; box-shadow: var(--shadow-sm); }
+.topic-section.search-dim { display: none; }
+.section-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 2px solid var(--border); }
+.section-title-group h3 { font-size: 19.5px; margin-bottom: 4px; }
+.section-en-sub { font-size: 13.5px; color: var(--text-faint); font-weight: 600; }
+.tier-row { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 7px; }
+.badge-core, .badge-ext { display: inline-block; font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.badge-core { background: var(--core-bg); color: var(--core-text); border: 1px solid var(--core-border); }
+.badge-ext { background: var(--ext-bg); color: var(--ext-text); border: 1px solid var(--ext-border); }
+.master-btn { flex-shrink: 0; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-muted); font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.master-btn:hover { border-color: #10B981; color: #10B981; }
+.master-btn.is-mastered { background: var(--ok-bg); color: var(--ok-text); border-color: var(--ok-border); }
+.subtopic { margin-bottom: 20px; }
+.subtopic:last-of-type { margin-bottom: 12px; }
+.subtopic h4 { font-size: 16px; color: var(--accent); margin: 0 0 10px 0; padding-bottom: 4px; border-bottom: 1px dashed var(--border); display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+
+.worked-example { background: var(--example-bg); border: 1px solid var(--border); border-left: 4px solid var(--example-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; }
+.worked-title { font-weight: 800; font-size: 14px; color: var(--example-border); margin-bottom: 6px; }
+.callout { border-radius: var(--radius-sm); padding: 13px 16px; margin: 14px 0; border-left: 4px solid var(--border-strong); font-size: 14.5px; }
+.callout-title { font-weight: 800; font-size: 13.5px; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+.deep-dive { background: var(--deep-bg); border-left-color: var(--deep-border); }
+.deep-dive .callout-title { color: var(--deep-border); }
+.examiner-tip { background: var(--tip-bg); border-left-color: var(--tip-border); }
+.examiner-tip .callout-title { color: var(--tip-border); }
+.common-mistake { background: var(--mistake-bg); border-left-color: var(--mistake-border); }
+.common-mistake .callout-title { color: var(--mistake-border); }
+
+.table-wrap { width: 100%; overflow-x: auto; margin: 14px 0; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+table.phy-table { width: 100%; border-collapse: collapse; font-size: 13.8px; text-align: left; }
+table.phy-table th { background: var(--bg-subtle); color: var(--text-main); font-weight: 700; padding: 9px 12px; border-bottom: 2px solid var(--border-strong); white-space: nowrap; }
+table.phy-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.phy-table tr:last-child td { border-bottom: none; }
+table.phy-table tbody tr:hover { background: var(--bg-subtle); }
+
+.svg-figure { background: var(--svg-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px; margin: 16px 0; text-align: center; break-inside: avoid; }
+.svg-figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.svg-caption { margin-top: 8px; font-size: 13px; color: var(--text-faint); font-weight: 600; }
+
+/* Interactive Physics Labs */
+.lab-box { background: var(--bg-subtle); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px; margin: 18px 0; break-inside: avoid; }
+.lab-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+.lab-title { font-size: 15.5px; font-weight: 800; color: var(--accent); display: flex; align-items: center; gap: 7px; }
+.lab-panel { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; }
+.lab-controls { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-bottom: 12px; align-items: center; }
+.lab-controls label { font-size: 13px; font-weight: 700; color: var(--text-muted); display: inline-flex; align-items: center; gap: 6px; }
+.lab-controls input[type="number"], .lab-controls select { padding: 5px 8px; border-radius: 6px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-main); font-size: 13.2px; font-weight: 700; }
+.lab-controls input[type="number"] { min-width: 108px; width: 112px; text-align: center; }
+.lab-controls input[type="range"] { width: 120px; accent-color: var(--accent); }
+.lab-grid-2col { display: grid; grid-template-columns: 1.12fr 1fr; gap: 14px; align-items: start; }
+@media (max-width: 820px) { .lab-grid-2col { grid-template-columns: 1fr; } }
+.tab-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.tab-btn { border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-muted); padding: 5px 10px; border-radius: 6px; font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.tab-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.lab-readout { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; font-size: 13.2px; font-weight: 600; }
+.readout-pill { background: var(--bg-page); border: 1px solid var(--border-strong); padding: 7px 10px; border-radius: 6px; width: 100%; line-height: 1.5; }
+
+/* Practice Questions & Concepts */
+.practice-block { margin-top: 18px; padding-top: 14px; border-top: 2px dashed var(--border-strong); }
+.practice-heading { font-size: 16px; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.exam-q { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 14px; break-inside: avoid; }
+.exam-q-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; font-size: 12.5px; }
+.q-tag { font-weight: 800; color: var(--accent); background: var(--accent-soft); padding: 2px 8px; border-radius: 5px; }
+.q-marks { font-weight: 700; color: var(--text-faint); }
+.q-stem-en { font-size: 14.8px; font-weight: 600; color: var(--text-main); margin-bottom: 6px; }
+.q-stem-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 12px; }
+.mcq-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin-bottom: 10px; }
+.mcq-opt { text-align: left; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 13.8px; cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.mcq-opt:hover { border-color: var(--accent); background: var(--bg-subtle); }
+.mcq-opt.correct { background: var(--ok-bg); border-color: var(--ok-border); color: var(--ok-text); font-weight: 700; }
+.mcq-opt.wrong { background: var(--err-bg); border-color: var(--err-border); color: var(--err-text); }
+.mcq-feedback { display: none; font-size: 13.5px; padding: 10px 12px; border-radius: var(--radius-sm); margin-top: 8px; }
+.mcq-feedback.visible { display: block; }
+.mcq-feedback.ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.mcq-feedback.err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+details.ms-details { margin-top: 10px; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 12px; }
+details.ms-details summary { cursor: pointer; font-weight: 700; font-size: 13.5px; color: var(--accent); user-select: none; }
+.ms-body { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 13.8px; }
+.ms-mark { display: inline-block; font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--core-text); background: var(--core-bg); padding: 1px 5px; border-radius: 4px; margin-right: 4px; }
+.ms-cn { color: var(--text-muted); margin-top: 4px; }
+
+.concept-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 14px; margin-bottom: 18px; }
+.concept-filter-group { display: flex; flex-wrap: wrap; gap: 6px; }
+.concept-actions { display: flex; align-items: center; gap: 10px; }
+.concept-count-pill { font-size: 12.5px; font-weight: 700; color: var(--text-muted); }
+.concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 14px; }
+.concept-card { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; gap: 8px; break-inside: avoid; }
+.concept-card:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
+.concept-card.concept-hidden { display: none !important; }
+.cq-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.cq-en { font-weight: 700; font-size: 14.5px; color: var(--text-main); line-height: 1.45; }
+.cq-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 2px; }
+.cq-answer { position: relative; margin-top: auto; background: var(--bg-surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius-sm); padding: 11px 13px; font-size: 13.8px; line-height: 1.6; }
+.kw { color: var(--accent); background: var(--accent-soft); padding: 0 4px; border-radius: 3px; font-weight: 700; }
+.cq-mask-hint { display: none; }
+.concept-card.masked .cq-answer { cursor: pointer; }
+.concept-card.masked .cq-answer-inner { filter: blur(7px); opacity: 0.22; user-select: none; pointer-events: none; transition: filter 0.2s, opacity 0.2s; }
+.concept-card.masked .cq-mask-hint { display: flex; align-items: center; justify-content: center; position: absolute; inset: 0; font-size: 13.5px; font-weight: 700; color: var(--accent); background: rgba(255,255,255,0.25); border-radius: var(--radius-sm); }
+[data-theme="dark"] .concept-card.masked .cq-mask-hint { background: rgba(15,23,42,0.35); }
+
+/* Chapter Pager & Hub Group Headings */
+.chapter-pager { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 28px; padding: 16px 20px; background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); }
+.pager-btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: var(--radius-sm); background: var(--bg-subtle); border: 1px solid var(--border-strong); color: var(--text-main); font-size: 13.5px; font-weight: 700; text-decoration: none; }
+.pager-btn:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); text-decoration: none; }
+.pager-btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.pager-btn.primary:hover { background: var(--accent-hover); color: #fff; }
+
+.hub-block-title { font-size: 18px; font-weight: 800; margin: 26px 0 12px 0; padding-bottom: 6px; border-bottom: 2px solid var(--border-strong); display: flex; align-items: center; gap: 8px; }
+.hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 15px; }
+.hub-card { display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-surface); border: 1px solid var(--border-strong); border-top: 5px solid var(--card-color, var(--accent)); border-radius: var(--radius-md); padding: 16px 18px 14px 18px; color: var(--text-main); text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; box-shadow: var(--shadow-sm); }
+.hub-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--card-color, var(--accent)); text-decoration: none; }
+.hub-card-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+.hub-badge { font-size: 11.5px; font-weight: 800; color: #fff; background: var(--card-color, var(--accent)); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill { font-size: 12px; font-weight: 700; color: var(--text-muted); background: var(--bg-subtle); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill.done { background: var(--ok-bg); color: var(--ok-text); }
+.hub-title { font-size: 16px; font-weight: 800; margin-bottom: 3px; }
+.hub-en { font-size: 12.6px; color: var(--text-faint); font-weight: 600; margin-bottom: 8px; }
+.hub-sub { font-size: 12.8px; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; }
+.hub-foot { font-size: 13px; font-weight: 700; color: var(--card-color, var(--accent)); display: flex; align-items: center; justify-content: space-between; }
+
+.back-top-btn { position: fixed; right: 22px; bottom: 22px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); box-shadow: var(--shadow-md); cursor: pointer; display: none; align-items: center; justify-content: center; font-size: 17px; font-weight: 800; z-index: 80; }
+.back-top-btn.visible { display: flex; }
+
+@media (max-width: 1200px) {
+  .brand-title, .btn-label { display: none; }
+  .seg-btn { padding: 6px 8px; }
+}
+@media (max-width: 980px) {
+  .menu-toggle { display: inline-flex; }
+  .sidebar { position: fixed; left: 0; top: var(--topbar-h); z-index: 95; transform: translateX(-100%); transition: transform 0.22s ease; box-shadow: var(--shadow-lg); }
+  .sidebar.open { transform: translateX(0); }
+  .main-content { padding: 18px 14px 64px 14px; }
+  .topic-section { padding: 18px 16px; }
+  .progress-chip { display: none; }
+  .search-wrap { min-width: 130px; }
+}
+@media (max-width: 640px) {
+  .topbar { padding: 0 10px; gap: 6px; }
+  .search-wrap { max-width: none; }
+  .concept-grid, .hub-grid { grid-template-columns: 1fr; }
+}
+@media print {
+  .topbar, .sidebar, .search-results-bar, .back-top-btn, .master-btn, .lab-controls button, .concept-toolbar, .cq-mask-hint, .chapter-pager { display: none !important; }
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  .main-content { padding: 0 !important; }
+  .content-inner { max-width: 100% !important; }
+  .topic-section, .exam-q, .callout, .worked-example, .svg-figure, .concept-card { box-shadow: none !important; break-inside: avoid; border-color: #CBD5E1 !important; }
+  details.ms-details, details.ms-details .ms-body, .mcq-feedback { display: block !important; }
+  .concept-card.masked .cq-answer-inner { filter: none !important; opacity: 1 !important; }
+}
+
+  </style>
+</head>
+<body data-chapter-code="Ch21">
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="展开目录">☰ 目录</button>
+      <a class="icon-btn" href="index.html" title="返回 25 章总目录"><span>🏠</span><span class="btn-label">总目录</span></a>
+      <div class="brand-pill">
+        <span class="brand-code">Ch21</span>
+        <span class="brand-title">Chapter 21: Electromagnetic induction</span>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="search" id="searchInput" class="search-input" placeholder="搜索公式、实验误差、真题与概念..." autocomplete="off" />
+      <button type="button" class="search-clear" id="searchClear" title="清空搜索">✕</button>
+    </div>
+
+    <div class="topbar-controls">
+      <div class="seg-group" role="group" aria-label="考试级别筛选">
+        <button type="button" class="seg-btn active" data-view-mode="all">All</button>
+        <button type="button" class="seg-btn" data-view-mode="core">Core</button>
+        <button type="button" class="seg-btn" data-view-mode="ext">Extended</button>
+        <button type="button" class="seg-btn" data-view-mode="sme">真题</button>
+      </div>
+
+      <div class="progress-chip" title="本章小节与真题模块掌握进度">
+        <span id="progressText">0/0</span>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+
+      <button type="button" class="icon-btn" id="toggleAllMs" title="展开或收起全部解析"><span>📝</span><span class="btn-label">展开解析</span></button>
+      <button type="button" class="icon-btn" id="themeToggle" title="切换亮色/暗色主题"><span id="themeIcon">🌙</span><span class="btn-label">主题</span></button>
+      <button type="button" class="icon-btn" id="printBtn" title="打印或导出为 PDF"><span>🖨️</span><span class="btn-label">导出 PDF</span></button>
+    </div>
+  </header>
+
+  <div class="search-results-bar" id="searchBar">
+    <span id="searchSummary">找到 0 个匹配板块</span>
+    <button type="button" class="icon-btn" id="searchResetBtn">重置过滤</button>
+  </div>
+
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="本章物理知识点导航">
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #DC2626;"></span>Ch21 本章小节目录</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#sec-21-1"><span>21.1 电磁感应、楞次定律与弗莱明右手定则</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-21-2"><span>21.2 交流发电机、滑环电刷与正弦电动势图像</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-21-3"><span>21.3 变压器、匝数比与高压输电减损</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-sme"><span>21.4 SaveMyExams 真题实战演练（MCQ + 结构化解答）</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#app-concepts"><span>附录 · 第 21 章中英核心概念与高频得分句默写库</span><span class="nav-done-mark">✓</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #0D9488;"></span>全书 25 章快速切换</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="Ch01_Making_Measurements.html"><span>Ch01 · 长度体积测量、密度浮沉与周期测定</span></a></li>
+          <li><a class="nav-link" href="Ch02_Describing_Motion.html"><span>Ch02 · 速率、加速度与 s-t / v-t 运动图像</span></a></li>
+          <li><a class="nav-link" href="Ch03_Forces_and_Motion.html"><span>Ch03 · 牛顿定律、动量冲量、终端速度与矢量合成</span></a></li>
+          <li><a class="nav-link" href="Ch04_Turning_Effects.html"><span>Ch04 · 力矩平衡原理、重心与稳定性</span></a></li>
+          <li><a class="nav-link" href="Ch05_Forces_and_Matter.html"><span>Ch05 · 固体形变、胡克定律 F=kx 与固体/液体压强</span></a></li>
+          <li><a class="nav-link" href="Ch06_Energy_Stores_Transfers.html"><span>Ch06 · 8 大能量存储、4 路径转移、Sankey 图与机械能</span></a></li>
+          <li><a class="nav-link" href="Ch07_Energy_Resources.html"><span>Ch07 · 化石能源、核能与可再生发电技术评估</span></a></li>
+          <li><a class="nav-link" href="Ch08_Work_and_Power.html"><span>Ch08 · 机械功 W=Fd、功率 P=W/t 与效率</span></a></li>
+          <li><a class="nav-link" href="Ch09_Kinetic_Particle_Model.html"><span>Ch09 · 物态微观模型、布朗运动、绝对温标与气体定律</span></a></li>
+          <li><a class="nav-link" href="Ch10_Thermal_Properties.html"><span>Ch10 · 热膨胀、比热容 c=ΔE/(mΔθ)、物态变化与蒸发冷却</span></a></li>
+          <li><a class="nav-link" href="Ch11_Thermal_Energy_Transfers.html"><span>Ch11 · 热传导、对流、红外辐射与保温综合应用</span></a></li>
+          <li><a class="nav-link" href="Ch12_Sound.html"><span>Ch12 · 声波产生、纵波疏密部、回声测速与示波器波形</span></a></li>
+          <li><a class="nav-link" href="Ch13_Light.html"><span>Ch13 · 平面镜反射、折射斯涅尔定律、全反射与透镜成像</span></a></li>
+          <li><a class="nav-link" href="Ch14_Properties_of_Waves.html"><span>Ch14 · 横波纵波、v=fλ 与水波反射折射衍射</span></a></li>
+          <li><a class="nav-link" href="Ch15_Spectra.html"><span>Ch15 · 光的色散、七大电磁波谱与模拟数字通信</span></a></li>
+          <li><a class="nav-link" href="Ch16_Magnetism.html"><span>Ch16 · 磁化、软铁与硬钢磁滞差异及磁场线</span></a></li>
+          <li><a class="nav-link" href="Ch17_Static_Electricity.html"><span>Ch17 · 摩擦电子转移、导体绝缘体、感应与电场线</span></a></li>
+          <li><a class="nav-link" href="Ch18_Electrical_Quantities.html"><span>Ch18 · 电流、电动势/电压、欧姆定律 I-V 曲线与电功率 kWh</span></a></li>
+          <li><a class="nav-link" href="Ch19_Electrical_Circuits.html"><span>Ch19 · 电路符号、串并联、LDR/NTC 分压器与用电安全</span></a></li>
+          <li><a class="nav-link" href="Ch20_Electromagnetic_Forces.html"><span>Ch20 · 电流磁场、弗莱明左手定则、粒子偏转与直流电机</span></a></li>
+          <li><a class="nav-link active" href="Ch21_Electromagnetic_Induction.html"><span>Ch21 · 电磁感应、楞次定律、交流发电机与变压器高压输电</span></a></li>
+          <li><a class="nav-link" href="Ch22_The_Nuclear_Atom.html"><span>Ch22 · α 金箔散射原子核、同位素及核裂变与聚变</span></a></li>
+          <li><a class="nav-link" href="Ch23_Radioactivity.html"><span>Ch23 · 本底辐射、α/β/γ 性质、衰变方程与半衰期计算</span></a></li>
+          <li><a class="nav-link" href="Ch24_Earth_and_Solar_System.html"><span>Ch24 · 自转四季、月相、行星吸积盘形成与轨道速率 v=2πr/T</span></a></li>
+          <li><a class="nav-link" href="Ch25_Stars_and_Universe.html"><span>Ch25 · 恒星全生命周期、红移 CMBR 大爆炸与哈勃定律 H₀</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-inner">
+        <section class="hero-card" id="top">
+          <h1>Chapter 21: Electromagnetic induction · 第 21 章 · 电磁感应、楞次定律、交流发电机与变压器高压输电</h1>
+          <p class="hero-sub">
+            完整覆盖 <strong>David Sang 第 3 版教材（2023–2028 新考纲 0625/0972 · 取 g = 9.8 m/s² / 9.8 N/kg）</strong>本章全部 Core 与 Extended 知识点：<code>21.1 切割磁感线与楞次定律/右手定则 · 21.2 滑环交流发电机与波形 · 21.3 变压器公式与 I²R 输电减损</code>，配齐微观机理解释、Paper 6 实验控制、SaveMyExams 真题与直接背写概念卡。
+          </p>
+          <div class="hero-badges">
+            <span class="hero-pill">⚛️ David Sang 3rd Ed. · 2023–2028</span>
+            <span class="hero-pill">📐 Core + Extended 全区分</span>
+            <span class="hero-pill">🧪 本章专属交互物理实验台</span>
+            <a class="hero-pill" href="#sec-sme" style="text-decoration: none;">📝 直达 SaveMyExams 真题 →</a>
+            <a class="hero-pill" href="#app-concepts" style="text-decoration: none; background: rgba(255,255,255,0.24);">🧠 直达中英概念默写库 →</a>
+          </div>
+          <div class="unit-grid">
+            <a class="unit-tile" href="#sec-21-1">
+              <div class="unit-tile-num">Section 21-1</div>
+              <div class="unit-tile-title">21.1 电磁感应、楞次定律与弗莱明右手定则</div>
+            </a>
+            <a class="unit-tile" href="#sec-21-2">
+              <div class="unit-tile-num">Section 21-2</div>
+              <div class="unit-tile-title">21.2 交流发电机、滑环电刷与正弦电动势图像</div>
+            </a>
+            <a class="unit-tile" href="#sec-21-3">
+              <div class="unit-tile-num">Section 21-3</div>
+              <div class="unit-tile-title">21.3 变压器、匝数比与高压输电减损</div>
+            </a>
+            <a class="unit-tile" href="#sec-sme">
+              <div class="unit-tile-num">Section sme</div>
+              <div class="unit-tile-title">21.4 SaveMyExams 真题实战演练（MCQ + 结构化解答）</div>
+            </a>
+          </div>
+        </section>
+
+        <div id="emptySearchNotice" class="callout deep-dive" style="display: none;">
+          <div class="callout-title">🔍 未找到匹配内容</div>
+          <p style="margin-bottom: 0;">请尝试更换关键词，或点击右上角“重置过滤”恢复显示。</p>
+        </div>
+
+<article class="topic-section book-section" id="sec-21-1">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>21.1 电磁感应、楞次定律与弗莱明右手定则</h3>
+      <div class="section-en-sub">Electromagnetic induction, Lenz's law &amp; Fleming's right-hand rule</div>
+      <div class="tier-row">
+        <span class="badge-core">Core · 感应电动势产生条件与影响因素</span>
+        <span class="badge-ext">Extended · 楞次定律（能量守恒）与右手定则</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-21-1">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>1. 电磁感应的核心条件与基础实验 <span class="badge-core">Core</span></h4>
+    <p>
+      在第 20 章中，通电导线在磁场中会受到磁力（<strong>电动机效应 Motor effect</strong>）。第 21 章探讨的则是它的逆过程——<strong>电磁感应（Electromagnetic induction）</strong>：当<strong>导体切割磁感线（a conductor cuts across magnetic field lines）</strong>，或者<strong>穿过线圈的磁场发生变化（a changing magnetic field links with a coil）</strong>时，导体或线圈两端会产生<strong>感应电动势（induced e.m.f.）</strong>。若该导体接成<strong>闭合回路（complete circuit）</strong>，回路中就会出现<strong>感应电流（induced current）</strong>。
+    </p>
+    <p>
+      <strong>核心实验一（直导线切割磁感线）</strong>：将一根直铜棒两端接在灵敏<strong>中央零位检流计（centre-zero galvanometer）</strong>上，放在 U 形磁铁的磁极之间：
+    </p>
+    <ul>
+      <li><strong>垂直向下或向上快速移动铜棒</strong>（切割磁感线）：检流计指针立刻向一侧偏转；反向移动时，指针向<strong>相反方向</strong>偏转。</li>
+      <li><strong>静止不动，或平行于磁感线（沿 N → S 方向）移动铜棒</strong>：没有切割任何磁感线 → <strong>感应电动势为 0（no e.m.f. induced）</strong>，检流计指针指零不动！</li>
+    </ul>
+    <p>
+      <strong>核心实验二（磁铁与螺线管相对运动）</strong>：将条形磁铁插入或拔出接有检流计的螺线管（solenoid）：
+    </p>
+    <ul>
+      <li><strong>插入或拔出瞬间</strong>：线圈内部磁场发生改变 → 指针偏转；且插入与拔出时偏转方向<strong>相反</strong>。</li>
+      <li><strong>磁铁静止停在线圈内部</strong>：虽然内部磁场很强，但磁场<strong>没有变化（no change in magnetic field）</strong> → 感应电动势<strong>立即归零</strong>！</li>
+      <li><strong>相对运动原理</strong>：磁铁静止、移动线圈同样能产生感应电动势——只要存在<strong>相对运动（relative motion）</strong>即可。</li>
+    </ul>
+
+    <div class="formula-card">
+      <div class="formula-main">增大感应电动势大小的三条途径（Core 必考三要素）</div>
+      <ol style="margin-bottom:0;">
+        <li><strong>加快相对运动速度</strong>（Move the magnet/wire faster → 单位时间内切割更多磁感线）；</li>
+        <li><strong>使用更强的磁铁</strong>（Use a stronger magnet / stronger magnetic field → 磁感线更密集）；</li>
+        <li><strong>增加线圈匝数</strong>（Increase the number of turns on the coil → 每匝感应电动势叠加，还可插入软铁芯增强磁场）。</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="subtopic ext-only">
+    <h4>2. 楞次定律与能量守恒 <span class="badge-ext">Extended</span></h4>
+    <p>
+      <strong>楞次定律（Lenz's law）</strong>是判定感应电动势或感应电流方向的最高准则——<strong>感应电动势（及感应电流）的方向总是阻碍引起它的变化（The direction of an induced e.m.f. always opposes the change causing it）</strong>。
+    </p>
+    <ul>
+      <li><strong>推入 N 极</strong>：将磁铁 N 极推向螺线管左端时，为了阻碍磁铁靠近，螺线管左端会感应出 <strong>N 极</strong>（同极相斥），用逆时针方向的感应电流产生向右的排斥力！</li>
+      <li><strong>拔出 N 极</strong>：将磁铁 N 极从螺线管左端拉出时，为了阻碍磁铁离开，螺线管左端会感应出 <strong>S 极</strong>（异极相吸），感应电流立刻反向！</li>
+    </ul>
+    <div class="callout deep-dive">
+      <div class="callout-title">💡 深度理解：为什么楞次定律本质就是“能量守恒定律”？</div>
+      <p style="margin-bottom:0;">
+        假设推入 N 极时线圈反而感应出 S 极去“吸”磁铁，那么磁铁无需任何外力推挤就会自行加速冲入线圈并凭空产生电能，这就制造出了“永动机”，彻底违背<strong>能量守恒（conservation of energy）</strong>！正是因为线圈感应出同极排斥力，你的手必须持续克服排斥力做<strong>机械功（mechanical work done）</strong>，这部分机械功才能等量转化为电路中的<strong>电能（electrical energy）</strong>。
+      </p>
+    </div>
+  </div>
+
+  <div class="subtopic ext-only">
+    <h4>3. 弗莱明右手定则（发电机定则） <span class="badge-ext">Extended</span></h4>
+    <p>
+      对于直导线在磁场中切割磁感线，用<strong>弗莱明右手定则（Fleming's right-hand rule）</strong>直接判断感应电流方向：伸出<strong>右手</strong>，拇指、食指、中指两两垂直：
+    </p>
+    <ul>
+      <li><strong>拇指（Thumb）</strong>：导体相对于磁场的<strong>运动方向（Motion / Movement）</strong>；</li>
+      <li><strong>食指（First finger）</strong>：磁场方向（<strong>Field</strong>，由 <strong>N → S</strong>）；</li>
+      <li><strong>中指（seCond finger）</strong>：<strong>感应传统电流方向（Induced Current，+ → −）</strong>。</li>
+    </ul>
+
+    <div class="table-wrap">
+      <table class="phy-table">
+        <thead>
+          <tr>
+            <th>定则名称</th>
+            <th>适用情景</th>
+            <th>输入（已知量）</th>
+            <th>输出（待求量）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>弗莱明左手定则 (Left-Hand Rule)</strong></td>
+            <td>电动机效应（Ch 20 通电导线在磁场中受力）</td>
+            <td>磁场 <strong>B</strong>（食指）+ 外加电流 <strong>I</strong>（中指）</td>
+            <td>导线所受磁力 <strong>F</strong>（拇指）</td>
+          </tr>
+          <tr>
+            <td><strong>弗莱明右手定则 (Right-Hand Rule)</strong></td>
+            <td>电磁感应 / 发电机效应（Ch 21 运动生电）</td>
+            <td>磁场 <strong>B</strong>（食指）+ 导线运动 <strong>M</strong>（拇指）</td>
+            <td>感应电流 <strong>I</strong>（中指）</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="svg-figure">
+    <svg viewBox="0 0 740 285" width="740" height="285" xmlns="http://www.w3.org/2000/svg">
+      <rect x="4" y="4" width="732" height="277" rx="10" fill="var(--svg-bg)" stroke="var(--svg-grid)" stroke-width="1.5"/>
+      <text x="370" y="26" text-anchor="middle" font-size="13.5" font-weight="800" fill="var(--svg-ink)">楞次定律（Lenz's Law）：感应磁极总是反抗磁铁相对运动</text>
+
+      <!-- Left Panel: Pushing N pole IN -->
+      <rect x="20" y="40" width="338" height="175" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.2"/>
+      <text x="189" y="60" text-anchor="middle" font-size="12" font-weight="700" fill="var(--svg-red)">情况 A：N 极推入线圈（阻碍靠近 → 产生排斥）</text>
+      <!-- Magnet -->
+      <rect x="42" y="102" width="44" height="28" fill="#64748B" stroke="var(--svg-ink)" stroke-width="1.4"/>
+      <rect x="86" y="102" width="44" height="28" fill="#DC2626" stroke="var(--svg-ink)" stroke-width="1.4"/>
+      <text x="64" y="121" text-anchor="middle" font-size="13" font-weight="800" fill="#FFFFFF">S</text>
+      <text x="108" y="121" text-anchor="middle" font-size="13" font-weight="800" fill="#FFFFFF">N</text>
+      <!-- Motion arrow -->
+      <line x1="56" y1="88" x2="122" y2="88" stroke="var(--svg-red)" stroke-width="2.6"/>
+      <polygon points="122,83 134,88 122,93" fill="var(--svg-red)"/>
+      <text x="90" y="81" text-anchor="middle" font-size="11" font-weight="700" fill="var(--svg-red)">推入 v</text>
+      <!-- Solenoid -->
+      <rect x="182" y="92" width="108" height="48" rx="4" fill="rgba(2,132,199,0.12)" stroke="var(--svg-blue)" stroke-width="1.6"/>
+      <path d="M 196 92 C 204 82, 204 150, 196 140 M 216 92 C 224 82, 224 150, 216 140 M 236 92 C 244 82, 244 150, 236 140 M 256 92 C 264 82, 264 150, 256 140 M 276 92 C 284 82, 284 150, 276 140" fill="none" stroke="var(--svg-amber)" stroke-width="2.6"/>
+      <text x="172" y="121" text-anchor="end" font-size="12.5" font-weight="800" fill="var(--svg-red)">感应 N</text>
+      <text x="298" y="121" text-anchor="start" font-size="12.5" font-weight="800" fill="var(--svg-blue)">S</text>
+      <!-- Repulsion indicator -->
+      <text x="155" y="156" text-anchor="middle" font-size="11" font-weight="700" fill="var(--svg-red)">← 排斥力 F</text>
+      <!-- Galvanometer A -->
+      <polyline points="188,140 188,176 218,176" fill="none" stroke="var(--svg-ink)" stroke-width="1.6"/>
+      <polyline points="284,140 284,176 254,176" fill="none" stroke="var(--svg-ink)" stroke-width="1.6"/>
+      <circle cx="236" cy="176" r="18" fill="var(--svg-bg)" stroke="var(--svg-ink)" stroke-width="1.8"/>
+      <line x1="236" y1="176" x2="247" y2="164" stroke="var(--svg-red)" stroke-width="2.4"/>
+      <text x="236" y="191" text-anchor="middle" font-size="10.5" font-weight="800" fill="var(--svg-ink)">G</text>
+      <text x="295" y="198" text-anchor="start" font-size="10.5" font-weight="700" fill="var(--svg-green)">向右偏转</text>
+
+      <!-- Right Panel: Pulling N pole OUT -->
+      <rect x="382" y="40" width="338" height="175" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.2"/>
+      <text x="551" y="60" text-anchor="middle" font-size="12" font-weight="700" fill="var(--svg-blue)">情况 B：N 极拉出线圈（阻碍远离 → 产生吸引）</text>
+      <!-- Magnet -->
+      <rect x="404" y="102" width="44" height="28" fill="#64748B" stroke="var(--svg-ink)" stroke-width="1.4"/>
+      <rect x="448" y="102" width="44" height="28" fill="#DC2626" stroke="var(--svg-ink)" stroke-width="1.4"/>
+      <text x="426" y="121" text-anchor="middle" font-size="13" font-weight="800" fill="#FFFFFF">S</text>
+      <text x="470" y="121" text-anchor="middle" font-size="13" font-weight="800" fill="#FFFFFF">N</text>
+      <!-- Motion arrow left -->
+      <line x1="486" y1="88" x2="418" y2="88" stroke="var(--svg-blue)" stroke-width="2.6"/>
+      <polygon points="418,83 406,88 418,93" fill="var(--svg-blue)"/>
+      <text x="452" y="81" text-anchor="middle" font-size="11" font-weight="700" fill="var(--svg-blue)">拔出 v</text>
+      <!-- Solenoid B -->
+      <rect x="544" y="92" width="108" height="48" rx="4" fill="rgba(2,132,199,0.12)" stroke="var(--svg-blue)" stroke-width="1.6"/>
+      <path d="M 558 92 C 566 82, 566 150, 558 140 M 578 92 C 586 82, 586 150, 578 140 M 598 92 C 606 82, 606 150, 598 140 M 618 92 C 626 82, 626 150, 618 140 M 638 92 C 646 82, 646 150, 638 140" fill="none" stroke="var(--svg-amber)" stroke-width="2.6"/>
+      <text x="534" y="121" text-anchor="end" font-size="12.5" font-weight="800" fill="var(--svg-blue)">感应 S</text>
+      <text x="660" y="121" text-anchor="start" font-size="12.5" font-weight="800" fill="var(--svg-red)">N</text>
+      <text x="516" y="156" text-anchor="middle" font-size="11" font-weight="700" fill="var(--svg-blue)">→ 吸引力 F</text>
+      <!-- Galvanometer B -->
+      <polyline points="550,140 550,176 580,176" fill="none" stroke="var(--svg-ink)" stroke-width="1.6"/>
+      <polyline points="646,140 646,176 616,176" fill="none" stroke="var(--svg-ink)" stroke-width="1.6"/>
+      <circle cx="598" cy="176" r="18" fill="var(--svg-bg)" stroke="var(--svg-ink)" stroke-width="1.8"/>
+      <line x1="598" y1="176" x2="587" y2="164" stroke="var(--svg-blue)" stroke-width="2.4"/>
+      <text x="598" y="191" text-anchor="middle" font-size="10.5" font-weight="800" fill="var(--svg-ink)">G</text>
+      <text x="655" y="198" text-anchor="start" font-size="10.5" font-weight="700" fill="var(--svg-purple)">反向向左偏转</text>
+
+      <!-- Bottom Rule Summary -->
+      <rect x="20" y="226" width="700" height="44" rx="7" fill="rgba(245,158,11,0.1)" stroke="var(--svg-amber)" stroke-width="1.2"/>
+      <text x="370" y="244" text-anchor="middle" font-size="11" font-weight="800" fill="var(--svg-ink)">右手定则 (Right-Hand Rule): 拇指 = 运动 Motion · 食指 = 磁场 (N→S) · 中指 = 感应电流 Current</text>
+      <text x="370" y="262" text-anchor="middle" font-size="11" font-weight="600" fill="var(--svg-muted)">铁律：若磁铁静止在螺线管内，或导线平行于磁感线运动 → 不切割磁感线，电动势 e.m.f. = 0 V</text>
+    </svg>
+    <div class="svg-caption">图 21.1 · 楞次定律在条形磁铁插入/拔出螺线管中的磁极感应与检流计反向偏转</div>
+  </div>
+
+  <div class="worked-example ext-only">
+    <div class="worked-title">📝 精解例题 21.1 · 楞次定律方向与感应电动势大小判定 [Extended]</div>
+    <p>
+      一根水平铜棒放置在垂直向下的匀强磁场（N 极在上、S 极在下）中，现将该铜棒水平向东（向右）匀速拉动，电路闭合。
+      <br>(a) 用弗莱明右手定则判断感应电流方向。
+      <br>(b) 若将铜棒运动方向改为垂直向上（向 N 极方向移动），感应电流如何变化？
+    </p>
+    <p style="margin-bottom:0;">
+      <strong>解析与得分表达：</strong><br>
+      (a) 伸出<strong>右手</strong>：食指（Field）垂直向下指向 S 极，拇指（Motion）指向右方（东），则中指（Induced Current）指向<strong>垂直纸面向里（into the page）</strong>。<br>
+      (b) 垂直向上移动时，铜棒运动方向与竖直向下的磁感线<strong>平行（parallel to the magnetic field lines）</strong>，没有切割磁感线，因此<strong>感应电动势为 0，感应电流为 0</strong>。
+    </p>
+  </div>
+
+  <div class="callout common-mistake">
+    <div class="callout-title">⚠️ 高频易错坑：左右手定则混用 + 静止磁铁错觉</div>
+    <p style="margin-bottom:0;">
+      很多同学一看到“磁场+电流”就条件反射用左手定则！记住：<strong>有电池主动供电导致运动 → 左手（Motor）；靠机械外力运动发电 → 右手（Generator）</strong>。另外，哪怕用世界上最强的磁铁静止放在线圈正中心，因为磁场没有发生变化，指针依然指零！
+    </p>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-21-2">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>21.2 交流发电机、滑环电刷与正弦电动势图像</h3>
+      <div class="section-en-sub">The a.c. generator, slip rings &amp; e.m.f.–time graphs</div>
+      <div class="tier-row">
+        <span class="badge-core">Core · 旋转线圈结构与滑环电刷作用</span>
+        <span class="badge-ext">Extended · 线圈方位与正弦波峰值/零点精确对应</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-21-2">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>1. 简单交流发电机的构造与滑环的作用 <span class="badge-core">Core</span></h4>
+    <p>
+      一台基本的<strong>交流发电机（a.c. generator）</strong>由置于磁极 N、S 之间匀强磁场中的<strong>矩形旋转线圈（rotating rectangular coil）</strong>、<strong>两个独立的滑环（two slip rings）</strong>以及两个固定的<strong>碳刷（carbon brushes）</strong>组成：
+    </p>
+    <ul>
+      <li><strong>两个滑环（Slip rings）</strong>：线圈的两个出线端分别永久焊接在各自独立的完整铜环上，随线圈同步旋转。</li>
+      <li><strong>碳刷（Carbon brushes）</strong>：静止压在滑环表面，将线圈中的交变电动势引出到外电路负载，同时防止导线在连续旋转时打结扭断。</li>
+      <li><strong>核心区别</strong>：与第 20 章直流电动机使用“半裂式换向器（split-ring commutator）”每半圈换向不同，交流发电机使用<strong>两个完整滑环</strong>，不翻转极性，因此每半圈线圈边切割磁感线的方向颠倒一次，外电路输出的电流方向也随之周期性正负交替——即<strong>交流电（alternating current, a.c.）</strong>。</li>
+      <li><strong>大型/自行车发电机</strong>：工业电站和自行车摩电灯（dynamo）常采用<strong>磁铁旋转、定子线圈静止（rotating magnet inside stationary coils）</strong>的设计，无需滑环碳刷即可避免大电流火花与磨损。</li>
+    </ul>
+  </div>
+
+  <div class="subtopic ext-only">
+    <h4>2. 线圈平面位置与电动势–时间 (e.m.f.–t) 波形对应 <span class="badge-ext">Extended</span></h4>
+    <p>
+      考试最常考“给出某时刻线圈的角度图，让你在正弦图上标出峰值或零点”！关键是盯紧<strong>线圈长边切割磁感线的速度分量</strong>：
+    </p>
+    <div class="table-wrap">
+      <table class="phy-table">
+        <thead>
+          <tr>
+            <th>时刻</th>
+            <th>线圈平面方位（相对于水平磁感线）</th>
+            <th>线圈边瞬时运动方向</th>
+            <th>磁感线切割速率</th>
+            <th>输出电动势 e.m.f.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>t = 0</strong></td>
+            <td><strong>水平 (Horizontal)</strong></td>
+            <td>纯竖直上下运动（<strong>垂直</strong>切割磁感线）</td>
+            <td><strong>最大 (Maximum)</strong></td>
+            <td><strong>正向峰值 +E₀ (Peak)</strong></td>
+          </tr>
+          <tr>
+            <td><strong>t = T/4</strong></td>
+            <td><strong>竖直 (Vertical)</strong></td>
+            <td>纯水平左右运动（<strong>平行</strong>于磁感线）</td>
+            <td><strong>零 (Zero)</strong></td>
+            <td><strong>0 V（零点）</strong></td>
+          </tr>
+          <tr>
+            <td><strong>t = T/2</strong></td>
+            <td><strong>水平 (Horizontal, 转过 180°)</strong></td>
+            <td>竖直切割方向与 t = 0 时完全相反</td>
+            <td><strong>最大 (Maximum)</strong></td>
+            <td><strong>反向谷值 −E₀ (Trough)</strong></td>
+          </tr>
+          <tr>
+            <td><strong>t = 3T/4</strong></td>
+            <td><strong>竖直 (Vertical, 转过 270°)</strong></td>
+            <td>平行于磁感线运动</td>
+            <td><strong>零 (Zero)</strong></td>
+            <td><strong>0 V（零点）</strong></td>
+          </tr>
+          <tr>
+            <td><strong>t = T</strong></td>
+            <td><strong>水平 (Horizontal, 完整一圈 360°)</strong></td>
+            <td>回到初始切割状态</td>
+            <td><strong>最大 (Maximum)</strong></td>
+            <td><strong>正向峰值 +E₀</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout examiner-tip">
+      <div class="callout-title">🎯 考官高频变化题：把线圈转速加倍（Double the speed of rotation）</div>
+      <p style="margin-bottom:0;">
+        画新波形图时务必同时修改<strong>两个</strong>特征（2 分必扣齐）：<br>
+        1. <strong>峰值振幅加倍（Amplitude doubles: E₀ → 2E₀）</strong>：因为切割磁感线速度翻倍；<br>
+        2. <strong>周期减半、频率加倍（Period halves: T → T/2, Frequency doubles: f → 2f）</strong>：相同时间内完成的完整正弦周期数变为原来的 2 倍！<br>
+        <em>对比陷阱</em>：如果只是把磁铁换强一倍或把线圈匝数加倍，而转速不变，则<strong>只有峰值振幅翻倍，周期 T 和频率 f 保持不变</strong>！
+      </p>
+    </div>
+  </div>
+
+  <div class="svg-figure">
+    <svg viewBox="0 0 740 315" width="740" height="315" xmlns="http://www.w3.org/2000/svg">
+      <rect x="4" y="4" width="732" height="307" rx="10" fill="var(--svg-bg)" stroke="var(--svg-grid)" stroke-width="1.5"/>
+      <text x="370" y="25" text-anchor="middle" font-size="13.5" font-weight="800" fill="var(--svg-ink)">交流发电机结构与线圈方位–电动势正弦波形对应图</text>
+
+      <!-- Left: Slip-ring generator schematic -->
+      <rect x="18" y="38" width="248" height="258" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.2"/>
+      <text x="142" y="57" text-anchor="middle" font-size="12" font-weight="700" fill="var(--svg-ink)">滑环式交流发电机结构</text>
+      <!-- Poles -->
+      <rect x="30" y="88" width="32" height="72" rx="3" fill="#DC2626"/>
+      <text x="46" y="130" text-anchor="middle" font-size="15" font-weight="800" fill="#FFFFFF">N</text>
+      <rect x="222" y="88" width="32" height="72" rx="3" fill="#2563EB"/>
+      <text x="238" y="130" text-anchor="middle" font-size="15" font-weight="800" fill="#FFFFFF">S</text>
+      <!-- Field lines -->
+      <line x1="66" y1="104" x2="216" y2="104" stroke="var(--svg-muted)" stroke-width="1" stroke-dasharray="4,3"/>
+      <line x1="66" y1="124" x2="216" y2="124" stroke="var(--svg-muted)" stroke-width="1" stroke-dasharray="4,3"/>
+      <line x1="66" y1="144" x2="216" y2="144" stroke="var(--svg-muted)" stroke-width="1" stroke-dasharray="4,3"/>
+      <!-- Rotating coil -->
+      <polygon points="94,106 190,106 176,142 80,142" fill="rgba(217,119,6,0.18)" stroke="var(--svg-amber)" stroke-width="2.6"/>
+      <line x1="135" y1="74" x2="135" y2="230" stroke="var(--svg-muted)" stroke-width="1.2" stroke-dasharray="3,3"/>
+      <path d="M 122 80 A 14 7 0 1 1 148 80" fill="none" stroke="var(--svg-teal)" stroke-width="2"/>
+      <polygon points="148,76 153,82 145,83" fill="var(--svg-teal)"/>
+      <text x="135" y="70" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-teal)">旋转线圈</text>
+      <!-- Slip rings -->
+      <line x1="126" y1="142" x2="126" y2="190" stroke="var(--svg-amber)" stroke-width="2.2"/>
+      <line x1="144" y1="142" x2="144" y2="216" stroke="var(--svg-amber)" stroke-width="2.2"/>
+      <ellipse cx="135" cy="190" rx="22" ry="7" fill="none" stroke="var(--svg-amber)" stroke-width="2.4"/>
+      <ellipse cx="135" cy="216" rx="22" ry="7" fill="none" stroke="var(--svg-amber)" stroke-width="2.4"/>
+      <!-- Carbon brushes -->
+      <rect x="103" y="185" width="10" height="10" fill="var(--svg-ink)"/>
+      <rect x="157" y="211" width="10" height="10" fill="var(--svg-ink)"/>
+      <polyline points="103,190 76,190 76,252 120,252" fill="none" stroke="var(--svg-ink)" stroke-width="1.6"/>
+      <polyline points="167,216 196,216 196,252 152,252" fill="none" stroke="var(--svg-ink)" stroke-width="1.6"/>
+      <rect x="120" y="242" width="32" height="20" rx="3" fill="var(--svg-bg)" stroke="var(--svg-ink)" stroke-width="1.6"/>
+      <text x="136" y="256" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-ink)">R</text>
+      <text x="48" y="214" text-anchor="start" font-size="10.5" font-weight="700" fill="var(--svg-muted)">滑环 (Slip rings)</text>
+      <text x="168" y="238" text-anchor="start" font-size="10.5" font-weight="700" fill="var(--svg-muted)">碳刷</text>
+      <text x="142" y="284" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-blue)">双滑环无换向 → 输出交变电流 a.c.</text>
+
+      <!-- Right: Sinusoidal e.m.f.-time Graph -->
+      <rect x="280" y="38" width="442" height="258" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.2"/>
+      <text x="501" y="57" text-anchor="middle" font-size="12" font-weight="700" fill="var(--svg-ink)">感应电动势随时间变化波形（实线：1× 转速；虚线：2× 转速）</text>
+      <!-- Axes -->
+      <line x1="335" y1="74" x2="335" y2="254" stroke="var(--svg-ink)" stroke-width="1.8"/>
+      <line x1="330" y1="164" x2="700" y2="164" stroke="var(--svg-ink)" stroke-width="1.8"/>
+      <text x="330" y="70" text-anchor="start" font-size="10.5" font-weight="700" fill="var(--svg-ink)">e.m.f. / V</text>
+      <text x="698" y="156" text-anchor="end" font-size="10.5" font-weight="700" fill="var(--svg-ink)">t / s</text>
+      <!-- 1x cosine curve (starts at horizontal peak at t=0): x from 335 to 675 (340px = T) -->
+      <path d="M 335 124 C 365 124, 392 164, 420 164 C 448 164, 475 204, 505 204 C 535 204, 562 164, 590 164 C 618 164, 645 124, 675 124" fill="none" stroke="var(--svg-blue)" stroke-width="2.8"/>
+      <!-- 2x speed curve: double amplitude (164 ± 80 -> y=84 and y=244), half period (170px) -->
+      <path d="M 335 84 C 350 84, 364 164, 377.5 164 C 391 164, 405 244, 420 244 C 435 244, 449 164, 462.5 164 C 476 164, 490 84, 505 84 C 520 84, 534 164, 547.5 164 C 561 164, 575 244, 590 244 C 605 244, 619 164, 632.5 164 C 646 164, 660 84, 675 84" fill="none" stroke="var(--svg-red)" stroke-width="1.8" stroke-dasharray="5,4"/>
+
+      <!-- Coil position annotations along curve -->
+      <circle cx="335" cy="124" r="4.5" fill="var(--svg-blue)"/>
+      <circle cx="420" cy="164" r="4.5" fill="var(--svg-teal)"/>
+      <circle cx="505" cy="204" r="4.5" fill="var(--svg-blue)"/>
+      <circle cx="590" cy="164" r="4.5" fill="var(--svg-teal)"/>
+      <circle cx="675" cy="124" r="4.5" fill="var(--svg-blue)"/>
+
+      <!-- Tiny horizontal/vertical coil icons & labels -->
+      <line x1="343" y1="112" x2="365" y2="112" stroke="var(--svg-amber)" stroke-width="3"/>
+      <text x="368" y="116" text-anchor="start" font-size="10" font-weight="700" fill="var(--svg-blue)">水平 (Max)</text>
+
+      <line x1="420" y1="136" x2="420" y2="156" stroke="var(--svg-teal)" stroke-width="3"/>
+      <text x="420" y="182" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-teal)">T/4 竖直(0)</text>
+
+      <line x1="494" y1="216" x2="516" y2="216" stroke="var(--svg-amber)" stroke-width="3"/>
+      <text x="505" y="232" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-blue)">T/2 水平 (反向Max)</text>
+
+      <line x1="590" y1="136" x2="590" y2="156" stroke="var(--svg-teal)" stroke-width="3"/>
+      <text x="590" y="182" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-teal)">3T/4 竖直(0)</text>
+
+      <text x="675" y="114" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-blue)">T 水平(Max)</text>
+
+      <!-- Legend -->
+      <text x="342" y="280" text-anchor="start" font-size="10.5" font-weight="700" fill="var(--svg-red)">虚线 = 2× 转速：峰值 E₀ 翻倍 (2E₀)，周期减半 (T/2)</text>
+      <text x="328" y="128" text-anchor="end" font-size="10.5" font-weight="700" fill="var(--svg-blue)">+E₀</text>
+      <text x="328" y="88" text-anchor="end" font-size="10.5" font-weight="700" fill="var(--svg-red)">+2E₀</text>
+      <text x="328" y="208" text-anchor="end" font-size="10.5" font-weight="700" fill="var(--svg-blue)">−E₀</text>
+    </svg>
+    <div class="svg-caption">图 21.2 · 滑环式交流发电机及线圈水平（最大切割率 → 峰值）/ 竖直（平行磁感线 → 零电动势）位置对应图</div>
+  </div>
+
+  <div class="callout common-mistake">
+    <div class="callout-title">⚠️ 全章头号错觉：把“线圈竖直”当成电动势最大！</div>
+    <p style="margin-bottom:0;">
+      直觉上同学总以为线圈在磁极正中间（竖直时）电动势最大，这是<strong>100% 错误</strong>的！线圈竖直时，上下两条边沿水平方向切线移动，正好<strong>顺着磁感线平行滑行</strong>，单位时间切割磁感线数为 0，所以电动势为 <strong>0 V</strong>；反而是线圈<strong>水平</strong>时，两条边纯竖直上冲与下冲，垂直割断磁感线最猛，电动势达到<strong>峰值</strong>！
+    </p>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-21-3">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>21.3 变压器、匝数比与高压输电减损</h3>
+      <div class="section-en-sub">The transformer, power equation &amp; high-voltage transmission</div>
+      <div class="tier-row">
+        <span class="badge-core">Core · 软铁芯构造、升降压判断与 Vₚ/Vₛ = Nₚ/Nₛ</span>
+        <span class="badge-ext">Extended · 互感机理、IₚVₚ = IₛVₛ 与 I²R 电网减损</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-21-3">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>1. 变压器结构、材料选型与匝数比公式 <span class="badge-core">Core</span></h4>
+    <p>
+      <strong>变压器（Transformer）</strong>利用电磁感应来改变<strong>交变电压（alternating voltage）</strong>的大小，由三部分构成：
+    </p>
+    <ul>
+      <li><strong>原线圈 / 初级线圈（Primary coil, 匝数 N<sub>p</sub>）</strong>：接入输入交流电压 V<sub>p</sub>。</li>
+      <li><strong>副线圈 / 次级线圈（Secondary coil, 匝数 N<sub>s</sub>）</strong>：输出感应交流电压 V<sub>s</sub>。</li>
+      <li><strong>层压软铁芯（Laminated soft-iron core）</strong>：必须用<strong>软铁（soft iron）</strong>，因为它极易磁化也极易退磁，能使铁芯内磁场随交流电每秒 50/60 次轻松翻转（硬钢会保留剩磁且严重发热）；制成绝缘薄片叠压（laminated）则可抑制铁芯内部的涡流（eddy currents）生热。</li>
+    </ul>
+
+    <div class="formula-card">
+      <div class="formula-main">
+        变压器变压比公式：<span class="frac"><span class="num">V<sub>p</sub></span><span class="den">V<sub>s</sub></span></span> = <span class="frac"><span class="num">N<sub>p</sub></span><span class="den">N<sub>s</sub></span></span>
+      </div>
+      <p style="margin-bottom:0;">
+        • <strong>升压变压器（Step-up transformer）</strong>：N<sub>s</sub> &gt; N<sub>p</sub> ⇒ V<sub>s</sub> &gt; V<sub>p</sub>（副线圈匝数更多，输出电压升高）；<br>
+        • <strong>降压变压器（Step-down transformer）</strong>：N<sub>s</sub> &lt; N<sub>p</sub> ⇒ V<sub>s</sub> &lt; V<sub>p</sub>（副线圈匝数更少，输出电压降低）。
+      </p>
+    </div>
+
+    <div class="callout common-mistake">
+      <div class="callout-title">⚠️ 绝对铁律：为什么变压器接直流电（d.c.）输出永远是 0 V？</div>
+      <p style="margin-bottom:0;">
+        接入恒定直流电（例如电池）时，原线圈电流恒定不变 → 软铁芯中产生<strong>恒定不变的磁场（steady/constant magnetic field）</strong> → 穿过副线圈的磁场<strong>没有变化（no changing magnetic field linking the secondary coil）</strong> → 副线圈中<strong>不能感应出任何电动势（V<sub>s</sub> = 0 V）</strong>！（仅在开关刚合上和刚断开的瞬间会有极短暂脉冲）。
+      </p>
+    </div>
+  </div>
+
+  <div class="subtopic ext-only">
+    <h4>2. 变压器工作机理与 100% 理想功率守恒 <span class="badge-ext">Extended</span></h4>
+    <p>
+      <strong>Mark Scheme 满分解释链（4 个因果步）</strong>：<br>
+      ① <strong>交变电流（a.c.）</strong>流入原线圈 → ② 在<strong>软铁芯</strong>中产生<strong>周期性变化的磁场（alternating/changing magnetic field）</strong> → ③ 软铁芯将这股变化的磁场引导并穿过<strong>副线圈（links with secondary coil）</strong> → ④ 根据电磁感应，副线圈两端感应出同频率的<strong>交变电动势 V<sub>s</sub></strong>。
+    </p>
+    <div class="formula-card">
+      <div class="formula-main">
+        理想变压器（100% 效率，无能量损耗）功率关系：I<sub>p</sub> V<sub>p</sub> = I<sub>s</sub> V<sub>s</sub>
+      </div>
+      <p style="margin-bottom:0;">
+        因为能量守恒，输入功率 P<sub>in</sub> = I<sub>p</sub>V<sub>p</sub> 等于输出功率 P<sub>out</sub> = I<sub>s</sub>V<sub>s</sub>。这意味着：<strong>升压必降流，降压必升流</strong>（电压与电流成反比）！不存在“既把电压升高又把电流增大”的免费能量。
+      </p>
+    </div>
+  </div>
+
+  <div class="subtopic ext-only">
+    <h4>3. 国家电网高压输电的三大优势 <span class="badge-ext">Extended</span></h4>
+    <p>
+      发电厂先用<strong>升压变压器</strong>把 25 kV 升至 400 kV（或 132 kV）送上远距离架空电缆，到达城市后再用多级<strong>降压变压器</strong>逐级降至安全的 230 V 供家庭使用。为什么必须先升压再远距离输电？
+    </p>
+    <ul>
+      <li>在输送总功率 P = I V 一定的前提下，用升压变压器大幅提高输电电压 V → 输电导线中的电流 <strong>I = P / V 大幅减小</strong>；</li>
+      <li>导线电阻 R 发热损耗功率为 <strong>P<sub>loss</sub> = I² R</strong>：由于损耗与电流的<strong>平方</strong>成正比，若电压升高 10 倍，电流降至 1/10，导线焦耳热损耗（thermal energy loss）剧减至 <strong>1/100</strong>！</li>
+      <li>电流减小还带来工程优势：可使用<strong>更细、更轻、更便宜的电缆（thinner / lighter / cheaper cables）</strong>，并减少高塔架（pylons）数量！</li>
+    </ul>
+  </div>
+
+  <div class="svg-figure">
+    <svg viewBox="0 0 740 265" width="740" height="265" xmlns="http://www.w3.org/2000/svg">
+      <rect x="4" y="4" width="732" height="257" rx="10" fill="var(--svg-bg)" stroke="var(--svg-grid)" stroke-width="1.5"/>
+      <text x="370" y="25" text-anchor="middle" font-size="13.5" font-weight="800" fill="var(--svg-ink)">层压软铁芯变压器构造与高压输电节能链条</text>
+
+      <!-- Left: Transformer Diagram -->
+      <rect x="20" y="38" width="292" height="212" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.2"/>
+      <text x="166" y="57" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-ink)">层压软铁芯变压器 (Soft-iron core)</text>
+      <!-- Iron Core Frame -->
+      <rect x="86" y="76" width="160" height="122" rx="6" fill="rgba(100,116,139,0.22)" stroke="var(--svg-ink)" stroke-width="2"/>
+      <rect x="116" y="102" width="100" height="70" rx="3" fill="var(--svg-bg)" stroke="var(--svg-ink)" stroke-width="1.6"/>
+      <!-- Flux loop dashed -->
+      <rect x="101" y="89" width="130" height="96" rx="4" fill="none" stroke="var(--svg-teal)" stroke-width="1.4" stroke-dasharray="5,4"/>
+      <text x="166" y="138" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-teal)">交变磁感线</text>
+      <!-- Primary Coils (fewer turns -> step-up example) -->
+      <path d="M 68 96 L 104 96 M 68 112 L 104 112 M 68 128 L 104 128 M 68 144 L 104 144 M 68 160 L 104 160" stroke="var(--svg-red)" stroke-width="3.2" stroke-linecap="round"/>
+      <polyline points="40,96 68,96" fill="none" stroke="var(--svg-red)" stroke-width="2"/>
+      <polyline points="40,160 68,160" fill="none" stroke="var(--svg-red)" stroke-width="2"/>
+      <text x="28" y="182" text-anchor="start" font-size="10.5" font-weight="800" fill="var(--svg-red)">Vₚ, Nₚ (a.c.)</text>
+      <!-- Secondary Coils (more turns) -->
+      <path d="M 228 88 L 264 88 M 228 99 L 264 99 M 228 110 L 264 110 M 228 121 L 264 121 M 228 132 L 264 132 M 228 143 L 264 143 M 228 154 L 264 154 M 228 165 L 264 165 M 228 176 L 264 176" stroke="var(--svg-blue)" stroke-width="2.8" stroke-linecap="round"/>
+      <polyline points="264,88 292,88" fill="none" stroke="var(--svg-blue)" stroke-width="2"/>
+      <polyline points="264,176 292,176" fill="none" stroke="var(--svg-blue)" stroke-width="2"/>
+      <text x="275" y="196" text-anchor="middle" font-size="10.5" font-weight="800" fill="var(--svg-blue)">Vₛ, Nₛ</text>
+      <text x="166" y="232" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-muted)">软铁易磁化退磁 · 层压薄片减少涡流</text>
+
+      <!-- Right: National Grid Transmission -->
+      <rect x="326" y="38" width="394" height="212" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.2"/>
+      <text x="523" y="57" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-ink)">国家电网输电链：先升压降流减损，再降压安全入户</text>
+      <!-- Boxes -->
+      <rect x="338" y="88" width="76" height="58" rx="6" fill="rgba(220,38,38,0.12)" stroke="var(--svg-red)" stroke-width="1.6"/>
+      <text x="376" y="112" text-anchor="middle" font-size="10.8" font-weight="800" fill="var(--svg-red)">发电厂</text>
+      <text x="376" y="130" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-ink)">25 kV</text>
+
+      <line x1="414" y1="117" x2="432" y2="117" stroke="var(--svg-ink)" stroke-width="2"/>
+      <polygon points="432,113 440,117 432,121" fill="var(--svg-ink)"/>
+
+      <rect x="440" y="84" width="84" height="66" rx="6" fill="rgba(217,119,6,0.14)" stroke="var(--svg-amber)" stroke-width="1.6"/>
+      <text x="482" y="106" text-anchor="middle" font-size="10.5" font-weight="800" fill="var(--svg-amber)">升压变压器</text>
+      <text x="482" y="122" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-ink)">Nₛ &gt; Nₚ</text>
+      <text x="482" y="139" text-anchor="middle" font-size="10.5" font-weight="800" fill="var(--svg-ink)">400 kV</text>
+
+      <!-- Pylon cable line -->
+      <line x1="524" y1="117" x2="554" y2="117" stroke="var(--svg-blue)" stroke-width="2.6"/>
+      <polygon points="554,113 562,117 554,121" fill="var(--svg-blue)"/>
+
+      <rect x="562" y="84" width="84" height="66" rx="6" fill="rgba(37,99,235,0.12)" stroke="var(--svg-blue)" stroke-width="1.6"/>
+      <text x="604" y="106" text-anchor="middle" font-size="10.5" font-weight="800" fill="var(--svg-blue)">降压变压器</text>
+      <text x="604" y="122" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-ink)">Nₛ &lt; Nₚ</text>
+      <text x="604" y="139" text-anchor="middle" font-size="10.5" font-weight="800" fill="var(--svg-ink)">230 V</text>
+
+      <line x1="646" y1="117" x2="660" y2="117" stroke="var(--svg-ink)" stroke-width="2"/>
+      <rect x="660" y="92" width="48" height="50" rx="6" fill="rgba(22,163,74,0.14)" stroke="var(--svg-green)" stroke-width="1.6"/>
+      <text x="684" y="115" text-anchor="middle" font-size="10.5" font-weight="800" fill="var(--svg-green)">家庭</text>
+      <text x="684" y="131" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-ink)">230 V</text>
+
+      <!-- Formula highlight box below transmission -->
+      <rect x="338" y="166" width="370" height="72" rx="6" fill="rgba(2,132,199,0.08)" stroke="var(--svg-blue)" stroke-width="1.1"/>
+      <text x="523" y="187" text-anchor="middle" font-size="11.2" font-weight="800" fill="var(--svg-blue)">核心物理链：P = IV 恒定 ⇒ V↑ 16倍 → 电流 I↓ 16倍</text>
+      <text x="523" y="207" text-anchor="middle" font-size="11.2" font-weight="800" fill="var(--svg-red)">线路热损耗 P_loss = I²R ⇒ 降至原来的 1 / 256！</text>
+      <text x="523" y="226" text-anchor="middle" font-size="10.5" font-weight="600" fill="var(--svg-muted)">附带收益：电缆更细更轻成本更低，所需支撑铁塔更少</text>
+    </svg>
+    <div class="svg-caption">图 21.3 · 变压器构造原理及电网“升压输电—降压用电”物理减损机制</div>
+  </div>
+
+  <div class="lab-box" data-lab-type="p21"></div>
+
+  <div class="worked-example ext-only">
+    <div class="worked-title">📝 精解例题 21.2 · 变压器计算与高压输电热损耗对比 [Extended]</div>
+    <p>
+      某发电厂需通过总电阻 R = 8.0 Ω 的架空电缆输送 400 kW 的电功率。先经原线圈 N<sub>p</sub> = 200 匝、副线圈 N<sub>s</sub> = 3200 匝的理想升压变压器将 25 kV 电压升高后输电。
+      <br>(a) 计算输电线电压 V<sub>s</sub> 及输电线中的电流 I<sub>s</sub>；
+      <br>(b) 计算电缆每秒损耗的热能功率 P<sub>loss</sub>；若不升压直接以 25 kV 输电，热损耗会是多少？
+    </p>
+    <p style="margin-bottom:0;">
+      <strong>分步规范解答：</strong><br>
+      (a) 由变压比公式：V<sub>s</sub> = V<sub>p</sub> × (N<sub>s</sub> / N<sub>p</sub>) = 25 000 × (3200 / 200) = <strong>400 000 V (400 kV)</strong>。<br>
+      输电电流：I<sub>s</sub> = P / V<sub>s</sub> = 400 000 W / 400 000 V = <strong>1.0 A</strong>。<br>
+      (b) 高压输电热损耗：P<sub>loss</sub> = I<sub>s</sub>² R = (1.0)² × 8.0 = <strong>8.0 W</strong>（仅占 0.002%！）。<br>
+      若不升压以 25 kV 直接传输：电流 I = 400 000 / 25 000 = 16 A，热损耗 = 16² × 8.0 = <strong>2048 W</strong>（高出整整 256 倍！）。
+    </p>
+  </div>
+</article>
+
+<article class="topic-section sme-section" id="sec-sme">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>21.4 SaveMyExams 真题实战演练（MCQ + 结构化解答）</h3>
+      <div class="section-en-sub">Cambridge IGCSE (0625) Exam-Style Questions &amp; Official Mark Schemes</div>
+      <div class="tier-row">
+        <span class="badge-core">Paper 1 / 2 选择题</span>
+        <span class="badge-ext">Paper 3 / 4 结构化计算与论述</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-sme">○ 标记掌握</button>
+  </div>
+
+  <div class="practice-block">
+    <div class="practice-heading">🔘 Part A · 精选选择题（Multiple Choice Questions）</div>
+
+    <div class="exam-q" data-mcq-answer="C">
+      <div class="exam-q-head">
+        <span class="q-tag">Paper 1/2 · MCQ 1</span>
+        <span class="tier-row" style="margin-top:0;"><span class="badge-core">Core</span><span class="q-marks">[1 mark]</span></span>
+      </div>
+      <div class="q-stem-en">A copper wire is placed between the poles of a magnet (field horizontally from N to S). Which movement induces zero e.m.f. across the wire?</div>
+      <div class="q-stem-cn">一根铜线置于磁场（水平由 N 指向 S）的两极之间。哪种移动方式在线圈/导线两端产生的感应电动势为零？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><strong>A</strong><span>Moving the wire vertically upwards quickly</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><strong>B</strong><span>Moving the wire vertically downwards slowly</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><strong>C</strong><span>Moving the wire horizontally from N towards S</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><strong>D</strong><span>Moving the magnet vertically downwards while the wire is held stationary</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！沿 N→S 水平移动时，导线运动方向平行于磁感线（parallel to the field lines），不切割磁感线，因此 e.m.f. = 0！" data-err="❌ 再想想：只有沿着与磁感线【平行】的方向（N→S）移动，才不会切割任何磁感线，感应电动势为零；相对竖直移动（包括磁铁动而导线不动）都会切割磁感线！"></div>
+    </div>
+
+    <div class="exam-q ext-only" data-mcq-answer="B">
+      <div class="exam-q-head">
+        <span class="q-tag">Paper 2 · MCQ 2</span>
+        <span class="tier-row" style="margin-top:0;"><span class="badge-ext">Extended</span><span class="q-marks">[1 mark]</span></span>
+      </div>
+      <div class="q-stem-en">The S-pole of a bar magnet is pushed quickly into the left end of a solenoid connected to a galvanometer. Which magnetic pole is induced at the left end of the solenoid, and why?</div>
+      <div class="q-stem-cn">将条形磁铁的 S 极快速推入螺线管左端时，螺线管左端会感应出什么磁极？原因是什么？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><strong>A</strong><span>N-pole, to attract the magnet and increase its kinetic energy</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><strong>B</strong><span>S-pole, to oppose the motion of the magnet entering the coil</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><strong>C</strong><span>N-pole, to repel the magnet entering the coil</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><strong>D</strong><span>S-pole, to pull the magnet further into the coil</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！根据楞次定律（Lenz's law），感应电流方向总是阻碍引起它的变化：S 极推入时，左端感应出同名 S 极来排斥并阻碍磁铁进入。" data-err="❌ 注意：阻碍 S 极靠近需要“排斥力”，同极相斥 ⇒ 左端必须感应出 S 极（而非 N 极）。"></div>
+    </div>
+
+    <div class="exam-q ext-only" data-mcq-answer="D">
+      <div class="exam-q-head">
+        <span class="q-tag">Paper 2 · MCQ 3</span>
+        <span class="tier-row" style="margin-top:0;"><span class="badge-ext">Extended</span><span class="q-marks">[1 mark]</span></span>
+      </div>
+      <div class="q-stem-en">A simple a.c. generator coil rotates at frequency 25 Hz and produces a peak e.m.f. of 6.0 V. The speed of rotation is now doubled to 50 Hz. What are the new peak e.m.f. and new period?</div>
+      <div class="q-stem-cn">一台简单交流发电机线圈转速由 25 Hz 加倍到 50 Hz（原峰值电动势 6.0 V）。新的峰值电动势和周期分别是多少？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><strong>A</strong><span>Peak e.m.f. = 6.0 V, Period = 0.020 s</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><strong>B</strong><span>Peak e.m.f. = 12.0 V, Period = 0.040 s</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><strong>C</strong><span>Peak e.m.f. = 12.0 V, Period = 0.080 s</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><strong>D</strong><span>Peak e.m.f. = 12.0 V, Period = 0.020 s</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！转速加倍时，切割磁感线速率翻倍 ⇒ 峰值 e.m.f. 变为 12.0 V；同时频率翻倍至 50 Hz ⇒ 周期 T = 1/f = 1/50 = 0.020 s！" data-err="❌ 记牢双杀规律：转速翻倍同时改变两个量——峰值电动势翻倍 (12.0 V) 且周期减半 (T = 1/50 = 0.020 s)！"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="A">
+      <div class="exam-q-head">
+        <span class="q-tag">Paper 1/2 · MCQ 4</span>
+        <span class="tier-row" style="margin-top:0;"><span class="badge-core">Core</span><span class="q-marks">[1 mark]</span></span>
+      </div>
+      <div class="q-stem-en">A transformer has 600 turns on its primary coil and 150 turns on its secondary coil. A steady 12 V d.c. battery is connected across the primary coil. What is the steady voltage across the secondary coil?</div>
+      <div class="q-stem-cn">某变压器原线圈 600 匝、副线圈 150 匝，原线圈接上稳恒 12 V 直流电池。稳态时副线圈两端输出电压是多少？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><strong>A</strong><span>0 V</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><strong>B</strong><span>3.0 V</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><strong>C</strong><span>12 V</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><strong>D</strong><span>48 V</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！直流电 d.c. 产生恒定磁场，磁场没有发生变化，因此副线圈不会产生任何感应电动势，输出为 0 V！" data-err="❌ 掉进经典套路了！看见 12 V d.c. 电池不要套 Vp/Vs = Np/Ns，直流稳恒磁场不变化，副线圈输出必为 0 V！"></div>
+    </div>
+
+    <div class="exam-q ext-only" data-mcq-answer="C">
+      <div class="exam-q-head">
+        <span class="q-tag">Paper 2 · MCQ 5</span>
+        <span class="tier-row" style="margin-top:0;"><span class="badge-ext">Extended</span><span class="q-marks">[1 mark]</span></span>
+      </div>
+      <div class="q-stem-en">Why is electrical power transmitted across the National Grid at very high voltage?</div>
+      <div class="q-stem-cn">为什么国家电网要采用极高电压进行远距离输电？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><strong>A</strong><span>High voltage increases the speed of electrons in the cables</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><strong>B</strong><span>High voltage increases the resistance of the overhead cables</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><strong>C</strong><span>High voltage reduces the current in the cables, reducing I²R thermal energy losses</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><strong>D</strong><span>High voltage allows homes to receive 400 kV directly without step-down transformers</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！功率 P = IV 一定时，升高电压 V 使电流 I 减小，从而大幅削减导线的 I²R 热能损耗！" data-err="❌ 请用 P = IV 和 P_loss = I²R 推理：高压的唯一核心目的是减小传输电流 I，进而降低导线发热损失。"></div>
+    </div>
+  </div>
+
+  <div class="practice-block">
+    <div class="practice-heading">✍️ Part B · SaveMyExams 结构化大题与评分标准</div>
+
+    <div class="exam-q ext-only">
+      <div class="exam-q-head">
+        <span class="q-tag">Structured Q1 · Lenz's Law &amp; Energy</span>
+        <span class="tier-row" style="margin-top:0;"><span class="badge-ext">Extended</span><span class="q-marks">[4 marks]</span></span>
+      </div>
+      <div class="q-stem-en">A student drops a strong bar magnet (N-pole downwards) vertically through a copper tube and notices it falls much slower than an identical unmagnetised iron cylinder of the same mass. Explain this observation using the laws of electromagnetic induction and conservation of energy.</div>
+      <div class="q-stem-cn">某同学将 N 极朝下的强磁铁竖直丢入铜管，发现它比同质量未磁化铁柱下落慢得多。试用电磁感应规律与能量守恒定律解释这一现象。</div>
+      <details class="ms-details">
+        <summary>查看 Mark Scheme 官方得分点与中文精讲</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">B1</span> As the magnet falls, the copper tube experiences a <strong>changing magnetic field</strong> (or the copper cuts magnetic field lines).</p>
+          <p><span class="ms-mark">B1</span> An <strong>e.m.f. and induced (eddy) current</strong> are induced in the copper tube (because copper is an electrical conductor).</p>
+          <p><span class="ms-mark">B1</span> By <strong>Lenz's law</strong>, the direction of the induced current produces a magnetic field that <strong>opposes the motion</strong> of the falling magnet (upward braking force reduces net downward force / acceleration).</p>
+          <p><span class="ms-mark">B1</span> In terms of energy: some <strong>gravitational potential energy</strong> is transferred to <strong>electrical energy / thermal store</strong> (heating the copper tube) instead of all becoming kinetic energy.</p>
+          <div class="ms-cn">中文精讲：铜不是磁性材料（不会被磁铁吸引），但铜是良导体！磁铁下落时铜管内产生感应涡流，由楞次定律产生向上的阻尼排斥/吸引合力阻碍下落；重力势能部分转化为电能与铜管内能，故动能增加更慢。</div>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q ext-only">
+      <div class="exam-q-head">
+        <span class="q-tag">Structured Q2 · a.c. Generator Graph</span>
+        <span class="tier-row" style="margin-top:0;"><span class="badge-ext">Extended</span><span class="q-marks">[4 marks]</span></span>
+      </div>
+      <div class="q-stem-en">(a) State the components used to connect the rotating coil of a simple a.c. generator to an external circuit. [2]<br>(b) Explain why the induced e.m.f. is zero when the coil plane is vertical, and maximum when the coil plane is horizontal (magnetic field is horizontal). [2]</div>
+      <div class="q-stem-cn">(a) 写出简单交流发电机用来连接旋转线圈与外电路的部件名称。[2]<br>(b) 当磁场水平时，解释为什么线圈竖直时电动势为零，而线圈水平时电动势最大。[2]</div>
+      <details class="ms-details">
+        <summary>查看 Mark Scheme 官方得分点与中文精讲</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">B1</span> (a) Two (complete) <strong>slip rings</strong>;</p>
+          <p><span class="ms-mark">B1</span> (two stationary) <strong>carbon brushes</strong>.</p>
+          <p><span class="ms-mark">B1</span> (b) When the coil plane is <strong>vertical</strong>, the coil sides move <strong>parallel to the magnetic field lines</strong>, so no field lines are cut (rate of cutting = 0).</p>
+          <p><span class="ms-mark">B1</span> When the coil plane is <strong>horizontal</strong>, the coil sides move <strong>perpendicularly across the magnetic field lines</strong> at the fastest rate (maximum rate of cutting field lines).</p>
+          <div class="ms-cn">中文精讲：注意必须写 <strong>slip rings</strong>（不可写 split-ring commutator，那是直流电动机！）。答题核心关键词是 "moving parallel to field lines"（0 电动势）与 "cutting field lines perpendicularly / at maximum rate"（最大电动势）。</div>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head">
+        <span class="q-tag">Structured Q3 · Transformer Calculation</span>
+        <span class="tier-row" style="margin-top:0;"><span class="badge-core">Core</span><span class="badge-ext">Extended</span><span class="q-marks">[5 marks]</span></span>
+      </div>
+      <div class="q-stem-en">A step-down transformer reduces a mains supply voltage of 230 V to 11.5 V to run a 23 W halogen lamp. The primary coil has 2400 turns.<br>(a) State the material used for the transformer core and explain why. [2]<br>(b) Calculate the number of turns on the secondary coil. [2]<br>(c) Assuming 100% efficiency, calculate the current in the primary coil. [1]</div>
+      <div class="q-stem-cn">某降压变压器将 230 V 市电降至 11.5 V 点亮一盏 23 W 卤素灯，原线圈有 2400 匝。<br>(a) 说明铁芯材料及理由。[2]<br>(b) 计算副线圈匝数。[2]<br>(c) 若效率为 100%，求原线圈电流（Extended）。[1]</div>
+      <details class="ms-details">
+        <summary>查看 Mark Scheme 官方得分点与中文精讲</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">B1</span> (a) <strong>Soft iron</strong>;</p>
+          <p><span class="ms-mark">B1</span> easily magnetised and demagnetised (so its magnetic field changes/reverses easily with a.c.).</p>
+          <p><span class="ms-mark">M1</span> (b) V<sub>p</sub> / V<sub>s</sub> = N<sub>p</sub> / N<sub>s</sub> ⇒ 230 / 11.5 = 2400 / N<sub>s</sub></p>
+          <p><span class="ms-mark">A1</span> N<sub>s</sub> = 2400 × (11.5 / 230) = <strong>120 turns</strong>.</p>
+          <p><span class="ms-mark">A1</span> (c) P = I<sub>p</sub> V<sub>p</sub> ⇒ I<sub>p</sub> = 23 W / 230 V = <strong>0.10 A</strong> (or find I<sub>s</sub> = 2.0 A then I<sub>p</sub> = 0.10 A).</p>
+          <div class="ms-cn">中文精讲：230 / 11.5 = 20，故匝数缩为 1/20，得 120 匝。因为效率 100%，输出功率 23 W 即等于输入功率 I<sub>p</sub> V<sub>p</sub>，直接用 23 / 230 = 0.10 A 一步出答案！</div>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q ext-only">
+      <div class="exam-q-head">
+        <span class="q-tag">Structured Q4 · Transformer Principle &amp; Grid</span>
+        <span class="tier-row" style="margin-top:0;"><span class="badge-ext">Extended</span><span class="q-marks">[4 marks]</span></span>
+      </div>
+      <div class="q-stem-en">Explain how an alternating current in the primary coil of a transformer produces an alternating voltage across the secondary coil.</div>
+      <div class="q-stem-cn">完整阐述变压器原线圈中的交变电流如何使副线圈两端产生交变电压。</div>
+      <details class="ms-details">
+        <summary>查看 Mark Scheme 官方得分点与中文精讲</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">B1</span> The <strong>alternating current (a.c.)</strong> in the primary coil produces a <strong>changing / alternating magnetic field</strong>;</p>
+          <p><span class="ms-mark">B1</span> in the <strong>soft-iron core</strong>;</p>
+          <p><span class="ms-mark">B1</span> this changing magnetic field <strong>links with / passes through / cuts the secondary coil</strong>;</p>
+          <p><span class="ms-mark">B1</span> <strong>inducing an alternating e.m.f. / voltage</strong> across the secondary coil.</p>
+          <div class="ms-cn">中文精讲：这是 Paper 4 最高频的 4 分标准论述模板！千万注意不要写“电流通过铁芯流向副线圈”——线圈之间有绝缘层，传递的是<strong>变化的磁场</strong>，不是电流！</div>
+        </div>
+      </details>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section" id="app-concepts">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>附录 · 第 21 章中英核心概念与高频得分句默写库</h3>
+      <div class="section-en-sub">Bilingual Concept Bank &amp; Cambridge Mark-Scheme Definitions</div>
+      <div class="tier-row">
+        <span class="badge-core">Core 核心必背</span>
+        <span class="badge-ext">Extended 补充高分句</span>
+      </div>
+    <button type="button" class="master-btn" data-section-id="app-concepts">○ 标记掌握</button>
+    </div>
+  </div>
+
+  <div class="concept-toolbar">
+    <div class="concept-filter-group" id="conceptFilterTabs">
+      <button type="button" class="tab-btn active" data-concept-part="all">全部概念</button>
+      <button type="button" class="tab-btn" data-concept-part="21.1">21.1 电磁感应与楞次定律</button>
+      <button type="button" class="tab-btn" data-concept-part="21.2">21.2 交流发电机</button>
+      <button type="button" class="tab-btn" data-concept-part="21.3">21.3 变压器与输电</button>
+    </div>
+    <div class="concept-actions">
+      <span class="concept-count-pill" id="conceptCountPill">显示 16 / 16 题</span>
+      <button type="button" class="tab-btn" id="conceptQuizToggle">🙈 开启遮罩自测</button>
+    </div>
+  </div>
+
+  <div class="concept-grid" id="conceptGrid">
+    <div class="concept-card" data-part="21.1">
+      <div class="cq-head"><span class="q-tag">21.1 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">State the condition needed to induce an e.m.f. in a conductor.</div>
+      <div class="cq-cn">陈述导体中产生感应电动势的条件。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">A conductor <span class="kw">cuts across magnetic field lines</span>, OR a <span class="kw">changing magnetic field links with</span> a conductor/coil.<br><span class="ms-cn">切割磁感线，或穿过线圈的磁场发生变化；静止或平行于磁感线运动时为 0。</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="21.1">
+      <div class="cq-head"><span class="q-tag">21.1 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">State three ways to increase the magnitude of an induced e.m.f.</div>
+      <div class="cq-cn">写出增大感应电动势大小的三条途径。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">1. Move the magnet/wire <span class="kw">faster</span>; 2. Use a <span class="kw">stronger magnet</span>; 3. Increase the <span class="kw">number of turns</span> on the coil.<br><span class="ms-cn">三要素：更快速度、更强磁场、更多线圈匝数。</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="21.1">
+      <div class="cq-head"><span class="q-tag">21.1 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">What happens when a bar magnet sits stationary inside a solenoid?</div>
+      <div class="cq-cn">条形磁铁静止放在螺线管正内部时，检流计读数是多少？为什么？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner"><span class="kw">Zero e.m.f. / zero deflection</span> because the magnetic field is <span class="kw">not changing</span> (no field lines are being cut).<br><span class="ms-cn">读数为零：必须有“变化”或“相对切割”，静止磁场再强也不能生电。</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="21.1">
+      <div class="cq-head"><span class="q-tag">21.1 · Extended</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">State Lenz's law and explain which fundamental conservation law it obeys.</div>
+      <div class="cq-cn">写出楞次定律表述，并说明它遵循哪条基本守恒定律。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">The direction of an induced e.m.f. <span class="kw">always opposes the change causing it</span>. It obeys <span class="kw">conservation of energy</span> (work must be done against opposition).<br><span class="ms-cn">总是反抗引起它的变化，本质是机械功转化为电能（能量守恒）。</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="21.1">
+      <div class="cq-head"><span class="q-tag">21.1 · Extended</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">What does each finger represent in Fleming's right-hand rule?</div>
+      <div class="cq-cn">弗莱明右手定则的拇指、食指、中指分别代表什么？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner"><span class="kw">Thumb = Motion</span>, <span class="kw">First finger = Field (N→S)</span>, <span class="kw">seCond finger = induced Current (+→−)</span>.<br><span class="ms-cn">发电用右手（Right），电动受力用左手（Left）。</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="21.2">
+      <div class="cq-head"><span class="q-tag">21.2 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">State the role of slip rings and carbon brushes in an a.c. generator.</div>
+      <div class="cq-cn">说明交流发电机中滑环与碳刷的作用。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner"><span class="kw">Two slip rings</span> rotate with the coil and keep permanent contact with each end; <span class="kw">carbon brushes</span> connect them to the external circuit <span class="kw">without wires twisting</span>.<br><span class="ms-cn">滑环随线圈转动且不换向，碳刷静止导电防止导线缠绕扭断。</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="21.2">
+      <div class="cq-head"><span class="q-tag">21.2 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Contrast the ring connection of a d.c. motor vs an a.c. generator.</div>
+      <div class="cq-cn">对比直流电动机与交流发电机的滑环结构差异。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">d.c. motor uses a <span class="kw">split-ring commutator</span> (reverses current every half turn); a.c. generator uses <span class="kw">two complete slip rings</span>.<br><span class="ms-cn">直流电机用半裂换向器（split-ring），交流发电机用双完整滑环（slip rings）。</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="21.2">
+      <div class="cq-head"><span class="q-tag">21.2 · Extended</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">At which coil orientation is the e.m.f. of an a.c. generator MAXIMUM?</div>
+      <div class="cq-cn">水平磁场中，交流发电机线圈处于什么方位时电动势最大？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">When the coil plane is <span class="kw">horizontal</span> (parallel to field lines): the coil sides move <span class="kw">perpendicularly</span> across field lines at maximum cutting rate.<br><span class="ms-cn">线圈平面水平时切割速率最快 → 峰值电动势！</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="21.2">
+      <div class="cq-head"><span class="q-tag">21.2 · Extended</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">At which coil orientation is the e.m.f. of an a.c. generator ZERO?</div>
+      <div class="cq-cn">水平磁场中，交流发电机线圈处于什么方位时电动势为零？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">When the coil plane is <span class="kw">vertical</span>: the sides move <span class="kw">parallel to the field lines</span>, so zero field lines are cut.<br><span class="ms-cn">线圈平面竖直时，导线边瞬时顺着磁感线平行滑过 → 0 V！</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="21.2">
+      <div class="cq-head"><span class="q-tag">21.2 · Extended</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">What happens to the e.m.f.–time graph if the coil rotation speed doubles?</div>
+      <div class="cq-cn">发电机线圈转速加倍时，e.m.f.–t 波形会有哪两处变化？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Both the <span class="kw">maximum/peak e.m.f. doubles</span> AND the <span class="kw">frequency doubles (period T halves)</span>.<br><span class="ms-cn">双变：纵轴振幅翻倍 + 横轴周期减半（波数翻倍）。</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="21.3">
+      <div class="cq-head"><span class="q-tag">21.3 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Why is a transformer core made of laminated soft iron?</div>
+      <div class="cq-cn">为什么变压器铁芯采用层压软铁（laminated soft iron）？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner"><span class="kw">Soft iron</span> is <span class="kw">easily magnetised and demagnetised</span>; laminations reduce energy loss from <span class="kw">eddy currents</span>.<br><span class="ms-cn">软铁易磁化退磁不留剩磁；绝缘叠片减少涡流发热。</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="21.3">
+      <div class="cq-head"><span class="q-tag">21.3 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Write the transformer turns-ratio equation and distinguish step-up vs step-down.</div>
+      <div class="cq-cn">写出变压比公式，并区分升压与降压变压器。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner"><span class="kw">Vₚ / Vₛ = Nₚ / Nₛ</span>. Step-up: <span class="kw">Nₛ &gt; Nₚ</span> (Vₛ &gt; Vₚ); Step-down: <span class="kw">Nₛ &lt; Nₚ</span> (Vₛ &lt; Vₚ).<br><span class="ms-cn">副匝多于原匝为升压，反之降压。</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="21.3">
+      <div class="cq-head"><span class="q-tag">21.3 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Why does a transformer NOT work with a steady d.c. supply?</div>
+      <div class="cq-cn">为什么变压器接稳恒直流电（d.c.）无法持续工作？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">A steady d.c. creates a <span class="kw">constant magnetic field</span> (no change), so <span class="kw">no e.m.f. is induced</span> in the secondary coil.<br><span class="ms-cn">恒定磁场无变化，副线圈不切割磁感线，输出永远为 0 V。</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="21.3">
+      <div class="cq-head"><span class="q-tag">21.3 · Extended</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">Explain step-by-step how a transformer operates.</div>
+      <div class="cq-cn">分四步描述变压器的工作原理。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner"><span class="kw">a.c.</span> in primary → <span class="kw">changing magnetic field</span> in <span class="kw">soft-iron core</span> → links with secondary coil → <span class="kw">induces alternating e.m.f.</span> across secondary.<br><span class="ms-cn">原交流 → 铁芯交变磁场 → 穿透副线圈 → 感应出交流电压。</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="21.3">
+      <div class="cq-head"><span class="q-tag">21.3 · Extended</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">State the ideal 100% efficient transformer power equation.</div>
+      <div class="cq-cn">写出 100% 理想变压器的功率电流守恒方程。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner"><span class="kw">Iₚ Vₚ = Iₛ Vₛ</span> (Input power = Output power; stepping voltage up reduces current).<br><span class="ms-cn">功率守恒，升压必伴随电流按相同倍数下降。</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="21.3">
+      <div class="cq-head"><span class="q-tag">21.3 · Extended</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">State the advantages of high-voltage electricity transmission.</div>
+      <div class="cq-cn">说明高压输电的核心物理优势与工程好处。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">For a given power (P = IV), high V means <span class="kw">low current I</span> → dramatically reduces <span class="kw">thermal energy loss (P_loss = I²R)</span> in cables; allows <span class="kw">thinner, lighter, cheaper cables</span>.<br><span class="ms-cn">核心三词：low current、less I²R thermal loss、thinner/cheaper cables。</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+        <nav class="chapter-pager" aria-label="章节切换导航">
+          <div><a class="pager-btn" href="Ch20_Electromagnetic_Forces.html">← Ch20 电流磁场、弗莱明左手定则、粒子偏转与直流电机</a></div>
+          <div><a class="pager-btn primary" href="index.html">🏠 返回 25 章全书总目录</a></div>
+          <div><a class="pager-btn" href="Ch22_The_Nuclear_Atom.html">Ch22 α 金箔散射原子核、同位素及核裂变与聚变 →</a></div>
+        </nav>
+      </div>
+    </main>
+  </div>
+
+  <button type="button" class="back-top-btn" id="backTopBtn" title="返回顶部">↑</button>
+
+  <script>
+(function () {
+  'use strict';
+
+  const THEME_KEY = 'igcse_phy0625_theme';
+  const chapterCode = (document.body && document.body.getAttribute('data-chapter-code')) || 'HUB';
+  const STORAGE_PREFIX = 'igcse_phy0625_' + chapterCode.toLowerCase() + '_';
+  const htmlEl = document.documentElement;
+  const bodyEl = document.body;
+
+  // All state variables declared cleanly at top of IIFE (prevents TDZ errors)
+  let currentViewMode = localStorage.getItem(STORAGE_PREFIX + 'viewMode') || 'all';
+  let activeConceptPart = 'all';
+  let quizMasked = localStorage.getItem(STORAGE_PREFIX + 'quizMasked') === '1';
+  let allMsExpanded = false;
+  let masteredIds = [];
+  try {
+    masteredIds = JSON.parse(localStorage.getItem(STORAGE_PREFIX + 'mastered') || '[]');
+    if (!Array.isArray(masteredIds)) masteredIds = [];
+  } catch (e) {
+    masteredIds = [];
+  }
+
+  // ---------- 1. Theme Toggle ----------
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+
+  function applyTheme(theme) {
+    htmlEl.setAttribute('data-theme', theme);
+    if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem(THEME_KEY, theme);
+  }
+  applyTheme(localStorage.getItem(THEME_KEY) || 'light');
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      applyTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  }
+
+  // ---------- 2. View Mode Filter (All / Core / Extended / SME) ----------
+  function applyViewMode(mode) {
+    currentViewMode = mode;
+    bodyEl.classList.remove('mode-core', 'mode-ext', 'mode-book', 'mode-sme');
+    if (mode === 'core') bodyEl.classList.add('mode-core');
+    if (mode === 'ext') bodyEl.classList.add('mode-ext');
+    if (mode === 'sme') bodyEl.classList.add('mode-sme');
+    document.querySelectorAll('[data-view-mode]').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-view-mode') === mode);
+    });
+    localStorage.setItem(STORAGE_PREFIX + 'viewMode', mode);
+    filterConcepts();
+  }
+  document.querySelectorAll('[data-view-mode]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      applyViewMode(btn.getAttribute('data-view-mode'));
+    });
+  });
+
+  // ---------- 3. Sidebar Drawer & Accordion ----------
+  const sidebar = document.getElementById('sidebar');
+  const menuToggle = document.getElementById('menuToggle');
+  if (menuToggle && sidebar) {
+    menuToggle.addEventListener('click', function () { sidebar.classList.toggle('open'); });
+    sidebar.querySelectorAll('.nav-link').forEach(function (lnk) {
+      lnk.addEventListener('click', function () {
+        if (window.innerWidth <= 980) sidebar.classList.remove('open');
+      });
+    });
+  }
+  document.querySelectorAll('.nav-unit-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const unit = btn.closest('.nav-unit');
+      if (unit) unit.classList.toggle('collapsed');
+    });
+  });
+
+  // ---------- 4. Mastery Progress Tracker ----------
+  const progressText = document.getElementById('progressText');
+  const progressFill = document.getElementById('progressFill');
+  const masterBtns = Array.from(document.querySelectorAll('.master-btn'));
+  const totalSections = masterBtns.length;
+  const validIds = new Set(masterBtns.map(function (b) { return b.getAttribute('data-section-id'); }));
+
+  function renderMastery() {
+    const doneList = masteredIds.filter(function (id) { return validIds.has(id); });
+    localStorage.setItem(STORAGE_PREFIX + 'total', String(totalSections));
+    if (progressText) progressText.textContent = doneList.length + '/' + totalSections;
+    if (progressFill && totalSections > 0) {
+      progressFill.style.width = Math.round((doneList.length / totalSections) * 100) + '%';
+    }
+    masterBtns.forEach(function (btn) {
+      const sid = btn.getAttribute('data-section-id');
+      const done = doneList.indexOf(sid) !== -1;
+      btn.classList.toggle('is-mastered', done);
+      btn.textContent = done ? '✓ 已掌握' : '○ 标记掌握';
+    });
+    document.querySelectorAll('.nav-link').forEach(function (lnk) {
+      const id = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('mastered', doneList.indexOf(id) !== -1);
+    });
+  }
+  masterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const sid = btn.getAttribute('data-section-id');
+      const idx = masteredIds.indexOf(sid);
+      if (idx === -1) masteredIds.push(sid);
+      else masteredIds.splice(idx, 1);
+      localStorage.setItem(STORAGE_PREFIX + 'mastered', JSON.stringify(masteredIds));
+      renderMastery();
+    });
+  });
+  if (totalSections > 0) renderMastery();
+
+  // ---------- 5. Global Toggle Details & Print ----------
+  const toggleAllMs = document.getElementById('toggleAllMs');
+  if (toggleAllMs) {
+    toggleAllMs.addEventListener('click', function () {
+      allMsExpanded = !allMsExpanded;
+      document.querySelectorAll('details.ms-details').forEach(function (det) { det.open = allMsExpanded; });
+      const lbl = toggleAllMs.querySelector('.btn-label');
+      if (lbl) lbl.textContent = allMsExpanded ? '收起解析' : '展开解析';
+      toggleAllMs.classList.toggle('active', allMsExpanded);
+    });
+  }
+  const printBtn = document.getElementById('printBtn');
+  if (printBtn) printBtn.addEventListener('click', function () { window.print(); });
+
+  // ---------- 6. Instant Search ----------
+  const searchInput = document.getElementById('searchInput');
+  const searchClear = document.getElementById('searchClear');
+  const searchBar = document.getElementById('searchBar');
+  const searchSummary = document.getElementById('searchSummary');
+  const searchResetBtn = document.getElementById('searchResetBtn');
+  const emptySearchNotice = document.getElementById('emptySearchNotice');
+
+  function runSearch() {
+    if (!searchInput) return;
+    const raw = searchInput.value.trim().toLowerCase();
+    if (searchClear) searchClear.style.display = raw ? 'block' : 'none';
+    const sections = Array.from(document.querySelectorAll('.topic-section'));
+    if (!raw) {
+      sections.forEach(function (s) { s.classList.remove('search-dim'); });
+      if (searchBar) searchBar.classList.remove('visible');
+      if (emptySearchNotice) emptySearchNotice.style.display = 'none';
+      return;
+    }
+    let hits = 0;
+    sections.forEach(function (sec) {
+      const ok = sec.textContent.toLowerCase().indexOf(raw) !== -1;
+      sec.classList.toggle('search-dim', !ok);
+      if (ok) hits++;
+    });
+    if (searchBar) searchBar.classList.add('visible');
+    if (searchSummary) searchSummary.textContent = '关键词 “' + searchInput.value.trim() + '” 匹配 ' + hits + ' 个板块';
+    if (emptySearchNotice) emptySearchNotice.style.display = hits === 0 ? 'block' : 'none';
+  }
+  if (searchInput) searchInput.addEventListener('input', runSearch);
+  function resetSearch() { if (searchInput) searchInput.value = ''; runSearch(); }
+  if (searchClear) searchClear.addEventListener('click', resetSearch);
+  if (searchResetBtn) searchResetBtn.addEventListener('click', resetSearch);
+
+  // ---------- 7. Interactive MCQ Grading ----------
+  document.querySelectorAll('.exam-q[data-mcq-answer]').forEach(function (qBox) {
+    const ans = qBox.getAttribute('data-mcq-answer');
+    const fb = qBox.querySelector('.mcq-feedback');
+    const opts = qBox.querySelectorAll('.mcq-opt');
+    opts.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const chosen = btn.getAttribute('data-opt');
+        opts.forEach(function (o) { o.classList.remove('correct', 'wrong'); });
+        if (chosen === ans) {
+          btn.classList.add('correct');
+          if (fb) { fb.textContent = fb.getAttribute('data-ok') || '✅ 回答正确！'; fb.className = 'mcq-feedback visible ok'; }
+        } else {
+          btn.classList.add('wrong');
+          opts.forEach(function (o) { if (o.getAttribute('data-opt') === ans) o.classList.add('correct'); });
+          if (fb) { fb.textContent = fb.getAttribute('data-err') || '❌ 未选对，请对照解析复盘。'; fb.className = 'mcq-feedback visible err'; }
+        }
+      });
+    });
+  });
+
+  // ---------- 8. Concept Bank Filter & Mask ----------
+  const conceptCountPill = document.getElementById('conceptCountPill');
+  const conceptQuizToggle = document.getElementById('conceptQuizToggle');
+
+  function filterConcepts() {
+    const cards = Array.from(document.querySelectorAll('#conceptGrid .concept-card'));
+    if (!cards.length) return;
+    let visible = 0;
+    cards.forEach(function (card) {
+      const part = card.getAttribute('data-part');
+      const isExt = card.classList.contains('ext-only');
+      const matchesTab = activeConceptPart === 'all' || part === activeConceptPart;
+      const matchesTier = currentViewMode !== 'core' || !isExt;
+      const show = matchesTab && matchesTier;
+      card.classList.toggle('concept-hidden', !show);
+      if (show) visible++;
+    });
+    if (conceptCountPill) conceptCountPill.textContent = '显示 ' + visible + ' / ' + cards.length + ' 题';
+  }
+
+  document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      activeConceptPart = btn.getAttribute('data-concept-part');
+      document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      filterConcepts();
+    });
+  });
+
+  function applyQuizMask(masked) {
+    quizMasked = masked;
+    document.querySelectorAll('#conceptGrid .concept-card').forEach(function (c) { c.classList.toggle('masked', masked); });
+    if (conceptQuizToggle) {
+      conceptQuizToggle.textContent = masked ? '👁️ 显示全部答案' : '🙈 开启遮罩自测';
+      conceptQuizToggle.classList.toggle('active', masked);
+    }
+    localStorage.setItem(STORAGE_PREFIX + 'quizMasked', masked ? '1' : '0');
+  }
+  if (conceptQuizToggle) {
+    conceptQuizToggle.addEventListener('click', function () { applyQuizMask(!quizMasked); });
+  }
+  document.querySelectorAll('#conceptGrid .cq-answer').forEach(function (box) {
+    box.addEventListener('click', function () {
+      const card = box.closest('.concept-card');
+      if (card && card.classList.contains('masked')) card.classList.remove('masked');
+    });
+  });
+
+  // ---------- 9. 2D Mini-Plot Helper (Zero HTML tags inside SVG) ----------
+  function makePlot(w, h, xmin, xmax, ymin, ymax) {
+    const pad = 22;
+    return {
+      w: w, h: h, xmin: xmin, xmax: xmax, ymin: ymin, ymax: ymax,
+      toX: function (x) { return pad + ((x - xmin) / (xmax - xmin)) * (w - 2 * pad); },
+      toY: function (y) { return h - pad - ((y - ymin) / (ymax - ymin)) * (h - 2 * pad); }
+    };
+  }
+  function plotBase(p, xLbl, yLbl) {
+    let s = '<rect x="2" y="2" width="' + (p.w - 4) + '" height="' + (p.h - 4) + '" rx="6" fill="none" stroke="var(--svg-grid)" stroke-width="1"/>';
+    for (let i = 1; i <= 4; i++) {
+      const gx = p.xmin + (i / 5) * (p.xmax - p.xmin);
+      const gy = p.ymin + (i / 5) * (p.ymax - p.ymin);
+      s += '<line x1="' + p.toX(gx).toFixed(1) + '" y1="12" x2="' + p.toX(gx).toFixed(1) + '" y2="' + (p.h - 12) + '" stroke="var(--svg-grid)" stroke-width="0.7"/>';
+      s += '<line x1="12" y1="' + p.toY(gy).toFixed(1) + '" x2="' + (p.w - 12) + '" y2="' + p.toY(gy).toFixed(1) + '" stroke="var(--svg-grid)" stroke-width="0.7"/>';
+    }
+    const ox = p.xmin <= 0 && p.xmax >= 0 ? p.toX(0) : 22;
+    const oy = p.ymin <= 0 && p.ymax >= 0 ? p.toY(0) : p.h - 22;
+    s += '<line x1="' + ox.toFixed(1) + '" y1="10" x2="' + ox.toFixed(1) + '" y2="' + (p.h - 10) + '" stroke="var(--svg-muted)" stroke-width="1.5"/>';
+    s += '<line x1="10" y1="' + oy.toFixed(1) + '" x2="' + (p.w - 10) + '" y2="' + oy.toFixed(1) + '" stroke="var(--svg-muted)" stroke-width="1.5"/>';
+    s += '<text x="' + Math.min(p.w - 45, ox + 6).toFixed(1) + '" y="20" font-size="10.5" font-weight="700" fill="var(--svg-muted)">' + (yLbl || 'y') + '</text>';
+    s += '<text x="' + (p.w - 14) + '" y="' + Math.max(20, oy - 5).toFixed(1) + '" text-anchor="end" font-size="10.5" font-weight="700" fill="var(--svg-muted)">' + (xLbl || 'x') + '</text>';
+    return s;
+  }
+  function plotPath(p, fn, col, dashed) {
+    let d = '', pen = false;
+    for (let i = 0; i <= 100; i++) {
+      const x = p.xmin + (i / 100) * (p.xmax - p.xmin);
+      const y = fn(x);
+      if (!Number.isFinite(y) || y < p.ymin - 1 || y > p.ymax + 1) { pen = false; continue; }
+      d += (pen ? ' L ' : ' M ') + p.toX(x).toFixed(1) + ' ' + p.toY(y).toFixed(1);
+      pen = true;
+    }
+    return d ? '<path d="' + d.trim() + '" fill="none" stroke="' + col + '" stroke-width="2.4"' + (dashed ? ' stroke-dasharray="5,3"' : '') + '/>' : '';
+  }
+
+  // ---------- 10. All 25 Interactive Physics Labs (p01 – p25) ----------
+  function mountPhysicsLab(el) {
+    const t = el.getAttribute('data-lab-type');
+    if (!t) return;
+
+    const bindInputs = function (fn) {
+      el.querySelectorAll('input,select').forEach(function (inp) {
+        inp.addEventListener('input', fn);
+        inp.addEventListener('change', fn);
+      });
+      fn();
+    };
+
+    if (t === 'p01') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 1 交互实验室 · 密度 ρ = m/V 与排水法浮沉判断仪</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>质量 m (g)：<input type="range" id="p1M" min="10" max="300" value="180"><span id="p1ML">180 g</span></label>' +
+        '<label>排开液体体积 ΔV (cm³)：<input type="range" id="p1V" min="10" max="200" value="120"><span id="p1VL">120 cm³</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p1Svg" viewBox="0 0 360 230" width="360" height="230"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p1Out1"></div><div class="readout-pill" id="p1Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const m = Number(el.querySelector('#p1M').value), v = Number(el.querySelector('#p1V').value);
+        el.querySelector('#p1ML').textContent = m + ' g'; el.querySelector('#p1VL').textContent = v + ' cm³';
+        const rho = m / v;
+        const float = rho < 1.0;
+        el.querySelector('#p1Out1').textContent = '密度 ρ = ' + m + ' / ' + v + ' = ' + rho.toFixed(2) + ' g/cm³ (' + Math.round(rho * 1000) + ' kg/m³)';
+        el.querySelector('#p1Out2').textContent = float ? '✅ ρ < 1.0 g/cm³ → 漂浮于纯水面 (Floats)；若完全浸没需细针轻按且留意视差' : Math.abs(rho - 1.0) < 0.02 ? '⚖️ ρ ≈ 1.0 g/cm³ → 悬浮水中' : '⬇️ ρ > 1.0 g/cm³ → 沉入水底 (Sinks)！';
+        const yObj = float ? 86 : 158;
+        el.querySelector('#p1Svg').innerHTML =
+          '<rect x="110" y="34" width="140" height="164" fill="none" stroke="var(--svg-ink)" stroke-width="2.2"/>' +
+          '<rect x="112" y="88" width="136" height="108" fill="rgba(2,132,199,0.22)"/>' +
+          '<rect x="155" y="' + yObj + '" width="50" height="36" rx="4" fill="' + (float ? 'var(--svg-amber)' : 'var(--svg-indigo)') + '"/>' +
+          '<text x="180" y="218" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-ink)">水密度 ρ_water = 1.00 g/cm³</text>';
+      });
+    } else if (t === 'p02') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 2 交互实验室 · v-t 图像加速度斜率与积分面积位移台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>初速度 u (m/s)：<input type="number" id="p2U" value="4"></label>' +
+        '<label>末速度 v (m/s)：<input type="number" id="p2V" value="20"></label>' +
+        '<label>时间 t (s)：<input type="number" id="p2T" value="8" min="1"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p2Svg" viewBox="0 0 360 230" width="360" height="230"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p2Acc"></div><div class="readout-pill" id="p2Dist"></div></div></div></div>';
+      bindInputs(function () {
+        const u = Number(el.querySelector('#p2U').value) || 0, v = Number(el.querySelector('#p2V').value) || 0, tm = Math.max(1, Number(el.querySelector('#p2T').value) || 8);
+        const a = (v - u) / tm, s = 0.5 * (u + v) * tm;
+        const p = makePlot(360, 230, 0, tm * 1.15, Math.min(0, u, v) - 2, Math.max(10, u, v) * 1.15);
+        let svg = plotBase(p, 't (s)', 'v (m/s)');
+        svg += '<polygon points="' + p.toX(0).toFixed(1) + ',' + p.toY(0).toFixed(1) + ' ' + p.toX(0).toFixed(1) + ',' + p.toY(u).toFixed(1) + ' ' + p.toX(tm).toFixed(1) + ',' + p.toY(v).toFixed(1) + ' ' + p.toX(tm).toFixed(1) + ',' + p.toY(0).toFixed(1) + '" fill="rgba(2,132,199,0.2)" stroke="var(--svg-blue)" stroke-width="2"/>';
+        el.querySelector('#p2Svg').innerHTML = svg;
+        el.querySelector('#p2Acc').textContent = '斜率即加速度 a = (v − u)/t = ' + a.toFixed(2) + ' m/s² ' + (a < 0 ? '(减速 Deceleration)' : a > 0 ? '(匀加速)' : '(匀速)');
+        el.querySelector('#p2Dist').textContent = '图像下方面积 = 梯形 ½(u+v)t = ' + s.toFixed(1) + ' m | 平均速率 = ' + (s / tm).toFixed(2) + ' m/s';
+      });
+    } else if (t === 'p03') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 3 交互实验室 · 非弹性碰撞动量守恒 (m₁u₁ = (m₁+m₂)v) 与冲量</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>m₁ (kg)：<input type="number" id="p3M1" value="3" min="1"></label><label>u₁ (m/s)：<input type="number" id="p3U1" value="6"></label>' +
+        '<label>m₂ (kg)：<input type="number" id="p3M2" value="6" min="1"></label><label>作用时间 Δt (s)：<input type="number" id="p3Dt" value="0.2" step="0.1" min="0.05"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p3Out1"></div><div class="readout-pill" id="p3Out2"></div></div></div>';
+      bindInputs(function () {
+        const m1 = Math.max(0.5, Number(el.querySelector('#p3M1').value) || 3), u1 = Number(el.querySelector('#p3U1').value) || 0;
+        const m2 = Math.max(0.5, Number(el.querySelector('#p3M2').value) || 6), dt = Math.max(0.05, Number(el.querySelector('#p3Dt').value) || 0.2);
+        const v = (m1 * u1) / (m1 + m2);
+        const imp = m2 * v;
+        el.querySelector('#p3Out1').textContent = '合体后共同速度 v = m₁u₁/(m₁+m₂) = ' + v.toFixed(2) + ' m/s | 碰前总动量 = ' + (m1 * u1).toFixed(1) + ' kg·m/s';
+        el.querySelector('#p3Out2').textContent = 'm₂ 所受冲量 Δp = ' + imp.toFixed(2) + ' N·s | 平均碰撞力 F = Δp/Δt = ' + (imp / dt).toFixed(1) + ' N（时间越长冲击力越小！）';
+      });
+    } else if (t === 'p04') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 4 交互实验室 · 杠杆力矩平衡 (M = Fd) 与支点向上支持力</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>左力 F₁ (N)：<input type="number" id="p4F1" value="60"></label><label>左臂 d₁ (m)：<input type="number" id="p4D1" value="2.0" step="0.5"></label>' +
+        '<label>右臂 d₂ (m)：<input type="number" id="p4D2" value="3.0" step="0.5" min="0.5"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p4Out1"></div><div class="readout-pill" id="p4Out2"></div></div></div>';
+      bindInputs(function () {
+        const f1 = Number(el.querySelector('#p4F1').value) || 0, d1 = Number(el.querySelector('#p4D1').value) || 0, d2 = Math.max(0.5, Number(el.querySelector('#p4D2').value) || 1);
+        const f2 = (f1 * d1) / d2;
+        el.querySelector('#p4Out1').textContent = '逆时针力矩 F₁d₁ = ' + (f1 * d1).toFixed(1) + ' N·m ⇒ 平衡所需右力 F₂ = ' + f2.toFixed(2) + ' N';
+        el.querySelector('#p4Out2').textContent = '支点向上总支持力 (Net upward force) = F₁ + F₂ = ' + (f1 + f2).toFixed(2) + ' N（平衡需满足合力=0且合力矩=0！）';
+      });
+    } else if (t === 'p05') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 5 交互实验室 · 胡克定律 F = kx 与液体压强 Δp = ρgΔh 计算台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>原长 l₀ (cm)：<input type="number" id="p5L0" value="12"></label><label>劲度系数 k (N/cm)：<input type="number" id="p5K" value="2.5" step="0.5"></label>' +
+        '<label>拉力 F (N)：<input type="number" id="p5F" value="15"></label><label>水深 Δh (m)：<input type="number" id="p5H" value="5"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p5Out1"></div><div class="readout-pill" id="p5Out2"></div></div></div>';
+      bindInputs(function () {
+        const l0 = Number(el.querySelector('#p5L0').value) || 12, k = Math.max(0.1, Number(el.querySelector('#p5K').value) || 2.5);
+        const F = Number(el.querySelector('#p5F').value) || 0, h = Number(el.querySelector('#p5H').value) || 0;
+        const x = F / k;
+        el.querySelector('#p5Out1').textContent = '伸长量 Extension x = F/k = ' + x.toFixed(2) + ' cm ⇒ 总长度 Total length = ' + (l0 + x).toFixed(2) + ' cm（注意考题常问总长还是伸长量！）';
+        el.querySelector('#p5Out2').textContent = '水下 Δh = ' + h + ' m 处液体附加压强 Δp = 1000 × 9.8 × ' + h + ' = ' + (1000 * 9.8 * h).toLocaleString() + ' Pa';
+      });
+    } else if (t === 'p06') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 6 交互实验室 · 自由落体机械能转换 (mgΔh ↔ ½mv²) 与效率 η</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>质量 m (kg)：<input type="number" id="p6M" value="4"></label><label>高度 Δh (m)：<input type="number" id="p6H" value="5"></label>' +
+        '<label>效率 η (%)：<input type="range" id="p6E" min="20" max="100" value="80"><span id="p6EL">80%</span></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p6Out1"></div><div class="readout-pill" id="p6Out2"></div></div></div>';
+      bindInputs(function () {
+        const m = Math.max(0.1, Number(el.querySelector('#p6M').value) || 4), h = Math.max(0, Number(el.querySelector('#p6H').value) || 5), eff = Number(el.querySelector('#p6E').value) / 100;
+        el.querySelector('#p6EL').textContent = Math.round(eff * 100) + '%';
+        const gpe = m * 9.8 * h, ke = gpe * eff, v = Math.sqrt((2 * ke) / m);
+        el.querySelector('#p6Out1').textContent = '初始重力势能 ΔE_p = m × 9.8 × ' + h + ' = ' + gpe.toFixed(1) + ' J | 转化为动能 E_k = ' + ke.toFixed(1) + ' J（热耗散 ' + (gpe - ke).toFixed(1) + ' J）';
+        el.querySelector('#p6Out2').textContent = '到达底端速度 v = √(2gΔh·η) = ' + v.toFixed(2) + ' m/s（注意无空气阻力时 η=100% 且速度与质量 m 无关！）';
+      });
+    } else if (t === 'p07') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 7 交互实验室 · 能源类型、太阳源头辨析与发电对比筛查仪</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>选择发电能源：<select id="p7Src"><option value="solar">太阳能光伏 (Solar cell)</option><option value="wind">风力发电 (Wind)</option><option value="hydro">水力蓄能 (Hydroelectric)</option><option value="geo">地热能 (Geothermal)</option><option value="nuc">核裂变 (Nuclear)</option><option value="tidal">潮汐能 (Tidal)</option><option value="coal">燃煤火电 (Fossil fuel)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p7Out1"></div><div class="readout-pill" id="p7Out2"></div></div></div>';
+      const MAP7 = {
+        solar: { sun: '✅ 直接来自太阳 (Direct solar radiation)', ren: '可再生 (Renewable) · 运行零 CO₂', prop: '直接光生电无需涡轮机；缺点：夜间阴天间歇、占地面积大。' },
+        wind: { sun: '✅ 间接来自太阳 (太阳不均加热引发空气对流)', ren: '可再生 (Renewable) · 零温室气体', prop: '视觉噪音争议与风速不可控间歇发电，需储能或调峰电站。' },
+        hydro: { sun: '✅ 间接来自太阳 (蒸发降雨水循环)', ren: '可再生 (Renewable) · 响应极快 (几秒启动)', prop: '适合峰值调频，但筑坝淹没生态耕地、受地理落差限制。' },
+        geo: { sun: '❌ 非太阳能！源自地球内部放射性衰变余热', ren: '可再生 (Renewable) · 24h 基荷稳定不看天', prop: '仅限板块活跃火山地热带钻井成本极高（全纲三大非太阳能之一！）。' },
+        nuc: { sun: '❌ 非太阳能！重核铀/钚裂变或氢聚变', ren: '不可再生 (Non-renewable) · 运行零 CO₂', prop: '能量密度极高、全天候稳发；痛点：高放核废料千万年封存与事故风险。' },
+        tidal: { sun: '❌ 主要非太阳能！源自月球与太阳引力潮汐牵引', ren: '可再生 (Renewable) · 天文时刻可精准预测', prop: '建设拦潮坝改变河口湿地生态、影响航运，仅特定海湾适用。' },
+        coal: { sun: '✅ 远古太阳能储存 (史前植物煤炭)', ren: '不可再生 (Non-renewable)', prop: '优点：高可靠可随时启停；致命缺点：排放 CO₂ 加剧温室效应与酸雨。' }
+      };
+      bindInputs(function () {
+        const d = MAP7[el.querySelector('#p7Src').value];
+        el.querySelector('#p7Out1').textContent = '溯源检查：' + d.sun + ' | 属性：' + d.ren;
+        el.querySelector('#p7Out2').textContent = '优缺点与原理：' + d.prop;
+      });
+    } else if (t === 'p08') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 8 交互实验室 · 起重机做功 W = Fd、功率 P = W/t 与功率效率计算</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>提升质量 m (kg)：<input type="number" id="p8M" value="50"></label><label>垂直高度 h (m)：<input type="number" id="p8H" value="12"></label>' +
+        '<label>耗时 t (s)：<input type="number" id="p8T" value="10" min="1"></label><label>电机输入功率 P_in (W)：<input type="number" id="p8Pin" value="800" min="1"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p8Out1"></div><div class="readout-pill" id="p8Out2"></div></div></div>';
+      bindInputs(function () {
+        const m = Number(el.querySelector('#p8M').value) || 50, h = Number(el.querySelector('#p8H').value) || 12, tm = Math.max(1, Number(el.querySelector('#p8T').value) || 10);
+        const w = m * 9.8 * h, pout = w / tm, pin = Math.max(pout, Number(el.querySelector('#p8Pin').value) || pout);
+        el.querySelector('#p8Out1').textContent = '有用机械功 W = mgh = ' + w.toFixed(1) + ' J | 有用输出功率 P_out = W/t = ' + pout.toFixed(1) + ' W';
+        el.querySelector('#p8Out2').textContent = '效率 η = (P_out / P_in) × 100% = ' + ((pout / pin) * 100).toFixed(1) + '%（记得先用 g = 9.8 算重量！）';
+      });
+    } else if (t === 'p09') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 9 交互实验室 · 玻意耳定律 p₁V₁ = p₂V₂ 与开尔文温度转换台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>初压 p₁ (kPa)：<input type="number" id="p9P1" value="100"></label><label>初体积 V₁ (cm³)：<input type="number" id="p9V1" value="60"></label>' +
+        '<label>压缩后体积 V₂ (cm³)：<input type="range" id="p9V2" min="15" max="120" value="30"><span id="p9VL">30</span></label>' +
+        '<label>摄氏温度 θ (°C)：<input type="number" id="p9C" value="27"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p9Svg" viewBox="0 0 360 220" width="360" height="220"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p9Out1"></div><div class="readout-pill" id="p9Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const p1 = Number(el.querySelector('#p9P1').value) || 100, v1 = Number(el.querySelector('#p9V1').value) || 60, v2 = Number(el.querySelector('#p9V2').value) || 30;
+        const cTemp = Number(el.querySelector('#p9C').value) || 0, p2 = (p1 * v1) / v2;
+        el.querySelector('#p9VL').textContent = v2 + ' cm³';
+        const plt = makePlot(360, 220, 10, 130, 0, Math.max(450, p2 * 1.15));
+        let svg = plotBase(plt, 'V', 'p');
+        svg += plotPath(plt, function (x) { return (p1 * v1) / x; }, 'var(--svg-amber)', false);
+        svg += '<circle cx="' + plt.toX(v2).toFixed(1) + '" cy="' + plt.toY(p2).toFixed(1) + '" r="5" fill="var(--svg-red)"/>';
+        el.querySelector('#p9Svg').innerHTML = svg;
+        el.querySelector('#p9Out1').textContent = '定温玻意耳：p₂ = p₁V₁/V₂ = ' + p2.toFixed(1) + ' kPa（体积减半 ⇒ 单位体积分子更密集 ⇒ 撞击器壁频率翻倍！）';
+        el.querySelector('#p9Out2').textContent = '开尔文绝对温标 T(K) = θ(°C) + 273 = ' + (cTemp + 273) + ' K（绝对零度 0 K = −273 °C，分子动能最小）';
+      });
+    } else if (t === 'p10') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 10 交互实验室 · 比热容 ΔE = mcΔθ 与电热实验能量守恒计算</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>质量 m (kg)：<input type="number" id="p10M" value="2.0" step="0.5"></label>' +
+        '<label>比热容 c (J/kg°C)：<input type="number" id="p10C" value="4200"></label>' +
+        '<label>温升 Δθ (°C)：<input type="number" id="p10Dt" value="15"></label>' +
+        '<label>加热器功率 P (W)：<input type="number" id="p10P" value="2100"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p10Out1"></div><div class="readout-pill" id="p10Out2"></div></div></div>';
+      bindInputs(function () {
+        const m = Number(el.querySelector('#p10M').value) || 2, c = Number(el.querySelector('#p10C').value) || 4200, dt = Number(el.querySelector('#p10Dt').value) || 15, P = Math.max(10, Number(el.querySelector('#p10P').value) || 2100);
+        const e = m * c * dt, tSec = e / P;
+        el.querySelector('#p10Out1').textContent = '所需内能增量 ΔE = mcΔθ = ' + e.toLocaleString() + ' J (' + (e / 1000).toFixed(1) + ' kJ)';
+        el.querySelector('#p10Out2').textContent = '理想加热时间 t = ΔE/P = ' + tSec.toFixed(1) + ' s | 实际测定 c_exp 常偏大！原因：部分热量散失给空气/杯壁，需加盖保温并取稳态温度';
+      });
+    } else if (t === 'p11') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 11 交互实验室 · 热传导、对流与 Leslie 表面热辐射对比台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>选择对比情景：<select id="p11M"><option value="leslie">Leslie 立方体红外发射对比</option><option value="vacuum">真空保温瓶四层隔热解析</option><option value="breeze">白天海风 vs 夜晚陆风循环</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p11Out1"></div><div class="readout-pill" id="p11Out2"></div></div></div>';
+      const MAP11 = {
+        leslie: ['哑光黑 (Matt Black) = 最佳吸收者 (Good absorber) 且最佳辐射发射者 (Best emitter)；银白亮面 (Shiny Silver) = 最佳反射面 (Best reflector) 且最差发射者！', '实验注意：各面到红外探测器距离必须相同、初始水温相同以保证公平控制变量 (Fair test)。'],
+        vacuum: ['真空夹层 (Vacuum gap) → 阻止传导 Conduction 与对流 Convection（均需介质粒子）；塑料瓶塞+密封盖 → 阻断对流热空气逸散与蒸发。', '内壁镀银表面 (Silvered surfaces) → 将红外辐射发射与吸收降到最低并反射回瓶内！'],
+        breeze: ['白天海风 (Sea breeze)：陆地比热容远小于海水，升温更快 → 陆地热空气膨胀密度变小上升 → 海洋凉爽高压空气吹向陆地补位。', '夜晚陆风 (Land breeze)：陆地降温快、海水仍较暖 → 海上暖空气上升，陆风由陆吹向海。']
+      };
+      bindInputs(function () {
+        const d = MAP11[el.querySelector('#p11M').value];
+        el.querySelector('#p11Out1').textContent = d[0];
+        el.querySelector('#p11Out2').textContent = d[1];
+      });
+    } else if (t === 'p12') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 12 交互实验室 · 声波示波器 (CRO) 振幅响度 / 频率音调波形台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>振幅 (响度 Loudness)：<input type="range" id="p12A" min="1" max="5" step="0.5" value="3"><span id="p12AL">3</span></label>' +
+        '<label>频率系数 (音调 Pitch)：<input type="range" id="p12F" min="1" max="6" step="0.5" value="2"><span id="p12FL">2</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p12Svg" viewBox="0 0 360 210" width="360" height="210"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p12Out1"></div><div class="readout-pill" id="p12Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const amp = Number(el.querySelector('#p12A').value), f = Number(el.querySelector('#p12F').value);
+        el.querySelector('#p12AL').textContent = amp; el.querySelector('#p12FL').textContent = f;
+        const plt = makePlot(360, 210, 0, 10, -5.5, 5.5);
+        let svg = plotBase(plt, 't', 'y');
+        svg += plotPath(plt, function (x) { return amp * Math.sin(f * x * 1.2); }, 'var(--svg-purple)', false);
+        el.querySelector('#p12Svg').innerHTML = svg;
+        el.querySelector('#p12Out1').textContent = '振幅 Amplitude = ' + amp + ' 格 ⇒ 控制响度 (Loudness) | 频率系数 ' + f + ' ⇒ 波数越密音调越高 (Pitch)';
+        el.querySelector('#p12Out2').textContent = '人耳可听声域：20 Hz – 20 000 Hz (> 20 kHz 为超声波 Ultrasound，声波为纵波，真空不能传播！)';
+      });
+    } else if (t === 'p13') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 13 交互实验室 · 斯涅尔定律 n = sin i / sin r 与全内反射临界角光线台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>光由玻璃 (n=<input type="number" id="p13N" value="1.50" step="0.05" min="1.2" max="2.4">) 射向空气 | 入射角 i (°)：<input type="range" id="p13I" min="5" max="80" value="35"><span id="p13IL">35°</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p13Svg" viewBox="0 0 360 220" width="360" height="220"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p13Out1"></div><div class="readout-pill" id="p13Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const n = Math.max(1.1, Number(el.querySelector('#p13N').value) || 1.5), inc = Number(el.querySelector('#p13I').value);
+        el.querySelector('#p13IL').textContent = inc + '°';
+        const cDeg = (Math.asin(1 / n) * 180) / Math.PI;
+        const sinR = n * Math.sin((inc * Math.PI) / 180);
+        const tir = sinR > 1.0001;
+        const radI = (inc * Math.PI) / 180;
+        const ix = 180 - 95 * Math.sin(radI), iy = 110 + 95 * Math.cos(radI);
+        let outRay = '';
+        if (tir) {
+          const rx = 180 + 95 * Math.sin(radI), ry = 110 + 95 * Math.cos(radI);
+          outRay = '<line x1="180" y1="110" x2="' + rx.toFixed(1) + '" y2="' + ry.toFixed(1) + '" stroke="var(--svg-red)" stroke-width="2.6"/>';
+        } else {
+          const radR = Math.asin(Math.min(1, sinR));
+          const rx = 180 + 95 * Math.sin(radR), ry = 110 - 95 * Math.cos(radR);
+          outRay = '<line x1="180" y1="110" x2="' + rx.toFixed(1) + '" y2="' + ry.toFixed(1) + '" stroke="var(--svg-blue)" stroke-width="2.6"/>';
+        }
+        el.querySelector('#p13Svg').innerHTML =
+          '<rect x="10" y="110" width="340" height="100" fill="rgba(2,132,199,0.16)"/>' +
+          '<line x1="10" y1="110" x2="350" y2="110" stroke="var(--svg-ink)" stroke-width="1.5"/>' +
+          '<line x1="180" y1="12" x2="180" y2="208" stroke="var(--svg-muted)" stroke-width="1.4" stroke-dasharray="4,3"/>' +
+          '<line x1="' + ix.toFixed(1) + '" y1="' + iy.toFixed(1) + '" x2="180" y2="110" stroke="var(--svg-amber)" stroke-width="2.6"/>' + outRay +
+          '<text x="20" y="28" font-size="11" font-weight="700" fill="var(--svg-muted)">空气 Air (n=1)</text><text x="20" y="198" font-size="11" font-weight="700" fill="var(--svg-ink)">玻璃 Glass (n=' + n.toFixed(2) + ')</text>';
+        el.querySelector('#p13Out1').textContent = '临界角 Critical angle c = arcsin(1/n) = ' + cDeg.toFixed(1) + '°';
+        el.querySelector('#p13Out2').textContent = tir ? '🔴 i > c！发生全内反射 (Total Internal Reflection, TIR)：反射角 r = i = ' + inc + '°' : '🔵 发生折射离开法线：折射角 r = ' + ((Math.asin(sinR) * 180) / Math.PI).toFixed(1) + '°';
+      });
+    } else if (t === 'p14') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 14 交互实验室 · 波速 v = fλ、周期 T = 1/f 与水波深浅折射台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>频率 f (Hz)：<input type="number" id="p14F" value="10" min="1"></label>' +
+        '<label>深水波长 λ_deep (m)：<input type="number" id="p14L1" value="0.6" step="0.1" min="0.1"></label>' +
+        '<label>浅水波长 λ_shallow (m)：<input type="number" id="p14L2" value="0.3" step="0.1" min="0.05"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p14Out1"></div><div class="readout-pill" id="p14Out2"></div></div></div>';
+      bindInputs(function () {
+        const f = Math.max(0.1, Number(el.querySelector('#p14F').value) || 10), l1 = Number(el.querySelector('#p14L1').value) || 0.6, l2 = Number(el.querySelector('#p14L2').value) || 0.3;
+        el.querySelector('#p14Out1').textContent = '周期 T = 1/f = ' + (1 / f).toFixed(3) + ' s | 深水波速 v₁ = ' + (f * l1).toFixed(2) + ' m/s | 浅水波速 v₂ = ' + (f * l2).toFixed(2) + ' m/s';
+        el.querySelector('#p14Out2').textContent = '水波槽铁律：深水进入浅水时【频率 f 绝对不变】，波速 v 减小、波长 λ 缩短，向法线偏折！';
+      });
+    } else if (t === 'p15') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 15 交互实验室 · 电磁波谱排序、波长换算 (c = 3×10⁸ m/s) 与应用速查</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>波段选择：<select id="p15B"><option value="rad">1. Radio waves 无线电波</option><option value="mic">2. Microwaves 微波</option><option value="ir">3. Infrared 红外线</option><option value="vis">4. Visible light 可见光</option><option value="uv">5. Ultraviolet 紫外线</option><option value="xray">6. X-rays X射线</option><option value="gam">7. Gamma rays γ射线</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p15Out1"></div><div class="readout-pill" id="p15Out2"></div></div></div>';
+      const MAP15 = {
+        rad: ['最长波长 / 最低频率 / 最小光子能量；真空速度 3.0 × 10⁸ m/s。', '应用：广播电视、RFID 射频识别、射电望远镜；通常非电离无明显组织热损伤。'],
+        mic: ['穿透云层与电离层能力强，且能引起食物水分子共振发热。', '应用：卫星电视与 GPS 通信、手机 Wi-Fi/蓝牙、微波炉；危害：过强内部加热人体体液组织。'],
+        ir: ['热物体发射红外辐射（红外热成像）。', '应用：电视遥控器、光纤短距通信、防盗红外警报、电暖器；危害：高强度皮肤灼伤。'],
+        vis: ['红 (700 nm, 折射最少) → 紫 (400 nm, 折射最多)。', '应用：人眼视觉、照相、高速长距离单模光纤宽带通信 (配合全内反射 TIR)。'],
+        uv: ['频率高于紫光，能激发荧光粉发光与灭菌。', '应用：防伪验钞、水消毒；危害：晒伤皮肤、早衰、引发皮肤癌与白内障。'],
+        xray: ['强穿透软组织但被高密度骨骼/金属吸收。', '应用：医学骨科 X 光透视成像、机场行李安检；危害：电离损伤细胞、基因突变致癌。'],
+        gam: ['最短波长 / 最高频率 / 最强电离穿透力；由原子核衰变产生。', '应用：医疗手术器械灭菌、食品保鲜、癌症放疗；危害：严重辐射病、DNA 突变与致癌。']
+      };
+      bindInputs(function () {
+        const d = MAP15[el.querySelector('#p15B').value];
+        el.querySelector('#p15Out1').textContent = d[0]; el.querySelector('#p15Out2').textContent = d[1];
+      });
+    } else if (t === 'p16') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 16 交互实验室 · 软铁 vs 硬钢磁化特性与磁极相互作用判别台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>铁芯材料：<select id="p16Mat"><option value="soft">软铁 (Soft iron) — 电磁铁/变压器铁芯</option><option value="steel">硬钢 (Steel) — 永磁体/指南针</option></select></label>' +
+        '<label>磁化方法：<select id="p16M"><option value="dc">直流通电螺线管 (d.c. solenoid)</option><option value="ac">交流退磁 (a.c. gradually pulled away)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p16Out1"></div><div class="readout-pill" id="p16Out2"></div></div></div>';
+      bindInputs(function () {
+        const soft = el.querySelector('#p16Mat').value === 'soft', ac = el.querySelector('#p16M').value === 'ac';
+        el.querySelector('#p16Out1').textContent = soft ? '软铁特性：极易被磁化 (Easily magnetised)，断电后立刻退磁 (Loses magnetism quickly) ⇒ 制作继电器、电铃与变压器铁芯！' : '硬钢特性：较难被磁化，但磁化后长久保持磁性 (Retains magnetism) ⇒ 制作永久磁铁！';
+        el.querySelector('#p16Out2').textContent = ac ? '退磁要领：置入通有交变电流 (a.c.) 的螺线管内缓慢沿东西方向拉出（或高温加热/重敲击）。' : '注意：只有发生“相互排斥 (Repulsion)”才能100%证明物体本身是磁铁，相互吸引可能是未磁化软铁！';
+      });
+    } else if (t === 'p17') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 17 交互实验室 · 摩擦电子转移与静电感应接地流程模拟</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>静电情景：<select id="p17M"><option value="poly">干布摩擦聚乙烯棒 (Polythene, 带负电)</option><option value="acet">干布摩擦醋酸纤维/玻璃棒 (Perspex/Glass, 带正电)</option><option value="ind">带负电棒感应金属球接地</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p17Out1"></div><div class="readout-pill" id="p17Out2"></div></div></div>';
+      const MAP17 = {
+        poly: ['过程：干布中的自由电子转移 (Electrons transferred) 到聚乙烯棒上 → 棒因电子过剩带负电 (−)，布因失去电子带等量正电 (+)。', '考场禁句：绝不可写“正电荷/质子移动了”！固体中只有带负电的电子可以移动！'],
+        acet: ['过程：有机玻璃/玻璃棒表面电子转移到干布上 → 棒因缺少电子净带正电 (+)，布净带负电 (−)。', '应用原理：高空加油飞机前务必接地导走摩擦累积静电荷，防止电火花引燃航空燃油。'],
+        ind: ['感应三步：① 带负电棒靠近孤立金属球，斥退球内自由电子至远端，近端显 +；② 手指/接地线接球远端，多余电子流入大地 (Earth)；③ 先断开接地再移走棒 → 球净带正电！', '注意断顺序：必须先撤接地线，再撤带电棒！若先撤棒则大地电子会回流中和！']
+      };
+      bindInputs(function () {
+        const d = MAP17[el.querySelector('#p17M').value];
+        el.querySelector('#p17Out1').textContent = d[0]; el.querySelector('#p17Out2').textContent = d[1];
+      });
+    } else if (t === 'p18') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 18 交互实验室 · 欧姆电阻、电功率 P=IV 与电费 kWh 计费台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>电压 V (V)：<input type="number" id="p18V" value="240"></label><label>电流 I (A)：<input type="number" id="p18I" value="5" step="0.5"></label>' +
+        '<label>运行时间 (hours)：<input type="number" id="p18H" value="3" step="0.5"></label><label>电价 (cents/kWh)：<input type="number" id="p18C" value="20"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p18Out1"></div><div class="readout-pill" id="p18Out2"></div></div></div>';
+      bindInputs(function () {
+        const V = Number(el.querySelector('#p18V').value) || 240, I = Math.max(0.01, Number(el.querySelector('#p18I').value) || 5);
+        const h = Number(el.querySelector('#p18H').value) || 3, c = Number(el.querySelector('#p18C').value) || 20;
+        const P = V * I, R = V / I, kwh = (P / 1000) * h;
+        el.querySelector('#p18Out1').textContent = '电阻 R = V/I = ' + R.toFixed(1) + ' Ω | 电功率 P = IV = ' + P.toFixed(0) + ' W (' + (P / 1000).toFixed(2) + ' kW) | 总焦耳 E = ' + (P * h * 3600).toExponential(2) + ' J';
+        el.querySelector('#p18Out2').textContent = '千瓦时用电量 = ' + kwh.toFixed(2) + ' kWh ⇒ 电费 Cost = ' + (kwh * c).toFixed(1) + ' cents (1 kWh = 3.6 × 10⁶ J)';
+      });
+    } else if (t === 'p19') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 19 交互实验室 · NTC 热敏电阻 / LDR 分压传感器动态调节台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>传感器 R₁：<select id="p19S"><option value="ldr">光敏电阻 LDR (底端) + 固定 R₂ (100 Ω)</option><option value="ntc">负温度系数热敏电阻 NTC (底端) + R₂ (100 Ω)</option></select></label>' +
+        '<label>环境强度 (光照/温度 %)：<input type="range" id="p19Env" min="10" max="100" value="50"><span id="p19EL">50%</span></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p19Out1"></div><div class="readout-pill" id="p19Out2"></div></div></div>';
+      bindInputs(function () {
+        const isLdr = el.querySelector('#p19S').value === 'ldr', env = Number(el.querySelector('#p19Env').value);
+        el.querySelector('#p19EL').textContent = env + '%';
+        const rSens = Math.round(500 * Math.exp(-0.025 * env));
+        const vOut = (12 * rSens) / (rSens + 100);
+        el.querySelector('#p19Out1').textContent = (isLdr ? '光敏 LDR' : '热敏 NTC') + ' 当前阻值 R_sensor ≈ ' + rSens + ' Ω | 串联总供电 12 V ⇒ 传感器两端输出电压 V_out = ' + vOut.toFixed(2) + ' V';
+        el.querySelector('#p19Out2').textContent = '环境越暗/越冷 ⇒ LDR/NTC 电阻【剧增】⇒ 根据分压比 V₁/V₂ = R₁/R₂，分得更高电压（可用作天黑自动开灯触发器！）';
+      });
+    } else if (t === 'p20') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 20 交互实验室 · 弗莱明左手定则 FBI 与带电粒子束磁场偏转</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>粒子类型 / 电流方向：<select id="p20Q"><option value="conv">传统电流 / 正电荷向东 (+)</option><option value="elec">电子束 β⁻ 向东射入 (注意反方向!)</option></select></label>' +
+        '<label>磁场 B 方向：<select id="p20B"><option value="in">垂直纸面向里 (Into page ✕)</option><option value="out">垂直纸面向外 (Out of page ⊙)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p20Out1"></div><div class="readout-pill" id="p20Out2"></div></div></div>';
+      bindInputs(function () {
+        const isElec = el.querySelector('#p20Q').value === 'elec', bIn = el.querySelector('#p20B').value === 'in';
+        const up = (!isElec && bIn) || (isElec && !bIn);
+        el.querySelector('#p20Out1').textContent = '左手三指正交判别：食指 B = ' + (bIn ? '入纸面 ✕' : '出纸面 ⊙') + '，中指【传统电流 I】= ' + (isElec ? '向西（与电子速度相反!）' : '向东') + ' ⇒ 拇指受力 F = ' + (up ? '⬆️ 向上 (Upwards)' : '⬇️ 向下 (Downwards)');
+        el.querySelector('#p20Out2').textContent = '直流电机关键：换向器 (Split-ring commutator) 每半圈调换一次线圈电流方向，保证扭矩持续单向转动！';
+      });
+    } else if (t === 'p21') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 21 交互实验室 · 理想变压器与高压输电 I²R 损耗模拟台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>原线圈 V_p (V)：<input type="number" id="p21Vp" value="25000"></label>' +
+        '<label>匝数比 N_p : N_s = <input type="number" id="p21Np" value="100"> : <input type="number" id="p21Ns" value="1600"></label>' +
+        '<label>传送总功率 P (kW)：<input type="number" id="p21P" value="400"></label><label>电缆电阻 R (Ω)：<input type="number" id="p21R" value="10"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p21Out1"></div><div class="readout-pill" id="p21Out2"></div></div></div>';
+      bindInputs(function () {
+        const vp = Number(el.querySelector('#p21Vp').value) || 25000, np = Math.max(1, Number(el.querySelector('#p21Np').value) || 100), ns = Math.max(1, Number(el.querySelector('#p21Ns').value) || 1600);
+        const P = (Number(el.querySelector('#p21P').value) || 400) * 1000, R = Number(el.querySelector('#p21R').value) || 10;
+        const vs = vp * (ns / np), iLine = P / vs, loss = iLine * iLine * R;
+        el.querySelector('#p21Out1').textContent = '副线圈输电电压 V_s = ' + Math.round(vs).toLocaleString() + ' V (' + (vs > vp ? '升压 Step-up' : '降压 Step-down') + ') | 输电电流 I = P/V_s = ' + iLine.toFixed(2) + ' A';
+        el.querySelector('#p21Out2').textContent = '电网热损耗 P_loss = I²R = ' + loss.toFixed(1) + ' W（若不用变压器升压直接 25 kV 输电，损耗高达 ' + (Math.pow(P / vp, 2) * R).toFixed(1) + ' W！）';
+      });
+    } else if (t === 'p22') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 22 交互实验室 · 卢瑟福 α 散射三结论与原子核素构成剖析</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>核素质量数 A：<input type="number" id="p22A" value="238" min="1"></label><label>质子数/原子序数 Z：<input type="number" id="p22Z" value="92" min="1"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p22Out1"></div><div class="readout-pill" id="p22Out2"></div></div></div>';
+      bindInputs(function () {
+        const a = Math.max(1, Math.round(Number(el.querySelector('#p22A').value) || 238)), z = Math.min(a, Math.max(1, Math.round(Number(el.querySelector('#p22Z').value) || 92)));
+        el.querySelector('#p22Out1').textContent = '中性原子组成：质子 Protons = ' + z + ' | 中子 Neutrons (A − Z) = ' + (a - z) + ' | 核外电子 Electrons = ' + z + ' | 原子核净电荷 = +' + z + 'e';
+        el.querySelector('#p22Out2').textContent = 'α 散射极少数大角反弹 (> 90°) ⇒ 证明原子核体积极小、极高密度且集中几乎全部正电荷与质量；绝大多数直接穿透 ⇒ 原子内部绝大部分是真空！';
+      });
+    } else if (t === 'p23') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 23 交互实验室 · 本底辐射扣减、半衰期指数衰减曲线计算器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>总读数 C_total (cpm)：<input type="number" id="p23C0" value="440"></label><label>本底 C_bg (cpm)：<input type="number" id="p23Bg" value="40"></label>' +
+        '<label>半衰期 T½ (days)：<input type="number" id="p23H" value="6" min="1"></label><label>经过时间 t (days)：<input type="range" id="p23T" min="0" max="24" step="3" value="12"><span id="p23TL">12 d</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p23Svg" viewBox="0 0 360 220" width="360" height="220"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p23Out1"></div><div class="readout-pill" id="p23Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const c0 = Number(el.querySelector('#p23C0').value) || 440, bg = Number(el.querySelector('#p23Bg').value) || 40;
+        const h = Math.max(1, Number(el.querySelector('#p23H').value) || 6), tm = Number(el.querySelector('#p23T').value);
+        el.querySelector('#p23TL').textContent = tm + ' days';
+        const pure0 = Math.max(0, c0 - bg), pureT = pure0 * Math.pow(0.5, tm / h), totalT = pureT + bg;
+        const plt = makePlot(360, 220, 0, Math.max(24, tm), 0, c0 * 1.1);
+        let svg = plotBase(plt, 't (d)', 'cpm');
+        svg += plotPath(plt, function () { return bg; }, 'var(--svg-muted)', true);
+        svg += plotPath(plt, function (x) { return bg + pure0 * Math.pow(0.5, x / h); }, 'var(--svg-green)', false);
+        svg += '<circle cx="' + plt.toX(tm).toFixed(1) + '" cy="' + plt.toY(totalT).toFixed(1) + '" r="5" fill="var(--svg-red)"/>';
+        el.querySelector('#p23Svg').innerHTML = svg;
+        el.querySelector('#p23Out1').textContent = '先减本底！纯净初始源活度 = ' + pure0 + ' cpm ⇒ 经 ' + (tm / h).toFixed(1) + ' 个半衰期后纯净计数 = ' + pureT.toFixed(1) + ' cpm';
+        el.querySelector('#p23Out2').textContent = '⚠️ 若题问 GM 计数器最终显示总读数，务必再加回本底：' + pureT.toFixed(1) + ' + ' + bg + ' = ' + totalT.toFixed(1) + ' cpm！';
+      });
+    } else if (t === 'p24') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 24 交互实验室 · 轨道速率 v = 2πr / T 与太阳光行时间 t = d / c 台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>行星/卫星预设：<select id="p24P"><option value="earth">地球 (r = 1.5×10¹¹ m, T = 365 d)</option><option value="moon">月球绕地 (r = 3.84×10⁸ m, T = 27.3 d)</option><option value="mars">火星 (r = 2.28×10¹¹ m, T = 687 d)</option><option value="geo">地球同步卫星 (r = 4.22×10⁷ m, T = 24 h)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p24Out1"></div><div class="readout-pill" id="p24Out2"></div></div></div>';
+      const MAP24 = {
+        earth: { r: 1.5e11, t: 365 * 86400, note: '太阳光到达地球所需时间 t = 1.5×10¹¹ / (3.0×10⁸) = 500 s ≈ 8.3 分钟！' },
+        moon: { r: 3.84e8, t: 27.3 * 86400, note: '月球引力仅为地球 1/6，月相盈亏完整周期约为 28–29.5 天。' },
+        mars: { r: 2.28e11, t: 687 * 86400, note: '火星属于内侧四大岩石小行星之一，距太阳越远引力越弱，公转速率显著小于地球。' },
+        geo: { r: 4.22e7, t: 24 * 3600, note: '赤道正上方同步轨道，与地球自转周期精确同步（24 小时），用于气象/电视直播卫星。' }
+      };
+      bindInputs(function () {
+        const d = MAP24[el.querySelector('#p24P').value];
+        const v = (2 * Math.PI * d.r) / d.t;
+        el.querySelector('#p24Out1').textContent = '轨道周长 2πr = ' + (2 * Math.PI * d.r).toExponential(2) + ' m | 周期 T = ' + d.t.toExponential(2) + ' s ⇒ 平均轨道速率 v = 2πr/T = ' + (v / 1000).toFixed(2) + ' km/s (' + Math.round(v).toLocaleString() + ' m/s)';
+        el.querySelector('#p24Out2').textContent = d.note;
+      });
+    } else if (t === 'p25') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 25 交互实验室 · 哈勃定律 v = H₀d 与宇宙年龄 t ≈ 1/H₀ 计算台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>星系退行速度 v (m/s)：<input type="number" id="p25V" value="4400000" step="100000"></label>' +
+        '<label>哈勃常数 H₀ (s⁻¹)：<input type="number" id="p25H" value="2.2e-18" step="0.1e-18"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p25Out1"></div><div class="readout-pill" id="p25Out2"></div></div></div>';
+      bindInputs(function () {
+        const v = Number(el.querySelector('#p25V').value) || 4.4e6, h0 = Math.max(1e-19, Number(el.querySelector('#p25H').value) || 2.2e-18);
+        const dist = v / h0, ly = dist / 9.5e15, ageS = 1 / h0, ageY = ageS / (365.25 * 86400);
+        el.querySelector('#p25Out1').textContent = '星系距离 d = v/H₀ = ' + dist.toExponential(2) + ' m ≈ ' + ly.toExponential(2) + ' 光年 (1 ly ≈ 9.5 × 10¹⁵ m)';
+        el.querySelector('#p25Out2').textContent = '估计宇宙年龄 t ≈ 1/H₀ = d/v = ' + ageS.toExponential(2) + ' s ≈ ' + (ageY / 1e9).toFixed(1) + ' billion years (十亿年) | 两大证据：遥远星系红移 + CMBR 微波背景辐射';
+      });
+    }
+  }
+
+  document.querySelectorAll('.lab-box[data-lab-type]').forEach(mountPhysicsLab);
+
+  // ---------- 11. Initialize View & Scroll Spy ----------
+  applyViewMode(currentViewMode);
+  applyQuizMask(quizMasked);
+
+  const backTopBtn = document.getElementById('backTopBtn');
+  const trackedSections = Array.from(document.querySelectorAll('.topic-section[id]'));
+  const navLinks = Array.from(document.querySelectorAll('.sidebar .nav-link'));
+
+  window.addEventListener('scroll', function () {
+    if (backTopBtn) backTopBtn.classList.toggle('visible', window.scrollY > 360);
+    const y = window.scrollY + 110;
+    let currentId = '';
+    for (let i = 0; i < trackedSections.length; i++) {
+      if (trackedSections[i].offsetTop <= y && getComputedStyle(trackedSections[i]).display !== 'none') {
+        currentId = trackedSections[i].id;
+      }
+    }
+    navLinks.forEach(function (lnk) {
+      const h = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('active', h === currentId);
+    });
+  }, { passive: true });
+
+  if (backTopBtn) {
+    backTopBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  }
+})();
+
+  </script>
+</body>
+</html>

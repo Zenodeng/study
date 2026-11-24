@@ -1,0 +1,2089 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="--accent: #7C3AED;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch13 · Chapter 13: Light — IGCSE Physics (0625) 精讲</title>
+  <style>
+/* ==========================================================================
+   Cambridge IGCSE Physics (0625 · David Sang 3rd Ed. 2023–2028)
+   25-Chapter Suite Shared Stylesheet (Offline, Zero CDN, Print-Ready)
+   ========================================================================== */
+
+:root {
+  --bg-page: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --bg-sidebar: #FFFFFF;
+  --bg-code: #EFF6FF;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-faint: #64748B;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+
+  --accent: #0284C7;
+  --accent-hover: #0369A1;
+  --accent-soft: #E0F2FE;
+
+  --core-bg: #E0F2FE;
+  --core-text: #075985;
+  --core-border: #BAE6FD;
+  --ext-bg: #FEF3C7;
+  --ext-text: #92400E;
+  --ext-border: #FDE68A;
+
+  --deep-bg: #EFF6FF;
+  --deep-border: #2563EB;
+  --tip-bg: #FFFBEB;
+  --tip-border: #D97706;
+  --mistake-bg: #FFF1F2;
+  --mistake-border: #E11D48;
+  --example-bg: #F0FDF4;
+  --example-border: #16A34A;
+  --formula-bg: #F8FAFC;
+  --formula-border: #0284C7;
+
+  --ok-bg: #DCFCE7;
+  --ok-text: #166534;
+  --ok-border: #86EFAC;
+  --err-bg: #FEE2E2;
+  --err-text: #991B1B;
+  --err-border: #FCA5A5;
+
+  --svg-bg: #FFFFFF;
+  --svg-grid: #E2E8F0;
+  --svg-ink: #0F172A;
+  --svg-muted: #64748B;
+  --svg-blue: #2563EB;
+  --svg-indigo: #4338CA;
+  --svg-teal: #0D9488;
+  --svg-amber: #D97706;
+  --svg-red: #DC2626;
+  --svg-green: #16A34A;
+  --svg-purple: #7C3AED;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.07);
+  --shadow-lg: 0 10px 26px rgba(15, 23, 42, 0.11);
+
+  --sidebar-w: 288px;
+  --topbar-h: 58px;
+  --radius-sm: 7px;
+  --radius-md: 11px;
+  --radius-lg: 16px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Songti SC", "Noto Serif SC", Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+[data-theme="dark"] {
+  --bg-page: #0B1120;
+  --bg-surface: #111827;
+  --bg-subtle: #1E293B;
+  --bg-sidebar: #0F172A;
+  --bg-code: #1E293B;
+  --text-main: #F1F5F9;
+  --text-muted: #CBD5E1;
+  --text-faint: #94A3B8;
+  --border: #1E293B;
+  --border-strong: #334155;
+
+  --accent: #38BDF8 !important;
+  --accent-hover: #7DD3FC;
+  --accent-soft: rgba(56, 189, 248, 0.18);
+
+  --core-bg: rgba(56, 189, 248, 0.16);
+  --core-text: #BAE6FD;
+  --core-border: rgba(56, 189, 248, 0.36);
+  --ext-bg: rgba(245, 158, 11, 0.16);
+  --ext-text: #FDE68A;
+  --ext-border: rgba(245, 158, 11, 0.36);
+
+  --deep-bg: rgba(37, 99, 235, 0.14);
+  --deep-border: #60A5FA;
+  --tip-bg: rgba(217, 119, 6, 0.14);
+  --tip-border: #FBBF24;
+  --mistake-bg: rgba(225, 29, 72, 0.15);
+  --mistake-border: #FB7185;
+  --example-bg: rgba(22, 163, 74, 0.13);
+  --example-border: #4ADE80;
+  --formula-bg: #172033;
+  --formula-border: #38BDF8;
+
+  --ok-bg: rgba(22, 163, 74, 0.22);
+  --ok-text: #BBF7D0;
+  --ok-border: #22C55E;
+  --err-bg: rgba(220, 38, 38, 0.22);
+  --err-text: #FECACA;
+  --err-border: #EF4444;
+
+  --svg-bg: #0F172A;
+  --svg-grid: #334155;
+  --svg-ink: #F1F5F9;
+  --svg-muted: #94A3B8;
+  --svg-blue: #60A5FA;
+  --svg-indigo: #818CF8;
+  --svg-teal: #2DD4BF;
+  --svg-amber: #FBBF24;
+  --svg-red: #F87171;
+  --svg-green: #34D399;
+  --svg-purple: #A78BFA;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .seg-btn.active,
+[data-theme="dark"] .tab-btn.active,
+[data-theme="dark"] .icon-btn.active,
+[data-theme="dark"] .brand-code,
+[data-theme="dark"] .pager-btn.primary { color: #0B1120; }
+[data-theme="dark"] .hub-foot { color: #38BDF8; }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--topbar-h) + 18px); }
+body { margin: 0; font-family: var(--font-sans); background: var(--bg-page); color: var(--text-main); line-height: 1.72; font-size: 15.5px; -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4 { margin: 0 0 0.55em 0; line-height: 1.32; font-weight: 700; color: var(--text-main); }
+p { margin: 0 0 0.9em 0; }
+ul, ol { margin: 0 0 1em 0; padding-left: 1.45em; }
+li { margin-bottom: 0.35em; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { font-family: var(--font-mono); font-size: 0.9em; background: var(--bg-code); color: var(--accent); padding: 2px 6px; border-radius: 4px; }
+
+/* View Mode Filters (Core / Extended / SME) */
+body.mode-core .ext-only,
+body.mode-core .badge-ext { display: none !important; }
+body.mode-ext .ext-only { border-left: 3px solid var(--ext-border); padding-left: 10px; background: rgba(245, 158, 11, 0.06); border-radius: 4px; }
+body.mode-book .sme-section { display: none !important; }
+body.mode-sme .book-section { display: none !important; }
+
+/* Physics Formula & Nuclide Formatting */
+.math { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 1.04em; }
+.frac { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; font-size: 0.88em; line-height: 1.1; margin: 0 2px; font-style: normal; font-family: Georgia, "Times New Roman", serif; }
+.frac .num { border-bottom: 1.5px solid currentColor; padding: 0 4px 1px 4px; }
+.frac .den { padding: 1px 4px 0 4px; }
+.sqrt { display: inline-flex; align-items: baseline; font-family: Georgia, "Times New Roman", serif; }
+.sqrt-rad { border-top: 1.4px solid currentColor; padding: 0 3px 0 2px; margin-left: 1px; }
+.nuclide { display: inline-flex; align-items: center; gap: 1px; font-family: Georgia, "Times New Roman", serif; font-weight: 700; vertical-align: middle; margin: 0 2px; }
+.nuc-nums { display: inline-flex; flex-direction: column; text-align: right; font-size: 0.72em; line-height: 1.05; }
+.formula-card { background: var(--formula-bg); border: 1.5px solid var(--border-strong); border-left: 5px solid var(--formula-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; font-size: 15px; }
+.formula-main { font-family: Georgia, "Times New Roman", serif; font-size: 16.5px; font-weight: 700; color: var(--accent); margin: 4px 0 6px 0; }
+
+/* Topbar */
+.topbar {
+  position: sticky; top: 0; z-index: 100; height: var(--topbar-h);
+  background: var(--bg-surface); border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm); display: flex; align-items: center;
+  justify-content: space-between; gap: 10px; padding: 0 16px;
+}
+.topbar-left { display: flex; align-items: center; gap: 8px; min-width: 0; flex-shrink: 1; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 34px; padding: 0 10px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--bg-surface); color: var(--text-main); font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; text-decoration: none; }
+.icon-btn:hover { background: var(--bg-subtle); border-color: var(--accent); text-decoration: none; }
+.icon-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.menu-toggle { display: none; }
+.brand-pill { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; white-space: nowrap; flex-shrink: 1; min-width: 0; }
+.brand-code { background: var(--accent); color: #fff; padding: 2px 8px; border-radius: 5px; font-size: 12px; letter-spacing: 0.4px; white-space: nowrap; flex-shrink: 0; }
+.brand-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 215px; }
+.search-wrap { position: relative; flex: 1 1 150px; min-width: 130px; max-width: 260px; }
+.search-input { width: 100%; height: 34px; padding: 0 30px 0 32px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--bg-subtle); color: var(--text-main); font-size: 13.5px; outline: none; }
+.search-input:focus { border-color: var(--accent); background: var(--bg-surface); }
+.search-input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.search-icon { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); color: var(--text-faint); font-size: 13px; pointer-events: none; }
+.search-clear { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); border: none; background: transparent; color: var(--text-faint); cursor: pointer; font-size: 14px; display: none; }
+.search-results-bar { display: none; background: var(--accent-soft); border-bottom: 1px solid var(--border); padding: 8px 20px; font-size: 13.5px; color: var(--text-main); align-items: center; justify-content: space-between; gap: 12px; }
+.search-results-bar.visible { display: flex; }
+.topbar-controls { display: flex; align-items: center; gap: 7px; flex-shrink: 0; }
+.seg-group { display: inline-flex; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); overflow: hidden; background: var(--bg-subtle); }
+.seg-btn { border: none; background: transparent; color: var(--text-muted); padding: 6px 8px; font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.seg-btn.active { background: var(--accent); color: #fff; }
+.progress-chip { display: flex; align-items: center; gap: 7px; padding: 4px 10px; border-radius: 999px; background: var(--bg-subtle); border: 1px solid var(--border); font-size: 12.5px; font-weight: 600; white-space: nowrap; }
+.progress-track { width: 50px; height: 7px; background: var(--border-strong); border-radius: 99px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), #0D9488); transition: width 0.25s ease; }
+
+.app-layout { display: flex; min-height: calc(100vh - var(--topbar-h)); }
+.sidebar { width: var(--sidebar-w); flex-shrink: 0; background: var(--bg-sidebar); border-right: 1px solid var(--border); position: sticky; top: var(--topbar-h); height: calc(100vh - var(--topbar-h)); overflow-y: auto; padding: 14px 10px 44px 10px; }
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 99px; }
+.nav-unit { margin-bottom: 8px; }
+.nav-unit-btn { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border: none; border-radius: var(--radius-sm); background: transparent; color: var(--text-main); font-size: 13px; font-weight: 700; text-align: left; cursor: pointer; }
+.nav-unit-btn:hover { background: var(--bg-subtle); }
+.nav-unit-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.nav-unit-title { flex: 1; display: flex; align-items: center; gap: 7px; line-height: 1.3; }
+.nav-chevron { font-size: 11px; color: var(--text-faint); transition: transform 0.2s; }
+.nav-unit.collapsed .nav-chevron { transform: rotate(-90deg); }
+.nav-unit.collapsed .nav-links { display: none; }
+.nav-links { list-style: none; padding: 2px 0 4px 12px; margin: 0 0 0 14px; border-left: 2px solid var(--border); }
+.nav-link { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 5px 9px; margin: 2px 0; border-radius: var(--radius-sm); color: var(--text-muted); font-size: 12.6px; line-height: 1.35; text-decoration: none; }
+.nav-link:hover { background: var(--bg-subtle); color: var(--text-main); text-decoration: none; }
+.nav-link.active { background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+.nav-done-mark { color: #10B981; font-weight: 800; font-size: 12px; opacity: 0; }
+.nav-link.mastered .nav-done-mark { opacity: 1; }
+.main-content { flex: 1; min-width: 0; padding: 26px 32px 80px 32px; }
+.content-inner { max-width: 960px; margin: 0 auto; }
+
+.hero-card { background: linear-gradient(135deg, #0F172A 0%, var(--accent) 58%, #0F766E 100%); color: #fff; border-radius: var(--radius-lg); padding: 28px 32px; margin-bottom: 26px; box-shadow: var(--shadow-lg); }
+.hero-card h1 { color: #fff; font-size: 25px; margin-bottom: 8px; letter-spacing: -0.3px; }
+.hero-sub { color: rgba(255,255,255,0.92); font-size: 14.8px; max-width: 820px; margin-bottom: 16px; }
+.hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.hero-pill { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.28); color: #fff; padding: 4px 11px; border-radius: 999px; font-size: 12.5px; font-weight: 600; }
+.unit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+.unit-tile { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.24); border-radius: var(--radius-md); padding: 12px 14px; color: #fff; text-decoration: none; display: block; transition: transform 0.15s, background 0.15s; }
+.unit-tile:hover { transform: translateY(-2px); background: rgba(255,255,255,0.22); text-decoration: none; }
+.unit-tile-num { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.7px; opacity: 0.85; font-weight: 700; }
+.unit-tile-title { font-size: 14.5px; font-weight: 700; margin: 3px 0; }
+
+.topic-section { background: var(--bg-surface); border: 1px solid var(--border); border-top: 4px solid var(--accent); border-radius: var(--radius-md); padding: 24px 26px; margin-bottom: 24px; box-shadow: var(--shadow-sm); }
+.topic-section.search-dim { display: none; }
+.section-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 2px solid var(--border); }
+.section-title-group h3 { font-size: 19.5px; margin-bottom: 4px; }
+.section-en-sub { font-size: 13.5px; color: var(--text-faint); font-weight: 600; }
+.tier-row { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 7px; }
+.badge-core, .badge-ext { display: inline-block; font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.badge-core { background: var(--core-bg); color: var(--core-text); border: 1px solid var(--core-border); }
+.badge-ext { background: var(--ext-bg); color: var(--ext-text); border: 1px solid var(--ext-border); }
+.master-btn { flex-shrink: 0; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-muted); font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.master-btn:hover { border-color: #10B981; color: #10B981; }
+.master-btn.is-mastered { background: var(--ok-bg); color: var(--ok-text); border-color: var(--ok-border); }
+.subtopic { margin-bottom: 20px; }
+.subtopic:last-of-type { margin-bottom: 12px; }
+.subtopic h4 { font-size: 16px; color: var(--accent); margin: 0 0 10px 0; padding-bottom: 4px; border-bottom: 1px dashed var(--border); display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+
+.worked-example { background: var(--example-bg); border: 1px solid var(--border); border-left: 4px solid var(--example-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; }
+.worked-title { font-weight: 800; font-size: 14px; color: var(--example-border); margin-bottom: 6px; }
+.callout { border-radius: var(--radius-sm); padding: 13px 16px; margin: 14px 0; border-left: 4px solid var(--border-strong); font-size: 14.5px; }
+.callout-title { font-weight: 800; font-size: 13.5px; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+.deep-dive { background: var(--deep-bg); border-left-color: var(--deep-border); }
+.deep-dive .callout-title { color: var(--deep-border); }
+.examiner-tip { background: var(--tip-bg); border-left-color: var(--tip-border); }
+.examiner-tip .callout-title { color: var(--tip-border); }
+.common-mistake { background: var(--mistake-bg); border-left-color: var(--mistake-border); }
+.common-mistake .callout-title { color: var(--mistake-border); }
+
+.table-wrap { width: 100%; overflow-x: auto; margin: 14px 0; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+table.phy-table { width: 100%; border-collapse: collapse; font-size: 13.8px; text-align: left; }
+table.phy-table th { background: var(--bg-subtle); color: var(--text-main); font-weight: 700; padding: 9px 12px; border-bottom: 2px solid var(--border-strong); white-space: nowrap; }
+table.phy-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.phy-table tr:last-child td { border-bottom: none; }
+table.phy-table tbody tr:hover { background: var(--bg-subtle); }
+
+.svg-figure { background: var(--svg-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px; margin: 16px 0; text-align: center; break-inside: avoid; }
+.svg-figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.svg-caption { margin-top: 8px; font-size: 13px; color: var(--text-faint); font-weight: 600; }
+
+/* Interactive Physics Labs */
+.lab-box { background: var(--bg-subtle); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px; margin: 18px 0; break-inside: avoid; }
+.lab-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+.lab-title { font-size: 15.5px; font-weight: 800; color: var(--accent); display: flex; align-items: center; gap: 7px; }
+.lab-panel { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; }
+.lab-controls { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-bottom: 12px; align-items: center; }
+.lab-controls label { font-size: 13px; font-weight: 700; color: var(--text-muted); display: inline-flex; align-items: center; gap: 6px; }
+.lab-controls input[type="number"], .lab-controls select { padding: 5px 8px; border-radius: 6px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-main); font-size: 13.2px; font-weight: 700; }
+.lab-controls input[type="number"] { min-width: 108px; width: 112px; text-align: center; }
+.lab-controls input[type="range"] { width: 120px; accent-color: var(--accent); }
+.lab-grid-2col { display: grid; grid-template-columns: 1.12fr 1fr; gap: 14px; align-items: start; }
+@media (max-width: 820px) { .lab-grid-2col { grid-template-columns: 1fr; } }
+.tab-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.tab-btn { border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-muted); padding: 5px 10px; border-radius: 6px; font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.tab-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.lab-readout { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; font-size: 13.2px; font-weight: 600; }
+.readout-pill { background: var(--bg-page); border: 1px solid var(--border-strong); padding: 7px 10px; border-radius: 6px; width: 100%; line-height: 1.5; }
+
+/* Practice Questions & Concepts */
+.practice-block { margin-top: 18px; padding-top: 14px; border-top: 2px dashed var(--border-strong); }
+.practice-heading { font-size: 16px; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.exam-q { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 14px; break-inside: avoid; }
+.exam-q-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; font-size: 12.5px; }
+.q-tag { font-weight: 800; color: var(--accent); background: var(--accent-soft); padding: 2px 8px; border-radius: 5px; }
+.q-marks { font-weight: 700; color: var(--text-faint); }
+.q-stem-en { font-size: 14.8px; font-weight: 600; color: var(--text-main); margin-bottom: 6px; }
+.q-stem-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 12px; }
+.mcq-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin-bottom: 10px; }
+.mcq-opt { text-align: left; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 13.8px; cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.mcq-opt:hover { border-color: var(--accent); background: var(--bg-subtle); }
+.mcq-opt.correct { background: var(--ok-bg); border-color: var(--ok-border); color: var(--ok-text); font-weight: 700; }
+.mcq-opt.wrong { background: var(--err-bg); border-color: var(--err-border); color: var(--err-text); }
+.mcq-feedback { display: none; font-size: 13.5px; padding: 10px 12px; border-radius: var(--radius-sm); margin-top: 8px; }
+.mcq-feedback.visible { display: block; }
+.mcq-feedback.ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.mcq-feedback.err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+details.ms-details { margin-top: 10px; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 12px; }
+details.ms-details summary { cursor: pointer; font-weight: 700; font-size: 13.5px; color: var(--accent); user-select: none; }
+.ms-body { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 13.8px; }
+.ms-mark { display: inline-block; font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--core-text); background: var(--core-bg); padding: 1px 5px; border-radius: 4px; margin-right: 4px; }
+.ms-cn { color: var(--text-muted); margin-top: 4px; }
+
+.concept-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 14px; margin-bottom: 18px; }
+.concept-filter-group { display: flex; flex-wrap: wrap; gap: 6px; }
+.concept-actions { display: flex; align-items: center; gap: 10px; }
+.concept-count-pill { font-size: 12.5px; font-weight: 700; color: var(--text-muted); }
+.concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 14px; }
+.concept-card { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; gap: 8px; break-inside: avoid; }
+.concept-card:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
+.concept-card.concept-hidden { display: none !important; }
+.cq-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.cq-en { font-weight: 700; font-size: 14.5px; color: var(--text-main); line-height: 1.45; }
+.cq-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 2px; }
+.cq-answer { position: relative; margin-top: auto; background: var(--bg-surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius-sm); padding: 11px 13px; font-size: 13.8px; line-height: 1.6; }
+.kw { color: var(--accent); background: var(--accent-soft); padding: 0 4px; border-radius: 3px; font-weight: 700; }
+.cq-mask-hint { display: none; }
+.concept-card.masked .cq-answer { cursor: pointer; }
+.concept-card.masked .cq-answer-inner { filter: blur(7px); opacity: 0.22; user-select: none; pointer-events: none; transition: filter 0.2s, opacity 0.2s; }
+.concept-card.masked .cq-mask-hint { display: flex; align-items: center; justify-content: center; position: absolute; inset: 0; font-size: 13.5px; font-weight: 700; color: var(--accent); background: rgba(255,255,255,0.25); border-radius: var(--radius-sm); }
+[data-theme="dark"] .concept-card.masked .cq-mask-hint { background: rgba(15,23,42,0.35); }
+
+/* Chapter Pager & Hub Group Headings */
+.chapter-pager { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 28px; padding: 16px 20px; background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); }
+.pager-btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: var(--radius-sm); background: var(--bg-subtle); border: 1px solid var(--border-strong); color: var(--text-main); font-size: 13.5px; font-weight: 700; text-decoration: none; }
+.pager-btn:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); text-decoration: none; }
+.pager-btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.pager-btn.primary:hover { background: var(--accent-hover); color: #fff; }
+
+.hub-block-title { font-size: 18px; font-weight: 800; margin: 26px 0 12px 0; padding-bottom: 6px; border-bottom: 2px solid var(--border-strong); display: flex; align-items: center; gap: 8px; }
+.hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 15px; }
+.hub-card { display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-surface); border: 1px solid var(--border-strong); border-top: 5px solid var(--card-color, var(--accent)); border-radius: var(--radius-md); padding: 16px 18px 14px 18px; color: var(--text-main); text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; box-shadow: var(--shadow-sm); }
+.hub-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--card-color, var(--accent)); text-decoration: none; }
+.hub-card-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+.hub-badge { font-size: 11.5px; font-weight: 800; color: #fff; background: var(--card-color, var(--accent)); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill { font-size: 12px; font-weight: 700; color: var(--text-muted); background: var(--bg-subtle); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill.done { background: var(--ok-bg); color: var(--ok-text); }
+.hub-title { font-size: 16px; font-weight: 800; margin-bottom: 3px; }
+.hub-en { font-size: 12.6px; color: var(--text-faint); font-weight: 600; margin-bottom: 8px; }
+.hub-sub { font-size: 12.8px; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; }
+.hub-foot { font-size: 13px; font-weight: 700; color: var(--card-color, var(--accent)); display: flex; align-items: center; justify-content: space-between; }
+
+.back-top-btn { position: fixed; right: 22px; bottom: 22px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); box-shadow: var(--shadow-md); cursor: pointer; display: none; align-items: center; justify-content: center; font-size: 17px; font-weight: 800; z-index: 80; }
+.back-top-btn.visible { display: flex; }
+
+@media (max-width: 1200px) {
+  .brand-title, .btn-label { display: none; }
+  .seg-btn { padding: 6px 8px; }
+}
+@media (max-width: 980px) {
+  .menu-toggle { display: inline-flex; }
+  .sidebar { position: fixed; left: 0; top: var(--topbar-h); z-index: 95; transform: translateX(-100%); transition: transform 0.22s ease; box-shadow: var(--shadow-lg); }
+  .sidebar.open { transform: translateX(0); }
+  .main-content { padding: 18px 14px 64px 14px; }
+  .topic-section { padding: 18px 16px; }
+  .progress-chip { display: none; }
+  .search-wrap { min-width: 130px; }
+}
+@media (max-width: 640px) {
+  .topbar { padding: 0 10px; gap: 6px; }
+  .search-wrap { max-width: none; }
+  .concept-grid, .hub-grid { grid-template-columns: 1fr; }
+}
+@media print {
+  .topbar, .sidebar, .search-results-bar, .back-top-btn, .master-btn, .lab-controls button, .concept-toolbar, .cq-mask-hint, .chapter-pager { display: none !important; }
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  .main-content { padding: 0 !important; }
+  .content-inner { max-width: 100% !important; }
+  .topic-section, .exam-q, .callout, .worked-example, .svg-figure, .concept-card { box-shadow: none !important; break-inside: avoid; border-color: #CBD5E1 !important; }
+  details.ms-details, details.ms-details .ms-body, .mcq-feedback { display: block !important; }
+  .concept-card.masked .cq-answer-inner { filter: none !important; opacity: 1 !important; }
+}
+
+  </style>
+</head>
+<body data-chapter-code="Ch13">
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="展开目录">☰ 目录</button>
+      <a class="icon-btn" href="index.html" title="返回 25 章总目录"><span>🏠</span><span class="btn-label">总目录</span></a>
+      <div class="brand-pill">
+        <span class="brand-code">Ch13</span>
+        <span class="brand-title">Chapter 13: Light</span>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="search" id="searchInput" class="search-input" placeholder="搜索公式、实验误差、真题与概念..." autocomplete="off" />
+      <button type="button" class="search-clear" id="searchClear" title="清空搜索">✕</button>
+    </div>
+
+    <div class="topbar-controls">
+      <div class="seg-group" role="group" aria-label="考试级别筛选">
+        <button type="button" class="seg-btn active" data-view-mode="all">All</button>
+        <button type="button" class="seg-btn" data-view-mode="core">Core</button>
+        <button type="button" class="seg-btn" data-view-mode="ext">Extended</button>
+        <button type="button" class="seg-btn" data-view-mode="sme">真题</button>
+      </div>
+
+      <div class="progress-chip" title="本章小节与真题模块掌握进度">
+        <span id="progressText">0/0</span>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+
+      <button type="button" class="icon-btn" id="toggleAllMs" title="展开或收起全部解析"><span>📝</span><span class="btn-label">展开解析</span></button>
+      <button type="button" class="icon-btn" id="themeToggle" title="切换亮色/暗色主题"><span id="themeIcon">🌙</span><span class="btn-label">主题</span></button>
+      <button type="button" class="icon-btn" id="printBtn" title="打印或导出为 PDF"><span>🖨️</span><span class="btn-label">导出 PDF</span></button>
+    </div>
+  </header>
+
+  <div class="search-results-bar" id="searchBar">
+    <span id="searchSummary">找到 0 个匹配板块</span>
+    <button type="button" class="icon-btn" id="searchResetBtn">重置过滤</button>
+  </div>
+
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="本章物理知识点导航">
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #7C3AED;"></span>Ch13 本章小节目录</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#sec-13-1"><span>13.1 光的反射与平面镜成像 (Reflection &amp; Plane Mirrors)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-13-2"><span>13.2 光的折射与折射率 (Refraction &amp; Refractive Index)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-13-3"><span>13.3 临界角、全内反射与光纤通信 (Critical Angle, TIR &amp; Optical Fibres)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-13-4"><span>13.4 薄透镜成像规律与近远视矫正 (Thin Lenses &amp; Eye Defects)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-sme"><span>SaveMyExams 精选真题与标准评分细则 (Ch 13 Past Paper Practice)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#app-concepts"><span>🧠 第 13 章 · 中英核心概念与满分背写卡 (Concept Bank)</span><span class="nav-done-mark">✓</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #0D9488;"></span>全书 25 章快速切换</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="Ch01_Making_Measurements.html"><span>Ch01 · 长度体积测量、密度浮沉与周期测定</span></a></li>
+          <li><a class="nav-link" href="Ch02_Describing_Motion.html"><span>Ch02 · 速率、加速度与 s-t / v-t 运动图像</span></a></li>
+          <li><a class="nav-link" href="Ch03_Forces_and_Motion.html"><span>Ch03 · 牛顿定律、动量冲量、终端速度与矢量合成</span></a></li>
+          <li><a class="nav-link" href="Ch04_Turning_Effects.html"><span>Ch04 · 力矩平衡原理、重心与稳定性</span></a></li>
+          <li><a class="nav-link" href="Ch05_Forces_and_Matter.html"><span>Ch05 · 固体形变、胡克定律 F=kx 与固体/液体压强</span></a></li>
+          <li><a class="nav-link" href="Ch06_Energy_Stores_Transfers.html"><span>Ch06 · 8 大能量存储、4 路径转移、Sankey 图与机械能</span></a></li>
+          <li><a class="nav-link" href="Ch07_Energy_Resources.html"><span>Ch07 · 化石能源、核能与可再生发电技术评估</span></a></li>
+          <li><a class="nav-link" href="Ch08_Work_and_Power.html"><span>Ch08 · 机械功 W=Fd、功率 P=W/t 与效率</span></a></li>
+          <li><a class="nav-link" href="Ch09_Kinetic_Particle_Model.html"><span>Ch09 · 物态微观模型、布朗运动、绝对温标与气体定律</span></a></li>
+          <li><a class="nav-link" href="Ch10_Thermal_Properties.html"><span>Ch10 · 热膨胀、比热容 c=ΔE/(mΔθ)、物态变化与蒸发冷却</span></a></li>
+          <li><a class="nav-link" href="Ch11_Thermal_Energy_Transfers.html"><span>Ch11 · 热传导、对流、红外辐射与保温综合应用</span></a></li>
+          <li><a class="nav-link" href="Ch12_Sound.html"><span>Ch12 · 声波产生、纵波疏密部、回声测速与示波器波形</span></a></li>
+          <li><a class="nav-link active" href="Ch13_Light.html"><span>Ch13 · 平面镜反射、折射斯涅尔定律、全反射与透镜成像</span></a></li>
+          <li><a class="nav-link" href="Ch14_Properties_of_Waves.html"><span>Ch14 · 横波纵波、v=fλ 与水波反射折射衍射</span></a></li>
+          <li><a class="nav-link" href="Ch15_Spectra.html"><span>Ch15 · 光的色散、七大电磁波谱与模拟数字通信</span></a></li>
+          <li><a class="nav-link" href="Ch16_Magnetism.html"><span>Ch16 · 磁化、软铁与硬钢磁滞差异及磁场线</span></a></li>
+          <li><a class="nav-link" href="Ch17_Static_Electricity.html"><span>Ch17 · 摩擦电子转移、导体绝缘体、感应与电场线</span></a></li>
+          <li><a class="nav-link" href="Ch18_Electrical_Quantities.html"><span>Ch18 · 电流、电动势/电压、欧姆定律 I-V 曲线与电功率 kWh</span></a></li>
+          <li><a class="nav-link" href="Ch19_Electrical_Circuits.html"><span>Ch19 · 电路符号、串并联、LDR/NTC 分压器与用电安全</span></a></li>
+          <li><a class="nav-link" href="Ch20_Electromagnetic_Forces.html"><span>Ch20 · 电流磁场、弗莱明左手定则、粒子偏转与直流电机</span></a></li>
+          <li><a class="nav-link" href="Ch21_Electromagnetic_Induction.html"><span>Ch21 · 电磁感应、楞次定律、交流发电机与变压器高压输电</span></a></li>
+          <li><a class="nav-link" href="Ch22_The_Nuclear_Atom.html"><span>Ch22 · α 金箔散射原子核、同位素及核裂变与聚变</span></a></li>
+          <li><a class="nav-link" href="Ch23_Radioactivity.html"><span>Ch23 · 本底辐射、α/β/γ 性质、衰变方程与半衰期计算</span></a></li>
+          <li><a class="nav-link" href="Ch24_Earth_and_Solar_System.html"><span>Ch24 · 自转四季、月相、行星吸积盘形成与轨道速率 v=2πr/T</span></a></li>
+          <li><a class="nav-link" href="Ch25_Stars_and_Universe.html"><span>Ch25 · 恒星全生命周期、红移 CMBR 大爆炸与哈勃定律 H₀</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-inner">
+        <section class="hero-card" id="top">
+          <h1>Chapter 13: Light · 第 13 章 · 平面镜反射、折射斯涅尔定律、全反射与透镜成像</h1>
+          <p class="hero-sub">
+            完整覆盖 <strong>David Sang 第 3 版教材（2023–2028 新考纲 0625/0972 · 取 g = 9.8 m/s² / 9.8 N/kg）</strong>本章全部 Core 与 Extended 知识点：<code>13.1 反射与虚像 · 13.2 折射 n=sin i/sin r=c/v · 13.3 全反射 sin c=1/n 与光纤 · 13.4 凸凹透镜光路及近远视矫正</code>，配齐微观机理解释、Paper 6 实验控制、SaveMyExams 真题与直接背写概念卡。
+          </p>
+          <div class="hero-badges">
+            <span class="hero-pill">⚛️ David Sang 3rd Ed. · 2023–2028</span>
+            <span class="hero-pill">📐 Core + Extended 全区分</span>
+            <span class="hero-pill">🧪 本章专属交互物理实验台</span>
+            <a class="hero-pill" href="#sec-sme" style="text-decoration: none;">📝 直达 SaveMyExams 真题 →</a>
+            <a class="hero-pill" href="#app-concepts" style="text-decoration: none; background: rgba(255,255,255,0.24);">🧠 直达中英概念默写库 →</a>
+          </div>
+          <div class="unit-grid">
+            <a class="unit-tile" href="#sec-13-1">
+              <div class="unit-tile-num">Section 13-1</div>
+              <div class="unit-tile-title">13.1 光的反射与平面镜成像 (Reflection &amp; Plane Mirrors)</div>
+            </a>
+            <a class="unit-tile" href="#sec-13-2">
+              <div class="unit-tile-num">Section 13-2</div>
+              <div class="unit-tile-title">13.2 光的折射与折射率 (Refraction &amp; Refractive Index)</div>
+            </a>
+            <a class="unit-tile" href="#sec-13-3">
+              <div class="unit-tile-num">Section 13-3</div>
+              <div class="unit-tile-title">13.3 临界角、全内反射与光纤通信 (Critical Angle, TIR &amp; Optical Fibres)</div>
+            </a>
+            <a class="unit-tile" href="#sec-13-4">
+              <div class="unit-tile-num">Section 13-4</div>
+              <div class="unit-tile-title">13.4 薄透镜成像规律与近远视矫正 (Thin Lenses &amp; Eye Defects)</div>
+            </a>
+          </div>
+        </section>
+
+        <div id="emptySearchNotice" class="callout deep-dive" style="display: none;">
+          <div class="callout-title">🔍 未找到匹配内容</div>
+          <p style="margin-bottom: 0;">请尝试更换关键词，或点击右上角“重置过滤”恢复显示。</p>
+        </div>
+
+<article class="topic-section book-section" id="sec-13-1">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>13.1 光的反射与平面镜成像 (Reflection &amp; Plane Mirrors)</h3>
+      <div class="section-en-sub">Law of Reflection (i = r) · Normal Line · Virtual Upright Laterally Inverted Image · Optical Pins Method</div>
+      <div class="tier-row"><span class="badge-core">Core</span></div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-13-1">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>一、反射定律与核心术语（角度必须量至法线！） <span class="badge-core">Core</span></h4>
+    <ul>
+      <li><strong>法线 (Normal)</strong>：在光线击中镜面（或界面）的入射点，作一条<strong>垂直于镜面 (90°)</strong> 的虚辅助线。</li>
+      <li><strong>入射角 (Angle of incidence, <span class="math">i</span>)</strong>：<strong>入射光线</strong>与<strong>法线</strong>之间的夹角。</li>
+      <li><strong>反射角 (Angle of reflection, <span class="math">r</span>)</strong>：<strong>反射光线</strong>与<strong>法线</strong>之间的夹角。</li>
+      <li><strong>光的反射定律 (Law of reflection)</strong>：<strong>入射角等于反射角 (<span class="math">i = r</span>)</strong>，且入射光线、反射光线与法线在同一平面内。</li>
+    </ul>
+
+    <div class="callout common-mistake">
+      <div class="callout-title">⚠️ 零分高频坑 · 千万别量错夹角！</div>
+      <p style="margin-bottom: 0;">若题目给出光线与<strong>镜面本身</strong>的夹角为 30°，则入射角 <span class="math">i</span> = 90° − 30° = <strong>60°</strong>，反射角 <span class="math">r</span> = <strong>60°</strong>！永远记住：所有光学角度（<span class="math">i, r, c</span>）一律从<strong>法线 (Normal)</strong> 量起！</p>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>二、平面镜成像的五大性质与作图规范 <span class="badge-core">Core</span></h4>
+    <p>站在平面镜前观察物体时，镜后成像具有以下<strong>五项固定特征</strong>（背熟！）：</p>
+    <ol>
+      <li><strong>虚像 (Virtual image)</strong>：不能投影在光屏上，由反射光线的<strong>反向延长线</strong>在镜后交汇形成（实际光线并不穿过镜子）。</li>
+      <li><strong>正立 (Upright)</strong>：与原物上下方向一致。</li>
+      <li><strong>等大 (Same size)</strong>：像的高度与物体完全相等。</li>
+      <li><strong>等距 (Same perpendicular distance)</strong>：像到镜面的垂直距离等于物到镜面的垂直距离（物像连线垂直于镜面）。</li>
+      <li><strong>左右颠倒 (Laterally inverted)</strong>：左右互换（如镜中看印有“AMBULANCE”的字样是左右反写的）。</li>
+    </ol>
+
+    <div class="callout examiner-tip">
+      <div class="callout-title">💡 Paper 6 实验 · 插大头针法描光路 (Optical Pins Experiment)</div>
+      <p style="margin-bottom: 0;">1. 将平面镜垂直立在白纸上并沿<strong>反射面背银层</strong>（或前线）画直线；<br/>
+      2. 在镜前斜方向插两枚大头针 P<sub>1</sub>、P<sub>2</sub>（<strong>间距应 ≥ 5 cm</strong> 以减小连线角度误差！）；<br/>
+      3. 从另一侧贴近桌面观察镜中 P<sub>1</sub>、P<sub>2</sub> 的像，依次插下 P<sub>3</sub>、P<sub>4</sub>，使 <strong>P<sub>3</sub>、P<sub>4</sub> 刚好同时挡住 P<sub>1</sub>、P<sub>2</sub> 的像（四点共线，无视差）</strong>；<br/>
+      4. 移开镜子与大头针，连线交于镜面，用量角器垂直画法线并测出 <span class="math">i</span> 与 <span class="math">r</span> 验证 <span class="math">i = r</span>。作图时：实际光线画<strong>实线加箭头</strong>，镜后虚拟反向延长线画<strong>虚线 (dashed lines)</strong>！</p>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-13-2">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>13.2 光的折射与折射率 (Refraction &amp; Refractive Index)</h3>
+      <div class="section-en-sub">Wave Speed Change Across Boundaries · Glass Block Ray Tracing · Snell's Law n = sin i / sin r &amp; n = c / v</div>
+      <div class="tier-row"><span class="badge-core">Core</span><span class="badge-ext">Extended</span></div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-13-2">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>一、折射的物理成因与偏折口诀 <span class="badge-core">Core</span></h4>
+    <p><strong>光的折射 (Refraction)</strong>：光斜射穿过两种不同光密度透明介质的交界面时，由于<strong>传播速度发生改变 (change in speed)</strong> 而引起传播方向弯折的现象（<strong>注意：光波频率 <span class="math">f</span> 在折射过程中保持不变！</strong>速度 <span class="math">v</span> 和波长 <span class="math">λ</span> 同比变化）。</p>
+    <ul>
+      <li><strong>光疏（快）→ 光密（慢）</strong>（如空气 → 玻璃/水）：光速变慢，光线向法线偏折（<strong>bends towards the normal</strong>），<span class="math">r &lt; i</span>。</li>
+      <li><strong>光密（慢）→ 光疏（快）</strong>（如玻璃/水 → 空气）：光速变快，光线远离法线偏折（<strong>bends away from the normal</strong>），<span class="math">r &gt; i</span>。</li>
+      <li><strong>垂直入射（沿法线，<span class="math">i = 0°</span>）</strong>：光速和波长仍改变，但<strong>传播方向不偏折（<span class="math">r = 0°</span>，passes straight through undeviated）</strong>！</li>
+      <li><strong>平行玻璃砖出射特征</strong>：光穿过上下平行的长方体玻璃砖时，二次折射角恰好等于第一次入射角，因此<strong>出射光线与原入射光线平行 (parallel)</strong>，仅发生侧向平移；池水/玻璃底部的硬币看起来“变浅”正是光线出水面远离法线折入人眼造成。</li>
+    </ul>
+  </div>
+
+  <div class="subtopic ext-only">
+    <h4>二、折射率公式 (Refractive Index, n) 与计算陷阱 <span class="badge-ext">Extended</span></h4>
+    <div class="formula-card">
+      <div class="formula-main"><span class="math">n</span> = <span class="frac"><span class="num">sin <span class="math">i</span></span><span class="den">sin <span class="math">r</span></span></span> &nbsp;（光由空气/真空射入介质）&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; <span class="math">n</span> = <span class="frac"><span class="num"><span class="math">c</span></span><span class="den"><span class="math">v</span></span></span></div>
+      <p style="margin-bottom: 0;">其中 <span class="math">c</span> = 3.0 × 10<sup>8</sup> m/s（真空/空气中光速），<span class="math">v</span> 为介质中光速；常见折射率：空气 ≈ 1.00，水 ≈ 1.33，玻璃 ≈ 1.50，钻石 ≈ 2.42（<strong><span class="math">n</span> 无单位，且恒大于 1</strong>）。</p>
+    </div>
+
+    <div class="callout common-mistake">
+      <div class="callout-title">⚠️ 易错警报 · 光从玻璃射出到空气时切勿套反公式！</div>
+      <p style="margin-bottom: 0;">在 <span class="math">n</span> = sin <span class="math">i</span> / sin <span class="math">r</span> 中，分子永远是<strong>空气（或真空）一侧的大角度</strong>，分母永远是<strong>介质（玻璃/水）一侧的小角度</strong>！如果题目说光从玻璃以 25° 射向空气，必须写 <strong><span class="math">n</span> = sin <span class="math">r</span> / sin <span class="math">i</span></strong> ⇒ sin <span class="math">r</span> = <span class="math">n</span> sin 25°！</p>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">📝 例题精讲 · 折射率与介质光速计算</div>
+      <p>一束光从空气以入射角 40° 射入折射率 <span class="math">n</span> = 1.50 的玻璃砖。(1) 求折射角 <span class="math">r</span>；(2) 求光在玻璃中的速度 <span class="math">v</span>。</p>
+      <p style="margin-bottom: 0;"><strong>解：</strong><br/>
+      (1) sin <span class="math">r</span> = sin 40° / 1.50 = 0.6428 / 1.50 = 0.4285 ⇒ <span class="math">r</span> = sin<sup>−1</sup>(0.4285) = <strong>25.4°</strong>（保留 1 位小数：25°）。<br/>
+      (2) <span class="math">v</span> = <span class="math">c</span> / <span class="math">n</span> = (3.0 × 10<sup>8</sup>) / 1.50 = <strong>2.0 × 10<sup>8</sup> m/s</strong>。</p>
+    </div>
+  </div>
+
+  <div class="svg-figure">
+    <svg viewBox="0 0 740 265" width="740" height="265" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Plane mirror virtual image ray diagram and rectangular glass block refraction">
+      <rect x="0" y="0" width="740" height="265" rx="10" fill="var(--svg-bg)"/>
+      <!-- Left: Plane Mirror Ray Diagram (exact geometry: Mirror x=200, O=(92,174), I=(308,174)) -->
+      <rect x="16" y="14" width="348" height="236" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5"/>
+      <text x="190" y="34" text-anchor="middle" font-size="13" font-weight="700" fill="var(--svg-ink)">平面镜成像光路（i = r，虚像等距）</text>
+      <!-- Mirror & silver backing ticks -->
+      <line x1="200" y1="54" x2="200" y2="216" stroke="var(--svg-ink)" stroke-width="2.6"/>
+      <path d="M200,62 L207,56 M200,76 L207,70 M200,90 L207,84 M200,104 L207,98 M200,118 L207,112 M200,132 L207,126 M200,146 L207,140 M200,160 L207,154 M200,174 L207,168 M200,188 L207,182 M200,202 L207,196 M200,214 L207,208" stroke="var(--svg-muted)" stroke-width="1.3"/>
+      <!-- Equal distance dashed normal line O to I -->
+      <line x1="92" y1="174" x2="308" y2="174" stroke="var(--svg-muted)" stroke-width="1.2" stroke-dasharray="4,3"/>
+      <circle cx="92" cy="174" r="4.5" fill="var(--svg-red)"/>
+      <text x="92" y="194" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-red)">物 O</text>
+      <circle cx="308" cy="174" r="4.5" fill="none" stroke="var(--svg-purple)" stroke-width="2.2"/>
+      <text x="308" y="194" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-purple)">虚像 I</text>
+      <text x="146" y="189" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-muted)">d</text>
+      <text x="254" y="189" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-muted)">d</text>
+      <!-- Normal at M1 (200,121) -->
+      <line x1="142" y1="121" x2="200" y2="121" stroke="var(--svg-muted)" stroke-width="1.2" stroke-dasharray="3,2"/>
+      <!-- Real rays: O(92,174) -> M1(200,121) -> E1(92,68) & O -> M2(200,140) -> E2(92,106) -->
+      <line x1="92" y1="174" x2="200" y2="121" stroke="var(--svg-blue)" stroke-width="2.2"/>
+      <line x1="200" y1="121" x2="86" y2="65" stroke="var(--svg-blue)" stroke-width="2.2"/>
+      <line x1="92" y1="174" x2="200" y2="140" stroke="var(--svg-teal)" stroke-width="2"/>
+      <line x1="200" y1="140" x2="86" y2="104" stroke="var(--svg-teal)" stroke-width="2"/>
+      <!-- Arrowheads on real rays -->
+      <polygon points="145,143 155,143 149,151" fill="var(--svg-blue)"/>
+      <polygon points="145,99 135,90 149,92" fill="var(--svg-blue)"/>
+      <polygon points="144,154 154,154 146,161" fill="var(--svg-teal)"/>
+      <!-- Virtual dashed extensions behind mirror -->
+      <line x1="200" y1="121" x2="308" y2="174" stroke="var(--svg-purple)" stroke-width="1.8" stroke-dasharray="4,3"/>
+      <line x1="200" y1="140" x2="308" y2="174" stroke="var(--svg-purple)" stroke-width="1.8" stroke-dasharray="4,3"/>
+      <!-- Eye on left -->
+      <path d="M56,85 Q74,64 84,85 Q74,106 56,85 Z" fill="none" stroke="var(--svg-ink)" stroke-width="2"/>
+      <circle cx="76" cy="85" r="4.5" fill="var(--svg-ink)"/>
+      <text x="58" y="54" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-ink)">人眼</text>
+      <text x="178" y="114" text-anchor="end" font-size="10.5" font-weight="700" fill="var(--svg-muted)">r</text>
+      <text x="178" y="135" text-anchor="end" font-size="10.5" font-weight="700" fill="var(--svg-muted)">i</text>
+      <text x="190" y="238" text-anchor="middle" font-size="11" font-weight="700" fill="var(--svg-ink)">虚线为反射光线的反向延长线</text>
+
+      <!-- Right: Glass Block Refraction (exact Snell n=1.5, i=45°, r=28.1°) -->
+      <rect x="380" y="14" width="344" height="236" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5"/>
+      <text x="552" y="34" text-anchor="middle" font-size="13" font-weight="700" fill="var(--svg-ink)">矩形玻璃砖折射 (n = 1.50)</text>
+      <!-- Glass block -->
+      <rect x="424" y="104" width="252" height="72" rx="2" fill="rgba(2,132,199,0.16)" stroke="var(--svg-ink)" stroke-width="2"/>
+      <text x="668" y="144" text-anchor="end" font-size="11" font-weight="700" fill="var(--svg-blue)">玻璃 Glass</text>
+      <!-- Normals -->
+      <line x1="510" y1="54" x2="510" y2="146" stroke="var(--svg-muted)" stroke-width="1.3" stroke-dasharray="4,3"/>
+      <line x1="548.5" y1="132" x2="548.5" y2="226" stroke="var(--svg-muted)" stroke-width="1.3" stroke-dasharray="4,3"/>
+      <!-- Dashed original path -->
+      <line x1="510" y1="104" x2="628" y2="222" stroke="var(--svg-muted)" stroke-width="1.3" stroke-dasharray="3,3"/>
+      <!-- Ray path: (458,52) -> (510,104) -> (548.5,176) -> (600.5,228) -->
+      <polyline points="458,52 510,104 548.5,176 600.5,228" fill="none" stroke="var(--svg-red)" stroke-width="2.5"/>
+      <polygon points="481,81 488,82 487,75" fill="var(--svg-red)"/>
+      <polygon points="527,144 534,149 534,140" fill="var(--svg-red)"/>
+      <polygon points="571,205 578,206 577,199" fill="var(--svg-red)"/>
+      <!-- Angle labels -->
+      <text x="498" y="78" text-anchor="end" font-size="11" font-weight="700" fill="var(--svg-ink)">i = 45°</text>
+      <text x="526" y="132" font-size="11" font-weight="700" fill="var(--svg-red)">r = 28°</text>
+      <text x="572" y="218" font-size="10.5" font-weight="700" fill="var(--svg-ink)">出射平行入射</text>
+      <text x="444" y="92" font-size="10.5" font-weight="700" fill="var(--svg-muted)">向法线折</text>
+      <text x="552" y="242" text-anchor="middle" font-size="11" font-weight="700" fill="var(--svg-ink)">快→慢：向法线偏折 | 慢→快：远离法线</text>
+    </svg>
+    <div class="svg-caption">图 13.1：平面镜反射成等距虚像光路（左）与光通过矩形玻璃砖的斯涅尔折射光路（右）</div>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-13-3">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>13.3 临界角、全内反射与光纤通信 (Critical Angle, TIR &amp; Optical Fibres)</h3>
+      <div class="section-en-sub">Critical Angle c · Total Internal Reflection (i &gt; c) · sin c = 1 / n · Prisms &amp; Endoscopes / Telecoms</div>
+      <div class="tier-row"><span class="badge-core">Core</span><span class="badge-ext">Extended</span></div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-13-3">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>一、临界角与全内反射的两大绝对条件 <span class="badge-core">Core</span> <span class="badge-ext">Extended</span></h4>
+    <ul>
+      <li><strong>临界角 (Critical angle, <span class="math">c</span>)</strong>：当光从光密介质射向空气（光疏介质）时，使空气中的折射角刚好等于 <strong>90°</strong>（折射光线沿界面贴边掠射）所对应的<strong>入射角</strong>。</li>
+      <li><strong>全内反射 (Total Internal Reflection, TIR)</strong>：当入射角<strong>大于临界角 (<span class="math">i &gt; c</span>)</strong> 时，光无法再折射出去，而是<strong>100% 全部反射回光密介质内部</strong>（遵循 <span class="math">r = i</span>）。</li>
+    </ul>
+
+    <div class="formula-card">
+      <div class="formula-main">TIR 两大缺一不可的条件：(1) 光从光密射向光疏介质；(2) 入射角 <span class="math">i &gt; c</span> &nbsp;|&nbsp; <span class="ext-only"><span class="badge-ext">Extended</span> sin <span class="math">c</span> = <span class="frac"><span class="num">1</span><span class="den"><span class="math">n</span></span></span></span></div>
+      <p class="ext-only" style="margin-bottom: 0;">推导（从空气→介质公式倒推）：当 <span class="math">i</span><sub>玻璃</sub> = <span class="math">c</span> 且 <span class="math">r</span><sub>空气</sub> = 90° 时，<span class="math">n</span> = sin 90° / sin <span class="math">c</span> = 1 / sin <span class="math">c</span> ⇒ <strong>sin <span class="math">c</span> = 1 / <span class="math">n</span></strong>。玻璃 <span class="math">n</span> = 1.50 ⇒ <span class="math">c</span> ≈ <strong>41.8°</strong>；水 <span class="math">n</span> = 1.33 ⇒ <span class="math">c</span> ≈ <strong>48.8°</strong>；钻石 <span class="math">n</span> = 2.42 ⇒ <span class="math">c</span> ≈ <strong>24.4°</strong>（极小临界角导致光芒四射！）。</p>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>二、全内反射核心应用：直角棱镜与光纤通信 <span class="badge-core">Core</span> <span class="badge-ext">Extended</span></h4>
+    <ul>
+      <li><strong>1. 45°-45°-90° 全反直角玻璃棱镜</strong>：玻璃临界角约 42°，光垂直直角面射入后以 <strong>45° &gt; 42°</strong> 击中斜边，发生 100% 全内反射！广泛用于<strong>潜望镜 (Periscopes)</strong>（转折 90°）、<strong>双筒望远镜 (Binoculars)</strong>（转折 180° 并正像）及<strong>自行车尾灯反光片</strong>。相比镀银平面镜，棱镜反射率近 100%、无玻璃前表面“重影”且镀膜不会氧化剥落。</li>
+      <li><strong>2. 光导纤维 (Optical fibres)</strong>：由高折射率纤芯 (glass core) 包裹低折射率包层 (cladding) 组成。激光/红外脉冲在纤芯内壁始终以 <strong><span class="math">i &gt; c</span></strong> 反复发生全内反射，即使光纤弯曲也能几乎无损耗地向前传输。
+        <ul>
+          <li><strong>医学内窥镜 (Endoscope)</strong>：一束光纤导光照明体内，另一束有序排布的成像光纤把胃部/关节腔画面传出，实现微创诊断。</li>
+          <li><strong>现代远程电信宽带 (Telecommunications)</strong> <span class="badge-ext">Extended</span>：相比传统铜缆电信号，光纤传输具有<strong>更高带宽与传输速率 (higher bandwidth/data rate)</strong>、<strong>长距离信号衰减极小 (less attenuation，无需频繁中继器)</strong>、<strong>不受电磁干扰 (immune to EM interference)</strong> 且更轻更细、保密性高。</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="lab-box" data-lab-type="p13"></div>
+
+  <div class="svg-figure">
+    <svg viewBox="0 0 740 245" width="740" height="245" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Critical angle, Total Internal Reflection, 45 degree prism and optical fibre">
+      <rect x="0" y="0" width="740" height="245" rx="10" fill="var(--svg-bg)"/>
+      <!-- Left: i < c, i = c, i > c -->
+      <rect x="16" y="14" width="414" height="216" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5"/>
+      <text x="223" y="34" text-anchor="middle" font-size="13" font-weight="700" fill="var(--svg-ink)">玻璃射向空气 (n=1.50, 临界角 c ≈ 42°)</text>
+      <rect x="26" y="114" width="394" height="92" fill="rgba(2,132,199,0.16)" stroke="var(--svg-ink)" stroke-width="1.5"/>
+      <text x="34" y="60" font-size="11" font-weight="700" fill="var(--svg-muted)">空气 Air</text>
+      <text x="34" y="198" font-size="11" font-weight="700" fill="var(--svg-blue)">玻璃 Glass</text>
+      <!-- Case 1: x=96, i=25° < c -->
+      <line x1="96" y1="52" x2="96" y2="190" stroke="var(--svg-muted)" stroke-width="1.2" stroke-dasharray="3,2"/>
+      <line x1="64" y1="182" x2="96" y2="114" stroke="var(--svg-amber)" stroke-width="2.4"/>
+      <line x1="96" y1="114" x2="140" y2="60" stroke="var(--svg-blue)" stroke-width="2.2"/>
+      <line x1="96" y1="114" x2="118" y2="160" stroke="var(--svg-amber)" stroke-width="1.2" stroke-dasharray="3,2"/>
+      <text x="96" y="222" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-ink)">i &lt; c: 折射 + 弱反射</text>
+      <!-- Case 2: x=222, i=c=42° -->
+      <line x1="222" y1="52" x2="222" y2="190" stroke="var(--svg-muted)" stroke-width="1.2" stroke-dasharray="3,2"/>
+      <line x1="170" y1="172" x2="222" y2="114" stroke="var(--svg-amber)" stroke-width="2.4"/>
+      <line x1="222" y1="114" x2="288" y2="114" stroke="var(--svg-green)" stroke-width="2.6"/>
+      <text x="256" y="106" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-green)">r = 90°</text>
+      <text x="222" y="222" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-green)">i = c: 沿界面掠射</text>
+      <!-- Case 3: x=344, i=58° > c -->
+      <line x1="344" y1="52" x2="344" y2="190" stroke="var(--svg-muted)" stroke-width="1.2" stroke-dasharray="3,2"/>
+      <line x1="286" y1="150" x2="344" y2="114" stroke="var(--svg-red)" stroke-width="2.5"/>
+      <line x1="344" y1="114" x2="402" y2="150" stroke="var(--svg-red)" stroke-width="2.5"/>
+      <text x="344" y="222" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-red)">i &gt; c: 100% 全内反射!</text>
+
+      <!-- Right: 45-45-90 Prism & Optical Fibre -->
+      <rect x="444" y="14" width="280" height="216" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5"/>
+      <text x="584" y="34" text-anchor="middle" font-size="13" font-weight="700" fill="var(--svg-ink)">应用：全反棱镜与光导纤维</text>
+      <!-- Prism -->
+      <polygon points="484,52 484,122 554,122" fill="rgba(2,132,199,0.18)" stroke="var(--svg-ink)" stroke-width="1.8"/>
+      <polyline points="454,87 519,87 519,144" fill="none" stroke="var(--svg-red)" stroke-width="2.4"/>
+      <polygon points="472,83 480,87 472,91" fill="var(--svg-red)"/>
+      <polygon points="515,134 519,144 523,134" fill="var(--svg-red)"/>
+      <text x="626" y="78" text-anchor="middle" font-size="11" font-weight="700" fill="var(--svg-ink)">45°-45°-90° 棱镜</text>
+      <text x="626" y="95" text-anchor="middle" font-size="10.5" fill="var(--svg-muted)">i = 45° &gt; c (42°)</text>
+      <text x="626" y="112" text-anchor="middle" font-size="10.5" fill="var(--svg-red)">实现 90° 无损转折</text>
+      <!-- Optical fibre -->
+      <rect x="460" y="158" width="248" height="44" rx="4" fill="rgba(124,58,237,0.12)" stroke="var(--svg-muted)" stroke-width="1.2"/>
+      <rect x="460" y="166" width="248" height="28" fill="rgba(56,189,248,0.15)" stroke="var(--svg-blue)" stroke-width="1.5"/>
+      <polyline points="450,180 488,166 544,194 600,166 656,194 714,172" fill="none" stroke="var(--svg-purple)" stroke-width="2.3"/>
+      <text x="584" y="219" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-purple)">光纤：高 n 纤芯内壁连续 TIR 传输信号</text>
+    </svg>
+    <div class="svg-caption">图 13.2：临界角与全内反射演变三阶段（左），以及直角棱镜与光纤全内反射应用（右）</div>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-13-4">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>13.4 薄透镜成像规律与近远视矫正 (Thin Lenses &amp; Eye Defects)</h3>
+      <div class="section-en-sub">Converging Lens Terms · 3 Principal Rays · All 5 Object Positions · Real vs Virtual · Diverging Lens &amp; Vision Correction</div>
+      <div class="tier-row"><span class="badge-core">Core</span><span class="badge-ext">Extended</span></div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-13-4">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>一、薄凸透镜基本概念与三条标准作图光线 <span class="badge-core">Core</span></h4>
+    <ul>
+      <li><strong>主光轴 (Principal axis)</strong>：垂直通过透镜中心、贯穿两侧表面的直线。</li>
+      <li><strong>光心 (<span class="math">C</span>, Optical centre)</strong>：透镜正中心，穿过光心的光线<strong>方向完全不变 (undeviated)</strong>。</li>
+      <li><strong>主焦点 (<span class="math">F</span>, Principal focus)</strong>：平行于主光轴的入射光线经凸透镜折射后在轴上<strong>会聚的一点</strong>（透镜两侧各有一个等距主焦点）。</li>
+      <li><strong>焦距 (<span class="math">f</span>, Focal length)</strong>：光心 <span class="math">C</span> 到主焦点 <span class="math">F</span> 的距离。<strong>Paper 6 测凸透镜焦距法</strong>：将窗外远处景物（近似平行光，<span class="math">u ≈ ∞</span>）通过凸透镜成倒立清晰实像在白屏上，屏到透镜光心的距离即焦距 <span class="math">f</span>。</li>
+    </ul>
+    <div class="formula-card">
+      <div class="formula-main">三条必考标准作图光线（任意两条交叉即确定像尖端，第三条用于校对！）</div>
+      <ol style="margin-bottom: 0;">
+        <li><strong>平行光过焦点</strong>：平行于主光轴射向透镜 → 折射后穿过对侧主焦点 <span class="math">F</span>。</li>
+        <li><strong>过光心不偏折</strong>：射向光心 <span class="math">C</span> → 沿原直线穿过，方向不变。</li>
+        <li><strong>过前焦变平行</strong>：穿过近侧主焦点 <span class="math">F'</span> 射向透镜 → 折射后平行于主光轴射出。</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>二、凸透镜五大物距成像全表（含放大镜虚像与实/虚像区分） <span class="badge-core">Core</span></h4>
+    <div class="table-wrap">
+      <table class="phy-table">
+        <thead>
+          <tr><th>物距 <span class="math">u</span> 范围</th><th>像距 <span class="math">v</span> 位置</th><th>像的性质 (倒正/大小/虚实)</th><th>典型应用</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span class="math">u &gt; 2f</span></strong>（两倍焦距外）</td>
+            <td>异侧 <span class="math">f &lt; v &lt; 2f</span></td>
+            <td><strong>倒立、缩小、实像</strong> (Inverted, diminished, real)</td>
+            <td>照相机 (Camera)、正常人眼晶状体</td>
+          </tr>
+          <tr>
+            <td><strong><span class="math">u = 2f</span></strong>（两倍焦距处）</td>
+            <td>异侧 <span class="math">v = 2f</span></td>
+            <td><strong>倒立、等大、实像</strong> (Inverted, same size, real)</td>
+            <td>1:1 光学复印机 (Photocopier)</td>
+          </tr>
+          <tr>
+            <td><strong><span class="math">f &lt; u &lt; 2f</span></strong>（1f 与 2f 之间）</td>
+            <td>异侧 <span class="math">v &gt; 2f</span></td>
+            <td><strong>倒立、放大、实像</strong> (Inverted, magnified, real)</td>
+            <td>幻灯机 / 投影仪 (Projector)</td>
+          </tr>
+          <tr>
+            <td><strong><span class="math">u = f</span></strong>（焦点上）</td>
+            <td>无穷远（平行出射）</td>
+            <td>折射后形成平行光束，不呈汇聚实像</td>
+            <td>聚光灯 / 灯塔探照灯 (Spotlight)</td>
+          </tr>
+          <tr>
+            <td><strong><span class="math">u &lt; f</span></strong>（一倍焦距内）</td>
+            <td><strong>同侧（物后方）</strong></td>
+            <td><strong>正立、放大、虚像</strong> (Upright, magnified, <strong>virtual</strong>)</td>
+            <td><strong>放大镜 (Magnifying glass)</strong>（反向虚线相交！）</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>实像 vs 虚像 (Real vs Virtual image)</strong>：<strong>实像</strong>由实际光线会聚形成，<strong>可以呈现在光屏上</strong>；<strong>虚像</strong>由发散折射光线的反向延长线交汇而成，<strong>不能呈现在光屏上</strong>（只能由人眼逆着光线观察）。</p>
+  </div>
+
+  <div class="subtopic ext-only">
+    <h4>三、凹透镜发散成像与近视/远视眼矫正 <span class="badge-ext">Extended</span></h4>
+    <ul>
+      <li><strong>薄凹透镜 / 发散透镜 (Thin diverging lens)</strong>：中间薄边缘厚。平行于主光轴的光线穿过凹透镜后向外<strong>发散 (diverge)</strong>，其反向延长线相交于入射侧的<strong>虚主焦点 <span class="math">F</span></strong>。无论物体在何处，凹透镜永远只成<strong>正立、缩小、虚像</strong>。</li>
+      <li><strong>近视眼 (Short-sightedness / Myopia)</strong>：能看清近处物体，但看远物模糊。成因：眼球过长或晶状体折光过强 → 远处平行光会聚点落在<strong>视网膜前方 (in front of retina)</strong>。<strong>矫正方法</strong>：佩戴<strong>凹透镜 / 发散透镜 (diverging lens)</strong>，使入射光线进入眼球前先略微发散，从而让像点后移准确落在视网膜上！</li>
+      <li><strong>远视眼 (Long-sightedness / Hypermetropia)</strong>：能看清远处物体，但看近物模糊。成因：眼球过短或晶状体折光太弱 → 近处发散光的会聚点落在<strong>视网膜后方 (behind retina)</strong>。<strong>矫正方法</strong>：佩戴<strong>凸透镜 / 会聚透镜 (converging lens)</strong>，使光线预先会聚，从而让像点前移准确落在视网膜上！</li>
+    </ul>
+  </div>
+
+  <div class="svg-figure">
+    <svg viewBox="0 0 740 275" width="740" height="275" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Converging lens real image projector and virtual image magnifying glass ray diagrams">
+      <rect x="0" y="0" width="740" height="275" rx="10" fill="var(--svg-bg)"/>
+      <!-- Left: f < u < 2f Real Magnified Image (f=48, u=72 => v=144, hO=32 => hI=64) -->
+      <rect x="16" y="14" width="348" height="246" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5"/>
+      <text x="190" y="34" text-anchor="middle" font-size="13" font-weight="700" fill="var(--svg-ink)">凸透镜 (f &lt; u &lt; 2f)：倒立放大实像</text>
+      <!-- Axis -->
+      <line x1="26" y1="148" x2="352" y2="148" stroke="var(--svg-muted)" stroke-width="1.3"/>
+      <!-- Thin lens at x=156 -->
+      <line x1="156" y1="60" x2="156" y2="236" stroke="var(--svg-blue)" stroke-width="2.6"/>
+      <polyline points="150,68 156,58 162,68" fill="none" stroke="var(--svg-blue)" stroke-width="2.2"/>
+      <polyline points="150,228 156,238 162,228" fill="none" stroke="var(--svg-blue)" stroke-width="2.2"/>
+      <!-- Focal markers: 2F'=60, F'=108, C=156, F=204, 2F=252 -->
+      <circle cx="60" cy="148" r="2.5" fill="var(--svg-ink)"/><text x="60" y="164" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-muted)">2F'</text>
+      <circle cx="108" cy="148" r="2.5" fill="var(--svg-ink)"/><text x="108" y="164" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-muted)">F'</text>
+      <circle cx="204" cy="148" r="2.5" fill="var(--svg-ink)"/><text x="204" y="140" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-muted)">F</text>
+      <circle cx="252" cy="148" r="2.5" fill="var(--svg-ink)"/><text x="252" y="140" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-muted)">2F</text>
+      <!-- Object O at x=84, y=148..116 -->
+      <line x1="84" y1="148" x2="84" y2="116" stroke="var(--svg-green)" stroke-width="3"/>
+      <polygon points="80,122 84,113 88,122" fill="var(--svg-green)"/>
+      <text x="84" y="106" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-green)">物 O</text>
+      <!-- Image I at x=300, y=148..212 -->
+      <line x1="300" y1="148" x2="300" y2="212" stroke="var(--svg-purple)" stroke-width="3"/>
+      <polygon points="296,206 300,215 304,206" fill="var(--svg-purple)"/>
+      <text x="322" y="190" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-purple)">实像 I</text>
+      <!-- Ray 1: parallel then through F(204,148) to (300,212) -->
+      <polyline points="84,116 156,116 300,212" fill="none" stroke="var(--svg-red)" stroke-width="2"/>
+      <!-- Ray 2: through centre C(156,148) to (300,212) -->
+      <line x1="84" y1="116" x2="300" y2="212" stroke="var(--svg-amber)" stroke-width="2"/>
+      <!-- Ray 3: through F'(108,148) to (156,212) then parallel to (300,212) -->
+      <polyline points="84,116 156,212 300,212" fill="none" stroke="var(--svg-teal)" stroke-width="1.8" stroke-dasharray="4,2"/>
+      <text x="190" y="250" text-anchor="middle" font-size="11" font-weight="700" fill="var(--svg-ink)">三条标准光线精确定位实像（投影仪原理）</text>
+
+      <!-- Right: u < f Virtual Magnified Image (Magnifying glass: L=576, f=60, O=540, hO=32 => I=486, hI=80) -->
+      <rect x="380" y="14" width="344" height="246" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5"/>
+      <text x="552" y="34" text-anchor="middle" font-size="13" font-weight="700" fill="var(--svg-ink)">放大镜 (u &lt; f)：正立放大虚像</text>
+      <!-- Axis -->
+      <line x1="392" y1="186" x2="712" y2="186" stroke="var(--svg-muted)" stroke-width="1.3"/>
+      <!-- Lens at x=576 -->
+      <line x1="576" y1="62" x2="576" y2="236" stroke="var(--svg-blue)" stroke-width="2.6"/>
+      <polyline points="570,70 576,60 582,70" fill="none" stroke="var(--svg-blue)" stroke-width="2.2"/>
+      <polyline points="570,228 576,238 582,228" fill="none" stroke="var(--svg-blue)" stroke-width="2.2"/>
+      <!-- F'=516, F=636 -->
+      <circle cx="516" cy="186" r="2.5" fill="var(--svg-ink)"/><text x="516" y="202" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-muted)">F'</text>
+      <circle cx="636" cy="186" r="2.5" fill="var(--svg-ink)"/><text x="636" y="176" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-muted)">F</text>
+      <!-- Object O at x=540, y=186..154 -->
+      <line x1="540" y1="186" x2="540" y2="154" stroke="var(--svg-green)" stroke-width="3"/>
+      <polygon points="536,160 540,151 544,160" fill="var(--svg-green)"/>
+      <text x="540" y="204" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-green)">物 O</text>
+      <!-- Virtual Image I at x=486, y=186..106 -->
+      <line x1="486" y1="186" x2="486" y2="106" stroke="var(--svg-purple)" stroke-width="2.8" stroke-dasharray="4,3"/>
+      <polygon points="482,113 486,103 490,113" fill="var(--svg-purple)"/>
+      <text x="456" y="144" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-purple)">虚像 I</text>
+      <!-- Real rays through lens and diverging to right -->
+      <polyline points="540,154 576,154 684,211.6" fill="none" stroke="var(--svg-red)" stroke-width="2.1"/>
+      <line x1="540" y1="154" x2="626" y2="230.4" stroke="var(--svg-amber)" stroke-width="2.1"/>
+      <!-- Dashed backward extensions meeting at (486, 106) -->
+      <line x1="576" y1="154" x2="486" y2="106" stroke="var(--svg-red)" stroke-width="1.8" stroke-dasharray="4,3"/>
+      <line x1="540" y1="154" x2="486" y2="106" stroke="var(--svg-amber)" stroke-width="1.8" stroke-dasharray="4,3"/>
+      <!-- Eye icon on right -->
+      <path d="M686,204 Q702,190 712,208" fill="none" stroke="var(--svg-ink)" stroke-width="2"/>
+      <circle cx="696" cy="212" r="4" fill="var(--svg-ink)"/>
+      <text x="692" y="182" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-ink)">人眼观测</text>
+      <text x="552" y="250" text-anchor="middle" font-size="11" font-weight="700" fill="var(--svg-ink)">折射光发散，反向虚线交汇成正立放大虚像</text>
+    </svg>
+    <div class="svg-caption">图 13.3：凸透镜成倒立放大实像的三条标准作图光线（左）与放大镜成正立放大虚像作图（右）</div>
+  </div>
+
+  <div class="svg-figure ext-only">
+    <svg viewBox="0 0 740 215" width="740" height="215" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Myopia corrected by diverging lens and hypermetropia corrected by converging lens">
+      <rect x="0" y="0" width="740" height="215" rx="10" fill="var(--svg-bg)"/>
+      <!-- Left: Myopia correction -->
+      <rect x="16" y="14" width="348" height="186" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5"/>
+      <text x="190" y="34" text-anchor="middle" font-size="13" font-weight="700" fill="var(--svg-ink)">近视矫正：凹透镜 (发散透镜) 拉后焦点</text>
+      <!-- Eyeball -->
+      <circle cx="268" cy="112" r="52" fill="rgba(56,189,248,0.08)" stroke="var(--svg-ink)" stroke-width="2"/>
+      <!-- Eye lens -->
+      <ellipse cx="222" cy="112" rx="8" ry="26" fill="rgba(2,132,199,0.28)" stroke="var(--svg-blue)" stroke-width="1.6"/>
+      <!-- Concave diverging lens in front -->
+      <path d="M160,82 Q168,112 160,142 L174,142 Q166,112 174,82 Z" fill="rgba(124,58,237,0.22)" stroke="var(--svg-purple)" stroke-width="1.8"/>
+      <!-- Rays: parallel -> diverge slightly -> focus on retina (320,112) -->
+      <polyline points="42,92 167,92 222,86 320,112" fill="none" stroke="var(--svg-green)" stroke-width="2.2"/>
+      <polyline points="42,132 167,132 222,138 320,112" fill="none" stroke="var(--svg-green)" stroke-width="2.2"/>
+      <!-- Uncorrected dashed focus in front of retina at x=292 -->
+      <line x1="222" y1="92" x2="288" y2="112" stroke="var(--svg-red)" stroke-width="1.6" stroke-dasharray="3,2"/>
+      <line x1="222" y1="132" x2="288" y2="112" stroke="var(--svg-red)" stroke-width="1.6" stroke-dasharray="3,2"/>
+      <circle cx="288" cy="112" r="3.5" fill="var(--svg-red)"/>
+      <circle cx="320" cy="112" r="4" fill="var(--svg-green)"/>
+      <text x="104" y="84" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-muted)">远处平行光</text>
+      <text x="167" y="160" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-purple)">凹透镜</text>
+      <text x="190" y="186" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-ink)">红点：未矫正落视网膜前 | 绿点：矫正后落网膜上</text>
+
+      <!-- Right: Hypermetropia correction -->
+      <rect x="380" y="14" width="344" height="186" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5"/>
+      <text x="552" y="34" text-anchor="middle" font-size="13" font-weight="700" fill="var(--svg-ink)">远视矫正：凸透镜 (会聚透镜) 拉前焦点</text>
+      <!-- Eyeball -->
+      <circle cx="634" cy="112" r="52" fill="rgba(56,189,248,0.08)" stroke="var(--svg-ink)" stroke-width="2"/>
+      <ellipse cx="588" cy="112" rx="7" ry="26" fill="rgba(2,132,199,0.28)" stroke="var(--svg-blue)" stroke-width="1.6"/>
+      <!-- Convex converging lens in front -->
+      <ellipse cx="536" cy="112" rx="7" ry="30" fill="rgba(217,119,6,0.22)" stroke="var(--svg-amber)" stroke-width="1.8"/>
+      <!-- Near object point (412,112) rays diverging -> pre-converge at 536 -> retina (686,112) -->
+      <circle cx="412" cy="112" r="4" fill="var(--svg-ink)"/>
+      <text x="412" y="130" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-muted)">近物</text>
+      <polyline points="412,112 536,88 588,92 686,112" fill="none" stroke="var(--svg-green)" stroke-width="2.2"/>
+      <polyline points="412,112 536,136 588,132 686,112" fill="none" stroke="var(--svg-green)" stroke-width="2.2"/>
+      <!-- Uncorrected dashed focus behind retina -->
+      <line x1="588" y1="88" x2="704" y2="112" stroke="var(--svg-red)" stroke-width="1.6" stroke-dasharray="3,2"/>
+      <line x1="588" y1="136" x2="704" y2="112" stroke="var(--svg-red)" stroke-width="1.6" stroke-dasharray="3,2"/>
+      <circle cx="704" cy="112" r="3.5" fill="var(--svg-red)"/>
+      <circle cx="686" cy="112" r="4" fill="var(--svg-green)"/>
+      <text x="536" y="160" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-amber)">凸透镜</text>
+      <text x="552" y="186" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-ink)">红点：未矫正落视网膜后 | 绿点：矫正后落网膜上</text>
+    </svg>
+    <div class="svg-caption">图 13.4 (Extended)：近视用凹透镜发散矫正（左）与远视用凸透镜预会聚矫正（右）</div>
+  </div>
+</article>
+
+<article class="topic-section sme-section" id="sec-sme">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>SaveMyExams 精选真题与标准评分细则 (Ch 13 Past Paper Practice)</h3>
+      <div class="section-en-sub">IGCSE Physics (0625) · Paper 1/2 MCQ &amp; Paper 3/4/6 Structured Questions</div>
+      <div class="tier-row"><span class="badge-core">Core</span><span class="badge-ext">Extended</span></div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-sme">○ 标记掌握</button>
+  </div>
+
+  <div class="practice-block">
+    <div class="practice-heading">🎯 一、选择题精练 (Multiple Choice Questions)</div>
+
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head">
+        <span class="q-tag">MCQ 1 · Paper 1/2 · Core</span>
+        <span class="q-marks">[1 mark]</span>
+      </div>
+      <div class="q-stem-en">A ray of light hits a plane mirror at an angle of 35° to the mirror surface. What is the angle of reflection and what is the angle between the incident ray and the reflected ray?</div>
+      <div class="q-stem-cn">一束光以与平面镜表面成 35° 的夹角射向镜面，反射角以及入射光线与反射光线之间的总夹角分别是多少？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A</strong> Reflection angle: 35° | Total angle: 70°</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B</strong> Reflection angle: 55° | Total angle: 110°</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C</strong> Reflection angle: 55° | Total angle: 55°</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D</strong> Reflection angle: 35° | Total angle: 110°</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！入射角 i = 90° − 35° = 55°，故 r = 55°，两条光线夹角 i + r = 110°！" data-err="❌ 错！35° 是与镜面的夹角！入射角应量至法线：i = 90° − 35° = 55°，所以 r = 55°，总夹角 110°（选 B）。"></div>
+    </div>
+
+    <div class="exam-q ext-only" data-mcq-answer="C">
+      <div class="exam-q-head">
+        <span class="q-tag">MCQ 2 · Paper 2 · <span class="badge-ext">Extended</span></span>
+        <span class="q-marks">[1 mark]</span>
+      </div>
+      <div class="q-stem-en">Light travels from air into diamond at an angle of incidence of 45°. The refractive index of diamond is 2.4. What is the angle of refraction inside the diamond?</div>
+      <div class="q-stem-cn">光从空气以 45° 入射角射入折射率为 2.4 的钻石中，钻石内的折射角是多少？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A</strong> 11°</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B</strong> 19°</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C</strong> 17°</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D</strong> 29°</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！sin r = sin 45° / 2.4 = 0.7071 / 2.4 = 0.2946 ⇒ r = arcsin(0.2946) ≈ 17.1°！" data-err="❌ 错！利用 n = sin i / sin r ⇒ sin r = sin 45° / 2.4 ≈ 0.2946 ⇒ r ≈ 17°（选 C）。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="D">
+      <div class="exam-q-head">
+        <span class="q-tag">MCQ 3 · Paper 1/2 · Core</span>
+        <span class="q-marks">[1 mark]</span>
+      </div>
+      <div class="q-stem-en">An object is placed 6 cm in front of a thin converging lens of focal length 10 cm. What are the properties of the image formed?</div>
+      <div class="q-stem-cn">物体放在焦距为 10 cm 的薄凸透镜前方 6 cm 处，所成像的性质是什么？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A</strong> Real, inverted, magnified</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B</strong> Real, inverted, diminished</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C</strong> Virtual, upright, diminished</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D</strong> Virtual, upright, magnified</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！u = 6 cm &lt; f = 10 cm，相当于放大镜情况：正立、放大、虚像！" data-err="❌ 错！物距 u = 6 cm 小于焦距 f = 10 cm，符合放大镜规律，必成正立放大虚像（选 D）。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="A">
+      <div class="exam-q-head">
+        <span class="q-tag">MCQ 4 · Paper 1/2 · Core</span>
+        <span class="q-marks">[1 mark]</span>
+      </div>
+      <div class="q-stem-en">Light inside water (<span class="math">c</span> = 49°) strikes the water-air boundary at an angle of incidence of 55°. What happens to the light?</div>
+      <div class="q-stem-cn">水中的光（临界角 49°）以 55° 入射角射向水-空气界面，会发生什么现象？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A</strong> Total internal reflection occurs with a reflection angle of 55°.</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B</strong> Light refracts into air at 55° away from the normal.</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C</strong> Light travels straight along the water-air boundary at 90°.</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D</strong> Total internal reflection occurs with a reflection angle of 35°.</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！光从水（密）射向空气（疏）且 i = 55° &gt; c = 49°，发生全内反射，反射角等于入射角 55°！" data-err="❌ 错！因为 i (55°) &gt; c (49°) 且由光密到光疏，满足全内反射条件，全部反射回水中且 r = i = 55°（选 A）。"></div>
+    </div>
+
+    <div class="exam-q ext-only" data-mcq-answer="B">
+      <div class="exam-q-head">
+        <span class="q-tag">MCQ 5 · Paper 2 · <span class="badge-ext">Extended</span></span>
+        <span class="q-marks">[1 mark]</span>
+      </div>
+      <div class="q-stem-en">A person has short-sightedness (myopia) and cannot focus clearly on distant trees. Where do rays from a distant tree focus in their unaided eye, and which lens corrects it?</div>
+      <div class="q-stem-cn">某人患有近视无法看清远处树木。未戴眼镜时远处光线聚焦在眼内何处？需要哪种透镜矫正？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A</strong> Behind the retina; corrected with a converging lens</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B</strong> In front of the retina; corrected with a diverging lens</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C</strong> In front of the retina; corrected with a converging lens</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D</strong> Behind the retina; corrected with a diverging lens</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！近视眼折光过强，成像落在视网膜前方，必须用凹（发散）透镜先发散光线再入眼。" data-err="❌ 错！视网膜前方聚焦是近视，需要发散透镜（凹透镜）拉后焦点（选 B）。"></div>
+    </div>
+  </div>
+
+  <div class="practice-block">
+    <div class="practice-heading">✍️ 二、大题结构化精练与官方评分细则 (Structured Questions &amp; Mark Scheme)</div>
+
+    <div class="exam-q">
+      <div class="exam-q-head">
+        <span class="q-tag">Structured Q1 · Paper 3/4 · Core &amp; <span class="badge-ext">Extended</span></span>
+        <span class="q-marks">[5 marks]</span>
+      </div>
+      <div class="q-stem-en">Light travels through a glass optical fibre of refractive index 1.52 surrounded by air.<br/>
+      <span class="ext-only">(a) Calculate the critical angle of this glass-air boundary. [2]</span><br/>
+      (b) Explain why light stays trapped inside the curved fibre, and state two advantages of using optical fibres over copper cables in telecommunications. [3]</div>
+      <div class="q-stem-cn">光在周围是空气、折射率 1.52 的玻璃光纤中传播。<br/>
+      <span class="ext-only">(a) 计算玻璃-空气界面的临界角。[2 分]</span><br/>
+      (b) 解释光为何能留在弯曲光纤内传输，并写出光纤通信相比铜电缆的两大优势。[3 分]</div>
+      <details class="ms-details">
+        <summary>查看官方评分标准 (Mark Scheme &amp; 中文精解)</summary>
+        <div class="ms-body">
+          <p class="ext-only"><strong>(a)</strong> <span class="ms-mark">[M1]</span> sin <span class="math">c</span> = 1 / <span class="math">n</span> = 1 / 1.52 = 0.6579 <span class="ms-mark">[A1]</span> <span class="math">c</span> = 41.1° (accept 41°).</p>
+          <p><strong>(b)</strong> <span class="ms-mark">[B1]</span> Light strikes the inner wall from denser glass towards less dense air/cladding at an angle of incidence greater than the critical angle (<span class="math">i &gt; c</span>), so it undergoes repeated total internal reflection.</p>
+          <p><span class="ms-mark">[B2]</span> Any two advantages (1 mark each): higher bandwidth / carries more data per second; less signal attenuation / energy loss over long distances; immune to electromagnetic interference; lighter/thinner.</p>
+          <div class="ms-cn">中文采分点解析：(a) 套用 sin c = 1/n 求得 41.1°；(b) 解释全内反射需写出“由高折射率密介质射向低折射率疏介质”且“i &gt; c”。优势牢记高带宽、低损耗、抗电磁干扰。</div>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head">
+        <span class="q-tag">Structured Q2 · Paper 3/4 · Core</span>
+        <span class="q-marks">[4 marks]</span>
+      </div>
+      <div class="q-stem-en">A student sets up a projector using a converging lens of focal length 12 cm. A slide is placed 18 cm from the lens.<br/>
+      (a) State three properties of the image formed on a distant screen. [2]<br/>
+      (b) Explain what happens to the image on the screen if the bottom half of the converging lens is covered with black card. [2]</div>
+      <div class="q-stem-cn">幻灯机采用焦距 12 cm 的凸透镜，幻灯片置于距透镜 18 cm 处。<br/>
+      (a) 写出光屏上清晰像的三项性质。[2 分]<br/>
+      (b) 若用黑卡纸遮住凸透镜的下半部分，光屏上的像会有何变化？[2 分]</div>
+      <details class="ms-details">
+        <summary>查看官方评分标准 (Mark Scheme &amp; 中文精解)</summary>
+        <div class="ms-body">
+          <p><strong>(a)</strong> <span class="ms-mark">[B2]</span> Real, inverted, magnified (all 3 needed for 2 marks; 2 correct = 1 mark).</p>
+          <p><strong>(b)</strong> <span class="ms-mark">[B1]</span> The <strong>complete / full image</strong> is still formed on the screen.</p>
+          <p><span class="ms-mark">[B1]</span> The image becomes <strong>dimmer / less bright</strong> because fewer light rays from each point on the object pass through the lens to form the image.</p>
+          <div class="ms-cn">中文采分点解析：(a) <span class="math">u</span> = 18 cm 处于 12–24 cm（即 <span class="math">f &lt; u &lt; 2f</span>）之间，成倒立放大实像。(b) 是极经典考题：遮住一半透镜，物体每一点发出的光仍能通过另一半透镜成<strong>完整像</strong>，只是透过光量减半，所以<strong>整体变暗</strong>，绝不会缺掉半个像！</div>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head">
+        <span class="q-tag">Structured Q3 · Paper 6 (ATP) · Core</span>
+        <span class="q-marks">[4 marks]</span>
+      </div>
+      <div class="q-stem-en">Describe two precautions a student should take when performing the glass-block ray-tracing experiment using optical pins to improve the accuracy of the measured refractive index, and explain how to process data from five different angles of incidence graphically.</div>
+      <div class="q-stem-cn">在 Paper 6 大头针测玻璃砖折射率实验中，写出两项提高角度测量精度的操作注意事项，并说明如何利用五组不同入射角数据作图求折射率。[4 分]</div>
+      <details class="ms-details">
+        <summary>查看官方评分标准 (Mark Scheme &amp; 中文精解)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">[B2]</span> Precautions (any two): Place pins far apart (at least 5 cm); view pins strictly vertically down / align bases of pins to ensure upright and no parallax; use a sharp pencil for thin ray lines; ensure block does not slip from outline.</p>
+          <p><span class="ms-mark">[B1]</span> Plot a graph of <strong>sin <span class="math">i</span></strong> (y-axis) against <strong>sin <span class="math">r</span></strong> (x-axis).</p>
+          <p><span class="ms-mark">[B1]</span> Draw a straight line of best fit through the origin; the <strong>gradient</strong> of the line equals the refractive index <span class="math">n</span>.</p>
+          <div class="ms-cn">中文采分点解析：Paper 6 万能高分句：大头针间隔 ≥ 5 cm、紧盯针底端垂直对齐、用细铅笔画光线；作图以 sin <span class="math">i</span> 为纵轴、sin <span class="math">r</span> 为横轴，过原点的最佳拟合直线<strong>斜率 (gradient)</strong> 即折射率 <span class="math">n</span>！</div>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q ext-only">
+      <div class="exam-q-head">
+        <span class="q-tag">Structured Q4 · Paper 4 · <span class="badge-ext">Extended</span></span>
+        <span class="q-marks">[4 marks]</span>
+      </div>
+      <div class="q-stem-en">(a) Light enters water (<span class="math">n</span> = 1.33) from air. Calculate the speed of light in water (take <span class="math">c</span> = 3.0 × 10<sup>8</sup> m/s). [2]<br/>
+      (b) A narrow beam of light enters water perpendicular to the water surface (<span class="math">i</span> = 0°). State what happens to its speed, frequency, and direction. [2]</div>
+      <div class="q-stem-cn">(a) 光由空气进入折射率为 1.33 的水中，求光在水中的传播速度。[2 分]<br/>
+      (b) 一束细光垂直射向水面（入射角 0°），说明其速度、频率和传播方向分别有何变化。[2 分]</div>
+      <details class="ms-details">
+        <summary>查看官方评分标准 (Mark Scheme &amp; 中文精解)</summary>
+        <div class="ms-body">
+          <p><strong>(a)</strong> <span class="ms-mark">[M1]</span> <span class="math">v = c / n</span> = (3.0 × 10<sup>8</sup>) / 1.33 <span class="ms-mark">[A1]</span> = 2.26 × 10<sup>8</sup> m/s (accept 2.3 × 10<sup>8</sup> m/s).</p>
+          <p><strong>(b)</strong> <span class="ms-mark">[B1]</span> Speed decreases (wavelength also decreases), frequency stays constant.</p>
+          <p><span class="ms-mark">[B1]</span> Direction does not change / continues straight along the normal (undeviated).</p>
+          <div class="ms-cn">中文采分点解析：(b) 垂直入射陷阱题：尽管方向不变，但<strong>速度依然会变慢</strong>（频率始终不变）！</div>
+        </div>
+      </details>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section" id="app-concepts">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>🧠 第 13 章 · 中英核心概念与满分背写卡 (Concept Bank)</h3>
+      <div class="section-en-sub">18 High-Yield Flashcards · Bilingual Mark Scheme Keywords · Active Recall Mode</div>
+    <button type="button" class="master-btn" data-section-id="app-concepts">○ 标记掌握</button>
+    </div>
+  </div>
+
+  <div class="concept-toolbar">
+    <div class="concept-filter-group" id="conceptFilterTabs">
+      <button type="button" class="tab-btn active" data-concept-part="all">全部概念</button>
+      <button type="button" class="tab-btn" data-concept-part="13.1">13.1 反射</button>
+      <button type="button" class="tab-btn" data-concept-part="13.2">13.2 折射</button>
+      <button type="button" class="tab-btn" data-concept-part="13.3">13.3 全反射</button>
+      <button type="button" class="tab-btn" data-concept-part="13.4">13.4 透镜视力</button>
+    </div>
+    <div class="concept-actions">
+      <span class="concept-count-pill" id="conceptCountPill">显示 18 / 18 题</span>
+      <button type="button" class="tab-btn" id="conceptQuizToggle">🙈 开启遮罩自测</button>
+    </div>
+  </div>
+
+  <div class="concept-grid" id="conceptGrid">
+    <div class="concept-card" data-part="13.1">
+      <div class="cq-head"><span class="q-tag">13.1</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Define the normal and state the Law of Reflection.</div>
+      <div class="cq-cn">定义法线并写出光的反射定律。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">The <span class="kw">normal</span> is a line drawn perpendicular (90°) to the surface at the point of incidence. Law: <span class="kw">angle of incidence = angle of reflection (i = r)</span>.<br/><span class="kw">法线</span>垂直于界面；反射定律：<span class="kw">入射角等于反射角 (i = r)</span>（均量至法线）。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="13.1">
+      <div class="cq-head"><span class="q-tag">13.1</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">State all five properties of an image formed by a plane mirror.</div>
+      <div class="cq-cn">写出平面镜所成像的五大性质。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner"><span class="kw">Virtual</span>, <span class="kw">upright</span>, <span class="kw">same size</span> as object, <span class="kw">same distance</span> behind mirror as object is in front, <span class="kw">laterally inverted</span>.<br/><span class="kw">虚像、正立、等大、物像到镜面等距、左右颠倒</span>。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="13.1">
+      <div class="cq-head"><span class="q-tag">13.1</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">What is the difference between a real image and a virtual image?</div>
+      <div class="cq-cn">实像与虚像的本质区别是什么？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">A <span class="kw">real image</span> is formed by actual converging rays and <span class="kw">can be projected onto a screen</span>; a <span class="kw">virtual image</span> is formed by diverging rays appearing to come from a point and <span class="kw">cannot be projected</span>.<br/><span class="kw">实像</span>由真实光线会聚而成且<span class="kw">可承接在光屏上</span>；<span class="kw">虚像</span>由反向延长线相交而成，<span class="kw">无法投影</span>。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="13.2">
+      <div class="cq-head"><span class="q-tag">13.2</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">What causes light to refract when crossing from one medium into another?</div>
+      <div class="cq-cn">光跨越两种介质界面时发生折射的根本原因是什么？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Light <span class="kw">changes speed</span> (and wavelength) when entering a medium of different optical density at an angle to the normal (frequency remains constant).<br/>在不同光密度的介质中<span class="kw">光速发生改变</span>（频率不变，波长随之改变）。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="13.2">
+      <div class="cq-head"><span class="q-tag">13.2</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">State which way light bends (a) air → glass, (b) glass → air, and (c) along the normal.</div>
+      <div class="cq-cn">指出光在下列三种情况下的偏折方向：(a) 空气入玻璃；(b) 玻璃出空气；(c) 沿法线垂直射入。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">(a) Bends <span class="kw">towards normal</span> (<span class="math">r &lt; i</span>); (b) Bends <span class="kw">away from normal</span> (<span class="math">r &gt; i</span>); (c) Speed changes <span class="kw">without changing direction</span> (<span class="math">r = 0°</span>).<br/>(a) <span class="kw">向法线偏折</span>；(b) <span class="kw">远离法线偏折</span>；(c) 光速改变但<span class="kw">方向不变</span>。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="13.2">
+      <div class="cq-head"><span class="q-tag">13.2</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">Write both equations for refractive index n.</div>
+      <div class="cq-cn">写出折射率 n 的两个定义公式。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner"><span class="kw">n = sin i / sin r</span> (where <span class="math">i</span> is in air/vacuum and <span class="math">r</span> is in medium) and <span class="kw">n = c / v</span> (ratio of speed in vacuum to speed in medium).<br/><span class="kw">n = sin i / sin r</span>（空气角在分子）与 <span class="kw">n = c / v</span>（真空光速比介质光速）。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="13.3">
+      <div class="cq-head"><span class="q-tag">13.3</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Define the critical angle c.</div>
+      <div class="cq-cn">定义临界角 c (Critical angle)。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">The <span class="kw">angle of incidence in the denser medium</span> for which the angle of refraction in air (less dense medium) is exactly <span class="kw">90°</span>.<br/>光从光密介质射向空气时，使空气中折射角恰好等于 <span class="kw">90°</span> 的那个<span class="kw">入射角</span>。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="13.3">
+      <div class="cq-head"><span class="q-tag">13.3</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">State the two conditions required for Total Internal Reflection (TIR).</div>
+      <div class="cq-cn">写出发生全内反射 (TIR) 必须同时满足的两个条件。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">1. Light travels from an optically <span class="kw">denser to a less dense</span> medium; 2. Angle of incidence is <span class="kw">greater than the critical angle (i &gt; c)</span>.<br/>① 光由<span class="kw">光密射向光疏</span>介质；② 入射角<span class="kw">大于临界角 (i &gt; c)</span>。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="13.3">
+      <div class="cq-head"><span class="q-tag">13.3</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">State the formula linking critical angle c and refractive index n.</div>
+      <div class="cq-cn">写出临界角 c 与折射率 n 的换算公式。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner"><span class="kw">sin c = 1 / n</span> (or <span class="math">n</span> = 1 / sin <span class="math">c</span>). For glass (<span class="math">n</span> ≈ 1.5), <span class="math">c</span> ≈ 42°.<br/><span class="kw">sin c = 1 / n</span>（玻璃约 42°，水约 49°）。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="13.3">
+      <div class="cq-head"><span class="q-tag">13.3</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Explain how an optical fibre works and list two uses.</div>
+      <div class="cq-cn">解释光纤工作原理并列举两大应用。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Light hits core-cladding boundary at <span class="kw">i &gt; c</span> and travels by <span class="kw">repeated TIR</span>. Uses: medical <span class="kw">endoscope</span> and high-speed <span class="kw">telecommunications</span>.<br/>光以 <span class="kw">i &gt; c</span> 在高折射率纤芯内反复发生<span class="kw">全内反射</span>；用于医用<span class="kw">内窥镜</span>与高速<span class="kw">光纤通信</span>。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="13.3">
+      <div class="cq-head"><span class="q-tag">13.3</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">Give three advantages of optical fibres over electrical copper cables for data transmission.</div>
+      <div class="cq-cn">光纤传输相比传统铜导线有哪三大显著优势？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">1. <span class="kw">Higher bandwidth / data rate</span>; 2. <span class="kw">Less attenuation</span> (signal loss) over long distances; 3. <span class="kw">No electromagnetic interference</span>.<br/>① <span class="kw">更高传输带宽与速率</span>；② <span class="kw">长距离损耗极小</span>；③ <span class="kw">不受电磁干扰</span>。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="13.4">
+      <div class="cq-head"><span class="q-tag">13.4</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Define principal focus F and focal length f of a thin converging lens.</div>
+      <div class="cq-cn">定义薄凸透镜的主焦点 F 和焦距 f。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner"><span class="kw">Principal focus F</span>: point where rays parallel to the principal axis <span class="kw">converge</span> after passing through the lens. <span class="kw">Focal length f</span>: distance from optical centre to F.<br/><span class="kw">主焦点 F</span> 是平行主光轴的光线折射后的会聚点；<span class="kw">焦距 f</span> 是光心到 F 的距离。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="13.4">
+      <div class="cq-head"><span class="q-tag">13.4</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">List the three standard construction rays for a converging lens.</div>
+      <div class="cq-cn">背出薄凸透镜作图的三条标准光线。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">1. Parallel to axis → refracts through <span class="kw">far F</span>; 2. Through optical centre C → <span class="kw">undeviated</span>; 3. Through <span class="kw">near F'</span> → emerges parallel to axis.<br/>① 平行轴射入→过对侧 <span class="kw">F</span>；② 过光心 C→<span class="kw">直线不偏折</span>；③ 过近侧 <span class="kw">F'</span>→平行射出。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="13.4">
+      <div class="cq-head"><span class="q-tag">13.4</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Compare the image formed by a converging lens as a camera (u &gt; 2f) vs a projector (f &lt; u &lt; 2f).</div>
+      <div class="cq-cn">对比凸透镜作为照相机 (u &gt; 2f) 与投影仪 (f &lt; u &lt; 2f) 的成像区别。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Camera (<span class="math">u &gt; 2f</span>): real, inverted, <span class="kw">diminished</span> (at <span class="math">f &lt; v &lt; 2f</span>). Projector (<span class="math">f &lt; u &lt; 2f</span>): real, inverted, <span class="kw">magnified</span> (at <span class="math">v &gt; 2f</span>).<br/>照相机成倒立<span class="kw">缩小</span>实像；投影仪成倒立<span class="kw">放大</span>实像。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="13.4">
+      <div class="cq-head"><span class="q-tag">13.4</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Describe the image formed by a converging lens used as a magnifying glass (u &lt; f).</div>
+      <div class="cq-cn">描述放大镜 (u &lt; f) 成像的性质与位置。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner"><span class="kw">Virtual, upright, magnified</span>, formed on the <span class="kw">same side</span> of the lens as the object (where diverging rays appear to meet).<br/>在物同侧成<span class="kw">正立、放大、虚像</span>（折射光线发散，反向延长线交汇）。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="13.4">
+      <div class="cq-head"><span class="q-tag">13.4</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">What type of image is always formed by a thin diverging lens?</div>
+      <div class="cq-cn">薄凹透镜（发散透镜）无论物距远近总成什么像？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Always <span class="kw">virtual, upright, and diminished</span> (smaller than object, on same side as object).<br/>永远成<span class="kw">正立、缩小、虚像</span>。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="13.4">
+      <div class="cq-head"><span class="q-tag">13.4</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">Explain short-sightedness (myopia) and how it is corrected.</div>
+      <div class="cq-cn">解释近视眼的成像缺陷及矫正透镜原理。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Distant rays focus <span class="kw">in front of the retina</span> (eyeball too long / lens too strong). Corrected with a <span class="kw">diverging (concave) lens</span> to push focus back onto retina.<br/>远处光线聚焦在<span class="kw">视网膜前方</span>；配戴<span class="kw">凹透镜（发散透镜）</span>先发散再会聚于视网膜上。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="13.4">
+      <div class="cq-head"><span class="q-tag">13.4</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">Explain long-sightedness (hypermetropia) and how it is corrected.</div>
+      <div class="cq-cn">解释远视眼的成像缺陷及矫正透镜原理。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Near rays focus <span class="kw">behind the retina</span> (eyeball too short / lens too weak). Corrected with a <span class="kw">converging (convex) lens</span> to bring focus forward onto retina.<br/>近处光线聚焦在<span class="kw">视网膜后方</span>；配戴<span class="kw">凸透镜（会聚透镜）</span>预先会聚使像前移到视网膜上。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+        <nav class="chapter-pager" aria-label="章节切换导航">
+          <div><a class="pager-btn" href="Ch12_Sound.html">← Ch12 声波产生、纵波疏密部、回声测速与示波器波形</a></div>
+          <div><a class="pager-btn primary" href="index.html">🏠 返回 25 章全书总目录</a></div>
+          <div><a class="pager-btn" href="Ch14_Properties_of_Waves.html">Ch14 横波纵波、v=fλ 与水波反射折射衍射 →</a></div>
+        </nav>
+      </div>
+    </main>
+  </div>
+
+  <button type="button" class="back-top-btn" id="backTopBtn" title="返回顶部">↑</button>
+
+  <script>
+(function () {
+  'use strict';
+
+  const THEME_KEY = 'igcse_phy0625_theme';
+  const chapterCode = (document.body && document.body.getAttribute('data-chapter-code')) || 'HUB';
+  const STORAGE_PREFIX = 'igcse_phy0625_' + chapterCode.toLowerCase() + '_';
+  const htmlEl = document.documentElement;
+  const bodyEl = document.body;
+
+  // All state variables declared cleanly at top of IIFE (prevents TDZ errors)
+  let currentViewMode = localStorage.getItem(STORAGE_PREFIX + 'viewMode') || 'all';
+  let activeConceptPart = 'all';
+  let quizMasked = localStorage.getItem(STORAGE_PREFIX + 'quizMasked') === '1';
+  let allMsExpanded = false;
+  let masteredIds = [];
+  try {
+    masteredIds = JSON.parse(localStorage.getItem(STORAGE_PREFIX + 'mastered') || '[]');
+    if (!Array.isArray(masteredIds)) masteredIds = [];
+  } catch (e) {
+    masteredIds = [];
+  }
+
+  // ---------- 1. Theme Toggle ----------
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+
+  function applyTheme(theme) {
+    htmlEl.setAttribute('data-theme', theme);
+    if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem(THEME_KEY, theme);
+  }
+  applyTheme(localStorage.getItem(THEME_KEY) || 'light');
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      applyTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  }
+
+  // ---------- 2. View Mode Filter (All / Core / Extended / SME) ----------
+  function applyViewMode(mode) {
+    currentViewMode = mode;
+    bodyEl.classList.remove('mode-core', 'mode-ext', 'mode-book', 'mode-sme');
+    if (mode === 'core') bodyEl.classList.add('mode-core');
+    if (mode === 'ext') bodyEl.classList.add('mode-ext');
+    if (mode === 'sme') bodyEl.classList.add('mode-sme');
+    document.querySelectorAll('[data-view-mode]').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-view-mode') === mode);
+    });
+    localStorage.setItem(STORAGE_PREFIX + 'viewMode', mode);
+    filterConcepts();
+  }
+  document.querySelectorAll('[data-view-mode]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      applyViewMode(btn.getAttribute('data-view-mode'));
+    });
+  });
+
+  // ---------- 3. Sidebar Drawer & Accordion ----------
+  const sidebar = document.getElementById('sidebar');
+  const menuToggle = document.getElementById('menuToggle');
+  if (menuToggle && sidebar) {
+    menuToggle.addEventListener('click', function () { sidebar.classList.toggle('open'); });
+    sidebar.querySelectorAll('.nav-link').forEach(function (lnk) {
+      lnk.addEventListener('click', function () {
+        if (window.innerWidth <= 980) sidebar.classList.remove('open');
+      });
+    });
+  }
+  document.querySelectorAll('.nav-unit-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const unit = btn.closest('.nav-unit');
+      if (unit) unit.classList.toggle('collapsed');
+    });
+  });
+
+  // ---------- 4. Mastery Progress Tracker ----------
+  const progressText = document.getElementById('progressText');
+  const progressFill = document.getElementById('progressFill');
+  const masterBtns = Array.from(document.querySelectorAll('.master-btn'));
+  const totalSections = masterBtns.length;
+  const validIds = new Set(masterBtns.map(function (b) { return b.getAttribute('data-section-id'); }));
+
+  function renderMastery() {
+    const doneList = masteredIds.filter(function (id) { return validIds.has(id); });
+    localStorage.setItem(STORAGE_PREFIX + 'total', String(totalSections));
+    if (progressText) progressText.textContent = doneList.length + '/' + totalSections;
+    if (progressFill && totalSections > 0) {
+      progressFill.style.width = Math.round((doneList.length / totalSections) * 100) + '%';
+    }
+    masterBtns.forEach(function (btn) {
+      const sid = btn.getAttribute('data-section-id');
+      const done = doneList.indexOf(sid) !== -1;
+      btn.classList.toggle('is-mastered', done);
+      btn.textContent = done ? '✓ 已掌握' : '○ 标记掌握';
+    });
+    document.querySelectorAll('.nav-link').forEach(function (lnk) {
+      const id = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('mastered', doneList.indexOf(id) !== -1);
+    });
+  }
+  masterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const sid = btn.getAttribute('data-section-id');
+      const idx = masteredIds.indexOf(sid);
+      if (idx === -1) masteredIds.push(sid);
+      else masteredIds.splice(idx, 1);
+      localStorage.setItem(STORAGE_PREFIX + 'mastered', JSON.stringify(masteredIds));
+      renderMastery();
+    });
+  });
+  if (totalSections > 0) renderMastery();
+
+  // ---------- 5. Global Toggle Details & Print ----------
+  const toggleAllMs = document.getElementById('toggleAllMs');
+  if (toggleAllMs) {
+    toggleAllMs.addEventListener('click', function () {
+      allMsExpanded = !allMsExpanded;
+      document.querySelectorAll('details.ms-details').forEach(function (det) { det.open = allMsExpanded; });
+      const lbl = toggleAllMs.querySelector('.btn-label');
+      if (lbl) lbl.textContent = allMsExpanded ? '收起解析' : '展开解析';
+      toggleAllMs.classList.toggle('active', allMsExpanded);
+    });
+  }
+  const printBtn = document.getElementById('printBtn');
+  if (printBtn) printBtn.addEventListener('click', function () { window.print(); });
+
+  // ---------- 6. Instant Search ----------
+  const searchInput = document.getElementById('searchInput');
+  const searchClear = document.getElementById('searchClear');
+  const searchBar = document.getElementById('searchBar');
+  const searchSummary = document.getElementById('searchSummary');
+  const searchResetBtn = document.getElementById('searchResetBtn');
+  const emptySearchNotice = document.getElementById('emptySearchNotice');
+
+  function runSearch() {
+    if (!searchInput) return;
+    const raw = searchInput.value.trim().toLowerCase();
+    if (searchClear) searchClear.style.display = raw ? 'block' : 'none';
+    const sections = Array.from(document.querySelectorAll('.topic-section'));
+    if (!raw) {
+      sections.forEach(function (s) { s.classList.remove('search-dim'); });
+      if (searchBar) searchBar.classList.remove('visible');
+      if (emptySearchNotice) emptySearchNotice.style.display = 'none';
+      return;
+    }
+    let hits = 0;
+    sections.forEach(function (sec) {
+      const ok = sec.textContent.toLowerCase().indexOf(raw) !== -1;
+      sec.classList.toggle('search-dim', !ok);
+      if (ok) hits++;
+    });
+    if (searchBar) searchBar.classList.add('visible');
+    if (searchSummary) searchSummary.textContent = '关键词 “' + searchInput.value.trim() + '” 匹配 ' + hits + ' 个板块';
+    if (emptySearchNotice) emptySearchNotice.style.display = hits === 0 ? 'block' : 'none';
+  }
+  if (searchInput) searchInput.addEventListener('input', runSearch);
+  function resetSearch() { if (searchInput) searchInput.value = ''; runSearch(); }
+  if (searchClear) searchClear.addEventListener('click', resetSearch);
+  if (searchResetBtn) searchResetBtn.addEventListener('click', resetSearch);
+
+  // ---------- 7. Interactive MCQ Grading ----------
+  document.querySelectorAll('.exam-q[data-mcq-answer]').forEach(function (qBox) {
+    const ans = qBox.getAttribute('data-mcq-answer');
+    const fb = qBox.querySelector('.mcq-feedback');
+    const opts = qBox.querySelectorAll('.mcq-opt');
+    opts.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const chosen = btn.getAttribute('data-opt');
+        opts.forEach(function (o) { o.classList.remove('correct', 'wrong'); });
+        if (chosen === ans) {
+          btn.classList.add('correct');
+          if (fb) { fb.textContent = fb.getAttribute('data-ok') || '✅ 回答正确！'; fb.className = 'mcq-feedback visible ok'; }
+        } else {
+          btn.classList.add('wrong');
+          opts.forEach(function (o) { if (o.getAttribute('data-opt') === ans) o.classList.add('correct'); });
+          if (fb) { fb.textContent = fb.getAttribute('data-err') || '❌ 未选对，请对照解析复盘。'; fb.className = 'mcq-feedback visible err'; }
+        }
+      });
+    });
+  });
+
+  // ---------- 8. Concept Bank Filter & Mask ----------
+  const conceptCountPill = document.getElementById('conceptCountPill');
+  const conceptQuizToggle = document.getElementById('conceptQuizToggle');
+
+  function filterConcepts() {
+    const cards = Array.from(document.querySelectorAll('#conceptGrid .concept-card'));
+    if (!cards.length) return;
+    let visible = 0;
+    cards.forEach(function (card) {
+      const part = card.getAttribute('data-part');
+      const isExt = card.classList.contains('ext-only');
+      const matchesTab = activeConceptPart === 'all' || part === activeConceptPart;
+      const matchesTier = currentViewMode !== 'core' || !isExt;
+      const show = matchesTab && matchesTier;
+      card.classList.toggle('concept-hidden', !show);
+      if (show) visible++;
+    });
+    if (conceptCountPill) conceptCountPill.textContent = '显示 ' + visible + ' / ' + cards.length + ' 题';
+  }
+
+  document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      activeConceptPart = btn.getAttribute('data-concept-part');
+      document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      filterConcepts();
+    });
+  });
+
+  function applyQuizMask(masked) {
+    quizMasked = masked;
+    document.querySelectorAll('#conceptGrid .concept-card').forEach(function (c) { c.classList.toggle('masked', masked); });
+    if (conceptQuizToggle) {
+      conceptQuizToggle.textContent = masked ? '👁️ 显示全部答案' : '🙈 开启遮罩自测';
+      conceptQuizToggle.classList.toggle('active', masked);
+    }
+    localStorage.setItem(STORAGE_PREFIX + 'quizMasked', masked ? '1' : '0');
+  }
+  if (conceptQuizToggle) {
+    conceptQuizToggle.addEventListener('click', function () { applyQuizMask(!quizMasked); });
+  }
+  document.querySelectorAll('#conceptGrid .cq-answer').forEach(function (box) {
+    box.addEventListener('click', function () {
+      const card = box.closest('.concept-card');
+      if (card && card.classList.contains('masked')) card.classList.remove('masked');
+    });
+  });
+
+  // ---------- 9. 2D Mini-Plot Helper (Zero HTML tags inside SVG) ----------
+  function makePlot(w, h, xmin, xmax, ymin, ymax) {
+    const pad = 22;
+    return {
+      w: w, h: h, xmin: xmin, xmax: xmax, ymin: ymin, ymax: ymax,
+      toX: function (x) { return pad + ((x - xmin) / (xmax - xmin)) * (w - 2 * pad); },
+      toY: function (y) { return h - pad - ((y - ymin) / (ymax - ymin)) * (h - 2 * pad); }
+    };
+  }
+  function plotBase(p, xLbl, yLbl) {
+    let s = '<rect x="2" y="2" width="' + (p.w - 4) + '" height="' + (p.h - 4) + '" rx="6" fill="none" stroke="var(--svg-grid)" stroke-width="1"/>';
+    for (let i = 1; i <= 4; i++) {
+      const gx = p.xmin + (i / 5) * (p.xmax - p.xmin);
+      const gy = p.ymin + (i / 5) * (p.ymax - p.ymin);
+      s += '<line x1="' + p.toX(gx).toFixed(1) + '" y1="12" x2="' + p.toX(gx).toFixed(1) + '" y2="' + (p.h - 12) + '" stroke="var(--svg-grid)" stroke-width="0.7"/>';
+      s += '<line x1="12" y1="' + p.toY(gy).toFixed(1) + '" x2="' + (p.w - 12) + '" y2="' + p.toY(gy).toFixed(1) + '" stroke="var(--svg-grid)" stroke-width="0.7"/>';
+    }
+    const ox = p.xmin <= 0 && p.xmax >= 0 ? p.toX(0) : 22;
+    const oy = p.ymin <= 0 && p.ymax >= 0 ? p.toY(0) : p.h - 22;
+    s += '<line x1="' + ox.toFixed(1) + '" y1="10" x2="' + ox.toFixed(1) + '" y2="' + (p.h - 10) + '" stroke="var(--svg-muted)" stroke-width="1.5"/>';
+    s += '<line x1="10" y1="' + oy.toFixed(1) + '" x2="' + (p.w - 10) + '" y2="' + oy.toFixed(1) + '" stroke="var(--svg-muted)" stroke-width="1.5"/>';
+    s += '<text x="' + Math.min(p.w - 45, ox + 6).toFixed(1) + '" y="20" font-size="10.5" font-weight="700" fill="var(--svg-muted)">' + (yLbl || 'y') + '</text>';
+    s += '<text x="' + (p.w - 14) + '" y="' + Math.max(20, oy - 5).toFixed(1) + '" text-anchor="end" font-size="10.5" font-weight="700" fill="var(--svg-muted)">' + (xLbl || 'x') + '</text>';
+    return s;
+  }
+  function plotPath(p, fn, col, dashed) {
+    let d = '', pen = false;
+    for (let i = 0; i <= 100; i++) {
+      const x = p.xmin + (i / 100) * (p.xmax - p.xmin);
+      const y = fn(x);
+      if (!Number.isFinite(y) || y < p.ymin - 1 || y > p.ymax + 1) { pen = false; continue; }
+      d += (pen ? ' L ' : ' M ') + p.toX(x).toFixed(1) + ' ' + p.toY(y).toFixed(1);
+      pen = true;
+    }
+    return d ? '<path d="' + d.trim() + '" fill="none" stroke="' + col + '" stroke-width="2.4"' + (dashed ? ' stroke-dasharray="5,3"' : '') + '/>' : '';
+  }
+
+  // ---------- 10. All 25 Interactive Physics Labs (p01 – p25) ----------
+  function mountPhysicsLab(el) {
+    const t = el.getAttribute('data-lab-type');
+    if (!t) return;
+
+    const bindInputs = function (fn) {
+      el.querySelectorAll('input,select').forEach(function (inp) {
+        inp.addEventListener('input', fn);
+        inp.addEventListener('change', fn);
+      });
+      fn();
+    };
+
+    if (t === 'p01') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 1 交互实验室 · 密度 ρ = m/V 与排水法浮沉判断仪</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>质量 m (g)：<input type="range" id="p1M" min="10" max="300" value="180"><span id="p1ML">180 g</span></label>' +
+        '<label>排开液体体积 ΔV (cm³)：<input type="range" id="p1V" min="10" max="200" value="120"><span id="p1VL">120 cm³</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p1Svg" viewBox="0 0 360 230" width="360" height="230"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p1Out1"></div><div class="readout-pill" id="p1Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const m = Number(el.querySelector('#p1M').value), v = Number(el.querySelector('#p1V').value);
+        el.querySelector('#p1ML').textContent = m + ' g'; el.querySelector('#p1VL').textContent = v + ' cm³';
+        const rho = m / v;
+        const float = rho < 1.0;
+        el.querySelector('#p1Out1').textContent = '密度 ρ = ' + m + ' / ' + v + ' = ' + rho.toFixed(2) + ' g/cm³ (' + Math.round(rho * 1000) + ' kg/m³)';
+        el.querySelector('#p1Out2').textContent = float ? '✅ ρ < 1.0 g/cm³ → 漂浮于纯水面 (Floats)；若完全浸没需细针轻按且留意视差' : Math.abs(rho - 1.0) < 0.02 ? '⚖️ ρ ≈ 1.0 g/cm³ → 悬浮水中' : '⬇️ ρ > 1.0 g/cm³ → 沉入水底 (Sinks)！';
+        const yObj = float ? 86 : 158;
+        el.querySelector('#p1Svg').innerHTML =
+          '<rect x="110" y="34" width="140" height="164" fill="none" stroke="var(--svg-ink)" stroke-width="2.2"/>' +
+          '<rect x="112" y="88" width="136" height="108" fill="rgba(2,132,199,0.22)"/>' +
+          '<rect x="155" y="' + yObj + '" width="50" height="36" rx="4" fill="' + (float ? 'var(--svg-amber)' : 'var(--svg-indigo)') + '"/>' +
+          '<text x="180" y="218" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-ink)">水密度 ρ_water = 1.00 g/cm³</text>';
+      });
+    } else if (t === 'p02') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 2 交互实验室 · v-t 图像加速度斜率与积分面积位移台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>初速度 u (m/s)：<input type="number" id="p2U" value="4"></label>' +
+        '<label>末速度 v (m/s)：<input type="number" id="p2V" value="20"></label>' +
+        '<label>时间 t (s)：<input type="number" id="p2T" value="8" min="1"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p2Svg" viewBox="0 0 360 230" width="360" height="230"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p2Acc"></div><div class="readout-pill" id="p2Dist"></div></div></div></div>';
+      bindInputs(function () {
+        const u = Number(el.querySelector('#p2U').value) || 0, v = Number(el.querySelector('#p2V').value) || 0, tm = Math.max(1, Number(el.querySelector('#p2T').value) || 8);
+        const a = (v - u) / tm, s = 0.5 * (u + v) * tm;
+        const p = makePlot(360, 230, 0, tm * 1.15, Math.min(0, u, v) - 2, Math.max(10, u, v) * 1.15);
+        let svg = plotBase(p, 't (s)', 'v (m/s)');
+        svg += '<polygon points="' + p.toX(0).toFixed(1) + ',' + p.toY(0).toFixed(1) + ' ' + p.toX(0).toFixed(1) + ',' + p.toY(u).toFixed(1) + ' ' + p.toX(tm).toFixed(1) + ',' + p.toY(v).toFixed(1) + ' ' + p.toX(tm).toFixed(1) + ',' + p.toY(0).toFixed(1) + '" fill="rgba(2,132,199,0.2)" stroke="var(--svg-blue)" stroke-width="2"/>';
+        el.querySelector('#p2Svg').innerHTML = svg;
+        el.querySelector('#p2Acc').textContent = '斜率即加速度 a = (v − u)/t = ' + a.toFixed(2) + ' m/s² ' + (a < 0 ? '(减速 Deceleration)' : a > 0 ? '(匀加速)' : '(匀速)');
+        el.querySelector('#p2Dist').textContent = '图像下方面积 = 梯形 ½(u+v)t = ' + s.toFixed(1) + ' m | 平均速率 = ' + (s / tm).toFixed(2) + ' m/s';
+      });
+    } else if (t === 'p03') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 3 交互实验室 · 非弹性碰撞动量守恒 (m₁u₁ = (m₁+m₂)v) 与冲量</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>m₁ (kg)：<input type="number" id="p3M1" value="3" min="1"></label><label>u₁ (m/s)：<input type="number" id="p3U1" value="6"></label>' +
+        '<label>m₂ (kg)：<input type="number" id="p3M2" value="6" min="1"></label><label>作用时间 Δt (s)：<input type="number" id="p3Dt" value="0.2" step="0.1" min="0.05"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p3Out1"></div><div class="readout-pill" id="p3Out2"></div></div></div>';
+      bindInputs(function () {
+        const m1 = Math.max(0.5, Number(el.querySelector('#p3M1').value) || 3), u1 = Number(el.querySelector('#p3U1').value) || 0;
+        const m2 = Math.max(0.5, Number(el.querySelector('#p3M2').value) || 6), dt = Math.max(0.05, Number(el.querySelector('#p3Dt').value) || 0.2);
+        const v = (m1 * u1) / (m1 + m2);
+        const imp = m2 * v;
+        el.querySelector('#p3Out1').textContent = '合体后共同速度 v = m₁u₁/(m₁+m₂) = ' + v.toFixed(2) + ' m/s | 碰前总动量 = ' + (m1 * u1).toFixed(1) + ' kg·m/s';
+        el.querySelector('#p3Out2').textContent = 'm₂ 所受冲量 Δp = ' + imp.toFixed(2) + ' N·s | 平均碰撞力 F = Δp/Δt = ' + (imp / dt).toFixed(1) + ' N（时间越长冲击力越小！）';
+      });
+    } else if (t === 'p04') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 4 交互实验室 · 杠杆力矩平衡 (M = Fd) 与支点向上支持力</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>左力 F₁ (N)：<input type="number" id="p4F1" value="60"></label><label>左臂 d₁ (m)：<input type="number" id="p4D1" value="2.0" step="0.5"></label>' +
+        '<label>右臂 d₂ (m)：<input type="number" id="p4D2" value="3.0" step="0.5" min="0.5"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p4Out1"></div><div class="readout-pill" id="p4Out2"></div></div></div>';
+      bindInputs(function () {
+        const f1 = Number(el.querySelector('#p4F1').value) || 0, d1 = Number(el.querySelector('#p4D1').value) || 0, d2 = Math.max(0.5, Number(el.querySelector('#p4D2').value) || 1);
+        const f2 = (f1 * d1) / d2;
+        el.querySelector('#p4Out1').textContent = '逆时针力矩 F₁d₁ = ' + (f1 * d1).toFixed(1) + ' N·m ⇒ 平衡所需右力 F₂ = ' + f2.toFixed(2) + ' N';
+        el.querySelector('#p4Out2').textContent = '支点向上总支持力 (Net upward force) = F₁ + F₂ = ' + (f1 + f2).toFixed(2) + ' N（平衡需满足合力=0且合力矩=0！）';
+      });
+    } else if (t === 'p05') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 5 交互实验室 · 胡克定律 F = kx 与液体压强 Δp = ρgΔh 计算台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>原长 l₀ (cm)：<input type="number" id="p5L0" value="12"></label><label>劲度系数 k (N/cm)：<input type="number" id="p5K" value="2.5" step="0.5"></label>' +
+        '<label>拉力 F (N)：<input type="number" id="p5F" value="15"></label><label>水深 Δh (m)：<input type="number" id="p5H" value="5"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p5Out1"></div><div class="readout-pill" id="p5Out2"></div></div></div>';
+      bindInputs(function () {
+        const l0 = Number(el.querySelector('#p5L0').value) || 12, k = Math.max(0.1, Number(el.querySelector('#p5K').value) || 2.5);
+        const F = Number(el.querySelector('#p5F').value) || 0, h = Number(el.querySelector('#p5H').value) || 0;
+        const x = F / k;
+        el.querySelector('#p5Out1').textContent = '伸长量 Extension x = F/k = ' + x.toFixed(2) + ' cm ⇒ 总长度 Total length = ' + (l0 + x).toFixed(2) + ' cm（注意考题常问总长还是伸长量！）';
+        el.querySelector('#p5Out2').textContent = '水下 Δh = ' + h + ' m 处液体附加压强 Δp = 1000 × 9.8 × ' + h + ' = ' + (1000 * 9.8 * h).toLocaleString() + ' Pa';
+      });
+    } else if (t === 'p06') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 6 交互实验室 · 自由落体机械能转换 (mgΔh ↔ ½mv²) 与效率 η</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>质量 m (kg)：<input type="number" id="p6M" value="4"></label><label>高度 Δh (m)：<input type="number" id="p6H" value="5"></label>' +
+        '<label>效率 η (%)：<input type="range" id="p6E" min="20" max="100" value="80"><span id="p6EL">80%</span></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p6Out1"></div><div class="readout-pill" id="p6Out2"></div></div></div>';
+      bindInputs(function () {
+        const m = Math.max(0.1, Number(el.querySelector('#p6M').value) || 4), h = Math.max(0, Number(el.querySelector('#p6H').value) || 5), eff = Number(el.querySelector('#p6E').value) / 100;
+        el.querySelector('#p6EL').textContent = Math.round(eff * 100) + '%';
+        const gpe = m * 9.8 * h, ke = gpe * eff, v = Math.sqrt((2 * ke) / m);
+        el.querySelector('#p6Out1').textContent = '初始重力势能 ΔE_p = m × 9.8 × ' + h + ' = ' + gpe.toFixed(1) + ' J | 转化为动能 E_k = ' + ke.toFixed(1) + ' J（热耗散 ' + (gpe - ke).toFixed(1) + ' J）';
+        el.querySelector('#p6Out2').textContent = '到达底端速度 v = √(2gΔh·η) = ' + v.toFixed(2) + ' m/s（注意无空气阻力时 η=100% 且速度与质量 m 无关！）';
+      });
+    } else if (t === 'p07') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 7 交互实验室 · 能源类型、太阳源头辨析与发电对比筛查仪</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>选择发电能源：<select id="p7Src"><option value="solar">太阳能光伏 (Solar cell)</option><option value="wind">风力发电 (Wind)</option><option value="hydro">水力蓄能 (Hydroelectric)</option><option value="geo">地热能 (Geothermal)</option><option value="nuc">核裂变 (Nuclear)</option><option value="tidal">潮汐能 (Tidal)</option><option value="coal">燃煤火电 (Fossil fuel)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p7Out1"></div><div class="readout-pill" id="p7Out2"></div></div></div>';
+      const MAP7 = {
+        solar: { sun: '✅ 直接来自太阳 (Direct solar radiation)', ren: '可再生 (Renewable) · 运行零 CO₂', prop: '直接光生电无需涡轮机；缺点：夜间阴天间歇、占地面积大。' },
+        wind: { sun: '✅ 间接来自太阳 (太阳不均加热引发空气对流)', ren: '可再生 (Renewable) · 零温室气体', prop: '视觉噪音争议与风速不可控间歇发电，需储能或调峰电站。' },
+        hydro: { sun: '✅ 间接来自太阳 (蒸发降雨水循环)', ren: '可再生 (Renewable) · 响应极快 (几秒启动)', prop: '适合峰值调频，但筑坝淹没生态耕地、受地理落差限制。' },
+        geo: { sun: '❌ 非太阳能！源自地球内部放射性衰变余热', ren: '可再生 (Renewable) · 24h 基荷稳定不看天', prop: '仅限板块活跃火山地热带钻井成本极高（全纲三大非太阳能之一！）。' },
+        nuc: { sun: '❌ 非太阳能！重核铀/钚裂变或氢聚变', ren: '不可再生 (Non-renewable) · 运行零 CO₂', prop: '能量密度极高、全天候稳发；痛点：高放核废料千万年封存与事故风险。' },
+        tidal: { sun: '❌ 主要非太阳能！源自月球与太阳引力潮汐牵引', ren: '可再生 (Renewable) · 天文时刻可精准预测', prop: '建设拦潮坝改变河口湿地生态、影响航运，仅特定海湾适用。' },
+        coal: { sun: '✅ 远古太阳能储存 (史前植物煤炭)', ren: '不可再生 (Non-renewable)', prop: '优点：高可靠可随时启停；致命缺点：排放 CO₂ 加剧温室效应与酸雨。' }
+      };
+      bindInputs(function () {
+        const d = MAP7[el.querySelector('#p7Src').value];
+        el.querySelector('#p7Out1').textContent = '溯源检查：' + d.sun + ' | 属性：' + d.ren;
+        el.querySelector('#p7Out2').textContent = '优缺点与原理：' + d.prop;
+      });
+    } else if (t === 'p08') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 8 交互实验室 · 起重机做功 W = Fd、功率 P = W/t 与功率效率计算</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>提升质量 m (kg)：<input type="number" id="p8M" value="50"></label><label>垂直高度 h (m)：<input type="number" id="p8H" value="12"></label>' +
+        '<label>耗时 t (s)：<input type="number" id="p8T" value="10" min="1"></label><label>电机输入功率 P_in (W)：<input type="number" id="p8Pin" value="800" min="1"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p8Out1"></div><div class="readout-pill" id="p8Out2"></div></div></div>';
+      bindInputs(function () {
+        const m = Number(el.querySelector('#p8M').value) || 50, h = Number(el.querySelector('#p8H').value) || 12, tm = Math.max(1, Number(el.querySelector('#p8T').value) || 10);
+        const w = m * 9.8 * h, pout = w / tm, pin = Math.max(pout, Number(el.querySelector('#p8Pin').value) || pout);
+        el.querySelector('#p8Out1').textContent = '有用机械功 W = mgh = ' + w.toFixed(1) + ' J | 有用输出功率 P_out = W/t = ' + pout.toFixed(1) + ' W';
+        el.querySelector('#p8Out2').textContent = '效率 η = (P_out / P_in) × 100% = ' + ((pout / pin) * 100).toFixed(1) + '%（记得先用 g = 9.8 算重量！）';
+      });
+    } else if (t === 'p09') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 9 交互实验室 · 玻意耳定律 p₁V₁ = p₂V₂ 与开尔文温度转换台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>初压 p₁ (kPa)：<input type="number" id="p9P1" value="100"></label><label>初体积 V₁ (cm³)：<input type="number" id="p9V1" value="60"></label>' +
+        '<label>压缩后体积 V₂ (cm³)：<input type="range" id="p9V2" min="15" max="120" value="30"><span id="p9VL">30</span></label>' +
+        '<label>摄氏温度 θ (°C)：<input type="number" id="p9C" value="27"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p9Svg" viewBox="0 0 360 220" width="360" height="220"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p9Out1"></div><div class="readout-pill" id="p9Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const p1 = Number(el.querySelector('#p9P1').value) || 100, v1 = Number(el.querySelector('#p9V1').value) || 60, v2 = Number(el.querySelector('#p9V2').value) || 30;
+        const cTemp = Number(el.querySelector('#p9C').value) || 0, p2 = (p1 * v1) / v2;
+        el.querySelector('#p9VL').textContent = v2 + ' cm³';
+        const plt = makePlot(360, 220, 10, 130, 0, Math.max(450, p2 * 1.15));
+        let svg = plotBase(plt, 'V', 'p');
+        svg += plotPath(plt, function (x) { return (p1 * v1) / x; }, 'var(--svg-amber)', false);
+        svg += '<circle cx="' + plt.toX(v2).toFixed(1) + '" cy="' + plt.toY(p2).toFixed(1) + '" r="5" fill="var(--svg-red)"/>';
+        el.querySelector('#p9Svg').innerHTML = svg;
+        el.querySelector('#p9Out1').textContent = '定温玻意耳：p₂ = p₁V₁/V₂ = ' + p2.toFixed(1) + ' kPa（体积减半 ⇒ 单位体积分子更密集 ⇒ 撞击器壁频率翻倍！）';
+        el.querySelector('#p9Out2').textContent = '开尔文绝对温标 T(K) = θ(°C) + 273 = ' + (cTemp + 273) + ' K（绝对零度 0 K = −273 °C，分子动能最小）';
+      });
+    } else if (t === 'p10') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 10 交互实验室 · 比热容 ΔE = mcΔθ 与电热实验能量守恒计算</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>质量 m (kg)：<input type="number" id="p10M" value="2.0" step="0.5"></label>' +
+        '<label>比热容 c (J/kg°C)：<input type="number" id="p10C" value="4200"></label>' +
+        '<label>温升 Δθ (°C)：<input type="number" id="p10Dt" value="15"></label>' +
+        '<label>加热器功率 P (W)：<input type="number" id="p10P" value="2100"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p10Out1"></div><div class="readout-pill" id="p10Out2"></div></div></div>';
+      bindInputs(function () {
+        const m = Number(el.querySelector('#p10M').value) || 2, c = Number(el.querySelector('#p10C').value) || 4200, dt = Number(el.querySelector('#p10Dt').value) || 15, P = Math.max(10, Number(el.querySelector('#p10P').value) || 2100);
+        const e = m * c * dt, tSec = e / P;
+        el.querySelector('#p10Out1').textContent = '所需内能增量 ΔE = mcΔθ = ' + e.toLocaleString() + ' J (' + (e / 1000).toFixed(1) + ' kJ)';
+        el.querySelector('#p10Out2').textContent = '理想加热时间 t = ΔE/P = ' + tSec.toFixed(1) + ' s | 实际测定 c_exp 常偏大！原因：部分热量散失给空气/杯壁，需加盖保温并取稳态温度';
+      });
+    } else if (t === 'p11') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 11 交互实验室 · 热传导、对流与 Leslie 表面热辐射对比台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>选择对比情景：<select id="p11M"><option value="leslie">Leslie 立方体红外发射对比</option><option value="vacuum">真空保温瓶四层隔热解析</option><option value="breeze">白天海风 vs 夜晚陆风循环</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p11Out1"></div><div class="readout-pill" id="p11Out2"></div></div></div>';
+      const MAP11 = {
+        leslie: ['哑光黑 (Matt Black) = 最佳吸收者 (Good absorber) 且最佳辐射发射者 (Best emitter)；银白亮面 (Shiny Silver) = 最佳反射面 (Best reflector) 且最差发射者！', '实验注意：各面到红外探测器距离必须相同、初始水温相同以保证公平控制变量 (Fair test)。'],
+        vacuum: ['真空夹层 (Vacuum gap) → 阻止传导 Conduction 与对流 Convection（均需介质粒子）；塑料瓶塞+密封盖 → 阻断对流热空气逸散与蒸发。', '内壁镀银表面 (Silvered surfaces) → 将红外辐射发射与吸收降到最低并反射回瓶内！'],
+        breeze: ['白天海风 (Sea breeze)：陆地比热容远小于海水，升温更快 → 陆地热空气膨胀密度变小上升 → 海洋凉爽高压空气吹向陆地补位。', '夜晚陆风 (Land breeze)：陆地降温快、海水仍较暖 → 海上暖空气上升，陆风由陆吹向海。']
+      };
+      bindInputs(function () {
+        const d = MAP11[el.querySelector('#p11M').value];
+        el.querySelector('#p11Out1').textContent = d[0];
+        el.querySelector('#p11Out2').textContent = d[1];
+      });
+    } else if (t === 'p12') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 12 交互实验室 · 声波示波器 (CRO) 振幅响度 / 频率音调波形台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>振幅 (响度 Loudness)：<input type="range" id="p12A" min="1" max="5" step="0.5" value="3"><span id="p12AL">3</span></label>' +
+        '<label>频率系数 (音调 Pitch)：<input type="range" id="p12F" min="1" max="6" step="0.5" value="2"><span id="p12FL">2</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p12Svg" viewBox="0 0 360 210" width="360" height="210"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p12Out1"></div><div class="readout-pill" id="p12Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const amp = Number(el.querySelector('#p12A').value), f = Number(el.querySelector('#p12F').value);
+        el.querySelector('#p12AL').textContent = amp; el.querySelector('#p12FL').textContent = f;
+        const plt = makePlot(360, 210, 0, 10, -5.5, 5.5);
+        let svg = plotBase(plt, 't', 'y');
+        svg += plotPath(plt, function (x) { return amp * Math.sin(f * x * 1.2); }, 'var(--svg-purple)', false);
+        el.querySelector('#p12Svg').innerHTML = svg;
+        el.querySelector('#p12Out1').textContent = '振幅 Amplitude = ' + amp + ' 格 ⇒ 控制响度 (Loudness) | 频率系数 ' + f + ' ⇒ 波数越密音调越高 (Pitch)';
+        el.querySelector('#p12Out2').textContent = '人耳可听声域：20 Hz – 20 000 Hz (> 20 kHz 为超声波 Ultrasound，声波为纵波，真空不能传播！)';
+      });
+    } else if (t === 'p13') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 13 交互实验室 · 斯涅尔定律 n = sin i / sin r 与全内反射临界角光线台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>光由玻璃 (n=<input type="number" id="p13N" value="1.50" step="0.05" min="1.2" max="2.4">) 射向空气 | 入射角 i (°)：<input type="range" id="p13I" min="5" max="80" value="35"><span id="p13IL">35°</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p13Svg" viewBox="0 0 360 220" width="360" height="220"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p13Out1"></div><div class="readout-pill" id="p13Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const n = Math.max(1.1, Number(el.querySelector('#p13N').value) || 1.5), inc = Number(el.querySelector('#p13I').value);
+        el.querySelector('#p13IL').textContent = inc + '°';
+        const cDeg = (Math.asin(1 / n) * 180) / Math.PI;
+        const sinR = n * Math.sin((inc * Math.PI) / 180);
+        const tir = sinR > 1.0001;
+        const radI = (inc * Math.PI) / 180;
+        const ix = 180 - 95 * Math.sin(radI), iy = 110 + 95 * Math.cos(radI);
+        let outRay = '';
+        if (tir) {
+          const rx = 180 + 95 * Math.sin(radI), ry = 110 + 95 * Math.cos(radI);
+          outRay = '<line x1="180" y1="110" x2="' + rx.toFixed(1) + '" y2="' + ry.toFixed(1) + '" stroke="var(--svg-red)" stroke-width="2.6"/>';
+        } else {
+          const radR = Math.asin(Math.min(1, sinR));
+          const rx = 180 + 95 * Math.sin(radR), ry = 110 - 95 * Math.cos(radR);
+          outRay = '<line x1="180" y1="110" x2="' + rx.toFixed(1) + '" y2="' + ry.toFixed(1) + '" stroke="var(--svg-blue)" stroke-width="2.6"/>';
+        }
+        el.querySelector('#p13Svg').innerHTML =
+          '<rect x="10" y="110" width="340" height="100" fill="rgba(2,132,199,0.16)"/>' +
+          '<line x1="10" y1="110" x2="350" y2="110" stroke="var(--svg-ink)" stroke-width="1.5"/>' +
+          '<line x1="180" y1="12" x2="180" y2="208" stroke="var(--svg-muted)" stroke-width="1.4" stroke-dasharray="4,3"/>' +
+          '<line x1="' + ix.toFixed(1) + '" y1="' + iy.toFixed(1) + '" x2="180" y2="110" stroke="var(--svg-amber)" stroke-width="2.6"/>' + outRay +
+          '<text x="20" y="28" font-size="11" font-weight="700" fill="var(--svg-muted)">空气 Air (n=1)</text><text x="20" y="198" font-size="11" font-weight="700" fill="var(--svg-ink)">玻璃 Glass (n=' + n.toFixed(2) + ')</text>';
+        el.querySelector('#p13Out1').textContent = '临界角 Critical angle c = arcsin(1/n) = ' + cDeg.toFixed(1) + '°';
+        el.querySelector('#p13Out2').textContent = tir ? '🔴 i > c！发生全内反射 (Total Internal Reflection, TIR)：反射角 r = i = ' + inc + '°' : '🔵 发生折射离开法线：折射角 r = ' + ((Math.asin(sinR) * 180) / Math.PI).toFixed(1) + '°';
+      });
+    } else if (t === 'p14') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 14 交互实验室 · 波速 v = fλ、周期 T = 1/f 与水波深浅折射台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>频率 f (Hz)：<input type="number" id="p14F" value="10" min="1"></label>' +
+        '<label>深水波长 λ_deep (m)：<input type="number" id="p14L1" value="0.6" step="0.1" min="0.1"></label>' +
+        '<label>浅水波长 λ_shallow (m)：<input type="number" id="p14L2" value="0.3" step="0.1" min="0.05"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p14Out1"></div><div class="readout-pill" id="p14Out2"></div></div></div>';
+      bindInputs(function () {
+        const f = Math.max(0.1, Number(el.querySelector('#p14F').value) || 10), l1 = Number(el.querySelector('#p14L1').value) || 0.6, l2 = Number(el.querySelector('#p14L2').value) || 0.3;
+        el.querySelector('#p14Out1').textContent = '周期 T = 1/f = ' + (1 / f).toFixed(3) + ' s | 深水波速 v₁ = ' + (f * l1).toFixed(2) + ' m/s | 浅水波速 v₂ = ' + (f * l2).toFixed(2) + ' m/s';
+        el.querySelector('#p14Out2').textContent = '水波槽铁律：深水进入浅水时【频率 f 绝对不变】，波速 v 减小、波长 λ 缩短，向法线偏折！';
+      });
+    } else if (t === 'p15') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 15 交互实验室 · 电磁波谱排序、波长换算 (c = 3×10⁸ m/s) 与应用速查</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>波段选择：<select id="p15B"><option value="rad">1. Radio waves 无线电波</option><option value="mic">2. Microwaves 微波</option><option value="ir">3. Infrared 红外线</option><option value="vis">4. Visible light 可见光</option><option value="uv">5. Ultraviolet 紫外线</option><option value="xray">6. X-rays X射线</option><option value="gam">7. Gamma rays γ射线</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p15Out1"></div><div class="readout-pill" id="p15Out2"></div></div></div>';
+      const MAP15 = {
+        rad: ['最长波长 / 最低频率 / 最小光子能量；真空速度 3.0 × 10⁸ m/s。', '应用：广播电视、RFID 射频识别、射电望远镜；通常非电离无明显组织热损伤。'],
+        mic: ['穿透云层与电离层能力强，且能引起食物水分子共振发热。', '应用：卫星电视与 GPS 通信、手机 Wi-Fi/蓝牙、微波炉；危害：过强内部加热人体体液组织。'],
+        ir: ['热物体发射红外辐射（红外热成像）。', '应用：电视遥控器、光纤短距通信、防盗红外警报、电暖器；危害：高强度皮肤灼伤。'],
+        vis: ['红 (700 nm, 折射最少) → 紫 (400 nm, 折射最多)。', '应用：人眼视觉、照相、高速长距离单模光纤宽带通信 (配合全内反射 TIR)。'],
+        uv: ['频率高于紫光，能激发荧光粉发光与灭菌。', '应用：防伪验钞、水消毒；危害：晒伤皮肤、早衰、引发皮肤癌与白内障。'],
+        xray: ['强穿透软组织但被高密度骨骼/金属吸收。', '应用：医学骨科 X 光透视成像、机场行李安检；危害：电离损伤细胞、基因突变致癌。'],
+        gam: ['最短波长 / 最高频率 / 最强电离穿透力；由原子核衰变产生。', '应用：医疗手术器械灭菌、食品保鲜、癌症放疗；危害：严重辐射病、DNA 突变与致癌。']
+      };
+      bindInputs(function () {
+        const d = MAP15[el.querySelector('#p15B').value];
+        el.querySelector('#p15Out1').textContent = d[0]; el.querySelector('#p15Out2').textContent = d[1];
+      });
+    } else if (t === 'p16') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 16 交互实验室 · 软铁 vs 硬钢磁化特性与磁极相互作用判别台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>铁芯材料：<select id="p16Mat"><option value="soft">软铁 (Soft iron) — 电磁铁/变压器铁芯</option><option value="steel">硬钢 (Steel) — 永磁体/指南针</option></select></label>' +
+        '<label>磁化方法：<select id="p16M"><option value="dc">直流通电螺线管 (d.c. solenoid)</option><option value="ac">交流退磁 (a.c. gradually pulled away)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p16Out1"></div><div class="readout-pill" id="p16Out2"></div></div></div>';
+      bindInputs(function () {
+        const soft = el.querySelector('#p16Mat').value === 'soft', ac = el.querySelector('#p16M').value === 'ac';
+        el.querySelector('#p16Out1').textContent = soft ? '软铁特性：极易被磁化 (Easily magnetised)，断电后立刻退磁 (Loses magnetism quickly) ⇒ 制作继电器、电铃与变压器铁芯！' : '硬钢特性：较难被磁化，但磁化后长久保持磁性 (Retains magnetism) ⇒ 制作永久磁铁！';
+        el.querySelector('#p16Out2').textContent = ac ? '退磁要领：置入通有交变电流 (a.c.) 的螺线管内缓慢沿东西方向拉出（或高温加热/重敲击）。' : '注意：只有发生“相互排斥 (Repulsion)”才能100%证明物体本身是磁铁，相互吸引可能是未磁化软铁！';
+      });
+    } else if (t === 'p17') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 17 交互实验室 · 摩擦电子转移与静电感应接地流程模拟</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>静电情景：<select id="p17M"><option value="poly">干布摩擦聚乙烯棒 (Polythene, 带负电)</option><option value="acet">干布摩擦醋酸纤维/玻璃棒 (Perspex/Glass, 带正电)</option><option value="ind">带负电棒感应金属球接地</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p17Out1"></div><div class="readout-pill" id="p17Out2"></div></div></div>';
+      const MAP17 = {
+        poly: ['过程：干布中的自由电子转移 (Electrons transferred) 到聚乙烯棒上 → 棒因电子过剩带负电 (−)，布因失去电子带等量正电 (+)。', '考场禁句：绝不可写“正电荷/质子移动了”！固体中只有带负电的电子可以移动！'],
+        acet: ['过程：有机玻璃/玻璃棒表面电子转移到干布上 → 棒因缺少电子净带正电 (+)，布净带负电 (−)。', '应用原理：高空加油飞机前务必接地导走摩擦累积静电荷，防止电火花引燃航空燃油。'],
+        ind: ['感应三步：① 带负电棒靠近孤立金属球，斥退球内自由电子至远端，近端显 +；② 手指/接地线接球远端，多余电子流入大地 (Earth)；③ 先断开接地再移走棒 → 球净带正电！', '注意断顺序：必须先撤接地线，再撤带电棒！若先撤棒则大地电子会回流中和！']
+      };
+      bindInputs(function () {
+        const d = MAP17[el.querySelector('#p17M').value];
+        el.querySelector('#p17Out1').textContent = d[0]; el.querySelector('#p17Out2').textContent = d[1];
+      });
+    } else if (t === 'p18') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 18 交互实验室 · 欧姆电阻、电功率 P=IV 与电费 kWh 计费台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>电压 V (V)：<input type="number" id="p18V" value="240"></label><label>电流 I (A)：<input type="number" id="p18I" value="5" step="0.5"></label>' +
+        '<label>运行时间 (hours)：<input type="number" id="p18H" value="3" step="0.5"></label><label>电价 (cents/kWh)：<input type="number" id="p18C" value="20"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p18Out1"></div><div class="readout-pill" id="p18Out2"></div></div></div>';
+      bindInputs(function () {
+        const V = Number(el.querySelector('#p18V').value) || 240, I = Math.max(0.01, Number(el.querySelector('#p18I').value) || 5);
+        const h = Number(el.querySelector('#p18H').value) || 3, c = Number(el.querySelector('#p18C').value) || 20;
+        const P = V * I, R = V / I, kwh = (P / 1000) * h;
+        el.querySelector('#p18Out1').textContent = '电阻 R = V/I = ' + R.toFixed(1) + ' Ω | 电功率 P = IV = ' + P.toFixed(0) + ' W (' + (P / 1000).toFixed(2) + ' kW) | 总焦耳 E = ' + (P * h * 3600).toExponential(2) + ' J';
+        el.querySelector('#p18Out2').textContent = '千瓦时用电量 = ' + kwh.toFixed(2) + ' kWh ⇒ 电费 Cost = ' + (kwh * c).toFixed(1) + ' cents (1 kWh = 3.6 × 10⁶ J)';
+      });
+    } else if (t === 'p19') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 19 交互实验室 · NTC 热敏电阻 / LDR 分压传感器动态调节台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>传感器 R₁：<select id="p19S"><option value="ldr">光敏电阻 LDR (底端) + 固定 R₂ (100 Ω)</option><option value="ntc">负温度系数热敏电阻 NTC (底端) + R₂ (100 Ω)</option></select></label>' +
+        '<label>环境强度 (光照/温度 %)：<input type="range" id="p19Env" min="10" max="100" value="50"><span id="p19EL">50%</span></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p19Out1"></div><div class="readout-pill" id="p19Out2"></div></div></div>';
+      bindInputs(function () {
+        const isLdr = el.querySelector('#p19S').value === 'ldr', env = Number(el.querySelector('#p19Env').value);
+        el.querySelector('#p19EL').textContent = env + '%';
+        const rSens = Math.round(500 * Math.exp(-0.025 * env));
+        const vOut = (12 * rSens) / (rSens + 100);
+        el.querySelector('#p19Out1').textContent = (isLdr ? '光敏 LDR' : '热敏 NTC') + ' 当前阻值 R_sensor ≈ ' + rSens + ' Ω | 串联总供电 12 V ⇒ 传感器两端输出电压 V_out = ' + vOut.toFixed(2) + ' V';
+        el.querySelector('#p19Out2').textContent = '环境越暗/越冷 ⇒ LDR/NTC 电阻【剧增】⇒ 根据分压比 V₁/V₂ = R₁/R₂，分得更高电压（可用作天黑自动开灯触发器！）';
+      });
+    } else if (t === 'p20') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 20 交互实验室 · 弗莱明左手定则 FBI 与带电粒子束磁场偏转</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>粒子类型 / 电流方向：<select id="p20Q"><option value="conv">传统电流 / 正电荷向东 (+)</option><option value="elec">电子束 β⁻ 向东射入 (注意反方向!)</option></select></label>' +
+        '<label>磁场 B 方向：<select id="p20B"><option value="in">垂直纸面向里 (Into page ✕)</option><option value="out">垂直纸面向外 (Out of page ⊙)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p20Out1"></div><div class="readout-pill" id="p20Out2"></div></div></div>';
+      bindInputs(function () {
+        const isElec = el.querySelector('#p20Q').value === 'elec', bIn = el.querySelector('#p20B').value === 'in';
+        const up = (!isElec && bIn) || (isElec && !bIn);
+        el.querySelector('#p20Out1').textContent = '左手三指正交判别：食指 B = ' + (bIn ? '入纸面 ✕' : '出纸面 ⊙') + '，中指【传统电流 I】= ' + (isElec ? '向西（与电子速度相反!）' : '向东') + ' ⇒ 拇指受力 F = ' + (up ? '⬆️ 向上 (Upwards)' : '⬇️ 向下 (Downwards)');
+        el.querySelector('#p20Out2').textContent = '直流电机关键：换向器 (Split-ring commutator) 每半圈调换一次线圈电流方向，保证扭矩持续单向转动！';
+      });
+    } else if (t === 'p21') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 21 交互实验室 · 理想变压器与高压输电 I²R 损耗模拟台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>原线圈 V_p (V)：<input type="number" id="p21Vp" value="25000"></label>' +
+        '<label>匝数比 N_p : N_s = <input type="number" id="p21Np" value="100"> : <input type="number" id="p21Ns" value="1600"></label>' +
+        '<label>传送总功率 P (kW)：<input type="number" id="p21P" value="400"></label><label>电缆电阻 R (Ω)：<input type="number" id="p21R" value="10"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p21Out1"></div><div class="readout-pill" id="p21Out2"></div></div></div>';
+      bindInputs(function () {
+        const vp = Number(el.querySelector('#p21Vp').value) || 25000, np = Math.max(1, Number(el.querySelector('#p21Np').value) || 100), ns = Math.max(1, Number(el.querySelector('#p21Ns').value) || 1600);
+        const P = (Number(el.querySelector('#p21P').value) || 400) * 1000, R = Number(el.querySelector('#p21R').value) || 10;
+        const vs = vp * (ns / np), iLine = P / vs, loss = iLine * iLine * R;
+        el.querySelector('#p21Out1').textContent = '副线圈输电电压 V_s = ' + Math.round(vs).toLocaleString() + ' V (' + (vs > vp ? '升压 Step-up' : '降压 Step-down') + ') | 输电电流 I = P/V_s = ' + iLine.toFixed(2) + ' A';
+        el.querySelector('#p21Out2').textContent = '电网热损耗 P_loss = I²R = ' + loss.toFixed(1) + ' W（若不用变压器升压直接 25 kV 输电，损耗高达 ' + (Math.pow(P / vp, 2) * R).toFixed(1) + ' W！）';
+      });
+    } else if (t === 'p22') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 22 交互实验室 · 卢瑟福 α 散射三结论与原子核素构成剖析</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>核素质量数 A：<input type="number" id="p22A" value="238" min="1"></label><label>质子数/原子序数 Z：<input type="number" id="p22Z" value="92" min="1"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p22Out1"></div><div class="readout-pill" id="p22Out2"></div></div></div>';
+      bindInputs(function () {
+        const a = Math.max(1, Math.round(Number(el.querySelector('#p22A').value) || 238)), z = Math.min(a, Math.max(1, Math.round(Number(el.querySelector('#p22Z').value) || 92)));
+        el.querySelector('#p22Out1').textContent = '中性原子组成：质子 Protons = ' + z + ' | 中子 Neutrons (A − Z) = ' + (a - z) + ' | 核外电子 Electrons = ' + z + ' | 原子核净电荷 = +' + z + 'e';
+        el.querySelector('#p22Out2').textContent = 'α 散射极少数大角反弹 (> 90°) ⇒ 证明原子核体积极小、极高密度且集中几乎全部正电荷与质量；绝大多数直接穿透 ⇒ 原子内部绝大部分是真空！';
+      });
+    } else if (t === 'p23') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 23 交互实验室 · 本底辐射扣减、半衰期指数衰减曲线计算器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>总读数 C_total (cpm)：<input type="number" id="p23C0" value="440"></label><label>本底 C_bg (cpm)：<input type="number" id="p23Bg" value="40"></label>' +
+        '<label>半衰期 T½ (days)：<input type="number" id="p23H" value="6" min="1"></label><label>经过时间 t (days)：<input type="range" id="p23T" min="0" max="24" step="3" value="12"><span id="p23TL">12 d</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p23Svg" viewBox="0 0 360 220" width="360" height="220"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p23Out1"></div><div class="readout-pill" id="p23Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const c0 = Number(el.querySelector('#p23C0').value) || 440, bg = Number(el.querySelector('#p23Bg').value) || 40;
+        const h = Math.max(1, Number(el.querySelector('#p23H').value) || 6), tm = Number(el.querySelector('#p23T').value);
+        el.querySelector('#p23TL').textContent = tm + ' days';
+        const pure0 = Math.max(0, c0 - bg), pureT = pure0 * Math.pow(0.5, tm / h), totalT = pureT + bg;
+        const plt = makePlot(360, 220, 0, Math.max(24, tm), 0, c0 * 1.1);
+        let svg = plotBase(plt, 't (d)', 'cpm');
+        svg += plotPath(plt, function () { return bg; }, 'var(--svg-muted)', true);
+        svg += plotPath(plt, function (x) { return bg + pure0 * Math.pow(0.5, x / h); }, 'var(--svg-green)', false);
+        svg += '<circle cx="' + plt.toX(tm).toFixed(1) + '" cy="' + plt.toY(totalT).toFixed(1) + '" r="5" fill="var(--svg-red)"/>';
+        el.querySelector('#p23Svg').innerHTML = svg;
+        el.querySelector('#p23Out1').textContent = '先减本底！纯净初始源活度 = ' + pure0 + ' cpm ⇒ 经 ' + (tm / h).toFixed(1) + ' 个半衰期后纯净计数 = ' + pureT.toFixed(1) + ' cpm';
+        el.querySelector('#p23Out2').textContent = '⚠️ 若题问 GM 计数器最终显示总读数，务必再加回本底：' + pureT.toFixed(1) + ' + ' + bg + ' = ' + totalT.toFixed(1) + ' cpm！';
+      });
+    } else if (t === 'p24') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 24 交互实验室 · 轨道速率 v = 2πr / T 与太阳光行时间 t = d / c 台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>行星/卫星预设：<select id="p24P"><option value="earth">地球 (r = 1.5×10¹¹ m, T = 365 d)</option><option value="moon">月球绕地 (r = 3.84×10⁸ m, T = 27.3 d)</option><option value="mars">火星 (r = 2.28×10¹¹ m, T = 687 d)</option><option value="geo">地球同步卫星 (r = 4.22×10⁷ m, T = 24 h)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p24Out1"></div><div class="readout-pill" id="p24Out2"></div></div></div>';
+      const MAP24 = {
+        earth: { r: 1.5e11, t: 365 * 86400, note: '太阳光到达地球所需时间 t = 1.5×10¹¹ / (3.0×10⁸) = 500 s ≈ 8.3 分钟！' },
+        moon: { r: 3.84e8, t: 27.3 * 86400, note: '月球引力仅为地球 1/6，月相盈亏完整周期约为 28–29.5 天。' },
+        mars: { r: 2.28e11, t: 687 * 86400, note: '火星属于内侧四大岩石小行星之一，距太阳越远引力越弱，公转速率显著小于地球。' },
+        geo: { r: 4.22e7, t: 24 * 3600, note: '赤道正上方同步轨道，与地球自转周期精确同步（24 小时），用于气象/电视直播卫星。' }
+      };
+      bindInputs(function () {
+        const d = MAP24[el.querySelector('#p24P').value];
+        const v = (2 * Math.PI * d.r) / d.t;
+        el.querySelector('#p24Out1').textContent = '轨道周长 2πr = ' + (2 * Math.PI * d.r).toExponential(2) + ' m | 周期 T = ' + d.t.toExponential(2) + ' s ⇒ 平均轨道速率 v = 2πr/T = ' + (v / 1000).toFixed(2) + ' km/s (' + Math.round(v).toLocaleString() + ' m/s)';
+        el.querySelector('#p24Out2').textContent = d.note;
+      });
+    } else if (t === 'p25') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 25 交互实验室 · 哈勃定律 v = H₀d 与宇宙年龄 t ≈ 1/H₀ 计算台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>星系退行速度 v (m/s)：<input type="number" id="p25V" value="4400000" step="100000"></label>' +
+        '<label>哈勃常数 H₀ (s⁻¹)：<input type="number" id="p25H" value="2.2e-18" step="0.1e-18"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p25Out1"></div><div class="readout-pill" id="p25Out2"></div></div></div>';
+      bindInputs(function () {
+        const v = Number(el.querySelector('#p25V').value) || 4.4e6, h0 = Math.max(1e-19, Number(el.querySelector('#p25H').value) || 2.2e-18);
+        const dist = v / h0, ly = dist / 9.5e15, ageS = 1 / h0, ageY = ageS / (365.25 * 86400);
+        el.querySelector('#p25Out1').textContent = '星系距离 d = v/H₀ = ' + dist.toExponential(2) + ' m ≈ ' + ly.toExponential(2) + ' 光年 (1 ly ≈ 9.5 × 10¹⁵ m)';
+        el.querySelector('#p25Out2').textContent = '估计宇宙年龄 t ≈ 1/H₀ = d/v = ' + ageS.toExponential(2) + ' s ≈ ' + (ageY / 1e9).toFixed(1) + ' billion years (十亿年) | 两大证据：遥远星系红移 + CMBR 微波背景辐射';
+      });
+    }
+  }
+
+  document.querySelectorAll('.lab-box[data-lab-type]').forEach(mountPhysicsLab);
+
+  // ---------- 11. Initialize View & Scroll Spy ----------
+  applyViewMode(currentViewMode);
+  applyQuizMask(quizMasked);
+
+  const backTopBtn = document.getElementById('backTopBtn');
+  const trackedSections = Array.from(document.querySelectorAll('.topic-section[id]'));
+  const navLinks = Array.from(document.querySelectorAll('.sidebar .nav-link'));
+
+  window.addEventListener('scroll', function () {
+    if (backTopBtn) backTopBtn.classList.toggle('visible', window.scrollY > 360);
+    const y = window.scrollY + 110;
+    let currentId = '';
+    for (let i = 0; i < trackedSections.length; i++) {
+      if (trackedSections[i].offsetTop <= y && getComputedStyle(trackedSections[i]).display !== 'none') {
+        currentId = trackedSections[i].id;
+      }
+    }
+    navLinks.forEach(function (lnk) {
+      const h = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('active', h === currentId);
+    });
+  }, { passive: true });
+
+  if (backTopBtn) {
+    backTopBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  }
+})();
+
+  </script>
+</body>
+</html>

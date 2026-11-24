@@ -1,0 +1,1937 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="--accent: #0D9488;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch08 · Chapter 8: Work and power — IGCSE Physics (0625) 精讲</title>
+  <style>
+/* ==========================================================================
+   Cambridge IGCSE Physics (0625 · David Sang 3rd Ed. 2023–2028)
+   25-Chapter Suite Shared Stylesheet (Offline, Zero CDN, Print-Ready)
+   ========================================================================== */
+
+:root {
+  --bg-page: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --bg-sidebar: #FFFFFF;
+  --bg-code: #EFF6FF;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-faint: #64748B;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+
+  --accent: #0284C7;
+  --accent-hover: #0369A1;
+  --accent-soft: #E0F2FE;
+
+  --core-bg: #E0F2FE;
+  --core-text: #075985;
+  --core-border: #BAE6FD;
+  --ext-bg: #FEF3C7;
+  --ext-text: #92400E;
+  --ext-border: #FDE68A;
+
+  --deep-bg: #EFF6FF;
+  --deep-border: #2563EB;
+  --tip-bg: #FFFBEB;
+  --tip-border: #D97706;
+  --mistake-bg: #FFF1F2;
+  --mistake-border: #E11D48;
+  --example-bg: #F0FDF4;
+  --example-border: #16A34A;
+  --formula-bg: #F8FAFC;
+  --formula-border: #0284C7;
+
+  --ok-bg: #DCFCE7;
+  --ok-text: #166534;
+  --ok-border: #86EFAC;
+  --err-bg: #FEE2E2;
+  --err-text: #991B1B;
+  --err-border: #FCA5A5;
+
+  --svg-bg: #FFFFFF;
+  --svg-grid: #E2E8F0;
+  --svg-ink: #0F172A;
+  --svg-muted: #64748B;
+  --svg-blue: #2563EB;
+  --svg-indigo: #4338CA;
+  --svg-teal: #0D9488;
+  --svg-amber: #D97706;
+  --svg-red: #DC2626;
+  --svg-green: #16A34A;
+  --svg-purple: #7C3AED;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.07);
+  --shadow-lg: 0 10px 26px rgba(15, 23, 42, 0.11);
+
+  --sidebar-w: 288px;
+  --topbar-h: 58px;
+  --radius-sm: 7px;
+  --radius-md: 11px;
+  --radius-lg: 16px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Songti SC", "Noto Serif SC", Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+[data-theme="dark"] {
+  --bg-page: #0B1120;
+  --bg-surface: #111827;
+  --bg-subtle: #1E293B;
+  --bg-sidebar: #0F172A;
+  --bg-code: #1E293B;
+  --text-main: #F1F5F9;
+  --text-muted: #CBD5E1;
+  --text-faint: #94A3B8;
+  --border: #1E293B;
+  --border-strong: #334155;
+
+  --accent: #38BDF8 !important;
+  --accent-hover: #7DD3FC;
+  --accent-soft: rgba(56, 189, 248, 0.18);
+
+  --core-bg: rgba(56, 189, 248, 0.16);
+  --core-text: #BAE6FD;
+  --core-border: rgba(56, 189, 248, 0.36);
+  --ext-bg: rgba(245, 158, 11, 0.16);
+  --ext-text: #FDE68A;
+  --ext-border: rgba(245, 158, 11, 0.36);
+
+  --deep-bg: rgba(37, 99, 235, 0.14);
+  --deep-border: #60A5FA;
+  --tip-bg: rgba(217, 119, 6, 0.14);
+  --tip-border: #FBBF24;
+  --mistake-bg: rgba(225, 29, 72, 0.15);
+  --mistake-border: #FB7185;
+  --example-bg: rgba(22, 163, 74, 0.13);
+  --example-border: #4ADE80;
+  --formula-bg: #172033;
+  --formula-border: #38BDF8;
+
+  --ok-bg: rgba(22, 163, 74, 0.22);
+  --ok-text: #BBF7D0;
+  --ok-border: #22C55E;
+  --err-bg: rgba(220, 38, 38, 0.22);
+  --err-text: #FECACA;
+  --err-border: #EF4444;
+
+  --svg-bg: #0F172A;
+  --svg-grid: #334155;
+  --svg-ink: #F1F5F9;
+  --svg-muted: #94A3B8;
+  --svg-blue: #60A5FA;
+  --svg-indigo: #818CF8;
+  --svg-teal: #2DD4BF;
+  --svg-amber: #FBBF24;
+  --svg-red: #F87171;
+  --svg-green: #34D399;
+  --svg-purple: #A78BFA;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .seg-btn.active,
+[data-theme="dark"] .tab-btn.active,
+[data-theme="dark"] .icon-btn.active,
+[data-theme="dark"] .brand-code,
+[data-theme="dark"] .pager-btn.primary { color: #0B1120; }
+[data-theme="dark"] .hub-foot { color: #38BDF8; }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--topbar-h) + 18px); }
+body { margin: 0; font-family: var(--font-sans); background: var(--bg-page); color: var(--text-main); line-height: 1.72; font-size: 15.5px; -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4 { margin: 0 0 0.55em 0; line-height: 1.32; font-weight: 700; color: var(--text-main); }
+p { margin: 0 0 0.9em 0; }
+ul, ol { margin: 0 0 1em 0; padding-left: 1.45em; }
+li { margin-bottom: 0.35em; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { font-family: var(--font-mono); font-size: 0.9em; background: var(--bg-code); color: var(--accent); padding: 2px 6px; border-radius: 4px; }
+
+/* View Mode Filters (Core / Extended / SME) */
+body.mode-core .ext-only,
+body.mode-core .badge-ext { display: none !important; }
+body.mode-ext .ext-only { border-left: 3px solid var(--ext-border); padding-left: 10px; background: rgba(245, 158, 11, 0.06); border-radius: 4px; }
+body.mode-book .sme-section { display: none !important; }
+body.mode-sme .book-section { display: none !important; }
+
+/* Physics Formula & Nuclide Formatting */
+.math { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 1.04em; }
+.frac { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; font-size: 0.88em; line-height: 1.1; margin: 0 2px; font-style: normal; font-family: Georgia, "Times New Roman", serif; }
+.frac .num { border-bottom: 1.5px solid currentColor; padding: 0 4px 1px 4px; }
+.frac .den { padding: 1px 4px 0 4px; }
+.sqrt { display: inline-flex; align-items: baseline; font-family: Georgia, "Times New Roman", serif; }
+.sqrt-rad { border-top: 1.4px solid currentColor; padding: 0 3px 0 2px; margin-left: 1px; }
+.nuclide { display: inline-flex; align-items: center; gap: 1px; font-family: Georgia, "Times New Roman", serif; font-weight: 700; vertical-align: middle; margin: 0 2px; }
+.nuc-nums { display: inline-flex; flex-direction: column; text-align: right; font-size: 0.72em; line-height: 1.05; }
+.formula-card { background: var(--formula-bg); border: 1.5px solid var(--border-strong); border-left: 5px solid var(--formula-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; font-size: 15px; }
+.formula-main { font-family: Georgia, "Times New Roman", serif; font-size: 16.5px; font-weight: 700; color: var(--accent); margin: 4px 0 6px 0; }
+
+/* Topbar */
+.topbar {
+  position: sticky; top: 0; z-index: 100; height: var(--topbar-h);
+  background: var(--bg-surface); border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm); display: flex; align-items: center;
+  justify-content: space-between; gap: 10px; padding: 0 16px;
+}
+.topbar-left { display: flex; align-items: center; gap: 8px; min-width: 0; flex-shrink: 1; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 34px; padding: 0 10px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--bg-surface); color: var(--text-main); font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; text-decoration: none; }
+.icon-btn:hover { background: var(--bg-subtle); border-color: var(--accent); text-decoration: none; }
+.icon-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.menu-toggle { display: none; }
+.brand-pill { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; white-space: nowrap; flex-shrink: 1; min-width: 0; }
+.brand-code { background: var(--accent); color: #fff; padding: 2px 8px; border-radius: 5px; font-size: 12px; letter-spacing: 0.4px; white-space: nowrap; flex-shrink: 0; }
+.brand-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 215px; }
+.search-wrap { position: relative; flex: 1 1 150px; min-width: 130px; max-width: 260px; }
+.search-input { width: 100%; height: 34px; padding: 0 30px 0 32px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--bg-subtle); color: var(--text-main); font-size: 13.5px; outline: none; }
+.search-input:focus { border-color: var(--accent); background: var(--bg-surface); }
+.search-input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.search-icon { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); color: var(--text-faint); font-size: 13px; pointer-events: none; }
+.search-clear { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); border: none; background: transparent; color: var(--text-faint); cursor: pointer; font-size: 14px; display: none; }
+.search-results-bar { display: none; background: var(--accent-soft); border-bottom: 1px solid var(--border); padding: 8px 20px; font-size: 13.5px; color: var(--text-main); align-items: center; justify-content: space-between; gap: 12px; }
+.search-results-bar.visible { display: flex; }
+.topbar-controls { display: flex; align-items: center; gap: 7px; flex-shrink: 0; }
+.seg-group { display: inline-flex; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); overflow: hidden; background: var(--bg-subtle); }
+.seg-btn { border: none; background: transparent; color: var(--text-muted); padding: 6px 8px; font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.seg-btn.active { background: var(--accent); color: #fff; }
+.progress-chip { display: flex; align-items: center; gap: 7px; padding: 4px 10px; border-radius: 999px; background: var(--bg-subtle); border: 1px solid var(--border); font-size: 12.5px; font-weight: 600; white-space: nowrap; }
+.progress-track { width: 50px; height: 7px; background: var(--border-strong); border-radius: 99px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), #0D9488); transition: width 0.25s ease; }
+
+.app-layout { display: flex; min-height: calc(100vh - var(--topbar-h)); }
+.sidebar { width: var(--sidebar-w); flex-shrink: 0; background: var(--bg-sidebar); border-right: 1px solid var(--border); position: sticky; top: var(--topbar-h); height: calc(100vh - var(--topbar-h)); overflow-y: auto; padding: 14px 10px 44px 10px; }
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 99px; }
+.nav-unit { margin-bottom: 8px; }
+.nav-unit-btn { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border: none; border-radius: var(--radius-sm); background: transparent; color: var(--text-main); font-size: 13px; font-weight: 700; text-align: left; cursor: pointer; }
+.nav-unit-btn:hover { background: var(--bg-subtle); }
+.nav-unit-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.nav-unit-title { flex: 1; display: flex; align-items: center; gap: 7px; line-height: 1.3; }
+.nav-chevron { font-size: 11px; color: var(--text-faint); transition: transform 0.2s; }
+.nav-unit.collapsed .nav-chevron { transform: rotate(-90deg); }
+.nav-unit.collapsed .nav-links { display: none; }
+.nav-links { list-style: none; padding: 2px 0 4px 12px; margin: 0 0 0 14px; border-left: 2px solid var(--border); }
+.nav-link { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 5px 9px; margin: 2px 0; border-radius: var(--radius-sm); color: var(--text-muted); font-size: 12.6px; line-height: 1.35; text-decoration: none; }
+.nav-link:hover { background: var(--bg-subtle); color: var(--text-main); text-decoration: none; }
+.nav-link.active { background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+.nav-done-mark { color: #10B981; font-weight: 800; font-size: 12px; opacity: 0; }
+.nav-link.mastered .nav-done-mark { opacity: 1; }
+.main-content { flex: 1; min-width: 0; padding: 26px 32px 80px 32px; }
+.content-inner { max-width: 960px; margin: 0 auto; }
+
+.hero-card { background: linear-gradient(135deg, #0F172A 0%, var(--accent) 58%, #0F766E 100%); color: #fff; border-radius: var(--radius-lg); padding: 28px 32px; margin-bottom: 26px; box-shadow: var(--shadow-lg); }
+.hero-card h1 { color: #fff; font-size: 25px; margin-bottom: 8px; letter-spacing: -0.3px; }
+.hero-sub { color: rgba(255,255,255,0.92); font-size: 14.8px; max-width: 820px; margin-bottom: 16px; }
+.hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.hero-pill { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.28); color: #fff; padding: 4px 11px; border-radius: 999px; font-size: 12.5px; font-weight: 600; }
+.unit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+.unit-tile { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.24); border-radius: var(--radius-md); padding: 12px 14px; color: #fff; text-decoration: none; display: block; transition: transform 0.15s, background 0.15s; }
+.unit-tile:hover { transform: translateY(-2px); background: rgba(255,255,255,0.22); text-decoration: none; }
+.unit-tile-num { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.7px; opacity: 0.85; font-weight: 700; }
+.unit-tile-title { font-size: 14.5px; font-weight: 700; margin: 3px 0; }
+
+.topic-section { background: var(--bg-surface); border: 1px solid var(--border); border-top: 4px solid var(--accent); border-radius: var(--radius-md); padding: 24px 26px; margin-bottom: 24px; box-shadow: var(--shadow-sm); }
+.topic-section.search-dim { display: none; }
+.section-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 2px solid var(--border); }
+.section-title-group h3 { font-size: 19.5px; margin-bottom: 4px; }
+.section-en-sub { font-size: 13.5px; color: var(--text-faint); font-weight: 600; }
+.tier-row { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 7px; }
+.badge-core, .badge-ext { display: inline-block; font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.badge-core { background: var(--core-bg); color: var(--core-text); border: 1px solid var(--core-border); }
+.badge-ext { background: var(--ext-bg); color: var(--ext-text); border: 1px solid var(--ext-border); }
+.master-btn { flex-shrink: 0; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-muted); font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.master-btn:hover { border-color: #10B981; color: #10B981; }
+.master-btn.is-mastered { background: var(--ok-bg); color: var(--ok-text); border-color: var(--ok-border); }
+.subtopic { margin-bottom: 20px; }
+.subtopic:last-of-type { margin-bottom: 12px; }
+.subtopic h4 { font-size: 16px; color: var(--accent); margin: 0 0 10px 0; padding-bottom: 4px; border-bottom: 1px dashed var(--border); display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+
+.worked-example { background: var(--example-bg); border: 1px solid var(--border); border-left: 4px solid var(--example-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; }
+.worked-title { font-weight: 800; font-size: 14px; color: var(--example-border); margin-bottom: 6px; }
+.callout { border-radius: var(--radius-sm); padding: 13px 16px; margin: 14px 0; border-left: 4px solid var(--border-strong); font-size: 14.5px; }
+.callout-title { font-weight: 800; font-size: 13.5px; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+.deep-dive { background: var(--deep-bg); border-left-color: var(--deep-border); }
+.deep-dive .callout-title { color: var(--deep-border); }
+.examiner-tip { background: var(--tip-bg); border-left-color: var(--tip-border); }
+.examiner-tip .callout-title { color: var(--tip-border); }
+.common-mistake { background: var(--mistake-bg); border-left-color: var(--mistake-border); }
+.common-mistake .callout-title { color: var(--mistake-border); }
+
+.table-wrap { width: 100%; overflow-x: auto; margin: 14px 0; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+table.phy-table { width: 100%; border-collapse: collapse; font-size: 13.8px; text-align: left; }
+table.phy-table th { background: var(--bg-subtle); color: var(--text-main); font-weight: 700; padding: 9px 12px; border-bottom: 2px solid var(--border-strong); white-space: nowrap; }
+table.phy-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.phy-table tr:last-child td { border-bottom: none; }
+table.phy-table tbody tr:hover { background: var(--bg-subtle); }
+
+.svg-figure { background: var(--svg-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px; margin: 16px 0; text-align: center; break-inside: avoid; }
+.svg-figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.svg-caption { margin-top: 8px; font-size: 13px; color: var(--text-faint); font-weight: 600; }
+
+/* Interactive Physics Labs */
+.lab-box { background: var(--bg-subtle); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px; margin: 18px 0; break-inside: avoid; }
+.lab-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+.lab-title { font-size: 15.5px; font-weight: 800; color: var(--accent); display: flex; align-items: center; gap: 7px; }
+.lab-panel { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; }
+.lab-controls { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-bottom: 12px; align-items: center; }
+.lab-controls label { font-size: 13px; font-weight: 700; color: var(--text-muted); display: inline-flex; align-items: center; gap: 6px; }
+.lab-controls input[type="number"], .lab-controls select { padding: 5px 8px; border-radius: 6px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-main); font-size: 13.2px; font-weight: 700; }
+.lab-controls input[type="number"] { min-width: 108px; width: 112px; text-align: center; }
+.lab-controls input[type="range"] { width: 120px; accent-color: var(--accent); }
+.lab-grid-2col { display: grid; grid-template-columns: 1.12fr 1fr; gap: 14px; align-items: start; }
+@media (max-width: 820px) { .lab-grid-2col { grid-template-columns: 1fr; } }
+.tab-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.tab-btn { border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-muted); padding: 5px 10px; border-radius: 6px; font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.tab-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.lab-readout { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; font-size: 13.2px; font-weight: 600; }
+.readout-pill { background: var(--bg-page); border: 1px solid var(--border-strong); padding: 7px 10px; border-radius: 6px; width: 100%; line-height: 1.5; }
+
+/* Practice Questions & Concepts */
+.practice-block { margin-top: 18px; padding-top: 14px; border-top: 2px dashed var(--border-strong); }
+.practice-heading { font-size: 16px; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.exam-q { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 14px; break-inside: avoid; }
+.exam-q-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; font-size: 12.5px; }
+.q-tag { font-weight: 800; color: var(--accent); background: var(--accent-soft); padding: 2px 8px; border-radius: 5px; }
+.q-marks { font-weight: 700; color: var(--text-faint); }
+.q-stem-en { font-size: 14.8px; font-weight: 600; color: var(--text-main); margin-bottom: 6px; }
+.q-stem-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 12px; }
+.mcq-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin-bottom: 10px; }
+.mcq-opt { text-align: left; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 13.8px; cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.mcq-opt:hover { border-color: var(--accent); background: var(--bg-subtle); }
+.mcq-opt.correct { background: var(--ok-bg); border-color: var(--ok-border); color: var(--ok-text); font-weight: 700; }
+.mcq-opt.wrong { background: var(--err-bg); border-color: var(--err-border); color: var(--err-text); }
+.mcq-feedback { display: none; font-size: 13.5px; padding: 10px 12px; border-radius: var(--radius-sm); margin-top: 8px; }
+.mcq-feedback.visible { display: block; }
+.mcq-feedback.ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.mcq-feedback.err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+details.ms-details { margin-top: 10px; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 12px; }
+details.ms-details summary { cursor: pointer; font-weight: 700; font-size: 13.5px; color: var(--accent); user-select: none; }
+.ms-body { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 13.8px; }
+.ms-mark { display: inline-block; font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--core-text); background: var(--core-bg); padding: 1px 5px; border-radius: 4px; margin-right: 4px; }
+.ms-cn { color: var(--text-muted); margin-top: 4px; }
+
+.concept-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 14px; margin-bottom: 18px; }
+.concept-filter-group { display: flex; flex-wrap: wrap; gap: 6px; }
+.concept-actions { display: flex; align-items: center; gap: 10px; }
+.concept-count-pill { font-size: 12.5px; font-weight: 700; color: var(--text-muted); }
+.concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 14px; }
+.concept-card { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; gap: 8px; break-inside: avoid; }
+.concept-card:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
+.concept-card.concept-hidden { display: none !important; }
+.cq-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.cq-en { font-weight: 700; font-size: 14.5px; color: var(--text-main); line-height: 1.45; }
+.cq-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 2px; }
+.cq-answer { position: relative; margin-top: auto; background: var(--bg-surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius-sm); padding: 11px 13px; font-size: 13.8px; line-height: 1.6; }
+.kw { color: var(--accent); background: var(--accent-soft); padding: 0 4px; border-radius: 3px; font-weight: 700; }
+.cq-mask-hint { display: none; }
+.concept-card.masked .cq-answer { cursor: pointer; }
+.concept-card.masked .cq-answer-inner { filter: blur(7px); opacity: 0.22; user-select: none; pointer-events: none; transition: filter 0.2s, opacity 0.2s; }
+.concept-card.masked .cq-mask-hint { display: flex; align-items: center; justify-content: center; position: absolute; inset: 0; font-size: 13.5px; font-weight: 700; color: var(--accent); background: rgba(255,255,255,0.25); border-radius: var(--radius-sm); }
+[data-theme="dark"] .concept-card.masked .cq-mask-hint { background: rgba(15,23,42,0.35); }
+
+/* Chapter Pager & Hub Group Headings */
+.chapter-pager { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 28px; padding: 16px 20px; background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); }
+.pager-btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: var(--radius-sm); background: var(--bg-subtle); border: 1px solid var(--border-strong); color: var(--text-main); font-size: 13.5px; font-weight: 700; text-decoration: none; }
+.pager-btn:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); text-decoration: none; }
+.pager-btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.pager-btn.primary:hover { background: var(--accent-hover); color: #fff; }
+
+.hub-block-title { font-size: 18px; font-weight: 800; margin: 26px 0 12px 0; padding-bottom: 6px; border-bottom: 2px solid var(--border-strong); display: flex; align-items: center; gap: 8px; }
+.hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 15px; }
+.hub-card { display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-surface); border: 1px solid var(--border-strong); border-top: 5px solid var(--card-color, var(--accent)); border-radius: var(--radius-md); padding: 16px 18px 14px 18px; color: var(--text-main); text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; box-shadow: var(--shadow-sm); }
+.hub-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--card-color, var(--accent)); text-decoration: none; }
+.hub-card-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+.hub-badge { font-size: 11.5px; font-weight: 800; color: #fff; background: var(--card-color, var(--accent)); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill { font-size: 12px; font-weight: 700; color: var(--text-muted); background: var(--bg-subtle); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill.done { background: var(--ok-bg); color: var(--ok-text); }
+.hub-title { font-size: 16px; font-weight: 800; margin-bottom: 3px; }
+.hub-en { font-size: 12.6px; color: var(--text-faint); font-weight: 600; margin-bottom: 8px; }
+.hub-sub { font-size: 12.8px; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; }
+.hub-foot { font-size: 13px; font-weight: 700; color: var(--card-color, var(--accent)); display: flex; align-items: center; justify-content: space-between; }
+
+.back-top-btn { position: fixed; right: 22px; bottom: 22px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); box-shadow: var(--shadow-md); cursor: pointer; display: none; align-items: center; justify-content: center; font-size: 17px; font-weight: 800; z-index: 80; }
+.back-top-btn.visible { display: flex; }
+
+@media (max-width: 1200px) {
+  .brand-title, .btn-label { display: none; }
+  .seg-btn { padding: 6px 8px; }
+}
+@media (max-width: 980px) {
+  .menu-toggle { display: inline-flex; }
+  .sidebar { position: fixed; left: 0; top: var(--topbar-h); z-index: 95; transform: translateX(-100%); transition: transform 0.22s ease; box-shadow: var(--shadow-lg); }
+  .sidebar.open { transform: translateX(0); }
+  .main-content { padding: 18px 14px 64px 14px; }
+  .topic-section { padding: 18px 16px; }
+  .progress-chip { display: none; }
+  .search-wrap { min-width: 130px; }
+}
+@media (max-width: 640px) {
+  .topbar { padding: 0 10px; gap: 6px; }
+  .search-wrap { max-width: none; }
+  .concept-grid, .hub-grid { grid-template-columns: 1fr; }
+}
+@media print {
+  .topbar, .sidebar, .search-results-bar, .back-top-btn, .master-btn, .lab-controls button, .concept-toolbar, .cq-mask-hint, .chapter-pager { display: none !important; }
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  .main-content { padding: 0 !important; }
+  .content-inner { max-width: 100% !important; }
+  .topic-section, .exam-q, .callout, .worked-example, .svg-figure, .concept-card { box-shadow: none !important; break-inside: avoid; border-color: #CBD5E1 !important; }
+  details.ms-details, details.ms-details .ms-body, .mcq-feedback { display: block !important; }
+  .concept-card.masked .cq-answer-inner { filter: none !important; opacity: 1 !important; }
+}
+
+  </style>
+</head>
+<body data-chapter-code="Ch08">
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="展开目录">☰ 目录</button>
+      <a class="icon-btn" href="index.html" title="返回 25 章总目录"><span>🏠</span><span class="btn-label">总目录</span></a>
+      <div class="brand-pill">
+        <span class="brand-code">Ch08</span>
+        <span class="brand-title">Chapter 8: Work and power</span>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="search" id="searchInput" class="search-input" placeholder="搜索公式、实验误差、真题与概念..." autocomplete="off" />
+      <button type="button" class="search-clear" id="searchClear" title="清空搜索">✕</button>
+    </div>
+
+    <div class="topbar-controls">
+      <div class="seg-group" role="group" aria-label="考试级别筛选">
+        <button type="button" class="seg-btn active" data-view-mode="all">All</button>
+        <button type="button" class="seg-btn" data-view-mode="core">Core</button>
+        <button type="button" class="seg-btn" data-view-mode="ext">Extended</button>
+        <button type="button" class="seg-btn" data-view-mode="sme">真题</button>
+      </div>
+
+      <div class="progress-chip" title="本章小节与真题模块掌握进度">
+        <span id="progressText">0/0</span>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+
+      <button type="button" class="icon-btn" id="toggleAllMs" title="展开或收起全部解析"><span>📝</span><span class="btn-label">展开解析</span></button>
+      <button type="button" class="icon-btn" id="themeToggle" title="切换亮色/暗色主题"><span id="themeIcon">🌙</span><span class="btn-label">主题</span></button>
+      <button type="button" class="icon-btn" id="printBtn" title="打印或导出为 PDF"><span>🖨️</span><span class="btn-label">导出 PDF</span></button>
+    </div>
+  </header>
+
+  <div class="search-results-bar" id="searchBar">
+    <span id="searchSummary">找到 0 个匹配板块</span>
+    <button type="button" class="icon-btn" id="searchResetBtn">重置过滤</button>
+  </div>
+
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="本章物理知识点导航">
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #0D9488;"></span>Ch08 本章小节目录</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#sec-8-1"><span>8.1 机械功的定义与“不做功”三大陷阱</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-8-2"><span>8.2 功率 P = W/t、功率铭牌与 Paper 6 登楼功率实验</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-8-3"><span>8.3 斜面机械功、起重机与电动机功率效率综合计算</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-sme"><span>SaveMyExams 0625 真题与综合演练</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#app-concepts"><span>本章核心概念与 Mark Scheme 默写卡 (15题)</span><span class="nav-done-mark">✓</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #0D9488;"></span>全书 25 章快速切换</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="Ch01_Making_Measurements.html"><span>Ch01 · 长度体积测量、密度浮沉与周期测定</span></a></li>
+          <li><a class="nav-link" href="Ch02_Describing_Motion.html"><span>Ch02 · 速率、加速度与 s-t / v-t 运动图像</span></a></li>
+          <li><a class="nav-link" href="Ch03_Forces_and_Motion.html"><span>Ch03 · 牛顿定律、动量冲量、终端速度与矢量合成</span></a></li>
+          <li><a class="nav-link" href="Ch04_Turning_Effects.html"><span>Ch04 · 力矩平衡原理、重心与稳定性</span></a></li>
+          <li><a class="nav-link" href="Ch05_Forces_and_Matter.html"><span>Ch05 · 固体形变、胡克定律 F=kx 与固体/液体压强</span></a></li>
+          <li><a class="nav-link" href="Ch06_Energy_Stores_Transfers.html"><span>Ch06 · 8 大能量存储、4 路径转移、Sankey 图与机械能</span></a></li>
+          <li><a class="nav-link" href="Ch07_Energy_Resources.html"><span>Ch07 · 化石能源、核能与可再生发电技术评估</span></a></li>
+          <li><a class="nav-link active" href="Ch08_Work_and_Power.html"><span>Ch08 · 机械功 W=Fd、功率 P=W/t 与效率</span></a></li>
+          <li><a class="nav-link" href="Ch09_Kinetic_Particle_Model.html"><span>Ch09 · 物态微观模型、布朗运动、绝对温标与气体定律</span></a></li>
+          <li><a class="nav-link" href="Ch10_Thermal_Properties.html"><span>Ch10 · 热膨胀、比热容 c=ΔE/(mΔθ)、物态变化与蒸发冷却</span></a></li>
+          <li><a class="nav-link" href="Ch11_Thermal_Energy_Transfers.html"><span>Ch11 · 热传导、对流、红外辐射与保温综合应用</span></a></li>
+          <li><a class="nav-link" href="Ch12_Sound.html"><span>Ch12 · 声波产生、纵波疏密部、回声测速与示波器波形</span></a></li>
+          <li><a class="nav-link" href="Ch13_Light.html"><span>Ch13 · 平面镜反射、折射斯涅尔定律、全反射与透镜成像</span></a></li>
+          <li><a class="nav-link" href="Ch14_Properties_of_Waves.html"><span>Ch14 · 横波纵波、v=fλ 与水波反射折射衍射</span></a></li>
+          <li><a class="nav-link" href="Ch15_Spectra.html"><span>Ch15 · 光的色散、七大电磁波谱与模拟数字通信</span></a></li>
+          <li><a class="nav-link" href="Ch16_Magnetism.html"><span>Ch16 · 磁化、软铁与硬钢磁滞差异及磁场线</span></a></li>
+          <li><a class="nav-link" href="Ch17_Static_Electricity.html"><span>Ch17 · 摩擦电子转移、导体绝缘体、感应与电场线</span></a></li>
+          <li><a class="nav-link" href="Ch18_Electrical_Quantities.html"><span>Ch18 · 电流、电动势/电压、欧姆定律 I-V 曲线与电功率 kWh</span></a></li>
+          <li><a class="nav-link" href="Ch19_Electrical_Circuits.html"><span>Ch19 · 电路符号、串并联、LDR/NTC 分压器与用电安全</span></a></li>
+          <li><a class="nav-link" href="Ch20_Electromagnetic_Forces.html"><span>Ch20 · 电流磁场、弗莱明左手定则、粒子偏转与直流电机</span></a></li>
+          <li><a class="nav-link" href="Ch21_Electromagnetic_Induction.html"><span>Ch21 · 电磁感应、楞次定律、交流发电机与变压器高压输电</span></a></li>
+          <li><a class="nav-link" href="Ch22_The_Nuclear_Atom.html"><span>Ch22 · α 金箔散射原子核、同位素及核裂变与聚变</span></a></li>
+          <li><a class="nav-link" href="Ch23_Radioactivity.html"><span>Ch23 · 本底辐射、α/β/γ 性质、衰变方程与半衰期计算</span></a></li>
+          <li><a class="nav-link" href="Ch24_Earth_and_Solar_System.html"><span>Ch24 · 自转四季、月相、行星吸积盘形成与轨道速率 v=2πr/T</span></a></li>
+          <li><a class="nav-link" href="Ch25_Stars_and_Universe.html"><span>Ch25 · 恒星全生命周期、红移 CMBR 大爆炸与哈勃定律 H₀</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-inner">
+        <section class="hero-card" id="top">
+          <h1>Chapter 8: Work and power · 第 8 章 · 机械功 W=Fd、功率 P=W/t 与效率</h1>
+          <p class="hero-sub">
+            完整覆盖 <strong>David Sang 第 3 版教材（2023–2028 新考纲 0625/0972 · 取 g = 9.8 m/s² / 9.8 N/kg）</strong>本章全部 Core 与 Extended 知识点：<code>8.1–8.2 机械功 W=Fd=ΔE · 8.3 功率 P=W/t=ΔE/t 与电梯/起重机/斜坡功率及效率综合计算</code>，配齐微观机理解释、Paper 6 实验控制、SaveMyExams 真题与直接背写概念卡。
+          </p>
+          <div class="hero-badges">
+            <span class="hero-pill">⚛️ David Sang 3rd Ed. · 2023–2028</span>
+            <span class="hero-pill">📐 Core + Extended 全区分</span>
+            <span class="hero-pill">🧪 本章专属交互物理实验台</span>
+            <a class="hero-pill" href="#sec-sme" style="text-decoration: none;">📝 直达 SaveMyExams 真题 →</a>
+            <a class="hero-pill" href="#app-concepts" style="text-decoration: none; background: rgba(255,255,255,0.24);">🧠 直达中英概念默写库 →</a>
+          </div>
+          <div class="unit-grid">
+            <a class="unit-tile" href="#sec-8-1">
+              <div class="unit-tile-num">Section 8-1</div>
+              <div class="unit-tile-title">8.1 机械功的定义与“不做功”三大陷阱</div>
+            </a>
+            <a class="unit-tile" href="#sec-8-2">
+              <div class="unit-tile-num">Section 8-2</div>
+              <div class="unit-tile-title">8.2 功率 P = W/t、功率铭牌与 Paper 6 登楼功率实验</div>
+            </a>
+            <a class="unit-tile" href="#sec-8-3">
+              <div class="unit-tile-num">Section 8-3</div>
+              <div class="unit-tile-title">8.3 斜面机械功、起重机与电动机功率效率综合计算</div>
+            </a>
+            <a class="unit-tile" href="#sec-sme">
+              <div class="unit-tile-num">Section sme</div>
+              <div class="unit-tile-title">SaveMyExams 0625 真题与综合演练</div>
+            </a>
+          </div>
+        </section>
+
+        <div id="emptySearchNotice" class="callout deep-dive" style="display: none;">
+          <div class="callout-title">🔍 未找到匹配内容</div>
+          <p style="margin-bottom: 0;">请尝试更换关键词，或点击右上角“重置过滤”恢复显示。</p>
+        </div>
+
+<!-- ==================== CHAPTER 8: WORK AND POWER ==================== -->
+<article class="topic-section book-section" id="sec-8-1">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>8.1 机械功的定义与“不做功”三大陷阱</h3>
+      <div class="section-en-sub">Mechanical Work Done W = Fd = ΔE (1 J = 1 N·m) &amp; Force-Displacement Direction Rule</div>
+      <div class="tier-row">
+        <span class="badge-core">Core</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-8-1">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>8.1.1 机械功公式与单位本质</h4>
+    <div class="formula-card">
+      <div class="formula-main">
+        <span class="math">W</span> = <span class="math">F d</span> = <span class="math">ΔE</span>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        1 joule (J) = 1 newton-metre (N·m)
+      </div>
+      <p style="margin-bottom: 0;">
+        • <strong><span class="math">W</span>：</strong>机械功（Mechanical work done），标量，单位焦耳 <code>J</code>。<br>
+        • <strong><span class="math">F</span>：</strong>恒定作用力（Force），单位牛顿 <code>N</code>。<br>
+        • <strong><span class="math">d</span>：</strong>物体<strong>沿着力的作用方向（in the direction of the force）</strong>移动的距离，单位米 <code>m</code>。<br>
+        • <strong>核心等效律 <span class="math">W = ΔE</span>：</strong>机械做功正是能量从一种存储转移到另一种存储的度量——外力对物体做 <code>100 J</code> 的功，就有 <code>100 J</code> 的能量转移进了对应存储（如动能、重力势能或摩擦产生的热能）。
+      </p>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>8.1.2 什么时候力“做了功”，什么时候“做功为零”？</h4>
+    <p>判断机械功是否为零，必须同时检验两个条件：<strong>① 有无力 <span class="math">F</span>；② 物体是否沿该力方向产生位移 <span class="math">d</span></strong>。考试最爱考以下四种对比情景：</p>
+    <div class="table-wrap">
+      <table class="phy-table">
+        <thead>
+          <tr>
+            <th>物理情景</th>
+            <th>力与运动方向关系</th>
+            <th>机械功 <span class="math">W = Fd</span> 结果</th>
+            <th>能量存储变化解读</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>水平推箱子在粗糙地面移动 <span class="math">d</span></td>
+            <td>推力水平向前，位移水平向前（同向）</td>
+            <td><strong><span class="math">W</span> = <span class="math">F</span><sub>push</sub> × <span class="math">d</span> &gt; 0</strong></td>
+            <td>推力做功转为箱子动能 + 克服摩擦转为地面/箱子热能</td>
+          </tr>
+          <tr>
+            <td>竖直匀速举起质量 <span class="math">m</span> 的箱子升高 <span class="math">h</span></td>
+            <td>举力竖直向上（等于重力 <span class="math">mg</span>），位移竖直向上</td>
+            <td><strong><span class="math">W</span> = <span class="math">m g h</span> = <span class="math">ΔE</span><sub>p</sub></strong></td>
+            <td>机械做功全部储存为重力势能（<code>g = 9.8 N/kg</code>）</td>
+          </tr>
+          <tr>
+            <td>双手举着 200 N 重箱子<strong>静止站立</strong> 5 分钟</td>
+            <td>有竖直向上托力 200 N，但位移 <span class="math">d = 0</span></td>
+            <td><strong><span class="math">W = 0 J</span></strong>（机械功为零！）</td>
+            <td>虽然人肌肉化学能消耗并累到发热，但未对箱子做任何机械功</td>
+          </tr>
+          <tr>
+            <td>提着行李箱在<strong>水平路面匀速行走</strong> 30 m</td>
+            <td>重力竖直向下 / 托力竖直向上，位移水平向右（<strong>垂直 90°!</strong>）</td>
+            <td><strong>重力做功 = 0 J；竖直托力做功 = 0 J</strong></td>
+            <td>在重力方向上高度没有变化（<span class="math">Δh = 0</span>），故重力势能增量为零！</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 215" width="740" height="215" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="ch08-s1-arr-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--svg-blue)"/>
+          </marker>
+          <marker id="ch08-s1-arr-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--svg-green)"/>
+          </marker>
+          <marker id="ch08-s1-arr-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--svg-red)"/>
+          </marker>
+        </defs>
+
+        <!-- Panel 1: Horizontal Push -->
+        <rect x="14" y="14" width="228" height="186" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.4"/>
+        <text x="128" y="34" text-anchor="middle" font-size="12" font-weight="800" fill="var(--svg-ink)">A. 水平推箱 (F ∥ d ⇒ W = Fd)</text>
+        <line x1="30" y1="145" x2="226" y2="145" stroke="var(--svg-ink)" stroke-width="2"/>
+        <rect x="86" y="102" width="52" height="42" rx="4" fill="rgba(37,99,235,0.18)" stroke="var(--svg-blue)" stroke-width="1.8"/>
+        <line x1="36" y1="123" x2="82" y2="123" stroke="var(--svg-red)" stroke-width="2.5" marker-end="url(#ch08-s1-arr-r)"/>
+        <text x="58" y="114" text-anchor="middle" font-size="11" font-weight="800" fill="var(--svg-red)">F</text>
+        <line x1="86" y1="164" x2="196" y2="164" stroke="var(--svg-green)" stroke-width="2.2" marker-end="url(#ch08-s1-arr-g)"/>
+        <text x="141" y="180" text-anchor="middle" font-size="11" font-weight="700" fill="var(--svg-green)">移动距离 d (同方向)</text>
+
+        <!-- Panel 2: Carrying Horizontally (W = 0) -->
+        <rect x="256" y="14" width="228" height="186" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.4"/>
+        <text x="370" y="34" text-anchor="middle" font-size="12" font-weight="800" fill="var(--svg-ink)">B. 水平提箱匀速走 (F ⊥ d ⇒ W = 0)</text>
+        <line x1="272" y1="145" x2="468" y2="145" stroke="var(--svg-ink)" stroke-width="2"/>
+        <rect x="330" y="96" width="46" height="36" rx="4" fill="rgba(217,119,6,0.18)" stroke="var(--svg-amber)" stroke-width="1.8"/>
+        <line x1="353" y1="96" x2="353" y2="56" stroke="var(--svg-blue)" stroke-width="2.4" marker-end="url(#ch08-s1-arr-b)"/>
+        <text x="374" y="72" font-size="10.5" font-weight="800" fill="var(--svg-blue)">F_lift (=mg)</text>
+        <line x1="376" y1="114" x2="444" y2="114" stroke="var(--svg-green)" stroke-width="2.2" marker-end="url(#ch08-s1-arr-g)"/>
+        <text x="415" y="106" font-size="10.5" font-weight="700" fill="var(--svg-green)">速度/位移 d</text>
+        <text x="370" y="168" text-anchor="middle" font-size="11" font-weight="800" fill="var(--svg-red)">力与位移夹角 90°</text>
+        <text x="370" y="184" text-anchor="middle" font-size="10.5" fill="var(--svg-muted)">克服重力做功 = 0 J!</text>
+
+        <!-- Panel 3: Lifting Vertically -->
+        <rect x="498" y="14" width="228" height="186" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.4"/>
+        <text x="612" y="34" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-ink)">C. 竖直举升 (F ∥ Δh ⇒ W = mgΔh)</text>
+        <line x1="514" y1="160" x2="710" y2="160" stroke="var(--svg-ink)" stroke-width="2"/>
+        <rect x="572" y="88" width="46" height="34" rx="4" fill="rgba(22,163,74,0.18)" stroke="var(--svg-green)" stroke-width="1.8"/>
+        <line x1="595" y1="88" x2="595" y2="50" stroke="var(--svg-red)" stroke-width="2.4" marker-end="url(#ch08-s1-arr-r)"/>
+        <text x="606" y="66" font-size="10.5" font-weight="800" fill="var(--svg-red)">F = mg</text>
+        <line x1="544" y1="158" x2="544" y2="92" stroke="var(--svg-green)" stroke-width="2" marker-end="url(#ch08-s1-arr-g)"/>
+        <text x="530" y="128" text-anchor="middle" font-size="11" font-weight="700" fill="var(--svg-green)">Δh</text>
+        <text x="612" y="182" text-anchor="middle" font-size="11" font-weight="700" fill="var(--svg-ink)">W = m × 9.8 × Δh = ΔGPE</text>
+      </svg>
+      <div class="svg-caption">图 8.1：判断做功先画力箭头再画位移箭头——只有沿着力的方向产生位移才做功；手提重物水平行走时重力和托力均不做功。</div>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-8-2">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>8.2 功率 P = W/t、功率铭牌与 Paper 6 登楼功率实验</h3>
+      <div class="section-en-sub">Power (1 W = 1 J/s), Power Ratings &amp; Measuring Personal Power on Stairs (g = 9.8 N/kg)</div>
+      <div class="tier-row">
+        <span class="badge-core">Core</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-8-2">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>8.2.1 功率的定义、公式与铭牌含义</h4>
+    <div class="formula-card">
+      <div class="formula-main">
+        <span class="math">P</span> = <span class="frac"><span class="num"><span class="math">W</span></span><span class="den"><span class="math">t</span></span></span> = <span class="frac"><span class="num"><span class="math">ΔE</span></span><span class="den"><span class="math">t</span></span></span>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        1 watt (W) = 1 J/s
+      </div>
+      <p style="margin-bottom: 0;">
+        • <strong>英文标准定义：</strong>Power is the <strong>work done per unit time</strong> (or the <strong>rate at which energy is transferred</strong>).<br>
+        • <strong>常用功率单位换算：</strong><code>1 kW = 1000 W = 10³ J/s</code>；<code>1 MW = 1 000 000 W = 10⁶ J/s</code>。<br>
+        • <strong>铭牌含义解读（必考 1 分题）：</strong>若某电热水壶铭牌标明 <code>2.2 kW</code>，意思是<strong>“它每秒钟通过电流做功转移 2200 J 能量”</strong>（transfers 2200 J of energy per second）。<br>
+        • <strong>对比谁功率更大：</strong>两人将同一箱子搬上同一层楼（总功 <span class="math">W = mgh</span> 相同），<strong>耗时 <span class="math">t</span> 越短</strong>的人，功率 <span class="math">P</span> 越大！此外，匀速直线运动时 <span class="math">P = F d / t = F v</span>，也可用于快速校核。
+      </p>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>8.2.2 Paper 6 经典实验：测定学生跑楼梯的平均功率 (Measuring Personal Power)</h4>
+    <p>这是剑桥 Paper 6（Alternative to Practical）高频设计实验题（4–6 分），流程与采分点如下：</p>
+    <ol>
+      <li><strong>测量质量 <span class="math">m</span>：</strong>用电子体重秤（Bathroom scales / electronic balance）测出受试学生的质量 <span class="math">m</span>（单位 <code>kg</code>），计算重力 <span class="math">W</span><sub>weight</sub> = <span class="math">m g</span>（取 <span class="math">g</span> = 9.8 N/kg）。</li>
+      <li><strong>测量总竖直高度 <span class="math">h</span>（核心陷阱！）：</strong>用刻度尺（Metre rule）测出<strong>单级台阶的竖直高度</strong> <span class="math">h</span><sub>step</sub>，数出总台阶数 <span class="math">N</span>，则总竖直抬升高度为 <strong><span class="math">h = N × h</span><sub>step</sub></strong>（单位换算为 <code>m</code>）。</li>
+      <li><strong>测量跑完楼梯用时 <span class="math">t</span>：</strong>用数字秒表（Digital stopwatch）记录学生从底层起跑线冲上顶端台阶的用时 <span class="math">t</span>（单位 <code>s</code>）。</li>
+      <li><strong>计算功率：</strong><span class="math">P</span> = <span class="math">m g h / t</span> = (<span class="math">m × 9.8 × N × h</span><sub>step</sub>) / <span class="math">t</span>。</li>
+      <li><strong>重复与安全措施：</strong>至少重复测量 <strong>3 次</strong>并取平均用时（每次之间需充分休息防止肌肉疲劳导致数据失真）；实验要求穿着防滑运动鞋、楼梯干燥无障碍物且不跳过台阶。</li>
+    </ol>
+
+    <div class="callout common-mistake">
+      <div class="callout-title">⚠️ Paper 6 致命坑：用卷尺斜着量楼梯斜边长度算做功！</div>
+      <p style="margin-bottom: 0;">
+        重力竖直向下，克服重力做功 <span class="math">W = m g h</span> 中的 <span class="math">h</span> 必须是<strong>竖直垂直高度（vertical height）</strong>！如果误把楼梯斜坡的总长（diagonal length）代入 <span class="math">W = mgL</span>，算出的有用功与功率会大幅偏高！
+      </p>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-8-3">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>8.3 斜面机械功、起重机与电动机功率效率综合计算</h3>
+      <div class="section-en-sub">Inclined Planes (W_in vs mgΔh), Cranes, Motors &amp; Efficiency Problems</div>
+      <div class="tier-row">
+        <span class="badge-core">Core</span>
+        <span class="badge-ext">Extended: Combined Power, Friction Loss &amp; Efficiency Calculations</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-8-3">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>8.3.1 斜面 (Inclined Plane) 做功分析：省力但不省功！</h4>
+    <p>把质量为 <span class="math">m</span> 的重箱子沿长为 <span class="math">L</span>、竖直高度为 <span class="math">Δh</span> 的斜坡推上卡车车厢时，务必分清“总输入功”与“有用输出功”：</p>
+    <div class="formula-card">
+      <div class="formula-main">
+        <span class="math">W</span><sub>input</sub> = <span class="math">F</span><sub>push</sub> × <span class="math">L</span><sub>slope</sub>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <span class="math">W</span><sub>useful</sub> = <span class="math">ΔE</span><sub>p</sub> = <span class="math">m g Δh</span>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <span class="math">W</span><sub>friction</sub> = <span class="math">F</span><sub>push</sub><span class="math">L</span> − <span class="math">m g Δh</span>
+      </div>
+      <p style="margin-bottom: 0;">
+        • <strong>为什么需要斜面？</strong>因为斜坡把竖直举升距离放大成较长的斜边 <span class="math">L &gt; Δh</span>，因此所需的推力 <span class="math">F</span><sub>push</sub> <strong>远小于</strong>箱子的重力 <span class="math">mg</span>（省力）！<br>
+        • <strong>为什么实测 <span class="math">F</span><sub>push</sub><span class="math">L</span> 总是大于 <span class="math">m g Δh</span>？</strong>因为存在<strong>摩擦力（Friction）</strong>，推力的一部分功用于克服摩擦，转移并耗散为斜坡与箱底的<strong>热能存储（thermal store）</strong>！<br>
+        • <strong>斜面机械效率：</strong>Efficiency = (<span class="math">m g Δh</span>) / (<span class="math">F</span><sub>push</sub> × <span class="math">L</span>) × 100%。
+      </p>
+    </div>
+
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 225" width="740" height="225" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="ch08-s2-arr-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--svg-red)"/>
+          </marker>
+          <marker id="ch08-s2-arr-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--svg-blue)"/>
+          </marker>
+          <marker id="ch08-s2-arr-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--svg-green)"/>
+          </marker>
+        </defs>
+
+        <!-- Left: Inclined Plane -->
+        <rect x="14" y="12" width="356" height="200" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5"/>
+        <text x="192" y="33" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-ink)">斜面模型：W_in = F_push × L ｜ W_useful = mgΔh</text>
+        <!-- Ramp triangle -->
+        <polygon points="44,174 304,174 304,76" fill="rgba(2,132,199,0.12)" stroke="var(--svg-ink)" stroke-width="2"/>
+        <!-- Crate rotated along ramp slope (atan((174-76)/(304-44)) = atan(98/260) = -20.65 deg) -->
+        <g transform="translate(154,132) rotate(-20.65)">
+          <rect x="-22" y="-26" width="44" height="26" rx="3" fill="rgba(217,119,6,0.28)" stroke="var(--svg-amber)" stroke-width="1.8"/>
+          <text x="0" y="-9" text-anchor="middle" font-size="10.5" font-weight="800" fill="var(--svg-ink)">m</text>
+          <line x1="-58" y1="-13" x2="-24" y2="-13" stroke="var(--svg-red)" stroke-width="2.4" marker-end="url(#ch08-s2-arr-r)"/>
+          <line x1="22" y1="-2" x2="-12" y2="-2" stroke="var(--svg-purple)" stroke-width="2" marker-end="url(#ch08-s2-arr-b)"/>
+        </g>
+        <text x="108" y="114" font-size="10.5" font-weight="800" fill="var(--svg-red)">推力 F_push</text>
+        <text x="178" y="148" font-size="10" font-weight="700" fill="var(--svg-purple)">阻力 f</text>
+        <text x="180" y="90" text-anchor="middle" font-size="11" font-weight="700" fill="var(--svg-blue)" transform="rotate(-20.65 180 90)">斜坡长度 L_slope</text>
+        <!-- Vertical height label -->
+        <line x1="318" y1="174" x2="318" y2="78" stroke="var(--svg-green)" stroke-width="2" marker-end="url(#ch08-s2-arr-g)"/>
+        <text x="336" y="130" text-anchor="middle" font-size="11" font-weight="800" fill="var(--svg-green)">Δh</text>
+        <text x="192" y="198" text-anchor="middle" font-size="10.8" font-weight="700" fill="var(--svg-muted)">热损耗 W_friction = f × L = F_push×L − mgΔh</text>
+
+        <!-- Right: Electric Crane / Motor -->
+        <rect x="384" y="12" width="342" height="200" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5"/>
+        <text x="555" y="33" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-ink)">起重机与电动机：功率与效率综合模型</text>
+        <!-- Crane beam & motor box -->
+        <rect x="406" y="54" width="110" height="36" rx="5" fill="rgba(79,70,229,0.16)" stroke="var(--svg-indigo)" stroke-width="1.6"/>
+        <text x="461" y="76" text-anchor="middle" font-size="11" font-weight="800" fill="var(--svg-indigo)">Motor 电机</text>
+        <line x1="406" y1="108" x2="461" y2="92" stroke="var(--svg-amber)" stroke-width="2" marker-end="url(#ch08-s2-arr-r)"/>
+        <text x="444" y="122" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-amber)">总输入 P_in = IV</text>
+        <!-- Cable & load -->
+        <line x1="516" y1="72" x2="610" y2="72" stroke="var(--svg-ink)" stroke-width="2.5"/>
+        <line x1="610" y1="72" x2="610" y2="128" stroke="var(--svg-ink)" stroke-width="2"/>
+        <rect x="585" y="128" width="50" height="34" rx="4" fill="rgba(22,163,74,0.18)" stroke="var(--svg-green)" stroke-width="1.8"/>
+        <text x="610" y="149" text-anchor="middle" font-size="11" font-weight="800" fill="var(--svg-ink)">m kg</text>
+        <line x1="654" y1="162" x2="654" y2="96" stroke="var(--svg-green)" stroke-width="2" marker-end="url(#ch08-s2-arr-g)"/>
+        <text x="676" y="132" text-anchor="middle" font-size="10.8" font-weight="800" fill="var(--svg-green)">Δh, t</text>
+        <text x="555" y="182" text-anchor="middle" font-size="10.8" font-weight="700" fill="var(--svg-green)">有用输出功率 P_out = mgΔh / t</text>
+        <text x="555" y="199" text-anchor="middle" font-size="10.8" font-weight="700" fill="var(--svg-red)">废热速率 P_waste = P_in − P_out</text>
+      </svg>
+      <div class="svg-caption">图 8.2：斜面做功“分清沿斜边推力功 F·L 与竖直重力势能 mgΔh”；电机问题“分清总输入电功率 P_in 与有用举升输出功率 P_out”。</div>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>8.3.2 典型计算精讲 (g = 9.8 N/kg)</h4>
+    <div class="worked-example">
+      <div class="worked-title">📘 例题 8.1 · 斜面推箱子的总功、有用功、摩擦力与效率</div>
+      <p>A worker pushes a <code>50 kg</code> crate with a steady force of <code>200 N</code> along a <code>10 m</code> ramp to raise it through a vertical height of <code>3.0 m</code>. (<code>g = 9.8 N/kg</code>)<br>
+        Calculate: (a) the total work done by the worker; (b) the useful gain in gravitational potential energy; (c) the average friction force acting down the ramp; (d) the efficiency of the ramp.</p>
+      <p style="margin-bottom: 0;">
+        <strong>解析 (Solution)：</strong><br>
+        (a) 总输入机械功：<span class="math">W</span><sub>in</sub> = <span class="math">F</span><sub>push</sub> × <span class="math">L</span> = 200 × 10 = <strong>2000 J</strong>。<br>
+        (b) 有用重力势能增量：<span class="math">ΔE</span><sub>p</sub> = <span class="math">m g Δh</span> = 50 × 9.8 × 3.0 = <strong>1470 J</strong>。<br>
+        (c) 摩擦耗散热能：<span class="math">W</span><sub>friction</sub> = 2000 − 1470 = <code>530 J</code> ⇒ 平均摩擦力 <span class="math">f</span> = <span class="math">W</span><sub>friction</sub> / <span class="math">L</span> = 530 / 10 = <strong>53 N</strong>。<br>
+        (d) 效率：<span class="math">η</span> = (1470 / 2000) × 100% = <strong>73.5%</strong>。
+      </p>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">📘 例题 8.2 · 电动起重机输出功率、总输入电功率与热损耗速率</div>
+      <p>An electric crane lifts a <code>400 kg</code> steel beam vertically by <code>15 m</code> in <code>12 s</code>. The overall efficiency of the crane motor is <code>70%</code>. (<code>g = 9.8 N/kg</code>)<br>
+        Calculate: (a) the useful power output; (b) the total electrical power input; (c) the thermal energy wasted in 12 s.</p>
+      <p style="margin-bottom: 0;">
+        <strong>解析 (Solution)：</strong><br>
+        (a) 有用功 <span class="math">W</span><sub>out</sub> = 400 × 9.8 × 15 = <code>58 800 J</code> ⇒ 有用功率 <span class="math">P</span><sub>out</sub> = 58 800 / 12 = <strong>4900 W</strong> (4.9 kW)。<br>
+        (b) <span class="math">P</span><sub>in</sub> = <span class="math">P</span><sub>out</sub> / 0.70 = 4900 / 0.70 = <strong>7000 W</strong> (7.0 kW)。<br>
+        (c) 12 s 总输入电能 = 7000 × 12 = <code>84 000 J</code> ⇒ 耗散热能 = 84 000 − 58 800 = <strong>25 200 J</strong>。
+      </p>
+    </div>
+
+    <div class="lab-box" data-lab-type="p08"></div>
+  </div>
+</article>
+
+<!-- ==================== SAVEMAXAMS PRACTICE CH08 ==================== -->
+<article class="topic-section sme-section" id="sec-sme">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>SaveMyExams 0625 真题与综合演练</h3>
+      <div class="section-en-sub">4 High-Yield MCQs + 4 Multi-Part Work, Power &amp; Efficiency Problems (g = 9.8 N/kg)</div>
+      <div class="tier-row">
+        <span class="badge-core">Paper 1 / 3 Core</span>
+        <span class="badge-ext">Paper 2 / 4 Extended</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-sme">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>Section A · 高频易错选择题 (4 题)</h4>
+
+    <div class="exam-q" data-mcq-answer="A">
+      <div class="exam-q-head"><span class="q-tag">Ch08 MCQ 1 · 力与位移垂直做功陷阱 (Core)</span><span class="q-marks">[1 mark]</span></div>
+      <div class="q-stem-en">A shop assistant carries a box weighing <code>200 N</code> at a constant height of <code>1.2 m</code> while walking <code>15 m</code> along a flat horizontal floor at constant speed. How much work does the assistant do against gravity on the box?</div>
+      <div class="q-stem-cn">店员双手托着重 200 N 的箱子保持 1.2 m 离地高度不变，在水平地面匀速行走 15 m。他对箱子克服重力做了多少机械功？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>0 J</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>240 J</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>3000 J</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>3600 J</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！重力与托力均沿竖直方向，而箱子仅沿水平方向移动，竖直高度变化 Δh = 0，因此克服重力做功为 0 J！" data-err="❌ 别拿 200 × 15 = 3000 J！W = Fd 中的距离 d 必须与力同方向：力竖直向上、行走水平向右，垂直方向位移为 0，故做功为 0 J！"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="C">
+      <div class="exam-q-head"><span class="q-tag">Ch08 MCQ 2 · 登楼功率计算 (Core · g = 9.8 N/kg)</span><span class="q-marks">[1 mark]</span></div>
+      <div class="q-stem-en">A student of mass <code>60 kg</code> runs up a flight of stairs of total vertical height <code>4.0 m</code> in <code>4.8 s</code>. What is the average useful power developed by the student against gravity? (<code>g = 9.8 N/kg</code>)</div>
+      <div class="q-stem-cn">60 kg 学生用 4.8 s 跑上总竖直高度 4.0 m 的楼梯，求克服重力做功的平均功率。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>50 W</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>235 W</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>490 W</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>2352 W</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！W = mgh = 60 × 9.8 × 4.0 = 2352 J ⇒ P = 2352 / 4.8 = 490 W！" data-err="❌ 检查步骤：先算重力 mg = 60 × 9.8 = 588 N（不是 60 N 也不是 600 N），再乘高度 4.0 m 得 2352 J，最后除以时间 4.8 s！"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head"><span class="q-tag">Ch08 MCQ 3 · 斜面推力功与热损耗 (Core/Ext · g = 9.8 N/kg)</span><span class="q-marks">[1 mark]</span></div>
+      <div class="q-stem-en">A <code>25 kg</code> box is pushed <code>5.0 m</code> up an inclined plane to reach a vertical height of <code>2.0 m</code> using a force of <code>120 N</code> parallel to the slope. How much work is done against friction? (<code>g = 9.8 N/kg</code>)</div>
+      <div class="q-stem-cn">用沿斜面 120 N 的力将 25 kg 箱子沿 5.0 m 斜坡推至 2.0 m 高处，求克服摩擦力做的功。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>100 J</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>110 J</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>490 J</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>600 J</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！总推力功 W_in = 120 × 5.0 = 600 J；有用重力势能 ΔE_p = 25 × 9.8 × 2.0 = 490 J；摩擦做功 = 600 − 490 = 110 J！" data-err="❌ 记牢 g = 9.8 N/kg：Useful ΔGPE = 25 × 9.8 × 2.0 = 490 J（不是 500 J），与总功 600 J 相减得 110 J！"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="D">
+      <div class="exam-q-head"><span class="q-tag">Ch08 MCQ 4 · 起重机输入功率反求 (Extended · g = 9.8 N/kg)</span><span class="q-marks">[1 mark]</span></div>
+      <div class="q-stem-en">A crane lifts a <code>250 kg</code> load through a vertical height of <code>8.0 m</code> in <code>10 s</code>. The crane is <code>80%</code> efficient. What is the total input power supplied to the crane? (<code>g = 9.8 N/kg</code>)</div>
+      <div class="q-stem-cn">效率为 80% 的起重机用 10 s 将 250 kg 重物竖直吊高 8.0 m，求总输入功率。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>1568 W</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>1960 W</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>2000 W</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>2450 W</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！P_out = (250 × 9.8 × 8.0) / 10 = 1960 W ⇒ 总输入功率必定大于输出功率，P_in = 1960 / 0.80 = 2450 W！" data-err="❌ 千万别把 1960 W 乘以 0.80（得出 1568 W 比输出还小是荒谬的！）：总输入功率 = 有用输出功率 ÷ 效率 = 1960 / 0.80 = 2450 W！"></div>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>Section B · SaveMyExams 0625 多步结构化大题 (4 题)</h4>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">SME 1 · Paper 6 登楼测功率实验设计与计算 (Core · g = 9.8)</span><span class="q-marks">[6 marks]</span></div>
+      <div class="q-stem-en">
+        A student plans an experiment to measure her useful power when running up a staircase.<br>
+        (a) Name the three measuring instruments she needs and explain how she accurately determines the total vertical height climbed. [3]<br>
+        (b) Her mass is <code>55 kg</code>. The staircase has <code>20</code> steps, each of vertical height <code>0.18 m</code>, and she runs to the top in <code>4.5 s</code>. Calculate her useful work done and average power. (<code>g = 9.8 N/kg</code>) [3]
+      </div>
+      <div class="q-stem-cn">(a) 列出测个人登楼功率所需三件测量仪器及总竖直高度准确测法；(b) 55 kg 学生 4.5 s 跑上 20 级各高 0.18 m 的台阶，求有用功与平均功率。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 6 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">[B1]</span> (a) Instruments: <span class="kw">bathroom scales / electronic balance</span> (mass), <span class="kw">metre rule</span> (height), <span class="kw">stopwatch</span> (time).<br>
+          <span class="ms-mark">[B1]</span> Measure the <span class="kw">vertical height of one step</span> (repeated across several steps and averaged to reduce error) and <span class="kw">multiply by total number of steps</span>.<br>
+          <span class="ms-mark">[B1]</span> Do NOT measure diagonal slope length (repeat timing 3 times and average for reliability).<br>
+          <span class="ms-cn">中文：体重秤测质量、米尺测单级竖直高度并乘以台阶总数（勿量斜边）、秒表多次计时取平均。</span></p>
+          <p><span class="ms-mark">[M1]</span> (b) <span class="math">h</span> = 20 × 0.18 = 3.6 m; <span class="math">W</span> = <span class="math">m g h</span> = 55 × 9.8 × 3.6<br>
+          <span class="ms-mark">[A1]</span> <span class="math">W</span> = <strong>1940 J</strong> (exact 1940.4 J)<br>
+          <span class="ms-mark">[A1]</span> <span class="math">P</span> = 1940.4 / 4.5 = <strong>431 W</strong> (accept 430 W).</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">SME 2 · 斜面推车总功、热损耗与机械效率 (Core/Ext · g = 9.8)</span><span class="q-marks">[6 marks]</span></div>
+      <div class="q-stem-en">
+        A builder pushes a wheelbarrow of total mass <code>30 kg</code> up a <code>12 m</code> plank onto a platform <code>2.5 m</code> high using a steady force of <code>85 N</code> along the plank. The journey takes <code>15 s</code>. (<code>g = 9.8 N/kg</code>)<br>
+        (a) Calculate the total mechanical work done by the builder and his input power. [2]<br>
+        (b) Calculate the useful gravitational potential energy gained by the wheelbarrow. [2]<br>
+        (c) Determine the energy transferred to the thermal store due to friction and the efficiency of the plank system. [2]
+      </div>
+      <div class="q-stem-cn">工人用 85 N 力沿 12 m 长斜板在 15 s 内将 30 kg 手推车推上 2.5 m 高台：(a) 总功与输入功率；(b) 有用 GPE 增量；(c) 摩擦热损耗与斜面效率。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 6 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">[M1]</span> (a) <span class="math">W</span><sub>in</sub> = <span class="math">F d</span> = 85 × 12 = <strong>1020 J</strong><br>
+          <span class="ms-mark">[A1]</span> <span class="math">P</span><sub>in</sub> = 1020 / 15 = <strong>68 W</strong>.</p>
+          <p><span class="ms-mark">[M1]</span> (b) <span class="math">ΔE</span><sub>p</sub> = <span class="math">m g Δh</span> = 30 × 9.8 × 2.5<br>
+          <span class="ms-mark">[A1]</span> <strong>735 J</strong>.</p>
+          <p><span class="ms-mark">[B1]</span> (c) Thermal loss = 1020 − 735 = <strong>285 J</strong>.<br>
+          <span class="ms-mark">[A1]</span> Efficiency = (735 / 1020) × 100% = <strong>72.1%</strong> (accept 72%).</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">SME 3 · 电梯电动机恒速提升功率与热耗散 (Extended · g = 9.8)</span><span class="q-marks">[6 marks]</span></div>
+      <div class="q-stem-en">
+        An electric lift of total mass (cabin + passengers) <code>800 kg</code> rises vertically at a constant speed of <code>1.5 m/s</code> for <code>10 s</code>. The electrical power supplied to the lift motor is <code>16.0 kW</code>. (<code>g = 9.8 N/kg</code>)<br>
+        (a) Calculate the vertical height risen in 10 s and the useful power output of the motor. [3]<br>
+        (b) Calculate the efficiency of the lift motor. [2]<br>
+        (c) Calculate the total thermal energy dissipated in the motor and pulleys during the 10 s lift. [1]
+      </div>
+      <div class="q-stem-cn">总质量 800 kg 的电梯以 1.5 m/s 恒速竖直上升 10 s，电机输入电功率 16.0 kW：(a) 上升高度与有用输出功率；(b) 电机效率；(c) 10 s 内耗散总热能。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 6 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">[B1]</span> (a) Height <span class="math">h</span> = <span class="math">v t</span> = 1.5 × 10 = <strong>15 m</strong>.<br>
+          <span class="ms-mark">[M1]</span> <span class="math">W</span><sub>out</sub> = <span class="math">m g h</span> = 800 × 9.8 × 15 = 117 600 J; <span class="math">P</span><sub>out</sub> = 117 600 / 10 (or <span class="math">F v</span> = 800 × 9.8 × 1.5)<br>
+          <span class="ms-mark">[A1]</span> <strong>11 760 W</strong> (<strong>11.76 kW</strong> / 11.8 kW).</p>
+          <p><span class="ms-mark">[M1]</span> (b) <span class="math">η</span> = (11 760 / 16 000) × 100%<br>
+          <span class="ms-mark">[A1]</span> <strong>73.5%</strong> (accept 74%).</p>
+          <p><span class="ms-mark">[A1]</span> (c) <span class="math">E</span><sub>in</sub> = 16 000 × 10 = 160 000 J ⇒ Thermal loss = 160 000 − 117 600 = <strong>42 400 J</strong> (42.4 kJ).</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">SME 4 · 骑行爬坡综合功与功率 (Extended · g = 9.8)</span><span class="q-marks">[5 marks]</span></div>
+      <div class="q-stem-en">
+        A cyclist and bicycle of combined mass <code>75 kg</code> travel <code>400 m</code> along a sloping road, rising through a vertical height of <code>32 m</code> in <code>40 s</code> at constant speed. An average resistive force of <code>25 N</code> opposes the motion along the road. (<code>g = 9.8 N/kg</code>)<br>
+        (a) Calculate the gain in gravitational potential energy. [2]<br>
+        (b) Calculate the work done against the resistive force. [1]<br>
+        (c) Hence calculate the total useful mechanical power provided by the cyclist. [2]
+      </div>
+      <div class="q-stem-cn">人车总重 75 kg 的骑行者用 40 s 沿 400 m 坡路匀速爬升 32 m 竖直高度，平均阻力 25 N：(a) 重力势能增量；(b) 克服阻力做的功；(c) 骑行者输出机械功率。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 5 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">[M1]</span> (a) <span class="math">ΔE</span><sub>p</sub> = 75 × 9.8 × 32<br>
+          <span class="ms-mark">[A1]</span> <strong>23 520 J</strong>.</p>
+          <p><span class="ms-mark">[A1]</span> (b) <span class="math">W</span><sub>resist</sub> = <span class="math">F d</span> = 25 × 400 = <strong>10 000 J</strong>.</p>
+          <p><span class="ms-mark">[M1]</span> (c) Total work = 23 520 + 10 000 = 33 520 J; <span class="math">P</span> = 33 520 / 40<br>
+          <span class="ms-mark">[A1]</span> <strong>838 W</strong> (accept 840 W).</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</article>
+
+<!-- ==================== CONCEPT BANK CH08 ==================== -->
+<article class="topic-section" id="app-concepts">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>本章核心概念与 Mark Scheme 默写卡 (15题)</h3>
+      <div class="section-en-sub">Mechanical Work, Zero-Work Conditions, Power, Stair Experiment &amp; Ramp/Crane Efficiency</div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="app-concepts">○ 标记掌握</button>
+  </div>
+
+  <div class="concept-toolbar">
+    <div class="concept-filter-group" id="conceptFilterTabs">
+      <button type="button" class="tab-btn active" data-concept-part="all">全部 15 题</button>
+      <button type="button" class="tab-btn" data-concept-part="p1">8.1 机械功与零功陷阱 (5题)</button>
+      <button type="button" class="tab-btn" data-concept-part="p2">8.2 功率与登楼实验 (5题)</button>
+      <button type="button" class="tab-btn" data-concept-part="p3">8.3 斜面与电机效率 (5题)</button>
+    </div>
+    <div class="concept-actions">
+      <span class="concept-count-pill" id="conceptCountPill">显示 15 / 15 题</span>
+      <button type="button" class="icon-btn" id="conceptQuizToggle">🙈 开启遮罩自测</button>
+    </div>
+  </div>
+
+  <div class="concept-grid" id="conceptGrid">
+    <div class="concept-card" data-part="p1">
+      <div class="cq-head"><span class="q-tag">C01 · 8.1 Work Definition</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Define mechanical work done and state its equation and SI unit.</div>
+      <div class="cq-cn">默写机械功的剑桥标准定义、公式及等价国际单位。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 标准表述：</strong>Work done = <span class="kw">force × distance moved in the direction of the force</span> (<span class="kw">W = F d = ΔE</span>). SI unit: <span class="kw">joule (J)</span>, where 1 J = 1 N·m.</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 中文解析：</strong>做功等于力与沿力方向移动距离的乘积（W = Fd = ΔE），单位为焦耳 J（1 J = 1 N·m）。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p1">
+      <div class="cq-head"><span class="q-tag">C02 · 8.1 Work = ΔE</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">State the relationship between mechanical work done and energy transferred.</div>
+      <div class="cq-cn">说明机械做功 W 与能量转移量 ΔE 之间的物理关系。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 标准表述：</strong><span class="kw">Work done equals energy transferred</span> (<span class="kw">W = ΔE</span>): doing 1 J of work transfers 1 J of energy between stores.</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 中文解析：</strong>机械做功量严格等于能量转移量（W = ΔE），每做 1 J 的功即转移 1 J 的能量。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p1">
+      <div class="cq-head"><span class="q-tag">C03 · 8.1 Zero Work (Static)</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Explain why a person holding a heavy barbell stationary above their head does zero mechanical work on it.</div>
+      <div class="cq-cn">解释举重运动员举着杠铃静止在头顶不动时对杠铃做的机械功为零的原因。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 标准表述：</strong>Although an upward force is exerted, the <span class="kw">distance moved is zero</span> (d = 0), so <span class="kw">W = F × 0 = 0 J</span>.</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 中文解析：</strong>虽然施加了向上的支持力，但杠铃沿力方向移动的距离 d = 0，因此机械功 W = 0 J。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p1">
+      <div class="cq-head"><span class="q-tag">C04 · 8.1 Zero Work (Perpendicular)</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Why does carrying a suitcase horizontally at constant speed do zero work against gravity?</div>
+      <div class="cq-cn">解释手提箱子水平匀速行走时，对箱子克服重力做功为零的原因。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 标准表述：</strong>Gravity (and the upward supporting force) acts <span class="kw">vertically</span>, while motion is <span class="kw">horizontal (perpendicular / at 90°)</span>; zero distance is moved in the vertical direction of the force.</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 中文解析：</strong>重力与托力沿竖直方向，而运动沿水平方向（二者垂直 90°），竖直方向位移为零，故做功为零。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p1">
+      <div class="cq-head"><span class="q-tag">C05 · 8.1 Lifting Work</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Which force equals the minimum upward lifting force at steady speed, and what formula gives the work done?</div>
+      <div class="cq-cn">匀速竖直提起物体时所需拉力等于什么？做功如何计算？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 标准表述：</strong>The steady upward force equals the <span class="kw">weight mg</span> (g = 9.8 N/kg), so work done against gravity is <span class="kw">W = m g Δh</span> (= ΔE_p).</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 中文解析：</strong>匀速上升合力为零，向上拉力等于重力 mg（g = 9.8 N/kg），克服重力做功 W = mgΔh。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p2">
+      <div class="cq-head"><span class="q-tag">C06 · 8.2 Power Definition</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Define power and state its equation and SI unit.</div>
+      <div class="cq-cn">写出功率的剑桥标准英文定义、公式及国际单位换算。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 标准表述：</strong>Power is <span class="kw">work done per unit time</span> (or <span class="kw">rate of energy transfer</span>): <span class="kw">P = W / t = ΔE / t</span>. Unit: <span class="kw">watt (W)</span>, where 1 W = 1 J/s.</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 中文解析：</strong>功率是单位时间内做的功（能量转移速率），P = W/t = ΔE/t，单位瓦特（1 W = 1 J/s）。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p2">
+      <div class="cq-head"><span class="q-tag">C07 · 8.2 Power Rating</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">What does a power rating of "1.5 kW" printed on an electric kettle mean?</div>
+      <div class="cq-cn">电热水壶铭牌上的“1.5 kW”代表什么具体物理意义？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 标准表述：</strong>It transfers <span class="kw">1500 joules of energy every second</span> (1.5 kW = 1500 W = 1500 J/s).</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 中文解析：</strong>表示该水壶每秒钟转换或消耗 1500 J 的能量（1.5 kW = 1500 J/s）。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p2">
+      <div class="cq-head"><span class="q-tag">C08 · 8.2 Same Work, Different Power</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Two students of equal weight climb the same flight of stairs. Student A takes 4 s and Student B takes 6 s. Compare their work done and power.</div>
+      <div class="cq-cn">体重相同的两位同学爬上同一层楼分别用时 4 s 与 6 s，比较他们做的功和功率。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 标准表述：</strong>Both do the <span class="kw">same work (mgh)</span> because weight and vertical height are equal; Student A develops <span class="kw">greater power (1.5×)</span> by doing the work in less time.</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 中文解析：</strong>重力与爬升高度相同故做功相等；A 用时更短，所以功率更大（为 B 的 1.5 倍）。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p2">
+      <div class="cq-head"><span class="q-tag">C09 · 8.2 Stair Experiment Height</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">In the stair-running personal power experiment, how should you measure the distance climbed, and why?</div>
+      <div class="cq-cn">跑楼梯测功率实验中如何正确测量爬升距离，为什么不能量斜边？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 标准表述：</strong>Measure the <span class="kw">vertical height of one step</span> with a metre rule and multiply by the number of steps (<span class="kw">h = N × h_step</span>); do not measure the diagonal slope because gravity acts vertically.</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 中文解析：</strong>用米尺测单级台阶竖直高度再乘台阶总数；重力竖直向下，不能把楼梯斜边长代入 mgh。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p2">
+      <div class="cq-head"><span class="q-tag">C10 · 8.2 Stair Precautions</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">State two experimental precautions to improve accuracy and safety in the personal power experiment.</div>
+      <div class="cq-cn">写出跑楼梯测功率实验中提高精度与保障安全的两项关键措施。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 标准表述：</strong>Accuracy: <span class="kw">repeat 3 times and average</span> time (resting between runs to avoid fatigue) and use clear start/finish markers. Safety: dry non-slip stairs, trainers, no skipping steps.</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 中文解析：</strong>精度：重复 3 次求平均并组间休息防疲劳；安全：干燥防滑地面、穿运动鞋、不跨步跳跃。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p3">
+      <div class="cq-head"><span class="q-tag">C11 · 8.3 Inclined Plane Advantage</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Why does pushing a barrel up a ramp require less force than lifting it vertically, yet more total work?</div>
+      <div class="cq-cn">为什么沿斜面推木桶比竖直抬起更省力，但总功反而更大？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 标准表述：</strong>The ramp spreads the same GPE gain over a <span class="kw">longer distance</span> (<span class="kw">L &gt; Δh</span>), reducing required force; however extra work is done against <span class="kw">friction</span>, increasing total input work.</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 中文解析：</strong>斜面延长了施力距离从而减小推力（省力）；但实际存在摩擦力做功耗散内能，因此总功大于纯重力势能增量。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p3">
+      <div class="cq-head"><span class="q-tag">C12 · 8.3 Ramp Work Equations</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Write the formulas for work input, useful work output, and thermal energy wasted on an inclined plane.</div>
+      <div class="cq-cn">写出斜面搬运中总输入功、有用功以及摩擦热损耗的表达式。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 标准表述：</strong>Input work: <span class="kw">W_in = F_push × L_slope</span>; Useful output: <span class="kw">ΔE_p = m g Δh</span>; Friction thermal waste: <span class="kw">W_waste = F_push L − m g Δh</span>.</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 中文解析：</strong>总功 W_in = 推力 × 斜坡长；有用功 ΔE_p = mgΔh；摩擦耗散热能 = 二者之差。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="p3">
+      <div class="cq-head"><span class="q-tag">C13 · 8.3 Motor Efficiency</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">How do you calculate the electrical input power of a crane motor given its useful lifting power and percentage efficiency?</div>
+      <div class="cq-cn">已知起重机有用举升功率和效率，如何反求电机总输入电功率？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 标准表述：</strong>Rearrange Efficiency = P_out / P_in to give <span class="kw">P_in = P_out / efficiency (as decimal)</span>. Remember <span class="kw">P_in must always be ≥ P_out</span>.</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 中文解析：</strong>P_in = P_out ÷ 效率（小数形式），且算出的总输入功率必大于有用输出功率。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="p3">
+      <div class="cq-head"><span class="q-tag">C14 · 8.3 Wasted Power Causes</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">State two reasons why the electrical power input to a lift motor exceeds its useful mechanical power output.</div>
+      <div class="cq-cn">写出电梯电动机总输入电功率高于有用机械输出功率的两大物理原因。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 标准表述：</strong>1. <span class="kw">Heating due to electrical resistance</span> in the motor coils. 2. <span class="kw">Friction</span> in bearings, gears, pulleys and air drag (plus sound waves).</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 中文解析：</strong>1. 电机铜线圈电阻发热（电功生热）；2. 轴承、滑轮和齿轮摩擦生热及声波耗散。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="p3">
+      <div class="cq-head"><span class="q-tag">C15 · 8.3 Constant Speed Power</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">Show that for an object moving at constant velocity v against a constant resistive force F, the required power is P = F v.</div>
+      <div class="cq-cn">推导物体克服恒定阻力 F 以匀速 v 前进时功率公式 P = Fv。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 标准表述：</strong>At constant speed, driving force equals F. Since <span class="kw">P = W / t = (F d) / t</span> and <span class="kw">d / t = v</span>, we obtain <span class="kw">P = F v</span>.</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 中文解析：</strong>匀速时驱动力等于阻力 F，由 P = Fd/t 且速度 v = d/t，即得瞬时机械功率 P = Fv。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+        <nav class="chapter-pager" aria-label="章节切换导航">
+          <div><a class="pager-btn" href="Ch07_Energy_Resources.html">← Ch07 化石能源、核能与可再生发电技术评估</a></div>
+          <div><a class="pager-btn primary" href="index.html">🏠 返回 25 章全书总目录</a></div>
+          <div><a class="pager-btn" href="Ch09_Kinetic_Particle_Model.html">Ch09 物态微观模型、布朗运动、绝对温标与气体定律 →</a></div>
+        </nav>
+      </div>
+    </main>
+  </div>
+
+  <button type="button" class="back-top-btn" id="backTopBtn" title="返回顶部">↑</button>
+
+  <script>
+(function () {
+  'use strict';
+
+  const THEME_KEY = 'igcse_phy0625_theme';
+  const chapterCode = (document.body && document.body.getAttribute('data-chapter-code')) || 'HUB';
+  const STORAGE_PREFIX = 'igcse_phy0625_' + chapterCode.toLowerCase() + '_';
+  const htmlEl = document.documentElement;
+  const bodyEl = document.body;
+
+  // All state variables declared cleanly at top of IIFE (prevents TDZ errors)
+  let currentViewMode = localStorage.getItem(STORAGE_PREFIX + 'viewMode') || 'all';
+  let activeConceptPart = 'all';
+  let quizMasked = localStorage.getItem(STORAGE_PREFIX + 'quizMasked') === '1';
+  let allMsExpanded = false;
+  let masteredIds = [];
+  try {
+    masteredIds = JSON.parse(localStorage.getItem(STORAGE_PREFIX + 'mastered') || '[]');
+    if (!Array.isArray(masteredIds)) masteredIds = [];
+  } catch (e) {
+    masteredIds = [];
+  }
+
+  // ---------- 1. Theme Toggle ----------
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+
+  function applyTheme(theme) {
+    htmlEl.setAttribute('data-theme', theme);
+    if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem(THEME_KEY, theme);
+  }
+  applyTheme(localStorage.getItem(THEME_KEY) || 'light');
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      applyTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  }
+
+  // ---------- 2. View Mode Filter (All / Core / Extended / SME) ----------
+  function applyViewMode(mode) {
+    currentViewMode = mode;
+    bodyEl.classList.remove('mode-core', 'mode-ext', 'mode-book', 'mode-sme');
+    if (mode === 'core') bodyEl.classList.add('mode-core');
+    if (mode === 'ext') bodyEl.classList.add('mode-ext');
+    if (mode === 'sme') bodyEl.classList.add('mode-sme');
+    document.querySelectorAll('[data-view-mode]').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-view-mode') === mode);
+    });
+    localStorage.setItem(STORAGE_PREFIX + 'viewMode', mode);
+    filterConcepts();
+  }
+  document.querySelectorAll('[data-view-mode]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      applyViewMode(btn.getAttribute('data-view-mode'));
+    });
+  });
+
+  // ---------- 3. Sidebar Drawer & Accordion ----------
+  const sidebar = document.getElementById('sidebar');
+  const menuToggle = document.getElementById('menuToggle');
+  if (menuToggle && sidebar) {
+    menuToggle.addEventListener('click', function () { sidebar.classList.toggle('open'); });
+    sidebar.querySelectorAll('.nav-link').forEach(function (lnk) {
+      lnk.addEventListener('click', function () {
+        if (window.innerWidth <= 980) sidebar.classList.remove('open');
+      });
+    });
+  }
+  document.querySelectorAll('.nav-unit-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const unit = btn.closest('.nav-unit');
+      if (unit) unit.classList.toggle('collapsed');
+    });
+  });
+
+  // ---------- 4. Mastery Progress Tracker ----------
+  const progressText = document.getElementById('progressText');
+  const progressFill = document.getElementById('progressFill');
+  const masterBtns = Array.from(document.querySelectorAll('.master-btn'));
+  const totalSections = masterBtns.length;
+  const validIds = new Set(masterBtns.map(function (b) { return b.getAttribute('data-section-id'); }));
+
+  function renderMastery() {
+    const doneList = masteredIds.filter(function (id) { return validIds.has(id); });
+    localStorage.setItem(STORAGE_PREFIX + 'total', String(totalSections));
+    if (progressText) progressText.textContent = doneList.length + '/' + totalSections;
+    if (progressFill && totalSections > 0) {
+      progressFill.style.width = Math.round((doneList.length / totalSections) * 100) + '%';
+    }
+    masterBtns.forEach(function (btn) {
+      const sid = btn.getAttribute('data-section-id');
+      const done = doneList.indexOf(sid) !== -1;
+      btn.classList.toggle('is-mastered', done);
+      btn.textContent = done ? '✓ 已掌握' : '○ 标记掌握';
+    });
+    document.querySelectorAll('.nav-link').forEach(function (lnk) {
+      const id = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('mastered', doneList.indexOf(id) !== -1);
+    });
+  }
+  masterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const sid = btn.getAttribute('data-section-id');
+      const idx = masteredIds.indexOf(sid);
+      if (idx === -1) masteredIds.push(sid);
+      else masteredIds.splice(idx, 1);
+      localStorage.setItem(STORAGE_PREFIX + 'mastered', JSON.stringify(masteredIds));
+      renderMastery();
+    });
+  });
+  if (totalSections > 0) renderMastery();
+
+  // ---------- 5. Global Toggle Details & Print ----------
+  const toggleAllMs = document.getElementById('toggleAllMs');
+  if (toggleAllMs) {
+    toggleAllMs.addEventListener('click', function () {
+      allMsExpanded = !allMsExpanded;
+      document.querySelectorAll('details.ms-details').forEach(function (det) { det.open = allMsExpanded; });
+      const lbl = toggleAllMs.querySelector('.btn-label');
+      if (lbl) lbl.textContent = allMsExpanded ? '收起解析' : '展开解析';
+      toggleAllMs.classList.toggle('active', allMsExpanded);
+    });
+  }
+  const printBtn = document.getElementById('printBtn');
+  if (printBtn) printBtn.addEventListener('click', function () { window.print(); });
+
+  // ---------- 6. Instant Search ----------
+  const searchInput = document.getElementById('searchInput');
+  const searchClear = document.getElementById('searchClear');
+  const searchBar = document.getElementById('searchBar');
+  const searchSummary = document.getElementById('searchSummary');
+  const searchResetBtn = document.getElementById('searchResetBtn');
+  const emptySearchNotice = document.getElementById('emptySearchNotice');
+
+  function runSearch() {
+    if (!searchInput) return;
+    const raw = searchInput.value.trim().toLowerCase();
+    if (searchClear) searchClear.style.display = raw ? 'block' : 'none';
+    const sections = Array.from(document.querySelectorAll('.topic-section'));
+    if (!raw) {
+      sections.forEach(function (s) { s.classList.remove('search-dim'); });
+      if (searchBar) searchBar.classList.remove('visible');
+      if (emptySearchNotice) emptySearchNotice.style.display = 'none';
+      return;
+    }
+    let hits = 0;
+    sections.forEach(function (sec) {
+      const ok = sec.textContent.toLowerCase().indexOf(raw) !== -1;
+      sec.classList.toggle('search-dim', !ok);
+      if (ok) hits++;
+    });
+    if (searchBar) searchBar.classList.add('visible');
+    if (searchSummary) searchSummary.textContent = '关键词 “' + searchInput.value.trim() + '” 匹配 ' + hits + ' 个板块';
+    if (emptySearchNotice) emptySearchNotice.style.display = hits === 0 ? 'block' : 'none';
+  }
+  if (searchInput) searchInput.addEventListener('input', runSearch);
+  function resetSearch() { if (searchInput) searchInput.value = ''; runSearch(); }
+  if (searchClear) searchClear.addEventListener('click', resetSearch);
+  if (searchResetBtn) searchResetBtn.addEventListener('click', resetSearch);
+
+  // ---------- 7. Interactive MCQ Grading ----------
+  document.querySelectorAll('.exam-q[data-mcq-answer]').forEach(function (qBox) {
+    const ans = qBox.getAttribute('data-mcq-answer');
+    const fb = qBox.querySelector('.mcq-feedback');
+    const opts = qBox.querySelectorAll('.mcq-opt');
+    opts.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const chosen = btn.getAttribute('data-opt');
+        opts.forEach(function (o) { o.classList.remove('correct', 'wrong'); });
+        if (chosen === ans) {
+          btn.classList.add('correct');
+          if (fb) { fb.textContent = fb.getAttribute('data-ok') || '✅ 回答正确！'; fb.className = 'mcq-feedback visible ok'; }
+        } else {
+          btn.classList.add('wrong');
+          opts.forEach(function (o) { if (o.getAttribute('data-opt') === ans) o.classList.add('correct'); });
+          if (fb) { fb.textContent = fb.getAttribute('data-err') || '❌ 未选对，请对照解析复盘。'; fb.className = 'mcq-feedback visible err'; }
+        }
+      });
+    });
+  });
+
+  // ---------- 8. Concept Bank Filter & Mask ----------
+  const conceptCountPill = document.getElementById('conceptCountPill');
+  const conceptQuizToggle = document.getElementById('conceptQuizToggle');
+
+  function filterConcepts() {
+    const cards = Array.from(document.querySelectorAll('#conceptGrid .concept-card'));
+    if (!cards.length) return;
+    let visible = 0;
+    cards.forEach(function (card) {
+      const part = card.getAttribute('data-part');
+      const isExt = card.classList.contains('ext-only');
+      const matchesTab = activeConceptPart === 'all' || part === activeConceptPart;
+      const matchesTier = currentViewMode !== 'core' || !isExt;
+      const show = matchesTab && matchesTier;
+      card.classList.toggle('concept-hidden', !show);
+      if (show) visible++;
+    });
+    if (conceptCountPill) conceptCountPill.textContent = '显示 ' + visible + ' / ' + cards.length + ' 题';
+  }
+
+  document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      activeConceptPart = btn.getAttribute('data-concept-part');
+      document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      filterConcepts();
+    });
+  });
+
+  function applyQuizMask(masked) {
+    quizMasked = masked;
+    document.querySelectorAll('#conceptGrid .concept-card').forEach(function (c) { c.classList.toggle('masked', masked); });
+    if (conceptQuizToggle) {
+      conceptQuizToggle.textContent = masked ? '👁️ 显示全部答案' : '🙈 开启遮罩自测';
+      conceptQuizToggle.classList.toggle('active', masked);
+    }
+    localStorage.setItem(STORAGE_PREFIX + 'quizMasked', masked ? '1' : '0');
+  }
+  if (conceptQuizToggle) {
+    conceptQuizToggle.addEventListener('click', function () { applyQuizMask(!quizMasked); });
+  }
+  document.querySelectorAll('#conceptGrid .cq-answer').forEach(function (box) {
+    box.addEventListener('click', function () {
+      const card = box.closest('.concept-card');
+      if (card && card.classList.contains('masked')) card.classList.remove('masked');
+    });
+  });
+
+  // ---------- 9. 2D Mini-Plot Helper (Zero HTML tags inside SVG) ----------
+  function makePlot(w, h, xmin, xmax, ymin, ymax) {
+    const pad = 22;
+    return {
+      w: w, h: h, xmin: xmin, xmax: xmax, ymin: ymin, ymax: ymax,
+      toX: function (x) { return pad + ((x - xmin) / (xmax - xmin)) * (w - 2 * pad); },
+      toY: function (y) { return h - pad - ((y - ymin) / (ymax - ymin)) * (h - 2 * pad); }
+    };
+  }
+  function plotBase(p, xLbl, yLbl) {
+    let s = '<rect x="2" y="2" width="' + (p.w - 4) + '" height="' + (p.h - 4) + '" rx="6" fill="none" stroke="var(--svg-grid)" stroke-width="1"/>';
+    for (let i = 1; i <= 4; i++) {
+      const gx = p.xmin + (i / 5) * (p.xmax - p.xmin);
+      const gy = p.ymin + (i / 5) * (p.ymax - p.ymin);
+      s += '<line x1="' + p.toX(gx).toFixed(1) + '" y1="12" x2="' + p.toX(gx).toFixed(1) + '" y2="' + (p.h - 12) + '" stroke="var(--svg-grid)" stroke-width="0.7"/>';
+      s += '<line x1="12" y1="' + p.toY(gy).toFixed(1) + '" x2="' + (p.w - 12) + '" y2="' + p.toY(gy).toFixed(1) + '" stroke="var(--svg-grid)" stroke-width="0.7"/>';
+    }
+    const ox = p.xmin <= 0 && p.xmax >= 0 ? p.toX(0) : 22;
+    const oy = p.ymin <= 0 && p.ymax >= 0 ? p.toY(0) : p.h - 22;
+    s += '<line x1="' + ox.toFixed(1) + '" y1="10" x2="' + ox.toFixed(1) + '" y2="' + (p.h - 10) + '" stroke="var(--svg-muted)" stroke-width="1.5"/>';
+    s += '<line x1="10" y1="' + oy.toFixed(1) + '" x2="' + (p.w - 10) + '" y2="' + oy.toFixed(1) + '" stroke="var(--svg-muted)" stroke-width="1.5"/>';
+    s += '<text x="' + Math.min(p.w - 45, ox + 6).toFixed(1) + '" y="20" font-size="10.5" font-weight="700" fill="var(--svg-muted)">' + (yLbl || 'y') + '</text>';
+    s += '<text x="' + (p.w - 14) + '" y="' + Math.max(20, oy - 5).toFixed(1) + '" text-anchor="end" font-size="10.5" font-weight="700" fill="var(--svg-muted)">' + (xLbl || 'x') + '</text>';
+    return s;
+  }
+  function plotPath(p, fn, col, dashed) {
+    let d = '', pen = false;
+    for (let i = 0; i <= 100; i++) {
+      const x = p.xmin + (i / 100) * (p.xmax - p.xmin);
+      const y = fn(x);
+      if (!Number.isFinite(y) || y < p.ymin - 1 || y > p.ymax + 1) { pen = false; continue; }
+      d += (pen ? ' L ' : ' M ') + p.toX(x).toFixed(1) + ' ' + p.toY(y).toFixed(1);
+      pen = true;
+    }
+    return d ? '<path d="' + d.trim() + '" fill="none" stroke="' + col + '" stroke-width="2.4"' + (dashed ? ' stroke-dasharray="5,3"' : '') + '/>' : '';
+  }
+
+  // ---------- 10. All 25 Interactive Physics Labs (p01 – p25) ----------
+  function mountPhysicsLab(el) {
+    const t = el.getAttribute('data-lab-type');
+    if (!t) return;
+
+    const bindInputs = function (fn) {
+      el.querySelectorAll('input,select').forEach(function (inp) {
+        inp.addEventListener('input', fn);
+        inp.addEventListener('change', fn);
+      });
+      fn();
+    };
+
+    if (t === 'p01') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 1 交互实验室 · 密度 ρ = m/V 与排水法浮沉判断仪</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>质量 m (g)：<input type="range" id="p1M" min="10" max="300" value="180"><span id="p1ML">180 g</span></label>' +
+        '<label>排开液体体积 ΔV (cm³)：<input type="range" id="p1V" min="10" max="200" value="120"><span id="p1VL">120 cm³</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p1Svg" viewBox="0 0 360 230" width="360" height="230"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p1Out1"></div><div class="readout-pill" id="p1Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const m = Number(el.querySelector('#p1M').value), v = Number(el.querySelector('#p1V').value);
+        el.querySelector('#p1ML').textContent = m + ' g'; el.querySelector('#p1VL').textContent = v + ' cm³';
+        const rho = m / v;
+        const float = rho < 1.0;
+        el.querySelector('#p1Out1').textContent = '密度 ρ = ' + m + ' / ' + v + ' = ' + rho.toFixed(2) + ' g/cm³ (' + Math.round(rho * 1000) + ' kg/m³)';
+        el.querySelector('#p1Out2').textContent = float ? '✅ ρ < 1.0 g/cm³ → 漂浮于纯水面 (Floats)；若完全浸没需细针轻按且留意视差' : Math.abs(rho - 1.0) < 0.02 ? '⚖️ ρ ≈ 1.0 g/cm³ → 悬浮水中' : '⬇️ ρ > 1.0 g/cm³ → 沉入水底 (Sinks)！';
+        const yObj = float ? 86 : 158;
+        el.querySelector('#p1Svg').innerHTML =
+          '<rect x="110" y="34" width="140" height="164" fill="none" stroke="var(--svg-ink)" stroke-width="2.2"/>' +
+          '<rect x="112" y="88" width="136" height="108" fill="rgba(2,132,199,0.22)"/>' +
+          '<rect x="155" y="' + yObj + '" width="50" height="36" rx="4" fill="' + (float ? 'var(--svg-amber)' : 'var(--svg-indigo)') + '"/>' +
+          '<text x="180" y="218" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-ink)">水密度 ρ_water = 1.00 g/cm³</text>';
+      });
+    } else if (t === 'p02') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 2 交互实验室 · v-t 图像加速度斜率与积分面积位移台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>初速度 u (m/s)：<input type="number" id="p2U" value="4"></label>' +
+        '<label>末速度 v (m/s)：<input type="number" id="p2V" value="20"></label>' +
+        '<label>时间 t (s)：<input type="number" id="p2T" value="8" min="1"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p2Svg" viewBox="0 0 360 230" width="360" height="230"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p2Acc"></div><div class="readout-pill" id="p2Dist"></div></div></div></div>';
+      bindInputs(function () {
+        const u = Number(el.querySelector('#p2U').value) || 0, v = Number(el.querySelector('#p2V').value) || 0, tm = Math.max(1, Number(el.querySelector('#p2T').value) || 8);
+        const a = (v - u) / tm, s = 0.5 * (u + v) * tm;
+        const p = makePlot(360, 230, 0, tm * 1.15, Math.min(0, u, v) - 2, Math.max(10, u, v) * 1.15);
+        let svg = plotBase(p, 't (s)', 'v (m/s)');
+        svg += '<polygon points="' + p.toX(0).toFixed(1) + ',' + p.toY(0).toFixed(1) + ' ' + p.toX(0).toFixed(1) + ',' + p.toY(u).toFixed(1) + ' ' + p.toX(tm).toFixed(1) + ',' + p.toY(v).toFixed(1) + ' ' + p.toX(tm).toFixed(1) + ',' + p.toY(0).toFixed(1) + '" fill="rgba(2,132,199,0.2)" stroke="var(--svg-blue)" stroke-width="2"/>';
+        el.querySelector('#p2Svg').innerHTML = svg;
+        el.querySelector('#p2Acc').textContent = '斜率即加速度 a = (v − u)/t = ' + a.toFixed(2) + ' m/s² ' + (a < 0 ? '(减速 Deceleration)' : a > 0 ? '(匀加速)' : '(匀速)');
+        el.querySelector('#p2Dist').textContent = '图像下方面积 = 梯形 ½(u+v)t = ' + s.toFixed(1) + ' m | 平均速率 = ' + (s / tm).toFixed(2) + ' m/s';
+      });
+    } else if (t === 'p03') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 3 交互实验室 · 非弹性碰撞动量守恒 (m₁u₁ = (m₁+m₂)v) 与冲量</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>m₁ (kg)：<input type="number" id="p3M1" value="3" min="1"></label><label>u₁ (m/s)：<input type="number" id="p3U1" value="6"></label>' +
+        '<label>m₂ (kg)：<input type="number" id="p3M2" value="6" min="1"></label><label>作用时间 Δt (s)：<input type="number" id="p3Dt" value="0.2" step="0.1" min="0.05"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p3Out1"></div><div class="readout-pill" id="p3Out2"></div></div></div>';
+      bindInputs(function () {
+        const m1 = Math.max(0.5, Number(el.querySelector('#p3M1').value) || 3), u1 = Number(el.querySelector('#p3U1').value) || 0;
+        const m2 = Math.max(0.5, Number(el.querySelector('#p3M2').value) || 6), dt = Math.max(0.05, Number(el.querySelector('#p3Dt').value) || 0.2);
+        const v = (m1 * u1) / (m1 + m2);
+        const imp = m2 * v;
+        el.querySelector('#p3Out1').textContent = '合体后共同速度 v = m₁u₁/(m₁+m₂) = ' + v.toFixed(2) + ' m/s | 碰前总动量 = ' + (m1 * u1).toFixed(1) + ' kg·m/s';
+        el.querySelector('#p3Out2').textContent = 'm₂ 所受冲量 Δp = ' + imp.toFixed(2) + ' N·s | 平均碰撞力 F = Δp/Δt = ' + (imp / dt).toFixed(1) + ' N（时间越长冲击力越小！）';
+      });
+    } else if (t === 'p04') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 4 交互实验室 · 杠杆力矩平衡 (M = Fd) 与支点向上支持力</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>左力 F₁ (N)：<input type="number" id="p4F1" value="60"></label><label>左臂 d₁ (m)：<input type="number" id="p4D1" value="2.0" step="0.5"></label>' +
+        '<label>右臂 d₂ (m)：<input type="number" id="p4D2" value="3.0" step="0.5" min="0.5"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p4Out1"></div><div class="readout-pill" id="p4Out2"></div></div></div>';
+      bindInputs(function () {
+        const f1 = Number(el.querySelector('#p4F1').value) || 0, d1 = Number(el.querySelector('#p4D1').value) || 0, d2 = Math.max(0.5, Number(el.querySelector('#p4D2').value) || 1);
+        const f2 = (f1 * d1) / d2;
+        el.querySelector('#p4Out1').textContent = '逆时针力矩 F₁d₁ = ' + (f1 * d1).toFixed(1) + ' N·m ⇒ 平衡所需右力 F₂ = ' + f2.toFixed(2) + ' N';
+        el.querySelector('#p4Out2').textContent = '支点向上总支持力 (Net upward force) = F₁ + F₂ = ' + (f1 + f2).toFixed(2) + ' N（平衡需满足合力=0且合力矩=0！）';
+      });
+    } else if (t === 'p05') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 5 交互实验室 · 胡克定律 F = kx 与液体压强 Δp = ρgΔh 计算台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>原长 l₀ (cm)：<input type="number" id="p5L0" value="12"></label><label>劲度系数 k (N/cm)：<input type="number" id="p5K" value="2.5" step="0.5"></label>' +
+        '<label>拉力 F (N)：<input type="number" id="p5F" value="15"></label><label>水深 Δh (m)：<input type="number" id="p5H" value="5"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p5Out1"></div><div class="readout-pill" id="p5Out2"></div></div></div>';
+      bindInputs(function () {
+        const l0 = Number(el.querySelector('#p5L0').value) || 12, k = Math.max(0.1, Number(el.querySelector('#p5K').value) || 2.5);
+        const F = Number(el.querySelector('#p5F').value) || 0, h = Number(el.querySelector('#p5H').value) || 0;
+        const x = F / k;
+        el.querySelector('#p5Out1').textContent = '伸长量 Extension x = F/k = ' + x.toFixed(2) + ' cm ⇒ 总长度 Total length = ' + (l0 + x).toFixed(2) + ' cm（注意考题常问总长还是伸长量！）';
+        el.querySelector('#p5Out2').textContent = '水下 Δh = ' + h + ' m 处液体附加压强 Δp = 1000 × 9.8 × ' + h + ' = ' + (1000 * 9.8 * h).toLocaleString() + ' Pa';
+      });
+    } else if (t === 'p06') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 6 交互实验室 · 自由落体机械能转换 (mgΔh ↔ ½mv²) 与效率 η</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>质量 m (kg)：<input type="number" id="p6M" value="4"></label><label>高度 Δh (m)：<input type="number" id="p6H" value="5"></label>' +
+        '<label>效率 η (%)：<input type="range" id="p6E" min="20" max="100" value="80"><span id="p6EL">80%</span></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p6Out1"></div><div class="readout-pill" id="p6Out2"></div></div></div>';
+      bindInputs(function () {
+        const m = Math.max(0.1, Number(el.querySelector('#p6M').value) || 4), h = Math.max(0, Number(el.querySelector('#p6H').value) || 5), eff = Number(el.querySelector('#p6E').value) / 100;
+        el.querySelector('#p6EL').textContent = Math.round(eff * 100) + '%';
+        const gpe = m * 9.8 * h, ke = gpe * eff, v = Math.sqrt((2 * ke) / m);
+        el.querySelector('#p6Out1').textContent = '初始重力势能 ΔE_p = m × 9.8 × ' + h + ' = ' + gpe.toFixed(1) + ' J | 转化为动能 E_k = ' + ke.toFixed(1) + ' J（热耗散 ' + (gpe - ke).toFixed(1) + ' J）';
+        el.querySelector('#p6Out2').textContent = '到达底端速度 v = √(2gΔh·η) = ' + v.toFixed(2) + ' m/s（注意无空气阻力时 η=100% 且速度与质量 m 无关！）';
+      });
+    } else if (t === 'p07') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 7 交互实验室 · 能源类型、太阳源头辨析与发电对比筛查仪</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>选择发电能源：<select id="p7Src"><option value="solar">太阳能光伏 (Solar cell)</option><option value="wind">风力发电 (Wind)</option><option value="hydro">水力蓄能 (Hydroelectric)</option><option value="geo">地热能 (Geothermal)</option><option value="nuc">核裂变 (Nuclear)</option><option value="tidal">潮汐能 (Tidal)</option><option value="coal">燃煤火电 (Fossil fuel)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p7Out1"></div><div class="readout-pill" id="p7Out2"></div></div></div>';
+      const MAP7 = {
+        solar: { sun: '✅ 直接来自太阳 (Direct solar radiation)', ren: '可再生 (Renewable) · 运行零 CO₂', prop: '直接光生电无需涡轮机；缺点：夜间阴天间歇、占地面积大。' },
+        wind: { sun: '✅ 间接来自太阳 (太阳不均加热引发空气对流)', ren: '可再生 (Renewable) · 零温室气体', prop: '视觉噪音争议与风速不可控间歇发电，需储能或调峰电站。' },
+        hydro: { sun: '✅ 间接来自太阳 (蒸发降雨水循环)', ren: '可再生 (Renewable) · 响应极快 (几秒启动)', prop: '适合峰值调频，但筑坝淹没生态耕地、受地理落差限制。' },
+        geo: { sun: '❌ 非太阳能！源自地球内部放射性衰变余热', ren: '可再生 (Renewable) · 24h 基荷稳定不看天', prop: '仅限板块活跃火山地热带钻井成本极高（全纲三大非太阳能之一！）。' },
+        nuc: { sun: '❌ 非太阳能！重核铀/钚裂变或氢聚变', ren: '不可再生 (Non-renewable) · 运行零 CO₂', prop: '能量密度极高、全天候稳发；痛点：高放核废料千万年封存与事故风险。' },
+        tidal: { sun: '❌ 主要非太阳能！源自月球与太阳引力潮汐牵引', ren: '可再生 (Renewable) · 天文时刻可精准预测', prop: '建设拦潮坝改变河口湿地生态、影响航运，仅特定海湾适用。' },
+        coal: { sun: '✅ 远古太阳能储存 (史前植物煤炭)', ren: '不可再生 (Non-renewable)', prop: '优点：高可靠可随时启停；致命缺点：排放 CO₂ 加剧温室效应与酸雨。' }
+      };
+      bindInputs(function () {
+        const d = MAP7[el.querySelector('#p7Src').value];
+        el.querySelector('#p7Out1').textContent = '溯源检查：' + d.sun + ' | 属性：' + d.ren;
+        el.querySelector('#p7Out2').textContent = '优缺点与原理：' + d.prop;
+      });
+    } else if (t === 'p08') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 8 交互实验室 · 起重机做功 W = Fd、功率 P = W/t 与功率效率计算</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>提升质量 m (kg)：<input type="number" id="p8M" value="50"></label><label>垂直高度 h (m)：<input type="number" id="p8H" value="12"></label>' +
+        '<label>耗时 t (s)：<input type="number" id="p8T" value="10" min="1"></label><label>电机输入功率 P_in (W)：<input type="number" id="p8Pin" value="800" min="1"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p8Out1"></div><div class="readout-pill" id="p8Out2"></div></div></div>';
+      bindInputs(function () {
+        const m = Number(el.querySelector('#p8M').value) || 50, h = Number(el.querySelector('#p8H').value) || 12, tm = Math.max(1, Number(el.querySelector('#p8T').value) || 10);
+        const w = m * 9.8 * h, pout = w / tm, pin = Math.max(pout, Number(el.querySelector('#p8Pin').value) || pout);
+        el.querySelector('#p8Out1').textContent = '有用机械功 W = mgh = ' + w.toFixed(1) + ' J | 有用输出功率 P_out = W/t = ' + pout.toFixed(1) + ' W';
+        el.querySelector('#p8Out2').textContent = '效率 η = (P_out / P_in) × 100% = ' + ((pout / pin) * 100).toFixed(1) + '%（记得先用 g = 9.8 算重量！）';
+      });
+    } else if (t === 'p09') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 9 交互实验室 · 玻意耳定律 p₁V₁ = p₂V₂ 与开尔文温度转换台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>初压 p₁ (kPa)：<input type="number" id="p9P1" value="100"></label><label>初体积 V₁ (cm³)：<input type="number" id="p9V1" value="60"></label>' +
+        '<label>压缩后体积 V₂ (cm³)：<input type="range" id="p9V2" min="15" max="120" value="30"><span id="p9VL">30</span></label>' +
+        '<label>摄氏温度 θ (°C)：<input type="number" id="p9C" value="27"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p9Svg" viewBox="0 0 360 220" width="360" height="220"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p9Out1"></div><div class="readout-pill" id="p9Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const p1 = Number(el.querySelector('#p9P1').value) || 100, v1 = Number(el.querySelector('#p9V1').value) || 60, v2 = Number(el.querySelector('#p9V2').value) || 30;
+        const cTemp = Number(el.querySelector('#p9C').value) || 0, p2 = (p1 * v1) / v2;
+        el.querySelector('#p9VL').textContent = v2 + ' cm³';
+        const plt = makePlot(360, 220, 10, 130, 0, Math.max(450, p2 * 1.15));
+        let svg = plotBase(plt, 'V', 'p');
+        svg += plotPath(plt, function (x) { return (p1 * v1) / x; }, 'var(--svg-amber)', false);
+        svg += '<circle cx="' + plt.toX(v2).toFixed(1) + '" cy="' + plt.toY(p2).toFixed(1) + '" r="5" fill="var(--svg-red)"/>';
+        el.querySelector('#p9Svg').innerHTML = svg;
+        el.querySelector('#p9Out1').textContent = '定温玻意耳：p₂ = p₁V₁/V₂ = ' + p2.toFixed(1) + ' kPa（体积减半 ⇒ 单位体积分子更密集 ⇒ 撞击器壁频率翻倍！）';
+        el.querySelector('#p9Out2').textContent = '开尔文绝对温标 T(K) = θ(°C) + 273 = ' + (cTemp + 273) + ' K（绝对零度 0 K = −273 °C，分子动能最小）';
+      });
+    } else if (t === 'p10') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 10 交互实验室 · 比热容 ΔE = mcΔθ 与电热实验能量守恒计算</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>质量 m (kg)：<input type="number" id="p10M" value="2.0" step="0.5"></label>' +
+        '<label>比热容 c (J/kg°C)：<input type="number" id="p10C" value="4200"></label>' +
+        '<label>温升 Δθ (°C)：<input type="number" id="p10Dt" value="15"></label>' +
+        '<label>加热器功率 P (W)：<input type="number" id="p10P" value="2100"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p10Out1"></div><div class="readout-pill" id="p10Out2"></div></div></div>';
+      bindInputs(function () {
+        const m = Number(el.querySelector('#p10M').value) || 2, c = Number(el.querySelector('#p10C').value) || 4200, dt = Number(el.querySelector('#p10Dt').value) || 15, P = Math.max(10, Number(el.querySelector('#p10P').value) || 2100);
+        const e = m * c * dt, tSec = e / P;
+        el.querySelector('#p10Out1').textContent = '所需内能增量 ΔE = mcΔθ = ' + e.toLocaleString() + ' J (' + (e / 1000).toFixed(1) + ' kJ)';
+        el.querySelector('#p10Out2').textContent = '理想加热时间 t = ΔE/P = ' + tSec.toFixed(1) + ' s | 实际测定 c_exp 常偏大！原因：部分热量散失给空气/杯壁，需加盖保温并取稳态温度';
+      });
+    } else if (t === 'p11') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 11 交互实验室 · 热传导、对流与 Leslie 表面热辐射对比台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>选择对比情景：<select id="p11M"><option value="leslie">Leslie 立方体红外发射对比</option><option value="vacuum">真空保温瓶四层隔热解析</option><option value="breeze">白天海风 vs 夜晚陆风循环</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p11Out1"></div><div class="readout-pill" id="p11Out2"></div></div></div>';
+      const MAP11 = {
+        leslie: ['哑光黑 (Matt Black) = 最佳吸收者 (Good absorber) 且最佳辐射发射者 (Best emitter)；银白亮面 (Shiny Silver) = 最佳反射面 (Best reflector) 且最差发射者！', '实验注意：各面到红外探测器距离必须相同、初始水温相同以保证公平控制变量 (Fair test)。'],
+        vacuum: ['真空夹层 (Vacuum gap) → 阻止传导 Conduction 与对流 Convection（均需介质粒子）；塑料瓶塞+密封盖 → 阻断对流热空气逸散与蒸发。', '内壁镀银表面 (Silvered surfaces) → 将红外辐射发射与吸收降到最低并反射回瓶内！'],
+        breeze: ['白天海风 (Sea breeze)：陆地比热容远小于海水，升温更快 → 陆地热空气膨胀密度变小上升 → 海洋凉爽高压空气吹向陆地补位。', '夜晚陆风 (Land breeze)：陆地降温快、海水仍较暖 → 海上暖空气上升，陆风由陆吹向海。']
+      };
+      bindInputs(function () {
+        const d = MAP11[el.querySelector('#p11M').value];
+        el.querySelector('#p11Out1').textContent = d[0];
+        el.querySelector('#p11Out2').textContent = d[1];
+      });
+    } else if (t === 'p12') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 12 交互实验室 · 声波示波器 (CRO) 振幅响度 / 频率音调波形台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>振幅 (响度 Loudness)：<input type="range" id="p12A" min="1" max="5" step="0.5" value="3"><span id="p12AL">3</span></label>' +
+        '<label>频率系数 (音调 Pitch)：<input type="range" id="p12F" min="1" max="6" step="0.5" value="2"><span id="p12FL">2</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p12Svg" viewBox="0 0 360 210" width="360" height="210"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p12Out1"></div><div class="readout-pill" id="p12Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const amp = Number(el.querySelector('#p12A').value), f = Number(el.querySelector('#p12F').value);
+        el.querySelector('#p12AL').textContent = amp; el.querySelector('#p12FL').textContent = f;
+        const plt = makePlot(360, 210, 0, 10, -5.5, 5.5);
+        let svg = plotBase(plt, 't', 'y');
+        svg += plotPath(plt, function (x) { return amp * Math.sin(f * x * 1.2); }, 'var(--svg-purple)', false);
+        el.querySelector('#p12Svg').innerHTML = svg;
+        el.querySelector('#p12Out1').textContent = '振幅 Amplitude = ' + amp + ' 格 ⇒ 控制响度 (Loudness) | 频率系数 ' + f + ' ⇒ 波数越密音调越高 (Pitch)';
+        el.querySelector('#p12Out2').textContent = '人耳可听声域：20 Hz – 20 000 Hz (> 20 kHz 为超声波 Ultrasound，声波为纵波，真空不能传播！)';
+      });
+    } else if (t === 'p13') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 13 交互实验室 · 斯涅尔定律 n = sin i / sin r 与全内反射临界角光线台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>光由玻璃 (n=<input type="number" id="p13N" value="1.50" step="0.05" min="1.2" max="2.4">) 射向空气 | 入射角 i (°)：<input type="range" id="p13I" min="5" max="80" value="35"><span id="p13IL">35°</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p13Svg" viewBox="0 0 360 220" width="360" height="220"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p13Out1"></div><div class="readout-pill" id="p13Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const n = Math.max(1.1, Number(el.querySelector('#p13N').value) || 1.5), inc = Number(el.querySelector('#p13I').value);
+        el.querySelector('#p13IL').textContent = inc + '°';
+        const cDeg = (Math.asin(1 / n) * 180) / Math.PI;
+        const sinR = n * Math.sin((inc * Math.PI) / 180);
+        const tir = sinR > 1.0001;
+        const radI = (inc * Math.PI) / 180;
+        const ix = 180 - 95 * Math.sin(radI), iy = 110 + 95 * Math.cos(radI);
+        let outRay = '';
+        if (tir) {
+          const rx = 180 + 95 * Math.sin(radI), ry = 110 + 95 * Math.cos(radI);
+          outRay = '<line x1="180" y1="110" x2="' + rx.toFixed(1) + '" y2="' + ry.toFixed(1) + '" stroke="var(--svg-red)" stroke-width="2.6"/>';
+        } else {
+          const radR = Math.asin(Math.min(1, sinR));
+          const rx = 180 + 95 * Math.sin(radR), ry = 110 - 95 * Math.cos(radR);
+          outRay = '<line x1="180" y1="110" x2="' + rx.toFixed(1) + '" y2="' + ry.toFixed(1) + '" stroke="var(--svg-blue)" stroke-width="2.6"/>';
+        }
+        el.querySelector('#p13Svg').innerHTML =
+          '<rect x="10" y="110" width="340" height="100" fill="rgba(2,132,199,0.16)"/>' +
+          '<line x1="10" y1="110" x2="350" y2="110" stroke="var(--svg-ink)" stroke-width="1.5"/>' +
+          '<line x1="180" y1="12" x2="180" y2="208" stroke="var(--svg-muted)" stroke-width="1.4" stroke-dasharray="4,3"/>' +
+          '<line x1="' + ix.toFixed(1) + '" y1="' + iy.toFixed(1) + '" x2="180" y2="110" stroke="var(--svg-amber)" stroke-width="2.6"/>' + outRay +
+          '<text x="20" y="28" font-size="11" font-weight="700" fill="var(--svg-muted)">空气 Air (n=1)</text><text x="20" y="198" font-size="11" font-weight="700" fill="var(--svg-ink)">玻璃 Glass (n=' + n.toFixed(2) + ')</text>';
+        el.querySelector('#p13Out1').textContent = '临界角 Critical angle c = arcsin(1/n) = ' + cDeg.toFixed(1) + '°';
+        el.querySelector('#p13Out2').textContent = tir ? '🔴 i > c！发生全内反射 (Total Internal Reflection, TIR)：反射角 r = i = ' + inc + '°' : '🔵 发生折射离开法线：折射角 r = ' + ((Math.asin(sinR) * 180) / Math.PI).toFixed(1) + '°';
+      });
+    } else if (t === 'p14') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 14 交互实验室 · 波速 v = fλ、周期 T = 1/f 与水波深浅折射台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>频率 f (Hz)：<input type="number" id="p14F" value="10" min="1"></label>' +
+        '<label>深水波长 λ_deep (m)：<input type="number" id="p14L1" value="0.6" step="0.1" min="0.1"></label>' +
+        '<label>浅水波长 λ_shallow (m)：<input type="number" id="p14L2" value="0.3" step="0.1" min="0.05"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p14Out1"></div><div class="readout-pill" id="p14Out2"></div></div></div>';
+      bindInputs(function () {
+        const f = Math.max(0.1, Number(el.querySelector('#p14F').value) || 10), l1 = Number(el.querySelector('#p14L1').value) || 0.6, l2 = Number(el.querySelector('#p14L2').value) || 0.3;
+        el.querySelector('#p14Out1').textContent = '周期 T = 1/f = ' + (1 / f).toFixed(3) + ' s | 深水波速 v₁ = ' + (f * l1).toFixed(2) + ' m/s | 浅水波速 v₂ = ' + (f * l2).toFixed(2) + ' m/s';
+        el.querySelector('#p14Out2').textContent = '水波槽铁律：深水进入浅水时【频率 f 绝对不变】，波速 v 减小、波长 λ 缩短，向法线偏折！';
+      });
+    } else if (t === 'p15') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 15 交互实验室 · 电磁波谱排序、波长换算 (c = 3×10⁸ m/s) 与应用速查</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>波段选择：<select id="p15B"><option value="rad">1. Radio waves 无线电波</option><option value="mic">2. Microwaves 微波</option><option value="ir">3. Infrared 红外线</option><option value="vis">4. Visible light 可见光</option><option value="uv">5. Ultraviolet 紫外线</option><option value="xray">6. X-rays X射线</option><option value="gam">7. Gamma rays γ射线</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p15Out1"></div><div class="readout-pill" id="p15Out2"></div></div></div>';
+      const MAP15 = {
+        rad: ['最长波长 / 最低频率 / 最小光子能量；真空速度 3.0 × 10⁸ m/s。', '应用：广播电视、RFID 射频识别、射电望远镜；通常非电离无明显组织热损伤。'],
+        mic: ['穿透云层与电离层能力强，且能引起食物水分子共振发热。', '应用：卫星电视与 GPS 通信、手机 Wi-Fi/蓝牙、微波炉；危害：过强内部加热人体体液组织。'],
+        ir: ['热物体发射红外辐射（红外热成像）。', '应用：电视遥控器、光纤短距通信、防盗红外警报、电暖器；危害：高强度皮肤灼伤。'],
+        vis: ['红 (700 nm, 折射最少) → 紫 (400 nm, 折射最多)。', '应用：人眼视觉、照相、高速长距离单模光纤宽带通信 (配合全内反射 TIR)。'],
+        uv: ['频率高于紫光，能激发荧光粉发光与灭菌。', '应用：防伪验钞、水消毒；危害：晒伤皮肤、早衰、引发皮肤癌与白内障。'],
+        xray: ['强穿透软组织但被高密度骨骼/金属吸收。', '应用：医学骨科 X 光透视成像、机场行李安检；危害：电离损伤细胞、基因突变致癌。'],
+        gam: ['最短波长 / 最高频率 / 最强电离穿透力；由原子核衰变产生。', '应用：医疗手术器械灭菌、食品保鲜、癌症放疗；危害：严重辐射病、DNA 突变与致癌。']
+      };
+      bindInputs(function () {
+        const d = MAP15[el.querySelector('#p15B').value];
+        el.querySelector('#p15Out1').textContent = d[0]; el.querySelector('#p15Out2').textContent = d[1];
+      });
+    } else if (t === 'p16') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 16 交互实验室 · 软铁 vs 硬钢磁化特性与磁极相互作用判别台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>铁芯材料：<select id="p16Mat"><option value="soft">软铁 (Soft iron) — 电磁铁/变压器铁芯</option><option value="steel">硬钢 (Steel) — 永磁体/指南针</option></select></label>' +
+        '<label>磁化方法：<select id="p16M"><option value="dc">直流通电螺线管 (d.c. solenoid)</option><option value="ac">交流退磁 (a.c. gradually pulled away)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p16Out1"></div><div class="readout-pill" id="p16Out2"></div></div></div>';
+      bindInputs(function () {
+        const soft = el.querySelector('#p16Mat').value === 'soft', ac = el.querySelector('#p16M').value === 'ac';
+        el.querySelector('#p16Out1').textContent = soft ? '软铁特性：极易被磁化 (Easily magnetised)，断电后立刻退磁 (Loses magnetism quickly) ⇒ 制作继电器、电铃与变压器铁芯！' : '硬钢特性：较难被磁化，但磁化后长久保持磁性 (Retains magnetism) ⇒ 制作永久磁铁！';
+        el.querySelector('#p16Out2').textContent = ac ? '退磁要领：置入通有交变电流 (a.c.) 的螺线管内缓慢沿东西方向拉出（或高温加热/重敲击）。' : '注意：只有发生“相互排斥 (Repulsion)”才能100%证明物体本身是磁铁，相互吸引可能是未磁化软铁！';
+      });
+    } else if (t === 'p17') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 17 交互实验室 · 摩擦电子转移与静电感应接地流程模拟</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>静电情景：<select id="p17M"><option value="poly">干布摩擦聚乙烯棒 (Polythene, 带负电)</option><option value="acet">干布摩擦醋酸纤维/玻璃棒 (Perspex/Glass, 带正电)</option><option value="ind">带负电棒感应金属球接地</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p17Out1"></div><div class="readout-pill" id="p17Out2"></div></div></div>';
+      const MAP17 = {
+        poly: ['过程：干布中的自由电子转移 (Electrons transferred) 到聚乙烯棒上 → 棒因电子过剩带负电 (−)，布因失去电子带等量正电 (+)。', '考场禁句：绝不可写“正电荷/质子移动了”！固体中只有带负电的电子可以移动！'],
+        acet: ['过程：有机玻璃/玻璃棒表面电子转移到干布上 → 棒因缺少电子净带正电 (+)，布净带负电 (−)。', '应用原理：高空加油飞机前务必接地导走摩擦累积静电荷，防止电火花引燃航空燃油。'],
+        ind: ['感应三步：① 带负电棒靠近孤立金属球，斥退球内自由电子至远端，近端显 +；② 手指/接地线接球远端，多余电子流入大地 (Earth)；③ 先断开接地再移走棒 → 球净带正电！', '注意断顺序：必须先撤接地线，再撤带电棒！若先撤棒则大地电子会回流中和！']
+      };
+      bindInputs(function () {
+        const d = MAP17[el.querySelector('#p17M').value];
+        el.querySelector('#p17Out1').textContent = d[0]; el.querySelector('#p17Out2').textContent = d[1];
+      });
+    } else if (t === 'p18') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 18 交互实验室 · 欧姆电阻、电功率 P=IV 与电费 kWh 计费台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>电压 V (V)：<input type="number" id="p18V" value="240"></label><label>电流 I (A)：<input type="number" id="p18I" value="5" step="0.5"></label>' +
+        '<label>运行时间 (hours)：<input type="number" id="p18H" value="3" step="0.5"></label><label>电价 (cents/kWh)：<input type="number" id="p18C" value="20"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p18Out1"></div><div class="readout-pill" id="p18Out2"></div></div></div>';
+      bindInputs(function () {
+        const V = Number(el.querySelector('#p18V').value) || 240, I = Math.max(0.01, Number(el.querySelector('#p18I').value) || 5);
+        const h = Number(el.querySelector('#p18H').value) || 3, c = Number(el.querySelector('#p18C').value) || 20;
+        const P = V * I, R = V / I, kwh = (P / 1000) * h;
+        el.querySelector('#p18Out1').textContent = '电阻 R = V/I = ' + R.toFixed(1) + ' Ω | 电功率 P = IV = ' + P.toFixed(0) + ' W (' + (P / 1000).toFixed(2) + ' kW) | 总焦耳 E = ' + (P * h * 3600).toExponential(2) + ' J';
+        el.querySelector('#p18Out2').textContent = '千瓦时用电量 = ' + kwh.toFixed(2) + ' kWh ⇒ 电费 Cost = ' + (kwh * c).toFixed(1) + ' cents (1 kWh = 3.6 × 10⁶ J)';
+      });
+    } else if (t === 'p19') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 19 交互实验室 · NTC 热敏电阻 / LDR 分压传感器动态调节台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>传感器 R₁：<select id="p19S"><option value="ldr">光敏电阻 LDR (底端) + 固定 R₂ (100 Ω)</option><option value="ntc">负温度系数热敏电阻 NTC (底端) + R₂ (100 Ω)</option></select></label>' +
+        '<label>环境强度 (光照/温度 %)：<input type="range" id="p19Env" min="10" max="100" value="50"><span id="p19EL">50%</span></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p19Out1"></div><div class="readout-pill" id="p19Out2"></div></div></div>';
+      bindInputs(function () {
+        const isLdr = el.querySelector('#p19S').value === 'ldr', env = Number(el.querySelector('#p19Env').value);
+        el.querySelector('#p19EL').textContent = env + '%';
+        const rSens = Math.round(500 * Math.exp(-0.025 * env));
+        const vOut = (12 * rSens) / (rSens + 100);
+        el.querySelector('#p19Out1').textContent = (isLdr ? '光敏 LDR' : '热敏 NTC') + ' 当前阻值 R_sensor ≈ ' + rSens + ' Ω | 串联总供电 12 V ⇒ 传感器两端输出电压 V_out = ' + vOut.toFixed(2) + ' V';
+        el.querySelector('#p19Out2').textContent = '环境越暗/越冷 ⇒ LDR/NTC 电阻【剧增】⇒ 根据分压比 V₁/V₂ = R₁/R₂，分得更高电压（可用作天黑自动开灯触发器！）';
+      });
+    } else if (t === 'p20') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 20 交互实验室 · 弗莱明左手定则 FBI 与带电粒子束磁场偏转</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>粒子类型 / 电流方向：<select id="p20Q"><option value="conv">传统电流 / 正电荷向东 (+)</option><option value="elec">电子束 β⁻ 向东射入 (注意反方向!)</option></select></label>' +
+        '<label>磁场 B 方向：<select id="p20B"><option value="in">垂直纸面向里 (Into page ✕)</option><option value="out">垂直纸面向外 (Out of page ⊙)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p20Out1"></div><div class="readout-pill" id="p20Out2"></div></div></div>';
+      bindInputs(function () {
+        const isElec = el.querySelector('#p20Q').value === 'elec', bIn = el.querySelector('#p20B').value === 'in';
+        const up = (!isElec && bIn) || (isElec && !bIn);
+        el.querySelector('#p20Out1').textContent = '左手三指正交判别：食指 B = ' + (bIn ? '入纸面 ✕' : '出纸面 ⊙') + '，中指【传统电流 I】= ' + (isElec ? '向西（与电子速度相反!）' : '向东') + ' ⇒ 拇指受力 F = ' + (up ? '⬆️ 向上 (Upwards)' : '⬇️ 向下 (Downwards)');
+        el.querySelector('#p20Out2').textContent = '直流电机关键：换向器 (Split-ring commutator) 每半圈调换一次线圈电流方向，保证扭矩持续单向转动！';
+      });
+    } else if (t === 'p21') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 21 交互实验室 · 理想变压器与高压输电 I²R 损耗模拟台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>原线圈 V_p (V)：<input type="number" id="p21Vp" value="25000"></label>' +
+        '<label>匝数比 N_p : N_s = <input type="number" id="p21Np" value="100"> : <input type="number" id="p21Ns" value="1600"></label>' +
+        '<label>传送总功率 P (kW)：<input type="number" id="p21P" value="400"></label><label>电缆电阻 R (Ω)：<input type="number" id="p21R" value="10"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p21Out1"></div><div class="readout-pill" id="p21Out2"></div></div></div>';
+      bindInputs(function () {
+        const vp = Number(el.querySelector('#p21Vp').value) || 25000, np = Math.max(1, Number(el.querySelector('#p21Np').value) || 100), ns = Math.max(1, Number(el.querySelector('#p21Ns').value) || 1600);
+        const P = (Number(el.querySelector('#p21P').value) || 400) * 1000, R = Number(el.querySelector('#p21R').value) || 10;
+        const vs = vp * (ns / np), iLine = P / vs, loss = iLine * iLine * R;
+        el.querySelector('#p21Out1').textContent = '副线圈输电电压 V_s = ' + Math.round(vs).toLocaleString() + ' V (' + (vs > vp ? '升压 Step-up' : '降压 Step-down') + ') | 输电电流 I = P/V_s = ' + iLine.toFixed(2) + ' A';
+        el.querySelector('#p21Out2').textContent = '电网热损耗 P_loss = I²R = ' + loss.toFixed(1) + ' W（若不用变压器升压直接 25 kV 输电，损耗高达 ' + (Math.pow(P / vp, 2) * R).toFixed(1) + ' W！）';
+      });
+    } else if (t === 'p22') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 22 交互实验室 · 卢瑟福 α 散射三结论与原子核素构成剖析</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>核素质量数 A：<input type="number" id="p22A" value="238" min="1"></label><label>质子数/原子序数 Z：<input type="number" id="p22Z" value="92" min="1"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p22Out1"></div><div class="readout-pill" id="p22Out2"></div></div></div>';
+      bindInputs(function () {
+        const a = Math.max(1, Math.round(Number(el.querySelector('#p22A').value) || 238)), z = Math.min(a, Math.max(1, Math.round(Number(el.querySelector('#p22Z').value) || 92)));
+        el.querySelector('#p22Out1').textContent = '中性原子组成：质子 Protons = ' + z + ' | 中子 Neutrons (A − Z) = ' + (a - z) + ' | 核外电子 Electrons = ' + z + ' | 原子核净电荷 = +' + z + 'e';
+        el.querySelector('#p22Out2').textContent = 'α 散射极少数大角反弹 (> 90°) ⇒ 证明原子核体积极小、极高密度且集中几乎全部正电荷与质量；绝大多数直接穿透 ⇒ 原子内部绝大部分是真空！';
+      });
+    } else if (t === 'p23') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 23 交互实验室 · 本底辐射扣减、半衰期指数衰减曲线计算器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>总读数 C_total (cpm)：<input type="number" id="p23C0" value="440"></label><label>本底 C_bg (cpm)：<input type="number" id="p23Bg" value="40"></label>' +
+        '<label>半衰期 T½ (days)：<input type="number" id="p23H" value="6" min="1"></label><label>经过时间 t (days)：<input type="range" id="p23T" min="0" max="24" step="3" value="12"><span id="p23TL">12 d</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p23Svg" viewBox="0 0 360 220" width="360" height="220"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p23Out1"></div><div class="readout-pill" id="p23Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const c0 = Number(el.querySelector('#p23C0').value) || 440, bg = Number(el.querySelector('#p23Bg').value) || 40;
+        const h = Math.max(1, Number(el.querySelector('#p23H').value) || 6), tm = Number(el.querySelector('#p23T').value);
+        el.querySelector('#p23TL').textContent = tm + ' days';
+        const pure0 = Math.max(0, c0 - bg), pureT = pure0 * Math.pow(0.5, tm / h), totalT = pureT + bg;
+        const plt = makePlot(360, 220, 0, Math.max(24, tm), 0, c0 * 1.1);
+        let svg = plotBase(plt, 't (d)', 'cpm');
+        svg += plotPath(plt, function () { return bg; }, 'var(--svg-muted)', true);
+        svg += plotPath(plt, function (x) { return bg + pure0 * Math.pow(0.5, x / h); }, 'var(--svg-green)', false);
+        svg += '<circle cx="' + plt.toX(tm).toFixed(1) + '" cy="' + plt.toY(totalT).toFixed(1) + '" r="5" fill="var(--svg-red)"/>';
+        el.querySelector('#p23Svg').innerHTML = svg;
+        el.querySelector('#p23Out1').textContent = '先减本底！纯净初始源活度 = ' + pure0 + ' cpm ⇒ 经 ' + (tm / h).toFixed(1) + ' 个半衰期后纯净计数 = ' + pureT.toFixed(1) + ' cpm';
+        el.querySelector('#p23Out2').textContent = '⚠️ 若题问 GM 计数器最终显示总读数，务必再加回本底：' + pureT.toFixed(1) + ' + ' + bg + ' = ' + totalT.toFixed(1) + ' cpm！';
+      });
+    } else if (t === 'p24') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 24 交互实验室 · 轨道速率 v = 2πr / T 与太阳光行时间 t = d / c 台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>行星/卫星预设：<select id="p24P"><option value="earth">地球 (r = 1.5×10¹¹ m, T = 365 d)</option><option value="moon">月球绕地 (r = 3.84×10⁸ m, T = 27.3 d)</option><option value="mars">火星 (r = 2.28×10¹¹ m, T = 687 d)</option><option value="geo">地球同步卫星 (r = 4.22×10⁷ m, T = 24 h)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p24Out1"></div><div class="readout-pill" id="p24Out2"></div></div></div>';
+      const MAP24 = {
+        earth: { r: 1.5e11, t: 365 * 86400, note: '太阳光到达地球所需时间 t = 1.5×10¹¹ / (3.0×10⁸) = 500 s ≈ 8.3 分钟！' },
+        moon: { r: 3.84e8, t: 27.3 * 86400, note: '月球引力仅为地球 1/6，月相盈亏完整周期约为 28–29.5 天。' },
+        mars: { r: 2.28e11, t: 687 * 86400, note: '火星属于内侧四大岩石小行星之一，距太阳越远引力越弱，公转速率显著小于地球。' },
+        geo: { r: 4.22e7, t: 24 * 3600, note: '赤道正上方同步轨道，与地球自转周期精确同步（24 小时），用于气象/电视直播卫星。' }
+      };
+      bindInputs(function () {
+        const d = MAP24[el.querySelector('#p24P').value];
+        const v = (2 * Math.PI * d.r) / d.t;
+        el.querySelector('#p24Out1').textContent = '轨道周长 2πr = ' + (2 * Math.PI * d.r).toExponential(2) + ' m | 周期 T = ' + d.t.toExponential(2) + ' s ⇒ 平均轨道速率 v = 2πr/T = ' + (v / 1000).toFixed(2) + ' km/s (' + Math.round(v).toLocaleString() + ' m/s)';
+        el.querySelector('#p24Out2').textContent = d.note;
+      });
+    } else if (t === 'p25') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 25 交互实验室 · 哈勃定律 v = H₀d 与宇宙年龄 t ≈ 1/H₀ 计算台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>星系退行速度 v (m/s)：<input type="number" id="p25V" value="4400000" step="100000"></label>' +
+        '<label>哈勃常数 H₀ (s⁻¹)：<input type="number" id="p25H" value="2.2e-18" step="0.1e-18"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p25Out1"></div><div class="readout-pill" id="p25Out2"></div></div></div>';
+      bindInputs(function () {
+        const v = Number(el.querySelector('#p25V').value) || 4.4e6, h0 = Math.max(1e-19, Number(el.querySelector('#p25H').value) || 2.2e-18);
+        const dist = v / h0, ly = dist / 9.5e15, ageS = 1 / h0, ageY = ageS / (365.25 * 86400);
+        el.querySelector('#p25Out1').textContent = '星系距离 d = v/H₀ = ' + dist.toExponential(2) + ' m ≈ ' + ly.toExponential(2) + ' 光年 (1 ly ≈ 9.5 × 10¹⁵ m)';
+        el.querySelector('#p25Out2').textContent = '估计宇宙年龄 t ≈ 1/H₀ = d/v = ' + ageS.toExponential(2) + ' s ≈ ' + (ageY / 1e9).toFixed(1) + ' billion years (十亿年) | 两大证据：遥远星系红移 + CMBR 微波背景辐射';
+      });
+    }
+  }
+
+  document.querySelectorAll('.lab-box[data-lab-type]').forEach(mountPhysicsLab);
+
+  // ---------- 11. Initialize View & Scroll Spy ----------
+  applyViewMode(currentViewMode);
+  applyQuizMask(quizMasked);
+
+  const backTopBtn = document.getElementById('backTopBtn');
+  const trackedSections = Array.from(document.querySelectorAll('.topic-section[id]'));
+  const navLinks = Array.from(document.querySelectorAll('.sidebar .nav-link'));
+
+  window.addEventListener('scroll', function () {
+    if (backTopBtn) backTopBtn.classList.toggle('visible', window.scrollY > 360);
+    const y = window.scrollY + 110;
+    let currentId = '';
+    for (let i = 0; i < trackedSections.length; i++) {
+      if (trackedSections[i].offsetTop <= y && getComputedStyle(trackedSections[i]).display !== 'none') {
+        currentId = trackedSections[i].id;
+      }
+    }
+    navLinks.forEach(function (lnk) {
+      const h = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('active', h === currentId);
+    });
+  }, { passive: true });
+
+  if (backTopBtn) {
+    backTopBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  }
+})();
+
+  </script>
+</body>
+</html>

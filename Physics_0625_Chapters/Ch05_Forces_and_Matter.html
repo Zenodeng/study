@@ -1,0 +1,2012 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="--accent: #4338CA;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch05 · Chapter 5: Forces and matter — IGCSE Physics (0625) 精讲</title>
+  <style>
+/* ==========================================================================
+   Cambridge IGCSE Physics (0625 · David Sang 3rd Ed. 2023–2028)
+   25-Chapter Suite Shared Stylesheet (Offline, Zero CDN, Print-Ready)
+   ========================================================================== */
+
+:root {
+  --bg-page: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --bg-sidebar: #FFFFFF;
+  --bg-code: #EFF6FF;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-faint: #64748B;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+
+  --accent: #0284C7;
+  --accent-hover: #0369A1;
+  --accent-soft: #E0F2FE;
+
+  --core-bg: #E0F2FE;
+  --core-text: #075985;
+  --core-border: #BAE6FD;
+  --ext-bg: #FEF3C7;
+  --ext-text: #92400E;
+  --ext-border: #FDE68A;
+
+  --deep-bg: #EFF6FF;
+  --deep-border: #2563EB;
+  --tip-bg: #FFFBEB;
+  --tip-border: #D97706;
+  --mistake-bg: #FFF1F2;
+  --mistake-border: #E11D48;
+  --example-bg: #F0FDF4;
+  --example-border: #16A34A;
+  --formula-bg: #F8FAFC;
+  --formula-border: #0284C7;
+
+  --ok-bg: #DCFCE7;
+  --ok-text: #166534;
+  --ok-border: #86EFAC;
+  --err-bg: #FEE2E2;
+  --err-text: #991B1B;
+  --err-border: #FCA5A5;
+
+  --svg-bg: #FFFFFF;
+  --svg-grid: #E2E8F0;
+  --svg-ink: #0F172A;
+  --svg-muted: #64748B;
+  --svg-blue: #2563EB;
+  --svg-indigo: #4338CA;
+  --svg-teal: #0D9488;
+  --svg-amber: #D97706;
+  --svg-red: #DC2626;
+  --svg-green: #16A34A;
+  --svg-purple: #7C3AED;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.07);
+  --shadow-lg: 0 10px 26px rgba(15, 23, 42, 0.11);
+
+  --sidebar-w: 288px;
+  --topbar-h: 58px;
+  --radius-sm: 7px;
+  --radius-md: 11px;
+  --radius-lg: 16px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Songti SC", "Noto Serif SC", Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+[data-theme="dark"] {
+  --bg-page: #0B1120;
+  --bg-surface: #111827;
+  --bg-subtle: #1E293B;
+  --bg-sidebar: #0F172A;
+  --bg-code: #1E293B;
+  --text-main: #F1F5F9;
+  --text-muted: #CBD5E1;
+  --text-faint: #94A3B8;
+  --border: #1E293B;
+  --border-strong: #334155;
+
+  --accent: #38BDF8 !important;
+  --accent-hover: #7DD3FC;
+  --accent-soft: rgba(56, 189, 248, 0.18);
+
+  --core-bg: rgba(56, 189, 248, 0.16);
+  --core-text: #BAE6FD;
+  --core-border: rgba(56, 189, 248, 0.36);
+  --ext-bg: rgba(245, 158, 11, 0.16);
+  --ext-text: #FDE68A;
+  --ext-border: rgba(245, 158, 11, 0.36);
+
+  --deep-bg: rgba(37, 99, 235, 0.14);
+  --deep-border: #60A5FA;
+  --tip-bg: rgba(217, 119, 6, 0.14);
+  --tip-border: #FBBF24;
+  --mistake-bg: rgba(225, 29, 72, 0.15);
+  --mistake-border: #FB7185;
+  --example-bg: rgba(22, 163, 74, 0.13);
+  --example-border: #4ADE80;
+  --formula-bg: #172033;
+  --formula-border: #38BDF8;
+
+  --ok-bg: rgba(22, 163, 74, 0.22);
+  --ok-text: #BBF7D0;
+  --ok-border: #22C55E;
+  --err-bg: rgba(220, 38, 38, 0.22);
+  --err-text: #FECACA;
+  --err-border: #EF4444;
+
+  --svg-bg: #0F172A;
+  --svg-grid: #334155;
+  --svg-ink: #F1F5F9;
+  --svg-muted: #94A3B8;
+  --svg-blue: #60A5FA;
+  --svg-indigo: #818CF8;
+  --svg-teal: #2DD4BF;
+  --svg-amber: #FBBF24;
+  --svg-red: #F87171;
+  --svg-green: #34D399;
+  --svg-purple: #A78BFA;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .seg-btn.active,
+[data-theme="dark"] .tab-btn.active,
+[data-theme="dark"] .icon-btn.active,
+[data-theme="dark"] .brand-code,
+[data-theme="dark"] .pager-btn.primary { color: #0B1120; }
+[data-theme="dark"] .hub-foot { color: #38BDF8; }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--topbar-h) + 18px); }
+body { margin: 0; font-family: var(--font-sans); background: var(--bg-page); color: var(--text-main); line-height: 1.72; font-size: 15.5px; -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4 { margin: 0 0 0.55em 0; line-height: 1.32; font-weight: 700; color: var(--text-main); }
+p { margin: 0 0 0.9em 0; }
+ul, ol { margin: 0 0 1em 0; padding-left: 1.45em; }
+li { margin-bottom: 0.35em; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { font-family: var(--font-mono); font-size: 0.9em; background: var(--bg-code); color: var(--accent); padding: 2px 6px; border-radius: 4px; }
+
+/* View Mode Filters (Core / Extended / SME) */
+body.mode-core .ext-only,
+body.mode-core .badge-ext { display: none !important; }
+body.mode-ext .ext-only { border-left: 3px solid var(--ext-border); padding-left: 10px; background: rgba(245, 158, 11, 0.06); border-radius: 4px; }
+body.mode-book .sme-section { display: none !important; }
+body.mode-sme .book-section { display: none !important; }
+
+/* Physics Formula & Nuclide Formatting */
+.math { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 1.04em; }
+.frac { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; font-size: 0.88em; line-height: 1.1; margin: 0 2px; font-style: normal; font-family: Georgia, "Times New Roman", serif; }
+.frac .num { border-bottom: 1.5px solid currentColor; padding: 0 4px 1px 4px; }
+.frac .den { padding: 1px 4px 0 4px; }
+.sqrt { display: inline-flex; align-items: baseline; font-family: Georgia, "Times New Roman", serif; }
+.sqrt-rad { border-top: 1.4px solid currentColor; padding: 0 3px 0 2px; margin-left: 1px; }
+.nuclide { display: inline-flex; align-items: center; gap: 1px; font-family: Georgia, "Times New Roman", serif; font-weight: 700; vertical-align: middle; margin: 0 2px; }
+.nuc-nums { display: inline-flex; flex-direction: column; text-align: right; font-size: 0.72em; line-height: 1.05; }
+.formula-card { background: var(--formula-bg); border: 1.5px solid var(--border-strong); border-left: 5px solid var(--formula-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; font-size: 15px; }
+.formula-main { font-family: Georgia, "Times New Roman", serif; font-size: 16.5px; font-weight: 700; color: var(--accent); margin: 4px 0 6px 0; }
+
+/* Topbar */
+.topbar {
+  position: sticky; top: 0; z-index: 100; height: var(--topbar-h);
+  background: var(--bg-surface); border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm); display: flex; align-items: center;
+  justify-content: space-between; gap: 10px; padding: 0 16px;
+}
+.topbar-left { display: flex; align-items: center; gap: 8px; min-width: 0; flex-shrink: 1; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 34px; padding: 0 10px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--bg-surface); color: var(--text-main); font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; text-decoration: none; }
+.icon-btn:hover { background: var(--bg-subtle); border-color: var(--accent); text-decoration: none; }
+.icon-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.menu-toggle { display: none; }
+.brand-pill { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; white-space: nowrap; flex-shrink: 1; min-width: 0; }
+.brand-code { background: var(--accent); color: #fff; padding: 2px 8px; border-radius: 5px; font-size: 12px; letter-spacing: 0.4px; white-space: nowrap; flex-shrink: 0; }
+.brand-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 215px; }
+.search-wrap { position: relative; flex: 1 1 150px; min-width: 130px; max-width: 260px; }
+.search-input { width: 100%; height: 34px; padding: 0 30px 0 32px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--bg-subtle); color: var(--text-main); font-size: 13.5px; outline: none; }
+.search-input:focus { border-color: var(--accent); background: var(--bg-surface); }
+.search-input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.search-icon { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); color: var(--text-faint); font-size: 13px; pointer-events: none; }
+.search-clear { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); border: none; background: transparent; color: var(--text-faint); cursor: pointer; font-size: 14px; display: none; }
+.search-results-bar { display: none; background: var(--accent-soft); border-bottom: 1px solid var(--border); padding: 8px 20px; font-size: 13.5px; color: var(--text-main); align-items: center; justify-content: space-between; gap: 12px; }
+.search-results-bar.visible { display: flex; }
+.topbar-controls { display: flex; align-items: center; gap: 7px; flex-shrink: 0; }
+.seg-group { display: inline-flex; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); overflow: hidden; background: var(--bg-subtle); }
+.seg-btn { border: none; background: transparent; color: var(--text-muted); padding: 6px 8px; font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.seg-btn.active { background: var(--accent); color: #fff; }
+.progress-chip { display: flex; align-items: center; gap: 7px; padding: 4px 10px; border-radius: 999px; background: var(--bg-subtle); border: 1px solid var(--border); font-size: 12.5px; font-weight: 600; white-space: nowrap; }
+.progress-track { width: 50px; height: 7px; background: var(--border-strong); border-radius: 99px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), #0D9488); transition: width 0.25s ease; }
+
+.app-layout { display: flex; min-height: calc(100vh - var(--topbar-h)); }
+.sidebar { width: var(--sidebar-w); flex-shrink: 0; background: var(--bg-sidebar); border-right: 1px solid var(--border); position: sticky; top: var(--topbar-h); height: calc(100vh - var(--topbar-h)); overflow-y: auto; padding: 14px 10px 44px 10px; }
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 99px; }
+.nav-unit { margin-bottom: 8px; }
+.nav-unit-btn { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border: none; border-radius: var(--radius-sm); background: transparent; color: var(--text-main); font-size: 13px; font-weight: 700; text-align: left; cursor: pointer; }
+.nav-unit-btn:hover { background: var(--bg-subtle); }
+.nav-unit-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.nav-unit-title { flex: 1; display: flex; align-items: center; gap: 7px; line-height: 1.3; }
+.nav-chevron { font-size: 11px; color: var(--text-faint); transition: transform 0.2s; }
+.nav-unit.collapsed .nav-chevron { transform: rotate(-90deg); }
+.nav-unit.collapsed .nav-links { display: none; }
+.nav-links { list-style: none; padding: 2px 0 4px 12px; margin: 0 0 0 14px; border-left: 2px solid var(--border); }
+.nav-link { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 5px 9px; margin: 2px 0; border-radius: var(--radius-sm); color: var(--text-muted); font-size: 12.6px; line-height: 1.35; text-decoration: none; }
+.nav-link:hover { background: var(--bg-subtle); color: var(--text-main); text-decoration: none; }
+.nav-link.active { background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+.nav-done-mark { color: #10B981; font-weight: 800; font-size: 12px; opacity: 0; }
+.nav-link.mastered .nav-done-mark { opacity: 1; }
+.main-content { flex: 1; min-width: 0; padding: 26px 32px 80px 32px; }
+.content-inner { max-width: 960px; margin: 0 auto; }
+
+.hero-card { background: linear-gradient(135deg, #0F172A 0%, var(--accent) 58%, #0F766E 100%); color: #fff; border-radius: var(--radius-lg); padding: 28px 32px; margin-bottom: 26px; box-shadow: var(--shadow-lg); }
+.hero-card h1 { color: #fff; font-size: 25px; margin-bottom: 8px; letter-spacing: -0.3px; }
+.hero-sub { color: rgba(255,255,255,0.92); font-size: 14.8px; max-width: 820px; margin-bottom: 16px; }
+.hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.hero-pill { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.28); color: #fff; padding: 4px 11px; border-radius: 999px; font-size: 12.5px; font-weight: 600; }
+.unit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+.unit-tile { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.24); border-radius: var(--radius-md); padding: 12px 14px; color: #fff; text-decoration: none; display: block; transition: transform 0.15s, background 0.15s; }
+.unit-tile:hover { transform: translateY(-2px); background: rgba(255,255,255,0.22); text-decoration: none; }
+.unit-tile-num { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.7px; opacity: 0.85; font-weight: 700; }
+.unit-tile-title { font-size: 14.5px; font-weight: 700; margin: 3px 0; }
+
+.topic-section { background: var(--bg-surface); border: 1px solid var(--border); border-top: 4px solid var(--accent); border-radius: var(--radius-md); padding: 24px 26px; margin-bottom: 24px; box-shadow: var(--shadow-sm); }
+.topic-section.search-dim { display: none; }
+.section-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 2px solid var(--border); }
+.section-title-group h3 { font-size: 19.5px; margin-bottom: 4px; }
+.section-en-sub { font-size: 13.5px; color: var(--text-faint); font-weight: 600; }
+.tier-row { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 7px; }
+.badge-core, .badge-ext { display: inline-block; font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.badge-core { background: var(--core-bg); color: var(--core-text); border: 1px solid var(--core-border); }
+.badge-ext { background: var(--ext-bg); color: var(--ext-text); border: 1px solid var(--ext-border); }
+.master-btn { flex-shrink: 0; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-muted); font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.master-btn:hover { border-color: #10B981; color: #10B981; }
+.master-btn.is-mastered { background: var(--ok-bg); color: var(--ok-text); border-color: var(--ok-border); }
+.subtopic { margin-bottom: 20px; }
+.subtopic:last-of-type { margin-bottom: 12px; }
+.subtopic h4 { font-size: 16px; color: var(--accent); margin: 0 0 10px 0; padding-bottom: 4px; border-bottom: 1px dashed var(--border); display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+
+.worked-example { background: var(--example-bg); border: 1px solid var(--border); border-left: 4px solid var(--example-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; }
+.worked-title { font-weight: 800; font-size: 14px; color: var(--example-border); margin-bottom: 6px; }
+.callout { border-radius: var(--radius-sm); padding: 13px 16px; margin: 14px 0; border-left: 4px solid var(--border-strong); font-size: 14.5px; }
+.callout-title { font-weight: 800; font-size: 13.5px; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+.deep-dive { background: var(--deep-bg); border-left-color: var(--deep-border); }
+.deep-dive .callout-title { color: var(--deep-border); }
+.examiner-tip { background: var(--tip-bg); border-left-color: var(--tip-border); }
+.examiner-tip .callout-title { color: var(--tip-border); }
+.common-mistake { background: var(--mistake-bg); border-left-color: var(--mistake-border); }
+.common-mistake .callout-title { color: var(--mistake-border); }
+
+.table-wrap { width: 100%; overflow-x: auto; margin: 14px 0; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+table.phy-table { width: 100%; border-collapse: collapse; font-size: 13.8px; text-align: left; }
+table.phy-table th { background: var(--bg-subtle); color: var(--text-main); font-weight: 700; padding: 9px 12px; border-bottom: 2px solid var(--border-strong); white-space: nowrap; }
+table.phy-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.phy-table tr:last-child td { border-bottom: none; }
+table.phy-table tbody tr:hover { background: var(--bg-subtle); }
+
+.svg-figure { background: var(--svg-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px; margin: 16px 0; text-align: center; break-inside: avoid; }
+.svg-figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.svg-caption { margin-top: 8px; font-size: 13px; color: var(--text-faint); font-weight: 600; }
+
+/* Interactive Physics Labs */
+.lab-box { background: var(--bg-subtle); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px; margin: 18px 0; break-inside: avoid; }
+.lab-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+.lab-title { font-size: 15.5px; font-weight: 800; color: var(--accent); display: flex; align-items: center; gap: 7px; }
+.lab-panel { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; }
+.lab-controls { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-bottom: 12px; align-items: center; }
+.lab-controls label { font-size: 13px; font-weight: 700; color: var(--text-muted); display: inline-flex; align-items: center; gap: 6px; }
+.lab-controls input[type="number"], .lab-controls select { padding: 5px 8px; border-radius: 6px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-main); font-size: 13.2px; font-weight: 700; }
+.lab-controls input[type="number"] { min-width: 108px; width: 112px; text-align: center; }
+.lab-controls input[type="range"] { width: 120px; accent-color: var(--accent); }
+.lab-grid-2col { display: grid; grid-template-columns: 1.12fr 1fr; gap: 14px; align-items: start; }
+@media (max-width: 820px) { .lab-grid-2col { grid-template-columns: 1fr; } }
+.tab-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.tab-btn { border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-muted); padding: 5px 10px; border-radius: 6px; font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.tab-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.lab-readout { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; font-size: 13.2px; font-weight: 600; }
+.readout-pill { background: var(--bg-page); border: 1px solid var(--border-strong); padding: 7px 10px; border-radius: 6px; width: 100%; line-height: 1.5; }
+
+/* Practice Questions & Concepts */
+.practice-block { margin-top: 18px; padding-top: 14px; border-top: 2px dashed var(--border-strong); }
+.practice-heading { font-size: 16px; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.exam-q { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 14px; break-inside: avoid; }
+.exam-q-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; font-size: 12.5px; }
+.q-tag { font-weight: 800; color: var(--accent); background: var(--accent-soft); padding: 2px 8px; border-radius: 5px; }
+.q-marks { font-weight: 700; color: var(--text-faint); }
+.q-stem-en { font-size: 14.8px; font-weight: 600; color: var(--text-main); margin-bottom: 6px; }
+.q-stem-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 12px; }
+.mcq-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin-bottom: 10px; }
+.mcq-opt { text-align: left; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 13.8px; cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.mcq-opt:hover { border-color: var(--accent); background: var(--bg-subtle); }
+.mcq-opt.correct { background: var(--ok-bg); border-color: var(--ok-border); color: var(--ok-text); font-weight: 700; }
+.mcq-opt.wrong { background: var(--err-bg); border-color: var(--err-border); color: var(--err-text); }
+.mcq-feedback { display: none; font-size: 13.5px; padding: 10px 12px; border-radius: var(--radius-sm); margin-top: 8px; }
+.mcq-feedback.visible { display: block; }
+.mcq-feedback.ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.mcq-feedback.err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+details.ms-details { margin-top: 10px; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 12px; }
+details.ms-details summary { cursor: pointer; font-weight: 700; font-size: 13.5px; color: var(--accent); user-select: none; }
+.ms-body { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 13.8px; }
+.ms-mark { display: inline-block; font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--core-text); background: var(--core-bg); padding: 1px 5px; border-radius: 4px; margin-right: 4px; }
+.ms-cn { color: var(--text-muted); margin-top: 4px; }
+
+.concept-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 14px; margin-bottom: 18px; }
+.concept-filter-group { display: flex; flex-wrap: wrap; gap: 6px; }
+.concept-actions { display: flex; align-items: center; gap: 10px; }
+.concept-count-pill { font-size: 12.5px; font-weight: 700; color: var(--text-muted); }
+.concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 14px; }
+.concept-card { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; gap: 8px; break-inside: avoid; }
+.concept-card:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
+.concept-card.concept-hidden { display: none !important; }
+.cq-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.cq-en { font-weight: 700; font-size: 14.5px; color: var(--text-main); line-height: 1.45; }
+.cq-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 2px; }
+.cq-answer { position: relative; margin-top: auto; background: var(--bg-surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius-sm); padding: 11px 13px; font-size: 13.8px; line-height: 1.6; }
+.kw { color: var(--accent); background: var(--accent-soft); padding: 0 4px; border-radius: 3px; font-weight: 700; }
+.cq-mask-hint { display: none; }
+.concept-card.masked .cq-answer { cursor: pointer; }
+.concept-card.masked .cq-answer-inner { filter: blur(7px); opacity: 0.22; user-select: none; pointer-events: none; transition: filter 0.2s, opacity 0.2s; }
+.concept-card.masked .cq-mask-hint { display: flex; align-items: center; justify-content: center; position: absolute; inset: 0; font-size: 13.5px; font-weight: 700; color: var(--accent); background: rgba(255,255,255,0.25); border-radius: var(--radius-sm); }
+[data-theme="dark"] .concept-card.masked .cq-mask-hint { background: rgba(15,23,42,0.35); }
+
+/* Chapter Pager & Hub Group Headings */
+.chapter-pager { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 28px; padding: 16px 20px; background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); }
+.pager-btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: var(--radius-sm); background: var(--bg-subtle); border: 1px solid var(--border-strong); color: var(--text-main); font-size: 13.5px; font-weight: 700; text-decoration: none; }
+.pager-btn:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); text-decoration: none; }
+.pager-btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.pager-btn.primary:hover { background: var(--accent-hover); color: #fff; }
+
+.hub-block-title { font-size: 18px; font-weight: 800; margin: 26px 0 12px 0; padding-bottom: 6px; border-bottom: 2px solid var(--border-strong); display: flex; align-items: center; gap: 8px; }
+.hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 15px; }
+.hub-card { display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-surface); border: 1px solid var(--border-strong); border-top: 5px solid var(--card-color, var(--accent)); border-radius: var(--radius-md); padding: 16px 18px 14px 18px; color: var(--text-main); text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; box-shadow: var(--shadow-sm); }
+.hub-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--card-color, var(--accent)); text-decoration: none; }
+.hub-card-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+.hub-badge { font-size: 11.5px; font-weight: 800; color: #fff; background: var(--card-color, var(--accent)); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill { font-size: 12px; font-weight: 700; color: var(--text-muted); background: var(--bg-subtle); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill.done { background: var(--ok-bg); color: var(--ok-text); }
+.hub-title { font-size: 16px; font-weight: 800; margin-bottom: 3px; }
+.hub-en { font-size: 12.6px; color: var(--text-faint); font-weight: 600; margin-bottom: 8px; }
+.hub-sub { font-size: 12.8px; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; }
+.hub-foot { font-size: 13px; font-weight: 700; color: var(--card-color, var(--accent)); display: flex; align-items: center; justify-content: space-between; }
+
+.back-top-btn { position: fixed; right: 22px; bottom: 22px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); box-shadow: var(--shadow-md); cursor: pointer; display: none; align-items: center; justify-content: center; font-size: 17px; font-weight: 800; z-index: 80; }
+.back-top-btn.visible { display: flex; }
+
+@media (max-width: 1200px) {
+  .brand-title, .btn-label { display: none; }
+  .seg-btn { padding: 6px 8px; }
+}
+@media (max-width: 980px) {
+  .menu-toggle { display: inline-flex; }
+  .sidebar { position: fixed; left: 0; top: var(--topbar-h); z-index: 95; transform: translateX(-100%); transition: transform 0.22s ease; box-shadow: var(--shadow-lg); }
+  .sidebar.open { transform: translateX(0); }
+  .main-content { padding: 18px 14px 64px 14px; }
+  .topic-section { padding: 18px 16px; }
+  .progress-chip { display: none; }
+  .search-wrap { min-width: 130px; }
+}
+@media (max-width: 640px) {
+  .topbar { padding: 0 10px; gap: 6px; }
+  .search-wrap { max-width: none; }
+  .concept-grid, .hub-grid { grid-template-columns: 1fr; }
+}
+@media print {
+  .topbar, .sidebar, .search-results-bar, .back-top-btn, .master-btn, .lab-controls button, .concept-toolbar, .cq-mask-hint, .chapter-pager { display: none !important; }
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  .main-content { padding: 0 !important; }
+  .content-inner { max-width: 100% !important; }
+  .topic-section, .exam-q, .callout, .worked-example, .svg-figure, .concept-card { box-shadow: none !important; break-inside: avoid; border-color: #CBD5E1 !important; }
+  details.ms-details, details.ms-details .ms-body, .mcq-feedback { display: block !important; }
+  .concept-card.masked .cq-answer-inner { filter: none !important; opacity: 1 !important; }
+}
+
+  </style>
+</head>
+<body data-chapter-code="Ch05">
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="展开目录">☰ 目录</button>
+      <a class="icon-btn" href="index.html" title="返回 25 章总目录"><span>🏠</span><span class="btn-label">总目录</span></a>
+      <div class="brand-pill">
+        <span class="brand-code">Ch05</span>
+        <span class="brand-title">Chapter 5: Forces and matter</span>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="search" id="searchInput" class="search-input" placeholder="搜索公式、实验误差、真题与概念..." autocomplete="off" />
+      <button type="button" class="search-clear" id="searchClear" title="清空搜索">✕</button>
+    </div>
+
+    <div class="topbar-controls">
+      <div class="seg-group" role="group" aria-label="考试级别筛选">
+        <button type="button" class="seg-btn active" data-view-mode="all">All</button>
+        <button type="button" class="seg-btn" data-view-mode="core">Core</button>
+        <button type="button" class="seg-btn" data-view-mode="ext">Extended</button>
+        <button type="button" class="seg-btn" data-view-mode="sme">真题</button>
+      </div>
+
+      <div class="progress-chip" title="本章小节与真题模块掌握进度">
+        <span id="progressText">0/0</span>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+
+      <button type="button" class="icon-btn" id="toggleAllMs" title="展开或收起全部解析"><span>📝</span><span class="btn-label">展开解析</span></button>
+      <button type="button" class="icon-btn" id="themeToggle" title="切换亮色/暗色主题"><span id="themeIcon">🌙</span><span class="btn-label">主题</span></button>
+      <button type="button" class="icon-btn" id="printBtn" title="打印或导出为 PDF"><span>🖨️</span><span class="btn-label">导出 PDF</span></button>
+    </div>
+  </header>
+
+  <div class="search-results-bar" id="searchBar">
+    <span id="searchSummary">找到 0 个匹配板块</span>
+    <button type="button" class="icon-btn" id="searchResetBtn">重置过滤</button>
+  </div>
+
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="本章物理知识点导航">
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #4338CA;"></span>Ch05 本章小节目录</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#sec-5-1"><span>5.1 固体形变与弹簧伸长实验 (Forces acting on solids)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-5-2"><span>5.2 拉伸弹簧与三类材料载荷–伸长曲线 (Stretching springs)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-5-3"><span>5.3 胡克定律与劲度系数 (Hooke's law &amp; spring constant)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-5-4"><span>5.4 固体压强与应用 (Pressure p = F/A)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-5-5"><span>5.5 液体压强与液压原理 (Calculating pressure in liquids)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-sme"><span>SaveMyExams 0625 真题与综合演练</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#app-concepts"><span>本章核心概念与胡克定律压强直接默写库 (16 题)</span><span class="nav-done-mark">✓</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #0D9488;"></span>全书 25 章快速切换</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="Ch01_Making_Measurements.html"><span>Ch01 · 长度体积测量、密度浮沉与周期测定</span></a></li>
+          <li><a class="nav-link" href="Ch02_Describing_Motion.html"><span>Ch02 · 速率、加速度与 s-t / v-t 运动图像</span></a></li>
+          <li><a class="nav-link" href="Ch03_Forces_and_Motion.html"><span>Ch03 · 牛顿定律、动量冲量、终端速度与矢量合成</span></a></li>
+          <li><a class="nav-link" href="Ch04_Turning_Effects.html"><span>Ch04 · 力矩平衡原理、重心与稳定性</span></a></li>
+          <li><a class="nav-link active" href="Ch05_Forces_and_Matter.html"><span>Ch05 · 固体形变、胡克定律 F=kx 与固体/液体压强</span></a></li>
+          <li><a class="nav-link" href="Ch06_Energy_Stores_Transfers.html"><span>Ch06 · 8 大能量存储、4 路径转移、Sankey 图与机械能</span></a></li>
+          <li><a class="nav-link" href="Ch07_Energy_Resources.html"><span>Ch07 · 化石能源、核能与可再生发电技术评估</span></a></li>
+          <li><a class="nav-link" href="Ch08_Work_and_Power.html"><span>Ch08 · 机械功 W=Fd、功率 P=W/t 与效率</span></a></li>
+          <li><a class="nav-link" href="Ch09_Kinetic_Particle_Model.html"><span>Ch09 · 物态微观模型、布朗运动、绝对温标与气体定律</span></a></li>
+          <li><a class="nav-link" href="Ch10_Thermal_Properties.html"><span>Ch10 · 热膨胀、比热容 c=ΔE/(mΔθ)、物态变化与蒸发冷却</span></a></li>
+          <li><a class="nav-link" href="Ch11_Thermal_Energy_Transfers.html"><span>Ch11 · 热传导、对流、红外辐射与保温综合应用</span></a></li>
+          <li><a class="nav-link" href="Ch12_Sound.html"><span>Ch12 · 声波产生、纵波疏密部、回声测速与示波器波形</span></a></li>
+          <li><a class="nav-link" href="Ch13_Light.html"><span>Ch13 · 平面镜反射、折射斯涅尔定律、全反射与透镜成像</span></a></li>
+          <li><a class="nav-link" href="Ch14_Properties_of_Waves.html"><span>Ch14 · 横波纵波、v=fλ 与水波反射折射衍射</span></a></li>
+          <li><a class="nav-link" href="Ch15_Spectra.html"><span>Ch15 · 光的色散、七大电磁波谱与模拟数字通信</span></a></li>
+          <li><a class="nav-link" href="Ch16_Magnetism.html"><span>Ch16 · 磁化、软铁与硬钢磁滞差异及磁场线</span></a></li>
+          <li><a class="nav-link" href="Ch17_Static_Electricity.html"><span>Ch17 · 摩擦电子转移、导体绝缘体、感应与电场线</span></a></li>
+          <li><a class="nav-link" href="Ch18_Electrical_Quantities.html"><span>Ch18 · 电流、电动势/电压、欧姆定律 I-V 曲线与电功率 kWh</span></a></li>
+          <li><a class="nav-link" href="Ch19_Electrical_Circuits.html"><span>Ch19 · 电路符号、串并联、LDR/NTC 分压器与用电安全</span></a></li>
+          <li><a class="nav-link" href="Ch20_Electromagnetic_Forces.html"><span>Ch20 · 电流磁场、弗莱明左手定则、粒子偏转与直流电机</span></a></li>
+          <li><a class="nav-link" href="Ch21_Electromagnetic_Induction.html"><span>Ch21 · 电磁感应、楞次定律、交流发电机与变压器高压输电</span></a></li>
+          <li><a class="nav-link" href="Ch22_The_Nuclear_Atom.html"><span>Ch22 · α 金箔散射原子核、同位素及核裂变与聚变</span></a></li>
+          <li><a class="nav-link" href="Ch23_Radioactivity.html"><span>Ch23 · 本底辐射、α/β/γ 性质、衰变方程与半衰期计算</span></a></li>
+          <li><a class="nav-link" href="Ch24_Earth_and_Solar_System.html"><span>Ch24 · 自转四季、月相、行星吸积盘形成与轨道速率 v=2πr/T</span></a></li>
+          <li><a class="nav-link" href="Ch25_Stars_and_Universe.html"><span>Ch25 · 恒星全生命周期、红移 CMBR 大爆炸与哈勃定律 H₀</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-inner">
+        <section class="hero-card" id="top">
+          <h1>Chapter 5: Forces and matter · 第 5 章 · 固体形变、胡克定律 F=kx 与固体/液体压强</h1>
+          <p class="hero-sub">
+            完整覆盖 <strong>David Sang 第 3 版教材（2023–2028 新考纲 0625/0972 · 取 g = 9.8 m/s² / 9.8 N/kg）</strong>本章全部 Core 与 Extended 知识点：<code>5.1 固体形变力 · 5.2–5.3 胡克定律 F=kx 与比例极限 · 5.4 固体压强 p=F/A · 5.5 液体压强 Δp=ρgΔh</code>，配齐微观机理解释、Paper 6 实验控制、SaveMyExams 真题与直接背写概念卡。
+          </p>
+          <div class="hero-badges">
+            <span class="hero-pill">⚛️ David Sang 3rd Ed. · 2023–2028</span>
+            <span class="hero-pill">📐 Core + Extended 全区分</span>
+            <span class="hero-pill">🧪 本章专属交互物理实验台</span>
+            <a class="hero-pill" href="#sec-sme" style="text-decoration: none;">📝 直达 SaveMyExams 真题 →</a>
+            <a class="hero-pill" href="#app-concepts" style="text-decoration: none; background: rgba(255,255,255,0.24);">🧠 直达中英概念默写库 →</a>
+          </div>
+          <div class="unit-grid">
+            <a class="unit-tile" href="#sec-5-1">
+              <div class="unit-tile-num">Section 5-1</div>
+              <div class="unit-tile-title">5.1 固体形变与弹簧伸长实验 (Forces acting on solids)</div>
+            </a>
+            <a class="unit-tile" href="#sec-5-2">
+              <div class="unit-tile-num">Section 5-2</div>
+              <div class="unit-tile-title">5.2 拉伸弹簧与三类材料载荷–伸长曲线 (Stretching springs)</div>
+            </a>
+            <a class="unit-tile" href="#sec-5-3">
+              <div class="unit-tile-num">Section 5-3</div>
+              <div class="unit-tile-title">5.3 胡克定律与劲度系数 (Hooke's law &amp; spring constant)</div>
+            </a>
+            <a class="unit-tile" href="#sec-5-4">
+              <div class="unit-tile-num">Section 5-4</div>
+              <div class="unit-tile-title">5.4 固体压强与应用 (Pressure p = F/A)</div>
+            </a>
+          </div>
+        </section>
+
+        <div id="emptySearchNotice" class="callout deep-dive" style="display: none;">
+          <div class="callout-title">🔍 未找到匹配内容</div>
+          <p style="margin-bottom: 0;">请尝试更换关键词，或点击右上角“重置过滤”恢复显示。</p>
+        </div>
+
+<!-- ==========================================================================
+     Chapter 5 · Forces and Matter (IGCSE Physics 0625 · David Sang 3rd Ed.)
+     ========================================================================== -->
+<article class="topic-section book-section" id="sec-5-1">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>5.1 固体形变与弹簧伸长实验 (Forces acting on solids)</h3>
+      <div class="section-en-sub">Stretching, Compressing, Bending, Elastic vs Plastic Deformation &amp; Paper 6 Spring Apparatus</div>
+      <div class="tier-row">
+        <span class="badge-core">Core</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-5-1">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>5.1.1 形变方式与弹性 vs 塑性形变 <span class="badge-core">Core</span></h4>
+    <p>外力作用于固体时，可以改变物体的尺寸与形状（拉伸 stretching、压缩 compressing、弯曲 bending、扭转 twisting）。根据撤去外力后能否复原，分为两类：</p>
+    <ul>
+      <li><strong>弹性形变（Elastic deformation）：</strong>撤去外力（load removed）后，物体能够<strong>完全恢复原来的长度与形状</strong>（如正常范围内的金属弹簧、橡皮筋）。</li>
+      <li><strong>塑性/非弹性形变（Plastic / inelastic deformation）：</strong>超过限度后即使撤去外力，物体也<strong>无法恢复原长</strong>，留有<strong>永久伸长量（permanent extension）</strong>（如被过度拉直的圆珠笔弹簧、橡皮泥、过度弯折的铜线）。</li>
+    </ul>
+  </div>
+
+  <div class="subtopic">
+    <h4>5.1.2 测定弹簧伸长量实验 (Paper 6 标准装置与防误差措施) <span class="badge-core">Core</span></h4>
+    <div class="formula-card">
+      <div class="formula-main">
+        伸长量 Extension <span class="math">x</span> = 总长度 <span class="math">l</span> − 原长 <span class="math">l</span>₀
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        砝码重力 <span class="math">F</span> = <span class="math">m</span><span class="math">g</span> (<code>g = 9.8 N/kg</code>)
+      </div>
+      <p style="margin-bottom: 0;">
+        <strong>Paper 6 五步标准操作与控制细节：</strong><br>
+        1. 用铁架台垂直固定米尺，并用<strong>直角三角尺（set square）核对尺身与桌面垂直（90°）</strong>；<br>
+        2. 在弹簧底端水平粘贴一根<strong>细指针（horizontal pointer / pin）</strong>，尽量贴近刻度线且读数时<strong>视线水平防视差（eye level perpendicular to scale）</strong>；<br>
+        3. 先不挂砝码读出弹簧<strong>原长 <code>l₀</code></strong>；<br>
+        4. 逐个挂上钩码（每次换算重力 <code>F = m × 9.8</code>），待静止后读出新长度 <code>l</code>，算出 <code>x = l − l₀</code>；<br>
+        5. 逐个卸下钩码复测，检验弹簧是否回到 <code>l₀</code>（判断是否进入塑性形变）。
+      </p>
+    </div>
+
+    <div class="callout common-mistake">
+      <div class="callout-title">⚠️ 致命失分点：Extension (伸长量 x) 绝不等于 Total Length (总长度 l)！</div>
+      <p style="margin-bottom: 0;">
+        如果弹簧原长 <code>l₀ = 12.0 cm</code>，挂 <code>4.0 N</code> 时总长为 <code>16.0 cm</code>，此时伸长量只有 <code>x = 16.0 − 12.0 = 4.0 cm</code>！若题目问“挂 <code>8.0 N</code> 时弹簧的<strong>总长度</strong>是多少？”，伸长量翻倍为 <code>8.0 cm</code>，总长度 = <code>12.0 + 8.0 = <strong>20.0 cm</strong></code>（绝不是 <code>16.0 × 2 = 32.0 cm</code>！）。
+      </p>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-5-2">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>5.2 拉伸弹簧与三类材料载荷–伸长曲线 (Stretching springs)</h3>
+      <div class="section-en-sub">Load–Extension Graphs, Limit of Proportionality, Elastic Limit, Rubber Band &amp; Copper Wire</div>
+      <div class="tier-row">
+        <span class="badge-core">Core</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-5-2">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>5.2.1 金属弹簧、橡皮筋与铜丝的 F–x 图像对比 <span class="badge-core">Core</span></h4>
+    <div class="table-wrap">
+      <table class="phy-table">
+        <thead>
+          <tr>
+            <th>实验材料</th>
+            <th>图像曲线特征</th>
+            <th>核心物理结论（考纲必记）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>金属弹簧</strong><br>(Metal spring)</td>
+            <td>从原点 <code>(0, 0)</code> 出发的一条<strong>倾斜直线</strong>，到达某拐点后向上弯曲（<code>F</code> 在纵轴）或向右侧平缓弯曲（<code>x</code> 在纵轴）。</td>
+            <td>直线段严格遵守正比关系，直至到达<strong>比例极限（Limit of proportionality）</strong>；接近或略高处为<strong>弹性极限（Elastic limit）</strong>，越过即产生永久形变。</td>
+          </tr>
+          <tr>
+            <td><strong>橡皮筋</strong><br>(Rubber band)</td>
+            <td>全程呈 <strong>S 形非线性曲线</strong>，没有直线正比段；卸载曲线低于加载曲线（形成滞回环）。</td>
+            <td><strong>不遵守胡克定律</strong>；加载做功多、卸载放回少，差值转化为橡皮筋内部的<strong>热能（升温）</strong>。</td>
+          </tr>
+          <tr>
+            <td><strong>金属铜丝</strong><br>(Copper wire)</td>
+            <td>初始是一段极陡峭的短直线（极小拉力几乎难拉长），随后突然发生大幅塑性拉伸直至拉断。</td>
+            <td>延展性极强，一旦超过屈服点便发生不可逆的<strong>塑性颈缩伸长</strong>。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout examiner-tip">
+      <div class="callout-title">💡 考场盯死坐标轴！F 在纵轴还是 x 在纵轴？</div>
+      <p style="margin-bottom: 0;">
+        CIE 试卷中两种画法都频繁出现：<br>
+        • 若<strong>纵轴是 Load <code>F</code>，横轴是 Extension <code>x</code></strong>：超过比例极限后，弹簧变软容易拉长，曲线会<strong>向下弯平（斜率变小）</strong>；<br>
+        • 若<strong>纵轴是 Extension <code>x</code>，横轴是 Load <code>F</code></strong>：超过比例极限后，同样拉力增幅带来更大伸长，曲线会<strong>向上陡弯（斜率变大）</strong>！
+      </p>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-5-3">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>5.3 胡克定律与劲度系数 (Hooke's law &amp; spring constant)</h3>
+      <div class="section-en-sub">F = kx, Spring Constant Definition k = F/x, Graph Gradient &amp; Series/Parallel Springs</div>
+      <div class="tier-row">
+        <span class="badge-ext">Extended Only</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-5-3">○ 标记掌握</button>
+  </div>
+
+  <p style="font-size: 13.5px; color: var(--text-faint);">本节公式 <code>F = kx</code> 与劲度系数计算属于 Extended 扩展考纲内容（0625 Supplement）。Core 考生只需掌握 5.1–5.2 图像定性规律。</p>
+
+  <div class="subtopic ext-only">
+    <h4>5.3.1 胡克定律 (Hooke's Law) 与劲度系数 k <span class="badge-ext">Extended</span></h4>
+    <div class="formula-card">
+      <div class="formula-main">
+        <span class="math">F</span> = <span class="math">k</span><span class="math">x</span>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        劲度系数 <span class="math">k</span> = <span class="frac"><span class="num"><span class="math">F</span></span><span class="den"><span class="math">x</span></span></span>
+        &nbsp;&nbsp;(单位: <code>N/m</code> 或 <code>N/cm</code>)
+      </div>
+      <p style="margin-bottom: 0;">
+        • <strong>劲度系数定义（1 分关键词）：</strong><strong>产生单位伸长量所需的力（force per unit extension）</strong>；<code>k</code> 越大代表弹簧越“硬”（stiffer）。<br>
+        • <strong>图像斜率法求 <code>k</code>：</strong>在 <code>F–x</code> 图像（<code>F</code> 为纵轴）直线段内，<strong>斜率 Gradient = <code>F / x = k</code></strong>；若题目把 <code>x</code> 放在纵轴、<code>F</code> 放在横轴，则 <strong><code>k = 1 / Gradient</code></strong>！<br>
+        • <strong>串并联拓展直觉：</strong>两根相同弹簧<strong>串联</strong>挂重物 <code>F</code> 时，每根都承受拉力 <code>F</code> ⇒ 总伸长量翻倍为 <code>2x</code>（等效 <code>k_eff = k/2</code>）；<strong>并联</strong>挂重物 <code>F</code> 时，各分担一半力 <code>F/2</code> ⇒ 伸长量减半为 <code>x/2</code>（等效 <code>k_eff = 2k</code>）。
+      </p>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">📘 例题 5.3 · 胡克定律计算 k 与新载荷下弹簧总长 (g = 9.8 N/kg)</div>
+      <p>A spring has an unstretched length of <code>14.0 cm</code>. When a mass of <code>0.40 kg</code> is hung from it, the total length becomes <code>22.0 cm</code>. (<code>g = 9.8 N/kg</code>)<br>
+      (a) Calculate the spring constant <code>k</code> in <code>N/cm</code> and in <code>N/m</code>.<br>
+      (b) Calculate the total length of the spring when a load of <code>4.41 N</code> is hung (assuming the limit of proportionality is not exceeded).</p>
+      <p style="margin-bottom: 0;">
+        <strong>解析 (Solution)：</strong><br>
+        (a) 先算载荷与伸长量：<code>F = mg = 0.40 × 9.8 = 3.92 N</code>；<code>x = 22.0 − 14.0 = 8.0 cm</code>。<br>
+        <code>k = 3.92 N ÷ 8.0 cm = <strong>0.49 N/cm</strong></code>（换算为国际单位：<code>0.49 N ÷ 0.01 m = <strong>49 N/m</strong></code>）。<br>
+        (b) 新伸长量：<code>x₂ = F₂ / k = 4.41 ÷ 0.49 = 9.0 cm</code>；<br>
+        弹簧总长度：<code>l₂ = l₀ + x₂ = 14.0 + 9.0 = <strong>23.0 cm</strong></code>。
+      </p>
+    </div>
+
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 250" width="740" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="弹簧伸长实验测量装置与弹簧及橡皮筋载荷伸长曲线对比">
+        <!-- Left Panel: Spring apparatus -->
+        <rect x="12" y="10" width="332" height="230" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="178" y="32" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-ink)">Paper 6 弹簧伸长实验装置</text>
+
+        <!-- Stand & Boss -->
+        <line x1="60" y1="50" x2="60" y2="218" stroke="var(--svg-ink)" stroke-width="4" />
+        <rect x="34" y="216" width="84" height="8" fill="var(--svg-ink)" />
+        <line x1="60" y1="62" x2="150" y2="62" stroke="var(--svg-ink)" stroke-width="3" />
+
+        <!-- Vertical metre rule -->
+        <rect x="178" y="54" width="22" height="162" fill="rgba(245, 158, 11, 0.16)" stroke="var(--svg-amber)" stroke-width="1.6" />
+        <line x1="178" y1="70" x2="188" y2="70" stroke="var(--svg-ink)" stroke-width="1.2" />
+        <line x1="178" y1="100" x2="188" y2="100" stroke="var(--svg-ink)" stroke-width="1.2" />
+        <line x1="178" y1="130" x2="188" y2="130" stroke="var(--svg-ink)" stroke-width="1.2" />
+        <line x1="178" y1="160" x2="190" y2="160" stroke="var(--svg-red)" stroke-width="2" />
+        <line x1="178" y1="190" x2="188" y2="190" stroke="var(--svg-ink)" stroke-width="1.2" />
+        <text x="208" y="74" font-size="9.5" font-weight="700" fill="var(--svg-amber)">垂直米尺</text>
+        <text x="208" y="88" font-size="8.8" fill="var(--svg-muted)">(三角尺验 90°)</text>
+
+        <!-- Spring coils -->
+        <polyline points="134,62 134,74 124,80 144,88 124,96 144,104 124,112 144,120 124,128 144,136 134,142 134,160" fill="none" stroke="var(--svg-blue)" stroke-width="2.2" />
+        <!-- Horizontal pointer -->
+        <line x1="134" y1="160" x2="177" y2="160" stroke="var(--svg-red)" stroke-width="2" />
+        <text x="208" y="164" font-size="9.5" font-weight="800" fill="var(--svg-red)">水平指针 (平视防视差)</text>
+
+        <!-- Slotted mass -->
+        <rect x="120" y="168" width="28" height="26" rx="3" fill="var(--svg-indigo)" />
+        <line x1="134" y1="160" x2="134" y2="168" stroke="var(--svg-ink)" stroke-width="1.5" />
+        <text x="134" y="208" text-anchor="middle" font-size="9.5" font-weight="700" fill="var(--svg-indigo)">砝码 F=mg</text>
+
+        <!-- Right Panel: F-x graphs -->
+        <rect x="360" y="10" width="368" height="230" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="544" y="32" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-ink)">Load–Extension 图像：比例极限与橡皮筋对比</text>
+
+        <!-- Axes -->
+        <line x1="408" y1="202" x2="706" y2="202" stroke="var(--svg-ink)" stroke-width="1.8" />
+        <line x1="408" y1="52" x2="408" y2="202" stroke="var(--svg-ink)" stroke-width="1.8" />
+        <text x="702" y="220" text-anchor="end" font-size="10" font-weight="700" fill="var(--svg-muted)">Extension x (cm)</text>
+        <text x="415" y="58" text-anchor="start" font-size="10" font-weight="700" fill="var(--svg-muted)">F (N)</text>
+
+        <!-- Metal spring curve: straight to P(550, 96) then bends right -->
+        <path d="M 408 202 L 548 96 Q 608 60 682 56" fill="none" stroke="var(--svg-blue)" stroke-width="2.8" />
+        <circle cx="548" cy="96" r="4.5" fill="var(--svg-red)" />
+        <text x="548" y="84" text-anchor="middle" font-size="9.5" font-weight="800" fill="var(--svg-red)">比例极限 P</text>
+
+        <!-- Plastic unloading dashed line -->
+        <line x1="634" y1="64" x2="482" y2="202" stroke="var(--svg-red)" stroke-width="1.8" stroke-dasharray="4,3" />
+        <circle cx="482" cy="202" r="3.5" fill="var(--svg-red)" />
+        <text x="498" y="218" text-anchor="middle" font-size="9.2" font-weight="700" fill="var(--svg-red)">永久残余形变</text>
+
+        <!-- Rubber band S-curve -->
+        <path d="M 408 202 C 480 198 540 164 600 104" fill="none" stroke="var(--svg-teal)" stroke-width="2.2" stroke-dasharray="5,3" />
+        <text x="610" y="128" font-size="9.5" font-weight="800" fill="var(--svg-teal)">橡皮筋 (非线性)</text>
+        <text x="454" y="138" font-size="9.5" font-weight="800" fill="var(--svg-blue)">直线斜率 = k</text>
+      </svg>
+      <div class="svg-caption">图 5-1 · Paper 6 弹簧伸长测定仪与金属弹簧（含比例极限/卸载永久形变）vs 橡皮筋曲线</div>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-5-4">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>5.4 固体压强与应用 (Pressure p = F/A)</h3>
+      <div class="section-en-sub">Force per Unit Area, Pascal (Pa = N/m²), Area Conversion cm² → m² &amp; Everyday Applications</div>
+      <div class="tier-row">
+        <span class="badge-core">Core</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-5-4">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>5.4.1 压强公式、帕斯卡 (Pa) 与面积换算陷阱 <span class="badge-core">Core</span></h4>
+    <div class="formula-card">
+      <div class="formula-main">
+        <span class="math">p</span> = <span class="frac"><span class="num"><span class="math">F</span></span><span class="den"><span class="math">A</span></span></span>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <code>1 Pa = 1 N/m²</code>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <code>1 kPa = 1000 Pa</code>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <code>1 cm² = 10⁻⁴ m²</code>
+      </div>
+      <p style="margin-bottom: 0;">
+        <strong>压强（Pressure）</strong>定义为<strong>垂直作用在单位面积上的力（force per unit area acting normal to a surface）</strong>。<br>
+        • <strong>2023–2028 考纲重要变更提醒：</strong>水银气压计（Barometer）与 U 型管压强计（Manometer）的推导已从 2023 新纲移除，考场核心聚焦于固体压强 <code>p = F/A</code> 与液体压强公式 <code>Δp = ρgΔh</code>！
+      </p>
+    </div>
+
+    <div class="table-wrap">
+      <table class="phy-table">
+        <thead>
+          <tr>
+            <th>工程目标</th>
+            <th>面积调节策略</th>
+            <th>典型实例与考场标准表述 (Mark Scheme)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>增大压强</strong><br>(切割/刺穿/扎入)</td>
+            <td>相同力 <code>F</code> 下，尽量<strong>减小接触面积 <code>A</code></strong></td>
+            <td>菜刀开刃、图钉尖端、缝衣针、冰刀、高跟鞋细跟 ⇒ 极小面积 <code>A</code> 产生极大压强 <code>p = F/A</code> 轻易切入物体。</td>
+          </tr>
+          <tr>
+            <td><strong>减小压强</strong><br>(防陷入松软地面)</td>
+            <td>相同重力 <code>F</code> 下，尽量<strong>增大接触面积 <code>A</code></strong></td>
+            <td>雪地靴/滑雪板、坦克与挖掘机宽履带（caterpillar tracks）、沙漠骆驼宽掌、大厦宽阔地基 ⇒ 大面积分担重力，减小对松软雪/泥的压强以防下陷。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">📘 例题 5.4 · 四足站立与 cm² 单位换算压强计算 (g = 9.8 N/kg)</div>
+      <p>
+        (a) An elephant of mass <code>4000 kg</code> stands on all four feet, each of contact area <code>0.098 m²</code>. Calculate the pressure on the ground (<code>g = 9.8 N/kg</code>).<br>
+        (b) A dancer of mass <code>50 kg</code> balances momentarily on one shoe heel of area <code>0.50 cm²</code>. Calculate the pressure exerted on the floor in <code>Pa</code>.
+      </p>
+      <p style="margin-bottom: 0;">
+        <strong>解析 (Solution)：</strong><br>
+        (a) 总重力 <code>F = 4000 × 9.8 = 39 200 N</code>；四只脚总接触面积 <code>A = 4 × 0.098 = 0.392 m²</code>；<br>
+        <code>p = 39 200 ÷ 0.392 = <strong>100 000 Pa</strong></code>（即 <code>100 kPa</code>）。<br>
+        (b) 重力 <code>F = 50 × 9.8 = 490 N</code>；<strong>务必先换算面积为 <code>m²</code></strong>：<code>A = 0.50 cm² = 0.50 × 10⁻⁴ m² = 5.0 × 10⁻⁵ m²</code>；<br>
+        <code>p = 490 ÷ (5.0 × 10⁻⁵) = <strong>9.8 × 10⁶ Pa</strong></code>（高达 9.8 兆帕，远大于大象！）。
+      </p>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-5-5">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>5.5 液体压强与液压原理 (Calculating pressure in liquids)</h3>
+      <div class="section-en-sub">Δp = ρgΔh (g = 9.8), Independence from Shape, Dams &amp; Hydraulic Press Link</div>
+      <div class="tier-row">
+        <span class="badge-ext">Extended: Δp = ρgΔh 定量计算</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-5-5">○ 标记掌握</button>
+  </div>
+
+  <p style="font-size: 13.5px; color: var(--text-faint);">本节定量公式 <code>Δp = ρgΔh</code> 属于 Extended 扩展考纲内容（0625 Supplement）；Core 考生需定性理解液体压强随深度与密度增大。</p>
+
+  <div class="subtopic ext-only">
+    <h4>5.5.1 液体压强公式 Δp = ρgΔh 与四大铁律 <span class="badge-ext">Extended</span></h4>
+    <div class="formula-card">
+      <div class="formula-main">
+        Δ<span class="math">p</span> = <span class="math">ρ</span><span class="math">g</span>Δ<span class="math">h</span>
+        &nbsp;&nbsp;(<code>g = 9.8 m/s²</code>, <code>ρ</code> 单位 <code>kg/m³</code>, <code>Δh</code> 为从液面算起的垂直深度 <code>m</code>)
+      </div>
+      <p style="margin-bottom: 0;">
+        • <strong>绝对总压强 vs 附加压强：</strong><code>Δp = ρgΔh</code> 算的是液柱自身产生的压强增量；若题问<strong>水下绝对总压强（total pressure）</strong>，必须加上液面上的大气压强：<code>p_total = p_atm + ρgΔh</code>！<br>
+        • <strong>四大铁律（选择简答必考）：</strong><br>
+        1. 只与<strong>垂直深度 <code>Δh</code></strong>（从自由液面往下量，而不是离容器底的距离！）和<strong>液体密度 <code>ρ</code></strong>、<strong><code>g</code></strong> 有关；<br>
+        2. <strong>与容器的形状、粗细、横截面积或装水总体积完全无关</strong>（连通器原理：不同形状的连通管装同种液体时液面等高）；<br>
+        3. 同一深度处液体压强<strong>向各个方向大小完全相等</strong>（向下、向上、侧向均同为 <code>ρgΔh</code>）；<br>
+        4. <strong>水库大坝（Dam）上窄下宽：</strong>越深处液体压强越大（<code>Δp ∝ Δh</code>），水对坝底产生巨大侧推力，故底部必须修建得极其厚实。
+      </p>
+    </div>
+
+    <div class="callout deep-dive">
+      <div class="callout-title">🔬 拓展串联：液压千斤顶与刹车系统 (Hydraulic Press)</div>
+      <p style="margin-bottom: 0;">
+        由于液体几乎不可压缩，封闭液体内施加的压强会大小不变地传递到各处：<code>p = F₁ / A₁ = F₂ / A₂</code>。在小面积主活塞 <code>A₁</code> 施加较小的力 <code>F₁</code>，即可在大面积副活塞 <code>A₂</code> 上产生成比例放大的巨大举升力 <code>F₂ = F₁ × (A₂ / A₁)</code>！
+      </p>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">📘 例题 5.5 · 潜艇深海压强与舱门总压力计算 (g = 9.8 m/s²)</div>
+      <p>A submarine dives to a depth of <code>120 m</code> in seawater of density <code>1025 kg/m³</code>. Atmospheric pressure at the sea surface is <code>101 000 Pa</code>, and <code>g = 9.8 m/s²</code>.<br>
+      (a) Calculate the pressure due to the seawater alone at <code>120 m</code>.<br>
+      (b) State the total pressure on the outside of the submarine hull.<br>
+      (c) The pressure inside the submarine is maintained at <code>101 000 Pa</code>. Calculate the net force acting on a circular hatch of area <code>0.80 m²</code>.</p>
+      <p style="margin-bottom: 0;">
+        <strong>解析 (Solution)：</strong><br>
+        (a) 海水压强：<code>Δp = ρ g Δh = 1025 × 9.8 × 120 = <strong>1 205 400 Pa</strong></code>（≈ <code>1.21 MPa</code>）。<br>
+        (b) 外壳总绝对压强：<code>p_total = 101 000 + 1 205 400 = <strong>1 306 400 Pa</strong></code>（≈ <code>1.31 MPa</code>）。<br>
+        (c) 舱门内外压强差正好抵消大气压，净压强差 <code>Δp = 1 205 400 Pa</code>；<br>
+        净压力：<code>F = Δp × A = 1 205 400 × 0.80 = <strong>964 320 N</strong></code>（≈ <code>9.64 × 10⁵ N</code>）。
+      </p>
+    </div>
+
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 250" width="740" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="液体压强随深度增大射流实验、连通器等高与液压千斤顶原理图">
+        <defs>
+          <marker id="ch05-f2-arr-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--svg-blue)" />
+          </marker>
+          <marker id="ch05-f2-arr-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--svg-red)" />
+          </marker>
+        </defs>
+
+        <!-- Left Panel: Depth jets & Dam -->
+        <rect x="12" y="10" width="352" height="230" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="188" y="32" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-ink)">液体压强随深度 Δh 增大 (Δp = ρgΔh)</text>
+
+        <!-- Tall water tank -->
+        <rect x="46" y="54" width="84" height="156" fill="none" stroke="var(--svg-ink)" stroke-width="2" />
+        <rect x="47" y="72" width="82" height="137" fill="rgba(2, 132, 199, 0.22)" />
+        <line x1="46" y1="72" x2="130" y2="72" stroke="var(--svg-blue)" stroke-width="2" />
+
+        <!-- Three jets -->
+        <circle cx="130" cy="100" r="3" fill="var(--svg-blue)" />
+        <path d="M 130 100 Q 158 106 168 210" fill="none" stroke="var(--svg-blue)" stroke-width="2" />
+
+        <circle cx="130" cy="142" r="3" fill="var(--svg-indigo)" />
+        <path d="M 130 142 Q 186 148 206 210" fill="none" stroke="var(--svg-indigo)" stroke-width="2.2" />
+
+        <circle cx="130" cy="184" r="3" fill="var(--svg-red)" />
+        <path d="M 130 184 Q 218 188 250 210" fill="none" stroke="var(--svg-red)" stroke-width="2.6" />
+        <line x1="34" y1="210" x2="346" y2="210" stroke="var(--svg-ink)" stroke-width="1.6" />
+
+        <text x="200" y="96" font-size="9.5" font-weight="700" fill="var(--svg-blue)">浅处 h₁ 压小射程近</text>
+        <text x="220" y="142" font-size="9.5" font-weight="700" fill="var(--svg-indigo)">中层 h₂ 射程中等</text>
+        <text x="252" y="182" font-size="9.5" font-weight="800" fill="var(--svg-red)">最深 h₃ 压最大射最远!</text>
+        <text x="188" y="228" text-anchor="middle" font-size="9.2" fill="var(--svg-muted)">规律：与容器形状宽窄无关，同一深度向各方向压强相等</text>
+
+        <!-- Right Panel: Hydraulic Press -->
+        <rect x="380" y="10" width="348" height="230" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="554" y="32" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-ink)">液压传递相等压强：p = F₁/A₁ = F₂/A₂</text>
+
+        <!-- Hydraulic U-chamber -->
+        <path d="M 426 106 L 426 204 L 686 204 L 686 106 L 594 106 L 594 164 L 478 164 L 478 106 Z" fill="rgba(13, 148, 136, 0.22)" stroke="var(--svg-ink)" stroke-width="2" />
+        <!-- Small piston -->
+        <rect x="427" y="96" width="50" height="14" fill="var(--svg-amber)" stroke="var(--svg-ink)" stroke-width="1.5" />
+        <line x1="452" y1="54" x2="452" y2="92" stroke="var(--svg-red)" stroke-width="2.6" marker-end="url(#ch05-f2-arr-red)" />
+        <text x="452" y="48" text-anchor="middle" font-size="10" font-weight="800" fill="var(--svg-red)">小力 F₁</text>
+        <text x="452" y="130" text-anchor="middle" font-size="9.5" font-weight="700" fill="var(--svg-ink)">小面积 A₁</text>
+
+        <!-- Large piston -->
+        <rect x="595" y="96" width="90" height="14" fill="var(--svg-amber)" stroke="var(--svg-ink)" stroke-width="1.5" />
+        <line x1="640" y1="94" x2="640" y2="54" stroke="var(--svg-blue)" stroke-width="3.2" marker-end="url(#ch05-f2-arr-blue)" />
+        <text x="640" y="48" text-anchor="middle" font-size="10.5" font-weight="800" fill="var(--svg-blue)">大举力 F₂</text>
+        <text x="640" y="130" text-anchor="middle" font-size="9.5" font-weight="700" fill="var(--svg-ink)">大面积 A₂</text>
+
+        <text x="554" y="190" text-anchor="middle" font-size="10" font-weight="800" fill="var(--svg-teal)">不可压缩油液：各处压强 p 相等</text>
+        <text x="554" y="226" text-anchor="middle" font-size="9.5" fill="var(--svg-muted)">若 A₂ = 10 A₁，则 F₂ = 10 F₁ (输出位移减为 1/10)</text>
+      </svg>
+      <div class="svg-caption">图 5-2 · 液体压强随深度线性递增射流实验与液压倍力传递原理</div>
+    </div>
+
+    <div class="lab-box" data-lab-type="p05"></div>
+  </div>
+</article>
+
+<!-- ==================== SAVEMAXAMS PRACTICE CH05 ==================== -->
+<article class="topic-section sme-section" id="sec-sme">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>SaveMyExams 0625 真题与综合演练</h3>
+      <div class="section-en-sub">4 Speed MCQs + 4 Structured Exam Problems with Cambridge Mark Schemes (g = 9.8 N/kg)</div>
+      <div class="tier-row">
+        <span class="badge-core">Core</span>
+        <span class="badge-ext">Extended</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-sme">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>Section A · 高频易错选择题 (4 题)</h4>
+
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head"><span class="q-tag">Ch05 MCQ 1 · 伸长量 vs 弹簧总长陷阱</span><span><span class="badge-core">Core</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">A spring has an unstretched length of <code>10.0 cm</code>. When a <code>4.0 N</code> load is attached, its length becomes <code>12.5 cm</code>. Assuming the limit of proportionality is not exceeded, what is the <strong>total length</strong> when a <code>12.0 N</code> load is attached?</div>
+      <div class="q-stem-cn">原长 <code>10.0 cm</code> 的弹簧挂 <code>4.0 N</code> 时总长变为 <code>12.5 cm</code>，未超比例极限下改挂 <code>12.0 N</code> 时，弹簧<strong>总长度</strong>为多少？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><code>7.5 cm</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><code>17.5 cm</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><code>37.5 cm</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><code>22.5 cm</code></span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！4.0 N 对应伸长量 x = 12.5 − 10.0 = 2.5 cm；拉力增至 3 倍（12.0 N），伸长量也增至 3 倍 = 7.5 cm，总长 = 10.0 + 7.5 = 17.5 cm！" data-err="❌ 别把总长直接乘 3！只有“伸长量 x = 2.5 cm”才与拉力成正比：12.0 N 产生 7.5 cm 伸长，总长 = 原长 10.0 + 7.5 = 17.5 cm。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="C">
+      <div class="exam-q-head"><span class="q-tag">Ch05 MCQ 2 · 固体压强与 cm² 单位换算</span><span><span class="badge-core">Core</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">A metal block of weight <code>400 N</code> rests on a flat surface of contact area <code>200 cm²</code>. What is the pressure exerted by the block on the surface in pascals (<code>Pa</code>)?</div>
+      <div class="q-stem-cn">重 <code>400 N</code> 的金属块平放在桌面上，接触面积 <code>200 cm²</code>，桌面受到的压强是多少 <code>Pa</code>？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><code>2.0 Pa</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><code>200 Pa</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><code>20 000 Pa</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><code>80 000 Pa</code></span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！1 Pa = 1 N/m²，先换算 200 cm² = 0.020 m²；压强 p = 400 ÷ 0.020 = 20 000 Pa！" data-err="❌ 必须先把 cm² 除以 10 000 换算为 m²：200 cm² = 0.020 m²，因此 p = 400 ÷ 0.020 = 20 000 Pa（直接除 200 得的是 N/cm² 而非 Pa！）。"></div>
+    </div>
+
+    <div class="exam-q ext-only" data-mcq-answer="A">
+      <div class="exam-q-head"><span class="q-tag">Ch05 MCQ 3 · 劲度系数 k 与重力联动计算 (g = 9.8 N/kg)</span><span><span class="badge-ext">Extended</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">A mass of <code>0.50 kg</code> is hung from a spring, causing an extension of <code>2.5 cm</code> within the limit of proportionality. What is the spring constant <code>k</code> in <code>N/m</code>? (<code>g = 9.8 N/kg</code>)</div>
+      <div class="q-stem-cn">弹簧悬挂 <code>0.50 kg</code> 重物（<code>g = 9.8 N/kg</code>）后伸长 <code>2.5 cm</code>，劲度系数 <code>k</code>（单位 <code>N/m</code>）是多少？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><code>196 N/m</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><code>20 N/m</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><code>1.96 N/m</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><code>200 N/m</code></span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！F = 0.50 × 9.8 = 4.9 N，x = 2.5 cm = 0.025 m ⇒ k = 4.9 ÷ 0.025 = 196 N/m！" data-err="❌ 两处易错：① 先把质量乘以 9.8 化成牛顿（4.9 N）；② 题目要 N/m，要把 2.5 cm 换成 0.025 m，得 k = 4.9 ÷ 0.025 = 196 N/m。"></div>
+    </div>
+
+    <div class="exam-q ext-only" data-mcq-answer="D">
+      <div class="exam-q-head"><span class="q-tag">Ch05 MCQ 4 · 液体压强与容器形状无关定律</span><span><span class="badge-ext">Extended</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">Four open containers of completely different shapes (tall narrow cylinder, wide tank, cone flaring outwards, cone narrowing upwards) are all filled to the exact same vertical depth of <code>0.80 m</code> with oil of density <code>850 kg/m³</code>. Which container has the greatest liquid pressure at its base?</div>
+      <div class="q-stem-cn">四个形状粗细完全不同的开口容器装有同种密度 <code>850 kg/m³</code> 的油，液面竖直深度均为 <code>0.80 m</code>，哪个容器底部的液体压强最大？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>The widest tank (largest volume of oil)</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>The tall narrow cylinder</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>The cone flaring outwards</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>All four have the exact same pressure at the base</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！根据 Δp = ρgΔh，液体压强只取决于液体密度、g 和竖直深度，与容器形状、底面积或油总重量毫无关系！" data-err="❌ 流体静力学经典悖论：底部压强 Δp = ρgΔh 只看 ρ、g 和垂直深度 Δh，四个容器 ρ 和 Δh 完全相同，因此底部压强一模一样！"></div>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>Section B · SaveMyExams 0625 结构化大题 (4 题)</h4>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">SME 1 · 弹簧伸长实验与胡克定律综合计算 (g = 9.8 N/kg)</span><span><span class="badge-core">Core</span> <span class="badge-ext">Extended</span> <span class="q-marks">[7 marks]</span></span></div>
+      <div class="q-stem-en">
+        A spring has an unstretched length of <code>15.0 cm</code>. When a mass of <code>0.30 kg</code> is hung on it, the total length becomes <code>21.0 cm</code>. (<code>g = 9.8 N/kg</code>)<br>
+        (a) Calculate the weight of the <code>0.30 kg</code> mass and the extension of the spring. [2]<br>
+        (b) <span class="badge-ext">Ext</span> Calculate the spring constant <code>k</code> in <code>N/cm</code> and in <code>N/m</code>. [2]<br>
+        (c) <span class="badge-ext">Ext</span> Calculate the total length of the spring when a load of <code>4.41 N</code> is hung from it (limit of proportionality not exceeded). [2]<br>
+        (d) Explain what happens if the spring is stretched far beyond its elastic limit and the load is then removed. [1]
+      </div>
+      <div class="q-stem-cn">原长 <code>15.0 cm</code> 弹簧挂 <code>0.30 kg</code> 后总长 <code>21.0 cm</code>，求载荷、劲度系数 <code>k</code>（双单位）、挂 <code>4.41 N</code> 时的总长及超弹性极限后的表现。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 7 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">B1</span> (a) Load <code>F = 0.30 × 9.8 = <strong>2.94 N</strong></code>; <span class="ms-mark">B1</span> Extension <code>x = 21.0 − 15.0 = <strong>6.0 cm</strong></code>.</p>
+          <p><span class="ms-mark">B1</span> (b) <code>k = F / x = 2.94 ÷ 6.0 = <strong>0.49 N/cm</strong></code>; <span class="ms-mark">B1</span> <code>= <strong>49 N/m</strong></code> (<code>2.94 ÷ 0.060</code>).</p>
+          <p><span class="ms-mark">C1</span> (c) <code>x₂ = 4.41 ÷ 0.49 = 9.0 cm</code>; <span class="ms-mark">A1</span> Total length = <code>15.0 + 9.0 = <strong>24.0 cm</strong></code>.</p>
+          <p><span class="ms-mark">B1</span> (d) The spring undergoes <strong>plastic deformation</strong> / retains a <strong>permanent extension</strong> (does not return to <code>15.0 cm</code>).</p>
+          <p class="ms-cn">中文精析：第 (c) 问算出的 9.0 cm 只是伸长量，必须加上原长 15.0 cm 才能拿到总长度的 A1 分！</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">SME 2 · 长方体极值压强计算与宽履带应用 (g = 9.8 N/kg)</span><span><span class="badge-core">Core</span> <span class="q-marks">[6 marks]</span></span></div>
+      <div class="q-stem-en">
+        A rectangular concrete block of mass <code>300 kg</code> has dimensions <code>1.5 m × 0.40 m × 0.25 m</code>. (<code>g = 9.8 N/kg</code>)<br>
+        (a) Calculate the weight of the concrete block. [1]<br>
+        (b) Calculate the <strong>maximum</strong> pressure and the <strong>minimum</strong> pressure the block can exert when resting flat on horizontal ground. [4]<br>
+        (c) Explain why heavy bulldozers are fitted with wide caterpillar tracks when working on soft mud. [1]
+      </div>
+      <div class="q-stem-cn"><code>300 kg</code> 水泥块尺寸 <code>1.5 m × 0.40 m × 0.25 m</code>，求其放在地面上产生的最大压强与最小压强，并解释履带减压原理。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 6 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">B1</span> (a) <code>W = 300 × 9.8 = <strong>2940 N</strong></code>.</p>
+          <p><span class="ms-mark">C1</span> (b) Maximum pressure uses smallest face area <code>A_min = 0.40 × 0.25 = 0.10 m²</code> ⇒ <span class="ms-mark">A1</span> <code>p_max = 2940 ÷ 0.10 = <strong>29 400 Pa</strong></code>.<br>
+          <span class="ms-mark">C1</span> Minimum pressure uses largest face area <code>A_max = 1.5 × 0.40 = 0.60 m²</code> ⇒ <span class="ms-mark">A1</span> <code>p_min = 2940 ÷ 0.60 = <strong>4900 Pa</strong></code>.</p>
+          <p><span class="ms-mark">B1</span> (c) Wide tracks increase the <strong>contact area</strong>, reducing the <strong>pressure (<code>p = F/A</code>)</strong> on the mud so the bulldozer does not sink.</p>
+          <p class="ms-cn">中文精析：固定重力下，最小面积（两小边相乘）产生最大压强，最大面积（两大边相乘）产生最小压强。</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q ext-only">
+      <div class="exam-q-head"><span class="q-tag">SME 3 · 水库大坝液体压强、绝对压强与闸门受力 (g = 9.8 m/s²)</span><span><span class="badge-ext">Extended</span> <span class="q-marks">[7 marks]</span></span></div>
+      <div class="q-stem-en">
+        A reservoir dam holds back fresh water of density <code>1000 kg/m³</code> to a depth of <code>45 m</code>. Atmospheric pressure is <code>101 kPa</code> and <code>g = 9.8 m/s²</code>.<br>
+        (a) Calculate the pressure caused by the water alone at the base of the dam (<code>45 m</code> depth). [2]<br>
+        (b) Calculate the total pressure at the base of the dam. [1]<br>
+        (c) An inspection hatch of area <code>0.50 m²</code> sits near the base at <code>45 m</code> depth, with air at atmospheric pressure (<code>101 kPa</code>) inside the tunnel behind it. Calculate the net force exerted by the water on the hatch. [2]<br>
+        (d) Explain why the dam wall is built much thicker at the bottom than at the top. [2]
+      </div>
+      <div class="q-stem-cn">水库蓄水深 <code>45 m</code>（水密度 <code>1000 kg/m³</code>，大气压 <code>101 kPa</code>，<code>g = 9.8</code>），求坝底水压、总绝对压强、隧道闸门净受力及大坝上窄下宽原因。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 7 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">C1</span> (a) <code>Δp = ρ g Δh = 1000 × 9.8 × 45</code> <span class="ms-mark">A1</span> <strong><code>441 000 Pa</code></strong> (<code>441 kPa</code>).</p>
+          <p><span class="ms-mark">B1</span> (b) <code>p_total = 101 000 + 441 000 = <strong>542 000 Pa</strong></code> (<code>542 kPa</code>).</p>
+          <p><span class="ms-mark">C1</span> (c) Net pressure difference across hatch = <code>542 000 − 101 000 = 441 000 Pa</code>; <code>F = Δp × A = 441 000 × 0.50</code> <span class="ms-mark">A1</span> <strong><code>220 500 N</code></strong>.</p>
+          <p><span class="ms-mark">B1</span> (d) Liquid pressure <strong>increases with depth</strong> (<code>Δp = ρ g Δh</code>); <span class="ms-mark">B1</span> greater thickness is needed at the bottom to withstand the <strong>much larger sideways force</strong>.</p>
+          <p class="ms-cn">中文精析：第 (c) 问隧道内部已充满 101 kPa 的空气，抵消了水面大气压，故推动闸门的净压强差恰好等于纯粹水压 441 000 Pa！</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">SME 4 · 比例极限、橡皮筋曲线对比与液压刹车系统</span><span><span class="badge-core">Core</span> <span class="badge-ext">Extended</span> <span class="q-marks">[6 marks]</span></span></div>
+      <div class="q-stem-en">
+        (a) State what is meant by the <strong>limit of proportionality</strong> on a load–extension graph for a spring. [2]<br>
+        (b) Describe <strong>two</strong> ways the load–extension graph for a rubber band differs from that of a metal spring. [2]<br>
+        (c) <span class="badge-ext">Ext</span> In a hydraulic braking system, a driver pushes the master piston of area <code>4.0 cm²</code> with a force of <code>60 N</code>. Calculate the force applied to the brake pads by a slave piston of area <code>24 cm²</code>. [2]
+      </div>
+      <div class="q-stem-cn">定义“比例极限”，比较橡皮筋与金属弹簧拉伸曲线的两点差异，并计算液压制动副活塞输出推力。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 6 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">B1</span> (a) The point beyond which <strong>extension is no longer directly proportional to load</strong>;<br>
+          <span class="ms-mark">B1</span> shown on the graph where the line <strong>stops being straight / begins to curve</strong>.</p>
+          <p><span class="ms-mark">B1</span> (b) The graph for rubber is <strong>curved / non-linear from the start</strong> (does not obey Hooke's law);<br>
+          <span class="ms-mark">B1</span> the <strong>unloading curve follows a lower path</strong> than the loading curve (hysteresis loop).</p>
+          <p><span class="ms-mark">C1</span> (c) Pressure transmitted equally: <code>p = 60 ÷ 4.0 = 15 N/cm²</code> ⇒ <code>F₂ = 15 × 24</code> <span class="ms-mark">A1</span> <strong><code>360 N</code></strong>.</p>
+          <p class="ms-cn">中文精析：液压比例计算中只要 A₁ 和 A₂ 同为 cm²，比值可直接消元，不必强行换算为 m²（若题目问压强多少 Pa 则必须先转成 m²！）。</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</article>
+
+<!-- ==================== CONCEPT BANK CH05 ==================== -->
+<article class="topic-section" id="app-concepts">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>本章核心概念与胡克定律压强直接默写库 (16 题)</h3>
+      <div class="section-en-sub">Bilingual Hooke's Law, Elasticity, Solid Pressure &amp; Liquid Pressure Keywords</div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="app-concepts">○ 标记掌握</button>
+  </div>
+
+  <div class="concept-toolbar">
+    <div class="concept-filter-group" id="conceptFilterTabs">
+      <button type="button" class="tab-btn active" data-concept-part="all">全部 16 题</button>
+      <button type="button" class="tab-btn" data-concept-part="p1">5.1–5.2 形变与图像 (4题)</button>
+      <button type="button" class="tab-btn" data-concept-part="p2">5.3 胡克定律 (4题)</button>
+      <button type="button" class="tab-btn" data-concept-part="p3">5.4 固体压强 (4题)</button>
+      <button type="button" class="tab-btn" data-concept-part="p4">5.5 液体压强 (4题)</button>
+    </div>
+    <div class="concept-actions">
+      <span class="concept-count-pill" id="conceptCountPill">显示 16 / 16 题</span>
+      <button type="button" class="icon-btn" id="conceptQuizToggle">🙈 开启遮罩自测</button>
+    </div>
+  </div>
+
+  <div class="concept-grid" id="conceptGrid">
+    <div class="concept-card" data-part="p1">
+      <div class="cq-head"><span class="q-tag">C01 · 5.1 Extension</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">How do you calculate the extension of a spring, and state two precautions in the experiment?</div>
+      <div class="cq-cn">写出伸长量的计算公式，并说出弹簧拉伸实验的两条误差控制措施。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner"><span class="kw">Extension x = stretched length l − unstretched length l₀</span>. Clamp the rule <span class="kw">vertically (using a set square)</span>, attach a <span class="kw">horizontal pointer</span>, and read at <span class="kw">eye level</span> to avoid parallax.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p1">
+      <div class="cq-head"><span class="q-tag">C02 · 5.1 Elastic vs Plastic</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Distinguish between elastic deformation and plastic deformation.</div>
+      <div class="cq-cn">区分弹性形变（Elastic）与塑性形变（Plastic）。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner"><span class="kw">Elastic</span>: returns to <span class="kw">original length/shape</span> when load is removed. <span class="kw">Plastic</span>: keeps a <span class="kw">permanent extension/deformation</span> after load removal.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p1">
+      <div class="cq-head"><span class="q-tag">C03 · 5.2 Proportionality Limit</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Define the limit of proportionality on a load–extension graph.</div>
+      <div class="cq-cn">默写载荷–伸长曲线上“比例极限”的标准英文定义。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">The point beyond which <span class="kw">extension is no longer directly proportional to the load</span> (where the straight-line section <span class="kw">starts to curve</span>).</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p1">
+      <div class="cq-head"><span class="q-tag">C04 · 5.2 Rubber vs Spring</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Why does a rubber band fail to obey Hooke's law, and what happens during unloading?</div>
+      <div class="cq-cn">为什么橡皮筋不遵守胡克定律？加载与卸载路径有何特点？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">Its load–extension graph is <span class="kw">non-linear (S-shaped curve)</span>, not a straight line through the origin. Its <span class="kw">unloading curve lies below</span> the loading curve (energy lost as thermal energy).</div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="p2">
+      <div class="cq-head"><span class="q-tag">C05 · 5.3 Hooke's Law</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">State Hooke's Law in words and as an equation.</div>
+      <div class="cq-cn">写出胡克定律的文字表述与数学表达式。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">Up to the <span class="kw">limit of proportionality</span>, extension is <span class="kw">directly proportional to load</span>: <span class="kw">F = k x</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="p2">
+      <div class="cq-head"><span class="q-tag">C06 · 5.3 Spring Constant</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">Define the spring constant k and state its SI unit.</div>
+      <div class="cq-cn">定义劲度系数 <code>k</code> 并写出其国际单位。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">Spring constant <em>k</em> is the <span class="kw">force per unit extension</span> (<span class="kw">k = F / x</span>). SI unit: <span class="kw">N/m</span> (often also expressed in N/cm).</div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="p2">
+      <div class="cq-head"><span class="q-tag">C07 · 5.3 Gradient Trap</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">How do you obtain k from (i) a Load vs Extension graph and (ii) an Extension vs Load graph?</div>
+      <div class="cq-cn">当坐标轴对调时，如何分别从直线斜率求劲度系数 <code>k</code>？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">(i) If Load <em>F</em> is on y-axis: <span class="kw">k = gradient</span>. (ii) If Extension <em>x</em> is on y-axis: <span class="kw">k = 1 / gradient</span>. Always check axes!</div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="p2">
+      <div class="cq-head"><span class="q-tag">C08 · 5.3 Series &amp; Parallel</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">Two identical springs are joined first in series and then in parallel under the same load F. Compare extensions.</div>
+      <div class="cq-cn">两根相同弹簧挂同一砝码时，串联与并联的总伸长量分别是单根的几倍？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner"><span class="kw">Series</span>: each feels full load <em>F</em>, so total extension = <span class="kw">2x</span>. <span class="kw">Parallel</span>: each supports <em>F</em>/2, so extension = <span class="kw">x / 2</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p3">
+      <div class="cq-head"><span class="q-tag">C09 · 5.4 Pressure Def</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Define pressure, state its formula, and define the unit pascal (Pa).</div>
+      <div class="cq-cn">写出压强定义、公式以及单位帕斯卡（<code>Pa</code>）的含义。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">Pressure is <span class="kw">force per unit area</span> (<span class="kw">p = F / A</span>) acting normal to a surface. <span class="kw">1 Pa = 1 N/m²</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p3">
+      <div class="cq-head"><span class="q-tag">C10 · 5.4 Area Conversion</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">How do you convert an area in cm² into m² before calculating pressure in Pa?</div>
+      <div class="cq-cn">算帕斯卡（<code>Pa</code>）压强前，如何把 <code>cm²</code> 换算为 <code>m²</code>？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">Since 1 m = 100 cm, <span class="kw">1 m² = 10 000 cm²</span>, so <span class="kw">divide cm² by 10 000</span> (multiply by <span class="kw">10⁻⁴</span>).</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p3">
+      <div class="cq-head"><span class="q-tag">C11 · 5.4 Reducing Pressure</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Explain why snowshoes or wide tractor tyres prevent sinking into soft ground.</div>
+      <div class="cq-cn">从公式角度解释雪地鞋与宽轮胎为何能防止陷入松软地面。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">They provide a <span class="kw">large contact area A</span> for the same weight <em>F</em>, which <span class="kw">reduces pressure (p = F / A)</span> on the ground.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p3">
+      <div class="cq-head"><span class="q-tag">C12 · 5.4 Increasing Pressure</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Why does sharpening a knife make it cut much more easily with the same pushing force?</div>
+      <div class="cq-cn">为什么磨快刀刃后用同样大的力能轻松切开物体？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">Sharpening makes the <span class="kw">contact area A tiny</span>, producing a <span class="kw">very large pressure (p = F / A)</span> for the same applied force.</div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="p4">
+      <div class="cq-head"><span class="q-tag">C13 · 5.5 Liquid Pressure</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">Write the equation for the change in pressure beneath the surface of a liquid, defining each symbol.</div>
+      <div class="cq-cn">写出液体内部压强变化公式及每个符号代表的物理量与国际单位。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner"><span class="kw">Δp = ρ g Δh</span>, where <em>ρ</em> is <span class="kw">liquid density (kg/m³)</span>, <em>g</em> = 9.8 m/s², and <em>Δh</em> is <span class="kw">vertical depth below the surface (m)</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="p4">
+      <div class="cq-head"><span class="q-tag">C14 · 5.5 Independence</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">Does liquid pressure at a given depth depend on container width or shape? What directions does it act in?</div>
+      <div class="cq-cn">液体压强是否受容器形状宽窄影响？在同一深度压强指向哪个方向？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner"><span class="kw">Independent of container shape or width</span> (depends only on <em>ρ</em>, <em>g</em>, and depth <em>Δh</em>). At a fixed depth it acts <span class="kw">equally in all directions</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="p4">
+      <div class="cq-head"><span class="q-tag">C15 · 5.5 Dam Wall</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">Why are reservoir dams built much thicker at the bottom than at the top?</div>
+      <div class="cq-cn">为什么水库大坝底部修建得比顶部厚得多？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">Because liquid pressure <span class="kw">increases with depth (Δp = ρgΔh)</span>, so the bottom wall must withstand a <span class="kw">much greater sideways water force</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="p4">
+      <div class="cq-head"><span class="q-tag">C16 · 5.5 Total Pressure</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">How does total absolute pressure underwater differ from Δp = ρgΔh?</div>
+      <div class="cq-cn">水下“绝对总压强”与单纯液体压强公式 <code>Δp = ρgΔh</code> 有何区别？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner"><em>Δp = ρgΔh</em> gives the pressure due to the liquid alone; total pressure adds <span class="kw">atmospheric pressure at the surface</span> (<span class="kw">p_total = p_atm + ρgΔh</span>).</div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+        <nav class="chapter-pager" aria-label="章节切换导航">
+          <div><a class="pager-btn" href="Ch04_Turning_Effects.html">← Ch04 力矩平衡原理、重心与稳定性</a></div>
+          <div><a class="pager-btn primary" href="index.html">🏠 返回 25 章全书总目录</a></div>
+          <div><a class="pager-btn" href="Ch06_Energy_Stores_Transfers.html">Ch06 8 大能量存储、4 路径转移、Sankey 图与机械能 →</a></div>
+        </nav>
+      </div>
+    </main>
+  </div>
+
+  <button type="button" class="back-top-btn" id="backTopBtn" title="返回顶部">↑</button>
+
+  <script>
+(function () {
+  'use strict';
+
+  const THEME_KEY = 'igcse_phy0625_theme';
+  const chapterCode = (document.body && document.body.getAttribute('data-chapter-code')) || 'HUB';
+  const STORAGE_PREFIX = 'igcse_phy0625_' + chapterCode.toLowerCase() + '_';
+  const htmlEl = document.documentElement;
+  const bodyEl = document.body;
+
+  // All state variables declared cleanly at top of IIFE (prevents TDZ errors)
+  let currentViewMode = localStorage.getItem(STORAGE_PREFIX + 'viewMode') || 'all';
+  let activeConceptPart = 'all';
+  let quizMasked = localStorage.getItem(STORAGE_PREFIX + 'quizMasked') === '1';
+  let allMsExpanded = false;
+  let masteredIds = [];
+  try {
+    masteredIds = JSON.parse(localStorage.getItem(STORAGE_PREFIX + 'mastered') || '[]');
+    if (!Array.isArray(masteredIds)) masteredIds = [];
+  } catch (e) {
+    masteredIds = [];
+  }
+
+  // ---------- 1. Theme Toggle ----------
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+
+  function applyTheme(theme) {
+    htmlEl.setAttribute('data-theme', theme);
+    if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem(THEME_KEY, theme);
+  }
+  applyTheme(localStorage.getItem(THEME_KEY) || 'light');
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      applyTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  }
+
+  // ---------- 2. View Mode Filter (All / Core / Extended / SME) ----------
+  function applyViewMode(mode) {
+    currentViewMode = mode;
+    bodyEl.classList.remove('mode-core', 'mode-ext', 'mode-book', 'mode-sme');
+    if (mode === 'core') bodyEl.classList.add('mode-core');
+    if (mode === 'ext') bodyEl.classList.add('mode-ext');
+    if (mode === 'sme') bodyEl.classList.add('mode-sme');
+    document.querySelectorAll('[data-view-mode]').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-view-mode') === mode);
+    });
+    localStorage.setItem(STORAGE_PREFIX + 'viewMode', mode);
+    filterConcepts();
+  }
+  document.querySelectorAll('[data-view-mode]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      applyViewMode(btn.getAttribute('data-view-mode'));
+    });
+  });
+
+  // ---------- 3. Sidebar Drawer & Accordion ----------
+  const sidebar = document.getElementById('sidebar');
+  const menuToggle = document.getElementById('menuToggle');
+  if (menuToggle && sidebar) {
+    menuToggle.addEventListener('click', function () { sidebar.classList.toggle('open'); });
+    sidebar.querySelectorAll('.nav-link').forEach(function (lnk) {
+      lnk.addEventListener('click', function () {
+        if (window.innerWidth <= 980) sidebar.classList.remove('open');
+      });
+    });
+  }
+  document.querySelectorAll('.nav-unit-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const unit = btn.closest('.nav-unit');
+      if (unit) unit.classList.toggle('collapsed');
+    });
+  });
+
+  // ---------- 4. Mastery Progress Tracker ----------
+  const progressText = document.getElementById('progressText');
+  const progressFill = document.getElementById('progressFill');
+  const masterBtns = Array.from(document.querySelectorAll('.master-btn'));
+  const totalSections = masterBtns.length;
+  const validIds = new Set(masterBtns.map(function (b) { return b.getAttribute('data-section-id'); }));
+
+  function renderMastery() {
+    const doneList = masteredIds.filter(function (id) { return validIds.has(id); });
+    localStorage.setItem(STORAGE_PREFIX + 'total', String(totalSections));
+    if (progressText) progressText.textContent = doneList.length + '/' + totalSections;
+    if (progressFill && totalSections > 0) {
+      progressFill.style.width = Math.round((doneList.length / totalSections) * 100) + '%';
+    }
+    masterBtns.forEach(function (btn) {
+      const sid = btn.getAttribute('data-section-id');
+      const done = doneList.indexOf(sid) !== -1;
+      btn.classList.toggle('is-mastered', done);
+      btn.textContent = done ? '✓ 已掌握' : '○ 标记掌握';
+    });
+    document.querySelectorAll('.nav-link').forEach(function (lnk) {
+      const id = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('mastered', doneList.indexOf(id) !== -1);
+    });
+  }
+  masterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const sid = btn.getAttribute('data-section-id');
+      const idx = masteredIds.indexOf(sid);
+      if (idx === -1) masteredIds.push(sid);
+      else masteredIds.splice(idx, 1);
+      localStorage.setItem(STORAGE_PREFIX + 'mastered', JSON.stringify(masteredIds));
+      renderMastery();
+    });
+  });
+  if (totalSections > 0) renderMastery();
+
+  // ---------- 5. Global Toggle Details & Print ----------
+  const toggleAllMs = document.getElementById('toggleAllMs');
+  if (toggleAllMs) {
+    toggleAllMs.addEventListener('click', function () {
+      allMsExpanded = !allMsExpanded;
+      document.querySelectorAll('details.ms-details').forEach(function (det) { det.open = allMsExpanded; });
+      const lbl = toggleAllMs.querySelector('.btn-label');
+      if (lbl) lbl.textContent = allMsExpanded ? '收起解析' : '展开解析';
+      toggleAllMs.classList.toggle('active', allMsExpanded);
+    });
+  }
+  const printBtn = document.getElementById('printBtn');
+  if (printBtn) printBtn.addEventListener('click', function () { window.print(); });
+
+  // ---------- 6. Instant Search ----------
+  const searchInput = document.getElementById('searchInput');
+  const searchClear = document.getElementById('searchClear');
+  const searchBar = document.getElementById('searchBar');
+  const searchSummary = document.getElementById('searchSummary');
+  const searchResetBtn = document.getElementById('searchResetBtn');
+  const emptySearchNotice = document.getElementById('emptySearchNotice');
+
+  function runSearch() {
+    if (!searchInput) return;
+    const raw = searchInput.value.trim().toLowerCase();
+    if (searchClear) searchClear.style.display = raw ? 'block' : 'none';
+    const sections = Array.from(document.querySelectorAll('.topic-section'));
+    if (!raw) {
+      sections.forEach(function (s) { s.classList.remove('search-dim'); });
+      if (searchBar) searchBar.classList.remove('visible');
+      if (emptySearchNotice) emptySearchNotice.style.display = 'none';
+      return;
+    }
+    let hits = 0;
+    sections.forEach(function (sec) {
+      const ok = sec.textContent.toLowerCase().indexOf(raw) !== -1;
+      sec.classList.toggle('search-dim', !ok);
+      if (ok) hits++;
+    });
+    if (searchBar) searchBar.classList.add('visible');
+    if (searchSummary) searchSummary.textContent = '关键词 “' + searchInput.value.trim() + '” 匹配 ' + hits + ' 个板块';
+    if (emptySearchNotice) emptySearchNotice.style.display = hits === 0 ? 'block' : 'none';
+  }
+  if (searchInput) searchInput.addEventListener('input', runSearch);
+  function resetSearch() { if (searchInput) searchInput.value = ''; runSearch(); }
+  if (searchClear) searchClear.addEventListener('click', resetSearch);
+  if (searchResetBtn) searchResetBtn.addEventListener('click', resetSearch);
+
+  // ---------- 7. Interactive MCQ Grading ----------
+  document.querySelectorAll('.exam-q[data-mcq-answer]').forEach(function (qBox) {
+    const ans = qBox.getAttribute('data-mcq-answer');
+    const fb = qBox.querySelector('.mcq-feedback');
+    const opts = qBox.querySelectorAll('.mcq-opt');
+    opts.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const chosen = btn.getAttribute('data-opt');
+        opts.forEach(function (o) { o.classList.remove('correct', 'wrong'); });
+        if (chosen === ans) {
+          btn.classList.add('correct');
+          if (fb) { fb.textContent = fb.getAttribute('data-ok') || '✅ 回答正确！'; fb.className = 'mcq-feedback visible ok'; }
+        } else {
+          btn.classList.add('wrong');
+          opts.forEach(function (o) { if (o.getAttribute('data-opt') === ans) o.classList.add('correct'); });
+          if (fb) { fb.textContent = fb.getAttribute('data-err') || '❌ 未选对，请对照解析复盘。'; fb.className = 'mcq-feedback visible err'; }
+        }
+      });
+    });
+  });
+
+  // ---------- 8. Concept Bank Filter & Mask ----------
+  const conceptCountPill = document.getElementById('conceptCountPill');
+  const conceptQuizToggle = document.getElementById('conceptQuizToggle');
+
+  function filterConcepts() {
+    const cards = Array.from(document.querySelectorAll('#conceptGrid .concept-card'));
+    if (!cards.length) return;
+    let visible = 0;
+    cards.forEach(function (card) {
+      const part = card.getAttribute('data-part');
+      const isExt = card.classList.contains('ext-only');
+      const matchesTab = activeConceptPart === 'all' || part === activeConceptPart;
+      const matchesTier = currentViewMode !== 'core' || !isExt;
+      const show = matchesTab && matchesTier;
+      card.classList.toggle('concept-hidden', !show);
+      if (show) visible++;
+    });
+    if (conceptCountPill) conceptCountPill.textContent = '显示 ' + visible + ' / ' + cards.length + ' 题';
+  }
+
+  document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      activeConceptPart = btn.getAttribute('data-concept-part');
+      document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      filterConcepts();
+    });
+  });
+
+  function applyQuizMask(masked) {
+    quizMasked = masked;
+    document.querySelectorAll('#conceptGrid .concept-card').forEach(function (c) { c.classList.toggle('masked', masked); });
+    if (conceptQuizToggle) {
+      conceptQuizToggle.textContent = masked ? '👁️ 显示全部答案' : '🙈 开启遮罩自测';
+      conceptQuizToggle.classList.toggle('active', masked);
+    }
+    localStorage.setItem(STORAGE_PREFIX + 'quizMasked', masked ? '1' : '0');
+  }
+  if (conceptQuizToggle) {
+    conceptQuizToggle.addEventListener('click', function () { applyQuizMask(!quizMasked); });
+  }
+  document.querySelectorAll('#conceptGrid .cq-answer').forEach(function (box) {
+    box.addEventListener('click', function () {
+      const card = box.closest('.concept-card');
+      if (card && card.classList.contains('masked')) card.classList.remove('masked');
+    });
+  });
+
+  // ---------- 9. 2D Mini-Plot Helper (Zero HTML tags inside SVG) ----------
+  function makePlot(w, h, xmin, xmax, ymin, ymax) {
+    const pad = 22;
+    return {
+      w: w, h: h, xmin: xmin, xmax: xmax, ymin: ymin, ymax: ymax,
+      toX: function (x) { return pad + ((x - xmin) / (xmax - xmin)) * (w - 2 * pad); },
+      toY: function (y) { return h - pad - ((y - ymin) / (ymax - ymin)) * (h - 2 * pad); }
+    };
+  }
+  function plotBase(p, xLbl, yLbl) {
+    let s = '<rect x="2" y="2" width="' + (p.w - 4) + '" height="' + (p.h - 4) + '" rx="6" fill="none" stroke="var(--svg-grid)" stroke-width="1"/>';
+    for (let i = 1; i <= 4; i++) {
+      const gx = p.xmin + (i / 5) * (p.xmax - p.xmin);
+      const gy = p.ymin + (i / 5) * (p.ymax - p.ymin);
+      s += '<line x1="' + p.toX(gx).toFixed(1) + '" y1="12" x2="' + p.toX(gx).toFixed(1) + '" y2="' + (p.h - 12) + '" stroke="var(--svg-grid)" stroke-width="0.7"/>';
+      s += '<line x1="12" y1="' + p.toY(gy).toFixed(1) + '" x2="' + (p.w - 12) + '" y2="' + p.toY(gy).toFixed(1) + '" stroke="var(--svg-grid)" stroke-width="0.7"/>';
+    }
+    const ox = p.xmin <= 0 && p.xmax >= 0 ? p.toX(0) : 22;
+    const oy = p.ymin <= 0 && p.ymax >= 0 ? p.toY(0) : p.h - 22;
+    s += '<line x1="' + ox.toFixed(1) + '" y1="10" x2="' + ox.toFixed(1) + '" y2="' + (p.h - 10) + '" stroke="var(--svg-muted)" stroke-width="1.5"/>';
+    s += '<line x1="10" y1="' + oy.toFixed(1) + '" x2="' + (p.w - 10) + '" y2="' + oy.toFixed(1) + '" stroke="var(--svg-muted)" stroke-width="1.5"/>';
+    s += '<text x="' + Math.min(p.w - 45, ox + 6).toFixed(1) + '" y="20" font-size="10.5" font-weight="700" fill="var(--svg-muted)">' + (yLbl || 'y') + '</text>';
+    s += '<text x="' + (p.w - 14) + '" y="' + Math.max(20, oy - 5).toFixed(1) + '" text-anchor="end" font-size="10.5" font-weight="700" fill="var(--svg-muted)">' + (xLbl || 'x') + '</text>';
+    return s;
+  }
+  function plotPath(p, fn, col, dashed) {
+    let d = '', pen = false;
+    for (let i = 0; i <= 100; i++) {
+      const x = p.xmin + (i / 100) * (p.xmax - p.xmin);
+      const y = fn(x);
+      if (!Number.isFinite(y) || y < p.ymin - 1 || y > p.ymax + 1) { pen = false; continue; }
+      d += (pen ? ' L ' : ' M ') + p.toX(x).toFixed(1) + ' ' + p.toY(y).toFixed(1);
+      pen = true;
+    }
+    return d ? '<path d="' + d.trim() + '" fill="none" stroke="' + col + '" stroke-width="2.4"' + (dashed ? ' stroke-dasharray="5,3"' : '') + '/>' : '';
+  }
+
+  // ---------- 10. All 25 Interactive Physics Labs (p01 – p25) ----------
+  function mountPhysicsLab(el) {
+    const t = el.getAttribute('data-lab-type');
+    if (!t) return;
+
+    const bindInputs = function (fn) {
+      el.querySelectorAll('input,select').forEach(function (inp) {
+        inp.addEventListener('input', fn);
+        inp.addEventListener('change', fn);
+      });
+      fn();
+    };
+
+    if (t === 'p01') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 1 交互实验室 · 密度 ρ = m/V 与排水法浮沉判断仪</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>质量 m (g)：<input type="range" id="p1M" min="10" max="300" value="180"><span id="p1ML">180 g</span></label>' +
+        '<label>排开液体体积 ΔV (cm³)：<input type="range" id="p1V" min="10" max="200" value="120"><span id="p1VL">120 cm³</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p1Svg" viewBox="0 0 360 230" width="360" height="230"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p1Out1"></div><div class="readout-pill" id="p1Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const m = Number(el.querySelector('#p1M').value), v = Number(el.querySelector('#p1V').value);
+        el.querySelector('#p1ML').textContent = m + ' g'; el.querySelector('#p1VL').textContent = v + ' cm³';
+        const rho = m / v;
+        const float = rho < 1.0;
+        el.querySelector('#p1Out1').textContent = '密度 ρ = ' + m + ' / ' + v + ' = ' + rho.toFixed(2) + ' g/cm³ (' + Math.round(rho * 1000) + ' kg/m³)';
+        el.querySelector('#p1Out2').textContent = float ? '✅ ρ < 1.0 g/cm³ → 漂浮于纯水面 (Floats)；若完全浸没需细针轻按且留意视差' : Math.abs(rho - 1.0) < 0.02 ? '⚖️ ρ ≈ 1.0 g/cm³ → 悬浮水中' : '⬇️ ρ > 1.0 g/cm³ → 沉入水底 (Sinks)！';
+        const yObj = float ? 86 : 158;
+        el.querySelector('#p1Svg').innerHTML =
+          '<rect x="110" y="34" width="140" height="164" fill="none" stroke="var(--svg-ink)" stroke-width="2.2"/>' +
+          '<rect x="112" y="88" width="136" height="108" fill="rgba(2,132,199,0.22)"/>' +
+          '<rect x="155" y="' + yObj + '" width="50" height="36" rx="4" fill="' + (float ? 'var(--svg-amber)' : 'var(--svg-indigo)') + '"/>' +
+          '<text x="180" y="218" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-ink)">水密度 ρ_water = 1.00 g/cm³</text>';
+      });
+    } else if (t === 'p02') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 2 交互实验室 · v-t 图像加速度斜率与积分面积位移台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>初速度 u (m/s)：<input type="number" id="p2U" value="4"></label>' +
+        '<label>末速度 v (m/s)：<input type="number" id="p2V" value="20"></label>' +
+        '<label>时间 t (s)：<input type="number" id="p2T" value="8" min="1"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p2Svg" viewBox="0 0 360 230" width="360" height="230"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p2Acc"></div><div class="readout-pill" id="p2Dist"></div></div></div></div>';
+      bindInputs(function () {
+        const u = Number(el.querySelector('#p2U').value) || 0, v = Number(el.querySelector('#p2V').value) || 0, tm = Math.max(1, Number(el.querySelector('#p2T').value) || 8);
+        const a = (v - u) / tm, s = 0.5 * (u + v) * tm;
+        const p = makePlot(360, 230, 0, tm * 1.15, Math.min(0, u, v) - 2, Math.max(10, u, v) * 1.15);
+        let svg = plotBase(p, 't (s)', 'v (m/s)');
+        svg += '<polygon points="' + p.toX(0).toFixed(1) + ',' + p.toY(0).toFixed(1) + ' ' + p.toX(0).toFixed(1) + ',' + p.toY(u).toFixed(1) + ' ' + p.toX(tm).toFixed(1) + ',' + p.toY(v).toFixed(1) + ' ' + p.toX(tm).toFixed(1) + ',' + p.toY(0).toFixed(1) + '" fill="rgba(2,132,199,0.2)" stroke="var(--svg-blue)" stroke-width="2"/>';
+        el.querySelector('#p2Svg').innerHTML = svg;
+        el.querySelector('#p2Acc').textContent = '斜率即加速度 a = (v − u)/t = ' + a.toFixed(2) + ' m/s² ' + (a < 0 ? '(减速 Deceleration)' : a > 0 ? '(匀加速)' : '(匀速)');
+        el.querySelector('#p2Dist').textContent = '图像下方面积 = 梯形 ½(u+v)t = ' + s.toFixed(1) + ' m | 平均速率 = ' + (s / tm).toFixed(2) + ' m/s';
+      });
+    } else if (t === 'p03') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 3 交互实验室 · 非弹性碰撞动量守恒 (m₁u₁ = (m₁+m₂)v) 与冲量</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>m₁ (kg)：<input type="number" id="p3M1" value="3" min="1"></label><label>u₁ (m/s)：<input type="number" id="p3U1" value="6"></label>' +
+        '<label>m₂ (kg)：<input type="number" id="p3M2" value="6" min="1"></label><label>作用时间 Δt (s)：<input type="number" id="p3Dt" value="0.2" step="0.1" min="0.05"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p3Out1"></div><div class="readout-pill" id="p3Out2"></div></div></div>';
+      bindInputs(function () {
+        const m1 = Math.max(0.5, Number(el.querySelector('#p3M1').value) || 3), u1 = Number(el.querySelector('#p3U1').value) || 0;
+        const m2 = Math.max(0.5, Number(el.querySelector('#p3M2').value) || 6), dt = Math.max(0.05, Number(el.querySelector('#p3Dt').value) || 0.2);
+        const v = (m1 * u1) / (m1 + m2);
+        const imp = m2 * v;
+        el.querySelector('#p3Out1').textContent = '合体后共同速度 v = m₁u₁/(m₁+m₂) = ' + v.toFixed(2) + ' m/s | 碰前总动量 = ' + (m1 * u1).toFixed(1) + ' kg·m/s';
+        el.querySelector('#p3Out2').textContent = 'm₂ 所受冲量 Δp = ' + imp.toFixed(2) + ' N·s | 平均碰撞力 F = Δp/Δt = ' + (imp / dt).toFixed(1) + ' N（时间越长冲击力越小！）';
+      });
+    } else if (t === 'p04') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 4 交互实验室 · 杠杆力矩平衡 (M = Fd) 与支点向上支持力</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>左力 F₁ (N)：<input type="number" id="p4F1" value="60"></label><label>左臂 d₁ (m)：<input type="number" id="p4D1" value="2.0" step="0.5"></label>' +
+        '<label>右臂 d₂ (m)：<input type="number" id="p4D2" value="3.0" step="0.5" min="0.5"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p4Out1"></div><div class="readout-pill" id="p4Out2"></div></div></div>';
+      bindInputs(function () {
+        const f1 = Number(el.querySelector('#p4F1').value) || 0, d1 = Number(el.querySelector('#p4D1').value) || 0, d2 = Math.max(0.5, Number(el.querySelector('#p4D2').value) || 1);
+        const f2 = (f1 * d1) / d2;
+        el.querySelector('#p4Out1').textContent = '逆时针力矩 F₁d₁ = ' + (f1 * d1).toFixed(1) + ' N·m ⇒ 平衡所需右力 F₂ = ' + f2.toFixed(2) + ' N';
+        el.querySelector('#p4Out2').textContent = '支点向上总支持力 (Net upward force) = F₁ + F₂ = ' + (f1 + f2).toFixed(2) + ' N（平衡需满足合力=0且合力矩=0！）';
+      });
+    } else if (t === 'p05') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 5 交互实验室 · 胡克定律 F = kx 与液体压强 Δp = ρgΔh 计算台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>原长 l₀ (cm)：<input type="number" id="p5L0" value="12"></label><label>劲度系数 k (N/cm)：<input type="number" id="p5K" value="2.5" step="0.5"></label>' +
+        '<label>拉力 F (N)：<input type="number" id="p5F" value="15"></label><label>水深 Δh (m)：<input type="number" id="p5H" value="5"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p5Out1"></div><div class="readout-pill" id="p5Out2"></div></div></div>';
+      bindInputs(function () {
+        const l0 = Number(el.querySelector('#p5L0').value) || 12, k = Math.max(0.1, Number(el.querySelector('#p5K').value) || 2.5);
+        const F = Number(el.querySelector('#p5F').value) || 0, h = Number(el.querySelector('#p5H').value) || 0;
+        const x = F / k;
+        el.querySelector('#p5Out1').textContent = '伸长量 Extension x = F/k = ' + x.toFixed(2) + ' cm ⇒ 总长度 Total length = ' + (l0 + x).toFixed(2) + ' cm（注意考题常问总长还是伸长量！）';
+        el.querySelector('#p5Out2').textContent = '水下 Δh = ' + h + ' m 处液体附加压强 Δp = 1000 × 9.8 × ' + h + ' = ' + (1000 * 9.8 * h).toLocaleString() + ' Pa';
+      });
+    } else if (t === 'p06') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 6 交互实验室 · 自由落体机械能转换 (mgΔh ↔ ½mv²) 与效率 η</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>质量 m (kg)：<input type="number" id="p6M" value="4"></label><label>高度 Δh (m)：<input type="number" id="p6H" value="5"></label>' +
+        '<label>效率 η (%)：<input type="range" id="p6E" min="20" max="100" value="80"><span id="p6EL">80%</span></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p6Out1"></div><div class="readout-pill" id="p6Out2"></div></div></div>';
+      bindInputs(function () {
+        const m = Math.max(0.1, Number(el.querySelector('#p6M').value) || 4), h = Math.max(0, Number(el.querySelector('#p6H').value) || 5), eff = Number(el.querySelector('#p6E').value) / 100;
+        el.querySelector('#p6EL').textContent = Math.round(eff * 100) + '%';
+        const gpe = m * 9.8 * h, ke = gpe * eff, v = Math.sqrt((2 * ke) / m);
+        el.querySelector('#p6Out1').textContent = '初始重力势能 ΔE_p = m × 9.8 × ' + h + ' = ' + gpe.toFixed(1) + ' J | 转化为动能 E_k = ' + ke.toFixed(1) + ' J（热耗散 ' + (gpe - ke).toFixed(1) + ' J）';
+        el.querySelector('#p6Out2').textContent = '到达底端速度 v = √(2gΔh·η) = ' + v.toFixed(2) + ' m/s（注意无空气阻力时 η=100% 且速度与质量 m 无关！）';
+      });
+    } else if (t === 'p07') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 7 交互实验室 · 能源类型、太阳源头辨析与发电对比筛查仪</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>选择发电能源：<select id="p7Src"><option value="solar">太阳能光伏 (Solar cell)</option><option value="wind">风力发电 (Wind)</option><option value="hydro">水力蓄能 (Hydroelectric)</option><option value="geo">地热能 (Geothermal)</option><option value="nuc">核裂变 (Nuclear)</option><option value="tidal">潮汐能 (Tidal)</option><option value="coal">燃煤火电 (Fossil fuel)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p7Out1"></div><div class="readout-pill" id="p7Out2"></div></div></div>';
+      const MAP7 = {
+        solar: { sun: '✅ 直接来自太阳 (Direct solar radiation)', ren: '可再生 (Renewable) · 运行零 CO₂', prop: '直接光生电无需涡轮机；缺点：夜间阴天间歇、占地面积大。' },
+        wind: { sun: '✅ 间接来自太阳 (太阳不均加热引发空气对流)', ren: '可再生 (Renewable) · 零温室气体', prop: '视觉噪音争议与风速不可控间歇发电，需储能或调峰电站。' },
+        hydro: { sun: '✅ 间接来自太阳 (蒸发降雨水循环)', ren: '可再生 (Renewable) · 响应极快 (几秒启动)', prop: '适合峰值调频，但筑坝淹没生态耕地、受地理落差限制。' },
+        geo: { sun: '❌ 非太阳能！源自地球内部放射性衰变余热', ren: '可再生 (Renewable) · 24h 基荷稳定不看天', prop: '仅限板块活跃火山地热带钻井成本极高（全纲三大非太阳能之一！）。' },
+        nuc: { sun: '❌ 非太阳能！重核铀/钚裂变或氢聚变', ren: '不可再生 (Non-renewable) · 运行零 CO₂', prop: '能量密度极高、全天候稳发；痛点：高放核废料千万年封存与事故风险。' },
+        tidal: { sun: '❌ 主要非太阳能！源自月球与太阳引力潮汐牵引', ren: '可再生 (Renewable) · 天文时刻可精准预测', prop: '建设拦潮坝改变河口湿地生态、影响航运，仅特定海湾适用。' },
+        coal: { sun: '✅ 远古太阳能储存 (史前植物煤炭)', ren: '不可再生 (Non-renewable)', prop: '优点：高可靠可随时启停；致命缺点：排放 CO₂ 加剧温室效应与酸雨。' }
+      };
+      bindInputs(function () {
+        const d = MAP7[el.querySelector('#p7Src').value];
+        el.querySelector('#p7Out1').textContent = '溯源检查：' + d.sun + ' | 属性：' + d.ren;
+        el.querySelector('#p7Out2').textContent = '优缺点与原理：' + d.prop;
+      });
+    } else if (t === 'p08') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 8 交互实验室 · 起重机做功 W = Fd、功率 P = W/t 与功率效率计算</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>提升质量 m (kg)：<input type="number" id="p8M" value="50"></label><label>垂直高度 h (m)：<input type="number" id="p8H" value="12"></label>' +
+        '<label>耗时 t (s)：<input type="number" id="p8T" value="10" min="1"></label><label>电机输入功率 P_in (W)：<input type="number" id="p8Pin" value="800" min="1"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p8Out1"></div><div class="readout-pill" id="p8Out2"></div></div></div>';
+      bindInputs(function () {
+        const m = Number(el.querySelector('#p8M').value) || 50, h = Number(el.querySelector('#p8H').value) || 12, tm = Math.max(1, Number(el.querySelector('#p8T').value) || 10);
+        const w = m * 9.8 * h, pout = w / tm, pin = Math.max(pout, Number(el.querySelector('#p8Pin').value) || pout);
+        el.querySelector('#p8Out1').textContent = '有用机械功 W = mgh = ' + w.toFixed(1) + ' J | 有用输出功率 P_out = W/t = ' + pout.toFixed(1) + ' W';
+        el.querySelector('#p8Out2').textContent = '效率 η = (P_out / P_in) × 100% = ' + ((pout / pin) * 100).toFixed(1) + '%（记得先用 g = 9.8 算重量！）';
+      });
+    } else if (t === 'p09') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 9 交互实验室 · 玻意耳定律 p₁V₁ = p₂V₂ 与开尔文温度转换台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>初压 p₁ (kPa)：<input type="number" id="p9P1" value="100"></label><label>初体积 V₁ (cm³)：<input type="number" id="p9V1" value="60"></label>' +
+        '<label>压缩后体积 V₂ (cm³)：<input type="range" id="p9V2" min="15" max="120" value="30"><span id="p9VL">30</span></label>' +
+        '<label>摄氏温度 θ (°C)：<input type="number" id="p9C" value="27"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p9Svg" viewBox="0 0 360 220" width="360" height="220"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p9Out1"></div><div class="readout-pill" id="p9Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const p1 = Number(el.querySelector('#p9P1').value) || 100, v1 = Number(el.querySelector('#p9V1').value) || 60, v2 = Number(el.querySelector('#p9V2').value) || 30;
+        const cTemp = Number(el.querySelector('#p9C').value) || 0, p2 = (p1 * v1) / v2;
+        el.querySelector('#p9VL').textContent = v2 + ' cm³';
+        const plt = makePlot(360, 220, 10, 130, 0, Math.max(450, p2 * 1.15));
+        let svg = plotBase(plt, 'V', 'p');
+        svg += plotPath(plt, function (x) { return (p1 * v1) / x; }, 'var(--svg-amber)', false);
+        svg += '<circle cx="' + plt.toX(v2).toFixed(1) + '" cy="' + plt.toY(p2).toFixed(1) + '" r="5" fill="var(--svg-red)"/>';
+        el.querySelector('#p9Svg').innerHTML = svg;
+        el.querySelector('#p9Out1').textContent = '定温玻意耳：p₂ = p₁V₁/V₂ = ' + p2.toFixed(1) + ' kPa（体积减半 ⇒ 单位体积分子更密集 ⇒ 撞击器壁频率翻倍！）';
+        el.querySelector('#p9Out2').textContent = '开尔文绝对温标 T(K) = θ(°C) + 273 = ' + (cTemp + 273) + ' K（绝对零度 0 K = −273 °C，分子动能最小）';
+      });
+    } else if (t === 'p10') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 10 交互实验室 · 比热容 ΔE = mcΔθ 与电热实验能量守恒计算</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>质量 m (kg)：<input type="number" id="p10M" value="2.0" step="0.5"></label>' +
+        '<label>比热容 c (J/kg°C)：<input type="number" id="p10C" value="4200"></label>' +
+        '<label>温升 Δθ (°C)：<input type="number" id="p10Dt" value="15"></label>' +
+        '<label>加热器功率 P (W)：<input type="number" id="p10P" value="2100"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p10Out1"></div><div class="readout-pill" id="p10Out2"></div></div></div>';
+      bindInputs(function () {
+        const m = Number(el.querySelector('#p10M').value) || 2, c = Number(el.querySelector('#p10C').value) || 4200, dt = Number(el.querySelector('#p10Dt').value) || 15, P = Math.max(10, Number(el.querySelector('#p10P').value) || 2100);
+        const e = m * c * dt, tSec = e / P;
+        el.querySelector('#p10Out1').textContent = '所需内能增量 ΔE = mcΔθ = ' + e.toLocaleString() + ' J (' + (e / 1000).toFixed(1) + ' kJ)';
+        el.querySelector('#p10Out2').textContent = '理想加热时间 t = ΔE/P = ' + tSec.toFixed(1) + ' s | 实际测定 c_exp 常偏大！原因：部分热量散失给空气/杯壁，需加盖保温并取稳态温度';
+      });
+    } else if (t === 'p11') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 11 交互实验室 · 热传导、对流与 Leslie 表面热辐射对比台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>选择对比情景：<select id="p11M"><option value="leslie">Leslie 立方体红外发射对比</option><option value="vacuum">真空保温瓶四层隔热解析</option><option value="breeze">白天海风 vs 夜晚陆风循环</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p11Out1"></div><div class="readout-pill" id="p11Out2"></div></div></div>';
+      const MAP11 = {
+        leslie: ['哑光黑 (Matt Black) = 最佳吸收者 (Good absorber) 且最佳辐射发射者 (Best emitter)；银白亮面 (Shiny Silver) = 最佳反射面 (Best reflector) 且最差发射者！', '实验注意：各面到红外探测器距离必须相同、初始水温相同以保证公平控制变量 (Fair test)。'],
+        vacuum: ['真空夹层 (Vacuum gap) → 阻止传导 Conduction 与对流 Convection（均需介质粒子）；塑料瓶塞+密封盖 → 阻断对流热空气逸散与蒸发。', '内壁镀银表面 (Silvered surfaces) → 将红外辐射发射与吸收降到最低并反射回瓶内！'],
+        breeze: ['白天海风 (Sea breeze)：陆地比热容远小于海水，升温更快 → 陆地热空气膨胀密度变小上升 → 海洋凉爽高压空气吹向陆地补位。', '夜晚陆风 (Land breeze)：陆地降温快、海水仍较暖 → 海上暖空气上升，陆风由陆吹向海。']
+      };
+      bindInputs(function () {
+        const d = MAP11[el.querySelector('#p11M').value];
+        el.querySelector('#p11Out1').textContent = d[0];
+        el.querySelector('#p11Out2').textContent = d[1];
+      });
+    } else if (t === 'p12') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 12 交互实验室 · 声波示波器 (CRO) 振幅响度 / 频率音调波形台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>振幅 (响度 Loudness)：<input type="range" id="p12A" min="1" max="5" step="0.5" value="3"><span id="p12AL">3</span></label>' +
+        '<label>频率系数 (音调 Pitch)：<input type="range" id="p12F" min="1" max="6" step="0.5" value="2"><span id="p12FL">2</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p12Svg" viewBox="0 0 360 210" width="360" height="210"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p12Out1"></div><div class="readout-pill" id="p12Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const amp = Number(el.querySelector('#p12A').value), f = Number(el.querySelector('#p12F').value);
+        el.querySelector('#p12AL').textContent = amp; el.querySelector('#p12FL').textContent = f;
+        const plt = makePlot(360, 210, 0, 10, -5.5, 5.5);
+        let svg = plotBase(plt, 't', 'y');
+        svg += plotPath(plt, function (x) { return amp * Math.sin(f * x * 1.2); }, 'var(--svg-purple)', false);
+        el.querySelector('#p12Svg').innerHTML = svg;
+        el.querySelector('#p12Out1').textContent = '振幅 Amplitude = ' + amp + ' 格 ⇒ 控制响度 (Loudness) | 频率系数 ' + f + ' ⇒ 波数越密音调越高 (Pitch)';
+        el.querySelector('#p12Out2').textContent = '人耳可听声域：20 Hz – 20 000 Hz (> 20 kHz 为超声波 Ultrasound，声波为纵波，真空不能传播！)';
+      });
+    } else if (t === 'p13') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 13 交互实验室 · 斯涅尔定律 n = sin i / sin r 与全内反射临界角光线台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>光由玻璃 (n=<input type="number" id="p13N" value="1.50" step="0.05" min="1.2" max="2.4">) 射向空气 | 入射角 i (°)：<input type="range" id="p13I" min="5" max="80" value="35"><span id="p13IL">35°</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p13Svg" viewBox="0 0 360 220" width="360" height="220"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p13Out1"></div><div class="readout-pill" id="p13Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const n = Math.max(1.1, Number(el.querySelector('#p13N').value) || 1.5), inc = Number(el.querySelector('#p13I').value);
+        el.querySelector('#p13IL').textContent = inc + '°';
+        const cDeg = (Math.asin(1 / n) * 180) / Math.PI;
+        const sinR = n * Math.sin((inc * Math.PI) / 180);
+        const tir = sinR > 1.0001;
+        const radI = (inc * Math.PI) / 180;
+        const ix = 180 - 95 * Math.sin(radI), iy = 110 + 95 * Math.cos(radI);
+        let outRay = '';
+        if (tir) {
+          const rx = 180 + 95 * Math.sin(radI), ry = 110 + 95 * Math.cos(radI);
+          outRay = '<line x1="180" y1="110" x2="' + rx.toFixed(1) + '" y2="' + ry.toFixed(1) + '" stroke="var(--svg-red)" stroke-width="2.6"/>';
+        } else {
+          const radR = Math.asin(Math.min(1, sinR));
+          const rx = 180 + 95 * Math.sin(radR), ry = 110 - 95 * Math.cos(radR);
+          outRay = '<line x1="180" y1="110" x2="' + rx.toFixed(1) + '" y2="' + ry.toFixed(1) + '" stroke="var(--svg-blue)" stroke-width="2.6"/>';
+        }
+        el.querySelector('#p13Svg').innerHTML =
+          '<rect x="10" y="110" width="340" height="100" fill="rgba(2,132,199,0.16)"/>' +
+          '<line x1="10" y1="110" x2="350" y2="110" stroke="var(--svg-ink)" stroke-width="1.5"/>' +
+          '<line x1="180" y1="12" x2="180" y2="208" stroke="var(--svg-muted)" stroke-width="1.4" stroke-dasharray="4,3"/>' +
+          '<line x1="' + ix.toFixed(1) + '" y1="' + iy.toFixed(1) + '" x2="180" y2="110" stroke="var(--svg-amber)" stroke-width="2.6"/>' + outRay +
+          '<text x="20" y="28" font-size="11" font-weight="700" fill="var(--svg-muted)">空气 Air (n=1)</text><text x="20" y="198" font-size="11" font-weight="700" fill="var(--svg-ink)">玻璃 Glass (n=' + n.toFixed(2) + ')</text>';
+        el.querySelector('#p13Out1').textContent = '临界角 Critical angle c = arcsin(1/n) = ' + cDeg.toFixed(1) + '°';
+        el.querySelector('#p13Out2').textContent = tir ? '🔴 i > c！发生全内反射 (Total Internal Reflection, TIR)：反射角 r = i = ' + inc + '°' : '🔵 发生折射离开法线：折射角 r = ' + ((Math.asin(sinR) * 180) / Math.PI).toFixed(1) + '°';
+      });
+    } else if (t === 'p14') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 14 交互实验室 · 波速 v = fλ、周期 T = 1/f 与水波深浅折射台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>频率 f (Hz)：<input type="number" id="p14F" value="10" min="1"></label>' +
+        '<label>深水波长 λ_deep (m)：<input type="number" id="p14L1" value="0.6" step="0.1" min="0.1"></label>' +
+        '<label>浅水波长 λ_shallow (m)：<input type="number" id="p14L2" value="0.3" step="0.1" min="0.05"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p14Out1"></div><div class="readout-pill" id="p14Out2"></div></div></div>';
+      bindInputs(function () {
+        const f = Math.max(0.1, Number(el.querySelector('#p14F').value) || 10), l1 = Number(el.querySelector('#p14L1').value) || 0.6, l2 = Number(el.querySelector('#p14L2').value) || 0.3;
+        el.querySelector('#p14Out1').textContent = '周期 T = 1/f = ' + (1 / f).toFixed(3) + ' s | 深水波速 v₁ = ' + (f * l1).toFixed(2) + ' m/s | 浅水波速 v₂ = ' + (f * l2).toFixed(2) + ' m/s';
+        el.querySelector('#p14Out2').textContent = '水波槽铁律：深水进入浅水时【频率 f 绝对不变】，波速 v 减小、波长 λ 缩短，向法线偏折！';
+      });
+    } else if (t === 'p15') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 15 交互实验室 · 电磁波谱排序、波长换算 (c = 3×10⁸ m/s) 与应用速查</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>波段选择：<select id="p15B"><option value="rad">1. Radio waves 无线电波</option><option value="mic">2. Microwaves 微波</option><option value="ir">3. Infrared 红外线</option><option value="vis">4. Visible light 可见光</option><option value="uv">5. Ultraviolet 紫外线</option><option value="xray">6. X-rays X射线</option><option value="gam">7. Gamma rays γ射线</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p15Out1"></div><div class="readout-pill" id="p15Out2"></div></div></div>';
+      const MAP15 = {
+        rad: ['最长波长 / 最低频率 / 最小光子能量；真空速度 3.0 × 10⁸ m/s。', '应用：广播电视、RFID 射频识别、射电望远镜；通常非电离无明显组织热损伤。'],
+        mic: ['穿透云层与电离层能力强，且能引起食物水分子共振发热。', '应用：卫星电视与 GPS 通信、手机 Wi-Fi/蓝牙、微波炉；危害：过强内部加热人体体液组织。'],
+        ir: ['热物体发射红外辐射（红外热成像）。', '应用：电视遥控器、光纤短距通信、防盗红外警报、电暖器；危害：高强度皮肤灼伤。'],
+        vis: ['红 (700 nm, 折射最少) → 紫 (400 nm, 折射最多)。', '应用：人眼视觉、照相、高速长距离单模光纤宽带通信 (配合全内反射 TIR)。'],
+        uv: ['频率高于紫光，能激发荧光粉发光与灭菌。', '应用：防伪验钞、水消毒；危害：晒伤皮肤、早衰、引发皮肤癌与白内障。'],
+        xray: ['强穿透软组织但被高密度骨骼/金属吸收。', '应用：医学骨科 X 光透视成像、机场行李安检；危害：电离损伤细胞、基因突变致癌。'],
+        gam: ['最短波长 / 最高频率 / 最强电离穿透力；由原子核衰变产生。', '应用：医疗手术器械灭菌、食品保鲜、癌症放疗；危害：严重辐射病、DNA 突变与致癌。']
+      };
+      bindInputs(function () {
+        const d = MAP15[el.querySelector('#p15B').value];
+        el.querySelector('#p15Out1').textContent = d[0]; el.querySelector('#p15Out2').textContent = d[1];
+      });
+    } else if (t === 'p16') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 16 交互实验室 · 软铁 vs 硬钢磁化特性与磁极相互作用判别台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>铁芯材料：<select id="p16Mat"><option value="soft">软铁 (Soft iron) — 电磁铁/变压器铁芯</option><option value="steel">硬钢 (Steel) — 永磁体/指南针</option></select></label>' +
+        '<label>磁化方法：<select id="p16M"><option value="dc">直流通电螺线管 (d.c. solenoid)</option><option value="ac">交流退磁 (a.c. gradually pulled away)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p16Out1"></div><div class="readout-pill" id="p16Out2"></div></div></div>';
+      bindInputs(function () {
+        const soft = el.querySelector('#p16Mat').value === 'soft', ac = el.querySelector('#p16M').value === 'ac';
+        el.querySelector('#p16Out1').textContent = soft ? '软铁特性：极易被磁化 (Easily magnetised)，断电后立刻退磁 (Loses magnetism quickly) ⇒ 制作继电器、电铃与变压器铁芯！' : '硬钢特性：较难被磁化，但磁化后长久保持磁性 (Retains magnetism) ⇒ 制作永久磁铁！';
+        el.querySelector('#p16Out2').textContent = ac ? '退磁要领：置入通有交变电流 (a.c.) 的螺线管内缓慢沿东西方向拉出（或高温加热/重敲击）。' : '注意：只有发生“相互排斥 (Repulsion)”才能100%证明物体本身是磁铁，相互吸引可能是未磁化软铁！';
+      });
+    } else if (t === 'p17') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 17 交互实验室 · 摩擦电子转移与静电感应接地流程模拟</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>静电情景：<select id="p17M"><option value="poly">干布摩擦聚乙烯棒 (Polythene, 带负电)</option><option value="acet">干布摩擦醋酸纤维/玻璃棒 (Perspex/Glass, 带正电)</option><option value="ind">带负电棒感应金属球接地</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p17Out1"></div><div class="readout-pill" id="p17Out2"></div></div></div>';
+      const MAP17 = {
+        poly: ['过程：干布中的自由电子转移 (Electrons transferred) 到聚乙烯棒上 → 棒因电子过剩带负电 (−)，布因失去电子带等量正电 (+)。', '考场禁句：绝不可写“正电荷/质子移动了”！固体中只有带负电的电子可以移动！'],
+        acet: ['过程：有机玻璃/玻璃棒表面电子转移到干布上 → 棒因缺少电子净带正电 (+)，布净带负电 (−)。', '应用原理：高空加油飞机前务必接地导走摩擦累积静电荷，防止电火花引燃航空燃油。'],
+        ind: ['感应三步：① 带负电棒靠近孤立金属球，斥退球内自由电子至远端，近端显 +；② 手指/接地线接球远端，多余电子流入大地 (Earth)；③ 先断开接地再移走棒 → 球净带正电！', '注意断顺序：必须先撤接地线，再撤带电棒！若先撤棒则大地电子会回流中和！']
+      };
+      bindInputs(function () {
+        const d = MAP17[el.querySelector('#p17M').value];
+        el.querySelector('#p17Out1').textContent = d[0]; el.querySelector('#p17Out2').textContent = d[1];
+      });
+    } else if (t === 'p18') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 18 交互实验室 · 欧姆电阻、电功率 P=IV 与电费 kWh 计费台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>电压 V (V)：<input type="number" id="p18V" value="240"></label><label>电流 I (A)：<input type="number" id="p18I" value="5" step="0.5"></label>' +
+        '<label>运行时间 (hours)：<input type="number" id="p18H" value="3" step="0.5"></label><label>电价 (cents/kWh)：<input type="number" id="p18C" value="20"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p18Out1"></div><div class="readout-pill" id="p18Out2"></div></div></div>';
+      bindInputs(function () {
+        const V = Number(el.querySelector('#p18V').value) || 240, I = Math.max(0.01, Number(el.querySelector('#p18I').value) || 5);
+        const h = Number(el.querySelector('#p18H').value) || 3, c = Number(el.querySelector('#p18C').value) || 20;
+        const P = V * I, R = V / I, kwh = (P / 1000) * h;
+        el.querySelector('#p18Out1').textContent = '电阻 R = V/I = ' + R.toFixed(1) + ' Ω | 电功率 P = IV = ' + P.toFixed(0) + ' W (' + (P / 1000).toFixed(2) + ' kW) | 总焦耳 E = ' + (P * h * 3600).toExponential(2) + ' J';
+        el.querySelector('#p18Out2').textContent = '千瓦时用电量 = ' + kwh.toFixed(2) + ' kWh ⇒ 电费 Cost = ' + (kwh * c).toFixed(1) + ' cents (1 kWh = 3.6 × 10⁶ J)';
+      });
+    } else if (t === 'p19') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 19 交互实验室 · NTC 热敏电阻 / LDR 分压传感器动态调节台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>传感器 R₁：<select id="p19S"><option value="ldr">光敏电阻 LDR (底端) + 固定 R₂ (100 Ω)</option><option value="ntc">负温度系数热敏电阻 NTC (底端) + R₂ (100 Ω)</option></select></label>' +
+        '<label>环境强度 (光照/温度 %)：<input type="range" id="p19Env" min="10" max="100" value="50"><span id="p19EL">50%</span></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p19Out1"></div><div class="readout-pill" id="p19Out2"></div></div></div>';
+      bindInputs(function () {
+        const isLdr = el.querySelector('#p19S').value === 'ldr', env = Number(el.querySelector('#p19Env').value);
+        el.querySelector('#p19EL').textContent = env + '%';
+        const rSens = Math.round(500 * Math.exp(-0.025 * env));
+        const vOut = (12 * rSens) / (rSens + 100);
+        el.querySelector('#p19Out1').textContent = (isLdr ? '光敏 LDR' : '热敏 NTC') + ' 当前阻值 R_sensor ≈ ' + rSens + ' Ω | 串联总供电 12 V ⇒ 传感器两端输出电压 V_out = ' + vOut.toFixed(2) + ' V';
+        el.querySelector('#p19Out2').textContent = '环境越暗/越冷 ⇒ LDR/NTC 电阻【剧增】⇒ 根据分压比 V₁/V₂ = R₁/R₂，分得更高电压（可用作天黑自动开灯触发器！）';
+      });
+    } else if (t === 'p20') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 20 交互实验室 · 弗莱明左手定则 FBI 与带电粒子束磁场偏转</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>粒子类型 / 电流方向：<select id="p20Q"><option value="conv">传统电流 / 正电荷向东 (+)</option><option value="elec">电子束 β⁻ 向东射入 (注意反方向!)</option></select></label>' +
+        '<label>磁场 B 方向：<select id="p20B"><option value="in">垂直纸面向里 (Into page ✕)</option><option value="out">垂直纸面向外 (Out of page ⊙)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p20Out1"></div><div class="readout-pill" id="p20Out2"></div></div></div>';
+      bindInputs(function () {
+        const isElec = el.querySelector('#p20Q').value === 'elec', bIn = el.querySelector('#p20B').value === 'in';
+        const up = (!isElec && bIn) || (isElec && !bIn);
+        el.querySelector('#p20Out1').textContent = '左手三指正交判别：食指 B = ' + (bIn ? '入纸面 ✕' : '出纸面 ⊙') + '，中指【传统电流 I】= ' + (isElec ? '向西（与电子速度相反!）' : '向东') + ' ⇒ 拇指受力 F = ' + (up ? '⬆️ 向上 (Upwards)' : '⬇️ 向下 (Downwards)');
+        el.querySelector('#p20Out2').textContent = '直流电机关键：换向器 (Split-ring commutator) 每半圈调换一次线圈电流方向，保证扭矩持续单向转动！';
+      });
+    } else if (t === 'p21') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 21 交互实验室 · 理想变压器与高压输电 I²R 损耗模拟台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>原线圈 V_p (V)：<input type="number" id="p21Vp" value="25000"></label>' +
+        '<label>匝数比 N_p : N_s = <input type="number" id="p21Np" value="100"> : <input type="number" id="p21Ns" value="1600"></label>' +
+        '<label>传送总功率 P (kW)：<input type="number" id="p21P" value="400"></label><label>电缆电阻 R (Ω)：<input type="number" id="p21R" value="10"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p21Out1"></div><div class="readout-pill" id="p21Out2"></div></div></div>';
+      bindInputs(function () {
+        const vp = Number(el.querySelector('#p21Vp').value) || 25000, np = Math.max(1, Number(el.querySelector('#p21Np').value) || 100), ns = Math.max(1, Number(el.querySelector('#p21Ns').value) || 1600);
+        const P = (Number(el.querySelector('#p21P').value) || 400) * 1000, R = Number(el.querySelector('#p21R').value) || 10;
+        const vs = vp * (ns / np), iLine = P / vs, loss = iLine * iLine * R;
+        el.querySelector('#p21Out1').textContent = '副线圈输电电压 V_s = ' + Math.round(vs).toLocaleString() + ' V (' + (vs > vp ? '升压 Step-up' : '降压 Step-down') + ') | 输电电流 I = P/V_s = ' + iLine.toFixed(2) + ' A';
+        el.querySelector('#p21Out2').textContent = '电网热损耗 P_loss = I²R = ' + loss.toFixed(1) + ' W（若不用变压器升压直接 25 kV 输电，损耗高达 ' + (Math.pow(P / vp, 2) * R).toFixed(1) + ' W！）';
+      });
+    } else if (t === 'p22') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 22 交互实验室 · 卢瑟福 α 散射三结论与原子核素构成剖析</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>核素质量数 A：<input type="number" id="p22A" value="238" min="1"></label><label>质子数/原子序数 Z：<input type="number" id="p22Z" value="92" min="1"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p22Out1"></div><div class="readout-pill" id="p22Out2"></div></div></div>';
+      bindInputs(function () {
+        const a = Math.max(1, Math.round(Number(el.querySelector('#p22A').value) || 238)), z = Math.min(a, Math.max(1, Math.round(Number(el.querySelector('#p22Z').value) || 92)));
+        el.querySelector('#p22Out1').textContent = '中性原子组成：质子 Protons = ' + z + ' | 中子 Neutrons (A − Z) = ' + (a - z) + ' | 核外电子 Electrons = ' + z + ' | 原子核净电荷 = +' + z + 'e';
+        el.querySelector('#p22Out2').textContent = 'α 散射极少数大角反弹 (> 90°) ⇒ 证明原子核体积极小、极高密度且集中几乎全部正电荷与质量；绝大多数直接穿透 ⇒ 原子内部绝大部分是真空！';
+      });
+    } else if (t === 'p23') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 23 交互实验室 · 本底辐射扣减、半衰期指数衰减曲线计算器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>总读数 C_total (cpm)：<input type="number" id="p23C0" value="440"></label><label>本底 C_bg (cpm)：<input type="number" id="p23Bg" value="40"></label>' +
+        '<label>半衰期 T½ (days)：<input type="number" id="p23H" value="6" min="1"></label><label>经过时间 t (days)：<input type="range" id="p23T" min="0" max="24" step="3" value="12"><span id="p23TL">12 d</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p23Svg" viewBox="0 0 360 220" width="360" height="220"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p23Out1"></div><div class="readout-pill" id="p23Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const c0 = Number(el.querySelector('#p23C0').value) || 440, bg = Number(el.querySelector('#p23Bg').value) || 40;
+        const h = Math.max(1, Number(el.querySelector('#p23H').value) || 6), tm = Number(el.querySelector('#p23T').value);
+        el.querySelector('#p23TL').textContent = tm + ' days';
+        const pure0 = Math.max(0, c0 - bg), pureT = pure0 * Math.pow(0.5, tm / h), totalT = pureT + bg;
+        const plt = makePlot(360, 220, 0, Math.max(24, tm), 0, c0 * 1.1);
+        let svg = plotBase(plt, 't (d)', 'cpm');
+        svg += plotPath(plt, function () { return bg; }, 'var(--svg-muted)', true);
+        svg += plotPath(plt, function (x) { return bg + pure0 * Math.pow(0.5, x / h); }, 'var(--svg-green)', false);
+        svg += '<circle cx="' + plt.toX(tm).toFixed(1) + '" cy="' + plt.toY(totalT).toFixed(1) + '" r="5" fill="var(--svg-red)"/>';
+        el.querySelector('#p23Svg').innerHTML = svg;
+        el.querySelector('#p23Out1').textContent = '先减本底！纯净初始源活度 = ' + pure0 + ' cpm ⇒ 经 ' + (tm / h).toFixed(1) + ' 个半衰期后纯净计数 = ' + pureT.toFixed(1) + ' cpm';
+        el.querySelector('#p23Out2').textContent = '⚠️ 若题问 GM 计数器最终显示总读数，务必再加回本底：' + pureT.toFixed(1) + ' + ' + bg + ' = ' + totalT.toFixed(1) + ' cpm！';
+      });
+    } else if (t === 'p24') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 24 交互实验室 · 轨道速率 v = 2πr / T 与太阳光行时间 t = d / c 台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>行星/卫星预设：<select id="p24P"><option value="earth">地球 (r = 1.5×10¹¹ m, T = 365 d)</option><option value="moon">月球绕地 (r = 3.84×10⁸ m, T = 27.3 d)</option><option value="mars">火星 (r = 2.28×10¹¹ m, T = 687 d)</option><option value="geo">地球同步卫星 (r = 4.22×10⁷ m, T = 24 h)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p24Out1"></div><div class="readout-pill" id="p24Out2"></div></div></div>';
+      const MAP24 = {
+        earth: { r: 1.5e11, t: 365 * 86400, note: '太阳光到达地球所需时间 t = 1.5×10¹¹ / (3.0×10⁸) = 500 s ≈ 8.3 分钟！' },
+        moon: { r: 3.84e8, t: 27.3 * 86400, note: '月球引力仅为地球 1/6，月相盈亏完整周期约为 28–29.5 天。' },
+        mars: { r: 2.28e11, t: 687 * 86400, note: '火星属于内侧四大岩石小行星之一，距太阳越远引力越弱，公转速率显著小于地球。' },
+        geo: { r: 4.22e7, t: 24 * 3600, note: '赤道正上方同步轨道，与地球自转周期精确同步（24 小时），用于气象/电视直播卫星。' }
+      };
+      bindInputs(function () {
+        const d = MAP24[el.querySelector('#p24P').value];
+        const v = (2 * Math.PI * d.r) / d.t;
+        el.querySelector('#p24Out1').textContent = '轨道周长 2πr = ' + (2 * Math.PI * d.r).toExponential(2) + ' m | 周期 T = ' + d.t.toExponential(2) + ' s ⇒ 平均轨道速率 v = 2πr/T = ' + (v / 1000).toFixed(2) + ' km/s (' + Math.round(v).toLocaleString() + ' m/s)';
+        el.querySelector('#p24Out2').textContent = d.note;
+      });
+    } else if (t === 'p25') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 25 交互实验室 · 哈勃定律 v = H₀d 与宇宙年龄 t ≈ 1/H₀ 计算台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>星系退行速度 v (m/s)：<input type="number" id="p25V" value="4400000" step="100000"></label>' +
+        '<label>哈勃常数 H₀ (s⁻¹)：<input type="number" id="p25H" value="2.2e-18" step="0.1e-18"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p25Out1"></div><div class="readout-pill" id="p25Out2"></div></div></div>';
+      bindInputs(function () {
+        const v = Number(el.querySelector('#p25V').value) || 4.4e6, h0 = Math.max(1e-19, Number(el.querySelector('#p25H').value) || 2.2e-18);
+        const dist = v / h0, ly = dist / 9.5e15, ageS = 1 / h0, ageY = ageS / (365.25 * 86400);
+        el.querySelector('#p25Out1').textContent = '星系距离 d = v/H₀ = ' + dist.toExponential(2) + ' m ≈ ' + ly.toExponential(2) + ' 光年 (1 ly ≈ 9.5 × 10¹⁵ m)';
+        el.querySelector('#p25Out2').textContent = '估计宇宙年龄 t ≈ 1/H₀ = d/v = ' + ageS.toExponential(2) + ' s ≈ ' + (ageY / 1e9).toFixed(1) + ' billion years (十亿年) | 两大证据：遥远星系红移 + CMBR 微波背景辐射';
+      });
+    }
+  }
+
+  document.querySelectorAll('.lab-box[data-lab-type]').forEach(mountPhysicsLab);
+
+  // ---------- 11. Initialize View & Scroll Spy ----------
+  applyViewMode(currentViewMode);
+  applyQuizMask(quizMasked);
+
+  const backTopBtn = document.getElementById('backTopBtn');
+  const trackedSections = Array.from(document.querySelectorAll('.topic-section[id]'));
+  const navLinks = Array.from(document.querySelectorAll('.sidebar .nav-link'));
+
+  window.addEventListener('scroll', function () {
+    if (backTopBtn) backTopBtn.classList.toggle('visible', window.scrollY > 360);
+    const y = window.scrollY + 110;
+    let currentId = '';
+    for (let i = 0; i < trackedSections.length; i++) {
+      if (trackedSections[i].offsetTop <= y && getComputedStyle(trackedSections[i]).display !== 'none') {
+        currentId = trackedSections[i].id;
+      }
+    }
+    navLinks.forEach(function (lnk) {
+      const h = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('active', h === currentId);
+    });
+  }, { passive: true });
+
+  if (backTopBtn) {
+    backTopBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  }
+})();
+
+  </script>
+</body>
+</html>

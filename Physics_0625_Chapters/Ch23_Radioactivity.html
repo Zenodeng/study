@@ -1,0 +1,2069 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="--accent: #16A34A;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch23 · Chapter 23: Radioactivity — IGCSE Physics (0625) 精讲</title>
+  <style>
+/* ==========================================================================
+   Cambridge IGCSE Physics (0625 · David Sang 3rd Ed. 2023–2028)
+   25-Chapter Suite Shared Stylesheet (Offline, Zero CDN, Print-Ready)
+   ========================================================================== */
+
+:root {
+  --bg-page: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --bg-sidebar: #FFFFFF;
+  --bg-code: #EFF6FF;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-faint: #64748B;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+
+  --accent: #0284C7;
+  --accent-hover: #0369A1;
+  --accent-soft: #E0F2FE;
+
+  --core-bg: #E0F2FE;
+  --core-text: #075985;
+  --core-border: #BAE6FD;
+  --ext-bg: #FEF3C7;
+  --ext-text: #92400E;
+  --ext-border: #FDE68A;
+
+  --deep-bg: #EFF6FF;
+  --deep-border: #2563EB;
+  --tip-bg: #FFFBEB;
+  --tip-border: #D97706;
+  --mistake-bg: #FFF1F2;
+  --mistake-border: #E11D48;
+  --example-bg: #F0FDF4;
+  --example-border: #16A34A;
+  --formula-bg: #F8FAFC;
+  --formula-border: #0284C7;
+
+  --ok-bg: #DCFCE7;
+  --ok-text: #166534;
+  --ok-border: #86EFAC;
+  --err-bg: #FEE2E2;
+  --err-text: #991B1B;
+  --err-border: #FCA5A5;
+
+  --svg-bg: #FFFFFF;
+  --svg-grid: #E2E8F0;
+  --svg-ink: #0F172A;
+  --svg-muted: #64748B;
+  --svg-blue: #2563EB;
+  --svg-indigo: #4338CA;
+  --svg-teal: #0D9488;
+  --svg-amber: #D97706;
+  --svg-red: #DC2626;
+  --svg-green: #16A34A;
+  --svg-purple: #7C3AED;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.07);
+  --shadow-lg: 0 10px 26px rgba(15, 23, 42, 0.11);
+
+  --sidebar-w: 288px;
+  --topbar-h: 58px;
+  --radius-sm: 7px;
+  --radius-md: 11px;
+  --radius-lg: 16px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Songti SC", "Noto Serif SC", Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+[data-theme="dark"] {
+  --bg-page: #0B1120;
+  --bg-surface: #111827;
+  --bg-subtle: #1E293B;
+  --bg-sidebar: #0F172A;
+  --bg-code: #1E293B;
+  --text-main: #F1F5F9;
+  --text-muted: #CBD5E1;
+  --text-faint: #94A3B8;
+  --border: #1E293B;
+  --border-strong: #334155;
+
+  --accent: #38BDF8 !important;
+  --accent-hover: #7DD3FC;
+  --accent-soft: rgba(56, 189, 248, 0.18);
+
+  --core-bg: rgba(56, 189, 248, 0.16);
+  --core-text: #BAE6FD;
+  --core-border: rgba(56, 189, 248, 0.36);
+  --ext-bg: rgba(245, 158, 11, 0.16);
+  --ext-text: #FDE68A;
+  --ext-border: rgba(245, 158, 11, 0.36);
+
+  --deep-bg: rgba(37, 99, 235, 0.14);
+  --deep-border: #60A5FA;
+  --tip-bg: rgba(217, 119, 6, 0.14);
+  --tip-border: #FBBF24;
+  --mistake-bg: rgba(225, 29, 72, 0.15);
+  --mistake-border: #FB7185;
+  --example-bg: rgba(22, 163, 74, 0.13);
+  --example-border: #4ADE80;
+  --formula-bg: #172033;
+  --formula-border: #38BDF8;
+
+  --ok-bg: rgba(22, 163, 74, 0.22);
+  --ok-text: #BBF7D0;
+  --ok-border: #22C55E;
+  --err-bg: rgba(220, 38, 38, 0.22);
+  --err-text: #FECACA;
+  --err-border: #EF4444;
+
+  --svg-bg: #0F172A;
+  --svg-grid: #334155;
+  --svg-ink: #F1F5F9;
+  --svg-muted: #94A3B8;
+  --svg-blue: #60A5FA;
+  --svg-indigo: #818CF8;
+  --svg-teal: #2DD4BF;
+  --svg-amber: #FBBF24;
+  --svg-red: #F87171;
+  --svg-green: #34D399;
+  --svg-purple: #A78BFA;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .seg-btn.active,
+[data-theme="dark"] .tab-btn.active,
+[data-theme="dark"] .icon-btn.active,
+[data-theme="dark"] .brand-code,
+[data-theme="dark"] .pager-btn.primary { color: #0B1120; }
+[data-theme="dark"] .hub-foot { color: #38BDF8; }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--topbar-h) + 18px); }
+body { margin: 0; font-family: var(--font-sans); background: var(--bg-page); color: var(--text-main); line-height: 1.72; font-size: 15.5px; -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4 { margin: 0 0 0.55em 0; line-height: 1.32; font-weight: 700; color: var(--text-main); }
+p { margin: 0 0 0.9em 0; }
+ul, ol { margin: 0 0 1em 0; padding-left: 1.45em; }
+li { margin-bottom: 0.35em; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { font-family: var(--font-mono); font-size: 0.9em; background: var(--bg-code); color: var(--accent); padding: 2px 6px; border-radius: 4px; }
+
+/* View Mode Filters (Core / Extended / SME) */
+body.mode-core .ext-only,
+body.mode-core .badge-ext { display: none !important; }
+body.mode-ext .ext-only { border-left: 3px solid var(--ext-border); padding-left: 10px; background: rgba(245, 158, 11, 0.06); border-radius: 4px; }
+body.mode-book .sme-section { display: none !important; }
+body.mode-sme .book-section { display: none !important; }
+
+/* Physics Formula & Nuclide Formatting */
+.math { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 1.04em; }
+.frac { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; font-size: 0.88em; line-height: 1.1; margin: 0 2px; font-style: normal; font-family: Georgia, "Times New Roman", serif; }
+.frac .num { border-bottom: 1.5px solid currentColor; padding: 0 4px 1px 4px; }
+.frac .den { padding: 1px 4px 0 4px; }
+.sqrt { display: inline-flex; align-items: baseline; font-family: Georgia, "Times New Roman", serif; }
+.sqrt-rad { border-top: 1.4px solid currentColor; padding: 0 3px 0 2px; margin-left: 1px; }
+.nuclide { display: inline-flex; align-items: center; gap: 1px; font-family: Georgia, "Times New Roman", serif; font-weight: 700; vertical-align: middle; margin: 0 2px; }
+.nuc-nums { display: inline-flex; flex-direction: column; text-align: right; font-size: 0.72em; line-height: 1.05; }
+.formula-card { background: var(--formula-bg); border: 1.5px solid var(--border-strong); border-left: 5px solid var(--formula-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; font-size: 15px; }
+.formula-main { font-family: Georgia, "Times New Roman", serif; font-size: 16.5px; font-weight: 700; color: var(--accent); margin: 4px 0 6px 0; }
+
+/* Topbar */
+.topbar {
+  position: sticky; top: 0; z-index: 100; height: var(--topbar-h);
+  background: var(--bg-surface); border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm); display: flex; align-items: center;
+  justify-content: space-between; gap: 10px; padding: 0 16px;
+}
+.topbar-left { display: flex; align-items: center; gap: 8px; min-width: 0; flex-shrink: 1; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 34px; padding: 0 10px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--bg-surface); color: var(--text-main); font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; text-decoration: none; }
+.icon-btn:hover { background: var(--bg-subtle); border-color: var(--accent); text-decoration: none; }
+.icon-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.menu-toggle { display: none; }
+.brand-pill { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; white-space: nowrap; flex-shrink: 1; min-width: 0; }
+.brand-code { background: var(--accent); color: #fff; padding: 2px 8px; border-radius: 5px; font-size: 12px; letter-spacing: 0.4px; white-space: nowrap; flex-shrink: 0; }
+.brand-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 215px; }
+.search-wrap { position: relative; flex: 1 1 150px; min-width: 130px; max-width: 260px; }
+.search-input { width: 100%; height: 34px; padding: 0 30px 0 32px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--bg-subtle); color: var(--text-main); font-size: 13.5px; outline: none; }
+.search-input:focus { border-color: var(--accent); background: var(--bg-surface); }
+.search-input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.search-icon { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); color: var(--text-faint); font-size: 13px; pointer-events: none; }
+.search-clear { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); border: none; background: transparent; color: var(--text-faint); cursor: pointer; font-size: 14px; display: none; }
+.search-results-bar { display: none; background: var(--accent-soft); border-bottom: 1px solid var(--border); padding: 8px 20px; font-size: 13.5px; color: var(--text-main); align-items: center; justify-content: space-between; gap: 12px; }
+.search-results-bar.visible { display: flex; }
+.topbar-controls { display: flex; align-items: center; gap: 7px; flex-shrink: 0; }
+.seg-group { display: inline-flex; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); overflow: hidden; background: var(--bg-subtle); }
+.seg-btn { border: none; background: transparent; color: var(--text-muted); padding: 6px 8px; font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.seg-btn.active { background: var(--accent); color: #fff; }
+.progress-chip { display: flex; align-items: center; gap: 7px; padding: 4px 10px; border-radius: 999px; background: var(--bg-subtle); border: 1px solid var(--border); font-size: 12.5px; font-weight: 600; white-space: nowrap; }
+.progress-track { width: 50px; height: 7px; background: var(--border-strong); border-radius: 99px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), #0D9488); transition: width 0.25s ease; }
+
+.app-layout { display: flex; min-height: calc(100vh - var(--topbar-h)); }
+.sidebar { width: var(--sidebar-w); flex-shrink: 0; background: var(--bg-sidebar); border-right: 1px solid var(--border); position: sticky; top: var(--topbar-h); height: calc(100vh - var(--topbar-h)); overflow-y: auto; padding: 14px 10px 44px 10px; }
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 99px; }
+.nav-unit { margin-bottom: 8px; }
+.nav-unit-btn { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border: none; border-radius: var(--radius-sm); background: transparent; color: var(--text-main); font-size: 13px; font-weight: 700; text-align: left; cursor: pointer; }
+.nav-unit-btn:hover { background: var(--bg-subtle); }
+.nav-unit-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.nav-unit-title { flex: 1; display: flex; align-items: center; gap: 7px; line-height: 1.3; }
+.nav-chevron { font-size: 11px; color: var(--text-faint); transition: transform 0.2s; }
+.nav-unit.collapsed .nav-chevron { transform: rotate(-90deg); }
+.nav-unit.collapsed .nav-links { display: none; }
+.nav-links { list-style: none; padding: 2px 0 4px 12px; margin: 0 0 0 14px; border-left: 2px solid var(--border); }
+.nav-link { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 5px 9px; margin: 2px 0; border-radius: var(--radius-sm); color: var(--text-muted); font-size: 12.6px; line-height: 1.35; text-decoration: none; }
+.nav-link:hover { background: var(--bg-subtle); color: var(--text-main); text-decoration: none; }
+.nav-link.active { background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+.nav-done-mark { color: #10B981; font-weight: 800; font-size: 12px; opacity: 0; }
+.nav-link.mastered .nav-done-mark { opacity: 1; }
+.main-content { flex: 1; min-width: 0; padding: 26px 32px 80px 32px; }
+.content-inner { max-width: 960px; margin: 0 auto; }
+
+.hero-card { background: linear-gradient(135deg, #0F172A 0%, var(--accent) 58%, #0F766E 100%); color: #fff; border-radius: var(--radius-lg); padding: 28px 32px; margin-bottom: 26px; box-shadow: var(--shadow-lg); }
+.hero-card h1 { color: #fff; font-size: 25px; margin-bottom: 8px; letter-spacing: -0.3px; }
+.hero-sub { color: rgba(255,255,255,0.92); font-size: 14.8px; max-width: 820px; margin-bottom: 16px; }
+.hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.hero-pill { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.28); color: #fff; padding: 4px 11px; border-radius: 999px; font-size: 12.5px; font-weight: 600; }
+.unit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+.unit-tile { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.24); border-radius: var(--radius-md); padding: 12px 14px; color: #fff; text-decoration: none; display: block; transition: transform 0.15s, background 0.15s; }
+.unit-tile:hover { transform: translateY(-2px); background: rgba(255,255,255,0.22); text-decoration: none; }
+.unit-tile-num { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.7px; opacity: 0.85; font-weight: 700; }
+.unit-tile-title { font-size: 14.5px; font-weight: 700; margin: 3px 0; }
+
+.topic-section { background: var(--bg-surface); border: 1px solid var(--border); border-top: 4px solid var(--accent); border-radius: var(--radius-md); padding: 24px 26px; margin-bottom: 24px; box-shadow: var(--shadow-sm); }
+.topic-section.search-dim { display: none; }
+.section-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 2px solid var(--border); }
+.section-title-group h3 { font-size: 19.5px; margin-bottom: 4px; }
+.section-en-sub { font-size: 13.5px; color: var(--text-faint); font-weight: 600; }
+.tier-row { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 7px; }
+.badge-core, .badge-ext { display: inline-block; font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.badge-core { background: var(--core-bg); color: var(--core-text); border: 1px solid var(--core-border); }
+.badge-ext { background: var(--ext-bg); color: var(--ext-text); border: 1px solid var(--ext-border); }
+.master-btn { flex-shrink: 0; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-muted); font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.master-btn:hover { border-color: #10B981; color: #10B981; }
+.master-btn.is-mastered { background: var(--ok-bg); color: var(--ok-text); border-color: var(--ok-border); }
+.subtopic { margin-bottom: 20px; }
+.subtopic:last-of-type { margin-bottom: 12px; }
+.subtopic h4 { font-size: 16px; color: var(--accent); margin: 0 0 10px 0; padding-bottom: 4px; border-bottom: 1px dashed var(--border); display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+
+.worked-example { background: var(--example-bg); border: 1px solid var(--border); border-left: 4px solid var(--example-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; }
+.worked-title { font-weight: 800; font-size: 14px; color: var(--example-border); margin-bottom: 6px; }
+.callout { border-radius: var(--radius-sm); padding: 13px 16px; margin: 14px 0; border-left: 4px solid var(--border-strong); font-size: 14.5px; }
+.callout-title { font-weight: 800; font-size: 13.5px; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+.deep-dive { background: var(--deep-bg); border-left-color: var(--deep-border); }
+.deep-dive .callout-title { color: var(--deep-border); }
+.examiner-tip { background: var(--tip-bg); border-left-color: var(--tip-border); }
+.examiner-tip .callout-title { color: var(--tip-border); }
+.common-mistake { background: var(--mistake-bg); border-left-color: var(--mistake-border); }
+.common-mistake .callout-title { color: var(--mistake-border); }
+
+.table-wrap { width: 100%; overflow-x: auto; margin: 14px 0; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+table.phy-table { width: 100%; border-collapse: collapse; font-size: 13.8px; text-align: left; }
+table.phy-table th { background: var(--bg-subtle); color: var(--text-main); font-weight: 700; padding: 9px 12px; border-bottom: 2px solid var(--border-strong); white-space: nowrap; }
+table.phy-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.phy-table tr:last-child td { border-bottom: none; }
+table.phy-table tbody tr:hover { background: var(--bg-subtle); }
+
+.svg-figure { background: var(--svg-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px; margin: 16px 0; text-align: center; break-inside: avoid; }
+.svg-figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.svg-caption { margin-top: 8px; font-size: 13px; color: var(--text-faint); font-weight: 600; }
+
+/* Interactive Physics Labs */
+.lab-box { background: var(--bg-subtle); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px; margin: 18px 0; break-inside: avoid; }
+.lab-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+.lab-title { font-size: 15.5px; font-weight: 800; color: var(--accent); display: flex; align-items: center; gap: 7px; }
+.lab-panel { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; }
+.lab-controls { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-bottom: 12px; align-items: center; }
+.lab-controls label { font-size: 13px; font-weight: 700; color: var(--text-muted); display: inline-flex; align-items: center; gap: 6px; }
+.lab-controls input[type="number"], .lab-controls select { padding: 5px 8px; border-radius: 6px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-main); font-size: 13.2px; font-weight: 700; }
+.lab-controls input[type="number"] { min-width: 108px; width: 112px; text-align: center; }
+.lab-controls input[type="range"] { width: 120px; accent-color: var(--accent); }
+.lab-grid-2col { display: grid; grid-template-columns: 1.12fr 1fr; gap: 14px; align-items: start; }
+@media (max-width: 820px) { .lab-grid-2col { grid-template-columns: 1fr; } }
+.tab-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.tab-btn { border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-muted); padding: 5px 10px; border-radius: 6px; font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.tab-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.lab-readout { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; font-size: 13.2px; font-weight: 600; }
+.readout-pill { background: var(--bg-page); border: 1px solid var(--border-strong); padding: 7px 10px; border-radius: 6px; width: 100%; line-height: 1.5; }
+
+/* Practice Questions & Concepts */
+.practice-block { margin-top: 18px; padding-top: 14px; border-top: 2px dashed var(--border-strong); }
+.practice-heading { font-size: 16px; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.exam-q { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 14px; break-inside: avoid; }
+.exam-q-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; font-size: 12.5px; }
+.q-tag { font-weight: 800; color: var(--accent); background: var(--accent-soft); padding: 2px 8px; border-radius: 5px; }
+.q-marks { font-weight: 700; color: var(--text-faint); }
+.q-stem-en { font-size: 14.8px; font-weight: 600; color: var(--text-main); margin-bottom: 6px; }
+.q-stem-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 12px; }
+.mcq-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin-bottom: 10px; }
+.mcq-opt { text-align: left; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 13.8px; cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.mcq-opt:hover { border-color: var(--accent); background: var(--bg-subtle); }
+.mcq-opt.correct { background: var(--ok-bg); border-color: var(--ok-border); color: var(--ok-text); font-weight: 700; }
+.mcq-opt.wrong { background: var(--err-bg); border-color: var(--err-border); color: var(--err-text); }
+.mcq-feedback { display: none; font-size: 13.5px; padding: 10px 12px; border-radius: var(--radius-sm); margin-top: 8px; }
+.mcq-feedback.visible { display: block; }
+.mcq-feedback.ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.mcq-feedback.err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+details.ms-details { margin-top: 10px; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 12px; }
+details.ms-details summary { cursor: pointer; font-weight: 700; font-size: 13.5px; color: var(--accent); user-select: none; }
+.ms-body { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 13.8px; }
+.ms-mark { display: inline-block; font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--core-text); background: var(--core-bg); padding: 1px 5px; border-radius: 4px; margin-right: 4px; }
+.ms-cn { color: var(--text-muted); margin-top: 4px; }
+
+.concept-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 14px; margin-bottom: 18px; }
+.concept-filter-group { display: flex; flex-wrap: wrap; gap: 6px; }
+.concept-actions { display: flex; align-items: center; gap: 10px; }
+.concept-count-pill { font-size: 12.5px; font-weight: 700; color: var(--text-muted); }
+.concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 14px; }
+.concept-card { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; gap: 8px; break-inside: avoid; }
+.concept-card:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
+.concept-card.concept-hidden { display: none !important; }
+.cq-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.cq-en { font-weight: 700; font-size: 14.5px; color: var(--text-main); line-height: 1.45; }
+.cq-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 2px; }
+.cq-answer { position: relative; margin-top: auto; background: var(--bg-surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius-sm); padding: 11px 13px; font-size: 13.8px; line-height: 1.6; }
+.kw { color: var(--accent); background: var(--accent-soft); padding: 0 4px; border-radius: 3px; font-weight: 700; }
+.cq-mask-hint { display: none; }
+.concept-card.masked .cq-answer { cursor: pointer; }
+.concept-card.masked .cq-answer-inner { filter: blur(7px); opacity: 0.22; user-select: none; pointer-events: none; transition: filter 0.2s, opacity 0.2s; }
+.concept-card.masked .cq-mask-hint { display: flex; align-items: center; justify-content: center; position: absolute; inset: 0; font-size: 13.5px; font-weight: 700; color: var(--accent); background: rgba(255,255,255,0.25); border-radius: var(--radius-sm); }
+[data-theme="dark"] .concept-card.masked .cq-mask-hint { background: rgba(15,23,42,0.35); }
+
+/* Chapter Pager & Hub Group Headings */
+.chapter-pager { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 28px; padding: 16px 20px; background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); }
+.pager-btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: var(--radius-sm); background: var(--bg-subtle); border: 1px solid var(--border-strong); color: var(--text-main); font-size: 13.5px; font-weight: 700; text-decoration: none; }
+.pager-btn:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); text-decoration: none; }
+.pager-btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.pager-btn.primary:hover { background: var(--accent-hover); color: #fff; }
+
+.hub-block-title { font-size: 18px; font-weight: 800; margin: 26px 0 12px 0; padding-bottom: 6px; border-bottom: 2px solid var(--border-strong); display: flex; align-items: center; gap: 8px; }
+.hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 15px; }
+.hub-card { display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-surface); border: 1px solid var(--border-strong); border-top: 5px solid var(--card-color, var(--accent)); border-radius: var(--radius-md); padding: 16px 18px 14px 18px; color: var(--text-main); text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; box-shadow: var(--shadow-sm); }
+.hub-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--card-color, var(--accent)); text-decoration: none; }
+.hub-card-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+.hub-badge { font-size: 11.5px; font-weight: 800; color: #fff; background: var(--card-color, var(--accent)); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill { font-size: 12px; font-weight: 700; color: var(--text-muted); background: var(--bg-subtle); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill.done { background: var(--ok-bg); color: var(--ok-text); }
+.hub-title { font-size: 16px; font-weight: 800; margin-bottom: 3px; }
+.hub-en { font-size: 12.6px; color: var(--text-faint); font-weight: 600; margin-bottom: 8px; }
+.hub-sub { font-size: 12.8px; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; }
+.hub-foot { font-size: 13px; font-weight: 700; color: var(--card-color, var(--accent)); display: flex; align-items: center; justify-content: space-between; }
+
+.back-top-btn { position: fixed; right: 22px; bottom: 22px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); box-shadow: var(--shadow-md); cursor: pointer; display: none; align-items: center; justify-content: center; font-size: 17px; font-weight: 800; z-index: 80; }
+.back-top-btn.visible { display: flex; }
+
+@media (max-width: 1200px) {
+  .brand-title, .btn-label { display: none; }
+  .seg-btn { padding: 6px 8px; }
+}
+@media (max-width: 980px) {
+  .menu-toggle { display: inline-flex; }
+  .sidebar { position: fixed; left: 0; top: var(--topbar-h); z-index: 95; transform: translateX(-100%); transition: transform 0.22s ease; box-shadow: var(--shadow-lg); }
+  .sidebar.open { transform: translateX(0); }
+  .main-content { padding: 18px 14px 64px 14px; }
+  .topic-section { padding: 18px 16px; }
+  .progress-chip { display: none; }
+  .search-wrap { min-width: 130px; }
+}
+@media (max-width: 640px) {
+  .topbar { padding: 0 10px; gap: 6px; }
+  .search-wrap { max-width: none; }
+  .concept-grid, .hub-grid { grid-template-columns: 1fr; }
+}
+@media print {
+  .topbar, .sidebar, .search-results-bar, .back-top-btn, .master-btn, .lab-controls button, .concept-toolbar, .cq-mask-hint, .chapter-pager { display: none !important; }
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  .main-content { padding: 0 !important; }
+  .content-inner { max-width: 100% !important; }
+  .topic-section, .exam-q, .callout, .worked-example, .svg-figure, .concept-card { box-shadow: none !important; break-inside: avoid; border-color: #CBD5E1 !important; }
+  details.ms-details, details.ms-details .ms-body, .mcq-feedback { display: block !important; }
+  .concept-card.masked .cq-answer-inner { filter: none !important; opacity: 1 !important; }
+}
+
+  </style>
+</head>
+<body data-chapter-code="Ch23">
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="展开目录">☰ 目录</button>
+      <a class="icon-btn" href="index.html" title="返回 25 章总目录"><span>🏠</span><span class="btn-label">总目录</span></a>
+      <div class="brand-pill">
+        <span class="brand-code">Ch23</span>
+        <span class="brand-title">Chapter 23: Radioactivity</span>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="search" id="searchInput" class="search-input" placeholder="搜索公式、实验误差、真题与概念..." autocomplete="off" />
+      <button type="button" class="search-clear" id="searchClear" title="清空搜索">✕</button>
+    </div>
+
+    <div class="topbar-controls">
+      <div class="seg-group" role="group" aria-label="考试级别筛选">
+        <button type="button" class="seg-btn active" data-view-mode="all">All</button>
+        <button type="button" class="seg-btn" data-view-mode="core">Core</button>
+        <button type="button" class="seg-btn" data-view-mode="ext">Extended</button>
+        <button type="button" class="seg-btn" data-view-mode="sme">真题</button>
+      </div>
+
+      <div class="progress-chip" title="本章小节与真题模块掌握进度">
+        <span id="progressText">0/0</span>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+
+      <button type="button" class="icon-btn" id="toggleAllMs" title="展开或收起全部解析"><span>📝</span><span class="btn-label">展开解析</span></button>
+      <button type="button" class="icon-btn" id="themeToggle" title="切换亮色/暗色主题"><span id="themeIcon">🌙</span><span class="btn-label">主题</span></button>
+      <button type="button" class="icon-btn" id="printBtn" title="打印或导出为 PDF"><span>🖨️</span><span class="btn-label">导出 PDF</span></button>
+    </div>
+  </header>
+
+  <div class="search-results-bar" id="searchBar">
+    <span id="searchSummary">找到 0 个匹配板块</span>
+    <button type="button" class="icon-btn" id="searchResetBtn">重置过滤</button>
+  </div>
+
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="本章物理知识点导航">
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #16A34A;"></span>Ch23 本章小节目录</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#sec-23-1"><span>23.1 放射性探测、本底辐射与修正计数率</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-23-2"><span>23.2 α、β⁻、γ 三种射线的性质、鉴别与电磁场偏转</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-23-3"><span>23.3 随机衰变、核衰变方程、半衰期与同位素应用</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-23-4"><span>23.4 电离辐射的危害与安全操作防护</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-sme"><span>23.5 SaveMyExams 真题实战演练（MCQ + 结构化解答）</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#app-concepts"><span>附录 · 第 23 章中英核心概念与高频得分句默写库</span><span class="nav-done-mark">✓</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #0D9488;"></span>全书 25 章快速切换</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="Ch01_Making_Measurements.html"><span>Ch01 · 长度体积测量、密度浮沉与周期测定</span></a></li>
+          <li><a class="nav-link" href="Ch02_Describing_Motion.html"><span>Ch02 · 速率、加速度与 s-t / v-t 运动图像</span></a></li>
+          <li><a class="nav-link" href="Ch03_Forces_and_Motion.html"><span>Ch03 · 牛顿定律、动量冲量、终端速度与矢量合成</span></a></li>
+          <li><a class="nav-link" href="Ch04_Turning_Effects.html"><span>Ch04 · 力矩平衡原理、重心与稳定性</span></a></li>
+          <li><a class="nav-link" href="Ch05_Forces_and_Matter.html"><span>Ch05 · 固体形变、胡克定律 F=kx 与固体/液体压强</span></a></li>
+          <li><a class="nav-link" href="Ch06_Energy_Stores_Transfers.html"><span>Ch06 · 8 大能量存储、4 路径转移、Sankey 图与机械能</span></a></li>
+          <li><a class="nav-link" href="Ch07_Energy_Resources.html"><span>Ch07 · 化石能源、核能与可再生发电技术评估</span></a></li>
+          <li><a class="nav-link" href="Ch08_Work_and_Power.html"><span>Ch08 · 机械功 W=Fd、功率 P=W/t 与效率</span></a></li>
+          <li><a class="nav-link" href="Ch09_Kinetic_Particle_Model.html"><span>Ch09 · 物态微观模型、布朗运动、绝对温标与气体定律</span></a></li>
+          <li><a class="nav-link" href="Ch10_Thermal_Properties.html"><span>Ch10 · 热膨胀、比热容 c=ΔE/(mΔθ)、物态变化与蒸发冷却</span></a></li>
+          <li><a class="nav-link" href="Ch11_Thermal_Energy_Transfers.html"><span>Ch11 · 热传导、对流、红外辐射与保温综合应用</span></a></li>
+          <li><a class="nav-link" href="Ch12_Sound.html"><span>Ch12 · 声波产生、纵波疏密部、回声测速与示波器波形</span></a></li>
+          <li><a class="nav-link" href="Ch13_Light.html"><span>Ch13 · 平面镜反射、折射斯涅尔定律、全反射与透镜成像</span></a></li>
+          <li><a class="nav-link" href="Ch14_Properties_of_Waves.html"><span>Ch14 · 横波纵波、v=fλ 与水波反射折射衍射</span></a></li>
+          <li><a class="nav-link" href="Ch15_Spectra.html"><span>Ch15 · 光的色散、七大电磁波谱与模拟数字通信</span></a></li>
+          <li><a class="nav-link" href="Ch16_Magnetism.html"><span>Ch16 · 磁化、软铁与硬钢磁滞差异及磁场线</span></a></li>
+          <li><a class="nav-link" href="Ch17_Static_Electricity.html"><span>Ch17 · 摩擦电子转移、导体绝缘体、感应与电场线</span></a></li>
+          <li><a class="nav-link" href="Ch18_Electrical_Quantities.html"><span>Ch18 · 电流、电动势/电压、欧姆定律 I-V 曲线与电功率 kWh</span></a></li>
+          <li><a class="nav-link" href="Ch19_Electrical_Circuits.html"><span>Ch19 · 电路符号、串并联、LDR/NTC 分压器与用电安全</span></a></li>
+          <li><a class="nav-link" href="Ch20_Electromagnetic_Forces.html"><span>Ch20 · 电流磁场、弗莱明左手定则、粒子偏转与直流电机</span></a></li>
+          <li><a class="nav-link" href="Ch21_Electromagnetic_Induction.html"><span>Ch21 · 电磁感应、楞次定律、交流发电机与变压器高压输电</span></a></li>
+          <li><a class="nav-link" href="Ch22_The_Nuclear_Atom.html"><span>Ch22 · α 金箔散射原子核、同位素及核裂变与聚变</span></a></li>
+          <li><a class="nav-link active" href="Ch23_Radioactivity.html"><span>Ch23 · 本底辐射、α/β/γ 性质、衰变方程与半衰期计算</span></a></li>
+          <li><a class="nav-link" href="Ch24_Earth_and_Solar_System.html"><span>Ch24 · 自转四季、月相、行星吸积盘形成与轨道速率 v=2πr/T</span></a></li>
+          <li><a class="nav-link" href="Ch25_Stars_and_Universe.html"><span>Ch25 · 恒星全生命周期、红移 CMBR 大爆炸与哈勃定律 H₀</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-inner">
+        <section class="hero-card" id="top">
+          <h1>Chapter 23: Radioactivity · 第 23 章 · 本底辐射、α/β/γ 性质、衰变方程与半衰期计算</h1>
+          <p class="hero-sub">
+            完整覆盖 <strong>David Sang 第 3 版教材（2023–2028 新考纲 0625/0972 · 取 g = 9.8 m/s² / 9.8 N/kg）</strong>本章全部 Core 与 Extended 知识点：<code>23.1 本底辐射扣减 · 23.2 α/β/γ 电离穿透与电磁偏转 · 23.3 衰变配平、半衰期图算法与安全防护</code>，配齐微观机理解释、Paper 6 实验控制、SaveMyExams 真题与直接背写概念卡。
+          </p>
+          <div class="hero-badges">
+            <span class="hero-pill">⚛️ David Sang 3rd Ed. · 2023–2028</span>
+            <span class="hero-pill">📐 Core + Extended 全区分</span>
+            <span class="hero-pill">🧪 本章专属交互物理实验台</span>
+            <a class="hero-pill" href="#sec-sme" style="text-decoration: none;">📝 直达 SaveMyExams 真题 →</a>
+            <a class="hero-pill" href="#app-concepts" style="text-decoration: none; background: rgba(255,255,255,0.24);">🧠 直达中英概念默写库 →</a>
+          </div>
+          <div class="unit-grid">
+            <a class="unit-tile" href="#sec-23-1">
+              <div class="unit-tile-num">Section 23-1</div>
+              <div class="unit-tile-title">23.1 放射性探测、本底辐射与修正计数率</div>
+            </a>
+            <a class="unit-tile" href="#sec-23-2">
+              <div class="unit-tile-num">Section 23-2</div>
+              <div class="unit-tile-title">23.2 α、β⁻、γ 三种射线的性质、鉴别与电磁场偏转</div>
+            </a>
+            <a class="unit-tile" href="#sec-23-3">
+              <div class="unit-tile-num">Section 23-3</div>
+              <div class="unit-tile-title">23.3 随机衰变、核衰变方程、半衰期与同位素应用</div>
+            </a>
+            <a class="unit-tile" href="#sec-23-4">
+              <div class="unit-tile-num">Section 23-4</div>
+              <div class="unit-tile-title">23.4 电离辐射的危害与安全操作防护</div>
+            </a>
+          </div>
+        </section>
+
+        <div id="emptySearchNotice" class="callout deep-dive" style="display: none;">
+          <div class="callout-title">🔍 未找到匹配内容</div>
+          <p style="margin-bottom: 0;">请尝试更换关键词，或点击右上角“重置过滤”恢复显示。</p>
+        </div>
+
+<article class="topic-section book-section" id="sec-23-1">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>23.1 放射性探测、本底辐射与修正计数率</h3>
+      <div class="section-en-sub">Detection of radioactivity, background radiation &amp; corrected count rate</div>
+      <div class="tier-row">
+        <span class="badge-core">Core · GM 计数管与本底辐射四大天然来源</span>
+        <span class="badge-ext">Extended · 本底计数率测量与扣减公式</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-23-1">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>1. 电离辐射的探测工具与计数率 <span class="badge-core">Core</span></h4>
+    <p>
+      α、β、γ 射线肉眼不可见、无声无味，但它们都能使空气或物质发生<strong>电离（ionisation）</strong>。实验室主要通过<strong>盖革-米勒计数管（Geiger-Müller / GM tube）</strong>连接电子计数器（scaler / ratemeter）进行定量测量：
+    </p>
+    <ul>
+      <li>射线透过前端极薄云母窗进入充有低压氩气的 GM 管，使气体电离产生瞬间电脉冲；</li>
+      <li>计数器统计单位时间内探测到的电离脉冲次数，称为<strong>计数率（Count rate）</strong>，常用单位为 <strong>counts/s（每秒计数，约等于 Bq）</strong>或 <strong>counts/min（cpm，每分钟计数）</strong>。</li>
+      <li>另外，<strong>照相底片（Photographic film）</strong>被射线照射后会感光变黑，常制成辐射工作人员佩戴的胸前剂量牌（film badge）。</li>
+    </ul>
+  </div>
+
+  <div class="subtopic">
+    <h4>2. 本底辐射（Background Radiation）及其来源 <span class="badge-core">Core</span></h4>
+    <p>
+      即使实验室里没有任何人工放射源，打开 GM 计数管依然会持续听到零星“咔哒”声（通常约 15–40 counts/min）。这种<strong>无时无刻不自然存在于周围环境中的微弱电离辐射</strong>称为<strong>本底辐射（background radiation）</strong>。
+    </p>
+    <div class="table-wrap">
+      <table class="phy-table">
+        <thead>
+          <tr>
+            <th>类别</th>
+            <th>四大天然来源 (Natural sources, ~85%)</th>
+            <th>人工来源 (Artificial sources, ~15%)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>主要来源与成因</strong></td>
+            <td>
+              1. <strong>氡气（Radon gas in air）</strong>：地下岩石花岗岩中铀衰变释放的放射性气体（占比最高，约 50%）；<br>
+              2. <strong>岩石与建筑材料（Rocks &amp; buildings）</strong>：砖石、水泥、土壤中的天然微量放射性核素；<br>
+              3. <strong>食物与饮水（Food &amp; drink）</strong>：植物土壤吸收的钾-40、碳-14（如香蕉、巴西坚果）；<br>
+              4. <strong>宇宙射线（Cosmic rays）</strong>：来自太阳及外太空的高能粒子（高空飞行时强度显著增加）。
+            </td>
+            <td>
+              1. <strong>医疗诊断与放疗（Medical X-rays &amp; tracers）</strong>：占人工辐射绝大部分；<br>
+              2. <strong>核电站与核试验尘埃（Nuclear power &amp; nuclear fallout）</strong>：占比极微（&lt; 1%）。
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="subtopic ext-only">
+    <h4>3. 本底计数率的规范测量与扣减 <span class="badge-ext">Extended</span></h4>
+    <div class="formula-card">
+      <div class="formula-main">
+        修正计数率公式：C<sub>corrected</sub> = C<sub>measured</sub> − C<sub>background</sub>
+      </div>
+      <p style="margin-bottom:0;">
+        <strong>Paper 6 / Paper 4 实验操作必考两步</strong>：<br>
+        1. 将待测放射源移至远处并放入铅罐屏蔽后，先用 GM 管单独测量<strong>本底计数率（background count rate）</strong>；<br>
+        2. 因为放射性衰变是<strong>随机的（random）</strong>，读数每秒都会小幅起伏，所以务必连续测量几分钟（如 5 min 或 10 min）再取<strong>平均值（average count rate）</strong>，以提高准确度并从所有实验读数中减去该平均本底值！
+      </p>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-23-2">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>23.2 α、β⁻、γ 三种射线的性质、鉴别与电磁场偏转</h3>
+      <div class="section-en-sub">Properties, absorption identification &amp; deflection of α, β⁻ and γ radiation</div>
+      <div class="tier-row">
+        <span class="badge-core">Core · 物理本质、电离能力、穿透力对比与纸铝铅实验</span>
+        <span class="badge-ext">Extended · 均匀电场与磁场偏转方向及电离微观成因</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-23-2">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>1. 三种核辐射全维对比表 <span class="badge-core">Core</span></h4>
+    <p>
+      注意：2023–2028 新考纲明确规定 <strong>β 辐射专指高速电子 β⁻（不包括正电子 β⁺）</strong>。三种射线在电离力（ionising effect）与穿透力（penetrating power）上呈<strong>严格反比关系</strong>——电离越猛，能量耗尽越快，射程越短！
+    </p>
+    <div class="table-wrap">
+      <table class="phy-table">
+        <thead>
+          <tr>
+            <th>特性 (Property)</th>
+            <th>α 粒子 (Alpha, α)</th>
+            <th>β⁻ 粒子 (Beta-minus, β⁻)</th>
+            <th>γ 射线 (Gamma, γ)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>物理本质与符号</strong></td>
+            <td><strong>氦原子核（Helium nucleus）</strong>：2 个质子 + 2 个中子<br><span class="nuclide"><span class="nuc-nums"><span>4</span><span>2</span></span>He</span> 或 <span class="nuclide"><span class="nuc-nums"><span>4</span><span>2</span></span>α</span></td>
+            <td><strong>原子核内射出的高速电子</strong>（Fast-moving electron）<br><span class="nuclide"><span class="nuc-nums"><span>0</span><span>−1</span></span>e</span> 或 <span class="nuclide"><span class="nuc-nums"><span>0</span><span>−1</span></span>β</span></td>
+            <td><strong>高频短波电磁波</strong>（High-frequency electromagnetic wave）</td>
+          </tr>
+          <tr>
+            <td><strong>相对电荷 / 相对质量</strong></td>
+            <td>电荷 <strong>+2</strong> · 质量 <strong>4</strong></td>
+            <td>电荷 <strong>−1</strong> · 质量 <strong>≈ 1/1840（极轻）</strong></td>
+            <td>电荷 <strong>0</strong>（中性） · 质量 <strong>0</strong></td>
+          </tr>
+          <tr>
+            <td><strong>典型速度</strong></td>
+            <td>较慢（约 5%–10% 光速）</td>
+            <td>极快（最高可达 ~90% 光速）</td>
+            <td>光速 <strong>c = 3.0 × 10<sup>8</sup> m/s</strong></td>
+          </tr>
+          <tr>
+            <td><strong>电离能力 (Ionising effect)</strong></td>
+            <td><strong>最强（Very high）</strong></td>
+            <td><strong>中等（Medium）</strong></td>
+            <td><strong>最弱（Very low）</strong></td>
+          </tr>
+          <tr>
+            <td><strong>空气射程 &amp; 屏蔽挡板</strong></td>
+            <td>空气中仅 <strong>几厘米（2–5 cm）</strong>；<strong>一张纸</strong>或皮肤死皮层即可完全挡住</td>
+            <td>空气中约 <strong>1 m</strong>；需 <strong>3–5 mm 厚铝板（Aluminium）</strong>挡住</td>
+            <td>空气中射程极远；不能被完全阻断，需<strong>数厘米厚铅板（Lead）或数米混凝土</strong>大幅衰减</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      <strong>Paper 6 吸收鉴别实验（Absorption identification）</strong>：将源置于 GM 管前约 2 cm 处测量修正计数率 → ① 插入<strong>一张纸</strong>：若读数骤降为 0，含 <strong>α</strong>；② 再换用 <strong>5 mm 铝板</strong>：若读数继续大幅下跌至 0（或本底），含 <strong>β⁻</strong>；③ 若隔着铝板仍有读数，再加 <strong>几厘米铅块</strong>读数明显下跌，则证实含 <strong>γ</strong>！（切记测试 α 时 GM 管距离源不能超过 2–3 cm，否则还没加纸就会被空气挡光！）
+    </p>
+  </div>
+
+  <div class="subtopic ext-only">
+    <h4>2. 电离能力微观成因与均匀电场/磁场中的偏转 <span class="badge-ext">Extended</span></h4>
+    <p>
+      <strong>为什么 α 的电离能力远强于 β⁻ 与 γ？</strong><br>
+      Mark Scheme 给出两个决定因素：<strong>动能（kinetic energy）</strong>与<strong>电荷量（electric charge）</strong>。α 粒子带有更大的 <strong>+2e 电荷</strong>且质量大速度较慢，经过空气分子附近时作用时间更长，对分子外层电子施加极强的静电吸/斥力将其拽离（瞬间产生数万对离子），因此自身能量极快消耗殆尽。
+    </p>
+    <ul>
+      <li><strong>在均匀电场（Uniform Electric Field）中</strong>：
+        <br>• <strong>α 粒子（+2）</strong>向<strong>负极板（− plate）</strong>偏转，由于质量比电子大 7300 多倍（惯性极大），轨迹弯曲得<strong>平缓（gentle curve）</strong>；
+        <br>• <strong>β⁻ 粒子（−1）</strong>向<strong>正极板（+ plate）</strong>偏转，虽电荷仅为 α 一半，但质量极小（加速度 F/m 巨大），向相反方向弯曲得<strong>极其剧烈（sharp curve）</strong>；
+        <br>• <strong>γ 射线（0 电荷）</strong>不受电场力，<strong>完全沿直线穿透（undeflected）</strong>。
+      </li>
+      <li><strong>在均匀磁场（Uniform Magnetic Field）中</strong>：
+        <br>用<strong>弗莱明左手定则（Fleming's left-hand rule）</strong>判定方向！
+        <br>• α 带正电，飞行方向就是传统电流 I（中指方向）；
+        <br>• <strong>巨坑警告</strong>：β⁻ 带负电，<strong>传统电流方向（中指）必须取与 β⁻ 飞行方向完全相反的方向</strong>！因此 α 和 β⁻ 向<strong>相反方向</strong>做圆弧偏转，且 β⁻ 质量极小导致偏转半径远小于 α（弯曲更急）；γ 不带电，<strong>直线穿过不偏转</strong>。
+      </li>
+    </ul>
+  </div>
+
+  <div class="svg-figure">
+    <svg viewBox="0 0 740 300" width="740" height="300" xmlns="http://www.w3.org/2000/svg">
+      <rect x="4" y="4" width="732" height="292" rx="10" fill="var(--svg-bg)" stroke="var(--svg-grid)" stroke-width="1.5"/>
+      <text x="370" y="25" text-anchor="middle" font-size="13.5" font-weight="800" fill="var(--svg-ink)">α、β⁻、γ 穿透屏蔽能力对比与均匀电场 / 磁场偏转轨迹</text>
+
+      <!-- Left: Penetration -->
+      <rect x="18" y="40" width="336" height="244" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.2"/>
+      <text x="186" y="59" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-ink)">穿透力测试：纸张 · 3–5 mm 铝板 · 厚铅块</text>
+      <!-- Source -->
+      <rect x="30" y="128" width="40" height="54" rx="4" fill="#334155" stroke="var(--svg-ink)" stroke-width="1.4"/>
+      <text x="50" y="159" text-anchor="middle" font-size="10.5" font-weight="800" fill="#FFFFFF">源</text>
+      <!-- Barriers -->
+      <rect x="128" y="80" width="8" height="154" fill="#FDE68A" stroke="var(--svg-amber)" stroke-width="1.2"/>
+      <text x="132" y="250" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-amber)">纸 Paper</text>
+      <rect x="206" y="80" width="16" height="154" fill="#CBD5E1" stroke="var(--svg-blue)" stroke-width="1.2"/>
+      <text x="214" y="250" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-blue)">5 mm Al</text>
+      <rect x="284" y="80" width="32" height="154" fill="#64748B" stroke="var(--svg-ink)" stroke-width="1.4"/>
+      <text x="300" y="250" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-ink)">厚铅 Pb</text>
+      <!-- Rays -->
+      <line x1="72" y1="106" x2="128" y2="106" stroke="var(--svg-red)" stroke-width="3"/>
+      <text x="98" y="99" text-anchor="middle" font-size="10.5" font-weight="800" fill="var(--svg-red)">α (+2)</text>
+
+      <line x1="72" y1="154" x2="206" y2="154" stroke="var(--svg-blue)" stroke-width="2.4" stroke-dasharray="6,3"/>
+      <text x="172" y="147" text-anchor="middle" font-size="10.5" font-weight="800" fill="var(--svg-blue)">β⁻ (−1)</text>
+
+      <line x1="72" y1="202" x2="340" y2="202" stroke="var(--svg-green)" stroke-width="2"/>
+      <line x1="316" y1="202" x2="342" y2="202" stroke="var(--svg-green)" stroke-width="1.2" stroke-dasharray="3,3"/>
+      <text x="250" y="194" text-anchor="middle" font-size="10.5" font-weight="800" fill="var(--svg-green)">γ (大幅减弱)</text>
+      <text x="186" y="271" text-anchor="middle" font-size="10" font-weight="600" fill="var(--svg-muted)">电离力最强 α 最易被阻挡；无电荷 γ 穿透力最强</text>
+
+      <!-- Right: E-field and B-field deflection -->
+      <rect x="366" y="40" width="356" height="244" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.2"/>
+      <text x="544" y="59" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-ink)">均匀电场偏转（+ 上极板 / − 下极板）</text>
+      <!-- Plates -->
+      <rect x="444" y="76" width="218" height="12" rx="2" fill="#FEE2E2" stroke="var(--svg-red)" stroke-width="1.4"/>
+      <text x="553" y="86" text-anchor="middle" font-size="10" font-weight="800" fill="var(--svg-red)">+ + + + + 正极板 (+)</text>
+      <rect x="444" y="218" width="218" height="12" rx="2" fill="#DBEAFE" stroke="var(--svg-blue)" stroke-width="1.4"/>
+      <text x="553" y="228" text-anchor="middle" font-size="10" font-weight="800" fill="var(--svg-blue)">− − − − − 负极板 (−)</text>
+      <!-- Lead collimator -->
+      <rect x="380" y="128" width="42" height="50" rx="4" fill="#334155"/>
+      <text x="401" y="157" text-anchor="middle" font-size="10" font-weight="800" fill="#FFFFFF">束流</text>
+      <!-- Gamma straight -->
+      <line x1="422" y1="153" x2="666" y2="153" stroke="var(--svg-green)" stroke-width="2.2" stroke-dasharray="5,3"/>
+      <text x="670" y="157" text-anchor="start" font-size="10.5" font-weight="800" fill="var(--svg-green)">γ 直行</text>
+      <!-- Beta sharp up -->
+      <path d="M 422 153 Q 515 150, 566 91" fill="none" stroke="var(--svg-blue)" stroke-width="2.6"/>
+      <polygon points="562,92 569,89 568,97" fill="var(--svg-blue)"/>
+      <text x="576" y="106" text-anchor="start" font-size="10.5" font-weight="800" fill="var(--svg-blue)">β⁻ 急剧向 + 弯</text>
+      <text x="576" y="120" text-anchor="start" font-size="9.8" font-weight="600" fill="var(--svg-muted)">(极轻, 偏转半径极小)</text>
+      <!-- Alpha gentle down -->
+      <path d="M 422 153 Q 545 156, 654 198" fill="none" stroke="var(--svg-red)" stroke-width="2.8"/>
+      <polygon points="651,193 659,200 649,200" fill="var(--svg-red)"/>
+      <text x="546" y="205" text-anchor="start" font-size="10.5" font-weight="800" fill="var(--svg-red)">α 平缓向 − 弯 (重)</text>
+      <!-- B-field note -->
+      <text x="544" y="252" text-anchor="middle" font-size="10.2" font-weight="700" fill="var(--svg-purple)">若改加磁场 B (✕ 入纸面)：用左手定则判向！</text>
+      <text x="544" y="270" text-anchor="middle" font-size="10" font-weight="600" fill="var(--svg-muted)">α 向右上弯，β⁻ 因负电电流反向而向右下急弯，γ 仍直行</text>
+    </svg>
+    <div class="svg-caption">图 23.1 · α、β⁻、γ 的纸铝铅屏蔽实验与均匀电场/磁场偏转规律</div>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-23-3">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>23.3 随机衰变、核衰变方程、半衰期与同位素应用</h3>
+      <div class="section-en-sub">Random &amp; spontaneous decay, nuclear equations, half-life &amp; applications</div>
+      <div class="tier-row">
+        <span class="badge-core">Core · 随机自发特性、半衰期定义与四大实际应用</span>
+        <span class="badge-ext">Extended · 中子过剩机理、α/β⁻/γ 配平与扣本底算半衰期</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-23-3">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>1. 放射性衰变的两大本质：随机（Random）与自发（Spontaneous） <span class="badge-core">Core</span></h4>
+    <ul>
+      <li><strong>随机性（Random）</strong>：我们无法预测某个特定原子核会在哪一秒发生衰变（只知道每半衰期内它有一半概率衰变）。表现在实验上，就是 GM 计数器测出的连续几个 10 s 计数会有微小<strong>无规律涨落（fluctuates slightly）</strong>。</li>
+      <li><strong>自发性（Spontaneous）</strong>：衰变完全不受任何外部物理或化学条件影响——<strong>加热、加压、强磁场、光照或与其他元素化合</strong>都绝对不能加速或减慢半衰期！</li>
+      <li>发生 α 或 β⁻ 衰变后，原子核内质子数 Z 发生变化，从而蜕变成<strong>另一种全新元素的原子（a different element）</strong>。</li>
+    </ul>
+  </div>
+
+  <div class="subtopic ext-only">
+    <h4>2. 核不稳定原因与 α / β⁻ / γ 核衰变方程配平 <span class="badge-ext">Extended</span></h4>
+    <p>
+      为什么有的同位素具有放射性？因为原子核内<strong>中子过多（excess of neutrons）</strong>，或者原子核<strong>体积/质量过大（too heavy，Z &gt; 82）</strong>导致核力难以束缚。衰变总能让核趋向更稳定状态，所有方程必须严格满足<strong>质量数 A 守恒</strong>与<strong>电荷数 Z 守恒</strong>：
+    </p>
+    <div class="table-wrap">
+      <table class="phy-table">
+        <thead>
+          <tr>
+            <th>衰变类型</th>
+            <th>微观机制与核变化规律</th>
+            <th>标准配平示例</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>α 衰变</strong></td>
+            <td>放出氦核 <span class="nuclide"><span class="nuc-nums"><span>4</span><span>2</span></span>He</span>：<strong>A 减 4，Z 减 2</strong></td>
+            <td><span class="nuclide"><span class="nuc-nums"><span>238</span><span>92</span></span>U</span> → <span class="nuclide"><span class="nuc-nums"><span>234</span><span>90</span></span>Th</span> + <span class="nuclide"><span class="nuc-nums"><span>4</span><span>2</span></span>He</span></td>
+          </tr>
+          <tr>
+            <td><strong>β⁻ 衰变</strong></td>
+            <td>核内<strong>一个中子转化为一个质子和一个电子</strong>（n → p + e⁻），电子高速射出：<strong>A 不变，Z 加 1</strong>！</td>
+            <td><span class="nuclide"><span class="nuc-nums"><span>14</span><span>6</span></span>C</span> → <span class="nuclide"><span class="nuc-nums"><span>14</span><span>7</span></span>N</span> + <span class="nuclide"><span class="nuc-nums"><span>0</span><span>−1</span></span>e</span></td>
+          </tr>
+          <tr>
+            <td><strong>γ 辐射</strong></td>
+            <td>处于高能激发态的子核释放高频电磁波能量：<strong>A 不变，Z 不变</strong></td>
+            <td><span class="nuclide"><span class="nuc-nums"><span>60</span><span>28</span></span>Ni*</span> → <span class="nuclide"><span class="nuc-nums"><span>60</span><span>28</span></span>Ni</span> + γ</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>3. 半衰期（Half-life, t<sub>½</sub>）计算与扣本底铁律 <span class="badge-core">Core</span> <span class="badge-ext">Extended</span></h4>
+    <p>
+      <strong>半衰期定义（Mark Scheme 原句）</strong>：样本中某种放射性同位素<strong>一半未衰变的原子核发生衰变所经历的平均时间</strong>（或修正后计数率 / 活度下降到一半所需的时间）。<br>
+      <em>The average time taken for half of the undecayed nuclei of a particular isotope in a sample to decay (or for the corrected count rate / activity to halve).</em>
+    </p>
+    <p class="ext-only">
+      <span class="badge-ext">Extended 核心陷阱</span> 若题目表格或图像给出的是<strong>未扣减本底辐射的原始读数（Measured count rate）</strong>：<br>
+      1. 从图线极远处水平渐近线或“无源读数”读出<strong>本底计数率 C<sub>bg</sub></strong>；<br>
+      2. <strong>先对每一个测量值减去 C<sub>bg</sub></strong>，得到纯粹由放射源产生的修正计数率 C<sub>corrected</sub>；<br>
+      3. 用连续减半（C<sub>0</sub> → C<sub>0</sub>/2 → C<sub>0</sub>/4 → ...）查出每减半一次所需时间即 <strong>t<sub>½</sub></strong>（也可在曲线上任取两组减半后的点验证 t<sub>½</sub> 是否一致）；<br>
+      4. <strong>终极回扣</strong>：若题末问“经过 3 个半衰期后 GM 计数器显示读数是多少”，千万别忘把 C<sub>bg</sub> <strong>加回去</strong>！
+    </p>
+
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 270" width="740" height="270" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="4" width="732" height="262" rx="10" fill="var(--svg-bg)" stroke="var(--svg-grid)" stroke-width="1.5"/>
+        <text x="370" y="24" text-anchor="middle" font-size="13.5" font-weight="800" fill="var(--svg-ink)">含本底辐射的半衰期衰减曲线（务必先减本底 C_bg = 20 counts/min！）</text>
+
+        <!-- Axes -->
+        <line x1="78" y1="42" x2="78" y2="224" stroke="var(--svg-ink)" stroke-width="1.8"/>
+        <line x1="78" y1="224" x2="480" y2="224" stroke="var(--svg-ink)" stroke-width="1.8"/>
+        <text x="84" y="48" text-anchor="start" font-size="10.5" font-weight="700" fill="var(--svg-ink)">测量总计数率 / cpm</text>
+        <text x="279" y="255" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-ink)">时间 t / h</text>
+
+        <!-- Y ticks (0 to 200: 180px height -> 0.9 px per cpm; y = 224 - 0.9 * c) -->
+        <line x1="74" y1="62" x2="78" y2="62" stroke="var(--svg-ink)" stroke-width="1.4"/><text x="68" y="66" text-anchor="end" font-size="10" font-weight="700" fill="var(--svg-ink)">180</text>
+        <line x1="74" y1="134" x2="78" y2="134" stroke="var(--svg-ink)" stroke-width="1.4"/><text x="68" y="138" text-anchor="end" font-size="10" font-weight="700" fill="var(--svg-ink)">100</text>
+        <line x1="74" y1="170" x2="78" y2="170" stroke="var(--svg-ink)" stroke-width="1.4"/><text x="68" y="174" text-anchor="end" font-size="10" font-weight="700" fill="var(--svg-ink)">60</text>
+        <line x1="74" y1="188" x2="78" y2="188" stroke="var(--svg-ink)" stroke-width="1.4"/><text x="68" y="192" text-anchor="end" font-size="10" font-weight="700" fill="var(--svg-ink)">40</text>
+        <line x1="74" y1="206" x2="78" y2="206" stroke="var(--svg-red)" stroke-width="1.4"/><text x="68" y="210" text-anchor="end" font-size="10" font-weight="800" fill="var(--svg-red)">20</text>
+
+        <!-- X ticks (0 to 8h: 360px width -> 45px per hour; x = 78 + 45*t) -->
+        <text x="78" y="238" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-ink)">0</text>
+        <text x="168" y="238" text-anchor="middle" font-size="10" font-weight="800" fill="var(--svg-blue)">2.0</text>
+        <text x="258" y="238" text-anchor="middle" font-size="10" font-weight="800" fill="var(--svg-blue)">4.0</text>
+        <text x="348" y="238" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-ink)">6.0</text>
+        <text x="438" y="238" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-ink)">8.0</text>
+
+        <!-- Background line y=206 -->
+        <line x1="78" y1="206" x2="475" y2="206" stroke="var(--svg-red)" stroke-width="1.6" stroke-dasharray="6,4"/>
+        <text x="472" y="200" text-anchor="end" font-size="10" font-weight="800" fill="var(--svg-red)">本底 C_bg = 20 cpm</text>
+
+        <!-- Decay Curve: C(t) = 20 + 160 * 0.5^(t/2) -->
+        <!-- Points: t=0: (78,62), t=1: (123,104), t=2: (168,134), t=3: (213,155), t=4: (258,170), t=5: (303,181), t=6: (348,188), t=7: (393,193), t=8: (438,197) -->
+        <path d="M 78 62 C 108 92, 138 117, 168 134 C 198 151, 228 162, 258 170 C 288 178, 318 184, 348 188 C 378 192, 408 195, 438 197" fill="none" stroke="var(--svg-green)" stroke-width="2.8"/>
+
+        <!-- Guide lines for t=2 and t=4 -->
+        <polyline points="78,134 168,134 168,224" fill="none" stroke="var(--svg-blue)" stroke-width="1.3" stroke-dasharray="4,3"/>
+        <polyline points="78,170 258,170 258,224" fill="none" stroke="var(--svg-blue)" stroke-width="1.3" stroke-dasharray="4,3"/>
+        <circle cx="78" cy="62" r="4.5" fill="var(--svg-green)"/>
+        <circle cx="168" cy="134" r="4.5" fill="var(--svg-blue)"/>
+        <circle cx="258" cy="170" r="4.5" fill="var(--svg-blue)"/>
+        <circle cx="348" cy="188" r="4.5" fill="var(--svg-green)"/>
+
+        <!-- Right calculation panel -->
+        <rect x="498" y="42" width="222" height="206" rx="8" fill="rgba(2,132,199,0.06)" stroke="var(--svg-blue)" stroke-width="1.2"/>
+        <text x="609" y="64" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-blue)">三步扣本底标准算法</text>
+        <text x="510" y="88" text-anchor="start" font-size="10.5" font-weight="700" fill="var(--svg-ink)">1. 初始净活度 (t=0):</text>
+        <text x="516" y="106" text-anchor="start" font-size="10.5" font-weight="700" fill="var(--svg-green)">180 − 20 = 160 cpm</text>
+        <text x="510" y="130" text-anchor="start" font-size="10.5" font-weight="700" fill="var(--svg-ink)">2. 净活度减半 (160 → 80):</text>
+        <text x="516" y="148" text-anchor="start" font-size="10.5" font-weight="700" fill="var(--svg-blue)">对应总读数 = 80 + 20 = 100</text>
+        <text x="516" y="166" text-anchor="start" font-size="10.5" font-weight="800" fill="var(--svg-blue)">查图时间 ⇒ t½ = 2.0 h！</text>
+        <text x="510" y="192" text-anchor="start" font-size="10.5" font-weight="700" fill="var(--svg-red)">⚠️ 常见错解: 直接把 180/2=90</text>
+        <text x="516" y="210" text-anchor="start" font-size="10" font-weight="600" fill="var(--svg-muted)">会错算出 t½ ≈ 2.4 h（扣 0 分！）</text>
+        <text x="516" y="232" text-anchor="start" font-size="10" font-weight="700" fill="var(--svg-ink)">3. 验证 t=4h: 60−20 = 40 (¼)</text>
+      </svg>
+      <div class="svg-caption">图 23.2 · 未扣本底衰减曲线的正确半衰期读图法（先减后半再加回读图）</div>
+    </div>
+
+    <div class="lab-box" data-lab-type="p23"></div>
+  </div>
+
+  <div class="subtopic">
+    <h4>4. 放射性同位素的五大高频应用选型表 <span class="badge-core">Core</span></h4>
+    <p>考场给出一张同位素候选表（包含辐射类型 α/β⁻/γ 与半衰期），要求为你选择最合适的一种并写明两理由（选型 + 半衰期理由）：</p>
+    <div class="table-wrap">
+      <table class="phy-table">
+        <thead>
+          <tr>
+            <th>应用场景</th>
+            <th>首选射线</th>
+            <th>半衰期要求</th>
+            <th>Mark Scheme 得分理由</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>家庭烟雾报警器</strong><br><em>(Smoke alarm, 如 Am-241)</em></td>
+            <td><strong>α 射线</strong></td>
+            <td><strong>长半衰期</strong><br><em>(数百年)</em></td>
+            <td>α <strong>电离能力最强</strong>使室内空气导电产生稳定电流，且<strong>射程仅几厘米</strong>被塑料外壳完全阻挡对人安全；烟雾颗粒进入会吸收 α 导致电流下降触发报警；长半衰期保证无需频繁更换。</td>
+          </tr>
+          <tr>
+            <td><strong>纸张 / 铝箔测厚仪</strong><br><em>(Thickness gauge)</em></td>
+            <td><strong>β⁻ 射线</strong><br><em>(厚钢板用 γ)</em></td>
+            <td><strong>长半衰期</strong><br><em>(数年–数十年)</em></td>
+            <td>α 穿透不了任何纸张、γ 穿透太强无法感知微米厚度变化，只有 <strong>β⁻ 能部分穿透纸/铝箔</strong>且穿透计数随厚度敏感变化；长半衰期使源活度稳定，免频繁重新校准。</td>
+          </tr>
+          <tr>
+            <td><strong>医学体内示踪剂</strong><br><em>(Medical tracer, 如 Tc-99m)</em></td>
+            <td><strong>γ 射线</strong></td>
+            <td><strong>短半衰期</strong><br><em>(数小时)</em></td>
+            <td>γ <strong>穿透力强</strong>可从体内器官穿出体外被探测器接收（α/β 会被人体吸收无法出体），且 γ <strong>电离伤害低</strong>；<strong>短半衰期</strong>确保检查完后活度迅速衰减，降低病人长期辐射剂量。</td>
+          </tr>
+          <tr>
+            <td><strong>癌症放疗 / 手术器械灭菌 / 食品保鲜</strong><br><em>(Radiotherapy &amp; Sterilisation)</em></td>
+            <td><strong>γ 射线</strong></td>
+            <td><strong>较长半衰期</strong><br><em>(如 Co-60, ~5 年)</em></td>
+            <td>γ 穿透力极强，可在<strong>不拆开密封包装</strong>的情况下穿透整箱医疗器械或食品杀死细菌，或从体外精准聚焦照射杀死体内深层癌细胞。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-23-4">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>23.4 电离辐射的危害与安全操作防护</h3>
+      <div class="section-en-sub">Hazards of ionising radiation &amp; practical safety precautions</div>
+      <div class="tier-row">
+        <span class="badge-core">Core · 细胞损伤变异致癌与实验室五大防护原则</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-23-4">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>1. 生物组织危害与五项实验室安全准则 <span class="badge-core">Core</span></h4>
+    <p>
+      <strong>电离辐射的生物危害（Effects on living things）</strong>：α、β⁻、γ 射入人体细胞时会打断化学键并使水分子/生物大分子发生电离，轻则造成<strong>皮肤辐射灼伤或细胞死亡（cell death / tissue damage）</strong>，重则破坏细胞核内 <strong>DNA 引发基因突变（mutation）</strong>，最终可能诱发<strong>癌症或白血病（cancer）</strong>。
+    </p>
+    <p>
+      尤其注意<strong>外照射 vs 内照射</strong>的区别：体外隔空时 γ 最危险（穿透皮肤进入内脏）；但一旦通过呼吸、饮食把放射源吞入体内，<strong>α 粒子反而最致命</strong>，因为其能量与超强电离能力全部集中在几毫米内脏细胞上！
+    </p>
+    <div class="callout examiner-tip">
+      <div class="callout-title">🛡️ 考官满分必答：安全使用放射源的五项具体措施（至少写出 3 项不同维度）</div>
+      <ol style="margin-bottom:0;">
+        <li><strong>铅衬存储罐保存（Lead-lined storage box）</strong>：不用时立即锁入铅盒，铅可有效吸收辐射；</li>
+        <li><strong>增大距离（Increase distance）</strong>：使用<strong>长柄镊子/机械夹（long tongs / forceps）</strong>拿取，绝对不可徒手触碰，并将源孔朝向远离人体的方向；</li>
+        <li><strong>缩短暴露时间（Reduce exposure time）</strong>：实验前演练好步骤，尽量缩短操作时间；</li>
+        <li><strong>使用物理屏蔽（Shielding）</strong>：操作高活度源时穿铅围裙、隔着含铅玻璃屏或混凝土屏蔽墙操作；</li>
+        <li><strong>剂量监测（Monitoring）</strong>：佩戴<strong>胶片剂量计（film badge / dosimeter）</strong>持续记录累积受照剂量。</li>
+      </ol>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section sme-section" id="sec-sme">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>23.5 SaveMyExams 真题实战演练（MCQ + 结构化解答）</h3>
+      <div class="section-en-sub">Cambridge IGCSE (0625) Exam-Style Questions &amp; Official Mark Schemes</div>
+      <div class="tier-row">
+        <span class="badge-core">Paper 1 / 2 选择题</span>
+        <span class="badge-ext">Paper 3 / 4 结构化计算与论述</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-sme">○ 标记掌握</button>
+  </div>
+
+  <div class="practice-block">
+    <div class="practice-heading">🔘 Part A · 精选选择题（Multiple Choice Questions）</div>
+
+    <div class="exam-q ext-only" data-mcq-answer="B">
+      <div class="exam-q-head">
+        <span class="q-tag">Paper 2 · MCQ 1</span>
+        <span class="tier-row" style="margin-top:0;"><span class="badge-ext">Extended</span><span class="q-marks">[1 mark]</span></span>
+      </div>
+      <div class="q-stem-en">A Geiger-Müller counter records a count rate of 260 counts/min when placed near a radioactive sample. With the sample removed, the background count rate is 20 counts/min. The sample has a half-life of 4.0 hours. What reading does the counter display 8.0 hours later?</div>
+      <div class="q-stem-cn">某放射源（半衰期 4.0 h）前测得计数率为 260 counts/min，移走放射源后测得本底辐射为 20 counts/min。请问 8.0 小时后计数管会显示多少读数？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><strong>A</strong><span>60 counts/min</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><strong>B</strong><span>80 counts/min</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><strong>C</strong><span>65 counts/min</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><strong>D</strong><span>100 counts/min</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！先减本底：260 − 20 = 240 cpm。8.0 h = 2 个半衰期 ⇒ 源本身降至 240 ÷ 4 = 60 cpm。最后务必加回本底：60 + 20 = 80 counts/min！" data-err="❌ 检查两处陷阱：① 有没有先减去本底 20（得 240）？② 题目问的是“计数器显示总读数”，算完源剩余 60 后必须把本底 20 加回来（60 + 20 = 80）！"></div>
+    </div>
+
+    <div class="exam-q ext-only" data-mcq-answer="D">
+      <div class="exam-q-head">
+        <span class="q-tag">Paper 2 · MCQ 2</span>
+        <span class="tier-row" style="margin-top:0;"><span class="badge-ext">Extended</span><span class="q-marks">[1 mark]</span></span>
+      </div>
+      <div class="q-stem-en">A nucleus of bismuth-212 (<span class="nuclide"><span class="nuc-nums"><span>212</span><span>83</span></span>Bi</span>) emits one α-particle followed by one β⁻-particle. What are the nucleon number and proton number of the final nucleus?</div>
+      <div class="q-stem-cn">一个铋-212 原子核 (<span class="nuclide"><span class="nuc-nums"><span>212</span><span>83</span></span>Bi</span>) 依次放出 1 个 α 粒子和 1 个 β⁻ 粒子后，最终子核的核子数 A 与质子数 Z 各是多少？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><strong>A</strong><span>A = 208, Z = 80</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><strong>B</strong><span>A = 208, Z = 81</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><strong>C</strong><span>A = 212, Z = 84</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><strong>D</strong><span>A = 208, Z = 82</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！α 衰变后：A = 212 − 4 = 208，Z = 83 − 2 = 81；接着 β⁻ 衰变使中子变质子：A 不变仍为 208，Z 加 1 变为 82！" data-err="❌ 别弄错 β⁻ 的 Z 变化：β⁻ 是中子变成质子加电子，因此 Z 要 +1（83 − 2 + 1 = 82），不是减 1！"></div>
+    </div>
+
+    <div class="exam-q ext-only" data-mcq-answer="C">
+      <div class="exam-q-head">
+        <span class="q-tag">Paper 2 · MCQ 3</span>
+        <span class="tier-row" style="margin-top:0;"><span class="badge-ext">Extended</span><span class="q-marks">[1 mark]</span></span>
+      </div>
+      <div class="q-stem-en">A beam containing α, β⁻ and γ radiation enters a uniform electric field where the top metal plate is positively charged (+) and the bottom plate is negatively charged (−). Which row describes the deflections?</div>
+      <div class="q-stem-cn">一束同时含 α、β⁻、γ 的射线水平射入上正（+）下负（−）的均匀电场。哪一行正确描述三种射线的偏转情况？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><strong>A</strong><span>α curves sharply up (+); β⁻ curves gently down (−); γ goes straight</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><strong>B</strong><span>α goes straight; β⁻ curves sharply up (+); γ curves gently down (−)</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><strong>C</strong><span>α curves gently down (−); β⁻ curves sharply up (+); γ goes straight</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><strong>D</strong><span>α curves gently up (+); β⁻ curves sharply down (−); γ curves up</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！α 带正电被吸引向负下极板（质量大偏转平缓）；β⁻ 带负电被吸引向正上极板（质量极小偏转剧烈）；γ 不带电直行！" data-err="❌ 记住两要素：异种电荷相吸（+α 找 − 板，−β 找 + 板），且 β 质量仅为 α 的 1/7300 故偏转远比 α 剧烈！"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="A">
+      <div class="exam-q-head">
+        <span class="q-tag">Paper 1/2 · MCQ 4</span>
+        <span class="tier-row" style="margin-top:0;"><span class="badge-core">Core</span><span class="q-marks">[1 mark]</span></span>
+      </div>
+      <div class="q-stem-en">Which radioactive isotope is most suitable as a medical tracer injected into a patient's bloodstream to image the kidneys from outside the body?</div>
+      <div class="q-stem-cn">哪一种放射性同位素最适合注入人体血管用作肾脏体外显像的医学示踪剂？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><strong>A</strong><span>Gamma emitter with a half-life of 6 hours</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><strong>B</strong><span>Alpha emitter with a half-life of 6 hours</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><strong>C</strong><span>Gamma emitter with a half-life of 400 years</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><strong>D</strong><span>Beta emitter with a half-life of 30 years</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！必须选 γ（穿透力强能穿出人体被探测，且电离危害最小）+ 短半衰期 6 小时（扫描完成后放射性快速下降）！" data-err="❌ 体外检测人体内部绝不能用 α（无法穿出体外且内照射极毒），也不能用数十年半衰期让病人长期带辐射！"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="D">
+      <div class="exam-q-head">
+        <span class="q-tag">Paper 1/2 · MCQ 5</span>
+        <span class="tier-row" style="margin-top:0;"><span class="badge-core">Core</span><span class="q-marks">[1 mark]</span></span>
+      </div>
+      <div class="q-stem-en">A sample of radioactive rock is heated in a furnace from 20 °C to 800 °C and mixed with acid. How does its half-life change?</div>
+      <div class="q-stem-cn">将一块放射性矿石放在熔炉中从 20 °C 加热至 800 °C 并用强酸溶解，它的半衰期如何变化？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><strong>A</strong><span>Halves because particles collide faster</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><strong>B</strong><span>Decreases slightly due to chemical bonding</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><strong>C</strong><span>Doubles because electrons are removed</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><strong>D</strong><span>Remains completely unchanged</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！放射性衰变是自发的（spontaneous），只发生在原子核深处，温度、压强和化学反应对其半衰期毫无影响！" data-err="❌ 牢记 Spontaneous 的含义：物理温度压强变化或任何化学反应都绝不会改变半衰期！"></div>
+    </div>
+  </div>
+
+  <div class="practice-block">
+    <div class="practice-heading">✍️ Part B · SaveMyExams 结构化大题与评分标准</div>
+
+    <div class="exam-q">
+      <div class="exam-q-head">
+        <span class="q-tag">Structured Q1 · Absorption Experiment</span>
+        <span class="tier-row" style="margin-top:0;"><span class="badge-core">Core</span><span class="q-marks">[4 marks]</span></span>
+      </div>
+      <div class="q-stem-en">A sealed radioactive source is placed 2 cm from a Geiger-Müller tube. The corrected count rate under different absorbers is:<br>• No absorber: 450 counts/s<br>• Thin sheet of paper: 448 counts/s<br>• 4 mm aluminium plate: 120 counts/s<br>• 3 cm lead block: 5 counts/s<br>Identify which types of radiation (α, β⁻, γ) are emitted by the source, explaining your reasoning clearly.</div>
+      <div class="q-stem-cn">某密封放射源置于 GM 管前 2 cm，测得不同挡板下的修正计数率如上表。判断该源发射哪几种射线（α / β⁻ / γ），并写出严谨推理。</div>
+      <details class="ms-details">
+        <summary>查看 Mark Scheme 官方得分点与中文精讲</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">B1</span> <strong>No α radiation</strong>: count rate hardly drops when paper is inserted (450 → 448 is just random fluctuation).</p>
+          <p><span class="ms-mark">B1</span> <strong>β⁻ radiation is present</strong>: count rate drops significantly when 4 mm aluminium is inserted (448 → 120).</p>
+          <p><span class="ms-mark">B1</span> <strong>γ radiation is present</strong>: radiation still penetrates 4 mm aluminium (120 counts/s),</p>
+          <p><span class="ms-mark">B1</span> and drops sharply only when 3 cm of lead is placed in front (120 → 5).</p>
+          <div class="ms-cn">中文精讲：注意 450 → 448 不是因为挡住了很少的 α，而是衰变<strong>随机涨落（random variation）</strong>！若真的存在 α 射线，放纸后读数必须有明显陡降。</div>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q ext-only">
+      <div class="exam-q-head">
+        <span class="q-tag">Structured Q2 · Decay Equations &amp; Ionisation</span>
+        <span class="tier-row" style="margin-top:0;"><span class="badge-ext">Extended</span><span class="q-marks">[5 marks]</span></span>
+      </div>
+      <div class="q-stem-en">(a) Explain what happens inside a nucleus during β⁻-decay. [2]<br>(b) Complete the decay equation for iodine-131 undergoing β⁻-decay to xenon (Xe):<br><span class="nuclide"><span class="nuc-nums"><span>131</span><span>53</span></span>I</span> → <span class="nuclide"><span class="nuc-nums"><span>A</span><span>Z</span></span>Xe</span> + <span class="nuclide"><span class="nuc-nums"><span>0</span><span>−1</span></span>e</span> [2]<br>(c) Explain why α-particles have a much greater ionising effect than β⁻-particles. [1]</div>
+      <div class="q-stem-cn">(a) 解释 β⁻ 衰变时原子核内部发生了什么变化。[2]<br>(b) 配平碘-131 的 β⁻ 衰变方程。[2]<br>(c) 解释为何 α 粒子的电离能力远强于 β⁻ 粒子。[1]</div>
+      <details class="ms-details">
+        <summary>查看 Mark Scheme 官方得分点与中文精讲</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">B1</span> (a) A <strong>neutron changes into a proton</strong>;</p>
+          <p><span class="ms-mark">B1</span> and an <strong>electron (β⁻-particle)</strong> is emitted at high speed from the nucleus.</p>
+          <p><span class="ms-mark">A1</span> (b) A = <strong>131</strong> (unchanged);</p>
+          <p><span class="ms-mark">A1</span> Z = <strong>54</strong> (53 = Z + (−1) ⇒ Z = 54).</p>
+          <p><span class="ms-mark">B1</span> (c) α-particles have a <strong>larger electric charge (+2 vs −1)</strong> and larger mass / slower speed (more kinetic energy transferred per unit distance / stronger force on atomic electrons).</p>
+          <div class="ms-cn">中文精讲：β⁻ 衰变不是核外电子飞走，而是核内一个中子变成质子和高速电子抛出；故质量数 A 保持 131 不变，质子数加 1 变成 54。</div>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q ext-only">
+      <div class="exam-q-head">
+        <span class="q-tag">Structured Q3 · Background-Adjusted Half-Life</span>
+        <span class="tier-row" style="margin-top:0;"><span class="badge-ext">Extended</span><span class="q-marks">[4 marks]</span></span>
+      </div>
+      <div class="q-stem-en">A student measures the count rate from a radioactive source over 6 hours. At t = 0 h, the measured count rate is 345 counts/min. At t = 6.0 h, the measured count rate is 65 counts/min. The background count rate was separately measured as 25 counts/min.<br>(a) State two natural sources of background radiation. [2]<br>(b) Calculate the half-life of the isotope. [2]</div>
+      <div class="q-stem-cn">测得某源在 t = 0 时计数率 345 cpm，t = 6.0 h 时计数率 65 cpm，单独测得本底计数率为 25 cpm。<br>(a) 写出两种天然本底辐射来源。[2]<br>(b) 计算该同位素的半衰期。[2]</div>
+      <details class="ms-details">
+        <summary>查看 Mark Scheme 官方得分点与中文精讲</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">B2</span> (a) Any two of: <strong>radon gas (in the air)</strong>, <strong>rocks and buildings</strong>, <strong>cosmic rays</strong>, <strong>food and drink</strong>.</p>
+          <p><span class="ms-mark">M1</span> (b) Subtract background first:<br>Corrected count rate at t = 0: 345 − 25 = <strong>320 cpm</strong><br>Corrected count rate at t = 6.0 h: 65 − 25 = <strong>40 cpm</strong></p>
+          <p><span class="ms-mark">A1</span> Halving steps: 320 → 160 → 80 → 40 = <strong>3 half-lives</strong> in 6.0 h ⇒ t<sub>½</sub> = 6.0 / 3 = <strong>2.0 hours</strong>.</p>
+          <div class="ms-cn">中文精讲：只要记住“先扣本底再折半”：345−25=320，65−25=40，320÷40=8=2³ 即恰好经过 3 个半衰期，因此 t<sub>½</sub> = 6.0÷3 = 2.0 h！</div>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head">
+        <span class="q-tag">Structured Q4 · Safety &amp; Thickness Gauge</span>
+        <span class="tier-row" style="margin-top:0;"><span class="badge-core">Core</span><span class="q-marks">[4 marks]</span></span>
+      </div>
+      <div class="q-stem-en">A factory uses a radioactive source and GM detector to monitor the thickness of aluminium foil (thickness ~0.5 mm).<br>(a) Explain why a β⁻ emitter with a long half-life is used rather than an α or γ emitter. [2]<br>(b) State two safety precautions workers should follow when handling or storing the radioactive source. [2]</div>
+      <div class="q-stem-cn">某工厂用放射源和 GM 管监测约 0.5 mm 铝箔厚度。<br>(a) 解释为何必须选择长半衰期的 β⁻ 源而非 α 或 γ 源。[2]<br>(b) 写出工人操作或存放该源时的两项安全防护措施。[2]</div>
+      <details class="ms-details">
+        <summary>查看 Mark Scheme 官方得分点与中文精讲</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">B1</span> (a) β⁻ can penetrate thin aluminium foil and the amount transmitted varies noticeably with thickness (α would be completely stopped; γ would pass straight through almost unchanged);</p>
+          <p><span class="ms-mark">B1</span> long half-life ensures the source activity remains nearly constant over years so the gauge does not need frequent recalibration / replacement.</p>
+          <p><span class="ms-mark">B2</span> (b) Any two of: store in a <strong>lead-lined box</strong> when not in use; handle with <strong>long tongs/forceps</strong> (increase distance / do not touch by hand); <strong>minimise exposure time</strong>; wear a <strong>film badge / protective lead shielding</strong>.</p>
+          <div class="ms-cn">中文精讲：只要看到“测厚（paper/foil）”就是 β⁻ + 长半衰期；若遇到“厚钢板轧钢（thick steel sheet）”才升级用 γ + 长半衰期！</div>
+        </div>
+      </details>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section" id="app-concepts">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>附录 · 第 23 章中英核心概念与高频得分句默写库</h3>
+      <div class="section-en-sub">Bilingual Concept Bank &amp; Cambridge Mark-Scheme Definitions</div>
+      <div class="tier-row">
+        <span class="badge-core">Core 核心必背</span>
+        <span class="badge-ext">Extended 补充高分句</span>
+      </div>
+    <button type="button" class="master-btn" data-section-id="app-concepts">○ 标记掌握</button>
+    </div>
+  </div>
+
+  <div class="concept-toolbar">
+    <div class="concept-filter-group" id="conceptFilterTabs">
+      <button type="button" class="tab-btn active" data-concept-part="all">全部概念</button>
+      <button type="button" class="tab-btn" data-concept-part="23.1">23.1 探测与本底</button>
+      <button type="button" class="tab-btn" data-concept-part="23.2">23.2 α/β/γ 性质偏转</button>
+      <button type="button" class="tab-btn" data-concept-part="23.3">23.3 衰变与半衰期</button>
+      <button type="button" class="tab-btn" data-concept-part="23.4">23.4 辐射安全防护</button>
+    </div>
+    <div class="concept-actions">
+      <span class="concept-count-pill" id="conceptCountPill">显示 17 / 17 题</span>
+      <button type="button" class="tab-btn" id="conceptQuizToggle">🙈 开启遮罩自测</button>
+    </div>
+  </div>
+
+  <div class="concept-grid" id="conceptGrid">
+    <div class="concept-card" data-part="23.1">
+      <div class="cq-head"><span class="q-tag">23.1 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">State four major natural sources of background radiation.</div>
+      <div class="cq-cn">写出本底辐射的四大天然来源。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">1. <span class="kw">Radon gas</span> in the air (~50%); 2. <span class="kw">Rocks and buildings</span>; 3. <span class="kw">Cosmic rays</span> from space; 4. <span class="kw">Food and drink</span>.<br><span class="ms-cn">记四词：氡气、岩石建材、宇宙射线、食物饮水。</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="23.1">
+      <div class="cq-head"><span class="q-tag">23.1 · Extended</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">How do you find and correct for background radiation in an experiment?</div>
+      <div class="cq-cn">实验中如何测量并扣减本底计数率？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Remove the source, measure background count rate over several minutes and find the <span class="kw">average</span>; then compute <span class="kw">C_corrected = C_measured − C_background</span>.<br><span class="ms-cn">移走源多次/长时间测平均本底，再从所有总读数中减去。</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="23.2">
+      <div class="cq-head"><span class="q-tag">23.2 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">State the nature, charge, and mass of an α-particle, β⁻-particle, and γ-ray.</div>
+      <div class="cq-cn">写出 α 粒子、β⁻ 粒子与 γ 射线的物理本质、电荷及质量。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">α: <span class="kw">helium nucleus (2p+2n)</span>, +2, mass 4. β⁻: <span class="kw">fast electron</span>, −1, negligible mass (~1/1840). γ: <span class="kw">EM wave</span>, 0 charge, 0 mass.<br><span class="ms-cn">α 即氦核 (+2/4)，β⁻ 即核内飞出电子 (−1/0)，γ 即电磁波 (0/0)。</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="23.2">
+      <div class="cq-head"><span class="q-tag">23.2 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Compare the ionising power and penetrating power of α, β⁻, and γ.</div>
+      <div class="cq-cn">比较 α、β⁻、γ 的电离能力与穿透本领（阻挡材料）。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Ionising: <span class="kw">α (high) &gt; β⁻ (medium) &gt; γ (low)</span>. Stopped/reduced by: α by <span class="kw">paper / few cm air</span>; β⁻ by <span class="kw">3–5 mm aluminium</span>; γ reduced by <span class="kw">several cm lead / m concrete</span>.<br><span class="ms-cn">电离力与穿透力严格相反：α 用纸挡，β 用几毫米铝板挡，γ 用厚铅大幅衰减。</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="23.2">
+      <div class="cq-head"><span class="q-tag">23.2 · Extended</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">Why does α cause far more ionisation per mm than β⁻ or γ?</div>
+      <div class="cq-cn">为什么 α 粒子比 β⁻ 和 γ 产生强烈得多的电离效应？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Because α has a <span class="kw">larger charge (+2)</span> and <span class="kw">larger mass / slower speed</span>, giving it more time to exert strong electrostatic forces on nearby electrons.<br><span class="ms-cn">电离取决于动能与电荷：α 电荷 +2 最大且速度较慢，对周围电子作用最强。</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="23.2">
+      <div class="cq-head"><span class="q-tag">23.2 · Extended</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">Compare the paths of α, β⁻, and γ in a uniform electric field.</div>
+      <div class="cq-cn">比较 α、β⁻、γ 在均匀电场中的偏转方向与偏转幅度。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">α curves <span class="kw">gently toward the negative (−) plate</span>; β⁻ curves <span class="kw">sharply toward the positive (+) plate</span> (tiny mass); γ is <span class="kw">undeflected</span>.<br><span class="ms-cn">异性相吸，且 β⁻ 质量极小（~1/7300 α）故弯曲剧烈得多！</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="23.2">
+      <div class="cq-head"><span class="q-tag">23.2 · Extended</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">How do you find the deflection direction of α and β⁻ in a magnetic field?</div>
+      <div class="cq-cn">如何用左手定则判定 α 与 β⁻ 在匀强磁场中的偏转方向？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Use <span class="kw">Fleming's left-hand rule</span>: for α, second finger matches motion; for β⁻ (−), second finger points <span class="kw">opposite to particle motion</span> (so α and β⁻ curve opposite ways).<br><span class="ms-cn">切记 β⁻ 带负电，传统电流方向必须反指其运动反向！</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="23.3">
+      <div class="cq-head"><span class="q-tag">23.3 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Explain what is meant by radioactive decay being "random" and "spontaneous".</div>
+      <div class="cq-cn">解释放射性衰变的“随机性（Random）”与“自发性（Spontaneous）”。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner"><span class="kw">Random</span>: impossible to predict when a specific nucleus will decay (count rate fluctuates). <span class="kw">Spontaneous</span>: unaffected by external conditions (<span class="kw">temperature, pressure, chemical bonding</span>).<br><span class="ms-cn">随机＝何时衰变不可测；自发＝物理化学环境完全改不了其衰变率。</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="23.3">
+      <div class="cq-head"><span class="q-tag">23.3 · Extended</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">Why are some isotopes radioactive, and what happens inside the nucleus during β⁻-decay?</div>
+      <div class="cq-cn">同位素为什么不稳定？β⁻ 衰变时核内发生了什么？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Unstable due to an <span class="kw">excess of neutrons</span> or being <span class="kw">too heavy</span>. During β⁻-decay, a <span class="kw">neutron changes into a proton + electron</span> (A unchanged, Z increases by 1).<br><span class="ms-cn">中子过多或过重导致不稳定；β⁻ 衰变本质是 n → p + e⁻，Z + 1。</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="23.3">
+      <div class="cq-head"><span class="q-tag">23.3 · Extended</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">How do nucleon number A and proton number Z change in α, β⁻, and γ decay?</div>
+      <div class="cq-cn">α、β⁻、γ 衰变中核子数 A 与质子数 Z 各如何变化？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">α-decay: <span class="kw">A − 4, Z − 2</span>. β⁻-decay: <span class="kw">A unchanged, Z + 1</span>. γ-emission: <span class="kw">both A and Z unchanged</span>.<br><span class="ms-cn">α 减 4 减 2，β 质量不变质子加 1，γ 双不变。</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="23.3">
+      <div class="cq-head"><span class="q-tag">23.3 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Define the half-life of a radioactive isotope.</div>
+      <div class="cq-cn">给出放射性同位素“半衰期（Half-life）”的标准定义。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">The <span class="kw">average time taken for half of the nuclei</span> of that isotope in any sample to decay (or for corrected activity/count rate to halve).<br><span class="ms-cn">未衰变核数量（或修正活度/计数率）减少一半所需的平均时间。</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="23.3">
+      <div class="cq-head"><span class="q-tag">23.3 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Why is an α-emitter with a long half-life used in a smoke alarm?</div>
+      <div class="cq-cn">为什么烟雾报警器选用长半衰期的 α 放射源？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">α is <span class="kw">strongly ionising</span> (creates air current) and <span class="kw">easily stopped by smoke / plastic casing</span> (safe outside); <span class="kw">long half-life</span> avoids frequent replacement.<br><span class="ms-cn">强电离产电流、遇烟即被阻、塑料壳外安全、长寿命免换源。</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="23.3">
+      <div class="cq-head"><span class="q-tag">23.3 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Why is a β⁻-emitter with a long half-life used in a paper/foil thickness gauge?</div>
+      <div class="cq-cn">为什么纸张或铝箔测厚仪选用长半衰期的 β⁻ 放射源？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">β⁻ <span class="kw">partially penetrates</span> paper/foil so count rate changes sensitively with thickness (α is stopped completely; γ passes straight through); <span class="kw">long half-life</span> keeps calibration steady.<br><span class="ms-cn">穿透适中对厚度敏感，长半衰期免频繁校准。（厚钢板改用 γ）。</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="23.3">
+      <div class="cq-head"><span class="q-tag">23.3 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Why does a medical tracer use a γ-emitter with a short half-life?</div>
+      <div class="cq-cn">为什么医学体内示踪剂要求用短半衰期的 γ 放射源？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">γ <span class="kw">escapes out of the body</span> to be detected and has <span class="kw">low ionisation</span> (less tissue damage); <span class="kw">short half-life</span> means activity decays rapidly after diagnosis.<br><span class="ms-cn">γ 能穿出体外探测且电离伤害低；短半衰期扫完即快速衰变失活。</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="23.3">
+      <div class="cq-head"><span class="q-tag">23.3 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Which radiation is used to sterilise surgical instruments and irradiate food, and why?</div>
+      <div class="cq-cn">手术器械灭菌和食品辐照保鲜采用哪种射线？为什么？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner"><span class="kw">Gamma (γ) radiation</span>: high penetrating power allows it to <span class="kw">penetrate sealed packaging</span> and kill all bacteria/microorganisms.<br><span class="ms-cn">γ 射线穿透力最强，无需拆封包装即可彻底杀菌。</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="23.4">
+      <div class="cq-head"><span class="q-tag">23.4 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">State three biological hazards of ionising nuclear radiation.</div>
+      <div class="cq-cn">写出电离核辐射对生物组织的三大危害。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">1. <span class="kw">Cell death / tissue burns</span>; 2. <span class="kw">DNA mutations</span>; 3. Increased risk of <span class="kw">cancer</span>.<br><span class="ms-cn">细胞死亡灼伤、DNA 突变、致癌。</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="23.4">
+      <div class="cq-head"><span class="q-tag">23.4 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">List four practical safety precautions for handling radioactive sources.</div>
+      <div class="cq-cn">列举安全操作与存放放射源的四项防护措施。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">1. Store in a <span class="kw">lead-lined box</span>; 2. Handle with <span class="kw">long tongs</span> (distance); 3. Keep <span class="kw">exposure time minimal</span>; 4. Wear <span class="kw">lead shielding / film badge</span>.<br><span class="ms-cn">铅盒贮存、长钳隔距、减短时间、屏蔽与剂量牌监测。</span></div>
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+        <nav class="chapter-pager" aria-label="章节切换导航">
+          <div><a class="pager-btn" href="Ch22_The_Nuclear_Atom.html">← Ch22 α 金箔散射原子核、同位素及核裂变与聚变</a></div>
+          <div><a class="pager-btn primary" href="index.html">🏠 返回 25 章全书总目录</a></div>
+          <div><a class="pager-btn" href="Ch24_Earth_and_Solar_System.html">Ch24 自转四季、月相、行星吸积盘形成与轨道速率 v=2πr/T →</a></div>
+        </nav>
+      </div>
+    </main>
+  </div>
+
+  <button type="button" class="back-top-btn" id="backTopBtn" title="返回顶部">↑</button>
+
+  <script>
+(function () {
+  'use strict';
+
+  const THEME_KEY = 'igcse_phy0625_theme';
+  const chapterCode = (document.body && document.body.getAttribute('data-chapter-code')) || 'HUB';
+  const STORAGE_PREFIX = 'igcse_phy0625_' + chapterCode.toLowerCase() + '_';
+  const htmlEl = document.documentElement;
+  const bodyEl = document.body;
+
+  // All state variables declared cleanly at top of IIFE (prevents TDZ errors)
+  let currentViewMode = localStorage.getItem(STORAGE_PREFIX + 'viewMode') || 'all';
+  let activeConceptPart = 'all';
+  let quizMasked = localStorage.getItem(STORAGE_PREFIX + 'quizMasked') === '1';
+  let allMsExpanded = false;
+  let masteredIds = [];
+  try {
+    masteredIds = JSON.parse(localStorage.getItem(STORAGE_PREFIX + 'mastered') || '[]');
+    if (!Array.isArray(masteredIds)) masteredIds = [];
+  } catch (e) {
+    masteredIds = [];
+  }
+
+  // ---------- 1. Theme Toggle ----------
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+
+  function applyTheme(theme) {
+    htmlEl.setAttribute('data-theme', theme);
+    if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem(THEME_KEY, theme);
+  }
+  applyTheme(localStorage.getItem(THEME_KEY) || 'light');
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      applyTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  }
+
+  // ---------- 2. View Mode Filter (All / Core / Extended / SME) ----------
+  function applyViewMode(mode) {
+    currentViewMode = mode;
+    bodyEl.classList.remove('mode-core', 'mode-ext', 'mode-book', 'mode-sme');
+    if (mode === 'core') bodyEl.classList.add('mode-core');
+    if (mode === 'ext') bodyEl.classList.add('mode-ext');
+    if (mode === 'sme') bodyEl.classList.add('mode-sme');
+    document.querySelectorAll('[data-view-mode]').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-view-mode') === mode);
+    });
+    localStorage.setItem(STORAGE_PREFIX + 'viewMode', mode);
+    filterConcepts();
+  }
+  document.querySelectorAll('[data-view-mode]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      applyViewMode(btn.getAttribute('data-view-mode'));
+    });
+  });
+
+  // ---------- 3. Sidebar Drawer & Accordion ----------
+  const sidebar = document.getElementById('sidebar');
+  const menuToggle = document.getElementById('menuToggle');
+  if (menuToggle && sidebar) {
+    menuToggle.addEventListener('click', function () { sidebar.classList.toggle('open'); });
+    sidebar.querySelectorAll('.nav-link').forEach(function (lnk) {
+      lnk.addEventListener('click', function () {
+        if (window.innerWidth <= 980) sidebar.classList.remove('open');
+      });
+    });
+  }
+  document.querySelectorAll('.nav-unit-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const unit = btn.closest('.nav-unit');
+      if (unit) unit.classList.toggle('collapsed');
+    });
+  });
+
+  // ---------- 4. Mastery Progress Tracker ----------
+  const progressText = document.getElementById('progressText');
+  const progressFill = document.getElementById('progressFill');
+  const masterBtns = Array.from(document.querySelectorAll('.master-btn'));
+  const totalSections = masterBtns.length;
+  const validIds = new Set(masterBtns.map(function (b) { return b.getAttribute('data-section-id'); }));
+
+  function renderMastery() {
+    const doneList = masteredIds.filter(function (id) { return validIds.has(id); });
+    localStorage.setItem(STORAGE_PREFIX + 'total', String(totalSections));
+    if (progressText) progressText.textContent = doneList.length + '/' + totalSections;
+    if (progressFill && totalSections > 0) {
+      progressFill.style.width = Math.round((doneList.length / totalSections) * 100) + '%';
+    }
+    masterBtns.forEach(function (btn) {
+      const sid = btn.getAttribute('data-section-id');
+      const done = doneList.indexOf(sid) !== -1;
+      btn.classList.toggle('is-mastered', done);
+      btn.textContent = done ? '✓ 已掌握' : '○ 标记掌握';
+    });
+    document.querySelectorAll('.nav-link').forEach(function (lnk) {
+      const id = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('mastered', doneList.indexOf(id) !== -1);
+    });
+  }
+  masterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const sid = btn.getAttribute('data-section-id');
+      const idx = masteredIds.indexOf(sid);
+      if (idx === -1) masteredIds.push(sid);
+      else masteredIds.splice(idx, 1);
+      localStorage.setItem(STORAGE_PREFIX + 'mastered', JSON.stringify(masteredIds));
+      renderMastery();
+    });
+  });
+  if (totalSections > 0) renderMastery();
+
+  // ---------- 5. Global Toggle Details & Print ----------
+  const toggleAllMs = document.getElementById('toggleAllMs');
+  if (toggleAllMs) {
+    toggleAllMs.addEventListener('click', function () {
+      allMsExpanded = !allMsExpanded;
+      document.querySelectorAll('details.ms-details').forEach(function (det) { det.open = allMsExpanded; });
+      const lbl = toggleAllMs.querySelector('.btn-label');
+      if (lbl) lbl.textContent = allMsExpanded ? '收起解析' : '展开解析';
+      toggleAllMs.classList.toggle('active', allMsExpanded);
+    });
+  }
+  const printBtn = document.getElementById('printBtn');
+  if (printBtn) printBtn.addEventListener('click', function () { window.print(); });
+
+  // ---------- 6. Instant Search ----------
+  const searchInput = document.getElementById('searchInput');
+  const searchClear = document.getElementById('searchClear');
+  const searchBar = document.getElementById('searchBar');
+  const searchSummary = document.getElementById('searchSummary');
+  const searchResetBtn = document.getElementById('searchResetBtn');
+  const emptySearchNotice = document.getElementById('emptySearchNotice');
+
+  function runSearch() {
+    if (!searchInput) return;
+    const raw = searchInput.value.trim().toLowerCase();
+    if (searchClear) searchClear.style.display = raw ? 'block' : 'none';
+    const sections = Array.from(document.querySelectorAll('.topic-section'));
+    if (!raw) {
+      sections.forEach(function (s) { s.classList.remove('search-dim'); });
+      if (searchBar) searchBar.classList.remove('visible');
+      if (emptySearchNotice) emptySearchNotice.style.display = 'none';
+      return;
+    }
+    let hits = 0;
+    sections.forEach(function (sec) {
+      const ok = sec.textContent.toLowerCase().indexOf(raw) !== -1;
+      sec.classList.toggle('search-dim', !ok);
+      if (ok) hits++;
+    });
+    if (searchBar) searchBar.classList.add('visible');
+    if (searchSummary) searchSummary.textContent = '关键词 “' + searchInput.value.trim() + '” 匹配 ' + hits + ' 个板块';
+    if (emptySearchNotice) emptySearchNotice.style.display = hits === 0 ? 'block' : 'none';
+  }
+  if (searchInput) searchInput.addEventListener('input', runSearch);
+  function resetSearch() { if (searchInput) searchInput.value = ''; runSearch(); }
+  if (searchClear) searchClear.addEventListener('click', resetSearch);
+  if (searchResetBtn) searchResetBtn.addEventListener('click', resetSearch);
+
+  // ---------- 7. Interactive MCQ Grading ----------
+  document.querySelectorAll('.exam-q[data-mcq-answer]').forEach(function (qBox) {
+    const ans = qBox.getAttribute('data-mcq-answer');
+    const fb = qBox.querySelector('.mcq-feedback');
+    const opts = qBox.querySelectorAll('.mcq-opt');
+    opts.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const chosen = btn.getAttribute('data-opt');
+        opts.forEach(function (o) { o.classList.remove('correct', 'wrong'); });
+        if (chosen === ans) {
+          btn.classList.add('correct');
+          if (fb) { fb.textContent = fb.getAttribute('data-ok') || '✅ 回答正确！'; fb.className = 'mcq-feedback visible ok'; }
+        } else {
+          btn.classList.add('wrong');
+          opts.forEach(function (o) { if (o.getAttribute('data-opt') === ans) o.classList.add('correct'); });
+          if (fb) { fb.textContent = fb.getAttribute('data-err') || '❌ 未选对，请对照解析复盘。'; fb.className = 'mcq-feedback visible err'; }
+        }
+      });
+    });
+  });
+
+  // ---------- 8. Concept Bank Filter & Mask ----------
+  const conceptCountPill = document.getElementById('conceptCountPill');
+  const conceptQuizToggle = document.getElementById('conceptQuizToggle');
+
+  function filterConcepts() {
+    const cards = Array.from(document.querySelectorAll('#conceptGrid .concept-card'));
+    if (!cards.length) return;
+    let visible = 0;
+    cards.forEach(function (card) {
+      const part = card.getAttribute('data-part');
+      const isExt = card.classList.contains('ext-only');
+      const matchesTab = activeConceptPart === 'all' || part === activeConceptPart;
+      const matchesTier = currentViewMode !== 'core' || !isExt;
+      const show = matchesTab && matchesTier;
+      card.classList.toggle('concept-hidden', !show);
+      if (show) visible++;
+    });
+    if (conceptCountPill) conceptCountPill.textContent = '显示 ' + visible + ' / ' + cards.length + ' 题';
+  }
+
+  document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      activeConceptPart = btn.getAttribute('data-concept-part');
+      document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      filterConcepts();
+    });
+  });
+
+  function applyQuizMask(masked) {
+    quizMasked = masked;
+    document.querySelectorAll('#conceptGrid .concept-card').forEach(function (c) { c.classList.toggle('masked', masked); });
+    if (conceptQuizToggle) {
+      conceptQuizToggle.textContent = masked ? '👁️ 显示全部答案' : '🙈 开启遮罩自测';
+      conceptQuizToggle.classList.toggle('active', masked);
+    }
+    localStorage.setItem(STORAGE_PREFIX + 'quizMasked', masked ? '1' : '0');
+  }
+  if (conceptQuizToggle) {
+    conceptQuizToggle.addEventListener('click', function () { applyQuizMask(!quizMasked); });
+  }
+  document.querySelectorAll('#conceptGrid .cq-answer').forEach(function (box) {
+    box.addEventListener('click', function () {
+      const card = box.closest('.concept-card');
+      if (card && card.classList.contains('masked')) card.classList.remove('masked');
+    });
+  });
+
+  // ---------- 9. 2D Mini-Plot Helper (Zero HTML tags inside SVG) ----------
+  function makePlot(w, h, xmin, xmax, ymin, ymax) {
+    const pad = 22;
+    return {
+      w: w, h: h, xmin: xmin, xmax: xmax, ymin: ymin, ymax: ymax,
+      toX: function (x) { return pad + ((x - xmin) / (xmax - xmin)) * (w - 2 * pad); },
+      toY: function (y) { return h - pad - ((y - ymin) / (ymax - ymin)) * (h - 2 * pad); }
+    };
+  }
+  function plotBase(p, xLbl, yLbl) {
+    let s = '<rect x="2" y="2" width="' + (p.w - 4) + '" height="' + (p.h - 4) + '" rx="6" fill="none" stroke="var(--svg-grid)" stroke-width="1"/>';
+    for (let i = 1; i <= 4; i++) {
+      const gx = p.xmin + (i / 5) * (p.xmax - p.xmin);
+      const gy = p.ymin + (i / 5) * (p.ymax - p.ymin);
+      s += '<line x1="' + p.toX(gx).toFixed(1) + '" y1="12" x2="' + p.toX(gx).toFixed(1) + '" y2="' + (p.h - 12) + '" stroke="var(--svg-grid)" stroke-width="0.7"/>';
+      s += '<line x1="12" y1="' + p.toY(gy).toFixed(1) + '" x2="' + (p.w - 12) + '" y2="' + p.toY(gy).toFixed(1) + '" stroke="var(--svg-grid)" stroke-width="0.7"/>';
+    }
+    const ox = p.xmin <= 0 && p.xmax >= 0 ? p.toX(0) : 22;
+    const oy = p.ymin <= 0 && p.ymax >= 0 ? p.toY(0) : p.h - 22;
+    s += '<line x1="' + ox.toFixed(1) + '" y1="10" x2="' + ox.toFixed(1) + '" y2="' + (p.h - 10) + '" stroke="var(--svg-muted)" stroke-width="1.5"/>';
+    s += '<line x1="10" y1="' + oy.toFixed(1) + '" x2="' + (p.w - 10) + '" y2="' + oy.toFixed(1) + '" stroke="var(--svg-muted)" stroke-width="1.5"/>';
+    s += '<text x="' + Math.min(p.w - 45, ox + 6).toFixed(1) + '" y="20" font-size="10.5" font-weight="700" fill="var(--svg-muted)">' + (yLbl || 'y') + '</text>';
+    s += '<text x="' + (p.w - 14) + '" y="' + Math.max(20, oy - 5).toFixed(1) + '" text-anchor="end" font-size="10.5" font-weight="700" fill="var(--svg-muted)">' + (xLbl || 'x') + '</text>';
+    return s;
+  }
+  function plotPath(p, fn, col, dashed) {
+    let d = '', pen = false;
+    for (let i = 0; i <= 100; i++) {
+      const x = p.xmin + (i / 100) * (p.xmax - p.xmin);
+      const y = fn(x);
+      if (!Number.isFinite(y) || y < p.ymin - 1 || y > p.ymax + 1) { pen = false; continue; }
+      d += (pen ? ' L ' : ' M ') + p.toX(x).toFixed(1) + ' ' + p.toY(y).toFixed(1);
+      pen = true;
+    }
+    return d ? '<path d="' + d.trim() + '" fill="none" stroke="' + col + '" stroke-width="2.4"' + (dashed ? ' stroke-dasharray="5,3"' : '') + '/>' : '';
+  }
+
+  // ---------- 10. All 25 Interactive Physics Labs (p01 – p25) ----------
+  function mountPhysicsLab(el) {
+    const t = el.getAttribute('data-lab-type');
+    if (!t) return;
+
+    const bindInputs = function (fn) {
+      el.querySelectorAll('input,select').forEach(function (inp) {
+        inp.addEventListener('input', fn);
+        inp.addEventListener('change', fn);
+      });
+      fn();
+    };
+
+    if (t === 'p01') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 1 交互实验室 · 密度 ρ = m/V 与排水法浮沉判断仪</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>质量 m (g)：<input type="range" id="p1M" min="10" max="300" value="180"><span id="p1ML">180 g</span></label>' +
+        '<label>排开液体体积 ΔV (cm³)：<input type="range" id="p1V" min="10" max="200" value="120"><span id="p1VL">120 cm³</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p1Svg" viewBox="0 0 360 230" width="360" height="230"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p1Out1"></div><div class="readout-pill" id="p1Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const m = Number(el.querySelector('#p1M').value), v = Number(el.querySelector('#p1V').value);
+        el.querySelector('#p1ML').textContent = m + ' g'; el.querySelector('#p1VL').textContent = v + ' cm³';
+        const rho = m / v;
+        const float = rho < 1.0;
+        el.querySelector('#p1Out1').textContent = '密度 ρ = ' + m + ' / ' + v + ' = ' + rho.toFixed(2) + ' g/cm³ (' + Math.round(rho * 1000) + ' kg/m³)';
+        el.querySelector('#p1Out2').textContent = float ? '✅ ρ < 1.0 g/cm³ → 漂浮于纯水面 (Floats)；若完全浸没需细针轻按且留意视差' : Math.abs(rho - 1.0) < 0.02 ? '⚖️ ρ ≈ 1.0 g/cm³ → 悬浮水中' : '⬇️ ρ > 1.0 g/cm³ → 沉入水底 (Sinks)！';
+        const yObj = float ? 86 : 158;
+        el.querySelector('#p1Svg').innerHTML =
+          '<rect x="110" y="34" width="140" height="164" fill="none" stroke="var(--svg-ink)" stroke-width="2.2"/>' +
+          '<rect x="112" y="88" width="136" height="108" fill="rgba(2,132,199,0.22)"/>' +
+          '<rect x="155" y="' + yObj + '" width="50" height="36" rx="4" fill="' + (float ? 'var(--svg-amber)' : 'var(--svg-indigo)') + '"/>' +
+          '<text x="180" y="218" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-ink)">水密度 ρ_water = 1.00 g/cm³</text>';
+      });
+    } else if (t === 'p02') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 2 交互实验室 · v-t 图像加速度斜率与积分面积位移台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>初速度 u (m/s)：<input type="number" id="p2U" value="4"></label>' +
+        '<label>末速度 v (m/s)：<input type="number" id="p2V" value="20"></label>' +
+        '<label>时间 t (s)：<input type="number" id="p2T" value="8" min="1"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p2Svg" viewBox="0 0 360 230" width="360" height="230"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p2Acc"></div><div class="readout-pill" id="p2Dist"></div></div></div></div>';
+      bindInputs(function () {
+        const u = Number(el.querySelector('#p2U').value) || 0, v = Number(el.querySelector('#p2V').value) || 0, tm = Math.max(1, Number(el.querySelector('#p2T').value) || 8);
+        const a = (v - u) / tm, s = 0.5 * (u + v) * tm;
+        const p = makePlot(360, 230, 0, tm * 1.15, Math.min(0, u, v) - 2, Math.max(10, u, v) * 1.15);
+        let svg = plotBase(p, 't (s)', 'v (m/s)');
+        svg += '<polygon points="' + p.toX(0).toFixed(1) + ',' + p.toY(0).toFixed(1) + ' ' + p.toX(0).toFixed(1) + ',' + p.toY(u).toFixed(1) + ' ' + p.toX(tm).toFixed(1) + ',' + p.toY(v).toFixed(1) + ' ' + p.toX(tm).toFixed(1) + ',' + p.toY(0).toFixed(1) + '" fill="rgba(2,132,199,0.2)" stroke="var(--svg-blue)" stroke-width="2"/>';
+        el.querySelector('#p2Svg').innerHTML = svg;
+        el.querySelector('#p2Acc').textContent = '斜率即加速度 a = (v − u)/t = ' + a.toFixed(2) + ' m/s² ' + (a < 0 ? '(减速 Deceleration)' : a > 0 ? '(匀加速)' : '(匀速)');
+        el.querySelector('#p2Dist').textContent = '图像下方面积 = 梯形 ½(u+v)t = ' + s.toFixed(1) + ' m | 平均速率 = ' + (s / tm).toFixed(2) + ' m/s';
+      });
+    } else if (t === 'p03') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 3 交互实验室 · 非弹性碰撞动量守恒 (m₁u₁ = (m₁+m₂)v) 与冲量</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>m₁ (kg)：<input type="number" id="p3M1" value="3" min="1"></label><label>u₁ (m/s)：<input type="number" id="p3U1" value="6"></label>' +
+        '<label>m₂ (kg)：<input type="number" id="p3M2" value="6" min="1"></label><label>作用时间 Δt (s)：<input type="number" id="p3Dt" value="0.2" step="0.1" min="0.05"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p3Out1"></div><div class="readout-pill" id="p3Out2"></div></div></div>';
+      bindInputs(function () {
+        const m1 = Math.max(0.5, Number(el.querySelector('#p3M1').value) || 3), u1 = Number(el.querySelector('#p3U1').value) || 0;
+        const m2 = Math.max(0.5, Number(el.querySelector('#p3M2').value) || 6), dt = Math.max(0.05, Number(el.querySelector('#p3Dt').value) || 0.2);
+        const v = (m1 * u1) / (m1 + m2);
+        const imp = m2 * v;
+        el.querySelector('#p3Out1').textContent = '合体后共同速度 v = m₁u₁/(m₁+m₂) = ' + v.toFixed(2) + ' m/s | 碰前总动量 = ' + (m1 * u1).toFixed(1) + ' kg·m/s';
+        el.querySelector('#p3Out2').textContent = 'm₂ 所受冲量 Δp = ' + imp.toFixed(2) + ' N·s | 平均碰撞力 F = Δp/Δt = ' + (imp / dt).toFixed(1) + ' N（时间越长冲击力越小！）';
+      });
+    } else if (t === 'p04') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 4 交互实验室 · 杠杆力矩平衡 (M = Fd) 与支点向上支持力</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>左力 F₁ (N)：<input type="number" id="p4F1" value="60"></label><label>左臂 d₁ (m)：<input type="number" id="p4D1" value="2.0" step="0.5"></label>' +
+        '<label>右臂 d₂ (m)：<input type="number" id="p4D2" value="3.0" step="0.5" min="0.5"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p4Out1"></div><div class="readout-pill" id="p4Out2"></div></div></div>';
+      bindInputs(function () {
+        const f1 = Number(el.querySelector('#p4F1').value) || 0, d1 = Number(el.querySelector('#p4D1').value) || 0, d2 = Math.max(0.5, Number(el.querySelector('#p4D2').value) || 1);
+        const f2 = (f1 * d1) / d2;
+        el.querySelector('#p4Out1').textContent = '逆时针力矩 F₁d₁ = ' + (f1 * d1).toFixed(1) + ' N·m ⇒ 平衡所需右力 F₂ = ' + f2.toFixed(2) + ' N';
+        el.querySelector('#p4Out2').textContent = '支点向上总支持力 (Net upward force) = F₁ + F₂ = ' + (f1 + f2).toFixed(2) + ' N（平衡需满足合力=0且合力矩=0！）';
+      });
+    } else if (t === 'p05') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 5 交互实验室 · 胡克定律 F = kx 与液体压强 Δp = ρgΔh 计算台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>原长 l₀ (cm)：<input type="number" id="p5L0" value="12"></label><label>劲度系数 k (N/cm)：<input type="number" id="p5K" value="2.5" step="0.5"></label>' +
+        '<label>拉力 F (N)：<input type="number" id="p5F" value="15"></label><label>水深 Δh (m)：<input type="number" id="p5H" value="5"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p5Out1"></div><div class="readout-pill" id="p5Out2"></div></div></div>';
+      bindInputs(function () {
+        const l0 = Number(el.querySelector('#p5L0').value) || 12, k = Math.max(0.1, Number(el.querySelector('#p5K').value) || 2.5);
+        const F = Number(el.querySelector('#p5F').value) || 0, h = Number(el.querySelector('#p5H').value) || 0;
+        const x = F / k;
+        el.querySelector('#p5Out1').textContent = '伸长量 Extension x = F/k = ' + x.toFixed(2) + ' cm ⇒ 总长度 Total length = ' + (l0 + x).toFixed(2) + ' cm（注意考题常问总长还是伸长量！）';
+        el.querySelector('#p5Out2').textContent = '水下 Δh = ' + h + ' m 处液体附加压强 Δp = 1000 × 9.8 × ' + h + ' = ' + (1000 * 9.8 * h).toLocaleString() + ' Pa';
+      });
+    } else if (t === 'p06') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 6 交互实验室 · 自由落体机械能转换 (mgΔh ↔ ½mv²) 与效率 η</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>质量 m (kg)：<input type="number" id="p6M" value="4"></label><label>高度 Δh (m)：<input type="number" id="p6H" value="5"></label>' +
+        '<label>效率 η (%)：<input type="range" id="p6E" min="20" max="100" value="80"><span id="p6EL">80%</span></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p6Out1"></div><div class="readout-pill" id="p6Out2"></div></div></div>';
+      bindInputs(function () {
+        const m = Math.max(0.1, Number(el.querySelector('#p6M').value) || 4), h = Math.max(0, Number(el.querySelector('#p6H').value) || 5), eff = Number(el.querySelector('#p6E').value) / 100;
+        el.querySelector('#p6EL').textContent = Math.round(eff * 100) + '%';
+        const gpe = m * 9.8 * h, ke = gpe * eff, v = Math.sqrt((2 * ke) / m);
+        el.querySelector('#p6Out1').textContent = '初始重力势能 ΔE_p = m × 9.8 × ' + h + ' = ' + gpe.toFixed(1) + ' J | 转化为动能 E_k = ' + ke.toFixed(1) + ' J（热耗散 ' + (gpe - ke).toFixed(1) + ' J）';
+        el.querySelector('#p6Out2').textContent = '到达底端速度 v = √(2gΔh·η) = ' + v.toFixed(2) + ' m/s（注意无空气阻力时 η=100% 且速度与质量 m 无关！）';
+      });
+    } else if (t === 'p07') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 7 交互实验室 · 能源类型、太阳源头辨析与发电对比筛查仪</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>选择发电能源：<select id="p7Src"><option value="solar">太阳能光伏 (Solar cell)</option><option value="wind">风力发电 (Wind)</option><option value="hydro">水力蓄能 (Hydroelectric)</option><option value="geo">地热能 (Geothermal)</option><option value="nuc">核裂变 (Nuclear)</option><option value="tidal">潮汐能 (Tidal)</option><option value="coal">燃煤火电 (Fossil fuel)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p7Out1"></div><div class="readout-pill" id="p7Out2"></div></div></div>';
+      const MAP7 = {
+        solar: { sun: '✅ 直接来自太阳 (Direct solar radiation)', ren: '可再生 (Renewable) · 运行零 CO₂', prop: '直接光生电无需涡轮机；缺点：夜间阴天间歇、占地面积大。' },
+        wind: { sun: '✅ 间接来自太阳 (太阳不均加热引发空气对流)', ren: '可再生 (Renewable) · 零温室气体', prop: '视觉噪音争议与风速不可控间歇发电，需储能或调峰电站。' },
+        hydro: { sun: '✅ 间接来自太阳 (蒸发降雨水循环)', ren: '可再生 (Renewable) · 响应极快 (几秒启动)', prop: '适合峰值调频，但筑坝淹没生态耕地、受地理落差限制。' },
+        geo: { sun: '❌ 非太阳能！源自地球内部放射性衰变余热', ren: '可再生 (Renewable) · 24h 基荷稳定不看天', prop: '仅限板块活跃火山地热带钻井成本极高（全纲三大非太阳能之一！）。' },
+        nuc: { sun: '❌ 非太阳能！重核铀/钚裂变或氢聚变', ren: '不可再生 (Non-renewable) · 运行零 CO₂', prop: '能量密度极高、全天候稳发；痛点：高放核废料千万年封存与事故风险。' },
+        tidal: { sun: '❌ 主要非太阳能！源自月球与太阳引力潮汐牵引', ren: '可再生 (Renewable) · 天文时刻可精准预测', prop: '建设拦潮坝改变河口湿地生态、影响航运，仅特定海湾适用。' },
+        coal: { sun: '✅ 远古太阳能储存 (史前植物煤炭)', ren: '不可再生 (Non-renewable)', prop: '优点：高可靠可随时启停；致命缺点：排放 CO₂ 加剧温室效应与酸雨。' }
+      };
+      bindInputs(function () {
+        const d = MAP7[el.querySelector('#p7Src').value];
+        el.querySelector('#p7Out1').textContent = '溯源检查：' + d.sun + ' | 属性：' + d.ren;
+        el.querySelector('#p7Out2').textContent = '优缺点与原理：' + d.prop;
+      });
+    } else if (t === 'p08') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 8 交互实验室 · 起重机做功 W = Fd、功率 P = W/t 与功率效率计算</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>提升质量 m (kg)：<input type="number" id="p8M" value="50"></label><label>垂直高度 h (m)：<input type="number" id="p8H" value="12"></label>' +
+        '<label>耗时 t (s)：<input type="number" id="p8T" value="10" min="1"></label><label>电机输入功率 P_in (W)：<input type="number" id="p8Pin" value="800" min="1"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p8Out1"></div><div class="readout-pill" id="p8Out2"></div></div></div>';
+      bindInputs(function () {
+        const m = Number(el.querySelector('#p8M').value) || 50, h = Number(el.querySelector('#p8H').value) || 12, tm = Math.max(1, Number(el.querySelector('#p8T').value) || 10);
+        const w = m * 9.8 * h, pout = w / tm, pin = Math.max(pout, Number(el.querySelector('#p8Pin').value) || pout);
+        el.querySelector('#p8Out1').textContent = '有用机械功 W = mgh = ' + w.toFixed(1) + ' J | 有用输出功率 P_out = W/t = ' + pout.toFixed(1) + ' W';
+        el.querySelector('#p8Out2').textContent = '效率 η = (P_out / P_in) × 100% = ' + ((pout / pin) * 100).toFixed(1) + '%（记得先用 g = 9.8 算重量！）';
+      });
+    } else if (t === 'p09') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 9 交互实验室 · 玻意耳定律 p₁V₁ = p₂V₂ 与开尔文温度转换台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>初压 p₁ (kPa)：<input type="number" id="p9P1" value="100"></label><label>初体积 V₁ (cm³)：<input type="number" id="p9V1" value="60"></label>' +
+        '<label>压缩后体积 V₂ (cm³)：<input type="range" id="p9V2" min="15" max="120" value="30"><span id="p9VL">30</span></label>' +
+        '<label>摄氏温度 θ (°C)：<input type="number" id="p9C" value="27"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p9Svg" viewBox="0 0 360 220" width="360" height="220"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p9Out1"></div><div class="readout-pill" id="p9Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const p1 = Number(el.querySelector('#p9P1').value) || 100, v1 = Number(el.querySelector('#p9V1').value) || 60, v2 = Number(el.querySelector('#p9V2').value) || 30;
+        const cTemp = Number(el.querySelector('#p9C').value) || 0, p2 = (p1 * v1) / v2;
+        el.querySelector('#p9VL').textContent = v2 + ' cm³';
+        const plt = makePlot(360, 220, 10, 130, 0, Math.max(450, p2 * 1.15));
+        let svg = plotBase(plt, 'V', 'p');
+        svg += plotPath(plt, function (x) { return (p1 * v1) / x; }, 'var(--svg-amber)', false);
+        svg += '<circle cx="' + plt.toX(v2).toFixed(1) + '" cy="' + plt.toY(p2).toFixed(1) + '" r="5" fill="var(--svg-red)"/>';
+        el.querySelector('#p9Svg').innerHTML = svg;
+        el.querySelector('#p9Out1').textContent = '定温玻意耳：p₂ = p₁V₁/V₂ = ' + p2.toFixed(1) + ' kPa（体积减半 ⇒ 单位体积分子更密集 ⇒ 撞击器壁频率翻倍！）';
+        el.querySelector('#p9Out2').textContent = '开尔文绝对温标 T(K) = θ(°C) + 273 = ' + (cTemp + 273) + ' K（绝对零度 0 K = −273 °C，分子动能最小）';
+      });
+    } else if (t === 'p10') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 10 交互实验室 · 比热容 ΔE = mcΔθ 与电热实验能量守恒计算</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>质量 m (kg)：<input type="number" id="p10M" value="2.0" step="0.5"></label>' +
+        '<label>比热容 c (J/kg°C)：<input type="number" id="p10C" value="4200"></label>' +
+        '<label>温升 Δθ (°C)：<input type="number" id="p10Dt" value="15"></label>' +
+        '<label>加热器功率 P (W)：<input type="number" id="p10P" value="2100"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p10Out1"></div><div class="readout-pill" id="p10Out2"></div></div></div>';
+      bindInputs(function () {
+        const m = Number(el.querySelector('#p10M').value) || 2, c = Number(el.querySelector('#p10C').value) || 4200, dt = Number(el.querySelector('#p10Dt').value) || 15, P = Math.max(10, Number(el.querySelector('#p10P').value) || 2100);
+        const e = m * c * dt, tSec = e / P;
+        el.querySelector('#p10Out1').textContent = '所需内能增量 ΔE = mcΔθ = ' + e.toLocaleString() + ' J (' + (e / 1000).toFixed(1) + ' kJ)';
+        el.querySelector('#p10Out2').textContent = '理想加热时间 t = ΔE/P = ' + tSec.toFixed(1) + ' s | 实际测定 c_exp 常偏大！原因：部分热量散失给空气/杯壁，需加盖保温并取稳态温度';
+      });
+    } else if (t === 'p11') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 11 交互实验室 · 热传导、对流与 Leslie 表面热辐射对比台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>选择对比情景：<select id="p11M"><option value="leslie">Leslie 立方体红外发射对比</option><option value="vacuum">真空保温瓶四层隔热解析</option><option value="breeze">白天海风 vs 夜晚陆风循环</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p11Out1"></div><div class="readout-pill" id="p11Out2"></div></div></div>';
+      const MAP11 = {
+        leslie: ['哑光黑 (Matt Black) = 最佳吸收者 (Good absorber) 且最佳辐射发射者 (Best emitter)；银白亮面 (Shiny Silver) = 最佳反射面 (Best reflector) 且最差发射者！', '实验注意：各面到红外探测器距离必须相同、初始水温相同以保证公平控制变量 (Fair test)。'],
+        vacuum: ['真空夹层 (Vacuum gap) → 阻止传导 Conduction 与对流 Convection（均需介质粒子）；塑料瓶塞+密封盖 → 阻断对流热空气逸散与蒸发。', '内壁镀银表面 (Silvered surfaces) → 将红外辐射发射与吸收降到最低并反射回瓶内！'],
+        breeze: ['白天海风 (Sea breeze)：陆地比热容远小于海水，升温更快 → 陆地热空气膨胀密度变小上升 → 海洋凉爽高压空气吹向陆地补位。', '夜晚陆风 (Land breeze)：陆地降温快、海水仍较暖 → 海上暖空气上升，陆风由陆吹向海。']
+      };
+      bindInputs(function () {
+        const d = MAP11[el.querySelector('#p11M').value];
+        el.querySelector('#p11Out1').textContent = d[0];
+        el.querySelector('#p11Out2').textContent = d[1];
+      });
+    } else if (t === 'p12') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 12 交互实验室 · 声波示波器 (CRO) 振幅响度 / 频率音调波形台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>振幅 (响度 Loudness)：<input type="range" id="p12A" min="1" max="5" step="0.5" value="3"><span id="p12AL">3</span></label>' +
+        '<label>频率系数 (音调 Pitch)：<input type="range" id="p12F" min="1" max="6" step="0.5" value="2"><span id="p12FL">2</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p12Svg" viewBox="0 0 360 210" width="360" height="210"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p12Out1"></div><div class="readout-pill" id="p12Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const amp = Number(el.querySelector('#p12A').value), f = Number(el.querySelector('#p12F').value);
+        el.querySelector('#p12AL').textContent = amp; el.querySelector('#p12FL').textContent = f;
+        const plt = makePlot(360, 210, 0, 10, -5.5, 5.5);
+        let svg = plotBase(plt, 't', 'y');
+        svg += plotPath(plt, function (x) { return amp * Math.sin(f * x * 1.2); }, 'var(--svg-purple)', false);
+        el.querySelector('#p12Svg').innerHTML = svg;
+        el.querySelector('#p12Out1').textContent = '振幅 Amplitude = ' + amp + ' 格 ⇒ 控制响度 (Loudness) | 频率系数 ' + f + ' ⇒ 波数越密音调越高 (Pitch)';
+        el.querySelector('#p12Out2').textContent = '人耳可听声域：20 Hz – 20 000 Hz (> 20 kHz 为超声波 Ultrasound，声波为纵波，真空不能传播！)';
+      });
+    } else if (t === 'p13') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 13 交互实验室 · 斯涅尔定律 n = sin i / sin r 与全内反射临界角光线台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>光由玻璃 (n=<input type="number" id="p13N" value="1.50" step="0.05" min="1.2" max="2.4">) 射向空气 | 入射角 i (°)：<input type="range" id="p13I" min="5" max="80" value="35"><span id="p13IL">35°</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p13Svg" viewBox="0 0 360 220" width="360" height="220"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p13Out1"></div><div class="readout-pill" id="p13Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const n = Math.max(1.1, Number(el.querySelector('#p13N').value) || 1.5), inc = Number(el.querySelector('#p13I').value);
+        el.querySelector('#p13IL').textContent = inc + '°';
+        const cDeg = (Math.asin(1 / n) * 180) / Math.PI;
+        const sinR = n * Math.sin((inc * Math.PI) / 180);
+        const tir = sinR > 1.0001;
+        const radI = (inc * Math.PI) / 180;
+        const ix = 180 - 95 * Math.sin(radI), iy = 110 + 95 * Math.cos(radI);
+        let outRay = '';
+        if (tir) {
+          const rx = 180 + 95 * Math.sin(radI), ry = 110 + 95 * Math.cos(radI);
+          outRay = '<line x1="180" y1="110" x2="' + rx.toFixed(1) + '" y2="' + ry.toFixed(1) + '" stroke="var(--svg-red)" stroke-width="2.6"/>';
+        } else {
+          const radR = Math.asin(Math.min(1, sinR));
+          const rx = 180 + 95 * Math.sin(radR), ry = 110 - 95 * Math.cos(radR);
+          outRay = '<line x1="180" y1="110" x2="' + rx.toFixed(1) + '" y2="' + ry.toFixed(1) + '" stroke="var(--svg-blue)" stroke-width="2.6"/>';
+        }
+        el.querySelector('#p13Svg').innerHTML =
+          '<rect x="10" y="110" width="340" height="100" fill="rgba(2,132,199,0.16)"/>' +
+          '<line x1="10" y1="110" x2="350" y2="110" stroke="var(--svg-ink)" stroke-width="1.5"/>' +
+          '<line x1="180" y1="12" x2="180" y2="208" stroke="var(--svg-muted)" stroke-width="1.4" stroke-dasharray="4,3"/>' +
+          '<line x1="' + ix.toFixed(1) + '" y1="' + iy.toFixed(1) + '" x2="180" y2="110" stroke="var(--svg-amber)" stroke-width="2.6"/>' + outRay +
+          '<text x="20" y="28" font-size="11" font-weight="700" fill="var(--svg-muted)">空气 Air (n=1)</text><text x="20" y="198" font-size="11" font-weight="700" fill="var(--svg-ink)">玻璃 Glass (n=' + n.toFixed(2) + ')</text>';
+        el.querySelector('#p13Out1').textContent = '临界角 Critical angle c = arcsin(1/n) = ' + cDeg.toFixed(1) + '°';
+        el.querySelector('#p13Out2').textContent = tir ? '🔴 i > c！发生全内反射 (Total Internal Reflection, TIR)：反射角 r = i = ' + inc + '°' : '🔵 发生折射离开法线：折射角 r = ' + ((Math.asin(sinR) * 180) / Math.PI).toFixed(1) + '°';
+      });
+    } else if (t === 'p14') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 14 交互实验室 · 波速 v = fλ、周期 T = 1/f 与水波深浅折射台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>频率 f (Hz)：<input type="number" id="p14F" value="10" min="1"></label>' +
+        '<label>深水波长 λ_deep (m)：<input type="number" id="p14L1" value="0.6" step="0.1" min="0.1"></label>' +
+        '<label>浅水波长 λ_shallow (m)：<input type="number" id="p14L2" value="0.3" step="0.1" min="0.05"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p14Out1"></div><div class="readout-pill" id="p14Out2"></div></div></div>';
+      bindInputs(function () {
+        const f = Math.max(0.1, Number(el.querySelector('#p14F').value) || 10), l1 = Number(el.querySelector('#p14L1').value) || 0.6, l2 = Number(el.querySelector('#p14L2').value) || 0.3;
+        el.querySelector('#p14Out1').textContent = '周期 T = 1/f = ' + (1 / f).toFixed(3) + ' s | 深水波速 v₁ = ' + (f * l1).toFixed(2) + ' m/s | 浅水波速 v₂ = ' + (f * l2).toFixed(2) + ' m/s';
+        el.querySelector('#p14Out2').textContent = '水波槽铁律：深水进入浅水时【频率 f 绝对不变】，波速 v 减小、波长 λ 缩短，向法线偏折！';
+      });
+    } else if (t === 'p15') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 15 交互实验室 · 电磁波谱排序、波长换算 (c = 3×10⁸ m/s) 与应用速查</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>波段选择：<select id="p15B"><option value="rad">1. Radio waves 无线电波</option><option value="mic">2. Microwaves 微波</option><option value="ir">3. Infrared 红外线</option><option value="vis">4. Visible light 可见光</option><option value="uv">5. Ultraviolet 紫外线</option><option value="xray">6. X-rays X射线</option><option value="gam">7. Gamma rays γ射线</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p15Out1"></div><div class="readout-pill" id="p15Out2"></div></div></div>';
+      const MAP15 = {
+        rad: ['最长波长 / 最低频率 / 最小光子能量；真空速度 3.0 × 10⁸ m/s。', '应用：广播电视、RFID 射频识别、射电望远镜；通常非电离无明显组织热损伤。'],
+        mic: ['穿透云层与电离层能力强，且能引起食物水分子共振发热。', '应用：卫星电视与 GPS 通信、手机 Wi-Fi/蓝牙、微波炉；危害：过强内部加热人体体液组织。'],
+        ir: ['热物体发射红外辐射（红外热成像）。', '应用：电视遥控器、光纤短距通信、防盗红外警报、电暖器；危害：高强度皮肤灼伤。'],
+        vis: ['红 (700 nm, 折射最少) → 紫 (400 nm, 折射最多)。', '应用：人眼视觉、照相、高速长距离单模光纤宽带通信 (配合全内反射 TIR)。'],
+        uv: ['频率高于紫光，能激发荧光粉发光与灭菌。', '应用：防伪验钞、水消毒；危害：晒伤皮肤、早衰、引发皮肤癌与白内障。'],
+        xray: ['强穿透软组织但被高密度骨骼/金属吸收。', '应用：医学骨科 X 光透视成像、机场行李安检；危害：电离损伤细胞、基因突变致癌。'],
+        gam: ['最短波长 / 最高频率 / 最强电离穿透力；由原子核衰变产生。', '应用：医疗手术器械灭菌、食品保鲜、癌症放疗；危害：严重辐射病、DNA 突变与致癌。']
+      };
+      bindInputs(function () {
+        const d = MAP15[el.querySelector('#p15B').value];
+        el.querySelector('#p15Out1').textContent = d[0]; el.querySelector('#p15Out2').textContent = d[1];
+      });
+    } else if (t === 'p16') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 16 交互实验室 · 软铁 vs 硬钢磁化特性与磁极相互作用判别台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>铁芯材料：<select id="p16Mat"><option value="soft">软铁 (Soft iron) — 电磁铁/变压器铁芯</option><option value="steel">硬钢 (Steel) — 永磁体/指南针</option></select></label>' +
+        '<label>磁化方法：<select id="p16M"><option value="dc">直流通电螺线管 (d.c. solenoid)</option><option value="ac">交流退磁 (a.c. gradually pulled away)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p16Out1"></div><div class="readout-pill" id="p16Out2"></div></div></div>';
+      bindInputs(function () {
+        const soft = el.querySelector('#p16Mat').value === 'soft', ac = el.querySelector('#p16M').value === 'ac';
+        el.querySelector('#p16Out1').textContent = soft ? '软铁特性：极易被磁化 (Easily magnetised)，断电后立刻退磁 (Loses magnetism quickly) ⇒ 制作继电器、电铃与变压器铁芯！' : '硬钢特性：较难被磁化，但磁化后长久保持磁性 (Retains magnetism) ⇒ 制作永久磁铁！';
+        el.querySelector('#p16Out2').textContent = ac ? '退磁要领：置入通有交变电流 (a.c.) 的螺线管内缓慢沿东西方向拉出（或高温加热/重敲击）。' : '注意：只有发生“相互排斥 (Repulsion)”才能100%证明物体本身是磁铁，相互吸引可能是未磁化软铁！';
+      });
+    } else if (t === 'p17') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 17 交互实验室 · 摩擦电子转移与静电感应接地流程模拟</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>静电情景：<select id="p17M"><option value="poly">干布摩擦聚乙烯棒 (Polythene, 带负电)</option><option value="acet">干布摩擦醋酸纤维/玻璃棒 (Perspex/Glass, 带正电)</option><option value="ind">带负电棒感应金属球接地</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p17Out1"></div><div class="readout-pill" id="p17Out2"></div></div></div>';
+      const MAP17 = {
+        poly: ['过程：干布中的自由电子转移 (Electrons transferred) 到聚乙烯棒上 → 棒因电子过剩带负电 (−)，布因失去电子带等量正电 (+)。', '考场禁句：绝不可写“正电荷/质子移动了”！固体中只有带负电的电子可以移动！'],
+        acet: ['过程：有机玻璃/玻璃棒表面电子转移到干布上 → 棒因缺少电子净带正电 (+)，布净带负电 (−)。', '应用原理：高空加油飞机前务必接地导走摩擦累积静电荷，防止电火花引燃航空燃油。'],
+        ind: ['感应三步：① 带负电棒靠近孤立金属球，斥退球内自由电子至远端，近端显 +；② 手指/接地线接球远端，多余电子流入大地 (Earth)；③ 先断开接地再移走棒 → 球净带正电！', '注意断顺序：必须先撤接地线，再撤带电棒！若先撤棒则大地电子会回流中和！']
+      };
+      bindInputs(function () {
+        const d = MAP17[el.querySelector('#p17M').value];
+        el.querySelector('#p17Out1').textContent = d[0]; el.querySelector('#p17Out2').textContent = d[1];
+      });
+    } else if (t === 'p18') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 18 交互实验室 · 欧姆电阻、电功率 P=IV 与电费 kWh 计费台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>电压 V (V)：<input type="number" id="p18V" value="240"></label><label>电流 I (A)：<input type="number" id="p18I" value="5" step="0.5"></label>' +
+        '<label>运行时间 (hours)：<input type="number" id="p18H" value="3" step="0.5"></label><label>电价 (cents/kWh)：<input type="number" id="p18C" value="20"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p18Out1"></div><div class="readout-pill" id="p18Out2"></div></div></div>';
+      bindInputs(function () {
+        const V = Number(el.querySelector('#p18V').value) || 240, I = Math.max(0.01, Number(el.querySelector('#p18I').value) || 5);
+        const h = Number(el.querySelector('#p18H').value) || 3, c = Number(el.querySelector('#p18C').value) || 20;
+        const P = V * I, R = V / I, kwh = (P / 1000) * h;
+        el.querySelector('#p18Out1').textContent = '电阻 R = V/I = ' + R.toFixed(1) + ' Ω | 电功率 P = IV = ' + P.toFixed(0) + ' W (' + (P / 1000).toFixed(2) + ' kW) | 总焦耳 E = ' + (P * h * 3600).toExponential(2) + ' J';
+        el.querySelector('#p18Out2').textContent = '千瓦时用电量 = ' + kwh.toFixed(2) + ' kWh ⇒ 电费 Cost = ' + (kwh * c).toFixed(1) + ' cents (1 kWh = 3.6 × 10⁶ J)';
+      });
+    } else if (t === 'p19') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 19 交互实验室 · NTC 热敏电阻 / LDR 分压传感器动态调节台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>传感器 R₁：<select id="p19S"><option value="ldr">光敏电阻 LDR (底端) + 固定 R₂ (100 Ω)</option><option value="ntc">负温度系数热敏电阻 NTC (底端) + R₂ (100 Ω)</option></select></label>' +
+        '<label>环境强度 (光照/温度 %)：<input type="range" id="p19Env" min="10" max="100" value="50"><span id="p19EL">50%</span></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p19Out1"></div><div class="readout-pill" id="p19Out2"></div></div></div>';
+      bindInputs(function () {
+        const isLdr = el.querySelector('#p19S').value === 'ldr', env = Number(el.querySelector('#p19Env').value);
+        el.querySelector('#p19EL').textContent = env + '%';
+        const rSens = Math.round(500 * Math.exp(-0.025 * env));
+        const vOut = (12 * rSens) / (rSens + 100);
+        el.querySelector('#p19Out1').textContent = (isLdr ? '光敏 LDR' : '热敏 NTC') + ' 当前阻值 R_sensor ≈ ' + rSens + ' Ω | 串联总供电 12 V ⇒ 传感器两端输出电压 V_out = ' + vOut.toFixed(2) + ' V';
+        el.querySelector('#p19Out2').textContent = '环境越暗/越冷 ⇒ LDR/NTC 电阻【剧增】⇒ 根据分压比 V₁/V₂ = R₁/R₂，分得更高电压（可用作天黑自动开灯触发器！）';
+      });
+    } else if (t === 'p20') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 20 交互实验室 · 弗莱明左手定则 FBI 与带电粒子束磁场偏转</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>粒子类型 / 电流方向：<select id="p20Q"><option value="conv">传统电流 / 正电荷向东 (+)</option><option value="elec">电子束 β⁻ 向东射入 (注意反方向!)</option></select></label>' +
+        '<label>磁场 B 方向：<select id="p20B"><option value="in">垂直纸面向里 (Into page ✕)</option><option value="out">垂直纸面向外 (Out of page ⊙)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p20Out1"></div><div class="readout-pill" id="p20Out2"></div></div></div>';
+      bindInputs(function () {
+        const isElec = el.querySelector('#p20Q').value === 'elec', bIn = el.querySelector('#p20B').value === 'in';
+        const up = (!isElec && bIn) || (isElec && !bIn);
+        el.querySelector('#p20Out1').textContent = '左手三指正交判别：食指 B = ' + (bIn ? '入纸面 ✕' : '出纸面 ⊙') + '，中指【传统电流 I】= ' + (isElec ? '向西（与电子速度相反!）' : '向东') + ' ⇒ 拇指受力 F = ' + (up ? '⬆️ 向上 (Upwards)' : '⬇️ 向下 (Downwards)');
+        el.querySelector('#p20Out2').textContent = '直流电机关键：换向器 (Split-ring commutator) 每半圈调换一次线圈电流方向，保证扭矩持续单向转动！';
+      });
+    } else if (t === 'p21') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 21 交互实验室 · 理想变压器与高压输电 I²R 损耗模拟台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>原线圈 V_p (V)：<input type="number" id="p21Vp" value="25000"></label>' +
+        '<label>匝数比 N_p : N_s = <input type="number" id="p21Np" value="100"> : <input type="number" id="p21Ns" value="1600"></label>' +
+        '<label>传送总功率 P (kW)：<input type="number" id="p21P" value="400"></label><label>电缆电阻 R (Ω)：<input type="number" id="p21R" value="10"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p21Out1"></div><div class="readout-pill" id="p21Out2"></div></div></div>';
+      bindInputs(function () {
+        const vp = Number(el.querySelector('#p21Vp').value) || 25000, np = Math.max(1, Number(el.querySelector('#p21Np').value) || 100), ns = Math.max(1, Number(el.querySelector('#p21Ns').value) || 1600);
+        const P = (Number(el.querySelector('#p21P').value) || 400) * 1000, R = Number(el.querySelector('#p21R').value) || 10;
+        const vs = vp * (ns / np), iLine = P / vs, loss = iLine * iLine * R;
+        el.querySelector('#p21Out1').textContent = '副线圈输电电压 V_s = ' + Math.round(vs).toLocaleString() + ' V (' + (vs > vp ? '升压 Step-up' : '降压 Step-down') + ') | 输电电流 I = P/V_s = ' + iLine.toFixed(2) + ' A';
+        el.querySelector('#p21Out2').textContent = '电网热损耗 P_loss = I²R = ' + loss.toFixed(1) + ' W（若不用变压器升压直接 25 kV 输电，损耗高达 ' + (Math.pow(P / vp, 2) * R).toFixed(1) + ' W！）';
+      });
+    } else if (t === 'p22') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 22 交互实验室 · 卢瑟福 α 散射三结论与原子核素构成剖析</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>核素质量数 A：<input type="number" id="p22A" value="238" min="1"></label><label>质子数/原子序数 Z：<input type="number" id="p22Z" value="92" min="1"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p22Out1"></div><div class="readout-pill" id="p22Out2"></div></div></div>';
+      bindInputs(function () {
+        const a = Math.max(1, Math.round(Number(el.querySelector('#p22A').value) || 238)), z = Math.min(a, Math.max(1, Math.round(Number(el.querySelector('#p22Z').value) || 92)));
+        el.querySelector('#p22Out1').textContent = '中性原子组成：质子 Protons = ' + z + ' | 中子 Neutrons (A − Z) = ' + (a - z) + ' | 核外电子 Electrons = ' + z + ' | 原子核净电荷 = +' + z + 'e';
+        el.querySelector('#p22Out2').textContent = 'α 散射极少数大角反弹 (> 90°) ⇒ 证明原子核体积极小、极高密度且集中几乎全部正电荷与质量；绝大多数直接穿透 ⇒ 原子内部绝大部分是真空！';
+      });
+    } else if (t === 'p23') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 23 交互实验室 · 本底辐射扣减、半衰期指数衰减曲线计算器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>总读数 C_total (cpm)：<input type="number" id="p23C0" value="440"></label><label>本底 C_bg (cpm)：<input type="number" id="p23Bg" value="40"></label>' +
+        '<label>半衰期 T½ (days)：<input type="number" id="p23H" value="6" min="1"></label><label>经过时间 t (days)：<input type="range" id="p23T" min="0" max="24" step="3" value="12"><span id="p23TL">12 d</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p23Svg" viewBox="0 0 360 220" width="360" height="220"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p23Out1"></div><div class="readout-pill" id="p23Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const c0 = Number(el.querySelector('#p23C0').value) || 440, bg = Number(el.querySelector('#p23Bg').value) || 40;
+        const h = Math.max(1, Number(el.querySelector('#p23H').value) || 6), tm = Number(el.querySelector('#p23T').value);
+        el.querySelector('#p23TL').textContent = tm + ' days';
+        const pure0 = Math.max(0, c0 - bg), pureT = pure0 * Math.pow(0.5, tm / h), totalT = pureT + bg;
+        const plt = makePlot(360, 220, 0, Math.max(24, tm), 0, c0 * 1.1);
+        let svg = plotBase(plt, 't (d)', 'cpm');
+        svg += plotPath(plt, function () { return bg; }, 'var(--svg-muted)', true);
+        svg += plotPath(plt, function (x) { return bg + pure0 * Math.pow(0.5, x / h); }, 'var(--svg-green)', false);
+        svg += '<circle cx="' + plt.toX(tm).toFixed(1) + '" cy="' + plt.toY(totalT).toFixed(1) + '" r="5" fill="var(--svg-red)"/>';
+        el.querySelector('#p23Svg').innerHTML = svg;
+        el.querySelector('#p23Out1').textContent = '先减本底！纯净初始源活度 = ' + pure0 + ' cpm ⇒ 经 ' + (tm / h).toFixed(1) + ' 个半衰期后纯净计数 = ' + pureT.toFixed(1) + ' cpm';
+        el.querySelector('#p23Out2').textContent = '⚠️ 若题问 GM 计数器最终显示总读数，务必再加回本底：' + pureT.toFixed(1) + ' + ' + bg + ' = ' + totalT.toFixed(1) + ' cpm！';
+      });
+    } else if (t === 'p24') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 24 交互实验室 · 轨道速率 v = 2πr / T 与太阳光行时间 t = d / c 台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>行星/卫星预设：<select id="p24P"><option value="earth">地球 (r = 1.5×10¹¹ m, T = 365 d)</option><option value="moon">月球绕地 (r = 3.84×10⁸ m, T = 27.3 d)</option><option value="mars">火星 (r = 2.28×10¹¹ m, T = 687 d)</option><option value="geo">地球同步卫星 (r = 4.22×10⁷ m, T = 24 h)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p24Out1"></div><div class="readout-pill" id="p24Out2"></div></div></div>';
+      const MAP24 = {
+        earth: { r: 1.5e11, t: 365 * 86400, note: '太阳光到达地球所需时间 t = 1.5×10¹¹ / (3.0×10⁸) = 500 s ≈ 8.3 分钟！' },
+        moon: { r: 3.84e8, t: 27.3 * 86400, note: '月球引力仅为地球 1/6，月相盈亏完整周期约为 28–29.5 天。' },
+        mars: { r: 2.28e11, t: 687 * 86400, note: '火星属于内侧四大岩石小行星之一，距太阳越远引力越弱，公转速率显著小于地球。' },
+        geo: { r: 4.22e7, t: 24 * 3600, note: '赤道正上方同步轨道，与地球自转周期精确同步（24 小时），用于气象/电视直播卫星。' }
+      };
+      bindInputs(function () {
+        const d = MAP24[el.querySelector('#p24P').value];
+        const v = (2 * Math.PI * d.r) / d.t;
+        el.querySelector('#p24Out1').textContent = '轨道周长 2πr = ' + (2 * Math.PI * d.r).toExponential(2) + ' m | 周期 T = ' + d.t.toExponential(2) + ' s ⇒ 平均轨道速率 v = 2πr/T = ' + (v / 1000).toFixed(2) + ' km/s (' + Math.round(v).toLocaleString() + ' m/s)';
+        el.querySelector('#p24Out2').textContent = d.note;
+      });
+    } else if (t === 'p25') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 25 交互实验室 · 哈勃定律 v = H₀d 与宇宙年龄 t ≈ 1/H₀ 计算台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>星系退行速度 v (m/s)：<input type="number" id="p25V" value="4400000" step="100000"></label>' +
+        '<label>哈勃常数 H₀ (s⁻¹)：<input type="number" id="p25H" value="2.2e-18" step="0.1e-18"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p25Out1"></div><div class="readout-pill" id="p25Out2"></div></div></div>';
+      bindInputs(function () {
+        const v = Number(el.querySelector('#p25V').value) || 4.4e6, h0 = Math.max(1e-19, Number(el.querySelector('#p25H').value) || 2.2e-18);
+        const dist = v / h0, ly = dist / 9.5e15, ageS = 1 / h0, ageY = ageS / (365.25 * 86400);
+        el.querySelector('#p25Out1').textContent = '星系距离 d = v/H₀ = ' + dist.toExponential(2) + ' m ≈ ' + ly.toExponential(2) + ' 光年 (1 ly ≈ 9.5 × 10¹⁵ m)';
+        el.querySelector('#p25Out2').textContent = '估计宇宙年龄 t ≈ 1/H₀ = d/v = ' + ageS.toExponential(2) + ' s ≈ ' + (ageY / 1e9).toFixed(1) + ' billion years (十亿年) | 两大证据：遥远星系红移 + CMBR 微波背景辐射';
+      });
+    }
+  }
+
+  document.querySelectorAll('.lab-box[data-lab-type]').forEach(mountPhysicsLab);
+
+  // ---------- 11. Initialize View & Scroll Spy ----------
+  applyViewMode(currentViewMode);
+  applyQuizMask(quizMasked);
+
+  const backTopBtn = document.getElementById('backTopBtn');
+  const trackedSections = Array.from(document.querySelectorAll('.topic-section[id]'));
+  const navLinks = Array.from(document.querySelectorAll('.sidebar .nav-link'));
+
+  window.addEventListener('scroll', function () {
+    if (backTopBtn) backTopBtn.classList.toggle('visible', window.scrollY > 360);
+    const y = window.scrollY + 110;
+    let currentId = '';
+    for (let i = 0; i < trackedSections.length; i++) {
+      if (trackedSections[i].offsetTop <= y && getComputedStyle(trackedSections[i]).display !== 'none') {
+        currentId = trackedSections[i].id;
+      }
+    }
+    navLinks.forEach(function (lnk) {
+      const h = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('active', h === currentId);
+    });
+  }, { passive: true });
+
+  if (backTopBtn) {
+    backTopBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  }
+})();
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,1946 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="--accent: #5B21B6;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch14 · Chapter 14: Properties of waves — IGCSE Physics (0625) 精讲</title>
+  <style>
+/* ==========================================================================
+   Cambridge IGCSE Physics (0625 · David Sang 3rd Ed. 2023–2028)
+   25-Chapter Suite Shared Stylesheet (Offline, Zero CDN, Print-Ready)
+   ========================================================================== */
+
+:root {
+  --bg-page: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --bg-sidebar: #FFFFFF;
+  --bg-code: #EFF6FF;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-faint: #64748B;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+
+  --accent: #0284C7;
+  --accent-hover: #0369A1;
+  --accent-soft: #E0F2FE;
+
+  --core-bg: #E0F2FE;
+  --core-text: #075985;
+  --core-border: #BAE6FD;
+  --ext-bg: #FEF3C7;
+  --ext-text: #92400E;
+  --ext-border: #FDE68A;
+
+  --deep-bg: #EFF6FF;
+  --deep-border: #2563EB;
+  --tip-bg: #FFFBEB;
+  --tip-border: #D97706;
+  --mistake-bg: #FFF1F2;
+  --mistake-border: #E11D48;
+  --example-bg: #F0FDF4;
+  --example-border: #16A34A;
+  --formula-bg: #F8FAFC;
+  --formula-border: #0284C7;
+
+  --ok-bg: #DCFCE7;
+  --ok-text: #166534;
+  --ok-border: #86EFAC;
+  --err-bg: #FEE2E2;
+  --err-text: #991B1B;
+  --err-border: #FCA5A5;
+
+  --svg-bg: #FFFFFF;
+  --svg-grid: #E2E8F0;
+  --svg-ink: #0F172A;
+  --svg-muted: #64748B;
+  --svg-blue: #2563EB;
+  --svg-indigo: #4338CA;
+  --svg-teal: #0D9488;
+  --svg-amber: #D97706;
+  --svg-red: #DC2626;
+  --svg-green: #16A34A;
+  --svg-purple: #7C3AED;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.07);
+  --shadow-lg: 0 10px 26px rgba(15, 23, 42, 0.11);
+
+  --sidebar-w: 288px;
+  --topbar-h: 58px;
+  --radius-sm: 7px;
+  --radius-md: 11px;
+  --radius-lg: 16px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Songti SC", "Noto Serif SC", Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+[data-theme="dark"] {
+  --bg-page: #0B1120;
+  --bg-surface: #111827;
+  --bg-subtle: #1E293B;
+  --bg-sidebar: #0F172A;
+  --bg-code: #1E293B;
+  --text-main: #F1F5F9;
+  --text-muted: #CBD5E1;
+  --text-faint: #94A3B8;
+  --border: #1E293B;
+  --border-strong: #334155;
+
+  --accent: #38BDF8 !important;
+  --accent-hover: #7DD3FC;
+  --accent-soft: rgba(56, 189, 248, 0.18);
+
+  --core-bg: rgba(56, 189, 248, 0.16);
+  --core-text: #BAE6FD;
+  --core-border: rgba(56, 189, 248, 0.36);
+  --ext-bg: rgba(245, 158, 11, 0.16);
+  --ext-text: #FDE68A;
+  --ext-border: rgba(245, 158, 11, 0.36);
+
+  --deep-bg: rgba(37, 99, 235, 0.14);
+  --deep-border: #60A5FA;
+  --tip-bg: rgba(217, 119, 6, 0.14);
+  --tip-border: #FBBF24;
+  --mistake-bg: rgba(225, 29, 72, 0.15);
+  --mistake-border: #FB7185;
+  --example-bg: rgba(22, 163, 74, 0.13);
+  --example-border: #4ADE80;
+  --formula-bg: #172033;
+  --formula-border: #38BDF8;
+
+  --ok-bg: rgba(22, 163, 74, 0.22);
+  --ok-text: #BBF7D0;
+  --ok-border: #22C55E;
+  --err-bg: rgba(220, 38, 38, 0.22);
+  --err-text: #FECACA;
+  --err-border: #EF4444;
+
+  --svg-bg: #0F172A;
+  --svg-grid: #334155;
+  --svg-ink: #F1F5F9;
+  --svg-muted: #94A3B8;
+  --svg-blue: #60A5FA;
+  --svg-indigo: #818CF8;
+  --svg-teal: #2DD4BF;
+  --svg-amber: #FBBF24;
+  --svg-red: #F87171;
+  --svg-green: #34D399;
+  --svg-purple: #A78BFA;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .seg-btn.active,
+[data-theme="dark"] .tab-btn.active,
+[data-theme="dark"] .icon-btn.active,
+[data-theme="dark"] .brand-code,
+[data-theme="dark"] .pager-btn.primary { color: #0B1120; }
+[data-theme="dark"] .hub-foot { color: #38BDF8; }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--topbar-h) + 18px); }
+body { margin: 0; font-family: var(--font-sans); background: var(--bg-page); color: var(--text-main); line-height: 1.72; font-size: 15.5px; -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4 { margin: 0 0 0.55em 0; line-height: 1.32; font-weight: 700; color: var(--text-main); }
+p { margin: 0 0 0.9em 0; }
+ul, ol { margin: 0 0 1em 0; padding-left: 1.45em; }
+li { margin-bottom: 0.35em; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { font-family: var(--font-mono); font-size: 0.9em; background: var(--bg-code); color: var(--accent); padding: 2px 6px; border-radius: 4px; }
+
+/* View Mode Filters (Core / Extended / SME) */
+body.mode-core .ext-only,
+body.mode-core .badge-ext { display: none !important; }
+body.mode-ext .ext-only { border-left: 3px solid var(--ext-border); padding-left: 10px; background: rgba(245, 158, 11, 0.06); border-radius: 4px; }
+body.mode-book .sme-section { display: none !important; }
+body.mode-sme .book-section { display: none !important; }
+
+/* Physics Formula & Nuclide Formatting */
+.math { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 1.04em; }
+.frac { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; font-size: 0.88em; line-height: 1.1; margin: 0 2px; font-style: normal; font-family: Georgia, "Times New Roman", serif; }
+.frac .num { border-bottom: 1.5px solid currentColor; padding: 0 4px 1px 4px; }
+.frac .den { padding: 1px 4px 0 4px; }
+.sqrt { display: inline-flex; align-items: baseline; font-family: Georgia, "Times New Roman", serif; }
+.sqrt-rad { border-top: 1.4px solid currentColor; padding: 0 3px 0 2px; margin-left: 1px; }
+.nuclide { display: inline-flex; align-items: center; gap: 1px; font-family: Georgia, "Times New Roman", serif; font-weight: 700; vertical-align: middle; margin: 0 2px; }
+.nuc-nums { display: inline-flex; flex-direction: column; text-align: right; font-size: 0.72em; line-height: 1.05; }
+.formula-card { background: var(--formula-bg); border: 1.5px solid var(--border-strong); border-left: 5px solid var(--formula-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; font-size: 15px; }
+.formula-main { font-family: Georgia, "Times New Roman", serif; font-size: 16.5px; font-weight: 700; color: var(--accent); margin: 4px 0 6px 0; }
+
+/* Topbar */
+.topbar {
+  position: sticky; top: 0; z-index: 100; height: var(--topbar-h);
+  background: var(--bg-surface); border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm); display: flex; align-items: center;
+  justify-content: space-between; gap: 10px; padding: 0 16px;
+}
+.topbar-left { display: flex; align-items: center; gap: 8px; min-width: 0; flex-shrink: 1; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 34px; padding: 0 10px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--bg-surface); color: var(--text-main); font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; text-decoration: none; }
+.icon-btn:hover { background: var(--bg-subtle); border-color: var(--accent); text-decoration: none; }
+.icon-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.menu-toggle { display: none; }
+.brand-pill { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; white-space: nowrap; flex-shrink: 1; min-width: 0; }
+.brand-code { background: var(--accent); color: #fff; padding: 2px 8px; border-radius: 5px; font-size: 12px; letter-spacing: 0.4px; white-space: nowrap; flex-shrink: 0; }
+.brand-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 215px; }
+.search-wrap { position: relative; flex: 1 1 150px; min-width: 130px; max-width: 260px; }
+.search-input { width: 100%; height: 34px; padding: 0 30px 0 32px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--bg-subtle); color: var(--text-main); font-size: 13.5px; outline: none; }
+.search-input:focus { border-color: var(--accent); background: var(--bg-surface); }
+.search-input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.search-icon { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); color: var(--text-faint); font-size: 13px; pointer-events: none; }
+.search-clear { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); border: none; background: transparent; color: var(--text-faint); cursor: pointer; font-size: 14px; display: none; }
+.search-results-bar { display: none; background: var(--accent-soft); border-bottom: 1px solid var(--border); padding: 8px 20px; font-size: 13.5px; color: var(--text-main); align-items: center; justify-content: space-between; gap: 12px; }
+.search-results-bar.visible { display: flex; }
+.topbar-controls { display: flex; align-items: center; gap: 7px; flex-shrink: 0; }
+.seg-group { display: inline-flex; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); overflow: hidden; background: var(--bg-subtle); }
+.seg-btn { border: none; background: transparent; color: var(--text-muted); padding: 6px 8px; font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.seg-btn.active { background: var(--accent); color: #fff; }
+.progress-chip { display: flex; align-items: center; gap: 7px; padding: 4px 10px; border-radius: 999px; background: var(--bg-subtle); border: 1px solid var(--border); font-size: 12.5px; font-weight: 600; white-space: nowrap; }
+.progress-track { width: 50px; height: 7px; background: var(--border-strong); border-radius: 99px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), #0D9488); transition: width 0.25s ease; }
+
+.app-layout { display: flex; min-height: calc(100vh - var(--topbar-h)); }
+.sidebar { width: var(--sidebar-w); flex-shrink: 0; background: var(--bg-sidebar); border-right: 1px solid var(--border); position: sticky; top: var(--topbar-h); height: calc(100vh - var(--topbar-h)); overflow-y: auto; padding: 14px 10px 44px 10px; }
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 99px; }
+.nav-unit { margin-bottom: 8px; }
+.nav-unit-btn { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border: none; border-radius: var(--radius-sm); background: transparent; color: var(--text-main); font-size: 13px; font-weight: 700; text-align: left; cursor: pointer; }
+.nav-unit-btn:hover { background: var(--bg-subtle); }
+.nav-unit-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.nav-unit-title { flex: 1; display: flex; align-items: center; gap: 7px; line-height: 1.3; }
+.nav-chevron { font-size: 11px; color: var(--text-faint); transition: transform 0.2s; }
+.nav-unit.collapsed .nav-chevron { transform: rotate(-90deg); }
+.nav-unit.collapsed .nav-links { display: none; }
+.nav-links { list-style: none; padding: 2px 0 4px 12px; margin: 0 0 0 14px; border-left: 2px solid var(--border); }
+.nav-link { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 5px 9px; margin: 2px 0; border-radius: var(--radius-sm); color: var(--text-muted); font-size: 12.6px; line-height: 1.35; text-decoration: none; }
+.nav-link:hover { background: var(--bg-subtle); color: var(--text-main); text-decoration: none; }
+.nav-link.active { background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+.nav-done-mark { color: #10B981; font-weight: 800; font-size: 12px; opacity: 0; }
+.nav-link.mastered .nav-done-mark { opacity: 1; }
+.main-content { flex: 1; min-width: 0; padding: 26px 32px 80px 32px; }
+.content-inner { max-width: 960px; margin: 0 auto; }
+
+.hero-card { background: linear-gradient(135deg, #0F172A 0%, var(--accent) 58%, #0F766E 100%); color: #fff; border-radius: var(--radius-lg); padding: 28px 32px; margin-bottom: 26px; box-shadow: var(--shadow-lg); }
+.hero-card h1 { color: #fff; font-size: 25px; margin-bottom: 8px; letter-spacing: -0.3px; }
+.hero-sub { color: rgba(255,255,255,0.92); font-size: 14.8px; max-width: 820px; margin-bottom: 16px; }
+.hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.hero-pill { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.28); color: #fff; padding: 4px 11px; border-radius: 999px; font-size: 12.5px; font-weight: 600; }
+.unit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+.unit-tile { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.24); border-radius: var(--radius-md); padding: 12px 14px; color: #fff; text-decoration: none; display: block; transition: transform 0.15s, background 0.15s; }
+.unit-tile:hover { transform: translateY(-2px); background: rgba(255,255,255,0.22); text-decoration: none; }
+.unit-tile-num { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.7px; opacity: 0.85; font-weight: 700; }
+.unit-tile-title { font-size: 14.5px; font-weight: 700; margin: 3px 0; }
+
+.topic-section { background: var(--bg-surface); border: 1px solid var(--border); border-top: 4px solid var(--accent); border-radius: var(--radius-md); padding: 24px 26px; margin-bottom: 24px; box-shadow: var(--shadow-sm); }
+.topic-section.search-dim { display: none; }
+.section-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 2px solid var(--border); }
+.section-title-group h3 { font-size: 19.5px; margin-bottom: 4px; }
+.section-en-sub { font-size: 13.5px; color: var(--text-faint); font-weight: 600; }
+.tier-row { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 7px; }
+.badge-core, .badge-ext { display: inline-block; font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.badge-core { background: var(--core-bg); color: var(--core-text); border: 1px solid var(--core-border); }
+.badge-ext { background: var(--ext-bg); color: var(--ext-text); border: 1px solid var(--ext-border); }
+.master-btn { flex-shrink: 0; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-muted); font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.master-btn:hover { border-color: #10B981; color: #10B981; }
+.master-btn.is-mastered { background: var(--ok-bg); color: var(--ok-text); border-color: var(--ok-border); }
+.subtopic { margin-bottom: 20px; }
+.subtopic:last-of-type { margin-bottom: 12px; }
+.subtopic h4 { font-size: 16px; color: var(--accent); margin: 0 0 10px 0; padding-bottom: 4px; border-bottom: 1px dashed var(--border); display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+
+.worked-example { background: var(--example-bg); border: 1px solid var(--border); border-left: 4px solid var(--example-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; }
+.worked-title { font-weight: 800; font-size: 14px; color: var(--example-border); margin-bottom: 6px; }
+.callout { border-radius: var(--radius-sm); padding: 13px 16px; margin: 14px 0; border-left: 4px solid var(--border-strong); font-size: 14.5px; }
+.callout-title { font-weight: 800; font-size: 13.5px; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+.deep-dive { background: var(--deep-bg); border-left-color: var(--deep-border); }
+.deep-dive .callout-title { color: var(--deep-border); }
+.examiner-tip { background: var(--tip-bg); border-left-color: var(--tip-border); }
+.examiner-tip .callout-title { color: var(--tip-border); }
+.common-mistake { background: var(--mistake-bg); border-left-color: var(--mistake-border); }
+.common-mistake .callout-title { color: var(--mistake-border); }
+
+.table-wrap { width: 100%; overflow-x: auto; margin: 14px 0; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+table.phy-table { width: 100%; border-collapse: collapse; font-size: 13.8px; text-align: left; }
+table.phy-table th { background: var(--bg-subtle); color: var(--text-main); font-weight: 700; padding: 9px 12px; border-bottom: 2px solid var(--border-strong); white-space: nowrap; }
+table.phy-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.phy-table tr:last-child td { border-bottom: none; }
+table.phy-table tbody tr:hover { background: var(--bg-subtle); }
+
+.svg-figure { background: var(--svg-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px; margin: 16px 0; text-align: center; break-inside: avoid; }
+.svg-figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.svg-caption { margin-top: 8px; font-size: 13px; color: var(--text-faint); font-weight: 600; }
+
+/* Interactive Physics Labs */
+.lab-box { background: var(--bg-subtle); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px; margin: 18px 0; break-inside: avoid; }
+.lab-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+.lab-title { font-size: 15.5px; font-weight: 800; color: var(--accent); display: flex; align-items: center; gap: 7px; }
+.lab-panel { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; }
+.lab-controls { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-bottom: 12px; align-items: center; }
+.lab-controls label { font-size: 13px; font-weight: 700; color: var(--text-muted); display: inline-flex; align-items: center; gap: 6px; }
+.lab-controls input[type="number"], .lab-controls select { padding: 5px 8px; border-radius: 6px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-main); font-size: 13.2px; font-weight: 700; }
+.lab-controls input[type="number"] { min-width: 108px; width: 112px; text-align: center; }
+.lab-controls input[type="range"] { width: 120px; accent-color: var(--accent); }
+.lab-grid-2col { display: grid; grid-template-columns: 1.12fr 1fr; gap: 14px; align-items: start; }
+@media (max-width: 820px) { .lab-grid-2col { grid-template-columns: 1fr; } }
+.tab-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.tab-btn { border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-muted); padding: 5px 10px; border-radius: 6px; font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.tab-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.lab-readout { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; font-size: 13.2px; font-weight: 600; }
+.readout-pill { background: var(--bg-page); border: 1px solid var(--border-strong); padding: 7px 10px; border-radius: 6px; width: 100%; line-height: 1.5; }
+
+/* Practice Questions & Concepts */
+.practice-block { margin-top: 18px; padding-top: 14px; border-top: 2px dashed var(--border-strong); }
+.practice-heading { font-size: 16px; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.exam-q { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 14px; break-inside: avoid; }
+.exam-q-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; font-size: 12.5px; }
+.q-tag { font-weight: 800; color: var(--accent); background: var(--accent-soft); padding: 2px 8px; border-radius: 5px; }
+.q-marks { font-weight: 700; color: var(--text-faint); }
+.q-stem-en { font-size: 14.8px; font-weight: 600; color: var(--text-main); margin-bottom: 6px; }
+.q-stem-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 12px; }
+.mcq-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin-bottom: 10px; }
+.mcq-opt { text-align: left; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 13.8px; cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.mcq-opt:hover { border-color: var(--accent); background: var(--bg-subtle); }
+.mcq-opt.correct { background: var(--ok-bg); border-color: var(--ok-border); color: var(--ok-text); font-weight: 700; }
+.mcq-opt.wrong { background: var(--err-bg); border-color: var(--err-border); color: var(--err-text); }
+.mcq-feedback { display: none; font-size: 13.5px; padding: 10px 12px; border-radius: var(--radius-sm); margin-top: 8px; }
+.mcq-feedback.visible { display: block; }
+.mcq-feedback.ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.mcq-feedback.err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+details.ms-details { margin-top: 10px; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 12px; }
+details.ms-details summary { cursor: pointer; font-weight: 700; font-size: 13.5px; color: var(--accent); user-select: none; }
+.ms-body { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 13.8px; }
+.ms-mark { display: inline-block; font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--core-text); background: var(--core-bg); padding: 1px 5px; border-radius: 4px; margin-right: 4px; }
+.ms-cn { color: var(--text-muted); margin-top: 4px; }
+
+.concept-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 14px; margin-bottom: 18px; }
+.concept-filter-group { display: flex; flex-wrap: wrap; gap: 6px; }
+.concept-actions { display: flex; align-items: center; gap: 10px; }
+.concept-count-pill { font-size: 12.5px; font-weight: 700; color: var(--text-muted); }
+.concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 14px; }
+.concept-card { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; gap: 8px; break-inside: avoid; }
+.concept-card:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
+.concept-card.concept-hidden { display: none !important; }
+.cq-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.cq-en { font-weight: 700; font-size: 14.5px; color: var(--text-main); line-height: 1.45; }
+.cq-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 2px; }
+.cq-answer { position: relative; margin-top: auto; background: var(--bg-surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius-sm); padding: 11px 13px; font-size: 13.8px; line-height: 1.6; }
+.kw { color: var(--accent); background: var(--accent-soft); padding: 0 4px; border-radius: 3px; font-weight: 700; }
+.cq-mask-hint { display: none; }
+.concept-card.masked .cq-answer { cursor: pointer; }
+.concept-card.masked .cq-answer-inner { filter: blur(7px); opacity: 0.22; user-select: none; pointer-events: none; transition: filter 0.2s, opacity 0.2s; }
+.concept-card.masked .cq-mask-hint { display: flex; align-items: center; justify-content: center; position: absolute; inset: 0; font-size: 13.5px; font-weight: 700; color: var(--accent); background: rgba(255,255,255,0.25); border-radius: var(--radius-sm); }
+[data-theme="dark"] .concept-card.masked .cq-mask-hint { background: rgba(15,23,42,0.35); }
+
+/* Chapter Pager & Hub Group Headings */
+.chapter-pager { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 28px; padding: 16px 20px; background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); }
+.pager-btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: var(--radius-sm); background: var(--bg-subtle); border: 1px solid var(--border-strong); color: var(--text-main); font-size: 13.5px; font-weight: 700; text-decoration: none; }
+.pager-btn:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); text-decoration: none; }
+.pager-btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.pager-btn.primary:hover { background: var(--accent-hover); color: #fff; }
+
+.hub-block-title { font-size: 18px; font-weight: 800; margin: 26px 0 12px 0; padding-bottom: 6px; border-bottom: 2px solid var(--border-strong); display: flex; align-items: center; gap: 8px; }
+.hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 15px; }
+.hub-card { display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-surface); border: 1px solid var(--border-strong); border-top: 5px solid var(--card-color, var(--accent)); border-radius: var(--radius-md); padding: 16px 18px 14px 18px; color: var(--text-main); text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; box-shadow: var(--shadow-sm); }
+.hub-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--card-color, var(--accent)); text-decoration: none; }
+.hub-card-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+.hub-badge { font-size: 11.5px; font-weight: 800; color: #fff; background: var(--card-color, var(--accent)); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill { font-size: 12px; font-weight: 700; color: var(--text-muted); background: var(--bg-subtle); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill.done { background: var(--ok-bg); color: var(--ok-text); }
+.hub-title { font-size: 16px; font-weight: 800; margin-bottom: 3px; }
+.hub-en { font-size: 12.6px; color: var(--text-faint); font-weight: 600; margin-bottom: 8px; }
+.hub-sub { font-size: 12.8px; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; }
+.hub-foot { font-size: 13px; font-weight: 700; color: var(--card-color, var(--accent)); display: flex; align-items: center; justify-content: space-between; }
+
+.back-top-btn { position: fixed; right: 22px; bottom: 22px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); box-shadow: var(--shadow-md); cursor: pointer; display: none; align-items: center; justify-content: center; font-size: 17px; font-weight: 800; z-index: 80; }
+.back-top-btn.visible { display: flex; }
+
+@media (max-width: 1200px) {
+  .brand-title, .btn-label { display: none; }
+  .seg-btn { padding: 6px 8px; }
+}
+@media (max-width: 980px) {
+  .menu-toggle { display: inline-flex; }
+  .sidebar { position: fixed; left: 0; top: var(--topbar-h); z-index: 95; transform: translateX(-100%); transition: transform 0.22s ease; box-shadow: var(--shadow-lg); }
+  .sidebar.open { transform: translateX(0); }
+  .main-content { padding: 18px 14px 64px 14px; }
+  .topic-section { padding: 18px 16px; }
+  .progress-chip { display: none; }
+  .search-wrap { min-width: 130px; }
+}
+@media (max-width: 640px) {
+  .topbar { padding: 0 10px; gap: 6px; }
+  .search-wrap { max-width: none; }
+  .concept-grid, .hub-grid { grid-template-columns: 1fr; }
+}
+@media print {
+  .topbar, .sidebar, .search-results-bar, .back-top-btn, .master-btn, .lab-controls button, .concept-toolbar, .cq-mask-hint, .chapter-pager { display: none !important; }
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  .main-content { padding: 0 !important; }
+  .content-inner { max-width: 100% !important; }
+  .topic-section, .exam-q, .callout, .worked-example, .svg-figure, .concept-card { box-shadow: none !important; break-inside: avoid; border-color: #CBD5E1 !important; }
+  details.ms-details, details.ms-details .ms-body, .mcq-feedback { display: block !important; }
+  .concept-card.masked .cq-answer-inner { filter: none !important; opacity: 1 !important; }
+}
+
+  </style>
+</head>
+<body data-chapter-code="Ch14">
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="展开目录">☰ 目录</button>
+      <a class="icon-btn" href="index.html" title="返回 25 章总目录"><span>🏠</span><span class="btn-label">总目录</span></a>
+      <div class="brand-pill">
+        <span class="brand-code">Ch14</span>
+        <span class="brand-title">Chapter 14: Properties of waves</span>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="search" id="searchInput" class="search-input" placeholder="搜索公式、实验误差、真题与概念..." autocomplete="off" />
+      <button type="button" class="search-clear" id="searchClear" title="清空搜索">✕</button>
+    </div>
+
+    <div class="topbar-controls">
+      <div class="seg-group" role="group" aria-label="考试级别筛选">
+        <button type="button" class="seg-btn active" data-view-mode="all">All</button>
+        <button type="button" class="seg-btn" data-view-mode="core">Core</button>
+        <button type="button" class="seg-btn" data-view-mode="ext">Extended</button>
+        <button type="button" class="seg-btn" data-view-mode="sme">真题</button>
+      </div>
+
+      <div class="progress-chip" title="本章小节与真题模块掌握进度">
+        <span id="progressText">0/0</span>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+
+      <button type="button" class="icon-btn" id="toggleAllMs" title="展开或收起全部解析"><span>📝</span><span class="btn-label">展开解析</span></button>
+      <button type="button" class="icon-btn" id="themeToggle" title="切换亮色/暗色主题"><span id="themeIcon">🌙</span><span class="btn-label">主题</span></button>
+      <button type="button" class="icon-btn" id="printBtn" title="打印或导出为 PDF"><span>🖨️</span><span class="btn-label">导出 PDF</span></button>
+    </div>
+  </header>
+
+  <div class="search-results-bar" id="searchBar">
+    <span id="searchSummary">找到 0 个匹配板块</span>
+    <button type="button" class="icon-btn" id="searchResetBtn">重置过滤</button>
+  </div>
+
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="本章物理知识点导航">
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #5B21B6;"></span>Ch14 本章小节目录</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#sec-14-1"><span>14.1 横波与纵波、波动术语及图像判读 (Transverse &amp; Longitudinal Waves, Features &amp; Graphs)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-14-2"><span>14.2 波速公式与单位换算 (The Wave Equation: v = fλ)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-14-3"><span>14.3 水波槽实验：波的反射、折射与衍射 (Ripple Tank: Reflection, Refraction &amp; Diffraction)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-sme"><span>SaveMyExams 精选真题与标准评分细则 (Ch 14 Past Paper Practice)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#app-concepts"><span>🧠 第 14 章 · 中英核心概念与满分背写卡 (Concept Bank)</span><span class="nav-done-mark">✓</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #0D9488;"></span>全书 25 章快速切换</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="Ch01_Making_Measurements.html"><span>Ch01 · 长度体积测量、密度浮沉与周期测定</span></a></li>
+          <li><a class="nav-link" href="Ch02_Describing_Motion.html"><span>Ch02 · 速率、加速度与 s-t / v-t 运动图像</span></a></li>
+          <li><a class="nav-link" href="Ch03_Forces_and_Motion.html"><span>Ch03 · 牛顿定律、动量冲量、终端速度与矢量合成</span></a></li>
+          <li><a class="nav-link" href="Ch04_Turning_Effects.html"><span>Ch04 · 力矩平衡原理、重心与稳定性</span></a></li>
+          <li><a class="nav-link" href="Ch05_Forces_and_Matter.html"><span>Ch05 · 固体形变、胡克定律 F=kx 与固体/液体压强</span></a></li>
+          <li><a class="nav-link" href="Ch06_Energy_Stores_Transfers.html"><span>Ch06 · 8 大能量存储、4 路径转移、Sankey 图与机械能</span></a></li>
+          <li><a class="nav-link" href="Ch07_Energy_Resources.html"><span>Ch07 · 化石能源、核能与可再生发电技术评估</span></a></li>
+          <li><a class="nav-link" href="Ch08_Work_and_Power.html"><span>Ch08 · 机械功 W=Fd、功率 P=W/t 与效率</span></a></li>
+          <li><a class="nav-link" href="Ch09_Kinetic_Particle_Model.html"><span>Ch09 · 物态微观模型、布朗运动、绝对温标与气体定律</span></a></li>
+          <li><a class="nav-link" href="Ch10_Thermal_Properties.html"><span>Ch10 · 热膨胀、比热容 c=ΔE/(mΔθ)、物态变化与蒸发冷却</span></a></li>
+          <li><a class="nav-link" href="Ch11_Thermal_Energy_Transfers.html"><span>Ch11 · 热传导、对流、红外辐射与保温综合应用</span></a></li>
+          <li><a class="nav-link" href="Ch12_Sound.html"><span>Ch12 · 声波产生、纵波疏密部、回声测速与示波器波形</span></a></li>
+          <li><a class="nav-link" href="Ch13_Light.html"><span>Ch13 · 平面镜反射、折射斯涅尔定律、全反射与透镜成像</span></a></li>
+          <li><a class="nav-link active" href="Ch14_Properties_of_Waves.html"><span>Ch14 · 横波纵波、v=fλ 与水波反射折射衍射</span></a></li>
+          <li><a class="nav-link" href="Ch15_Spectra.html"><span>Ch15 · 光的色散、七大电磁波谱与模拟数字通信</span></a></li>
+          <li><a class="nav-link" href="Ch16_Magnetism.html"><span>Ch16 · 磁化、软铁与硬钢磁滞差异及磁场线</span></a></li>
+          <li><a class="nav-link" href="Ch17_Static_Electricity.html"><span>Ch17 · 摩擦电子转移、导体绝缘体、感应与电场线</span></a></li>
+          <li><a class="nav-link" href="Ch18_Electrical_Quantities.html"><span>Ch18 · 电流、电动势/电压、欧姆定律 I-V 曲线与电功率 kWh</span></a></li>
+          <li><a class="nav-link" href="Ch19_Electrical_Circuits.html"><span>Ch19 · 电路符号、串并联、LDR/NTC 分压器与用电安全</span></a></li>
+          <li><a class="nav-link" href="Ch20_Electromagnetic_Forces.html"><span>Ch20 · 电流磁场、弗莱明左手定则、粒子偏转与直流电机</span></a></li>
+          <li><a class="nav-link" href="Ch21_Electromagnetic_Induction.html"><span>Ch21 · 电磁感应、楞次定律、交流发电机与变压器高压输电</span></a></li>
+          <li><a class="nav-link" href="Ch22_The_Nuclear_Atom.html"><span>Ch22 · α 金箔散射原子核、同位素及核裂变与聚变</span></a></li>
+          <li><a class="nav-link" href="Ch23_Radioactivity.html"><span>Ch23 · 本底辐射、α/β/γ 性质、衰变方程与半衰期计算</span></a></li>
+          <li><a class="nav-link" href="Ch24_Earth_and_Solar_System.html"><span>Ch24 · 自转四季、月相、行星吸积盘形成与轨道速率 v=2πr/T</span></a></li>
+          <li><a class="nav-link" href="Ch25_Stars_and_Universe.html"><span>Ch25 · 恒星全生命周期、红移 CMBR 大爆炸与哈勃定律 H₀</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-inner">
+        <section class="hero-card" id="top">
+          <h1>Chapter 14: Properties of waves · 第 14 章 · 横波纵波、v=fλ 与水波反射折射衍射</h1>
+          <p class="hero-sub">
+            完整覆盖 <strong>David Sang 第 3 版教材（2023–2028 新考纲 0625/0972 · 取 g = 9.8 m/s² / 9.8 N/kg）</strong>本章全部 Core 与 Extended 知识点：<code>14.1 横纵波术语与 T=1/f · 14.2 波速 v=fλ · 14.3 深浅水折射 (f不变、λ/v变小) 与缝宽/波长匹配衍射</code>，配齐微观机理解释、Paper 6 实验控制、SaveMyExams 真题与直接背写概念卡。
+          </p>
+          <div class="hero-badges">
+            <span class="hero-pill">⚛️ David Sang 3rd Ed. · 2023–2028</span>
+            <span class="hero-pill">📐 Core + Extended 全区分</span>
+            <span class="hero-pill">🧪 本章专属交互物理实验台</span>
+            <a class="hero-pill" href="#sec-sme" style="text-decoration: none;">📝 直达 SaveMyExams 真题 →</a>
+            <a class="hero-pill" href="#app-concepts" style="text-decoration: none; background: rgba(255,255,255,0.24);">🧠 直达中英概念默写库 →</a>
+          </div>
+          <div class="unit-grid">
+            <a class="unit-tile" href="#sec-14-1">
+              <div class="unit-tile-num">Section 14-1</div>
+              <div class="unit-tile-title">14.1 横波与纵波、波动术语及图像判读 (Transverse &amp; Longitudinal Waves, Features &amp; Graphs)</div>
+            </a>
+            <a class="unit-tile" href="#sec-14-2">
+              <div class="unit-tile-num">Section 14-2</div>
+              <div class="unit-tile-title">14.2 波速公式与单位换算 (The Wave Equation: v = fλ)</div>
+            </a>
+            <a class="unit-tile" href="#sec-14-3">
+              <div class="unit-tile-num">Section 14-3</div>
+              <div class="unit-tile-title">14.3 水波槽实验：波的反射、折射与衍射 (Ripple Tank: Reflection, Refraction &amp; Diffraction)</div>
+            </a>
+            <a class="unit-tile" href="#sec-sme">
+              <div class="unit-tile-num">Section sme</div>
+              <div class="unit-tile-title">SaveMyExams 精选真题与标准评分细则 (Ch 14 Past Paper Practice)</div>
+            </a>
+          </div>
+        </section>
+
+        <div id="emptySearchNotice" class="callout deep-dive" style="display: none;">
+          <div class="callout-title">🔍 未找到匹配内容</div>
+          <p style="margin-bottom: 0;">请尝试更换关键词，或点击右上角“重置过滤”恢复显示。</p>
+        </div>
+
+<article class="topic-section book-section" id="sec-14-1">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>14.1 横波与纵波、波动术语及图像判读 (Transverse &amp; Longitudinal Waves, Features &amp; Graphs)</h3>
+      <div class="section-en-sub">Energy Transfer Without Matter · Transverse vs Longitudinal · Wavefront, Wavelength, Amplitude, Frequency &amp; Period</div>
+      <div class="tier-row"><span class="badge-core">Core</span></div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-14-1">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>一、波的本质与横波 / 纵波全面对比 <span class="badge-core">Core</span></h4>
+    <p><strong>波 (Wave)</strong> 是在空间中传播振动并将<strong>能量 (energy)</strong> 和信息从一处传递到另一处的过程，但<strong>介质物质本身不会随波一起迁移 (without transferring matter)</strong>（如漂浮在水面的软木塞只会上下原地起伏，不会随水波漂走）。</p>
+    <div class="table-wrap">
+      <table class="phy-table">
+        <thead>
+          <tr><th>对比维度</th><th>横波 (Transverse waves)</th><th>纵波 (Longitudinal waves)</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>振动方向 vs 能量传播方向</strong></td>
+            <td>粒子振动方向与能量传播方向<strong>垂直 (perpendicular, 90°)</strong></td>
+            <td>粒子振动方向与能量传播方向<strong>平行 (parallel)</strong></td>
+          </tr>
+          <tr>
+            <td><strong>特征结构名称</strong></td>
+            <td><strong>波峰 (Crests / Peaks)</strong> 与 <strong>波谷 (Troughs)</strong></td>
+            <td><strong>密部 (Compressions)</strong> 与 <strong>疏部 (Rarefactions)</strong></td>
+          </tr>
+          <tr>
+            <td><strong>能否在真空中传播</strong></td>
+            <td>电磁波（光等）可在真空传播；水波/绳波需介质</td>
+            <td>典型纵波（如声波）必须依赖介质，不能在真空传播</td>
+          </tr>
+          <tr>
+            <td><strong>考纲必记实例</strong></td>
+            <td><strong>一切电磁波</strong>（无线电/微波/红外/可见光/UV/X/γ）、<strong>水表面波 (ripples)</strong>、上下抖动绳波、地震横波 (S-waves)</td>
+            <td><strong>声波 (Sound)</strong>、<strong>超声波 (Ultrasound)</strong>、前后推拉弹簧疏密波 (slinky)、地震纵波 (P-waves)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>二、波动五大核心物理量与波前 (Wavefront) <span class="badge-core">Core</span></h4>
+    <ul>
+      <li><strong>波前 (Wavefront)</strong>：把水波槽等平面波中处于<strong>相同振动相位</strong>的相邻点（例如所有相邻波峰）连成的一条线。<strong>铁律：波前永远与波的传播方向（波射线 Ray）垂直 (90°)</strong>！两条相邻波前之间的垂直距离等于一个<strong>波长 (<span class="math">λ</span>)</strong>。</li>
+      <li><strong>波长 (<span class="math">λ</span>, Wavelength, 单位 m)</strong>：相邻两个相同振动状态点之间的距离（如波峰到波峰、波谷到波谷，或密部中心到密部中心）。</li>
+      <li><strong>振幅 (<span class="math">A</span>, Amplitude, 单位 m)</strong>：质点偏离其<strong>静止平衡位置 (equilibrium/rest position)</strong> 的<strong>最大位移</strong>。</li>
+      <li><strong>频率 (<span class="math">f</span>, Frequency, 单位 Hz)</strong>：波源每秒钟产生的完整波个数（或每秒钟经过某一点的完整波个数）。1 Hz = 1 wave/s。</li>
+      <li><strong>周期 (<span class="math">T</span>, Period, 单位 s)</strong>：产生（或经过某一点）一个完整波所需要的时间。<span class="math">T</span> = 1 / <span class="math">f</span> 且 <span class="math">f</span> = 1 / <span class="math">T</span>。</li>
+      <li><strong>波速 (<span class="math">v</span>, Wave speed, 单位 m/s)</strong>：波峰或能量每秒钟向前传播的距离。</li>
+    </ul>
+
+    <div class="callout common-mistake">
+      <div class="callout-title">⚠️ 两大零分重灾区：振幅与图像横坐标！</div>
+      <p style="margin-bottom: 0;">1. <strong>振幅陷阱</strong>：若题中标出“从波谷最低点到波峰最高点的竖直总高度为 8 cm”，则该高度等于 <strong>2<span class="math">A</span></strong>，真正的振幅 <span class="math">A</span> = 8 ÷ 2 = <strong>4 cm</strong>！<br/>
+      2. <strong>图像横轴陷阱</strong>：拿到波形图第一秒务必看清横轴单位！<br/>
+      &nbsp;&nbsp;• 横轴是 <strong>距离 <span class="math">x</span> (m/cm)</strong> → 一完整波水平跨度 = <strong>波长 <span class="math">λ</span></strong>；<br/>
+      &nbsp;&nbsp;• 横轴是 <strong>时间 <span class="math">t</span> (s/ms)</strong> → 一完整波水平跨度 = <strong>周期 <span class="math">T</span></strong>（由此再算 <span class="math">f</span> = 1/<span class="math">T</span>）。</p>
+    </div>
+  </div>
+
+  <div class="svg-figure">
+    <svg viewBox="0 0 740 265" width="740" height="265" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Displacement-distance vs displacement-time wave graphs and transverse vs longitudinal particle motion">
+      <rect x="0" y="0" width="740" height="265" rx="10" fill="var(--svg-bg)"/>
+      <!-- Left: Displacement vs Distance -->
+      <rect x="16" y="14" width="356" height="236" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5"/>
+      <text x="194" y="34" text-anchor="middle" font-size="13" font-weight="700" fill="var(--svg-ink)">位移-距离图 (读取振幅 A 与波长 λ)</text>
+      <!-- Axes -->
+      <line x1="48" y1="54" x2="48" y2="216" stroke="var(--svg-muted)" stroke-width="1.6"/>
+      <line x1="44" y1="134" x2="352" y2="134" stroke="var(--svg-muted)" stroke-width="1.6"/>
+      <text x="38" y="64" text-anchor="end" font-size="10.5" font-weight="700" fill="var(--svg-muted)">y</text>
+      <text x="352" y="148" text-anchor="end" font-size="10.5" font-weight="700" fill="var(--svg-muted)">距离 x</text>
+      <!-- Sine curve: period=140px, start x=48, amp=50px (crests at 83,223 y=84; troughs at 153,293 y=184) -->
+      <path d="M48,134 C61,84 70,84 83,84 C96,84 105,134 118,134 C131,134 140,184 153,184 C166,184 175,134 188,134 C201,134 210,84 223,84 C236,84 245,134 258,134 C271,134 280,184 293,184 C306,184 315,134 328,134" fill="none" stroke="var(--svg-purple)" stroke-width="2.6"/>
+      <!-- Wavelength bracket between crests (83 to 223) -->
+      <line x1="83" y1="62" x2="223" y2="62" stroke="var(--svg-blue)" stroke-width="1.8"/>
+      <line x1="83" y1="56" x2="83" y2="82" stroke="var(--svg-blue)" stroke-width="1.2" stroke-dasharray="3,2"/>
+      <line x1="223" y1="56" x2="223" y2="82" stroke="var(--svg-blue)" stroke-width="1.2" stroke-dasharray="3,2"/>
+      <text x="153" y="56" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-blue)">波长 λ (峰到峰)</text>
+      <!-- Amplitude arrow (x=83, y=134 to 84) -->
+      <line x1="83" y1="134" x2="83" y2="88" stroke="var(--svg-red)" stroke-width="2.2"/>
+      <polygon points="79,92 83,84 87,92" fill="var(--svg-red)"/>
+      <text x="90" y="114" font-size="11" font-weight="700" fill="var(--svg-red)">振幅 A</text>
+      <!-- 2A warning bracket at x=293 -->
+      <line x1="293" y1="84" x2="293" y2="184" stroke="var(--svg-amber)" stroke-width="1.5" stroke-dasharray="3,2"/>
+      <line x1="223" y1="84" x2="300" y2="84" stroke="var(--svg-amber)" stroke-width="1.1" stroke-dasharray="2,2"/>
+      <text x="300" y="118" font-size="10.5" font-weight="700" fill="var(--svg-amber)">峰谷差</text>
+      <text x="300" y="131" font-size="10.5" font-weight="700" fill="var(--svg-amber)">= 2A!</text>
+      <text x="153" y="200" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-muted)">波谷 Trough</text>
+      <text x="194" y="236" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-ink)">平衡位置线 y = 0</text>
+
+      <!-- Right Top: Displacement vs Time -->
+      <rect x="388" y="14" width="336" height="122" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5"/>
+      <text x="556" y="32" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--svg-ink)">位移-时间图 (横轴为 t → 读出周期 T)</text>
+      <line x1="414" y1="44" x2="414" y2="122" stroke="var(--svg-muted)" stroke-width="1.4"/>
+      <line x1="410" y1="86" x2="704" y2="86" stroke="var(--svg-muted)" stroke-width="1.4"/>
+      <path d="M414,86 C428,50 442,50 456,86 C470,122 484,122 498,86 C512,50 526,50 540,86 C554,122 568,122 582,86 C596,50 610,50 624,86 C638,122 652,122 666,86" fill="none" stroke="var(--svg-teal)" stroke-width="2.2"/>
+      <line x1="435" y1="50" x2="519" y2="50" stroke="var(--svg-red)" stroke-width="1.6"/>
+      <text x="477" y="45" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-red)">周期 T (f = 1/T)</text>
+      <text x="702" y="99" text-anchor="end" font-size="10.5" font-weight="700" fill="var(--svg-muted)">时间 t</text>
+
+      <!-- Right Bottom: Transverse vs Longitudinal summary -->
+      <rect x="388" y="146" width="336" height="104" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5"/>
+      <text x="556" y="166" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--svg-ink)">振动方向 vs 传播方向对比</text>
+      <!-- Transverse symbol -->
+      <text x="406" y="194" font-size="11.5" font-weight="700" fill="var(--svg-blue)">横波 (光/水波)：</text>
+      <line x1="518" y1="190" x2="594" y2="190" stroke="var(--svg-green)" stroke-width="2.2"/>
+      <polygon points="592,186 600,190 592,194" fill="var(--svg-green)"/>
+      <line x1="540" y1="176" x2="540" y2="204" stroke="var(--svg-red)" stroke-width="2"/>
+      <text x="612" y="194" font-size="11" font-weight="700" fill="var(--svg-ink)">振动 ⊥ 传播</text>
+      <!-- Longitudinal symbol -->
+      <text x="406" y="228" font-size="11.5" font-weight="700" fill="var(--svg-purple)">纵波 (声波)：</text>
+      <line x1="518" y1="224" x2="594" y2="224" stroke="var(--svg-green)" stroke-width="2.2"/>
+      <polygon points="592,220 600,224 592,228" fill="var(--svg-green)"/>
+      <line x1="530" y1="234" x2="564" y2="234" stroke="var(--svg-red)" stroke-width="2"/>
+      <text x="612" y="228" font-size="11" font-weight="700" fill="var(--svg-ink)">振动 ∥ 传播</text>
+    </svg>
+    <div class="svg-caption">图 14.1：位移-距离图与位移-时间图判读（切分波长 λ 与周期 T）及横纵波方向对比</div>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-14-2">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>14.2 波速公式与单位换算 (The Wave Equation: v = fλ)</h3>
+      <div class="section-en-sub">v = fλ · Rearrangements · kHz / MHz / GHz / cm / mm Conversions · Worked Examples</div>
+      <div class="tier-row"><span class="badge-core">Core</span><span class="badge-ext">Extended</span></div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-14-2">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>一、波速公式 <span class="math">v = fλ</span> 及其变形与单位换算 <span class="badge-core">Core</span></h4>
+    <div class="formula-card">
+      <div class="formula-main"><span class="math">v</span> = <span class="math">f λ</span> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; <span class="math">f</span> = <span class="frac"><span class="num"><span class="math">v</span></span><span class="den"><span class="math">λ</span></span></span> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; <span class="math">λ</span> = <span class="frac"><span class="num"><span class="math">v</span></span><span class="den"><span class="math">f</span></span></span> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; <span class="math">f</span> = <span class="frac"><span class="num">1</span><span class="den"><span class="math">T</span></span></span></div>
+      <p style="margin-bottom: 0;"><strong>物理直觉</strong>：1 秒内波源发出 <span class="math">f</span> 个完整波，每个波的长度为 <span class="math">λ</span>，故波在 1 秒内向前走过的总距离（波速）= <span class="math">f × λ</span>。<br/>
+      <strong>必查国际单位 (SI Units)</strong>：<span class="math">v</span> 用 <strong>m/s</strong>（若算得 cm/s 可直接留意题干要求），<span class="math">f</span> 用 <strong>Hz</strong>，<span class="math">λ</span> 用 <strong>m</strong>！<br/>
+      • <code>1 kHz = 10³ Hz</code> &nbsp;|&nbsp; <code>1 MHz = 10⁶ Hz</code> &nbsp;|&nbsp; <code>1 GHz = 10⁹ Hz</code><br/>
+      • <code>1 cm = 0.01 m</code> &nbsp;|&nbsp; <code>1 mm = 10⁻³ m</code> &nbsp;|&nbsp; <code>1 nm = 10⁻⁹ m</code></p>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">📝 例题精讲 · 双场景波速与单位换算</div>
+      <p><strong>例 1（水波槽）</strong>：水波槽振动杆以 15 Hz 的频率振动，测得连续 6 条波峰（即 5 个波长！）之间的距离为 12.0 cm。求水波波长与波速。</p>
+      <p><strong>解：</strong>6 条波峰之间有 6 − 1 = <strong>5 个波长</strong>（常见失误是直接除以 6！），故 <span class="math">λ</span> = 12.0 / 5 = 2.4 cm = 0.024 m；<br/>
+      <span class="math">v</span> = <span class="math">f λ</span> = 15 × 0.024 = <strong>0.36 m/s</strong>（或 36 cm/s）。</p>
+      <p><strong>例 2（无线电波）</strong>：某 FM 广播电台频率为 100 MHz，电磁波在空气中波速为 3.0 × 10<sup>8</sup> m/s，求其波长。</p>
+      <p style="margin-bottom: 0;"><strong>解：</strong><span class="math">f</span> = 100 × 10<sup>6</sup> = 1.0 × 10<sup>8</sup> Hz ⇒ <span class="math">λ</span> = <span class="math">v</span> / <span class="math">f</span> = (3.0 × 10<sup>8</sup>) / (1.0 × 10<sup>8</sup>) = <strong>3.0 m</strong>。</p>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-14-3">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>14.3 水波槽实验：波的反射、折射与衍射 (Ripple Tank: Reflection, Refraction &amp; Diffraction)</h3>
+      <div class="section-en-sub">Ripple Tank Apparatus · Reflection (i=r) · Deep-to-Shallow Refraction (f constant!) · Gap &amp; Edge Diffraction</div>
+      <div class="tier-row"><span class="badge-core">Core</span><span class="badge-ext">Extended</span></div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-14-3">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>一、水波槽 (Ripple Tank) 构造与测量技巧 <span class="badge-core">Core</span></h4>
+    <p>水波槽是玻璃底浅水槽：上方灯泡照射水面，波峰相当于凸透镜把光会聚，在下方白纸上呈现<strong>亮条纹</strong>（波谷对应暗条纹）。偏心马达带动木直尺产生<strong>平面波 (straight waves)</strong>，小球上下击水产生<strong>圆形波 (circular waves)</strong>；槽壁周围垫吸波海绵以防止杂乱反射干扰。</p>
+    <p><strong>Paper 6 测量波长与频率</strong>：用频闪仪（或拍照）定格投影，用直尺一次测量 10 个连续亮条纹的总跨度 <span class="math">D</span>（9 个波长或用 10 个完整间隔除以 10）减小读数误差；秒表测振动杆完成 20 次振动时间再算频率 <span class="math">f</span>。</p>
+  </div>
+
+  <div class="subtopic">
+    <h4>二、水波三大现象及物理量变化铁律表 <span class="badge-core">Core</span> <span class="badge-ext">Extended</span></h4>
+    <div class="table-wrap">
+      <table class="phy-table">
+        <thead>
+          <tr><th>波动现象</th><th>波速 <span class="math">v</span></th><th>频率 <span class="math">f</span></th><th>波长 <span class="math">λ</span></th><th>波前图形与核心考纲要点</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. 反射 (Reflection)</strong><br/>斜向撞击平直挡板</td>
+            <td><strong>不变</strong></td>
+            <td><strong>不变</strong></td>
+            <td><strong>不变</strong></td>
+            <td>仅传播方向改变，满足反射定律 <strong><span class="math">i = r</span></strong>；波前始终垂直于波射线，反射前后条纹间距（波长）完全相同。</td>
+          </tr>
+          <tr>
+            <td><strong>2. 折射 (Refraction)</strong><br/><strong>深水 → 浅水</strong>（水底放平板玻璃/有机玻璃块）</td>
+            <td><strong>减小 (↓)</strong></td>
+            <td><strong>绝对不变!</strong><br/>(由波源决定)</td>
+            <td><strong>减小 (↓)</strong><br/>(条纹变密)</td>
+            <td>浅水阻力大导致波速变慢，而振动杆频率 <span class="math">f</span> 恒定 ⇒ 由 <span class="math">v = fλ</span> 得 <strong><span class="math">λ</span> 同步变小</strong>（条纹更密）。若斜射过深浅交界线，先入浅水一侧减速拖后，整条波前弯折，<strong>波射线向法线偏折</strong>！<br/><em>若由浅水 → 深水：则 <span class="math">f</span> 不变，<span class="math">v</span> 增大，<span class="math">λ</span> 变大，远离法线偏折。</em></td>
+          </tr>
+          <tr>
+            <td><strong>3. 衍射 (Diffraction)</strong><br/>穿过缝隙或绕过障碍物边缘</td>
+            <td><strong>不变</strong></td>
+            <td><strong>不变</strong></td>
+            <td><strong>不变</strong></td>
+            <td>水深与波源均未变，故 <strong><span class="math">v, f, λ</span> 全部保持不变</strong>！波传播至挡板后方阴影区（仅因能量向更大扇面扩散而使<strong>振幅略微减小</strong>）。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>三、衍射强弱的决定条件：缝宽 <span class="math">w</span> 与波长 <span class="math">λ</span> 的匹配 <span class="badge-core">Core</span> <span class="badge-ext">Extended</span></h4>
+    <ul>
+      <li><strong>窄缝（缝宽与波长相当：<span class="math">w ≈ λ</span> 或 <span class="math">w ≤ λ</span>）</strong>：<strong>衍射最强 (maximum spreading)</strong>！平直波前穿过狭缝后变成几乎完整的<strong>半圆形波前</strong>，大幅扩散到两侧阴影区。</li>
+      <li><strong>宽缝（缝宽远大于波长：<span class="math">w ≫ λ</span>）</strong>：<strong>衍射极弱</strong>！波主要沿直线穿过缝隙形成窄直波束，仅在缝隙边缘发生轻微弯曲。</li>
+      <li><strong>长波长效应</strong>：对于固定缝隙或障碍物（如山丘、门框），<strong>波长越长（频率越低）衍射越显著</strong>！<span class="ext-only"><span class="badge-ext">Extended</span> 这就是为什么长波无线电波比短波微波/电视信号更容易绕过山丘建筑物传播，以及声波（<span class="math">λ</span> ~ 1 m）能拐弯听到走廊外说话而光波（<span class="math">λ</span> ~ 500 nm）几乎呈直线传播！</span></li>
+      <li><strong>单个挡板边缘衍射 (Diffraction at an edge)</strong>：水波经过单侧障碍物边缘时，波前也会向挡板后方几何阴影区弯曲蔓延；波长越长，向阴影区弯曲越明显。</li>
+    </ul>
+  </div>
+
+  <div class="lab-box" data-lab-type="p14"></div>
+
+  <div class="svg-figure">
+    <svg viewBox="0 0 740 275" width="740" height="275" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ripple tank reflection, deep-to-shallow refraction, and wide vs narrow gap diffraction">
+      <rect x="0" y="0" width="740" height="275" rx="10" fill="var(--svg-bg)"/>
+      <!-- Panel A: Reflection off 45° barrier -->
+      <rect x="16" y="14" width="228" height="246" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5"/>
+      <text x="130" y="34" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--svg-ink)">1. 反射 (i = r，λ 不变)</text>
+      <!-- Barrier from (164,62) to (228,126) -->
+      <line x1="164" y1="62" x2="228" y2="126" stroke="var(--svg-ink)" stroke-width="4.5"/>
+      <!-- Incident vertical wavefronts x=42, 70, 98, 126 -->
+      <line x1="42" y1="64" x2="42" y2="126" stroke="var(--svg-blue)" stroke-width="2.2"/>
+      <line x1="70" y1="64" x2="70" y2="126" stroke="var(--svg-blue)" stroke-width="2.2"/>
+      <line x1="98" y1="64" x2="98" y2="126" stroke="var(--svg-blue)" stroke-width="2.2"/>
+      <line x1="126" y1="64" x2="126" y2="126" stroke="var(--svg-blue)" stroke-width="2.2"/>
+      <!-- Reflected horizontal wavefronts y=148, 176, 204, 232 (same spacing 28!) -->
+      <line x1="164" y1="148" x2="226" y2="148" stroke="var(--svg-purple)" stroke-width="2.2"/>
+      <line x1="164" y1="176" x2="226" y2="176" stroke="var(--svg-purple)" stroke-width="2.2"/>
+      <line x1="164" y1="204" x2="226" y2="204" stroke="var(--svg-purple)" stroke-width="2.2"/>
+      <line x1="164" y1="232" x2="226" y2="232" stroke="var(--svg-purple)" stroke-width="2.2"/>
+      <!-- Ray arrow -->
+      <polyline points="34,95 196,95 196,238" fill="none" stroke="var(--svg-red)" stroke-width="1.8" stroke-dasharray="4,2"/>
+      <polygon points="148,91 156,95 148,99" fill="var(--svg-red)"/>
+      <polygon points="192,232 196,240 200,232" fill="var(--svg-red)"/>
+      <text x="198" y="64" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-muted)">挡板</text>
+      <text x="86" y="156" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-blue)">v, f, λ</text>
+      <text x="86" y="172" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-blue)">完全不变</text>
+
+      <!-- Panel B: Refraction Deep -> Shallow (boundary (316,62) to (414,232); shallow on right) -->
+      <rect x="256" y="14" width="228" height="246" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5"/>
+      <text x="370" y="34" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--svg-ink)">2. 折射：深水 → 浅水</text>
+      <!-- Shallow Perspex region polygon -->
+      <polygon points="316,62 472,62 472,232 414,232" fill="rgba(2,132,199,0.16)" stroke="var(--svg-muted)" stroke-width="1.4"/>
+      <text x="288" y="54" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-ink)">深水区 (快)</text>
+      <text x="438" y="54" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-blue)">浅水区 (慢)</text>
+      <!-- Continuous bent wavefronts matching Snell law (v2/v1=0.6) -->
+      <line x1="281" y1="62" x2="281" y2="232" stroke="var(--svg-blue)" stroke-width="2.2"/>
+      <line x1="309" y1="62" x2="309" y2="232" stroke="var(--svg-blue)" stroke-width="2.2"/>
+      <polyline points="337,232 337,98.4 328.9,62" fill="none" stroke="var(--svg-blue)" stroke-width="2.2"/>
+      <polyline points="365,232 365,147 346.1,62" fill="none" stroke="var(--svg-blue)" stroke-width="2.2"/>
+      <polyline points="393,232 393,195.5 363.4,62" fill="none" stroke="var(--svg-blue)" stroke-width="2.2"/>
+      <line x1="418.3" y1="232" x2="380.6" y2="62" stroke="var(--svg-blue)" stroke-width="2.2"/>
+      <line x1="435.5" y1="232" x2="397.8" y2="62" stroke="var(--svg-blue)" stroke-width="2.2"/>
+      <line x1="452.7" y1="232" x2="415.0" y2="62" stroke="var(--svg-blue)" stroke-width="2.2"/>
+      <line x1="469.9" y1="232" x2="432.2" y2="62" stroke="var(--svg-blue)" stroke-width="2.2"/>
+      <!-- Ray turning towards normal -->
+      <polyline points="268,147 365,147 465,124.8" fill="none" stroke="var(--svg-red)" stroke-width="2"/>
+      <polygon points="459,122 468,124 461,129" fill="var(--svg-red)"/>
+      <text x="370" y="250" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-red)">f 恒定 | v↓, λ↓, 向法线折</text>
+
+      <!-- Panel C: Diffraction Wide Gap vs Narrow Gap -->
+      <rect x="496" y="14" width="228" height="246" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5"/>
+      <text x="610" y="34" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--svg-ink)">3. 衍射：缝宽与 λ 对比</text>
+      <!-- Top: Wide gap (w >> λ) -->
+      <text x="610" y="52" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-muted)">宽缝 (w ≫ λ)：弱衍射</text>
+      <line x1="514" y1="62" x2="514" y2="128" stroke="var(--svg-blue)" stroke-width="2"/>
+      <line x1="532" y1="62" x2="532" y2="128" stroke="var(--svg-blue)" stroke-width="2"/>
+      <line x1="550" y1="62" x2="550" y2="128" stroke="var(--svg-blue)" stroke-width="2"/>
+      <line x1="566" y1="58" x2="566" y2="75" stroke="var(--svg-ink)" stroke-width="4.5"/>
+      <line x1="566" y1="115" x2="566" y2="132" stroke="var(--svg-ink)" stroke-width="4.5"/>
+      <!-- Slightly curved edges -->
+      <path d="M584,71 Q586,75 586,95 Q586,115 584,119" fill="none" stroke="var(--svg-purple)" stroke-width="2"/>
+      <path d="M600,66 Q604,75 604,95 Q604,115 600,124" fill="none" stroke="var(--svg-purple)" stroke-width="2"/>
+      <path d="M616,62 Q622,75 622,95 Q622,115 616,128" fill="none" stroke="var(--svg-purple)" stroke-width="2"/>
+      <path d="M632,59 Q640,75 640,95 Q640,115 632,131" fill="none" stroke="var(--svg-purple)" stroke-width="2"/>
+      <text x="678" y="98" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-muted)">中间直行</text>
+
+      <!-- Divider -->
+      <line x1="506" y1="142" x2="714" y2="142" stroke="var(--svg-grid)" stroke-dasharray="3,3"/>
+      <!-- Bottom: Narrow gap (w ≈ λ) -->
+      <text x="610" y="158" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-green)">窄缝 (w ≈ λ)：强半圆衍射!</text>
+      <line x1="514" y1="168" x2="514" y2="232" stroke="var(--svg-blue)" stroke-width="2"/>
+      <line x1="532" y1="168" x2="532" y2="232" stroke="var(--svg-blue)" stroke-width="2"/>
+      <line x1="550" y1="168" x2="550" y2="232" stroke="var(--svg-blue)" stroke-width="2"/>
+      <line x1="566" y1="164" x2="566" y2="191" stroke="var(--svg-ink)" stroke-width="4.5"/>
+      <line x1="566" y1="209" x2="566" y2="236" stroke="var(--svg-ink)" stroke-width="4.5"/>
+      <!-- Concentric semicircular arcs centered at (566, 200) with r=18, 36, 54, 72 -->
+      <path d="M566,182 A18,18 0 0,1 566,218" fill="none" stroke="var(--svg-green)" stroke-width="2.2"/>
+      <path d="M566,164 A36,36 0 0,1 566,236" fill="none" stroke="var(--svg-green)" stroke-width="2.2"/>
+      <path d="M566,146 A54,54 0 0,1 566,254" fill="none" stroke="var(--svg-green)" stroke-width="2.2"/>
+      <path d="M582,148 A72,72 0 0,1 582,252" fill="none" stroke="var(--svg-green)" stroke-width="2.2"/>
+      <text x="680" y="200" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-green)">v, f, λ 不变</text>
+      <text x="680" y="214" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-green)">振幅略降</text>
+    </svg>
+    <div class="svg-caption">图 14.2：水波槽三大核心现象波前作图——反射（左）、深水到浅水折射（中）与宽窄缝衍射（右）</div>
+  </div>
+</article>
+
+<article class="topic-section sme-section" id="sec-sme">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>SaveMyExams 精选真题与标准评分细则 (Ch 14 Past Paper Practice)</h3>
+      <div class="section-en-sub">IGCSE Physics (0625) · Paper 1/2 MCQ &amp; Paper 3/4/6 Structured Questions</div>
+      <div class="tier-row"><span class="badge-core">Core</span><span class="badge-ext">Extended</span></div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-sme">○ 标记掌握</button>
+  </div>
+
+  <div class="practice-block">
+    <div class="practice-heading">🎯 一、选择题精练 (Multiple Choice Questions)</div>
+
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head">
+        <span class="q-tag">MCQ 1 · Paper 1/2 · Core</span>
+        <span class="q-marks">[1 mark]</span>
+      </div>
+      <div class="q-stem-en">Water waves in a ripple tank travel from deep water into a shallow region over a submerged glass plate. How do the frequency, speed, and wavelength of the waves change in the shallow water?</div>
+      <div class="q-stem-cn">水波槽中的水波从深水区进入沉有玻璃板的浅水区时，频率、波速和波长如何变化？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A</strong> Frequency decreases; speed decreases; wavelength stays constant</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B</strong> Frequency stays constant; speed decreases; wavelength decreases</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C</strong> Frequency stays constant; speed increases; wavelength increases</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D</strong> Frequency increases; speed decreases; wavelength decreases</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！折射过程中频率 f 由波源振子决定绝对不变；进入浅水后波速 v 减小，由 v = fλ 得波长 λ 同步缩短！" data-err="❌ 错！折射铁律是频率 f 绝不改变；深→浅时波速 v 变慢，λ 也跟着变小（选 B）。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="C">
+      <div class="exam-q-head">
+        <span class="q-tag">MCQ 2 · Paper 1/2 · Core</span>
+        <span class="q-marks">[1 mark]</span>
+      </div>
+      <div class="q-stem-en">A transverse water wave has a vertical height from trough to crest of 12 cm, and the distance between 5 consecutive wave crests is 32 cm. What are the amplitude and wavelength of the wave?</div>
+      <div class="q-stem-cn">某横波从波谷到波峰的竖直总高度为 12 cm，且连续 5 条波峰间的水平距离为 32 cm。其振幅和波长分别是多少？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A</strong> Amplitude: 12 cm | Wavelength: 6.4 cm</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B</strong> Amplitude: 6.0 cm | Wavelength: 6.4 cm</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C</strong> Amplitude: 6.0 cm | Wavelength: 8.0 cm</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D</strong> Amplitude: 12 cm | Wavelength: 8.0 cm</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！峰谷总高 12 cm = 2A ⇒ A = 6.0 cm；5 条波峰之间有 5−1 = 4 个波长 ⇒ λ = 32 / 4 = 8.0 cm！" data-err="❌ 错！避开双坑：振幅是从中心线到波峰，等于 12/2 = 6.0 cm；5 条波峰之间只有 4 个完整波长，故 λ = 32/4 = 8.0 cm（选 C）。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="D">
+      <div class="exam-q-head">
+        <span class="q-tag">MCQ 3 · Paper 1/2 · Core</span>
+        <span class="q-marks">[1 mark]</span>
+      </div>
+      <div class="q-stem-en">Plane water waves of wavelength 3.0 cm approach a barrier with a gap of width 3.2 cm. Which statement describes the waves after passing through the gap?</div>
+      <div class="q-stem-cn">波长为 3.0 cm 的平面水波穿过宽 3.2 cm 的挡板狭缝。下列关于穿出后波的描述正确的是？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A</strong> Strong diffraction occurs and wavelength increases to 3.2 cm.</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B</strong> Waves pass straight through with almost no spreading.</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C</strong> Strong diffraction occurs and wave speed decreases permanently.</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D</strong> Strong semicircular diffraction occurs while wavelength, speed, and frequency remain unchanged.</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！缝宽 3.2 cm 与波长 3.0 cm 几乎相等，产生强烈半圆形衍射，且衍射不改变 v、f、λ！" data-err="❌ 错！w ≈ λ 时衍射非常强；而水深未变、波源未变，衍射绝不改变 λ、v 和 f（选 D）。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="A">
+      <div class="exam-q-head">
+        <span class="q-tag">MCQ 4 · Paper 1/2 · Core</span>
+        <span class="q-marks">[1 mark]</span>
+      </div>
+      <div class="q-stem-en">A vibrator produces 240 complete waves in 1 minute. If each wavelength is 0.50 m, what is the speed of the waves?</div>
+      <div class="q-stem-cn">某波源在 1 分钟内产生 240 个完整波，每个波长为 0.50 m，波速是多少？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A</strong> 2.0 m/s</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B</strong> 120 m/s</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C</strong> 8.0 m/s</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D</strong> 0.50 m/s</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！f = 240 / 60 s = 4.0 Hz；v = fλ = 4.0 × 0.50 = 2.0 m/s！" data-err="❌ 错！记得把 1 分钟换算为 60 秒！f = 240 / 60 = 4.0 Hz，再算 v = 4.0 × 0.50 = 2.0 m/s（选 A）。"></div>
+    </div>
+
+    <div class="exam-q ext-only" data-mcq-answer="B">
+      <div class="exam-q-head">
+        <span class="q-tag">MCQ 5 · Paper 2 · <span class="badge-ext">Extended</span></span>
+        <span class="q-marks">[1 mark]</span>
+      </div>
+      <div class="q-stem-en">Why is it often possible to hear someone talking around the corner of a brick wall even though you cannot see them?</div>
+      <div class="q-stem-cn">为什么在墙角拐弯处常能听见别人说话，却看不见人影？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A</strong> Sound waves travel faster than light waves in air.</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B</strong> Sound waves have much longer wavelengths comparable to the doorway/corner, so they diffract strongly around the edge, whereas light waves have tiny wavelengths and diffract negligibly.</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C</strong> Sound is longitudinal so it refracts through solid brick easily, while light is transverse.</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D</strong> Light is completely absorbed by air molecules around corners.</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！声波波长约米级与墙角/门框相当，能发生明显边缘衍射；可见光波长纳米级极短，衍射极弱！" data-err="❌ 错！核心机制是边缘衍射与波长尺寸的匹配：声波波长长衍射强，光波波长极短（~500 nm）几乎沿直线传播（选 B）。"></div>
+    </div>
+  </div>
+
+  <div class="practice-block">
+    <div class="practice-heading">✍️ 二、大题结构化精练与官方评分细则 (Structured Questions &amp; Mark Scheme)</div>
+
+    <div class="exam-q">
+      <div class="exam-q-head">
+        <span class="q-tag">Structured Q1 · Paper 3/4 · Core</span>
+        <span class="q-marks">[5 marks]</span>
+      </div>
+      <div class="q-stem-en">(a) State the difference between a transverse wave and a longitudinal wave, giving one example of each. [3]<br/>
+      (b) A cork floats on water as a wave passes. Describe the motion of the cork and explain what this shows about waves. [2]</div>
+      <div class="q-stem-cn">(a) 说明横波与纵波的区别，并各举一例。[3 分]<br/>
+      (b) 水波经过水面浮着的软木塞，描述木塞的运动并说明这体现了波的什么性质。[2 分]</div>
+      <details class="ms-details">
+        <summary>查看官方评分标准 (Mark Scheme &amp; 中文精解)</summary>
+        <div class="ms-body">
+          <p><strong>(a)</strong> <span class="ms-mark">[B1]</span> Transverse: oscillations/vibrations are <strong>perpendicular</strong> to direction of energy transfer; Longitudinal: oscillations are <strong>parallel</strong> to direction of energy transfer.</p>
+          <p><span class="ms-mark">[B1]</span> Transverse example: water ripples / light / any EM wave / rope wave.</p>
+          <p><span class="ms-mark">[B1]</span> Longitudinal example: sound wave / ultrasound / slinky compression wave.</p>
+          <p><strong>(b)</strong> <span class="ms-mark">[B1]</span> The cork bobs up and down about the same spot (does not travel forward with the wave).</p>
+          <p><span class="ms-mark">[B1]</span> Shows waves transfer <strong>energy</strong> without transferring <strong>matter</strong> permanently.</p>
+          <div class="ms-cn">中文采分点解析：(a) 关键词 perpendicular 与 parallel 必须准确写出；(b) 木塞原地上下振动而不随波漂走，证明波只传能量不传物质。</div>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head">
+        <span class="q-tag">Structured Q2 · Paper 3/4 · Core</span>
+        <span class="q-marks">[5 marks]</span>
+      </div>
+      <div class="q-stem-en">In a ripple tank, deep-water waves have a frequency of 12 Hz and a wavelength of 2.5 cm. They enter a shallow region where their speed drops to 0.18 m/s.<br/>
+      (a) Calculate the wave speed in deep water (in m/s). [2]<br/>
+      (b) State the frequency of the waves in shallow water, and calculate the new wavelength in shallow water. [3]</div>
+      <div class="q-stem-cn">水波槽中深水波频率 12 Hz、波长 2.5 cm；进入浅水区后波速降至 0.18 m/s。<br/>
+      (a) 求深水区的波速（m/s）。[2 分]<br/>
+      (b) 写出浅水区的波频，并计算浅水区的波长。[3 分]</div>
+      <details class="ms-details">
+        <summary>查看官方评分标准 (Mark Scheme &amp; 中文精解)</summary>
+        <div class="ms-body">
+          <p><strong>(a)</strong> <span class="ms-mark">[M1]</span> <span class="math">λ</span><sub>deep</sub> = 2.5 cm = 0.025 m; <span class="math">v</span> = <span class="math">f λ</span> = 12 × 0.025 <span class="ms-mark">[A1]</span> = 0.30 m/s.</p>
+          <p><strong>(b)</strong> <span class="ms-mark">[B1]</span> Frequency in shallow water = <strong>12 Hz</strong> (unchanged, fixed by source).</p>
+          <p><span class="ms-mark">[M1]</span> <span class="math">λ</span><sub>shallow</sub> = <span class="math">v</span> / <span class="math">f</span> = 0.18 / 12 <span class="ms-mark">[A1]</span> = 0.015 m (or 1.5 cm).</p>
+          <div class="ms-cn">中文采分点解析：单位 cm → m（0.025 m）与“浅水区频率仍为 12 Hz”是本题核心得分点。</div>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head">
+        <span class="q-tag">Structured Q3 · Paper 6 (ATP) · Core</span>
+        <span class="q-marks">[4 marks]</span>
+      </div>
+      <div class="q-stem-en">Describe how a student uses a ripple tank, lamp, white screen, and ruler to measure the wavelength and frequency of straight water waves as accurately as possible.</div>
+      <div class="q-stem-cn">写出学生如何利用水波槽、灯、白屏和直尺尽可能精准地测量平面水波波长与频率的 Paper 6 步骤。[4 分]</div>
+      <details class="ms-details">
+        <summary>查看官方评分标准 (Mark Scheme &amp; 中文精解)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">[B1]</span> Use lamp above tank to project bright/dark wave fringes onto white screen below (use stroboscope/freeze photo or mark positions).</p>
+          <p><span class="ms-mark">[B1]</span> Measure total distance <span class="math">D</span> across <span class="math">N</span> wavelengths (e.g. from crest 1 to crest 11 = 10 wavelengths) using ruler and divide by <span class="math">N</span> (<span class="math">λ = D/10</span>) to reduce uncertainty.</p>
+          <p><span class="ms-mark">[B1]</span> Time <span class="math">n</span> complete oscillations of the vibrating bar / count <span class="math">n</span> crests passing a fixed mark in time <span class="math">t</span> using stopwatch.</p>
+          <p><span class="ms-mark">[B1]</span> Calculate frequency <span class="math">f = n / t</span> (and ensure sponges line tank walls to avoid reflected interference).</p>
+          <div class="ms-cn">中文采分点解析：Paper 6 万能高分套路：“一次测 10 个波长总长再除以 10”减小直尺读数误差，“测 20 个周期总时间再计算频率”，边缘铺海绵吸波！</div>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q ext-only">
+      <div class="exam-q-head">
+        <span class="q-tag">Structured Q4 · Paper 4 · <span class="badge-ext">Extended</span></span>
+        <span class="q-marks">[4 marks]</span>
+      </div>
+      <div class="q-stem-en">Plane water waves pass through a gap of width 4.0 cm in a barrier. Initially the wavelength is 0.8 cm; later the vibrator frequency is lowered so the wavelength increases to 3.8 cm.<br/>
+      (a) Describe how the pattern of waves emerging through the gap changes when the frequency is lowered. [2]<br/>
+      (b) Explain why a gap acts differently when the waves have longer wavelength, and state what happens to the amplitude after passing the gap. [2]</div>
+      <div class="q-stem-cn">平面水波穿过宽 4.0 cm 的挡板缝隙。起初波长 0.8 cm，后来调低波源频率使波长增至 3.8 cm。<br/>
+      (a) 描述调低频率后穿出狭缝的波形变化。[2 分]<br/>
+      (b) 解释为何长波长穿过该缝效果不同，并说明穿出后振幅有何变化。[2 分]</div>
+      <details class="ms-details">
+        <summary>查看官方评分标准 (Mark Scheme &amp; 中文精解)</summary>
+        <div class="ms-body">
+          <p><strong>(a)</strong> <span class="ms-mark">[B1]</span> Initially (<span class="math">w</span> = 4.0 cm ≫ <span class="math">λ</span> = 0.8 cm), waves pass mostly straight through with slight edge curvature only.</p>
+          <p><span class="ms-mark">[B1]</span> When <span class="math">λ</span> = 3.8 cm ≈ gap width 4.0 cm, much <strong>stronger diffraction</strong> occurs — wavefronts emerge as wide semicircular arcs.</p>
+          <p><strong>(b)</strong> <span class="ms-mark">[B1]</span> Diffraction is greatest when wavelength is comparable to / roughly equal to gap width.</p>
+          <p><span class="ms-mark">[B1]</span> Amplitude <strong>decreases</strong> after passing the gap because wave energy spreads out over a wider wavefront area.</p>
+          <div class="ms-cn">中文采分点解析：波长接近缝宽（3.8 cm ≈ 4.0 cm）时衍射达到极强半圆形；衍射后因为能量分散到更大扇面，<strong>振幅减小</strong>，但波速、频率、波长不变。</div>
+        </div>
+      </details>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section" id="app-concepts">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>🧠 第 14 章 · 中英核心概念与满分背写卡 (Concept Bank)</h3>
+      <div class="section-en-sub">17 High-Yield Flashcards · Bilingual Mark Scheme Keywords · Active Recall Mode</div>
+    <button type="button" class="master-btn" data-section-id="app-concepts">○ 标记掌握</button>
+    </div>
+  </div>
+
+  <div class="concept-toolbar">
+    <div class="concept-filter-group" id="conceptFilterTabs">
+      <button type="button" class="tab-btn active" data-concept-part="all">全部概念</button>
+      <button type="button" class="tab-btn" data-concept-part="14.1">14.1 横纵术语</button>
+      <button type="button" class="tab-btn" data-concept-part="14.2">14.2 波速公式</button>
+      <button type="button" class="tab-btn" data-concept-part="14.3">14.3 水波槽现象</button>
+    </div>
+    <div class="concept-actions">
+      <span class="concept-count-pill" id="conceptCountPill">显示 17 / 17 题</span>
+      <button type="button" class="tab-btn" id="conceptQuizToggle">🙈 开启遮罩自测</button>
+    </div>
+  </div>
+
+  <div class="concept-grid" id="conceptGrid">
+    <div class="concept-card" data-part="14.1">
+      <div class="cq-head"><span class="q-tag">14.1</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">What do all waves transfer, and what do they NOT transfer?</div>
+      <div class="cq-cn">所有波共同传递什么？不传递什么？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Waves transfer <span class="kw">energy</span> (and information) <span class="kw">without transferring matter</span> permanently.<br/>波传递<span class="kw">能量</span>（与信息），<span class="kw">不随波迁移物质本身</span>。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="14.1">
+      <div class="cq-head"><span class="q-tag">14.1</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Define a transverse wave and give three examples.</div>
+      <div class="cq-cn">定义横波并举出三个例子。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Oscillations are <span class="kw">perpendicular</span> to direction of energy transfer. Examples: <span class="kw">all electromagnetic waves</span> (light, radio), <span class="kw">water waves</span>, rope waves.<br/>振动方向<span class="kw">垂直于能量传播方向</span>；例：<span class="kw">全部电磁波</span>（光/无线电）、<span class="kw">水波</span>、绳波。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="14.1">
+      <div class="cq-head"><span class="q-tag">14.1</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Define a longitudinal wave and give two examples.</div>
+      <div class="cq-cn">定义纵波并举出两个例子。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Oscillations are <span class="kw">parallel</span> to direction of energy transfer. Examples: <span class="kw">sound waves</span>, <span class="kw">ultrasound</span>, seismic P-waves.<br/>振动方向<span class="kw">平行于能量传播方向</span>；例：<span class="kw">声波</span>、<span class="kw">超声波</span>、弹簧纵波。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="14.1">
+      <div class="cq-head"><span class="q-tag">14.1</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Define wavefront and state its geometric angle to wave direction.</div>
+      <div class="cq-cn">定义波前 (Wavefront) 并说明它与波传播方向的夹角。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">An imaginary line joining adjacent points in the <span class="kw">same phase</span> (e.g. wave crests). Always <span class="kw">perpendicular (90°)</span> to direction of wave travel.<br/>连接<span class="kw">同相相邻波峰</span>的线，永远与波传播方向<span class="kw">垂直（90°）</span>；相邻波前间距即波长 λ。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="14.1">
+      <div class="cq-head"><span class="q-tag">14.1</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Define wavelength λ and amplitude A.</div>
+      <div class="cq-cn">分别定义波长 λ 和振幅 A。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner"><span class="kw">Wavelength λ</span>: distance between two consecutive crests (or identical points). <span class="kw">Amplitude A</span>: maximum displacement from the <span class="kw">equilibrium (rest) position</span>.<br/><span class="kw">波长 λ</span>：相邻波峰间的距离；<span class="kw">振幅 A</span>：质点偏离<span class="kw">平衡位置</span>的最大位移（峰谷总高的一半）。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="14.1">
+      <div class="cq-head"><span class="q-tag">14.1</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Define frequency f (unit Hz) and period T, and write their relationship.</div>
+      <div class="cq-cn">定义频率 f 与周期 T，并写出二者关系式。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner"><span class="kw">Frequency f</span>: number of waves passing a point <span class="kw">per second</span>. <span class="kw">Period T</span>: time for one complete wave. Formula: <span class="kw">T = 1 / f</span>.<br/><span class="kw">频率 f</span>：每秒钟经过的完整波数；<span class="kw">周期 T</span>：一个波历时；关系：<span class="kw">T = 1 / f</span>。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="14.1">
+      <div class="cq-head"><span class="q-tag">14.1</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">What horizontal quantity is read from a displacement-distance graph vs a displacement-time graph?</div>
+      <div class="cq-cn">位移-距离图与位移-时间图的横轴分别直接读出什么物理量？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Displacement–distance gives <span class="kw">wavelength λ</span>; displacement–time gives <span class="kw">period T</span> (then calculate <span class="math">f = 1/T</span>). Both vertical axes give amplitude.<br/>位移-距离图读<span class="kw">波长 λ</span>；位移-时间图读<span class="kw">周期 T</span>（进而算频率）。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="14.2">
+      <div class="cq-head"><span class="q-tag">14.2</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">State the wave equation with SI units.</div>
+      <div class="cq-cn">写出波速方程及其标准国际单位。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner"><span class="kw">v = f λ</span>, where wave speed <span class="math">v</span> is in <span class="kw">m/s</span>, frequency <span class="math">f</span> in <span class="kw">Hz</span>, and wavelength <span class="math">λ</span> in <span class="kw">m</span>.<br/><span class="kw">v = f λ</span>（波速 m/s，频率 Hz，波长 m）。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="14.2">
+      <div class="cq-head"><span class="q-tag">14.2</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">How do you convert kHz, MHz, cm, and ms into standard SI units?</div>
+      <div class="cq-cn">写出 kHz、MHz、cm、ms 换算为国际单位的倍率。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">1 kHz = <span class="kw">10³ Hz</span>; 1 MHz = <span class="kw">10⁶ Hz</span>; 1 cm = <span class="kw">0.01 m</span>; 1 ms = <span class="kw">0.001 s</span> (10⁻³ s).<br/>kHz×10³、MHz×10⁶、cm÷100、ms×10⁻³。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="14.3">
+      <div class="cq-head"><span class="q-tag">14.3</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">In a ripple tank, what produces bright and dark bands on the screen, and why are sponges placed around the edges?</div>
+      <div class="cq-cn">水波槽白屏上的明暗条纹如何产生？槽边为何要放海绵？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Wave <span class="kw">crests focus light</span> into bright lines (troughs give dark lines). <span class="kw">Sponges absorb waves</span> to prevent unwanted reflection off tank walls.<br/><span class="kw">波峰聚光成亮纹</span>、波谷成暗纹；<span class="kw">海绵吸波</span>以防槽壁杂乱反射干扰图案。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="14.3">
+      <div class="cq-head"><span class="q-tag">14.3</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">When water waves reflect off a flat barrier, what changes and what stays the same?</div>
+      <div class="cq-cn">水波遇到平直挡板反射时，哪些物理量不变，哪些改变？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Only <span class="kw">direction changes</span> (obeying <span class="math">i = r</span>); <span class="kw">speed, frequency, and wavelength</span> all stay unchanged.<br/>只有<span class="kw">传播方向改变</span>（满足 i = r），<span class="kw">波速、频率和波长全部不变</span>。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="14.3">
+      <div class="cq-head"><span class="q-tag">14.3</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">What happens to v, f, λ, and direction when water waves pass from deep to shallow water at an angle?</div>
+      <div class="cq-cn">水波斜着从深水进入浅水时，v、f、λ 与方向分别有何变化？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner"><span class="kw">Frequency f stays constant</span>; <span class="kw">speed v decreases</span>; <span class="kw">wavelength λ decreases</span>; wave bends <span class="kw">towards the normal</span>.<br/><span class="kw">频率 f 恒定不变</span>；<span class="kw">波速 v 变小</span>、<span class="kw">波长 λ 变短</span>，波射线<span class="kw">向法线偏折</span>。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="14.3">
+      <div class="cq-head"><span class="q-tag">14.3</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Why does frequency NEVER change during refraction?</div>
+      <div class="cq-cn">为什么折射过程中波的频率绝对不会改变？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Frequency is determined solely by the <span class="kw">vibrating source</span> (e.g. ripple tank motor), not by the medium depth.<br/>频率完全由<span class="kw">波源振动快慢</span>决定，与水深或介质无关。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="14.3">
+      <div class="cq-head"><span class="q-tag">14.3</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Define diffraction and state what happens to v, f, λ, and amplitude.</div>
+      <div class="cq-cn">定义波的衍射 (Diffraction)，并说明 v、f、λ 与振幅如何变化。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner"><span class="kw">Spreading out</span> of waves as they pass through a gap or past an edge. <span class="kw">v, f, and λ remain unchanged</span>; <span class="kw">amplitude decreases</span> slightly as energy spreads out.<br/>波穿过缝隙或绕过边缘时向阴影区<span class="kw">扩散弯曲</span>；<span class="kw">v、f、λ 不变</span>，能量分散故<span class="kw">振幅略减小</span>。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="14.3">
+      <div class="cq-head"><span class="q-tag">14.3</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">When is diffraction through a gap strongest vs weakest?</div>
+      <div class="cq-cn">穿过缝隙的衍射什么时候最强，什么时候最弱？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner"><span class="kw">Strongest</span> (semicircular spreading) when <span class="kw">gap width ≈ wavelength (w ≈ λ)</span>; <span class="kw">weakest</span> (narrow straight beam, slight edge bend) when <span class="kw">w ≫ λ</span>.<br/><span class="kw">缝宽与波长相当 (w ≈ λ)</span> 时半圆形强衍射；<span class="kw">缝远大于波长 (w ≫ λ)</span> 时仅边缘微弯。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="14.3">
+      <div class="cq-head"><span class="q-tag">14.3</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">How does increasing wavelength affect diffraction past a single barrier edge or fixed gap?</div>
+      <div class="cq-cn">在挡板或缝宽固定时，增大波长对衍射有何影响？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner"><span class="kw">Longer wavelength</span> (lower frequency) produces <span class="kw">greater/wider diffraction</span> around the edge or through the gap.<br/><span class="kw">波长越长</span>（频率越低），绕过障碍边缘或穿过狭缝的<span class="kw">衍射角度越显著</span>。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="14.3">
+      <div class="cq-head"><span class="q-tag">14.3</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">How do you measure the wavelength of ripple-tank waves accurately on a screen?</div>
+      <div class="cq-cn">如何准确测量水波槽白屏投影的波长？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Measure total distance <span class="math">D</span> across <span class="kw">10 wavelengths</span> (11 bright crests) with a ruler, then divide by 10 (<span class="kw">λ = D / 10</span>) to reduce percentage error.<br/>用直尺测出连续 <span class="kw">10 个波长</span>（11 条亮纹）总长 <span class="math">D</span> 再除以 10，降低单格读数百分比误差。</div>
+        <div class="cq-mask-hint">点击揭示官方标准表述</div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+        <nav class="chapter-pager" aria-label="章节切换导航">
+          <div><a class="pager-btn" href="Ch13_Light.html">← Ch13 平面镜反射、折射斯涅尔定律、全反射与透镜成像</a></div>
+          <div><a class="pager-btn primary" href="index.html">🏠 返回 25 章全书总目录</a></div>
+          <div><a class="pager-btn" href="Ch15_Spectra.html">Ch15 光的色散、七大电磁波谱与模拟数字通信 →</a></div>
+        </nav>
+      </div>
+    </main>
+  </div>
+
+  <button type="button" class="back-top-btn" id="backTopBtn" title="返回顶部">↑</button>
+
+  <script>
+(function () {
+  'use strict';
+
+  const THEME_KEY = 'igcse_phy0625_theme';
+  const chapterCode = (document.body && document.body.getAttribute('data-chapter-code')) || 'HUB';
+  const STORAGE_PREFIX = 'igcse_phy0625_' + chapterCode.toLowerCase() + '_';
+  const htmlEl = document.documentElement;
+  const bodyEl = document.body;
+
+  // All state variables declared cleanly at top of IIFE (prevents TDZ errors)
+  let currentViewMode = localStorage.getItem(STORAGE_PREFIX + 'viewMode') || 'all';
+  let activeConceptPart = 'all';
+  let quizMasked = localStorage.getItem(STORAGE_PREFIX + 'quizMasked') === '1';
+  let allMsExpanded = false;
+  let masteredIds = [];
+  try {
+    masteredIds = JSON.parse(localStorage.getItem(STORAGE_PREFIX + 'mastered') || '[]');
+    if (!Array.isArray(masteredIds)) masteredIds = [];
+  } catch (e) {
+    masteredIds = [];
+  }
+
+  // ---------- 1. Theme Toggle ----------
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+
+  function applyTheme(theme) {
+    htmlEl.setAttribute('data-theme', theme);
+    if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem(THEME_KEY, theme);
+  }
+  applyTheme(localStorage.getItem(THEME_KEY) || 'light');
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      applyTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  }
+
+  // ---------- 2. View Mode Filter (All / Core / Extended / SME) ----------
+  function applyViewMode(mode) {
+    currentViewMode = mode;
+    bodyEl.classList.remove('mode-core', 'mode-ext', 'mode-book', 'mode-sme');
+    if (mode === 'core') bodyEl.classList.add('mode-core');
+    if (mode === 'ext') bodyEl.classList.add('mode-ext');
+    if (mode === 'sme') bodyEl.classList.add('mode-sme');
+    document.querySelectorAll('[data-view-mode]').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-view-mode') === mode);
+    });
+    localStorage.setItem(STORAGE_PREFIX + 'viewMode', mode);
+    filterConcepts();
+  }
+  document.querySelectorAll('[data-view-mode]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      applyViewMode(btn.getAttribute('data-view-mode'));
+    });
+  });
+
+  // ---------- 3. Sidebar Drawer & Accordion ----------
+  const sidebar = document.getElementById('sidebar');
+  const menuToggle = document.getElementById('menuToggle');
+  if (menuToggle && sidebar) {
+    menuToggle.addEventListener('click', function () { sidebar.classList.toggle('open'); });
+    sidebar.querySelectorAll('.nav-link').forEach(function (lnk) {
+      lnk.addEventListener('click', function () {
+        if (window.innerWidth <= 980) sidebar.classList.remove('open');
+      });
+    });
+  }
+  document.querySelectorAll('.nav-unit-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const unit = btn.closest('.nav-unit');
+      if (unit) unit.classList.toggle('collapsed');
+    });
+  });
+
+  // ---------- 4. Mastery Progress Tracker ----------
+  const progressText = document.getElementById('progressText');
+  const progressFill = document.getElementById('progressFill');
+  const masterBtns = Array.from(document.querySelectorAll('.master-btn'));
+  const totalSections = masterBtns.length;
+  const validIds = new Set(masterBtns.map(function (b) { return b.getAttribute('data-section-id'); }));
+
+  function renderMastery() {
+    const doneList = masteredIds.filter(function (id) { return validIds.has(id); });
+    localStorage.setItem(STORAGE_PREFIX + 'total', String(totalSections));
+    if (progressText) progressText.textContent = doneList.length + '/' + totalSections;
+    if (progressFill && totalSections > 0) {
+      progressFill.style.width = Math.round((doneList.length / totalSections) * 100) + '%';
+    }
+    masterBtns.forEach(function (btn) {
+      const sid = btn.getAttribute('data-section-id');
+      const done = doneList.indexOf(sid) !== -1;
+      btn.classList.toggle('is-mastered', done);
+      btn.textContent = done ? '✓ 已掌握' : '○ 标记掌握';
+    });
+    document.querySelectorAll('.nav-link').forEach(function (lnk) {
+      const id = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('mastered', doneList.indexOf(id) !== -1);
+    });
+  }
+  masterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const sid = btn.getAttribute('data-section-id');
+      const idx = masteredIds.indexOf(sid);
+      if (idx === -1) masteredIds.push(sid);
+      else masteredIds.splice(idx, 1);
+      localStorage.setItem(STORAGE_PREFIX + 'mastered', JSON.stringify(masteredIds));
+      renderMastery();
+    });
+  });
+  if (totalSections > 0) renderMastery();
+
+  // ---------- 5. Global Toggle Details & Print ----------
+  const toggleAllMs = document.getElementById('toggleAllMs');
+  if (toggleAllMs) {
+    toggleAllMs.addEventListener('click', function () {
+      allMsExpanded = !allMsExpanded;
+      document.querySelectorAll('details.ms-details').forEach(function (det) { det.open = allMsExpanded; });
+      const lbl = toggleAllMs.querySelector('.btn-label');
+      if (lbl) lbl.textContent = allMsExpanded ? '收起解析' : '展开解析';
+      toggleAllMs.classList.toggle('active', allMsExpanded);
+    });
+  }
+  const printBtn = document.getElementById('printBtn');
+  if (printBtn) printBtn.addEventListener('click', function () { window.print(); });
+
+  // ---------- 6. Instant Search ----------
+  const searchInput = document.getElementById('searchInput');
+  const searchClear = document.getElementById('searchClear');
+  const searchBar = document.getElementById('searchBar');
+  const searchSummary = document.getElementById('searchSummary');
+  const searchResetBtn = document.getElementById('searchResetBtn');
+  const emptySearchNotice = document.getElementById('emptySearchNotice');
+
+  function runSearch() {
+    if (!searchInput) return;
+    const raw = searchInput.value.trim().toLowerCase();
+    if (searchClear) searchClear.style.display = raw ? 'block' : 'none';
+    const sections = Array.from(document.querySelectorAll('.topic-section'));
+    if (!raw) {
+      sections.forEach(function (s) { s.classList.remove('search-dim'); });
+      if (searchBar) searchBar.classList.remove('visible');
+      if (emptySearchNotice) emptySearchNotice.style.display = 'none';
+      return;
+    }
+    let hits = 0;
+    sections.forEach(function (sec) {
+      const ok = sec.textContent.toLowerCase().indexOf(raw) !== -1;
+      sec.classList.toggle('search-dim', !ok);
+      if (ok) hits++;
+    });
+    if (searchBar) searchBar.classList.add('visible');
+    if (searchSummary) searchSummary.textContent = '关键词 “' + searchInput.value.trim() + '” 匹配 ' + hits + ' 个板块';
+    if (emptySearchNotice) emptySearchNotice.style.display = hits === 0 ? 'block' : 'none';
+  }
+  if (searchInput) searchInput.addEventListener('input', runSearch);
+  function resetSearch() { if (searchInput) searchInput.value = ''; runSearch(); }
+  if (searchClear) searchClear.addEventListener('click', resetSearch);
+  if (searchResetBtn) searchResetBtn.addEventListener('click', resetSearch);
+
+  // ---------- 7. Interactive MCQ Grading ----------
+  document.querySelectorAll('.exam-q[data-mcq-answer]').forEach(function (qBox) {
+    const ans = qBox.getAttribute('data-mcq-answer');
+    const fb = qBox.querySelector('.mcq-feedback');
+    const opts = qBox.querySelectorAll('.mcq-opt');
+    opts.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const chosen = btn.getAttribute('data-opt');
+        opts.forEach(function (o) { o.classList.remove('correct', 'wrong'); });
+        if (chosen === ans) {
+          btn.classList.add('correct');
+          if (fb) { fb.textContent = fb.getAttribute('data-ok') || '✅ 回答正确！'; fb.className = 'mcq-feedback visible ok'; }
+        } else {
+          btn.classList.add('wrong');
+          opts.forEach(function (o) { if (o.getAttribute('data-opt') === ans) o.classList.add('correct'); });
+          if (fb) { fb.textContent = fb.getAttribute('data-err') || '❌ 未选对，请对照解析复盘。'; fb.className = 'mcq-feedback visible err'; }
+        }
+      });
+    });
+  });
+
+  // ---------- 8. Concept Bank Filter & Mask ----------
+  const conceptCountPill = document.getElementById('conceptCountPill');
+  const conceptQuizToggle = document.getElementById('conceptQuizToggle');
+
+  function filterConcepts() {
+    const cards = Array.from(document.querySelectorAll('#conceptGrid .concept-card'));
+    if (!cards.length) return;
+    let visible = 0;
+    cards.forEach(function (card) {
+      const part = card.getAttribute('data-part');
+      const isExt = card.classList.contains('ext-only');
+      const matchesTab = activeConceptPart === 'all' || part === activeConceptPart;
+      const matchesTier = currentViewMode !== 'core' || !isExt;
+      const show = matchesTab && matchesTier;
+      card.classList.toggle('concept-hidden', !show);
+      if (show) visible++;
+    });
+    if (conceptCountPill) conceptCountPill.textContent = '显示 ' + visible + ' / ' + cards.length + ' 题';
+  }
+
+  document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      activeConceptPart = btn.getAttribute('data-concept-part');
+      document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      filterConcepts();
+    });
+  });
+
+  function applyQuizMask(masked) {
+    quizMasked = masked;
+    document.querySelectorAll('#conceptGrid .concept-card').forEach(function (c) { c.classList.toggle('masked', masked); });
+    if (conceptQuizToggle) {
+      conceptQuizToggle.textContent = masked ? '👁️ 显示全部答案' : '🙈 开启遮罩自测';
+      conceptQuizToggle.classList.toggle('active', masked);
+    }
+    localStorage.setItem(STORAGE_PREFIX + 'quizMasked', masked ? '1' : '0');
+  }
+  if (conceptQuizToggle) {
+    conceptQuizToggle.addEventListener('click', function () { applyQuizMask(!quizMasked); });
+  }
+  document.querySelectorAll('#conceptGrid .cq-answer').forEach(function (box) {
+    box.addEventListener('click', function () {
+      const card = box.closest('.concept-card');
+      if (card && card.classList.contains('masked')) card.classList.remove('masked');
+    });
+  });
+
+  // ---------- 9. 2D Mini-Plot Helper (Zero HTML tags inside SVG) ----------
+  function makePlot(w, h, xmin, xmax, ymin, ymax) {
+    const pad = 22;
+    return {
+      w: w, h: h, xmin: xmin, xmax: xmax, ymin: ymin, ymax: ymax,
+      toX: function (x) { return pad + ((x - xmin) / (xmax - xmin)) * (w - 2 * pad); },
+      toY: function (y) { return h - pad - ((y - ymin) / (ymax - ymin)) * (h - 2 * pad); }
+    };
+  }
+  function plotBase(p, xLbl, yLbl) {
+    let s = '<rect x="2" y="2" width="' + (p.w - 4) + '" height="' + (p.h - 4) + '" rx="6" fill="none" stroke="var(--svg-grid)" stroke-width="1"/>';
+    for (let i = 1; i <= 4; i++) {
+      const gx = p.xmin + (i / 5) * (p.xmax - p.xmin);
+      const gy = p.ymin + (i / 5) * (p.ymax - p.ymin);
+      s += '<line x1="' + p.toX(gx).toFixed(1) + '" y1="12" x2="' + p.toX(gx).toFixed(1) + '" y2="' + (p.h - 12) + '" stroke="var(--svg-grid)" stroke-width="0.7"/>';
+      s += '<line x1="12" y1="' + p.toY(gy).toFixed(1) + '" x2="' + (p.w - 12) + '" y2="' + p.toY(gy).toFixed(1) + '" stroke="var(--svg-grid)" stroke-width="0.7"/>';
+    }
+    const ox = p.xmin <= 0 && p.xmax >= 0 ? p.toX(0) : 22;
+    const oy = p.ymin <= 0 && p.ymax >= 0 ? p.toY(0) : p.h - 22;
+    s += '<line x1="' + ox.toFixed(1) + '" y1="10" x2="' + ox.toFixed(1) + '" y2="' + (p.h - 10) + '" stroke="var(--svg-muted)" stroke-width="1.5"/>';
+    s += '<line x1="10" y1="' + oy.toFixed(1) + '" x2="' + (p.w - 10) + '" y2="' + oy.toFixed(1) + '" stroke="var(--svg-muted)" stroke-width="1.5"/>';
+    s += '<text x="' + Math.min(p.w - 45, ox + 6).toFixed(1) + '" y="20" font-size="10.5" font-weight="700" fill="var(--svg-muted)">' + (yLbl || 'y') + '</text>';
+    s += '<text x="' + (p.w - 14) + '" y="' + Math.max(20, oy - 5).toFixed(1) + '" text-anchor="end" font-size="10.5" font-weight="700" fill="var(--svg-muted)">' + (xLbl || 'x') + '</text>';
+    return s;
+  }
+  function plotPath(p, fn, col, dashed) {
+    let d = '', pen = false;
+    for (let i = 0; i <= 100; i++) {
+      const x = p.xmin + (i / 100) * (p.xmax - p.xmin);
+      const y = fn(x);
+      if (!Number.isFinite(y) || y < p.ymin - 1 || y > p.ymax + 1) { pen = false; continue; }
+      d += (pen ? ' L ' : ' M ') + p.toX(x).toFixed(1) + ' ' + p.toY(y).toFixed(1);
+      pen = true;
+    }
+    return d ? '<path d="' + d.trim() + '" fill="none" stroke="' + col + '" stroke-width="2.4"' + (dashed ? ' stroke-dasharray="5,3"' : '') + '/>' : '';
+  }
+
+  // ---------- 10. All 25 Interactive Physics Labs (p01 – p25) ----------
+  function mountPhysicsLab(el) {
+    const t = el.getAttribute('data-lab-type');
+    if (!t) return;
+
+    const bindInputs = function (fn) {
+      el.querySelectorAll('input,select').forEach(function (inp) {
+        inp.addEventListener('input', fn);
+        inp.addEventListener('change', fn);
+      });
+      fn();
+    };
+
+    if (t === 'p01') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 1 交互实验室 · 密度 ρ = m/V 与排水法浮沉判断仪</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>质量 m (g)：<input type="range" id="p1M" min="10" max="300" value="180"><span id="p1ML">180 g</span></label>' +
+        '<label>排开液体体积 ΔV (cm³)：<input type="range" id="p1V" min="10" max="200" value="120"><span id="p1VL">120 cm³</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p1Svg" viewBox="0 0 360 230" width="360" height="230"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p1Out1"></div><div class="readout-pill" id="p1Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const m = Number(el.querySelector('#p1M').value), v = Number(el.querySelector('#p1V').value);
+        el.querySelector('#p1ML').textContent = m + ' g'; el.querySelector('#p1VL').textContent = v + ' cm³';
+        const rho = m / v;
+        const float = rho < 1.0;
+        el.querySelector('#p1Out1').textContent = '密度 ρ = ' + m + ' / ' + v + ' = ' + rho.toFixed(2) + ' g/cm³ (' + Math.round(rho * 1000) + ' kg/m³)';
+        el.querySelector('#p1Out2').textContent = float ? '✅ ρ < 1.0 g/cm³ → 漂浮于纯水面 (Floats)；若完全浸没需细针轻按且留意视差' : Math.abs(rho - 1.0) < 0.02 ? '⚖️ ρ ≈ 1.0 g/cm³ → 悬浮水中' : '⬇️ ρ > 1.0 g/cm³ → 沉入水底 (Sinks)！';
+        const yObj = float ? 86 : 158;
+        el.querySelector('#p1Svg').innerHTML =
+          '<rect x="110" y="34" width="140" height="164" fill="none" stroke="var(--svg-ink)" stroke-width="2.2"/>' +
+          '<rect x="112" y="88" width="136" height="108" fill="rgba(2,132,199,0.22)"/>' +
+          '<rect x="155" y="' + yObj + '" width="50" height="36" rx="4" fill="' + (float ? 'var(--svg-amber)' : 'var(--svg-indigo)') + '"/>' +
+          '<text x="180" y="218" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--svg-ink)">水密度 ρ_water = 1.00 g/cm³</text>';
+      });
+    } else if (t === 'p02') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 2 交互实验室 · v-t 图像加速度斜率与积分面积位移台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>初速度 u (m/s)：<input type="number" id="p2U" value="4"></label>' +
+        '<label>末速度 v (m/s)：<input type="number" id="p2V" value="20"></label>' +
+        '<label>时间 t (s)：<input type="number" id="p2T" value="8" min="1"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p2Svg" viewBox="0 0 360 230" width="360" height="230"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p2Acc"></div><div class="readout-pill" id="p2Dist"></div></div></div></div>';
+      bindInputs(function () {
+        const u = Number(el.querySelector('#p2U').value) || 0, v = Number(el.querySelector('#p2V').value) || 0, tm = Math.max(1, Number(el.querySelector('#p2T').value) || 8);
+        const a = (v - u) / tm, s = 0.5 * (u + v) * tm;
+        const p = makePlot(360, 230, 0, tm * 1.15, Math.min(0, u, v) - 2, Math.max(10, u, v) * 1.15);
+        let svg = plotBase(p, 't (s)', 'v (m/s)');
+        svg += '<polygon points="' + p.toX(0).toFixed(1) + ',' + p.toY(0).toFixed(1) + ' ' + p.toX(0).toFixed(1) + ',' + p.toY(u).toFixed(1) + ' ' + p.toX(tm).toFixed(1) + ',' + p.toY(v).toFixed(1) + ' ' + p.toX(tm).toFixed(1) + ',' + p.toY(0).toFixed(1) + '" fill="rgba(2,132,199,0.2)" stroke="var(--svg-blue)" stroke-width="2"/>';
+        el.querySelector('#p2Svg').innerHTML = svg;
+        el.querySelector('#p2Acc').textContent = '斜率即加速度 a = (v − u)/t = ' + a.toFixed(2) + ' m/s² ' + (a < 0 ? '(减速 Deceleration)' : a > 0 ? '(匀加速)' : '(匀速)');
+        el.querySelector('#p2Dist').textContent = '图像下方面积 = 梯形 ½(u+v)t = ' + s.toFixed(1) + ' m | 平均速率 = ' + (s / tm).toFixed(2) + ' m/s';
+      });
+    } else if (t === 'p03') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 3 交互实验室 · 非弹性碰撞动量守恒 (m₁u₁ = (m₁+m₂)v) 与冲量</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>m₁ (kg)：<input type="number" id="p3M1" value="3" min="1"></label><label>u₁ (m/s)：<input type="number" id="p3U1" value="6"></label>' +
+        '<label>m₂ (kg)：<input type="number" id="p3M2" value="6" min="1"></label><label>作用时间 Δt (s)：<input type="number" id="p3Dt" value="0.2" step="0.1" min="0.05"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p3Out1"></div><div class="readout-pill" id="p3Out2"></div></div></div>';
+      bindInputs(function () {
+        const m1 = Math.max(0.5, Number(el.querySelector('#p3M1').value) || 3), u1 = Number(el.querySelector('#p3U1').value) || 0;
+        const m2 = Math.max(0.5, Number(el.querySelector('#p3M2').value) || 6), dt = Math.max(0.05, Number(el.querySelector('#p3Dt').value) || 0.2);
+        const v = (m1 * u1) / (m1 + m2);
+        const imp = m2 * v;
+        el.querySelector('#p3Out1').textContent = '合体后共同速度 v = m₁u₁/(m₁+m₂) = ' + v.toFixed(2) + ' m/s | 碰前总动量 = ' + (m1 * u1).toFixed(1) + ' kg·m/s';
+        el.querySelector('#p3Out2').textContent = 'm₂ 所受冲量 Δp = ' + imp.toFixed(2) + ' N·s | 平均碰撞力 F = Δp/Δt = ' + (imp / dt).toFixed(1) + ' N（时间越长冲击力越小！）';
+      });
+    } else if (t === 'p04') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 4 交互实验室 · 杠杆力矩平衡 (M = Fd) 与支点向上支持力</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>左力 F₁ (N)：<input type="number" id="p4F1" value="60"></label><label>左臂 d₁ (m)：<input type="number" id="p4D1" value="2.0" step="0.5"></label>' +
+        '<label>右臂 d₂ (m)：<input type="number" id="p4D2" value="3.0" step="0.5" min="0.5"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p4Out1"></div><div class="readout-pill" id="p4Out2"></div></div></div>';
+      bindInputs(function () {
+        const f1 = Number(el.querySelector('#p4F1').value) || 0, d1 = Number(el.querySelector('#p4D1').value) || 0, d2 = Math.max(0.5, Number(el.querySelector('#p4D2').value) || 1);
+        const f2 = (f1 * d1) / d2;
+        el.querySelector('#p4Out1').textContent = '逆时针力矩 F₁d₁ = ' + (f1 * d1).toFixed(1) + ' N·m ⇒ 平衡所需右力 F₂ = ' + f2.toFixed(2) + ' N';
+        el.querySelector('#p4Out2').textContent = '支点向上总支持力 (Net upward force) = F₁ + F₂ = ' + (f1 + f2).toFixed(2) + ' N（平衡需满足合力=0且合力矩=0！）';
+      });
+    } else if (t === 'p05') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 5 交互实验室 · 胡克定律 F = kx 与液体压强 Δp = ρgΔh 计算台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>原长 l₀ (cm)：<input type="number" id="p5L0" value="12"></label><label>劲度系数 k (N/cm)：<input type="number" id="p5K" value="2.5" step="0.5"></label>' +
+        '<label>拉力 F (N)：<input type="number" id="p5F" value="15"></label><label>水深 Δh (m)：<input type="number" id="p5H" value="5"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p5Out1"></div><div class="readout-pill" id="p5Out2"></div></div></div>';
+      bindInputs(function () {
+        const l0 = Number(el.querySelector('#p5L0').value) || 12, k = Math.max(0.1, Number(el.querySelector('#p5K').value) || 2.5);
+        const F = Number(el.querySelector('#p5F').value) || 0, h = Number(el.querySelector('#p5H').value) || 0;
+        const x = F / k;
+        el.querySelector('#p5Out1').textContent = '伸长量 Extension x = F/k = ' + x.toFixed(2) + ' cm ⇒ 总长度 Total length = ' + (l0 + x).toFixed(2) + ' cm（注意考题常问总长还是伸长量！）';
+        el.querySelector('#p5Out2').textContent = '水下 Δh = ' + h + ' m 处液体附加压强 Δp = 1000 × 9.8 × ' + h + ' = ' + (1000 * 9.8 * h).toLocaleString() + ' Pa';
+      });
+    } else if (t === 'p06') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 6 交互实验室 · 自由落体机械能转换 (mgΔh ↔ ½mv²) 与效率 η</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>质量 m (kg)：<input type="number" id="p6M" value="4"></label><label>高度 Δh (m)：<input type="number" id="p6H" value="5"></label>' +
+        '<label>效率 η (%)：<input type="range" id="p6E" min="20" max="100" value="80"><span id="p6EL">80%</span></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p6Out1"></div><div class="readout-pill" id="p6Out2"></div></div></div>';
+      bindInputs(function () {
+        const m = Math.max(0.1, Number(el.querySelector('#p6M').value) || 4), h = Math.max(0, Number(el.querySelector('#p6H').value) || 5), eff = Number(el.querySelector('#p6E').value) / 100;
+        el.querySelector('#p6EL').textContent = Math.round(eff * 100) + '%';
+        const gpe = m * 9.8 * h, ke = gpe * eff, v = Math.sqrt((2 * ke) / m);
+        el.querySelector('#p6Out1').textContent = '初始重力势能 ΔE_p = m × 9.8 × ' + h + ' = ' + gpe.toFixed(1) + ' J | 转化为动能 E_k = ' + ke.toFixed(1) + ' J（热耗散 ' + (gpe - ke).toFixed(1) + ' J）';
+        el.querySelector('#p6Out2').textContent = '到达底端速度 v = √(2gΔh·η) = ' + v.toFixed(2) + ' m/s（注意无空气阻力时 η=100% 且速度与质量 m 无关！）';
+      });
+    } else if (t === 'p07') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 7 交互实验室 · 能源类型、太阳源头辨析与发电对比筛查仪</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>选择发电能源：<select id="p7Src"><option value="solar">太阳能光伏 (Solar cell)</option><option value="wind">风力发电 (Wind)</option><option value="hydro">水力蓄能 (Hydroelectric)</option><option value="geo">地热能 (Geothermal)</option><option value="nuc">核裂变 (Nuclear)</option><option value="tidal">潮汐能 (Tidal)</option><option value="coal">燃煤火电 (Fossil fuel)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p7Out1"></div><div class="readout-pill" id="p7Out2"></div></div></div>';
+      const MAP7 = {
+        solar: { sun: '✅ 直接来自太阳 (Direct solar radiation)', ren: '可再生 (Renewable) · 运行零 CO₂', prop: '直接光生电无需涡轮机；缺点：夜间阴天间歇、占地面积大。' },
+        wind: { sun: '✅ 间接来自太阳 (太阳不均加热引发空气对流)', ren: '可再生 (Renewable) · 零温室气体', prop: '视觉噪音争议与风速不可控间歇发电，需储能或调峰电站。' },
+        hydro: { sun: '✅ 间接来自太阳 (蒸发降雨水循环)', ren: '可再生 (Renewable) · 响应极快 (几秒启动)', prop: '适合峰值调频，但筑坝淹没生态耕地、受地理落差限制。' },
+        geo: { sun: '❌ 非太阳能！源自地球内部放射性衰变余热', ren: '可再生 (Renewable) · 24h 基荷稳定不看天', prop: '仅限板块活跃火山地热带钻井成本极高（全纲三大非太阳能之一！）。' },
+        nuc: { sun: '❌ 非太阳能！重核铀/钚裂变或氢聚变', ren: '不可再生 (Non-renewable) · 运行零 CO₂', prop: '能量密度极高、全天候稳发；痛点：高放核废料千万年封存与事故风险。' },
+        tidal: { sun: '❌ 主要非太阳能！源自月球与太阳引力潮汐牵引', ren: '可再生 (Renewable) · 天文时刻可精准预测', prop: '建设拦潮坝改变河口湿地生态、影响航运，仅特定海湾适用。' },
+        coal: { sun: '✅ 远古太阳能储存 (史前植物煤炭)', ren: '不可再生 (Non-renewable)', prop: '优点：高可靠可随时启停；致命缺点：排放 CO₂ 加剧温室效应与酸雨。' }
+      };
+      bindInputs(function () {
+        const d = MAP7[el.querySelector('#p7Src').value];
+        el.querySelector('#p7Out1').textContent = '溯源检查：' + d.sun + ' | 属性：' + d.ren;
+        el.querySelector('#p7Out2').textContent = '优缺点与原理：' + d.prop;
+      });
+    } else if (t === 'p08') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 8 交互实验室 · 起重机做功 W = Fd、功率 P = W/t 与功率效率计算</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>提升质量 m (kg)：<input type="number" id="p8M" value="50"></label><label>垂直高度 h (m)：<input type="number" id="p8H" value="12"></label>' +
+        '<label>耗时 t (s)：<input type="number" id="p8T" value="10" min="1"></label><label>电机输入功率 P_in (W)：<input type="number" id="p8Pin" value="800" min="1"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p8Out1"></div><div class="readout-pill" id="p8Out2"></div></div></div>';
+      bindInputs(function () {
+        const m = Number(el.querySelector('#p8M').value) || 50, h = Number(el.querySelector('#p8H').value) || 12, tm = Math.max(1, Number(el.querySelector('#p8T').value) || 10);
+        const w = m * 9.8 * h, pout = w / tm, pin = Math.max(pout, Number(el.querySelector('#p8Pin').value) || pout);
+        el.querySelector('#p8Out1').textContent = '有用机械功 W = mgh = ' + w.toFixed(1) + ' J | 有用输出功率 P_out = W/t = ' + pout.toFixed(1) + ' W';
+        el.querySelector('#p8Out2').textContent = '效率 η = (P_out / P_in) × 100% = ' + ((pout / pin) * 100).toFixed(1) + '%（记得先用 g = 9.8 算重量！）';
+      });
+    } else if (t === 'p09') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 9 交互实验室 · 玻意耳定律 p₁V₁ = p₂V₂ 与开尔文温度转换台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>初压 p₁ (kPa)：<input type="number" id="p9P1" value="100"></label><label>初体积 V₁ (cm³)：<input type="number" id="p9V1" value="60"></label>' +
+        '<label>压缩后体积 V₂ (cm³)：<input type="range" id="p9V2" min="15" max="120" value="30"><span id="p9VL">30</span></label>' +
+        '<label>摄氏温度 θ (°C)：<input type="number" id="p9C" value="27"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p9Svg" viewBox="0 0 360 220" width="360" height="220"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p9Out1"></div><div class="readout-pill" id="p9Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const p1 = Number(el.querySelector('#p9P1').value) || 100, v1 = Number(el.querySelector('#p9V1').value) || 60, v2 = Number(el.querySelector('#p9V2').value) || 30;
+        const cTemp = Number(el.querySelector('#p9C').value) || 0, p2 = (p1 * v1) / v2;
+        el.querySelector('#p9VL').textContent = v2 + ' cm³';
+        const plt = makePlot(360, 220, 10, 130, 0, Math.max(450, p2 * 1.15));
+        let svg = plotBase(plt, 'V', 'p');
+        svg += plotPath(plt, function (x) { return (p1 * v1) / x; }, 'var(--svg-amber)', false);
+        svg += '<circle cx="' + plt.toX(v2).toFixed(1) + '" cy="' + plt.toY(p2).toFixed(1) + '" r="5" fill="var(--svg-red)"/>';
+        el.querySelector('#p9Svg').innerHTML = svg;
+        el.querySelector('#p9Out1').textContent = '定温玻意耳：p₂ = p₁V₁/V₂ = ' + p2.toFixed(1) + ' kPa（体积减半 ⇒ 单位体积分子更密集 ⇒ 撞击器壁频率翻倍！）';
+        el.querySelector('#p9Out2').textContent = '开尔文绝对温标 T(K) = θ(°C) + 273 = ' + (cTemp + 273) + ' K（绝对零度 0 K = −273 °C，分子动能最小）';
+      });
+    } else if (t === 'p10') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 10 交互实验室 · 比热容 ΔE = mcΔθ 与电热实验能量守恒计算</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>质量 m (kg)：<input type="number" id="p10M" value="2.0" step="0.5"></label>' +
+        '<label>比热容 c (J/kg°C)：<input type="number" id="p10C" value="4200"></label>' +
+        '<label>温升 Δθ (°C)：<input type="number" id="p10Dt" value="15"></label>' +
+        '<label>加热器功率 P (W)：<input type="number" id="p10P" value="2100"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p10Out1"></div><div class="readout-pill" id="p10Out2"></div></div></div>';
+      bindInputs(function () {
+        const m = Number(el.querySelector('#p10M').value) || 2, c = Number(el.querySelector('#p10C').value) || 4200, dt = Number(el.querySelector('#p10Dt').value) || 15, P = Math.max(10, Number(el.querySelector('#p10P').value) || 2100);
+        const e = m * c * dt, tSec = e / P;
+        el.querySelector('#p10Out1').textContent = '所需内能增量 ΔE = mcΔθ = ' + e.toLocaleString() + ' J (' + (e / 1000).toFixed(1) + ' kJ)';
+        el.querySelector('#p10Out2').textContent = '理想加热时间 t = ΔE/P = ' + tSec.toFixed(1) + ' s | 实际测定 c_exp 常偏大！原因：部分热量散失给空气/杯壁，需加盖保温并取稳态温度';
+      });
+    } else if (t === 'p11') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 11 交互实验室 · 热传导、对流与 Leslie 表面热辐射对比台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>选择对比情景：<select id="p11M"><option value="leslie">Leslie 立方体红外发射对比</option><option value="vacuum">真空保温瓶四层隔热解析</option><option value="breeze">白天海风 vs 夜晚陆风循环</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p11Out1"></div><div class="readout-pill" id="p11Out2"></div></div></div>';
+      const MAP11 = {
+        leslie: ['哑光黑 (Matt Black) = 最佳吸收者 (Good absorber) 且最佳辐射发射者 (Best emitter)；银白亮面 (Shiny Silver) = 最佳反射面 (Best reflector) 且最差发射者！', '实验注意：各面到红外探测器距离必须相同、初始水温相同以保证公平控制变量 (Fair test)。'],
+        vacuum: ['真空夹层 (Vacuum gap) → 阻止传导 Conduction 与对流 Convection（均需介质粒子）；塑料瓶塞+密封盖 → 阻断对流热空气逸散与蒸发。', '内壁镀银表面 (Silvered surfaces) → 将红外辐射发射与吸收降到最低并反射回瓶内！'],
+        breeze: ['白天海风 (Sea breeze)：陆地比热容远小于海水，升温更快 → 陆地热空气膨胀密度变小上升 → 海洋凉爽高压空气吹向陆地补位。', '夜晚陆风 (Land breeze)：陆地降温快、海水仍较暖 → 海上暖空气上升，陆风由陆吹向海。']
+      };
+      bindInputs(function () {
+        const d = MAP11[el.querySelector('#p11M').value];
+        el.querySelector('#p11Out1').textContent = d[0];
+        el.querySelector('#p11Out2').textContent = d[1];
+      });
+    } else if (t === 'p12') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 12 交互实验室 · 声波示波器 (CRO) 振幅响度 / 频率音调波形台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>振幅 (响度 Loudness)：<input type="range" id="p12A" min="1" max="5" step="0.5" value="3"><span id="p12AL">3</span></label>' +
+        '<label>频率系数 (音调 Pitch)：<input type="range" id="p12F" min="1" max="6" step="0.5" value="2"><span id="p12FL">2</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p12Svg" viewBox="0 0 360 210" width="360" height="210"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p12Out1"></div><div class="readout-pill" id="p12Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const amp = Number(el.querySelector('#p12A').value), f = Number(el.querySelector('#p12F').value);
+        el.querySelector('#p12AL').textContent = amp; el.querySelector('#p12FL').textContent = f;
+        const plt = makePlot(360, 210, 0, 10, -5.5, 5.5);
+        let svg = plotBase(plt, 't', 'y');
+        svg += plotPath(plt, function (x) { return amp * Math.sin(f * x * 1.2); }, 'var(--svg-purple)', false);
+        el.querySelector('#p12Svg').innerHTML = svg;
+        el.querySelector('#p12Out1').textContent = '振幅 Amplitude = ' + amp + ' 格 ⇒ 控制响度 (Loudness) | 频率系数 ' + f + ' ⇒ 波数越密音调越高 (Pitch)';
+        el.querySelector('#p12Out2').textContent = '人耳可听声域：20 Hz – 20 000 Hz (> 20 kHz 为超声波 Ultrasound，声波为纵波，真空不能传播！)';
+      });
+    } else if (t === 'p13') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 13 交互实验室 · 斯涅尔定律 n = sin i / sin r 与全内反射临界角光线台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>光由玻璃 (n=<input type="number" id="p13N" value="1.50" step="0.05" min="1.2" max="2.4">) 射向空气 | 入射角 i (°)：<input type="range" id="p13I" min="5" max="80" value="35"><span id="p13IL">35°</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p13Svg" viewBox="0 0 360 220" width="360" height="220"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p13Out1"></div><div class="readout-pill" id="p13Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const n = Math.max(1.1, Number(el.querySelector('#p13N').value) || 1.5), inc = Number(el.querySelector('#p13I').value);
+        el.querySelector('#p13IL').textContent = inc + '°';
+        const cDeg = (Math.asin(1 / n) * 180) / Math.PI;
+        const sinR = n * Math.sin((inc * Math.PI) / 180);
+        const tir = sinR > 1.0001;
+        const radI = (inc * Math.PI) / 180;
+        const ix = 180 - 95 * Math.sin(radI), iy = 110 + 95 * Math.cos(radI);
+        let outRay = '';
+        if (tir) {
+          const rx = 180 + 95 * Math.sin(radI), ry = 110 + 95 * Math.cos(radI);
+          outRay = '<line x1="180" y1="110" x2="' + rx.toFixed(1) + '" y2="' + ry.toFixed(1) + '" stroke="var(--svg-red)" stroke-width="2.6"/>';
+        } else {
+          const radR = Math.asin(Math.min(1, sinR));
+          const rx = 180 + 95 * Math.sin(radR), ry = 110 - 95 * Math.cos(radR);
+          outRay = '<line x1="180" y1="110" x2="' + rx.toFixed(1) + '" y2="' + ry.toFixed(1) + '" stroke="var(--svg-blue)" stroke-width="2.6"/>';
+        }
+        el.querySelector('#p13Svg').innerHTML =
+          '<rect x="10" y="110" width="340" height="100" fill="rgba(2,132,199,0.16)"/>' +
+          '<line x1="10" y1="110" x2="350" y2="110" stroke="var(--svg-ink)" stroke-width="1.5"/>' +
+          '<line x1="180" y1="12" x2="180" y2="208" stroke="var(--svg-muted)" stroke-width="1.4" stroke-dasharray="4,3"/>' +
+          '<line x1="' + ix.toFixed(1) + '" y1="' + iy.toFixed(1) + '" x2="180" y2="110" stroke="var(--svg-amber)" stroke-width="2.6"/>' + outRay +
+          '<text x="20" y="28" font-size="11" font-weight="700" fill="var(--svg-muted)">空气 Air (n=1)</text><text x="20" y="198" font-size="11" font-weight="700" fill="var(--svg-ink)">玻璃 Glass (n=' + n.toFixed(2) + ')</text>';
+        el.querySelector('#p13Out1').textContent = '临界角 Critical angle c = arcsin(1/n) = ' + cDeg.toFixed(1) + '°';
+        el.querySelector('#p13Out2').textContent = tir ? '🔴 i > c！发生全内反射 (Total Internal Reflection, TIR)：反射角 r = i = ' + inc + '°' : '🔵 发生折射离开法线：折射角 r = ' + ((Math.asin(sinR) * 180) / Math.PI).toFixed(1) + '°';
+      });
+    } else if (t === 'p14') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 14 交互实验室 · 波速 v = fλ、周期 T = 1/f 与水波深浅折射台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>频率 f (Hz)：<input type="number" id="p14F" value="10" min="1"></label>' +
+        '<label>深水波长 λ_deep (m)：<input type="number" id="p14L1" value="0.6" step="0.1" min="0.1"></label>' +
+        '<label>浅水波长 λ_shallow (m)：<input type="number" id="p14L2" value="0.3" step="0.1" min="0.05"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p14Out1"></div><div class="readout-pill" id="p14Out2"></div></div></div>';
+      bindInputs(function () {
+        const f = Math.max(0.1, Number(el.querySelector('#p14F').value) || 10), l1 = Number(el.querySelector('#p14L1').value) || 0.6, l2 = Number(el.querySelector('#p14L2').value) || 0.3;
+        el.querySelector('#p14Out1').textContent = '周期 T = 1/f = ' + (1 / f).toFixed(3) + ' s | 深水波速 v₁ = ' + (f * l1).toFixed(2) + ' m/s | 浅水波速 v₂ = ' + (f * l2).toFixed(2) + ' m/s';
+        el.querySelector('#p14Out2').textContent = '水波槽铁律：深水进入浅水时【频率 f 绝对不变】，波速 v 减小、波长 λ 缩短，向法线偏折！';
+      });
+    } else if (t === 'p15') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 15 交互实验室 · 电磁波谱排序、波长换算 (c = 3×10⁸ m/s) 与应用速查</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>波段选择：<select id="p15B"><option value="rad">1. Radio waves 无线电波</option><option value="mic">2. Microwaves 微波</option><option value="ir">3. Infrared 红外线</option><option value="vis">4. Visible light 可见光</option><option value="uv">5. Ultraviolet 紫外线</option><option value="xray">6. X-rays X射线</option><option value="gam">7. Gamma rays γ射线</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p15Out1"></div><div class="readout-pill" id="p15Out2"></div></div></div>';
+      const MAP15 = {
+        rad: ['最长波长 / 最低频率 / 最小光子能量；真空速度 3.0 × 10⁸ m/s。', '应用：广播电视、RFID 射频识别、射电望远镜；通常非电离无明显组织热损伤。'],
+        mic: ['穿透云层与电离层能力强，且能引起食物水分子共振发热。', '应用：卫星电视与 GPS 通信、手机 Wi-Fi/蓝牙、微波炉；危害：过强内部加热人体体液组织。'],
+        ir: ['热物体发射红外辐射（红外热成像）。', '应用：电视遥控器、光纤短距通信、防盗红外警报、电暖器；危害：高强度皮肤灼伤。'],
+        vis: ['红 (700 nm, 折射最少) → 紫 (400 nm, 折射最多)。', '应用：人眼视觉、照相、高速长距离单模光纤宽带通信 (配合全内反射 TIR)。'],
+        uv: ['频率高于紫光，能激发荧光粉发光与灭菌。', '应用：防伪验钞、水消毒；危害：晒伤皮肤、早衰、引发皮肤癌与白内障。'],
+        xray: ['强穿透软组织但被高密度骨骼/金属吸收。', '应用：医学骨科 X 光透视成像、机场行李安检；危害：电离损伤细胞、基因突变致癌。'],
+        gam: ['最短波长 / 最高频率 / 最强电离穿透力；由原子核衰变产生。', '应用：医疗手术器械灭菌、食品保鲜、癌症放疗；危害：严重辐射病、DNA 突变与致癌。']
+      };
+      bindInputs(function () {
+        const d = MAP15[el.querySelector('#p15B').value];
+        el.querySelector('#p15Out1').textContent = d[0]; el.querySelector('#p15Out2').textContent = d[1];
+      });
+    } else if (t === 'p16') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 16 交互实验室 · 软铁 vs 硬钢磁化特性与磁极相互作用判别台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>铁芯材料：<select id="p16Mat"><option value="soft">软铁 (Soft iron) — 电磁铁/变压器铁芯</option><option value="steel">硬钢 (Steel) — 永磁体/指南针</option></select></label>' +
+        '<label>磁化方法：<select id="p16M"><option value="dc">直流通电螺线管 (d.c. solenoid)</option><option value="ac">交流退磁 (a.c. gradually pulled away)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p16Out1"></div><div class="readout-pill" id="p16Out2"></div></div></div>';
+      bindInputs(function () {
+        const soft = el.querySelector('#p16Mat').value === 'soft', ac = el.querySelector('#p16M').value === 'ac';
+        el.querySelector('#p16Out1').textContent = soft ? '软铁特性：极易被磁化 (Easily magnetised)，断电后立刻退磁 (Loses magnetism quickly) ⇒ 制作继电器、电铃与变压器铁芯！' : '硬钢特性：较难被磁化，但磁化后长久保持磁性 (Retains magnetism) ⇒ 制作永久磁铁！';
+        el.querySelector('#p16Out2').textContent = ac ? '退磁要领：置入通有交变电流 (a.c.) 的螺线管内缓慢沿东西方向拉出（或高温加热/重敲击）。' : '注意：只有发生“相互排斥 (Repulsion)”才能100%证明物体本身是磁铁，相互吸引可能是未磁化软铁！';
+      });
+    } else if (t === 'p17') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 17 交互实验室 · 摩擦电子转移与静电感应接地流程模拟</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>静电情景：<select id="p17M"><option value="poly">干布摩擦聚乙烯棒 (Polythene, 带负电)</option><option value="acet">干布摩擦醋酸纤维/玻璃棒 (Perspex/Glass, 带正电)</option><option value="ind">带负电棒感应金属球接地</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p17Out1"></div><div class="readout-pill" id="p17Out2"></div></div></div>';
+      const MAP17 = {
+        poly: ['过程：干布中的自由电子转移 (Electrons transferred) 到聚乙烯棒上 → 棒因电子过剩带负电 (−)，布因失去电子带等量正电 (+)。', '考场禁句：绝不可写“正电荷/质子移动了”！固体中只有带负电的电子可以移动！'],
+        acet: ['过程：有机玻璃/玻璃棒表面电子转移到干布上 → 棒因缺少电子净带正电 (+)，布净带负电 (−)。', '应用原理：高空加油飞机前务必接地导走摩擦累积静电荷，防止电火花引燃航空燃油。'],
+        ind: ['感应三步：① 带负电棒靠近孤立金属球，斥退球内自由电子至远端，近端显 +；② 手指/接地线接球远端，多余电子流入大地 (Earth)；③ 先断开接地再移走棒 → 球净带正电！', '注意断顺序：必须先撤接地线，再撤带电棒！若先撤棒则大地电子会回流中和！']
+      };
+      bindInputs(function () {
+        const d = MAP17[el.querySelector('#p17M').value];
+        el.querySelector('#p17Out1').textContent = d[0]; el.querySelector('#p17Out2').textContent = d[1];
+      });
+    } else if (t === 'p18') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 18 交互实验室 · 欧姆电阻、电功率 P=IV 与电费 kWh 计费台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>电压 V (V)：<input type="number" id="p18V" value="240"></label><label>电流 I (A)：<input type="number" id="p18I" value="5" step="0.5"></label>' +
+        '<label>运行时间 (hours)：<input type="number" id="p18H" value="3" step="0.5"></label><label>电价 (cents/kWh)：<input type="number" id="p18C" value="20"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p18Out1"></div><div class="readout-pill" id="p18Out2"></div></div></div>';
+      bindInputs(function () {
+        const V = Number(el.querySelector('#p18V').value) || 240, I = Math.max(0.01, Number(el.querySelector('#p18I').value) || 5);
+        const h = Number(el.querySelector('#p18H').value) || 3, c = Number(el.querySelector('#p18C').value) || 20;
+        const P = V * I, R = V / I, kwh = (P / 1000) * h;
+        el.querySelector('#p18Out1').textContent = '电阻 R = V/I = ' + R.toFixed(1) + ' Ω | 电功率 P = IV = ' + P.toFixed(0) + ' W (' + (P / 1000).toFixed(2) + ' kW) | 总焦耳 E = ' + (P * h * 3600).toExponential(2) + ' J';
+        el.querySelector('#p18Out2').textContent = '千瓦时用电量 = ' + kwh.toFixed(2) + ' kWh ⇒ 电费 Cost = ' + (kwh * c).toFixed(1) + ' cents (1 kWh = 3.6 × 10⁶ J)';
+      });
+    } else if (t === 'p19') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 19 交互实验室 · NTC 热敏电阻 / LDR 分压传感器动态调节台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>传感器 R₁：<select id="p19S"><option value="ldr">光敏电阻 LDR (底端) + 固定 R₂ (100 Ω)</option><option value="ntc">负温度系数热敏电阻 NTC (底端) + R₂ (100 Ω)</option></select></label>' +
+        '<label>环境强度 (光照/温度 %)：<input type="range" id="p19Env" min="10" max="100" value="50"><span id="p19EL">50%</span></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p19Out1"></div><div class="readout-pill" id="p19Out2"></div></div></div>';
+      bindInputs(function () {
+        const isLdr = el.querySelector('#p19S').value === 'ldr', env = Number(el.querySelector('#p19Env').value);
+        el.querySelector('#p19EL').textContent = env + '%';
+        const rSens = Math.round(500 * Math.exp(-0.025 * env));
+        const vOut = (12 * rSens) / (rSens + 100);
+        el.querySelector('#p19Out1').textContent = (isLdr ? '光敏 LDR' : '热敏 NTC') + ' 当前阻值 R_sensor ≈ ' + rSens + ' Ω | 串联总供电 12 V ⇒ 传感器两端输出电压 V_out = ' + vOut.toFixed(2) + ' V';
+        el.querySelector('#p19Out2').textContent = '环境越暗/越冷 ⇒ LDR/NTC 电阻【剧增】⇒ 根据分压比 V₁/V₂ = R₁/R₂，分得更高电压（可用作天黑自动开灯触发器！）';
+      });
+    } else if (t === 'p20') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 20 交互实验室 · 弗莱明左手定则 FBI 与带电粒子束磁场偏转</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>粒子类型 / 电流方向：<select id="p20Q"><option value="conv">传统电流 / 正电荷向东 (+)</option><option value="elec">电子束 β⁻ 向东射入 (注意反方向!)</option></select></label>' +
+        '<label>磁场 B 方向：<select id="p20B"><option value="in">垂直纸面向里 (Into page ✕)</option><option value="out">垂直纸面向外 (Out of page ⊙)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p20Out1"></div><div class="readout-pill" id="p20Out2"></div></div></div>';
+      bindInputs(function () {
+        const isElec = el.querySelector('#p20Q').value === 'elec', bIn = el.querySelector('#p20B').value === 'in';
+        const up = (!isElec && bIn) || (isElec && !bIn);
+        el.querySelector('#p20Out1').textContent = '左手三指正交判别：食指 B = ' + (bIn ? '入纸面 ✕' : '出纸面 ⊙') + '，中指【传统电流 I】= ' + (isElec ? '向西（与电子速度相反!）' : '向东') + ' ⇒ 拇指受力 F = ' + (up ? '⬆️ 向上 (Upwards)' : '⬇️ 向下 (Downwards)');
+        el.querySelector('#p20Out2').textContent = '直流电机关键：换向器 (Split-ring commutator) 每半圈调换一次线圈电流方向，保证扭矩持续单向转动！';
+      });
+    } else if (t === 'p21') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 21 交互实验室 · 理想变压器与高压输电 I²R 损耗模拟台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>原线圈 V_p (V)：<input type="number" id="p21Vp" value="25000"></label>' +
+        '<label>匝数比 N_p : N_s = <input type="number" id="p21Np" value="100"> : <input type="number" id="p21Ns" value="1600"></label>' +
+        '<label>传送总功率 P (kW)：<input type="number" id="p21P" value="400"></label><label>电缆电阻 R (Ω)：<input type="number" id="p21R" value="10"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p21Out1"></div><div class="readout-pill" id="p21Out2"></div></div></div>';
+      bindInputs(function () {
+        const vp = Number(el.querySelector('#p21Vp').value) || 25000, np = Math.max(1, Number(el.querySelector('#p21Np').value) || 100), ns = Math.max(1, Number(el.querySelector('#p21Ns').value) || 1600);
+        const P = (Number(el.querySelector('#p21P').value) || 400) * 1000, R = Number(el.querySelector('#p21R').value) || 10;
+        const vs = vp * (ns / np), iLine = P / vs, loss = iLine * iLine * R;
+        el.querySelector('#p21Out1').textContent = '副线圈输电电压 V_s = ' + Math.round(vs).toLocaleString() + ' V (' + (vs > vp ? '升压 Step-up' : '降压 Step-down') + ') | 输电电流 I = P/V_s = ' + iLine.toFixed(2) + ' A';
+        el.querySelector('#p21Out2').textContent = '电网热损耗 P_loss = I²R = ' + loss.toFixed(1) + ' W（若不用变压器升压直接 25 kV 输电，损耗高达 ' + (Math.pow(P / vp, 2) * R).toFixed(1) + ' W！）';
+      });
+    } else if (t === 'p22') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 22 交互实验室 · 卢瑟福 α 散射三结论与原子核素构成剖析</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>核素质量数 A：<input type="number" id="p22A" value="238" min="1"></label><label>质子数/原子序数 Z：<input type="number" id="p22Z" value="92" min="1"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p22Out1"></div><div class="readout-pill" id="p22Out2"></div></div></div>';
+      bindInputs(function () {
+        const a = Math.max(1, Math.round(Number(el.querySelector('#p22A').value) || 238)), z = Math.min(a, Math.max(1, Math.round(Number(el.querySelector('#p22Z').value) || 92)));
+        el.querySelector('#p22Out1').textContent = '中性原子组成：质子 Protons = ' + z + ' | 中子 Neutrons (A − Z) = ' + (a - z) + ' | 核外电子 Electrons = ' + z + ' | 原子核净电荷 = +' + z + 'e';
+        el.querySelector('#p22Out2').textContent = 'α 散射极少数大角反弹 (> 90°) ⇒ 证明原子核体积极小、极高密度且集中几乎全部正电荷与质量；绝大多数直接穿透 ⇒ 原子内部绝大部分是真空！';
+      });
+    } else if (t === 'p23') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 23 交互实验室 · 本底辐射扣减、半衰期指数衰减曲线计算器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>总读数 C_total (cpm)：<input type="number" id="p23C0" value="440"></label><label>本底 C_bg (cpm)：<input type="number" id="p23Bg" value="40"></label>' +
+        '<label>半衰期 T½ (days)：<input type="number" id="p23H" value="6" min="1"></label><label>经过时间 t (days)：<input type="range" id="p23T" min="0" max="24" step="3" value="12"><span id="p23TL">12 d</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="p23Svg" viewBox="0 0 360 220" width="360" height="220"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="p23Out1"></div><div class="readout-pill" id="p23Out2"></div></div></div></div>';
+      bindInputs(function () {
+        const c0 = Number(el.querySelector('#p23C0').value) || 440, bg = Number(el.querySelector('#p23Bg').value) || 40;
+        const h = Math.max(1, Number(el.querySelector('#p23H').value) || 6), tm = Number(el.querySelector('#p23T').value);
+        el.querySelector('#p23TL').textContent = tm + ' days';
+        const pure0 = Math.max(0, c0 - bg), pureT = pure0 * Math.pow(0.5, tm / h), totalT = pureT + bg;
+        const plt = makePlot(360, 220, 0, Math.max(24, tm), 0, c0 * 1.1);
+        let svg = plotBase(plt, 't (d)', 'cpm');
+        svg += plotPath(plt, function () { return bg; }, 'var(--svg-muted)', true);
+        svg += plotPath(plt, function (x) { return bg + pure0 * Math.pow(0.5, x / h); }, 'var(--svg-green)', false);
+        svg += '<circle cx="' + plt.toX(tm).toFixed(1) + '" cy="' + plt.toY(totalT).toFixed(1) + '" r="5" fill="var(--svg-red)"/>';
+        el.querySelector('#p23Svg').innerHTML = svg;
+        el.querySelector('#p23Out1').textContent = '先减本底！纯净初始源活度 = ' + pure0 + ' cpm ⇒ 经 ' + (tm / h).toFixed(1) + ' 个半衰期后纯净计数 = ' + pureT.toFixed(1) + ' cpm';
+        el.querySelector('#p23Out2').textContent = '⚠️ 若题问 GM 计数器最终显示总读数，务必再加回本底：' + pureT.toFixed(1) + ' + ' + bg + ' = ' + totalT.toFixed(1) + ' cpm！';
+      });
+    } else if (t === 'p24') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 24 交互实验室 · 轨道速率 v = 2πr / T 与太阳光行时间 t = d / c 台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>行星/卫星预设：<select id="p24P"><option value="earth">地球 (r = 1.5×10¹¹ m, T = 365 d)</option><option value="moon">月球绕地 (r = 3.84×10⁸ m, T = 27.3 d)</option><option value="mars">火星 (r = 2.28×10¹¹ m, T = 687 d)</option><option value="geo">地球同步卫星 (r = 4.22×10⁷ m, T = 24 h)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p24Out1"></div><div class="readout-pill" id="p24Out2"></div></div></div>';
+      const MAP24 = {
+        earth: { r: 1.5e11, t: 365 * 86400, note: '太阳光到达地球所需时间 t = 1.5×10¹¹ / (3.0×10⁸) = 500 s ≈ 8.3 分钟！' },
+        moon: { r: 3.84e8, t: 27.3 * 86400, note: '月球引力仅为地球 1/6，月相盈亏完整周期约为 28–29.5 天。' },
+        mars: { r: 2.28e11, t: 687 * 86400, note: '火星属于内侧四大岩石小行星之一，距太阳越远引力越弱，公转速率显著小于地球。' },
+        geo: { r: 4.22e7, t: 24 * 3600, note: '赤道正上方同步轨道，与地球自转周期精确同步（24 小时），用于气象/电视直播卫星。' }
+      };
+      bindInputs(function () {
+        const d = MAP24[el.querySelector('#p24P').value];
+        const v = (2 * Math.PI * d.r) / d.t;
+        el.querySelector('#p24Out1').textContent = '轨道周长 2πr = ' + (2 * Math.PI * d.r).toExponential(2) + ' m | 周期 T = ' + d.t.toExponential(2) + ' s ⇒ 平均轨道速率 v = 2πr/T = ' + (v / 1000).toFixed(2) + ' km/s (' + Math.round(v).toLocaleString() + ' m/s)';
+        el.querySelector('#p24Out2').textContent = d.note;
+      });
+    } else if (t === 'p25') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 25 交互实验室 · 哈勃定律 v = H₀d 与宇宙年龄 t ≈ 1/H₀ 计算台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>星系退行速度 v (m/s)：<input type="number" id="p25V" value="4400000" step="100000"></label>' +
+        '<label>哈勃常数 H₀ (s⁻¹)：<input type="number" id="p25H" value="2.2e-18" step="0.1e-18"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="p25Out1"></div><div class="readout-pill" id="p25Out2"></div></div></div>';
+      bindInputs(function () {
+        const v = Number(el.querySelector('#p25V').value) || 4.4e6, h0 = Math.max(1e-19, Number(el.querySelector('#p25H').value) || 2.2e-18);
+        const dist = v / h0, ly = dist / 9.5e15, ageS = 1 / h0, ageY = ageS / (365.25 * 86400);
+        el.querySelector('#p25Out1').textContent = '星系距离 d = v/H₀ = ' + dist.toExponential(2) + ' m ≈ ' + ly.toExponential(2) + ' 光年 (1 ly ≈ 9.5 × 10¹⁵ m)';
+        el.querySelector('#p25Out2').textContent = '估计宇宙年龄 t ≈ 1/H₀ = d/v = ' + ageS.toExponential(2) + ' s ≈ ' + (ageY / 1e9).toFixed(1) + ' billion years (十亿年) | 两大证据：遥远星系红移 + CMBR 微波背景辐射';
+      });
+    }
+  }
+
+  document.querySelectorAll('.lab-box[data-lab-type]').forEach(mountPhysicsLab);
+
+  // ---------- 11. Initialize View & Scroll Spy ----------
+  applyViewMode(currentViewMode);
+  applyQuizMask(quizMasked);
+
+  const backTopBtn = document.getElementById('backTopBtn');
+  const trackedSections = Array.from(document.querySelectorAll('.topic-section[id]'));
+  const navLinks = Array.from(document.querySelectorAll('.sidebar .nav-link'));
+
+  window.addEventListener('scroll', function () {
+    if (backTopBtn) backTopBtn.classList.toggle('visible', window.scrollY > 360);
+    const y = window.scrollY + 110;
+    let currentId = '';
+    for (let i = 0; i < trackedSections.length; i++) {
+      if (trackedSections[i].offsetTop <= y && getComputedStyle(trackedSections[i]).display !== 'none') {
+        currentId = trackedSections[i].id;
+      }
+    }
+    navLinks.forEach(function (lnk) {
+      const h = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('active', h === currentId);
+    });
+  }, { passive: true });
+
+  if (backTopBtn) {
+    backTopBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  }
+})();
+
+  </script>
+</body>
+</html>
