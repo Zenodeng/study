@@ -1,0 +1,2110 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="--accent: #BE123C;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch11 · Chapter 11: Acids and bases — IGCSE Chemistry (0620) 精讲</title>
+  <style>
+/* ==========================================================================
+   Cambridge IGCSE Chemistry (0620 · CUP Harwood 5th Ed. 2023–2028)
+   22-Chapter Suite Shared Stylesheet (Offline, Zero CDN, Print-Ready)
+   ========================================================================== */
+
+:root {
+  --bg-page: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --bg-sidebar: #FFFFFF;
+  --bg-code: #EFF6FF;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-faint: #64748B;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+
+  --accent: #0284C7;
+  --accent-hover: #0369A1;
+  --accent-soft: #E0F2FE;
+
+  --core-bg: #E0F2FE;
+  --core-text: #075985;
+  --core-border: #BAE6FD;
+  --ext-bg: #FEF3C7;
+  --ext-text: #92400E;
+  --ext-border: #FDE68A;
+
+  --deep-bg: #EFF6FF;
+  --deep-border: #2563EB;
+  --tip-bg: #FFFBEB;
+  --tip-border: #D97706;
+  --mistake-bg: #FFF1F2;
+  --mistake-border: #E11D48;
+  --example-bg: #F0FDF4;
+  --example-border: #16A34A;
+  --formula-bg: #F8FAFC;
+  --formula-border: #0284C7;
+
+  --ok-bg: #DCFCE7;
+  --ok-text: #166534;
+  --ok-border: #86EFAC;
+  --err-bg: #FEE2E2;
+  --err-text: #991B1B;
+  --err-border: #FCA5A5;
+
+  --svg-bg: #FFFFFF;
+  --svg-grid: #E2E8F0;
+  --svg-ink: #0F172A;
+  --svg-muted: #64748B;
+  --svg-blue: #2563EB;
+  --svg-indigo: #4338CA;
+  --svg-teal: #0D9488;
+  --svg-amber: #D97706;
+  --svg-red: #DC2626;
+  --svg-green: #16A34A;
+  --svg-purple: #7C3AED;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.07);
+  --shadow-lg: 0 10px 26px rgba(15, 23, 42, 0.11);
+
+  --sidebar-w: 288px;
+  --topbar-h: 58px;
+  --radius-sm: 7px;
+  --radius-md: 11px;
+  --radius-lg: 16px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Songti SC", "Noto Serif SC", Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+[data-theme="dark"] {
+  --bg-page: #0B1120;
+  --bg-surface: #111827;
+  --bg-subtle: #1E293B;
+  --bg-sidebar: #0F172A;
+  --bg-code: #1E293B;
+  --text-main: #F1F5F9;
+  --text-muted: #CBD5E1;
+  --text-faint: #94A3B8;
+  --border: #1E293B;
+  --border-strong: #334155;
+
+  --accent: #38BDF8 !important;
+  --accent-hover: #7DD3FC;
+  --accent-soft: rgba(56, 189, 248, 0.18);
+
+  --core-bg: rgba(56, 189, 248, 0.16);
+  --core-text: #BAE6FD;
+  --core-border: rgba(56, 189, 248, 0.36);
+  --ext-bg: rgba(245, 158, 11, 0.16);
+  --ext-text: #FDE68A;
+  --ext-border: rgba(245, 158, 11, 0.36);
+
+  --deep-bg: rgba(37, 99, 235, 0.14);
+  --deep-border: #60A5FA;
+  --tip-bg: rgba(217, 119, 6, 0.14);
+  --tip-border: #FBBF24;
+  --mistake-bg: rgba(225, 29, 72, 0.15);
+  --mistake-border: #FB7185;
+  --example-bg: rgba(22, 163, 74, 0.13);
+  --example-border: #4ADE80;
+  --formula-bg: #172033;
+  --formula-border: #38BDF8;
+
+  --ok-bg: rgba(22, 163, 74, 0.22);
+  --ok-text: #BBF7D0;
+  --ok-border: #22C55E;
+  --err-bg: rgba(220, 38, 38, 0.22);
+  --err-text: #FECACA;
+  --err-border: #EF4444;
+
+  --svg-bg: #0F172A;
+  --svg-grid: #334155;
+  --svg-ink: #F1F5F9;
+  --svg-muted: #94A3B8;
+  --svg-blue: #60A5FA;
+  --svg-indigo: #818CF8;
+  --svg-teal: #2DD4BF;
+  --svg-amber: #FBBF24;
+  --svg-red: #F87171;
+  --svg-green: #34D399;
+  --svg-purple: #A78BFA;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .seg-btn.active,
+[data-theme="dark"] .tab-btn.active,
+[data-theme="dark"] .icon-btn.active,
+[data-theme="dark"] .brand-code,
+[data-theme="dark"] .pager-btn.primary { color: #0B1120; }
+[data-theme="dark"] .hub-foot { color: #38BDF8; }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--topbar-h) + 18px); }
+body { margin: 0; font-family: var(--font-sans); background: var(--bg-page); color: var(--text-main); line-height: 1.72; font-size: 15.5px; -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4 { margin: 0 0 0.55em 0; line-height: 1.32; font-weight: 700; color: var(--text-main); }
+p { margin: 0 0 0.9em 0; }
+ul, ol { margin: 0 0 1em 0; padding-left: 1.45em; }
+li { margin-bottom: 0.35em; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { font-family: var(--font-mono); font-size: 0.9em; background: var(--bg-code); color: var(--accent); padding: 2px 6px; border-radius: 4px; }
+
+/* View Mode Filters (Core / Extended / SME) */
+body.mode-core .ext-only,
+body.mode-core .badge-ext { display: none !important; }
+body.mode-ext .ext-only { border-left: 3px solid var(--ext-border); padding-left: 10px; background: rgba(245, 158, 11, 0.06); border-radius: 4px; }
+body.mode-book .sme-section { display: none !important; }
+body.mode-sme .book-section { display: none !important; }
+
+/* Formula, Chemical Equation, Nuclide & Swatch Formatting */
+.math { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 1.04em; }
+.frac { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; font-size: 0.88em; line-height: 1.1; margin: 0 2px; font-style: normal; font-family: Georgia, "Times New Roman", serif; }
+.frac .num { border-bottom: 1.5px solid currentColor; padding: 0 4px 1px 4px; }
+.frac .den { padding: 1px 4px 0 4px; }
+.sqrt { display: inline-flex; align-items: baseline; font-family: Georgia, "Times New Roman", serif; }
+.sqrt-rad { border-top: 1.4px solid currentColor; padding: 0 3px 0 2px; margin-left: 1px; }
+.nuclide { display: inline-flex; align-items: center; gap: 1px; font-family: Georgia, "Times New Roman", serif; font-weight: 700; vertical-align: middle; margin: 0 2px; }
+.nuc-nums { display: inline-flex; flex-direction: column; text-align: right; font-size: 0.72em; line-height: 1.05; }
+.formula-card, .chem-eq { background: var(--formula-bg); border: 1.5px solid var(--border-strong); border-left: 5px solid var(--formula-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; font-size: 15px; }
+.formula-main, .chem-eq-main { font-family: Georgia, "Times New Roman", serif; font-size: 16.5px; font-weight: 700; color: var(--accent); margin: 4px 0 6px 0; }
+.swatch { display: inline-block; width: 13px; height: 13px; border-radius: 3px; border: 1px solid rgba(15,23,42,0.28); vertical-align: -2px; margin-right: 5px; }
+
+/* Topbar */
+.topbar {
+  position: sticky; top: 0; z-index: 100; height: var(--topbar-h);
+  background: var(--bg-surface); border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm); display: flex; align-items: center;
+  justify-content: space-between; gap: 10px; padding: 0 16px;
+}
+.topbar-left { display: flex; align-items: center; gap: 8px; min-width: 0; flex-shrink: 1; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 34px; padding: 0 10px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--bg-surface); color: var(--text-main); font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; text-decoration: none; }
+.icon-btn:hover { background: var(--bg-subtle); border-color: var(--accent); text-decoration: none; }
+.icon-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.menu-toggle { display: none; }
+.brand-pill { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; white-space: nowrap; flex-shrink: 1; min-width: 0; }
+.brand-code { background: var(--accent); color: #fff; padding: 2px 8px; border-radius: 5px; font-size: 12px; letter-spacing: 0.4px; white-space: nowrap; flex-shrink: 0; }
+.brand-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 215px; }
+.search-wrap { position: relative; flex: 1 1 150px; min-width: 130px; max-width: 260px; }
+.search-input { width: 100%; height: 34px; padding: 0 30px 0 32px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--bg-subtle); color: var(--text-main); font-size: 13.5px; outline: none; }
+.search-input:focus { border-color: var(--accent); background: var(--bg-surface); }
+.search-input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.search-icon { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); color: var(--text-faint); font-size: 13px; pointer-events: none; }
+.search-clear { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); border: none; background: transparent; color: var(--text-faint); cursor: pointer; font-size: 14px; display: none; }
+.search-results-bar { display: none; background: var(--accent-soft); border-bottom: 1px solid var(--border); padding: 8px 20px; font-size: 13.5px; color: var(--text-main); align-items: center; justify-content: space-between; gap: 12px; }
+.search-results-bar.visible { display: flex; }
+.topbar-controls { display: flex; align-items: center; gap: 7px; flex-shrink: 0; }
+.seg-group { display: inline-flex; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); overflow: hidden; background: var(--bg-subtle); }
+.seg-btn { border: none; background: transparent; color: var(--text-muted); padding: 6px 8px; font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.seg-btn.active { background: var(--accent); color: #fff; }
+.progress-chip { display: flex; align-items: center; gap: 7px; padding: 4px 10px; border-radius: 999px; background: var(--bg-subtle); border: 1px solid var(--border); font-size: 12.5px; font-weight: 600; white-space: nowrap; }
+.progress-track { width: 50px; height: 7px; background: var(--border-strong); border-radius: 99px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), #0D9488); transition: width 0.25s ease; }
+
+.app-layout { display: flex; min-height: calc(100vh - var(--topbar-h)); }
+.sidebar { width: var(--sidebar-w); flex-shrink: 0; background: var(--bg-sidebar); border-right: 1px solid var(--border); position: sticky; top: var(--topbar-h); height: calc(100vh - var(--topbar-h)); overflow-y: auto; padding: 14px 10px 44px 10px; }
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 99px; }
+.nav-unit { margin-bottom: 8px; }
+.nav-unit-btn { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border: none; border-radius: var(--radius-sm); background: transparent; color: var(--text-main); font-size: 13px; font-weight: 700; text-align: left; cursor: pointer; }
+.nav-unit-btn:hover { background: var(--bg-subtle); }
+.nav-unit-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.nav-unit-title { flex: 1; display: flex; align-items: center; gap: 7px; line-height: 1.3; }
+.nav-chevron { font-size: 11px; color: var(--text-faint); transition: transform 0.2s; }
+.nav-unit.collapsed .nav-chevron { transform: rotate(-90deg); }
+.nav-unit.collapsed .nav-links { display: none; }
+.nav-links { list-style: none; padding: 2px 0 4px 12px; margin: 0 0 0 14px; border-left: 2px solid var(--border); }
+.nav-link { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 5px 9px; margin: 2px 0; border-radius: var(--radius-sm); color: var(--text-muted); font-size: 12.6px; line-height: 1.35; text-decoration: none; }
+.nav-link:hover { background: var(--bg-subtle); color: var(--text-main); text-decoration: none; }
+.nav-link.active { background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+.nav-done-mark { color: #10B981; font-weight: 800; font-size: 12px; opacity: 0; }
+.nav-link.mastered .nav-done-mark { opacity: 1; }
+.main-content { flex: 1; min-width: 0; padding: 26px 32px 80px 32px; }
+.content-inner { max-width: 960px; margin: 0 auto; }
+
+.hero-card { background: linear-gradient(135deg, #0F172A 0%, var(--accent) 58%, #0F766E 100%); color: #fff; border-radius: var(--radius-lg); padding: 28px 32px; margin-bottom: 26px; box-shadow: var(--shadow-lg); }
+.hero-card h1 { color: #fff; font-size: 25px; margin-bottom: 8px; letter-spacing: -0.3px; }
+.hero-sub { color: rgba(255,255,255,0.92); font-size: 14.8px; max-width: 820px; margin-bottom: 16px; }
+.hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.hero-pill { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.28); color: #fff; padding: 4px 11px; border-radius: 999px; font-size: 12.5px; font-weight: 600; }
+.unit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+.unit-tile { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.24); border-radius: var(--radius-md); padding: 12px 14px; color: #fff; text-decoration: none; display: block; transition: transform 0.15s, background 0.15s; }
+.unit-tile:hover { transform: translateY(-2px); background: rgba(255,255,255,0.22); text-decoration: none; }
+.unit-tile-num { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.7px; opacity: 0.85; font-weight: 700; }
+.unit-tile-title { font-size: 14.5px; font-weight: 700; margin: 3px 0; }
+
+.topic-section { background: var(--bg-surface); border: 1px solid var(--border); border-top: 4px solid var(--accent); border-radius: var(--radius-md); padding: 24px 26px; margin-bottom: 24px; box-shadow: var(--shadow-sm); }
+.topic-section.search-dim { display: none; }
+.section-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 2px solid var(--border); }
+.section-title-group h3 { font-size: 19.5px; margin-bottom: 4px; }
+.section-en-sub { font-size: 13.5px; color: var(--text-faint); font-weight: 600; }
+.tier-row { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 7px; }
+.badge-core, .badge-ext { display: inline-block; font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.badge-core { background: var(--core-bg); color: var(--core-text); border: 1px solid var(--core-border); }
+.badge-ext { background: var(--ext-bg); color: var(--ext-text); border: 1px solid var(--ext-border); }
+.master-btn { flex-shrink: 0; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-muted); font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.master-btn:hover { border-color: #10B981; color: #10B981; }
+.master-btn.is-mastered { background: var(--ok-bg); color: var(--ok-text); border-color: var(--ok-border); }
+.subtopic { margin-bottom: 20px; }
+.subtopic:last-of-type { margin-bottom: 12px; }
+.subtopic h4 { font-size: 16px; color: var(--accent); margin: 0 0 10px 0; padding-bottom: 4px; border-bottom: 1px dashed var(--border); display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+
+.worked-example { background: var(--example-bg); border: 1px solid var(--border); border-left: 4px solid var(--example-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; }
+.worked-title { font-weight: 800; font-size: 14px; color: var(--example-border); margin-bottom: 6px; }
+.callout { border-radius: var(--radius-sm); padding: 13px 16px; margin: 14px 0; border-left: 4px solid var(--border-strong); font-size: 14.5px; }
+.callout-title { font-weight: 800; font-size: 13.5px; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+.deep-dive { background: var(--deep-bg); border-left-color: var(--deep-border); }
+.deep-dive .callout-title { color: var(--deep-border); }
+.examiner-tip { background: var(--tip-bg); border-left-color: var(--tip-border); }
+.examiner-tip .callout-title { color: var(--tip-border); }
+.common-mistake { background: var(--mistake-bg); border-left-color: var(--mistake-border); }
+.common-mistake .callout-title { color: var(--mistake-border); }
+
+.table-wrap { width: 100%; overflow-x: auto; margin: 14px 0; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+table.chem-table, table.phy-table { width: 100%; border-collapse: collapse; font-size: 13.8px; text-align: left; }
+table.chem-table th, table.phy-table th { background: var(--bg-subtle); color: var(--text-main); font-weight: 700; padding: 9px 12px; border-bottom: 2px solid var(--border-strong); white-space: nowrap; }
+table.chem-table td, table.phy-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.chem-table tr:last-child td, table.phy-table tr:last-child td { border-bottom: none; }
+table.chem-table tbody tr:hover, table.phy-table tbody tr:hover { background: var(--bg-subtle); }
+
+.svg-figure { background: var(--svg-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px; margin: 16px 0; text-align: center; break-inside: avoid; }
+.svg-figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.svg-caption { margin-top: 8px; font-size: 13px; color: var(--text-faint); font-weight: 600; }
+
+/* Interactive Chemistry Labs */
+.lab-box { background: var(--bg-subtle); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px; margin: 18px 0; break-inside: avoid; }
+.lab-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+.lab-title { font-size: 15.5px; font-weight: 800; color: var(--accent); display: flex; align-items: center; gap: 7px; }
+.lab-panel { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; }
+.lab-controls { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-bottom: 12px; align-items: center; }
+.lab-controls label { font-size: 13px; font-weight: 700; color: var(--text-muted); display: inline-flex; align-items: center; gap: 6px; }
+.lab-controls input[type="number"], .lab-controls select { padding: 5px 8px; border-radius: 6px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-main); font-size: 13.2px; font-weight: 700; }
+.lab-controls input[type="number"] { min-width: 108px; width: 112px; text-align: center; }
+.lab-controls input[type="range"] { width: 120px; accent-color: var(--accent); }
+.lab-grid-2col { display: grid; grid-template-columns: 1.12fr 1fr; gap: 14px; align-items: start; }
+@media (max-width: 820px) { .lab-grid-2col { grid-template-columns: 1fr; } }
+.tab-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.tab-btn { border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-muted); padding: 5px 10px; border-radius: 6px; font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.tab-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.lab-readout { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; font-size: 13.2px; font-weight: 600; }
+.readout-pill { background: var(--bg-page); border: 1px solid var(--border-strong); padding: 7px 10px; border-radius: 6px; width: 100%; line-height: 1.5; }
+
+/* Practice Questions & Concepts */
+.practice-block { margin-top: 18px; padding-top: 14px; border-top: 2px dashed var(--border-strong); }
+.practice-heading { font-size: 16px; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.exam-q { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 14px; break-inside: avoid; }
+.exam-q-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; font-size: 12.5px; }
+.q-tag { font-weight: 800; color: var(--accent); background: var(--accent-soft); padding: 2px 8px; border-radius: 5px; }
+.q-marks { font-weight: 700; color: var(--text-faint); }
+.q-stem-en { font-size: 14.8px; font-weight: 600; color: var(--text-main); margin-bottom: 6px; }
+.q-stem-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 12px; }
+.mcq-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin-bottom: 10px; }
+.mcq-opt { text-align: left; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 13.8px; cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.mcq-opt:hover { border-color: var(--accent); background: var(--bg-subtle); }
+.mcq-opt.correct { background: var(--ok-bg); border-color: var(--ok-border); color: var(--ok-text); font-weight: 700; }
+.mcq-opt.wrong { background: var(--err-bg); border-color: var(--err-border); color: var(--err-text); }
+.mcq-feedback { display: none; font-size: 13.5px; padding: 10px 12px; border-radius: var(--radius-sm); margin-top: 8px; }
+.mcq-feedback.visible { display: block; }
+.mcq-feedback.ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.mcq-feedback.err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+details.ms-details { margin-top: 10px; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 12px; }
+details.ms-details summary { cursor: pointer; font-weight: 700; font-size: 13.5px; color: var(--accent); user-select: none; }
+.ms-body { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 13.8px; }
+.ms-mark { display: inline-block; font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--core-text); background: var(--core-bg); padding: 1px 5px; border-radius: 4px; margin-right: 4px; }
+.ms-cn { color: var(--text-muted); margin-top: 4px; }
+
+.concept-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 14px; margin-bottom: 18px; }
+.concept-filter-group { display: flex; flex-wrap: wrap; gap: 6px; }
+.concept-actions { display: flex; align-items: center; gap: 10px; }
+.concept-count-pill { font-size: 12.5px; font-weight: 700; color: var(--text-muted); }
+.concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 14px; }
+.concept-card { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; gap: 8px; break-inside: avoid; }
+.concept-card:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
+.concept-card.concept-hidden { display: none !important; }
+.cq-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.cq-en { font-weight: 700; font-size: 14.5px; color: var(--text-main); line-height: 1.45; }
+.cq-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 2px; }
+.cq-answer { position: relative; margin-top: auto; background: var(--bg-surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius-sm); padding: 11px 13px; font-size: 13.8px; line-height: 1.6; }
+.kw { color: var(--accent); background: var(--accent-soft); padding: 0 4px; border-radius: 3px; font-weight: 700; }
+.cq-mask-hint { display: none; }
+.concept-card.masked .cq-answer { cursor: pointer; }
+.concept-card.masked .cq-answer-inner { filter: blur(7px); opacity: 0.22; user-select: none; pointer-events: none; transition: filter 0.2s, opacity 0.2s; }
+.concept-card.masked .cq-mask-hint { display: flex; align-items: center; justify-content: center; position: absolute; inset: 0; font-size: 13.5px; font-weight: 700; color: var(--accent); background: rgba(255,255,255,0.25); border-radius: var(--radius-sm); }
+[data-theme="dark"] .concept-card.masked .cq-mask-hint { background: rgba(15,23,42,0.35); }
+
+/* Chapter Pager & Hub Group Headings */
+.chapter-pager { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 28px; padding: 16px 20px; background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); }
+.pager-btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: var(--radius-sm); background: var(--bg-subtle); border: 1px solid var(--border-strong); color: var(--text-main); font-size: 13.5px; font-weight: 700; text-decoration: none; }
+.pager-btn:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); text-decoration: none; }
+.pager-btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.pager-btn.primary:hover { background: var(--accent-hover); color: #fff; }
+
+.hub-block-title { font-size: 18px; font-weight: 800; margin: 26px 0 12px 0; padding-bottom: 6px; border-bottom: 2px solid var(--border-strong); display: flex; align-items: center; gap: 8px; }
+.hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 15px; }
+.hub-card { display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-surface); border: 1px solid var(--border-strong); border-top: 5px solid var(--card-color, var(--accent)); border-radius: var(--radius-md); padding: 16px 18px 14px 18px; color: var(--text-main); text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; box-shadow: var(--shadow-sm); }
+.hub-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--card-color, var(--accent)); text-decoration: none; }
+.hub-card-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+.hub-badge { font-size: 11.5px; font-weight: 800; color: #fff; background: var(--card-color, var(--accent)); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill { font-size: 12px; font-weight: 700; color: var(--text-muted); background: var(--bg-subtle); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill.done { background: var(--ok-bg); color: var(--ok-text); }
+.hub-title { font-size: 16px; font-weight: 800; margin-bottom: 3px; }
+.hub-en { font-size: 12.6px; color: var(--text-faint); font-weight: 600; margin-bottom: 8px; }
+.hub-sub { font-size: 12.8px; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; }
+.hub-foot { font-size: 13px; font-weight: 700; color: var(--card-color, var(--accent)); display: flex; align-items: center; justify-content: space-between; }
+
+.back-top-btn { position: fixed; right: 22px; bottom: 22px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); box-shadow: var(--shadow-md); cursor: pointer; display: none; align-items: center; justify-content: center; font-size: 17px; font-weight: 800; z-index: 80; }
+.back-top-btn.visible { display: flex; }
+
+@media (max-width: 1200px) {
+  .brand-title, .btn-label { display: none; }
+  .seg-btn { padding: 6px 8px; }
+}
+@media (max-width: 980px) {
+  .menu-toggle { display: inline-flex; }
+  .sidebar { position: fixed; left: 0; top: var(--topbar-h); z-index: 95; transform: translateX(-100%); transition: transform 0.22s ease; box-shadow: var(--shadow-lg); }
+  .sidebar.open { transform: translateX(0); }
+  .main-content { padding: 18px 14px 64px 14px; }
+  .topic-section { padding: 18px 16px; }
+  .progress-chip { display: none; }
+  .search-wrap { min-width: 130px; }
+}
+@media (max-width: 640px) {
+  .topbar { padding: 0 10px; gap: 6px; }
+  .search-wrap { max-width: none; }
+  .concept-grid, .hub-grid { grid-template-columns: 1fr; }
+}
+@media print {
+  .topbar, .sidebar, .search-results-bar, .back-top-btn, .master-btn, .lab-controls button, .concept-toolbar, .cq-mask-hint, .chapter-pager { display: none !important; }
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  .main-content { padding: 0 !important; }
+  .content-inner { max-width: 100% !important; }
+  .topic-section, .exam-q, .callout, .worked-example, .svg-figure, .concept-card { box-shadow: none !important; break-inside: avoid; border-color: #CBD5E1 !important; }
+  details.ms-details, details.ms-details .ms-body, .mcq-feedback { display: block !important; }
+  .concept-card.masked .cq-answer-inner { filter: none !important; opacity: 1 !important; }
+}
+
+  </style>
+</head>
+<body data-chapter-code="Ch11">
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="展开目录">☰ 目录</button>
+      <a class="icon-btn" href="index.html" title="返回 22 章总目录"><span>🏠</span><span class="btn-label">总目录</span></a>
+      <div class="brand-pill">
+        <span class="brand-code">Ch11</span>
+        <span class="brand-title">Chapter 11: Acids and bases</span>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="search" id="searchInput" class="search-input" placeholder="搜索方程式、实验检验、真题与概念..." autocomplete="off" />
+      <button type="button" class="search-clear" id="searchClear" title="清空搜索">✕</button>
+    </div>
+
+    <div class="topbar-controls">
+      <div class="seg-group" role="group" aria-label="考试级别筛选">
+        <button type="button" class="seg-btn active" data-view-mode="all">All</button>
+        <button type="button" class="seg-btn" data-view-mode="core">Core</button>
+        <button type="button" class="seg-btn" data-view-mode="ext">Extended</button>
+        <button type="button" class="seg-btn" data-view-mode="sme">真题</button>
+      </div>
+
+      <div class="progress-chip" title="本章小节与真题模块掌握进度">
+        <span id="progressText">0/0</span>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+
+      <button type="button" class="icon-btn" id="toggleAllMs" title="展开或收起全部解析"><span>📝</span><span class="btn-label">展开解析</span></button>
+      <button type="button" class="icon-btn" id="themeToggle" title="切换亮色/暗色主题"><span id="themeIcon">🌙</span><span class="btn-label">主题</span></button>
+      <button type="button" class="icon-btn" id="printBtn" title="打印或导出为 PDF"><span>🖨️</span><span class="btn-label">导出 PDF</span></button>
+    </div>
+  </header>
+
+  <div class="search-results-bar" id="searchBar">
+    <span id="searchSummary">找到 0 个匹配板块</span>
+    <button type="button" class="icon-btn" id="searchResetBtn">重置过滤</button>
+  </div>
+
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="本章化学知识点导航">
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #BE123C;"></span>Ch11 本章小节目录</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#sec-11-1"><span>11.1 酸与碱的特征反应、定义辨析及铵盐检验</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-11-2"><span>11.2 pH 尺度、百里酚酞等指示剂与质子强弱酸理论</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-11-3"><span>11.3 四大类氧化物的分类、反应与实验鉴别</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-sme"><span>SaveMyExams 真题实战演练 · Chapter 11</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#app-concepts"><span>中英核心概念默写库 · Chapter 11</span><span class="nav-done-mark">✓</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #0D9488;"></span>全书 22 章快速切换</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="Ch01_States_of_Matter.html"><span>Ch01 · 物态变化、加热/冷却曲线、温压影响与扩散</span></a></li>
+          <li><a class="nav-link" href="Ch02_Atomic_Structure.html"><span>Ch02 · 原子核粒子、1–20 号电子排布与同位素 Ar</span></a></li>
+          <li><a class="nav-link" href="Ch03_Chemical_Bonding.html"><span>Ch03 · 共价键、离子晶格、巨型共价晶体与金属键</span></a></li>
+          <li><a class="nav-link" href="Ch04_Formulae_and_Equations.html"><span>Ch04 · 化合价推式、配平状态符号与离子方程式</span></a></li>
+          <li><a class="nav-link" href="Ch05_Chemical_Calculations.html"><span>Ch05 · 摩尔计量、气体摩尔体积 24 dm³、滴定与产率</span></a></li>
+          <li><a class="nav-link" href="Ch06_Electrochemistry.html"><span>Ch06 · 电解池半方程式、电镀与氢氧燃料电池</span></a></li>
+          <li><a class="nav-link" href="Ch07_Chemical_Energetics.html"><span>Ch07 · 放热/吸热反应、反应历程图与键能 ΔH 计算</span></a></li>
+          <li><a class="nav-link" href="Ch08_Rates_of_Reaction.html"><span>Ch08 · 反应速率测定实验、影响因素与碰撞理论</span></a></li>
+          <li><a class="nav-link" href="Ch09_Reversible_Reactions_Equilibrium.html"><span>Ch09 · 可逆水合盐、动态平衡移动与哈伯/接触法</span></a></li>
+          <li><a class="nav-link" href="Ch10_Redox_Reactions.html"><span>Ch10 · 氧化还原三维度、氧化数规律与 KMnO₄/KI 检验</span></a></li>
+          <li><a class="nav-link active" href="Ch11_Acids_and_Bases.html"><span>Ch11 · 酸碱质子理论、指示剂（百里酚酞）与四类氧化物</span></a></li>
+          <li><a class="nav-link" href="Ch12_Preparation_of_Salts.html"><span>Ch12 · 盐类溶解性规则、结晶水合物与三大制盐实验路线</span></a></li>
+          <li><a class="nav-link" href="Ch13_The_Periodic_Table.html"><span>Ch13 · 周期表递变、第 I 族碱金属、第 VII 族卤素与过渡金属</span></a></li>
+          <li><a class="nav-link" href="Ch14_Metallic_Elements_and_Alloys.html"><span>Ch14 · 金属通性、Al/Cu 用途关联与合金晶格防滑移机制</span></a></li>
+          <li><a class="nav-link" href="Ch15_Reactivity_of_Metals.html"><span>Ch15 · 金属活动性顺序、Al₂O₃ 钝化膜与金属/氧化物置换</span></a></li>
+          <li><a class="nav-link" href="Ch16_Extraction_and_Corrosion_of_Metals.html"><span>Ch16 · 高炉炼铁五步法、冰晶石炼铝与铁生锈防护</span></a></li>
+          <li><a class="nav-link" href="Ch17_Chemistry_of_Our_Environment.html"><span>Ch17 · 水质检验与净化、NPK 化肥、五大空气污染物与温室效应</span></a></li>
+          <li><a class="nav-link" href="Ch18_Introduction_to_Organic_Chemistry.html"><span>Ch18 · 有机物表示法、同系物、C1–C4 IUPAC 命名与同分异构体</span></a></li>
+          <li><a class="nav-link" href="Ch19_Reactions_of_Organic_Compounds.html"><span>Ch19 · 烷烃取代、烯烃溴水加成、乙醇双制法、羧酸与酯化</span></a></li>
+          <li><a class="nav-link" href="Ch20_Petrochemicals_and_Polymers.html"><span>Ch20 · 石油分馏裂化、加聚与缩聚(尼龙/PET/蛋白质)及塑料污染</span></a></li>
+          <li><a class="nav-link" href="Ch21_Experimental_Design_Separation.html"><span>Ch21 · 实验仪器精度、纸层析 Rf 值与混合分离提纯全法</span></a></li>
+          <li><a class="nav-link" href="Ch22_Chemical_Analysis.html"><span>Ch22 · 阳离子沉淀(NaOH/NH₃)、6 大焰色、7 大阴离子与 6 大气体检验</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-inner">
+        <section class="hero-card" id="top">
+          <h1>Chapter 11: Acids and bases · 第 11 章 · 酸碱质子理论、指示剂（百里酚酞）与四类氧化物</h1>
+          <p class="hero-sub">
+            完整覆盖 <strong>Richard Harwood 第 5 版教材（CUP 2023–2028 新考纲 0620/0971）</strong>本章全部 Core 与 Extended 知识点：<code>11.1 酸碱特征与铵盐反应 · 11.2 pH、thymolphthalein/甲基橙/强弱酸离解 · 11.3 酸/碱/两性(Al₂O₃, ZnO)/中性氧化物</code>，配齐微观机理解析、状态符号方程式、Paper 6 实验控制、SaveMyExams 真题与直接背写概念卡。
+          </p>
+          <div class="hero-badges">
+            <span class="hero-pill">⚗️ Harwood 5th Ed. · 2023–2028</span>
+            <span class="hero-pill">📐 Core + Extended 全区分</span>
+            <span class="hero-pill">🧪 本章专属交互化学实验台</span>
+            <a class="hero-pill" href="#sec-sme" style="text-decoration: none;">📝 直达 SaveMyExams 真题 →</a>
+            <a class="hero-pill" href="#app-concepts" style="text-decoration: none; background: rgba(255,255,255,0.24);">🧠 直达中英概念默写库 →</a>
+          </div>
+          <div class="unit-grid">
+            <a class="unit-tile" href="#sec-11-1">
+              <div class="unit-tile-num">Section 11-1</div>
+              <div class="unit-tile-title">11.1 酸与碱的特征反应、定义辨析及铵盐检验</div>
+            </a>
+            <a class="unit-tile" href="#sec-11-2">
+              <div class="unit-tile-num">Section 11-2</div>
+              <div class="unit-tile-title">11.2 pH 尺度、百里酚酞等指示剂与质子强弱酸理论</div>
+            </a>
+            <a class="unit-tile" href="#sec-11-3">
+              <div class="unit-tile-num">Section 11-3</div>
+              <div class="unit-tile-title">11.3 四大类氧化物的分类、反应与实验鉴别</div>
+            </a>
+            <a class="unit-tile" href="#sec-sme">
+              <div class="unit-tile-num">Section sme</div>
+              <div class="unit-tile-title">SaveMyExams 真题实战演练 · Chapter 11</div>
+            </a>
+          </div>
+        </section>
+
+        <div id="emptySearchNotice" class="callout deep-dive" style="display: none;">
+          <div class="callout-title">🔍 未找到匹配内容</div>
+          <p style="margin-bottom: 0;">请尝试更换关键词，或点击右上角“重置过滤”恢复显示。</p>
+        </div>
+
+<article class="topic-section book-section" id="sec-11-1">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>11.1 酸与碱的特征反应、定义辨析及铵盐检验</h3>
+      <div class="section-en-sub">Characteristic Reactions of Acids &amp; Bases · Alkalis vs Bases · Ammonium Salts</div>
+      <div class="tier-row">
+        <span class="badge-core">Core</span>
+        <span class="badge-ext">Extended</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-11-1">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>一、酸的三大特征反应 (Characteristic Reactions of Acids)</h4>
+    <p>
+      在水中电离出氢离子（hydrogen ions，<code>H<sup>+</sup>(aq)</code>）并使溶液呈酸性的物质称为<strong>酸（acid）</strong>。实验室三大强酸为盐酸（hydrochloric acid，<code>HCl</code>）、硫酸（sulfuric acid，<code>H<sub>2</sub>SO<sub>4</sub></code>）与硝酸（nitric acid，<code>HNO<sub>3</sub></code>）；常见有机弱酸为乙酸（ethanoic acid，<code>CH<sub>3</sub>COOH</code>）。
+    </p>
+    <div class="table-wrap">
+      <table class="chem-table">
+        <thead>
+          <tr>
+            <th>反应通式 (Word Equation)</th>
+            <th>典型方程式 (含状态符号)</th>
+            <th>实验现象与气体检验</th>
+            <th><span class="badge-ext">Extended</span> 净离子方程式</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>酸 + 活泼金属</strong> → 盐 + 氢气<br><small>（仅限于活动性在 H 以上的金属，如 Mg, Zn, Fe；Cu 不反应）</small></td>
+            <td><code>Mg(s) + 2HCl(aq) → MgCl<sub>2</sub>(aq) + H<sub>2</sub>(g)</code><br><code>Zn(s) + H<sub>2</sub>SO<sub>4</sub>(aq) → ZnSO<sub>4</sub>(aq) + H<sub>2</sub>(g)</code></td>
+            <td>金属逐渐溶解，产生大量气泡（effervescence）；用燃着木条靠近管口发出<strong>清脆爆鸣声（squeaky pop）</strong>。</td>
+            <td class="ext-only"><code>Mg(s) + 2H<sup>+</sup>(aq) → Mg<sup>2+</sup>(aq) + H<sub>2</sub>(g)</code></td>
+          </tr>
+          <tr>
+            <td><strong>酸 + 碱（金属氧化物 / 氢氧化物）</strong> → 盐 + 水<br><small>（放热中和反应 Neutralisation）</small></td>
+            <td><code>CuO(s) + H<sub>2</sub>SO<sub>4</sub>(aq) → CuSO<sub>4</sub>(aq) + H<sub>2</sub>O(l)</code><br><code>NaOH(aq) + HCl(aq) → NaCl(aq) + H<sub>2</sub>O(l)</code></td>
+            <td>不溶氧化物（如黑色 CuO）溶解并呈特征盐色（如蓝色）；可溶酸碱中和无气泡但<strong>溶液温度升高</strong>。</td>
+            <td class="ext-only"><code>CuO(s) + 2H<sup>+</sup>(aq) → Cu<sup>2+</sup>(aq) + H<sub>2</sub>O(l)</code><br><code>H<sup>+</sup>(aq) + OH<sup>−</sup>(aq) → H<sub>2</sub>O(l)</code></td>
+          </tr>
+          <tr>
+            <td><strong>酸 + 金属碳酸盐</strong> → 盐 + 水 + 二氧化碳</td>
+            <td><code>CaCO<sub>3</sub>(s) + 2HCl(aq) → CaCl<sub>2</sub>(aq) + H<sub>2</sub>O(l) + CO<sub>2</sub>(g)</code><br><code>CuCO<sub>3</sub>(s) + H<sub>2</sub>SO<sub>4</sub>(aq) → CuSO<sub>4</sub>(aq) + H<sub>2</sub>O(l) + CO<sub>2</sub>(g)</code></td>
+            <td>剧烈起泡（effervescence）；气体通入<strong>澄清石灰水（limewater）变浑浊（turns milky）</strong>。</td>
+            <td class="ext-only"><code>CO<sub>3</sub><sup>2−</sup>(aq) + 2H<sup>+</sup>(aq) → H<sub>2</sub>O(l) + CO<sub>2</sub>(g)</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout common-mistake">
+      <div class="callout-title">⚠️ 易错陷阱：硝酸与金属 / 铜与稀酸</div>
+      <p style="margin-bottom: 0;">
+        1. <strong>铜（Cu）、银（Ag）、金（Au）</strong>在金属活动性顺序中位于氢之后，<strong>不与稀盐酸或稀硫酸反应</strong>；制取铜盐只能用 <code>CuO</code>、<code>Cu(OH)<sub>2</sub></code> 或 <code>CuCO<sub>3</sub></code> 与稀酸反应。<br>
+        2. 稀硝酸具有强氧化性，与金属反应通常不放出纯粹氢气（常产生氮氧化物），因此实验室制 H<sub>2</sub> 选用稀 HCl 或稀 H<sub>2</sub>SO<sub>4</sub>。
+      </p>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>二、碱（Base）与可溶性碱（Alkali）的严格区分</h4>
+    <ul>
+      <li><strong>碱（Base）</strong>：能与酸反应生成盐和水的<strong>金属氧化物或金属氢氧化物</strong>（以及氨 NH<sub>3</sub>）。无论是否溶于水，皆属 Base（例如不溶性的 <code>CuO</code>、<code>Fe<sub>2</sub>O<sub>3</sub></code>、<code>Mg(OH)<sub>2</sub></code>）。</li>
+      <li><strong>可溶性碱（Alkali）</strong>：<strong>溶于水的碱（soluble base）</strong>。其在水溶液中产生过量的氢氧根离子（hydroxide ions，<code>OH<sup>−</sup>(aq)</code>），使溶液呈碱性（pH &gt; 7）。四大典型 Alkali：氢氧化钠 <code>NaOH(aq)</code>、氢氧化钾 <code>KOH(aq)</code>、石灰水 <code>Ca(OH)<sub>2</sub>(aq)</code>（微溶）、氨水 <code>NH<sub>3</sub>(aq)</code>。</li>
+    </ul>
+    <div class="callout examiner-tip">
+      <div class="callout-title">💡 考官满分句式</div>
+      <p style="margin-bottom: 0;">
+        题目问 “What is the difference between a base and an alkali?” 时，务必答出：<strong>All alkalis are bases, and an alkali is a base that dissolves in water (a soluble base) to produce OH<sup>−</sup>(aq) ions.</strong>（所有 alkali 都是 base，但如 CuO 等不溶于水的 base 不是 alkali。）
+      </p>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>三、碱与铵盐的反应及 2023 考纲农业土壤考点</h4>
+    <p>
+      所有碱（包括不溶性或可溶性碱）与<strong>铵盐（ammonium salts，含 <code>NH<sub>4</sub><sup>+</sup></code>）</strong>共热时，都会发生反应并释放出氨气（ammonia，<code>NH<sub>3</sub></code>）：
+    </p>
+    <div class="chem-eq">
+      <div class="chem-eq-main">NH<sub>4</sub>Cl(s/aq) + NaOH(aq) → NaCl(aq) + H<sub>2</sub>O(l) + NH<sub>3</sub>(g)</div>
+      <div class="ext-only"><strong>[Extended] 净离子方程式：</strong><code>NH<sub>4</sub><sup>+</sup>(aq) + OH<sup>−</sup>(aq) → NH<sub>3</sub>(g) + H<sub>2</sub>O(l)</code></div>
+    </div>
+    <ul>
+      <li><strong>氨气特征现象与检验（必考）</strong>：放出无色有强烈刺激性气味的气体，将<strong>湿润的红色石蕊试纸（damp red litmus paper）</strong>靠近管口，试纸<strong>立即变为蓝色（turns blue）</strong>（因为氨气溶于试纸表面水膜形成碱性氨水）。</li>
+      <li><strong>农业应用与 2023–2028 考纲变更说明</strong>：
+        <br>1. <strong>酸性土壤改良</strong>：工业与农业中常撒入碱性的<strong>熟石灰（slaked lime，<code>Ca(OH)<sub>2</sub></code>）</strong>、生石灰（<code>CaO</code>）或石灰石粉（<code>CaCO<sub>3</sub></code>）来中和酸性土壤过量的 <code>H<sup>+</sup></code>（提高土壤 pH 利于作物生长）。<span style="color:var(--mistake-border); font-weight:700;">注意：2023–2028 新考纲已正式删除旧版“测定土壤样品 pH 的繁琐实验步骤”，只需掌握用碱中和酸性土壤的原理即可！</span>
+        <br>2. <strong>高频大题：为何绝对不能将熟石灰 <code>Ca(OH)<sub>2</sub></code> 与铵态氮肥（如硫酸铵 <code>(NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub></code> 或硝酸铵 <code>NH<sub>4</sub>NO<sub>3</sub></code>）同时混合施用？</strong>
+        <br>答：两者发生碱与铵盐的反应：<code>(NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub> + Ca(OH)<sub>2</sub> → CaSO<sub>4</sub> + 2H<sub>2</sub>O + 2NH<sub>3</sub>↑</code>，生成的<strong>氨气（NH<sub>3</sub>）会逸散到空气中</strong>，导致土壤中植物所需的<strong>氮元素（nitrogen content）严重流失，降低肥效</strong>！
+      </li>
+    </ul>
+  </div>
+
+  <div class="worked-example">
+    <div class="worked-title">🧪 例题精析 11.1 · 识别未知碱反应产物与氮肥配伍</div>
+    <p><strong>问题：</strong>某农田土壤呈强酸性（pH 4.5），农夫同时向土壤中施入了硫酸铵 <code>(NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub></code> 与熟石灰 <code>Ca(OH)<sub>2</sub></code>，一段时间后发现土壤仍然缺氮且有刺鼻气味。写出产生刺鼻气味气体的化学方程式，并指出该气体的标准实验室检验现象。</p>
+    <p style="margin-bottom: 0;"><strong>解析：</strong><br>
+      ① 化学方程式：<code>(NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub>(s) + Ca(OH)<sub>2</sub>(s) → CaSO<sub>4</sub>(s) + 2H<sub>2</sub>O(l) + 2NH<sub>3</sub>(g)</code>（核心产物为氨气 <code>NH<sub>3</sub></code> 挥发导致氮流失）。<br>
+      ② 检验操作与现象：将<strong>湿润的红色石蕊试纸（damp red litmus paper）</strong>置于气体上方，试纸<strong>由红变蓝</strong>（不可只写“红色石蕊试纸”，必须强调 <strong>damp / moist</strong>，否则干燥氨气无法电离出 <code>OH<sup>−</sup></code> 使试纸变色！）。
+    </p>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-11-2">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>11.2 pH 尺度、百里酚酞等指示剂与质子强弱酸理论</h3>
+      <div class="section-en-sub">pH Scale · Thymolphthalein &amp; Universal Indicator · Brønsted-Lowry &amp; Strong/Weak Acids</div>
+      <div class="tier-row">
+        <span class="badge-core">Core</span>
+        <span class="badge-ext">Extended</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-11-2">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>一、pH 尺度、水溶液离子本质与 2023 三大必背指示剂</h4>
+    <p>
+      <strong>pH 尺度（0–14）</strong>用于衡量水溶液的酸碱强弱程度（本质取决于溶液中氢离子 <code>H<sup>+</sup>(aq)</code> 与氢氧根离子 <code>OH<sup>−</sup>(aq)</code> 的相对浓度）：
+    </p>
+    <ul>
+      <li><strong>酸性溶液（pH &lt; 7）</strong>：含有过量的 <code>H<sup>+</sup>(aq)</code> 离子；<strong>pH 越低，酸性越强</strong>（<code>H<sup>+</sup></code> 浓度越高，pH 每降 1 级，<code>H<sup>+</sup></code> 浓度增大为 10 倍）。</li>
+      <li><strong>中性溶液（pH = 7）</strong>：纯水等中性溶液中 <code>[H<sup>+</sup>] = [OH<sup>−</sup>]</code>。</li>
+      <li><strong>碱性溶液（pH &gt; 7）</strong>：含有过量的 <code>OH<sup>−</sup>(aq)</code> 离子；<strong>pH 越高，碱性越强</strong>（<code>OH<sup>−</sup></code> 浓度越高）。</li>
+    </ul>
+
+    <div class="callout deep-dive">
+      <div class="callout-title">🚨 2023–2028 新考纲重大更新：百里酚酞 (Thymolphthalein) 全面替代酚酞</div>
+      <p style="margin-bottom: 0;">
+        Cambridge 0620 考纲自 2023 年起正式删除酚酞（phenolphthalein），改用<strong>百里酚酞（thymolphthalein）</strong>作为滴定核心指示剂！务必熟记其独有色变：<br>
+        • 在<strong>酸性及中性溶液</strong>（pH &lt; 9.3）中呈<strong>无色（colourless）</strong>；<br>
+        • 在<strong>碱性溶液</strong>（pH &gt; 10.5）中呈<strong>蓝色（blue）</strong>！
+      </p>
+    </div>
+
+    <div class="table-wrap">
+      <table class="chem-table">
+        <thead>
+          <tr>
+            <th>指示剂 (Indicator)</th>
+            <th>酸性溶液中颜色 (Acidic)</th>
+            <th>中性溶液 (pH 7)</th>
+            <th>碱性溶液中颜色 (Alkaline)</th>
+            <th>主要用途与局限</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>石蕊试纸 / 石蕊液<br>(Litmus)</strong></td>
+            <td><span class="swatch" style="background:#EF4444;"></span><strong>Red (红色)</strong></td>
+            <td><span class="swatch" style="background:#A855F7;"></span>Purple (紫色)</td>
+            <td><span class="swatch" style="background:#2563EB;"></span><strong>Blue (蓝色)</strong></td>
+            <td>快速定性判断酸或碱；无法读出精确 pH，变色不够敏锐极少用于精密滴定。</td>
+          </tr>
+          <tr>
+            <td><strong>甲基橙<br>(Methyl orange)</strong></td>
+            <td><span class="swatch" style="background:#EF4444;"></span><strong>Red (红色)</strong><br><small>(pH &lt; 3.2)</small></td>
+            <td><span class="swatch" style="background:#FACC15;"></span><strong>Yellow (黄色)</strong><br><small>(pH &gt; 4.4；变色点 Orange)</small></td>
+            <td><span class="swatch" style="background:#FACC15;"></span><strong>Yellow (黄色)</strong></td>
+            <td>常用于酸碱滴定（尤其强酸滴弱碱），终点为红 ↔ 橙 ↔ 黄的突变。</td>
+          </tr>
+          <tr>
+            <td><strong>百里酚酞 ⭐2023<br>(Thymolphthalein)</strong></td>
+            <td><span class="swatch" style="background:#F8FAFC;"></span><strong>Colourless (无色)</strong></td>
+            <td><span class="swatch" style="background:#F8FAFC;"></span><strong>Colourless (无色)</strong></td>
+            <td><span class="swatch" style="background:#2563EB;"></span><strong>Blue (蓝色)</strong><br><small>(pH &gt; 9.3 变蓝)</small></td>
+            <td>2023–2028 新考纲指定滴定指示剂（强碱滴定终点 <strong>blue → colourless</strong>）。</td>
+          </tr>
+          <tr>
+            <td><strong>通用指示剂<br>(Universal indicator)</strong></td>
+            <td><span class="swatch" style="background:#EF4444;"></span>红 (pH 1–2) → <span class="swatch" style="background:#F97316;"></span>橙 (3–4) → <span class="swatch" style="background:#EAB308;"></span>黄 (5–6)</td>
+            <td><span class="swatch" style="background:#22C55E;"></span><strong>Green (绿色)</strong></td>
+            <td><span class="swatch" style="background:#14B8A6;"></span>蓝绿 (8–9) → <span class="swatch" style="background:#2563EB;"></span>蓝 (10–11) → <span class="swatch" style="background:#7C3AED;"></span>紫 (12–14)</td>
+            <td>唯一能判断<strong>相对酸碱强弱与近似 pH 整数值</strong>的混合指示剂；测精确小数 pH 需用 <strong>pH 计 (pH meter)</strong>。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <figure class="svg-figure">
+      <svg viewBox="0 0 740 275" width="740" height="275" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="pH 0至14光谱尺度与三大指示剂变色区间图">
+        <rect x="0" y="0" width="740" height="275" rx="10" fill="var(--svg-bg)"/>
+        <text x="370" y="24" text-anchor="middle" font-size="14" font-weight="800" fill="var(--svg-ink)">pH 尺度 (0–14) 与 2023 考纲四大指示剂变色垂直对齐图</text>
+
+        <!-- Label on left for Universal indicator -->
+        <text x="30" y="61" font-size="11" font-weight="800" fill="var(--svg-ink)">① Universal indicator</text>
+
+        <!-- pH 0..14 colored blocks: x from 245 to 710 (15 blocks * 31 = 465) -->
+        <g font-size="10.5" font-weight="800" text-anchor="middle">
+          <rect x="245" y="42" width="31" height="30" fill="#B91C1C" rx="2"/><text x="260.5" y="61" fill="#FFFFFF">0</text>
+          <rect x="276" y="42" width="31" height="30" fill="#DC2626"/><text x="291.5" y="61" fill="#FFFFFF">1</text>
+          <rect x="307" y="42" width="31" height="30" fill="#EA580C"/><text x="322.5" y="61" fill="#FFFFFF">2</text>
+          <rect x="338" y="42" width="31" height="30" fill="#F97316"/><text x="353.5" y="61" fill="#FFFFFF">3</text>
+          <rect x="369" y="42" width="31" height="30" fill="#F59E0B"/><text x="384.5" y="61" fill="#0F172A">4</text>
+          <rect x="400" y="42" width="31" height="30" fill="#EAB308"/><text x="415.5" y="61" fill="#0F172A">5</text>
+          <rect x="431" y="42" width="31" height="30" fill="#84CC16"/><text x="446.5" y="61" fill="#0F172A">6</text>
+          <rect x="462" y="42" width="31" height="30" fill="#16A34A" stroke="#0F172A" stroke-width="1.5"/><text x="477.5" y="61" fill="#FFFFFF">7</text>
+          <rect x="493" y="42" width="31" height="30" fill="#10B981"/><text x="508.5" y="61" fill="#FFFFFF">8</text>
+          <rect x="524" y="42" width="31" height="30" fill="#06B6D4"/><text x="539.5" y="61" fill="#FFFFFF">9</text>
+          <rect x="555" y="42" width="31" height="30" fill="#0284C7"/><text x="570.5" y="61" fill="#FFFFFF">10</text>
+          <rect x="586" y="42" width="31" height="30" fill="#2563EB"/><text x="601.5" y="61" fill="#FFFFFF">11</text>
+          <rect x="617" y="42" width="31" height="30" fill="#4F46E5"/><text x="632.5" y="61" fill="#FFFFFF">12</text>
+          <rect x="648" y="42" width="31" height="30" fill="#6D28D9"/><text x="663.5" y="61" fill="#FFFFFF">13</text>
+          <rect x="679" y="42" width="31" height="30" fill="#581C87" rx="2"/><text x="694.5" y="61" fill="#FFFFFF">14</text>
+        </g>
+
+        <text x="330" y="92" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-red)">强酸 · 过量 H⁺</text>
+        <text x="477.5" y="92" text-anchor="middle" font-size="10.5" font-weight="800" fill="var(--svg-green)">中性 (pH 7 绿)</text>
+        <text x="630" y="92" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-purple)">强碱 · 过量 OH⁻</text>
+
+        <!-- Vertical dashed line at pH 7 -->
+        <line x1="477.5" y1="98" x2="477.5" y2="212" stroke="var(--svg-green)" stroke-width="1.2" stroke-dasharray="3,3"/>
+
+        <!-- 2. Litmus: Red <4.5 (245..385), Purple 4.5..8.3 (385..502), Blue >8.3 (502..710) -->
+        <text x="30" y="128" font-size="11" font-weight="800" fill="var(--svg-ink)">② Litmus (石蕊)</text>
+        <rect x="245" y="114" width="140" height="20" fill="#EF4444" rx="2"/><text x="315" y="128" text-anchor="middle" font-size="10" font-weight="700" fill="#FFFFFF">Red</text>
+        <rect x="385" y="114" width="117" height="20" fill="#9333EA"/><text x="443.5" y="128" text-anchor="middle" font-size="10" font-weight="700" fill="#FFFFFF">Purple (中性)</text>
+        <rect x="502" y="114" width="208" height="20" fill="#2563EB" rx="2"/><text x="606" y="128" text-anchor="middle" font-size="10" font-weight="700" fill="#FFFFFF">Blue (碱性)</text>
+
+        <!-- 3. Methyl orange: Red <3.2 (245..345), Orange 3.2..4.4 (345..390), Yellow >4.4 (390..710) -->
+        <text x="30" y="162" font-size="11" font-weight="800" fill="var(--svg-ink)">③ Methyl orange (甲基橙)</text>
+        <rect x="245" y="148" width="100" height="20" fill="#EF4444" rx="2"/><text x="295" y="162" text-anchor="middle" font-size="10" font-weight="700" fill="#FFFFFF">Red</text>
+        <rect x="345" y="148" width="45" height="20" fill="#FB923C"/><text x="367.5" y="162" text-anchor="middle" font-size="8.5" font-weight="700" fill="#0F172A">Orange</text>
+        <rect x="390" y="148" width="320" height="20" fill="#FACC15" rx="2"/><text x="550" y="162" text-anchor="middle" font-size="10" font-weight="800" fill="#0F172A">Yellow (中性至碱性均呈黄色)</text>
+
+        <!-- 4. Thymolphthalein: Colourless <9.3 (245..535), Transition 9.3..10.5 (535..575), Blue >10.5 (575..710) -->
+        <text x="30" y="196" font-size="11" font-weight="800" fill="var(--svg-red)">④ Thymolphthalein (百里酚酞)</text>
+        <rect x="245" y="182" width="290" height="20" fill="#F8FAFC" stroke="#94A3B8" stroke-width="1.2" rx="2"/><text x="390" y="196" text-anchor="middle" font-size="10" font-weight="700" fill="#334155">Colourless (酸 &amp; 中性均无色!)</text>
+        <rect x="535" y="182" width="40" height="20" fill="#93C5FD"/><text x="555" y="196" text-anchor="middle" font-size="9" font-weight="700" fill="#0F172A">变蓝</text>
+        <rect x="575" y="182" width="135" height="20" fill="#2563EB" rx="2"/><text x="642.5" y="196" text-anchor="middle" font-size="10" font-weight="800" fill="#FFFFFF">Blue (强碱)</text>
+
+        <!-- Footer note -->
+        <rect x="30" y="218" width="680" height="42" rx="6" fill="none" stroke="var(--svg-grid)" stroke-width="1.2"/>
+        <text x="370" y="235" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-ink)">核心考法提醒：在 pH 7 中性点，甲基橙呈 Yellow，百里酚酞呈 Colourless，通用指示剂呈 Green。</text>
+        <text x="370" y="251" text-anchor="middle" font-size="10" fill="var(--svg-muted)">中和净离子反应：H⁺(aq) + OH⁻(aq) → H₂O(l) （酸碱精确中和后两者均不剩余，溶液恢复中性 pH = 7）</text>
+      </svg>
+      <div class="svg-caption">图 11.1 · pH 0–14 光谱、中性离子平衡点与 2023 考纲指示剂变色窗口对比</div>
+    </figure>
+
+    <div class="lab-box" data-lab-type="c11"></div>
+  </div>
+
+  <div class="subtopic ext-only">
+    <h4>二、质子酸碱理论与强酸 vs 弱酸的完全/部分电离 <span class="badge-ext">Extended</span></h4>
+    <p>
+      <strong>布朗斯特-劳里质子理论（Brønsted–Lowry Theory）</strong>将酸碱从水溶液进一步推广到质子（即氢离子 <code>H<sup>+</sup></code>）转移：
+    </p>
+    <ul>
+      <li><strong>酸（Acid）是质子供体（proton donor）</strong>：在反应中给出 <code>H<sup>+</sup></code> 的微粒。如 <code>HCl(g) + H<sub>2</sub>O(l) → H<sub>3</sub>O<sup>+</sup>(aq) + Cl<sup>−</sup>(aq)</code>（或写成 <code>NH<sub>4</sub><sup>+</sup></code> 给 <code>OH<sup>−</sup></code> 一个质子变成 <code>NH<sub>3</sub> + H<sub>2</sub>O</code>）。</li>
+      <li><strong>碱（Base）是质子受体（proton acceptor）</strong>：在反应中接收 <code>H<sup>+</sup></code> 的微粒。如 <code>NH<sub>3</sub>(aq) + H<sub>2</sub>O(l) ⇌ NH<sub>4</sub><sup>+</sup>(aq) + OH<sup>−</sup>(aq)</code>（氨分子接收水给出的质子）。</li>
+    </ul>
+
+    <div class="table-wrap">
+      <table class="chem-table">
+        <thead>
+          <tr>
+            <th>比较维度（取同浓度如 0.1 mol/dm<sup>3</sup>）</th>
+            <th>强酸 (Strong acid，如 HCl)</th>
+            <th>弱酸 (Weak acid，如 CH<sub>3</sub>COOH 乙酸)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>水溶液中电离程度</strong></td>
+            <td><strong>完全电离（completely dissociated）</strong>成离子，无未电离分子留存。</td>
+            <td>仅<strong>部分电离（partially dissociated）</strong>，绝大多数仍以分子形式存在，达到电离平衡。</td>
+          </tr>
+          <tr>
+            <td><strong>电离方程式与符号</strong></td>
+            <td><code>HCl(aq) → H<sup>+</sup>(aq) + Cl<sup>−</sup>(aq)</code>（不可逆单箭头 <code>→</code>）</td>
+            <td><code>CH<sub>3</sub>COOH(aq) ⇌ H<sup>+</sup>(aq) + CH<sub>3</sub>COO<sup>−</sup>(aq)</code>（<strong>必须用可逆符号 <code>⇌</code></strong>！）</td>
+          </tr>
+          <tr>
+            <td><strong>H<sup>+</sup>(aq) 离子浓度</strong></td>
+            <td>较高（等于酸的总浓度 0.1 mol/dm<sup>3</sup>）</td>
+            <td>低得多（仅约 1% 电离，约 0.001 mol/dm<sup>3</sup>）</td>
+          </tr>
+          <tr>
+            <td><strong>pH 值与通用指示剂</strong></td>
+            <td><strong>pH 更低</strong>（约为 1，呈深红色）</td>
+            <td><strong>pH 较高</strong>（约为 3，呈橙黄色）</td>
+          </tr>
+          <tr>
+            <td><strong>导电性（灯泡亮度）</strong></td>
+            <td>自由移动离子总浓度高 → <strong>导电性更强</strong>（灯泡亮）</td>
+            <td>自由移动离子少 → <strong>导电性弱</strong>（灯泡暗）</td>
+          </tr>
+          <tr>
+            <td><strong>与镁带 / CaCO<sub>3</sub> 反应速率与总气量</strong></td>
+            <td>起泡<strong>更剧烈、更快</strong>（速率快）；<br>若两酸体积与摩尔浓度相同，最终产生 H<sub>2</sub> 体积<strong>完全相同</strong>！</td>
+            <td>起泡<strong>较慢</strong>；<br>但随 H<sup>+</sup> 被消耗，平衡不断右移补充电离出全部 H<sup>+</sup>，<strong>最终产生的气体总体积相同！</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout common-mistake">
+      <div class="callout-title">⚠️ 切勿混淆“强弱（Strong/Weak）”与“浓稀（Concentrated/Dilute）”</div>
+      <p style="margin-bottom: 0;">
+        • <strong>强/弱（Strength）</strong>是指酸分子在水中<strong>电离的百分比（extent of dissociation）</strong>，是物质固有性质（稀盐酸依然是强酸，浓醋酸依然是弱酸！）。<br>
+        • <strong>浓/稀（Concentration）</strong>是指单位体积溶液中所含<strong>溶质摩尔数的多少</strong>（mol/dm<sup>3</sup>）。
+      </p>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-11-3">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>11.3 四大类氧化物的分类、反应与实验鉴别</h3>
+      <div class="section-en-sub">Classification of Oxides: Basic, Acidic, Amphoteric (Al₂O₃ / ZnO) &amp; Neutral</div>
+      <div class="tier-row">
+        <span class="badge-core">Core</span>
+        <span class="badge-ext">Extended</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-11-3">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>一、氧化物的四大类别与代表反应方程式</h4>
+    <div class="table-wrap">
+      <table class="chem-table">
+        <thead>
+          <tr>
+            <th>氧化物类别</th>
+            <th>典型组成与必考代表</th>
+            <th>与酸反应？</th>
+            <th>与碱反应？</th>
+            <th>代表反应方程式</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>碱性氧化物<br>(Basic oxides)</strong><br><span class="badge-core">Core</span></td>
+            <td>绝大多数<strong>金属氧化物</strong>：<br><code>Na<sub>2</sub>O, K<sub>2</sub>O, CaO, MgO, CuO, Fe<sub>2</sub>O<sub>3</sub></code></td>
+            <td><strong>是</strong> → 盐 + 水</td>
+            <td><strong>否</strong></td>
+            <td><code>CuO(s) + 2HNO<sub>3</sub>(aq) → Cu(NO<sub>3</sub>)<sub>2</sub>(aq) + H<sub>2</sub>O(l)</code><br><code>CaO(s) + H<sub>2</sub>O(l) → Ca(OH)<sub>2</sub>(aq)</code>（可溶强碱）</td>
+          </tr>
+          <tr>
+            <td><strong>酸性氧化物<br>(Acidic oxides)</strong><br><span class="badge-core">Core</span></td>
+            <td>绝大多数<strong>非金属氧化物</strong>：<br><code>CO<sub>2</sub>, SO<sub>2</sub>, SO<sub>3</sub>, NO<sub>2</sub>, SiO<sub>2</sub>, P<sub>4</sub>O<sub>10</sub></code></td>
+            <td><strong>否</strong></td>
+            <td><strong>是</strong> → 盐 + 水</td>
+            <td><code>SO<sub>2</sub>(g) + 2NaOH(aq) → Na<sub>2</sub>SO<sub>3</sub>(aq) + H<sub>2</sub>O(l)</code><br><code>SiO<sub>2</sub>(s) + CaO(s) → CaSiO<sub>3</sub>(l)</code>（炼铁除脉石）</td>
+          </tr>
+          <tr class="ext-only">
+            <td><strong>两性氧化物<br>(Amphoteric oxides)</strong><br><span class="badge-ext">Extended</span></td>
+            <td>特例金属氧化物（必考两例）：<br><strong><code>Al<sub>2</sub>O<sub>3</sub></code> (氧化铝) 与 <code>ZnO</code> (氧化锌)</strong></td>
+            <td><strong>是</strong> → 盐 + 水</td>
+            <td><strong>是</strong> → 盐 + 水</td>
+            <td>与酸：<code>Al<sub>2</sub>O<sub>3</sub>(s) + 6HCl(aq) → 2AlCl<sub>3</sub>(aq) + 3H<sub>2</sub>O(l)</code><br>与碱：<code>Al<sub>2</sub>O<sub>3</sub>(s) + 2NaOH(aq) → 2NaAlO<sub>2</sub>(aq) + H<sub>2</sub>O(l)</code><br><code>ZnO(s) + 2NaOH(aq) → Na<sub>2</sub>ZnO<sub>2</sub>(aq) + H<sub>2</sub>O(l)</code></td>
+          </tr>
+          <tr class="ext-only">
+            <td><strong>中性氧化物<br>(Neutral oxides)</strong><br><span class="badge-ext">Extended</span></td>
+            <td>少数低价非金属氧化物：<br><strong><code>CO</code> (一氧化碳)、<code>NO</code> (一氧化氮)、<code>H<sub>2</sub>O</code> (水)</strong></td>
+            <td><strong>否</strong></td>
+            <td><strong>否</strong></td>
+            <td>既不与稀酸反应，也不与碱溶液发生中和成盐反应（水本身虽能传递质子，但在氧化物分类中归为中性）。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout deep-dive ext-only">
+      <div class="callout-title">🔬 Extended 拓展：偏铝酸盐与四羟基合配离子的写法</div>
+      <p style="margin-bottom: 0;">
+        在 0620 考纲评分标准中，<code>Al<sub>2</sub>O<sub>3</sub></code> 与过量热 <code>NaOH(aq)</code> 反应的产物既可写简式 <strong>sodium aluminate（<code>NaAlO<sub>2</sub></code> + <code>H<sub>2</sub>O</code>）</strong>，也可写水合配位式 <strong><code>Na[Al(OH)<sub>4</sub>]</code></strong>（此时反应需加 <code>3H<sub>2</sub>O</code> 配平：<code>Al<sub>2</sub>O<sub>3</sub> + 2NaOH + 3H<sub>2</sub>O → 2Na[Al(OH)<sub>4</sub>]</code>）。同样地，<code>ZnO</code> 与 <code>NaOH</code> 可写 <code>Na<sub>2</sub>ZnO<sub>2</sub> + H<sub>2</sub>O</code>（sodium zincate）或 <code>Na<sub>2</sub>[Zn(OH)<sub>4</sub>]</code>，重点在于“两性氧化物既溶于强酸又溶于强碱并生成无色盐溶液”。
+      </p>
+    </div>
+  </div>
+
+  <figure class="svg-figure">
+    <svg viewBox="0 0 740 270" width="740" height="270" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="四大类氧化物实验鉴别树状流程图">
+      <rect x="0" y="0" width="740" height="270" rx="10" fill="var(--svg-bg)"/>
+      <text x="370" y="24" text-anchor="middle" font-size="14" font-weight="800" fill="var(--svg-ink)">未知氧化物 X 的四分类实验鉴别决策树</text>
+
+      <!-- Root -->
+      <rect x="275" y="40" width="190" height="34" rx="6" fill="var(--svg-blue)" opacity="0.16" stroke="var(--svg-blue)" stroke-width="1.8"/>
+      <text x="370" y="61" text-anchor="middle" font-size="12" font-weight="800" fill="var(--svg-ink)">步骤 1：加入过量稀酸 HCl(aq)</text>
+
+      <!-- Branches from Root -->
+      <line x1="315" y1="74" x2="185" y2="108" stroke="var(--svg-green)" stroke-width="2"/>
+      <line x1="425" y1="74" x2="555" y2="108" stroke="var(--svg-red)" stroke-width="2"/>
+      <text x="225" y="92" text-anchor="middle" font-size="10.5" font-weight="800" fill="var(--svg-green)">溶解并成盐 (Yes)</text>
+      <text x="515" y="92" text-anchor="middle" font-size="10.5" font-weight="800" fill="var(--svg-red)">不反应 (No)</text>
+
+      <!-- Step 2 Left & Right -->
+      <rect x="80" y="108" width="210" height="34" rx="6" fill="var(--svg-amber)" opacity="0.14" stroke="var(--svg-amber)" stroke-width="1.8"/>
+      <text x="185" y="129" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-ink)">步骤 2A：再试强碱 NaOH(aq)？</text>
+
+      <rect x="450" y="108" width="210" height="34" rx="6" fill="var(--svg-purple)" opacity="0.14" stroke="var(--svg-purple)" stroke-width="1.8"/>
+      <text x="555" y="129" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-ink)">步骤 2B：再试强碱 NaOH(aq)？</text>
+
+      <!-- Leaf arrows -->
+      <line x1="135" y1="142" x2="95" y2="182" stroke="var(--svg-red)" stroke-width="1.8"/>
+      <line x1="235" y1="142" x2="275" y2="182" stroke="var(--svg-green)" stroke-width="1.8"/>
+      <line x1="505" y1="142" x2="465" y2="182" stroke="var(--svg-green)" stroke-width="1.8"/>
+      <line x1="605" y1="142" x2="645" y2="182" stroke="var(--svg-muted)" stroke-width="1.8"/>
+
+      <text x="103" y="166" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-red)">不反应</text>
+      <text x="267" y="166" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-green)">也溶解！</text>
+      <text x="473" y="166" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-green)">反应成盐</text>
+      <text x="637" y="166" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-muted)">均不反应</text>
+
+      <!-- 4 Leaf Boxes -->
+      <rect x="20" y="182" width="150" height="72" rx="7" fill="var(--svg-blue)" opacity="0.12" stroke="var(--svg-blue)" stroke-width="1.6"/>
+      <text x="95" y="202" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-blue)">碱性氧化物 (Basic)</text>
+      <text x="95" y="220" text-anchor="middle" font-size="10" fill="var(--svg-ink)">CuO, CaO, MgO, Fe₂O₃</text>
+      <text x="95" y="236" text-anchor="middle" font-size="9.5" fill="var(--svg-muted)">仅与酸反应</text>
+
+      <rect x="195" y="182" width="165" height="72" rx="7" fill="var(--svg-amber)" opacity="0.15" stroke="var(--svg-amber)" stroke-width="1.6"/>
+      <text x="277.5" y="202" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-amber)">两性氧化物 (Amphoteric)</text>
+      <text x="277.5" y="220" text-anchor="middle" font-size="10.5" font-weight="800" fill="var(--svg-ink)">Al₂O₃ 与 ZnO (必考!)</text>
+      <text x="277.5" y="236" text-anchor="middle" font-size="9.5" fill="var(--svg-muted)">酸碱通吃均生成盐+水</text>
+
+      <rect x="385" y="182" width="165" height="72" rx="7" fill="var(--svg-red)" opacity="0.12" stroke="var(--svg-red)" stroke-width="1.6"/>
+      <text x="467.5" y="202" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-red)">酸性氧化物 (Acidic)</text>
+      <text x="467.5" y="220" text-anchor="middle" font-size="10" fill="var(--svg-ink)">CO₂, SO₂, SO₃, SiO₂</text>
+      <text x="467.5" y="236" text-anchor="middle" font-size="9.5" fill="var(--svg-muted)">非金属氧化物，仅与碱反应</text>
+
+      <rect x="570" y="182" width="150" height="72" rx="7" fill="var(--svg-muted)" opacity="0.15" stroke="var(--svg-muted)" stroke-width="1.6"/>
+      <text x="645" y="202" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-ink)">中性氧化物 (Neutral)</text>
+      <text x="645" y="220" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-ink)">CO, NO, H₂O</text>
+      <text x="645" y="236" text-anchor="middle" font-size="9.5" fill="var(--svg-muted)">酸碱皆不反应</text>
+    </svg>
+    <div class="svg-caption">图 11.2 · 氧化物的四大类型鉴别实验流程图（Core + Extended 全覆盖）</div>
+  </figure>
+</article>
+
+<article class="topic-section sme-section" id="sec-sme">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>SaveMyExams 真题实战演练 · Chapter 11</h3>
+      <div class="section-en-sub">Paper 2 Multiple Choice &amp; Paper 3/4/6 Structured Questions with Official Mark Schemes</div>
+      <div class="tier-row">
+        <span class="badge-core">Core</span>
+        <span class="badge-ext">Extended</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-sme">○ 标记掌握</button>
+  </div>
+
+  <div class="practice-block" style="margin-top: 0; padding-top: 0; border-top: none;">
+    <div class="practice-heading">📝 Part A · 选择题真题 (Multiple Choice Questions)</div>
+
+    <div class="exam-q" data-mcq-answer="C">
+      <div class="exam-q-head">
+        <span class="q-tag">Q1 · Paper 1/2 · Thymolphthalein &amp; Methyl Orange (2023 新增)</span>
+        <span class="q-marks">[1 mark]</span>
+      </div>
+      <div class="q-stem-en">Aqueous sodium hydroxide is added gradually to excess dilute hydrochloric acid containing a few drops of thymolphthalein, and to a separate sample containing methyl orange. Which row correctly states the initial colours in excess acid?</div>
+      <div class="q-stem-cn">向分别滴有百里酚酞与甲基橙的过量稀盐酸中准备滴加 NaOH 溶液。初始过量酸溶液的颜色组合是哪一项？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><strong>A.</strong> Thymolphthalein: blue ｜ Methyl orange: yellow</button>
+        <button type="button" class="mcq-opt" data-opt="B"><strong>B.</strong> Thymolphthalein: blue ｜ Methyl orange: red</button>
+        <button type="button" class="mcq-opt" data-opt="C"><strong>C.</strong> Thymolphthalein: colourless ｜ Methyl orange: red</button>
+        <button type="button" class="mcq-opt" data-opt="D"><strong>D.</strong> Thymolphthalein: colourless ｜ Methyl orange: yellow</button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！过量稀盐酸呈强酸性（pH &lt; 2）：百里酚酞在酸/中性均呈无色（colourless，碱性才变蓝）；甲基橙在酸性呈红色（red，pH &gt; 4.4 才变黄）。" data-err="❌ 再回忆三大指示剂表：百里酚酞在酸性与中性中为无色（colourless），只在强碱中呈蓝；甲基橙在强酸中为红色（red）。因此应选 C。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head">
+        <span class="q-tag">Q2 · Paper 1/2 · 铵盐与熟石灰混施失肥</span>
+        <span class="q-marks">[1 mark]</span>
+      </div>
+      <div class="q-stem-en">Why should farmers NOT spread calcium hydroxide (slaked lime) and ammonium nitrate fertiliser onto soil at the same time?</div>
+      <div class="q-stem-cn">为什么农民不应同时向土壤施用熟石灰（氢氧化钙）和硝酸铵化肥？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><strong>A.</strong> Calcium hydroxide neutralises the acid needed by plants to dissolve nitrate ions.</button>
+        <button type="button" class="mcq-opt" data-opt="B"><strong>B.</strong> They react together to release ammonia gas, causing loss of nitrogen from the soil.</button>
+        <button type="button" class="mcq-opt" data-opt="C"><strong>C.</strong> Calcium nitrate precipitates as an insoluble solid that roots cannot absorb.</button>
+        <button type="button" class="mcq-opt" data-opt="D"><strong>D.</strong> The mixture releases carbon dioxide which increases soil acidity.</button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！碱（Ca(OH)₂）与铵盐（NH₄NO₃）反应释放出氨气 NH₃↑，导致可被作物吸收的氮素流失到大气中。硝酸钙是完全可溶的（C 错）。" data-err="❌ 铵盐与碱反应会放出氨气 NH₃：NH₄⁺ + OH⁻ → NH₃↑ + H₂O，使肥效（氮元素）以气体形式白白散失，应选 B。"></div>
+    </div>
+
+    <div class="exam-q ext-only" data-mcq-answer="D">
+      <div class="exam-q-head">
+        <span class="q-tag">Q3 · Paper 2 · Strong vs Weak Acid <span class="badge-ext">Extended</span></span>
+        <span class="q-marks">[1 mark]</span>
+      </div>
+      <div class="q-stem-en">Equal volumes of 0.1 mol/dm³ hydrochloric acid and 0.1 mol/dm³ ethanoic acid are reacted separately with an excess of magnesium ribbon. Which statement is correct?</div>
+      <div class="q-stem-cn">将等体积、均为 0.1 mol/dm³ 的稀盐酸和稀乙酸分别与过量镁带反应。下列哪项描述完全正确？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><strong>A.</strong> Ethanoic acid has a lower pH and reacts faster than hydrochloric acid.</button>
+        <button type="button" class="mcq-opt" data-opt="B"><strong>B.</strong> Hydrochloric acid produces twice the total volume of hydrogen gas at the end.</button>
+        <button type="button" class="mcq-opt" data-opt="C"><strong>C.</strong> Ethanoic acid is completely dissociated, so it produces the same volume of hydrogen slower.</button>
+        <button type="button" class="mcq-opt" data-opt="D"><strong>D.</strong> Hydrochloric acid reacts faster initially, but both acids produce the same total volume of hydrogen gas.</button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！盐酸完全电离，起始 H⁺ 浓度更高，故初始反应更快（斜率更陡）；但由于两瓶均为一元酸且总摩尔数 c×V 完全相等、镁又过量，随反应进行乙酸电离平衡右移放出全部 H⁺，最终生成 H₂ 总体积完全相等！" data-err="❌ 注意对比“速率”与“总量”：HCl 完全电离所以起始速率快、pH 低；但两瓶等体积等浓度一元酸含有的可置换氢总量完全相同，镁过量时最终放出 H₂ 总体积相等！选 D。"></div>
+    </div>
+
+    <div class="exam-q ext-only" data-mcq-answer="A">
+      <div class="exam-q-head">
+        <span class="q-tag">Q4 · Paper 2 · Amphoteric &amp; Neutral Oxides <span class="badge-ext">Extended</span></span>
+        <span class="q-marks">[1 mark]</span>
+      </div>
+      <div class="q-stem-en">Which list contains an acidic oxide, a basic oxide, an amphoteric oxide and a neutral oxide, in that order?</div>
+      <div class="q-stem-cn">下列哪一组依次包含：酸性氧化物、碱性氧化物、两性氧化物、中性氧化物？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><strong>A.</strong> SO₂ , CuO , ZnO , CO</button>
+        <button type="button" class="mcq-opt" data-opt="B"><strong>B.</strong> CO₂ , Al₂O₃ , MgO , NO</button>
+        <button type="button" class="mcq-opt" data-opt="C"><strong>C.</strong> CO , CaO , Al₂O₃ , SO₃</button>
+        <button type="button" class="mcq-opt" data-opt="D"><strong>D.</strong> SO₂ , ZnO , CuO , CO₂</button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！SO₂（非金属酸性）、CuO（金属碱性）、ZnO（典型两性，与 Al₂O₃ 同为必考）、CO（中性，不与酸碱反应）。" data-err="❌ 逐个排查：B 中 Al₂O₃ 与 MgO 顺序颠倒；C 中 CO 是中性不是酸性；D 中 ZnO 与 CuO 顺序颠倒。正确顺序为 A。"></div>
+    </div>
+
+    <div class="exam-q ext-only" data-mcq-answer="B">
+      <div class="exam-q-head">
+        <span class="q-tag">Q5 · Paper 2 · Brønsted-Lowry Proton Transfer <span class="badge-ext">Extended</span></span>
+        <span class="q-marks">[1 mark]</span>
+      </div>
+      <div class="q-stem-en">In the equilibrium reaction NH₃(aq) + H₂O(l) ⇌ NH₄⁺(aq) + OH⁻(aq), which two species act as Brønsted–Lowry bases?</div>
+      <div class="q-stem-cn">在平衡反应 NH₃(aq) + H₂O(l) ⇌ NH₄⁺(aq) + OH⁻(aq) 中，哪两个微粒起质子受体（碱）的作用？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><strong>A.</strong> H₂O and NH₄⁺</button>
+        <button type="button" class="mcq-opt" data-opt="B"><strong>B.</strong> NH₃ and OH⁻</button>
+        <button type="button" class="mcq-opt" data-opt="C"><strong>C.</strong> NH₃ and H₂O</button>
+        <button type="button" class="mcq-opt" data-opt="D"><strong>D.</strong> NH₄⁺ and OH⁻</button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！正反应中 NH₃ 接收 H⁺ 变成 NH₄⁺（故 NH₃ 为碱）；逆反应中 OH⁻ 接收 NH₄⁺ 交还的 H⁺ 变回 H₂O（故 OH⁻ 也为碱）。" data-err="❌ 记住：Base = proton (H⁺) acceptor。正看谁得到 H⁺ 变成新微粒：NH₃ → NH₄⁺；逆看谁得到 H⁺ 变回原微粒：OH⁻ → H₂O。故答案选 B。"></div>
+    </div>
+  </div>
+
+  <div class="practice-block">
+    <div class="practice-heading">✍️ Part B · 结构化大题 (Structured Questions &amp; Official Mark Scheme)</div>
+
+    <div class="exam-q">
+      <div class="exam-q-head">
+        <span class="q-tag">Structured Q1 · Paper 3/4 · 酸碱特征、碱与铵盐及氨气检验</span>
+        <span class="q-marks">[6 marks]</span>
+      </div>
+      <div class="q-stem-en">
+        (a) Copper(II) oxide is an insoluble base. Explain the difference between a base and an alkali. [2]<br>
+        (b) Write a balanced symbol equation, including state symbols, for the reaction of solid copper(II) carbonate with dilute sulfuric acid. [2]<br>
+        (c) When solid ammonium sulfate is warmed with aqueous sodium hydroxide, a gas is produced. Describe the chemical test for this gas and write the ionic equation for its formation. [2]
+      </div>
+      <div class="q-stem-cn">
+        (a) 氧化铜是一种不溶性碱。解释 base 与 alkali 的区别。[2]<br>
+        (b) 写出固体碳酸铜(II)与稀硫酸反应的配平化学方程式（含状态符号）。[2]<br>
+        (c) 固体硫酸铵与氢氧化钠溶液共热放出一种气体。描述该气体的化学检验方法与现象，并写出生成该气体的离子方程式。[2]
+      </div>
+      <details class="ms-details">
+        <summary>查看官方评分标准 (Mark Scheme) 与逐分拆解</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">(a) [2]</span> Base is a substance (metal oxide/hydroxide) that reacts with / neutralises an acid (or proton acceptor) [1]; an alkali is a <strong>soluble base</strong> / base that dissolves in water (releasing OH<sup>−</sup> ions) [1].</p>
+          <p><span class="ms-mark">(b) [2]</span> <code>CuCO<sub>3</sub>(s) + H<sub>2</sub>SO<sub>4</sub>(aq) → CuSO<sub>4</sub>(aq) + H<sub>2</sub>O(l) + CO<sub>2</sub>(g)</code> — formulae correct [1]; state symbols all correct [1].</p>
+          <p><span class="ms-mark">(c) [2]</span> Gas turns <strong>damp red litmus paper blue</strong> (ammonia) [1]; ionic equation: <code>NH<sub>4</sub><sup>+</sup>(aq) + OH<sup>−</sup>(aq) → NH<sub>3</sub>(g) + H<sub>2</sub>O(l)</code> [1].</p>
+          <p class="ms-cn">中文易错提示：(c) 检验氨气必须写明试纸是<strong>湿润的（damp / moist）红色石蕊试纸</strong>，否则漏掉“damp”会扣掉过程分！</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q ext-only">
+      <div class="exam-q-head">
+        <span class="q-tag">Structured Q2 · Paper 4 · 强酸与弱酸电离对比实验 <span class="badge-ext">Extended</span></span>
+        <span class="q-marks">[6 marks]</span>
+      </div>
+      <div class="q-stem-en">
+        A student tests 25.0 cm³ of 0.50 mol/dm³ hydrochloric acid (pH 0.3) and 25.0 cm³ of 0.50 mol/dm³ ethanoic acid (pH 2.5).<br>
+        (a) Explain, in terms of dissociation, why ethanoic acid has a higher pH than hydrochloric acid of the same concentration. Write an equation to show the dissociation of ethanoic acid. [3]<br>
+        (b) Excess calcium carbonate powder is added to each acid separately. Compare the initial rate of reaction and the final total volume of carbon dioxide produced. Explain both observations. [3]
+      </div>
+      <div class="q-stem-cn">
+        学生分别测试 25.0 cm³ 的 0.50 mol/dm³ 盐酸（pH 0.3）和 0.50 mol/dm³ 乙酸（pH 2.5）。<br>
+        (a) 从电离角度解释为何同浓度乙酸 pH 更高，并写出乙酸电离方程式。[3]<br>
+        (b) 分别向两酸加入过量碳酸钙粉末。比较起始反应速率和最终收集到的 CO₂ 总体积，并给出解释。[3]
+      </div>
+      <details class="ms-details">
+        <summary>查看官方评分标准 (Mark Scheme) 与逐分拆解</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">(a) [3]</span> Hydrochloric acid is a strong acid that is <strong>completely dissociated</strong> [1]; ethanoic acid is a weak acid that is <strong>partially dissociated</strong>, so it has a <strong>lower concentration of H<sup>+</sup>(aq) ions</strong> (hence higher pH) [1]; equation with reversible arrow: <code>CH<sub>3</sub>COOH(aq) ⇌ CH<sub>3</sub>COO<sup>−</sup>(aq) + H<sup>+</sup>(aq)</code> [1].</p>
+          <p><span class="ms-mark">(b) [3]</span> Initial rate is <strong>faster with HCl</strong> due to higher initial H<sup>+</sup> concentration / higher frequency of successful collisions [1]; final total volume of CO<sub>2</sub> is <strong>the same</strong> for both acids [1]; because both acids have the <strong>same number of moles</strong> of replaceable H<sup>+</sup> (as ethanoic acid equilibrium shifts right as H<sup>+</sup> reacts until all acid is consumed) [1].</p>
+          <p class="ms-cn">中文易错提示：方程里务必使用可逆箭头 <code>⇌</code>；(b) 若漏掉“相同总摩尔数”解释而只答出体积相等，将只拿 2 分而非 3 分。</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q ext-only">
+      <div class="exam-q-head">
+        <span class="q-tag">Structured Q3 · Paper 4 · 四大类氧化物盲样鉴别 <span class="badge-ext">Extended</span></span>
+        <span class="q-marks">[5 marks]</span>
+      </div>
+      <div class="q-stem-en">
+        Consider the four oxides: carbon monoxide (CO), sulfur dioxide (SO₂), aluminium oxide (Al₂O₃) and magnesium oxide (MgO).<br>
+        (a) Classify each of the four oxides as acidic, basic, amphoteric or neutral. [2]<br>
+        (b) Write balanced symbol equations for the reactions of aluminium oxide with (i) dilute hydrochloric acid and (ii) hot aqueous sodium hydroxide. [3]
+      </div>
+      <div class="q-stem-cn">
+        现有四种氧化物：CO、SO₂、Al₂O₃ 和 MgO。<br>
+        (a) 将上述四种氧化物分别归类为酸性、碱性、两性或中性氧化物。[2]<br>
+        (b) 写出 Al₂O₃ 分别与 (i) 稀盐酸，(ii) 热氢氧化钠溶液反应的配平化学方程式。[3]
+      </div>
+      <details class="ms-details">
+        <summary>查看官方评分标准 (Mark Scheme) 与逐分拆解</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">(a) [2]</span> CO = neutral, SO₂ = acidic, Al₂O₃ = amphoteric, MgO = basic (all 4 correct = [2]; 2–3 correct = [1]).</p>
+          <p><span class="ms-mark">(b) [3]</span> (i) <code>Al<sub>2</sub>O<sub>3</sub> + 6HCl → 2AlCl<sub>3</sub> + 3H<sub>2</sub>O</code> [1]; (ii) <code>Al<sub>2</sub>O<sub>3</sub> + 2NaOH → 2NaAlO<sub>2</sub> + H<sub>2</sub>O</code> (or <code>Al<sub>2</sub>O<sub>3</sub> + 2NaOH + 3H<sub>2</sub>O → 2Na[Al(OH)<sub>4</sub>]</code>) — correct product formulae [1], balanced [1].</p>
+          <p class="ms-cn">中文易错提示：记住铝（Al）和锌（Zn）的氧化物及氢氧化物是考纲仅有的必考两性体系，非金属低价氧化物 CO 与 NO 属于中性氧化物（不溶于碱）。</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head">
+        <span class="q-tag">Structured Q4 · Paper 6 · 百里酚酞滴定变色与中和现象判读 (2023 新增)</span>
+        <span class="q-marks">[5 marks]</span>
+      </div>
+      <div class="q-stem-en">
+        A student carries out a titration by adding dilute nitric acid from a burette into 25.0 cm³ of aqueous potassium hydroxide containing a few drops of thymolphthalein.<br>
+        (a) State the colour change seen in the conical flask at the end-point. [2]<br>
+        (b) Explain why universal indicator is NOT suitable for an accurate titration. [2]<br>
+        (c) Write the net ionic equation for the neutralisation reaction taking place. [1]
+      </div>
+      <div class="q-stem-cn">
+        学生用滴定管将稀硝酸滴入盛有 25.0 cm³ 氢氧化钾溶液和数滴百里酚酞（thymolphthalein）的锥形瓶中。<br>
+        (a) 写出滴定终点时锥形瓶内的颜色变化。[2]<br>
+        (b) 解释为何通用指示剂（universal indicator）不适用于精密滴定。[2]<br>
+        (c) 写出该中和反应的净离子方程式。[1]
+      </div>
+      <details class="ms-details">
+        <summary>查看官方评分标准 (Mark Scheme) 与逐分拆解</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">(a) [2]</span> From <strong>blue</strong> [1] to <strong>colourless</strong> [1] (NOT "clear" — colourless means no colour!).</p>
+          <p><span class="ms-mark">(b) [2]</span> Universal indicator undergoes a <strong>gradual / continuous range of colour changes</strong> over a wide pH range [1], so there is <strong>no sharp end-point</strong> [1].</p>
+          <p><span class="ms-mark">(c) [1]</span> <code>H<sup>+</sup>(aq) + OH<sup>−</sup>(aq) → H<sub>2</sub>O(l)</code> [1].</p>
+          <p class="ms-cn">中文易错提示：Paper 6 必抓用词！“无色”必须写 <strong>colourless</strong>，写 “clear” 或 “transparent” 零分（硫酸铜蓝色溶液也是 clear 透明的！）。</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section" id="app-concepts">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>中英核心概念默写库 · Chapter 11</h3>
+      <div class="section-en-sub">Active Recall Flashcards — 遮罩自测 · 点击卡片单张揭晓关键词</div>
+      <div class="tier-row">
+        <span class="badge-core">Core</span>
+        <span class="badge-ext">Extended</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="app-concepts">○ 标记掌握</button>
+  </div>
+
+  <div class="concept-toolbar">
+    <div class="concept-filter-group" id="conceptFilterTabs">
+      <button type="button" class="tab-btn active" data-concept-part="all">全部概念</button>
+      <button type="button" class="tab-btn" data-concept-part="11.1">11.1 酸碱与铵盐</button>
+      <button type="button" class="tab-btn" data-concept-part="11.2">11.2 pH 与强弱酸</button>
+      <button type="button" class="tab-btn" data-concept-part="11.3">11.3 四类氧化物</button>
+    </div>
+    <div class="concept-actions">
+      <span class="concept-count-pill" id="conceptCountPill">显示 18 / 18 题</span>
+      <button type="button" class="tab-btn" id="conceptQuizToggle">🙈 开启遮罩自测</button>
+    </div>
+  </div>
+
+  <div class="concept-grid" id="conceptGrid">
+    <div class="concept-card" data-part="11.1">
+      <div class="cq-head"><span class="q-tag">11.1 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">State the products when a dilute acid reacts with a reactive metal (above H).</div>
+      <div class="cq-cn">写出稀酸与氢前活泼金属反应的产物及气体检验现象。</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击揭晓答案与关键词</div><div class="cq-answer-inner">生成 <span class="kw">salt + hydrogen gas (H₂)</span>；用燃着木条靠近发出 <span class="kw">squeaky pop</span> 爆鸣声。</div></div>
+    </div>
+
+    <div class="concept-card" data-part="11.1">
+      <div class="cq-head"><span class="q-tag">11.1 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">State the products of an acid reacting with a metal carbonate, and the gas test.</div>
+      <div class="cq-cn">写出酸与金属碳酸盐反应的全部产物及气体检验标准结论。</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击揭晓答案与关键词</div><div class="cq-answer-inner">生成 <span class="kw">salt + water + carbon dioxide (CO₂)</span>；气体使 <span class="kw">limewater turns milky</span>（澄清石灰水变浑浊）。</div></div>
+    </div>
+
+    <div class="concept-card" data-part="11.1">
+      <div class="cq-head"><span class="q-tag">11.1 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Distinguish between a "base" and an "alkali".</div>
+      <div class="cq-cn">严谨区分“碱（base）”与“可溶性碱（alkali）”。</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击揭晓答案与关键词</div><div class="cq-answer-inner"><span class="kw">Base</span> 是能中和酸的金属氧化物或氢氧化物；<span class="kw">Alkali</span> 是<span class="kw">溶于水的碱（soluble base）</span>，水溶液中产生过量 <span class="kw">OH⁻(aq)</span>。</div></div>
+    </div>
+
+    <div class="concept-card" data-part="11.1">
+      <div class="cq-head"><span class="q-tag">11.1 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">What happens when an ammonium salt is warmed with an alkali? How is the gas tested?</div>
+      <div class="cq-cn">铵盐与碱共热产生什么反应？该气体如何检验？</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击揭晓答案与关键词</div><div class="cq-answer-inner">生成盐、水和刺激性 <span class="kw">ammonia gas (NH₃)</span>；使 <span class="kw">damp red litmus paper turns blue</span>（湿润红石蕊变蓝）。</div></div>
+    </div>
+
+    <div class="concept-card" data-part="11.1">
+      <div class="cq-head"><span class="q-tag">11.1 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Why must slaked lime Ca(OH)₂ not be mixed with ammonium fertilisers on acidic soil?</div>
+      <div class="cq-cn">为什么不能把熟石灰 Ca(OH)₂ 与铵态氮肥混施在酸性土壤上？</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击揭晓答案与关键词</div><div class="cq-answer-inner">二者反应放出 <span class="kw">ammonia gas (NH₃)</span> 逸散入空气，导致土壤中宝贵的 <span class="kw">nitrogen content lost</span>（氮肥流失）。</div></div>
+    </div>
+
+    <div class="concept-card" data-part="11.2">
+      <div class="cq-head"><span class="q-tag">11.2 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Which ions are in excess in (i) acidic aqueous solutions and (ii) alkaline solutions?</div>
+      <div class="cq-cn">水溶液呈现酸性和碱性分别是由于哪种离子过量？</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击揭晓答案与关键词</div><div class="cq-answer-inner">酸性溶液含过量 <span class="kw">H⁺(aq) (hydrogen ions)</span>；碱性溶液含过量 <span class="kw">OH⁻(aq) (hydroxide ions)</span>。</div></div>
+    </div>
+
+    <div class="concept-card" data-part="11.2">
+      <div class="cq-head"><span class="q-tag">11.2 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Write the net ionic equation for any aqueous neutralisation reaction.</div>
+      <div class="cq-cn">写出所有酸碱水溶液中和反应的净离子方程式。</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击揭晓答案与关键词</div><div class="cq-answer-inner"><span class="kw">H⁺(aq) + OH⁻(aq) → H₂O(l)</span></div></div>
+    </div>
+
+    <div class="concept-card" data-part="11.2">
+      <div class="cq-head"><span class="q-tag">11.2 · Core (2023 新增)</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">State the colour of thymolphthalein in acidic, neutral and alkaline solutions.</div>
+      <div class="cq-cn">写出 2023 新增百里酚酞（thymolphthalein）在酸、中、碱性中的颜色。</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击揭晓答案与关键词</div><div class="cq-answer-inner">酸性与中性均呈 <span class="kw">colourless (无色)</span>；碱性溶液呈 <span class="kw">blue (蓝色)</span>。</div></div>
+    </div>
+
+    <div class="concept-card" data-part="11.2">
+      <div class="cq-head"><span class="q-tag">11.2 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">State the colour of methyl orange in acidic and alkaline solutions.</div>
+      <div class="cq-cn">写出甲基橙（methyl orange）在酸性、过渡点及碱性中的颜色。</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击揭晓答案与关键词</div><div class="cq-answer-inner">酸性：<span class="kw">red (红色)</span>；滴定过渡点：<span class="kw">orange</span>；中性及碱性：<span class="kw">yellow (黄色)</span>。</div></div>
+    </div>
+
+    <div class="concept-card" data-part="11.2">
+      <div class="cq-head"><span class="q-tag">11.2 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">How do Universal indicator and a pH meter compare when measuring pH?</div>
+      <div class="cq-cn">通用指示剂和 pH 计（pH meter）在测定 pH 时各自特点与色变？</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击揭晓答案与关键词</div><div class="cq-answer-inner">通用指示剂随 pH 呈 <span class="kw">红→橙→黄→绿(pH 7)→蓝→紫</span>，只能测近似整数值；<span class="kw">pH meter</span> 可电子直读精确小数 pH 值（无色彩主观误差）。</div></div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="11.2">
+      <div class="cq-head"><span class="q-tag">11.2 · Extended</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">Define an acid and a base in terms of proton transfer (Brønsted–Lowry).</div>
+      <div class="cq-cn">用质子转移理论定义酸和碱。</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击揭晓答案与关键词</div><div class="cq-answer-inner">Acid is a <span class="kw">proton (H⁺) donor</span>（质子供体）；Base is a <span class="kw">proton (H⁺) acceptor</span>（质子受体）。</div></div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="11.2">
+      <div class="cq-head"><span class="q-tag">11.2 · Extended</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">Define a strong acid and a weak acid, giving an example equation for each.</div>
+      <div class="cq-cn">定义强酸与弱酸，并写出电离方程式。</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击揭晓答案与关键词</div><div class="cq-answer-inner">强酸在水溶液中 <span class="kw">completely dissociated</span>（如 <code>HCl → H⁺ + Cl⁻</code>）；弱酸仅 <span class="kw">partially dissociated</span>（如 <code>CH₃COOH ⇌ H⁺ + CH₃COO⁻</code>，用可逆号 <code>⇌</code>）。</div></div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="11.2">
+      <div class="cq-head"><span class="q-tag">11.2 · Extended</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">Compare 0.1 mol/dm³ HCl and 0.1 mol/dm³ CH₃COOH in pH, conductivity, and H₂ volume with excess Mg.</div>
+      <div class="cq-cn">对比等体积同浓度 HCl 与乙酸的 pH、导电性、起泡速度及与过量镁反应最终产气量。</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击揭晓答案与关键词</div><div class="cq-answer-inner">HCl 的 <span class="kw">pH 更低、导电性更强、初期反应更快</span>；但由于总摩尔数相等且平衡会持续右移补齐，二者最终产生的 H₂ 总体积 <span class="kw">the same</span>。</div></div>
+    </div>
+
+    <div class="concept-card" data-part="11.3">
+      <div class="cq-head"><span class="q-tag">11.3 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">What are basic oxides and acidic oxides? Give two examples of each.</div>
+      <div class="cq-cn">什么是碱性氧化物与酸性氧化物？各举两例。</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击揭晓答案与关键词</div><div class="cq-answer-inner"><span class="kw">Basic oxides</span> 属于金属氧化物（如 CuO, CaO），仅与酸成盐和水；<span class="kw">Acidic oxides</span> 属于非金属氧化物（如 CO₂, SO₂），与碱成盐和水。</div></div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="11.3">
+      <div class="cq-head"><span class="q-tag">11.3 · Extended</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">Define an amphoteric oxide and name the two key syllabus examples.</div>
+      <div class="cq-cn">定义两性氧化物并列出考纲必背的两种物质。</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击揭晓答案与关键词</div><div class="cq-answer-inner">既能与 <span class="kw">acids</span> 反应又能与 <span class="kw">bases/alkalis</span> 反应生成盐和水的氧化物；必考两例为 <span class="kw">Al₂O₃ (aluminium oxide)</span> 与 <span class="kw">ZnO (zinc oxide)</span>。</div></div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="11.3">
+      <div class="cq-head"><span class="q-tag">11.3 · Extended</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">Write balanced equations for ZnO reacting with HCl and with NaOH.</div>
+      <div class="cq-cn">写出氧化锌分别与稀盐酸和氢氧化钠溶液反应的方程式。</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击揭晓答案与关键词</div><div class="cq-answer-inner">与酸：<code>ZnO + 2HCl → ZnCl₂ + H₂O</code>；与碱：<span class="kw"><code>ZnO + 2NaOH → Na₂ZnO₂ + H₂O</code></span>（或 <code>Na₂[Zn(OH)₄]</code>）。</div></div>
+    </div>
+
+    <div class="concept-card ext-only" data-part="11.3">
+      <div class="cq-head"><span class="q-tag">11.3 · Extended</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">Define a neutral oxide and list three examples.</div>
+      <div class="cq-cn">什么是中性氧化物？列出三种常见代表。</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击揭晓答案与关键词</div><div class="cq-answer-inner"><span class="kw">既不与酸也不与碱反应</span>（react with neither acids nor bases）的氧化物；代表：<span class="kw">CO, NO, H₂O</span>。</div></div>
+    </div>
+
+    <div class="concept-card" data-part="11.2">
+      <div class="cq-head"><span class="q-tag">11.2 · Core</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Why must "colourless" rather than "clear" be written when describing thymolphthalein in acid?</div>
+      <div class="cq-cn">在 Paper 6 考试中描述百里酚酞褪色或酸性色泽时为何禁用 “clear”？</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击揭晓答案与关键词</div><div class="cq-answer-inner">“clear” 仅表示透明无悬浮沉淀（如蓝色 CuSO₄ 溶液也是 clear 的）；表示没有颜色必须写 <span class="kw">colourless</span>！</div></div>
+    </div>
+  </div>
+</article>
+
+
+        <nav class="chapter-pager" aria-label="章节切换导航">
+          <div><a class="pager-btn" href="Ch10_Redox_Reactions.html">← Ch10 氧化还原三维度、氧化数规律与 KMnO₄/KI 检验</a></div>
+          <div><a class="pager-btn primary" href="index.html">🏠 返回 22 章全书总目录</a></div>
+          <div><a class="pager-btn" href="Ch12_Preparation_of_Salts.html">Ch12 盐类溶解性规则、结晶水合物与三大制盐实验路线 →</a></div>
+        </nav>
+      </div>
+    </main>
+  </div>
+
+  <button type="button" class="back-top-btn" id="backTopBtn" title="返回顶部">↑</button>
+
+  <script>
+(function () {
+  'use strict';
+
+  const THEME_KEY = 'igcse_chem0620_theme';
+  const chapterCode = (document.body && document.body.getAttribute('data-chapter-code')) || 'HUB';
+  const STORAGE_PREFIX = 'igcse_chem0620_' + chapterCode.toLowerCase() + '_';
+  const htmlEl = document.documentElement;
+  const bodyEl = document.body;
+
+  // All state variables declared cleanly at top of IIFE (prevents TDZ errors)
+  let currentViewMode = localStorage.getItem(STORAGE_PREFIX + 'viewMode') || 'all';
+  let activeConceptPart = 'all';
+  let quizMasked = localStorage.getItem(STORAGE_PREFIX + 'quizMasked') === '1';
+  let allMsExpanded = false;
+  let masteredIds = [];
+  try {
+    masteredIds = JSON.parse(localStorage.getItem(STORAGE_PREFIX + 'mastered') || '[]');
+    if (!Array.isArray(masteredIds)) masteredIds = [];
+  } catch (e) {
+    masteredIds = [];
+  }
+
+  // ---------- 1. Theme Toggle ----------
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+
+  function applyTheme(theme) {
+    htmlEl.setAttribute('data-theme', theme);
+    if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem(THEME_KEY, theme);
+  }
+  applyTheme(localStorage.getItem(THEME_KEY) || 'light');
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      applyTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  }
+
+  // ---------- 2. View Mode Filter (All / Core / Extended / SME) ----------
+  function applyViewMode(mode) {
+    currentViewMode = mode;
+    bodyEl.classList.remove('mode-core', 'mode-ext', 'mode-book', 'mode-sme');
+    if (mode === 'core') bodyEl.classList.add('mode-core');
+    if (mode === 'ext') bodyEl.classList.add('mode-ext');
+    if (mode === 'sme') bodyEl.classList.add('mode-sme');
+    document.querySelectorAll('[data-view-mode]').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-view-mode') === mode);
+    });
+    localStorage.setItem(STORAGE_PREFIX + 'viewMode', mode);
+    filterConcepts();
+  }
+  document.querySelectorAll('[data-view-mode]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      applyViewMode(btn.getAttribute('data-view-mode'));
+    });
+  });
+
+  // ---------- 3. Sidebar Drawer & Accordion ----------
+  const sidebar = document.getElementById('sidebar');
+  const menuToggle = document.getElementById('menuToggle');
+  if (menuToggle && sidebar) {
+    menuToggle.addEventListener('click', function () { sidebar.classList.toggle('open'); });
+    sidebar.querySelectorAll('.nav-link').forEach(function (lnk) {
+      lnk.addEventListener('click', function () {
+        if (window.innerWidth <= 980) sidebar.classList.remove('open');
+      });
+    });
+  }
+  document.querySelectorAll('.nav-unit-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const unit = btn.closest('.nav-unit');
+      if (unit) unit.classList.toggle('collapsed');
+    });
+  });
+
+  // ---------- 4. Mastery Progress Tracker ----------
+  const progressText = document.getElementById('progressText');
+  const progressFill = document.getElementById('progressFill');
+  const masterBtns = Array.from(document.querySelectorAll('.master-btn'));
+  const totalSections = masterBtns.length;
+  const validIds = new Set(masterBtns.map(function (b) { return b.getAttribute('data-section-id'); }));
+
+  function renderMastery() {
+    const doneList = masteredIds.filter(function (id) { return validIds.has(id); });
+    localStorage.setItem(STORAGE_PREFIX + 'total', String(totalSections));
+    if (progressText) progressText.textContent = doneList.length + '/' + totalSections;
+    if (progressFill && totalSections > 0) {
+      progressFill.style.width = Math.round((doneList.length / totalSections) * 100) + '%';
+    }
+    masterBtns.forEach(function (btn) {
+      const sid = btn.getAttribute('data-section-id');
+      const done = doneList.indexOf(sid) !== -1;
+      btn.classList.toggle('is-mastered', done);
+      btn.textContent = done ? '✓ 已掌握' : '○ 标记掌握';
+    });
+    document.querySelectorAll('.nav-link').forEach(function (lnk) {
+      const id = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('mastered', doneList.indexOf(id) !== -1);
+    });
+  }
+  masterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const sid = btn.getAttribute('data-section-id');
+      const idx = masteredIds.indexOf(sid);
+      if (idx === -1) masteredIds.push(sid);
+      else masteredIds.splice(idx, 1);
+      localStorage.setItem(STORAGE_PREFIX + 'mastered', JSON.stringify(masteredIds));
+      renderMastery();
+    });
+  });
+  if (totalSections > 0) renderMastery();
+
+  // ---------- 5. Global Toggle Details & Print ----------
+  const toggleAllMs = document.getElementById('toggleAllMs');
+  if (toggleAllMs) {
+    toggleAllMs.addEventListener('click', function () {
+      allMsExpanded = !allMsExpanded;
+      document.querySelectorAll('details.ms-details').forEach(function (det) { det.open = allMsExpanded; });
+      const lbl = toggleAllMs.querySelector('.btn-label');
+      if (lbl) lbl.textContent = allMsExpanded ? '收起解析' : '展开解析';
+      toggleAllMs.classList.toggle('active', allMsExpanded);
+    });
+  }
+  const printBtn = document.getElementById('printBtn');
+  if (printBtn) printBtn.addEventListener('click', function () { window.print(); });
+
+  // ---------- 6. Instant Search ----------
+  const searchInput = document.getElementById('searchInput');
+  const searchClear = document.getElementById('searchClear');
+  const searchBar = document.getElementById('searchBar');
+  const searchSummary = document.getElementById('searchSummary');
+  const searchResetBtn = document.getElementById('searchResetBtn');
+  const emptySearchNotice = document.getElementById('emptySearchNotice');
+
+  function runSearch() {
+    if (!searchInput) return;
+    const raw = searchInput.value.trim().toLowerCase();
+    if (searchClear) searchClear.style.display = raw ? 'block' : 'none';
+    const sections = Array.from(document.querySelectorAll('.topic-section'));
+    if (!raw) {
+      sections.forEach(function (s) { s.classList.remove('search-dim'); });
+      if (searchBar) searchBar.classList.remove('visible');
+      if (emptySearchNotice) emptySearchNotice.style.display = 'none';
+      return;
+    }
+    let hits = 0;
+    sections.forEach(function (sec) {
+      const ok = sec.textContent.toLowerCase().indexOf(raw) !== -1;
+      sec.classList.toggle('search-dim', !ok);
+      if (ok) hits++;
+    });
+    if (searchBar) searchBar.classList.add('visible');
+    if (searchSummary) searchSummary.textContent = '关键词 “' + searchInput.value.trim() + '” 匹配 ' + hits + ' 个板块';
+    if (emptySearchNotice) emptySearchNotice.style.display = hits === 0 ? 'block' : 'none';
+  }
+  if (searchInput) searchInput.addEventListener('input', runSearch);
+  function resetSearch() { if (searchInput) searchInput.value = ''; runSearch(); }
+  if (searchClear) searchClear.addEventListener('click', resetSearch);
+  if (searchResetBtn) searchResetBtn.addEventListener('click', resetSearch);
+
+  // ---------- 7. Interactive MCQ Grading ----------
+  document.querySelectorAll('.exam-q[data-mcq-answer]').forEach(function (qBox) {
+    const ans = qBox.getAttribute('data-mcq-answer');
+    const fb = qBox.querySelector('.mcq-feedback');
+    const opts = qBox.querySelectorAll('.mcq-opt');
+    opts.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const chosen = btn.getAttribute('data-opt');
+        opts.forEach(function (o) { o.classList.remove('correct', 'wrong'); });
+        if (chosen === ans) {
+          btn.classList.add('correct');
+          if (fb) { fb.textContent = fb.getAttribute('data-ok') || '✅ 回答正确！'; fb.className = 'mcq-feedback visible ok'; }
+        } else {
+          btn.classList.add('wrong');
+          opts.forEach(function (o) { if (o.getAttribute('data-opt') === ans) o.classList.add('correct'); });
+          if (fb) { fb.textContent = fb.getAttribute('data-err') || '❌ 未选对，请对照解析复盘。'; fb.className = 'mcq-feedback visible err'; }
+        }
+      });
+    });
+  });
+
+  // ---------- 8. Concept Bank Filter & Mask ----------
+  const conceptCountPill = document.getElementById('conceptCountPill');
+  const conceptQuizToggle = document.getElementById('conceptQuizToggle');
+
+  function filterConcepts() {
+    const cards = Array.from(document.querySelectorAll('#conceptGrid .concept-card'));
+    if (!cards.length) return;
+    let visible = 0;
+    cards.forEach(function (card) {
+      const part = card.getAttribute('data-part');
+      const isExt = card.classList.contains('ext-only');
+      const matchesTab = activeConceptPart === 'all' || part === activeConceptPart;
+      const matchesTier = currentViewMode !== 'core' || !isExt;
+      const show = matchesTab && matchesTier;
+      card.classList.toggle('concept-hidden', !show);
+      if (show) visible++;
+    });
+    if (conceptCountPill) conceptCountPill.textContent = '显示 ' + visible + ' / ' + cards.length + ' 题';
+  }
+
+  document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      activeConceptPart = btn.getAttribute('data-concept-part');
+      document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      filterConcepts();
+    });
+  });
+
+  function applyQuizMask(masked) {
+    quizMasked = masked;
+    document.querySelectorAll('#conceptGrid .concept-card').forEach(function (c) { c.classList.toggle('masked', masked); });
+    if (conceptQuizToggle) {
+      conceptQuizToggle.textContent = masked ? '👁️ 显示全部答案' : '🙈 开启遮罩自测';
+      conceptQuizToggle.classList.toggle('active', masked);
+    }
+    localStorage.setItem(STORAGE_PREFIX + 'quizMasked', masked ? '1' : '0');
+  }
+  if (conceptQuizToggle) {
+    conceptQuizToggle.addEventListener('click', function () { applyQuizMask(!quizMasked); });
+  }
+  document.querySelectorAll('#conceptGrid .cq-answer').forEach(function (box) {
+    box.addEventListener('click', function () {
+      const card = box.closest('.concept-card');
+      if (card && card.classList.contains('masked')) card.classList.remove('masked');
+    });
+  });
+
+  // ---------- 9. Safe SVG Plot Helper (Zero HTML tags inside SVG) ----------
+  function makePlot(w, h, xmin, xmax, ymin, ymax) {
+    const pad = 26;
+    return {
+      w: w, h: h, xmin: xmin, xmax: xmax, ymin: ymin, ymax: ymax,
+      toX: function (x) { return pad + ((x - xmin) / (xmax - xmin)) * (w - 2 * pad); },
+      toY: function (y) { return h - pad - ((y - ymin) / (ymax - ymin)) * (h - 2 * pad); }
+    };
+  }
+  function plotBase(p, xLbl, yLbl) {
+    let s = '<rect x="2" y="2" width="' + (p.w - 4) + '" height="' + (p.h - 4) + '" rx="6" fill="none" stroke="var(--svg-grid)" stroke-width="1"/>';
+    for (let i = 1; i <= 4; i++) {
+      const gx = p.xmin + (i / 5) * (p.xmax - p.xmin);
+      const gy = p.ymin + (i / 5) * (p.ymax - p.ymin);
+      s += '<line x1="' + p.toX(gx).toFixed(1) + '" y1="12" x2="' + p.toX(gx).toFixed(1) + '" y2="' + (p.h - 14) + '" stroke="var(--svg-grid)" stroke-width="0.7"/>';
+      s += '<line x1="16" y1="' + p.toY(gy).toFixed(1) + '" x2="' + (p.w - 14) + '" y2="' + p.toY(gy).toFixed(1) + '" stroke="var(--svg-grid)" stroke-width="0.7"/>';
+    }
+    const oy = p.ymin <= 0 && p.xmax >= 0 ? p.toY(0) : p.h - 26;
+    const ox = p.xmin <= 0 && p.xmax >= 0 ? p.toX(0) : 26;
+    s += '<line x1="16" y1="' + oy.toFixed(1) + '" x2="' + (p.w - 12) + '" y2="' + oy.toFixed(1) + '" stroke="var(--svg-muted)" stroke-width="1.4"/>';
+    s += '<line x1="' + ox.toFixed(1) + '" y1="12" x2="' + ox.toFixed(1) + '" y2="' + (p.h - 14) + '" stroke="var(--svg-muted)" stroke-width="1.4"/>';
+    s += '<text x="' + (p.w - 16) + '" y="' + (oy - 5).toFixed(1) + '" text-anchor="end" font-size="9.5" fill="var(--svg-muted)">' + xLbl + '</text>';
+    s += '<text x="' + (ox + 6).toFixed(1) + '" y="22" font-size="9.5" fill="var(--svg-muted)">' + yLbl + '</text>';
+    return s;
+  }
+
+  // ---------- 10. All 22 Interactive Chemistry Labs (c01 – c22) ----------
+  function mountChemistryLab(el) {
+    const t = el.getAttribute('data-lab-type');
+    if (!t) return;
+
+    const bindInputs = function (fn) {
+      el.querySelectorAll('input,select').forEach(function (inp) {
+        inp.addEventListener('input', fn);
+        inp.addEventListener('change', fn);
+      });
+      fn();
+    };
+
+    if (t === 'c01') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 1 交互实验室 · 气体扩散速率 (NH₃ vs HCl) 与温压体积控制器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>Mr(气体A)：<input type="number" id="c1MrA" value="17" min="2" max="150"></label>' +
+        '<label>Mr(气体B)：<input type="number" id="c1MrB" value="36.5" step="0.5" min="2" max="150"></label>' +
+        '<label>温度 T (°C)：<input type="range" id="c1T" min="0" max="100" value="25"><span id="c1TL">25 °C</span></label>' +
+        '</div><div class="lab-grid-2col"><div><svg id="c1Svg" viewBox="0 0 360 130" width="360" height="130"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c1Out"></div></div></div></div>';
+      bindInputs(function () {
+        const mrA = Math.max(2, Number(el.querySelector('#c1MrA').value) || 17);
+        const mrB = Math.max(2, Number(el.querySelector('#c1MrB').value) || 36.5);
+        const temp = Number(el.querySelector('#c1T').value);
+        el.querySelector('#c1TL').textContent = temp + ' °C';
+        const frac = Math.sqrt(mrB) / (Math.sqrt(mrA) + Math.sqrt(mrB));
+        const ringX = 50 + frac * 260;
+        const speedHint = mrA < mrB ? '气体 A 更轻 (Mr=' + mrA + ' < ' + mrB + ')，扩散更快！' : (mrA > mrB ? '气体 B 更轻，白烟环更靠近 A 端！' : '两气体 Mr 相等，在正中相遇！');
+        el.querySelector('#c1Svg').innerHTML =
+          '<rect x="46" y="42" width="268" height="36" rx="6" fill="none" stroke="var(--svg-ink)" stroke-width="2"/>' +
+          '<rect x="46" y="42" width="16" height="36" fill="var(--svg-blue)" opacity="0.25"/>' +
+          '<rect x="298" y="42" width="16" height="36" fill="var(--svg-red)" opacity="0.25"/>' +
+          '<line x1="' + ringX.toFixed(1) + '" y1="36" x2="' + ringX.toFixed(1) + '" y2="86" stroke="var(--svg-amber)" stroke-width="4"/>' +
+          '<circle cx="' + ringX.toFixed(1) + '" cy="60" r="6" fill="var(--svg-amber)"/>' +
+          '<text x="54" y="28" text-anchor="middle" font-size="10.5" font-weight="800" fill="var(--svg-blue)">A (Mr=' + mrA + ')</text>' +
+          '<text x="306" y="28" text-anchor="middle" font-size="10.5" font-weight="800" fill="var(--svg-red)">B (Mr=' + mrB + ')</text>' +
+          '<text x="' + ringX.toFixed(1) + '" y="106" text-anchor="middle" font-size="10" font-weight="800" fill="var(--svg-amber)">反应环位置 ' + Math.round(frac * 100) + '%</text>';
+        el.querySelector('#c1Out').innerHTML =
+          '<div>' + speedHint + '</div>' +
+          '<div>温度 T = ' + temp + ' °C（' + (temp + 273) + ' K）：升温使气体分子平均动能增大、运动更快，反应环形成更快且气体体积膨胀。</div>';
+      });
+    } else if (t === 'c02') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 2 交互实验室 · 质子/中子/电子与同位素相对原子质量 Ar 计算器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>质子数 Z (1–20)：<input type="number" id="c2Z" value="17" min="1" max="20"></label>' +
+        '<label>同位素1 A₁ / %：<input type="number" id="c2A1" value="35" min="1" max="45"> <input type="number" id="c2P1" value="75" min="0" max="100"></label>' +
+        '<label>同位素2 A₂：<input type="number" id="c2A2" value="37" min="1" max="46"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c2Out"></div></div></div>';
+      const syms = ['','H','He','Li','Be','B','C','N','O','F','Ne','Na','Mg','Al','Si','P','S','Cl','Ar','K','Ca'];
+      bindInputs(function () {
+        const z = Math.min(20, Math.max(1, Math.round(Number(el.querySelector('#c2Z').value) || 17)));
+        const a1 = Number(el.querySelector('#c2A1').value) || 35;
+        const p1 = Math.min(100, Math.max(0, Number(el.querySelector('#c2P1').value) || 75));
+        const a2 = Number(el.querySelector('#c2A2').value) || 37;
+        const p2 = 100 - p1;
+        const ar = (a1 * p1 + a2 * p2) / 100;
+        let rem = z;
+        const shells = [];
+        [2, 8, 8, 2].forEach(function (cap) {
+          if (rem > 0) { const take = Math.min(rem, cap); shells.push(take); rem -= take; }
+        });
+        const grp = z === 1 ? '特殊 (I)' : (z === 2 ? 'VIII (0)' : ['','I','II','III','IV','V','VI','VII','VIII'][shells[shells.length - 1]] || '');
+        el.querySelector('#c2Out').innerHTML =
+          '<div>元素 <strong>' + syms[z] + '</strong> (Z = ' + z + ')：中性原子含 ' + z + ' p⁺, ' + z + ' e⁻ | 电子排布 <strong>' + shells.join(',') + '</strong> | 周期：第 ' + shells.length + ' 周期，主族：Group ' + grp + '</div>' +
+          '<div>Ar = (' + a1 + ' × ' + p1 + '% + ' + a2 + ' × ' + p2 + '%) / 100 = <strong>' + ar.toFixed(2) + '</strong> | 两同位素中子数分别为 ' + (a1 - z) + ' 与 ' + (a2 - z) + '（质子与最外层电子相同 → 化学性质完全相同）</div>';
+      });
+    } else if (t === 'c03') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 3 交互实验室 · 化学键型与晶体物理性质诊断台</div></div>' +
+        '<div class="lab-panel"><div class="tab-row">' +
+        '<button type="button" class="tab-btn active" data-sub="nacl">NaCl 离子晶格</button>' +
+        '<button type="button" class="tab-btn" data-sub="co2">CO₂/CH₄ 简单分子</button>' +
+        '<button type="button" class="tab-btn" data-sub="dia">金刚石 / SiO₂</button>' +
+        '<button type="button" class="tab-btn" data-sub="gra">石墨 (Graphite)</button>' +
+        '<button type="button" class="tab-btn" data-sub="cu">金属铜 (Metallic)</button>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c3Out"></div></div></div>';
+      const data = {
+        nacl: '<strong>巨型离子晶格 (Giant ionic lattice)</strong>：正负离子间极强静电引力 → 高熔沸点；<strong>固态不导电</strong>（离子在固定晶格位置无法移动）；<strong>熔融态或水溶液导电</strong>（存在自由移动的离子 mobile ions）。',
+        co2: '<strong>简单分子结构 (Simple molecular)</strong>：分子内强共价键，分子间极弱<strong>分子间作用力 (weak intermolecular forces)</strong> → 熔沸点极低；全程无自由电子或离子 → <strong>完全不导电</strong>。',
+        dia: '<strong>巨型共价结构 (Giant covalent lattice)</strong>：每个 C 形成 4 根（或每个 Si 4 根、O 2 根）极强共价键构成四面体网络 → 熔点极高、极硬；无离域电子 → <strong>不导电</strong>。',
+        gra: '<strong>层状巨型共价 (Graphite)</strong>：每个 C 只连 3 个邻碳成六元环片层，层间为弱作用力可滑动（作润滑剂）；每原子剩 1 个<strong>离域电子 (delocalised electron)</strong> 沿层自由移动 → <strong>导电</strong>！',
+        cu: '<strong>巨型金属晶格 (Giant metallic lattice)</strong>：规则排布的正金属离子点阵浸在“离域电子海 (sea of delocalised electrons)”中 → 自由电子定向移动<strong>导电导热</strong>；原子层在受力下可相互滑移而不破裂 → <strong>延展性 (malleable/ductile)</strong>。'
+      };
+      const showSub = function (k) {
+        el.querySelectorAll('.tab-btn').forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-sub') === k); });
+        el.querySelector('#c3Out').innerHTML = data[k];
+      };
+      el.querySelectorAll('.tab-btn').forEach(function (b) { b.addEventListener('click', function () { showSub(b.getAttribute('data-sub')); }); });
+      showSub('nacl');
+    } else if (t === 'c04') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 4 交互实验室 · 交叉化合价配式器与相对式量 (Mr) 计算台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>阳离子：<select id="c4Cat"><option value="Na|1|23">Na⁺ (钠)</option><option value="Mg|2|24">Mg²⁺ (镁)</option><option value="Al|3|27">Al³⁺ (铝)</option><option value="Fe3|3|56">Fe³⁺ (铁(III))</option><option value="NH4|1|18">NH₄⁺ (铵根)</option><option value="Ca|2|40">Ca²⁺ (钙)</option></select></label>' +
+        '<label>阴离子：<select id="c4An"><option value="Cl|1|35.5|0">Cl⁻ (氯)</option><option value="O|2|16|0">O²⁻ (氧)</option><option value="SO4|2|96|1">SO₄²⁻ (硫酸根)</option><option value="NO3|1|62|1">NO₃⁻ (硝酸根)</option><option value="CO3|2|60|1">CO₃²⁻ (碳酸根)</option><option value="OH|1|17|1">OH⁻ (氢氧根)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c4Out"></div></div></div>';
+      const gcd = function (a, b) { return b === 0 ? a : gcd(b, a % b); };
+      const subDigits = function (n) {
+        if (n <= 1) return '';
+        return String(n).replace(/[0-9]/g, function (d) { return '₀₁₂₃₄₅₆₇₈₉'[Number(d)]; });
+      };
+      bindInputs(function () {
+        const cParts = el.querySelector('#c4Cat').value.split('|');
+        const aParts = el.querySelector('#c4An').value.split('|');
+        const cName = cParts[0] === 'Fe3' ? 'Fe' : (cParts[0] === 'NH4' ? 'NH₄' : cParts[0]);
+        const cVal = Number(cParts[1]), cMass = Number(cParts[2]), cPoly = cParts[0] === 'NH4';
+        const aNameRaw = aParts[0].replace('4', '₄').replace('3', '₃');
+        const aVal = Number(aParts[1]), aMass = Number(aParts[2]), aPoly = aParts[3] === '1';
+        const g = gcd(cVal, aVal);
+        const cCount = aVal / g, aCount = cVal / g;
+        const cStr = (cPoly && cCount > 1 ? '(' + cName + ')' : cName) + subDigits(cCount);
+        const aStr = (aPoly && aCount > 1 ? '(' + aNameRaw + ')' : aNameRaw) + subDigits(aCount);
+        const mr = cCount * cMass + aCount * aMass;
+        el.querySelector('#c4Out').innerHTML =
+          '<div>十字交叉化简：电荷 ' + cVal + '+ 与 ' + aVal + '− 互约 → 化学式：<strong>' + cStr + aStr + '</strong></div>' +
+          '<div>相对式量 Mr = ' + cCount + '×' + cMass + ' + ' + aCount + '×' + aMass + ' = <strong>' + mr.toFixed(1).replace(/\.0$/, '') + '</strong>（严格遵循总正电荷 = 总负电荷电中性原则）</div>';
+      });
+    } else if (t === 'c05') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 5 交互实验室 · 摩尔质量、气体体积 (24 dm³) 与溶液浓度双向计算器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>模式：<select id="c5Mode"><option value="mass">质量 ↔ 摩尔 (n = m / Mr)</option><option value="gas">r.t.p. 气体 ↔ 摩尔 (V = 24n)</option><option value="conc">滴定溶液 (n = c × V)</option></select></label>' +
+        '<label>输入量1：<input type="number" id="c5A" value="4.4" step="0.1" min="0.001"></label>' +
+        '<label>输入量2 (Mr 或 c mol/dm³)：<input type="number" id="c5B" value="44" step="0.5" min="0.01"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c5Out"></div></div></div>';
+      bindInputs(function () {
+        const mode = el.querySelector('#c5Mode').value;
+        const a = Number(el.querySelector('#c5A').value) || 0;
+        const b = Math.max(0.001, Number(el.querySelector('#c5B').value) || 1);
+        const NA = 6.02e23;
+        let html = '';
+        if (mode === 'mass') {
+          const n = a / b;
+          html = '<div>质量 m = ' + a + ' g，Mr = ' + b + ' → 物质的量 <strong>n = ' + n.toFixed(4) + ' mol</strong></div>' +
+            '<div>微粒总数 = n × 6.02×10²³ = <strong>' + (n * NA).toExponential(2) + '</strong> 个 | r.t.p. 等摩尔气体体积 = <strong>' + (n * 24).toFixed(3) + ' dm³</strong></div>';
+        } else if (mode === 'gas') {
+          const n = a / 24;
+          html = '<div>室温常压 (r.t.p.) 体积 V = ' + a + ' dm³（= ' + (a * 1000).toFixed(0) + ' cm³）→ <strong>n = ' + n.toFixed(4) + ' mol</strong></div>' +
+            '<div>对应气体质量 m = n × Mr(' + b + ') = <strong>' + (n * b).toFixed(3) + ' g</strong>（注意：1 mol 任意气体在 r.t.p. 均占 24 dm³ = 24 000 cm³）</div>';
+        } else {
+          const vDm3 = a / 1000;
+          const n = b * vDm3;
+          html = '<div>若量1 为体积 <strong>' + a + ' cm³ = ' + vDm3.toFixed(4) + ' dm³</strong>，浓度 c = ' + b + ' mol/dm³：</div>' +
+            '<div>溶质摩尔数 <strong>n = c × V = ' + n.toFixed(5) + ' mol</strong>（千万勿忘将 cm³ ÷ 1000 化为 dm³！）</div>';
+        }
+        el.querySelector('#c5Out').innerHTML = html;
+      });
+    } else if (t === 'c06') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 6 交互实验室 · 电解池阴阳极产物与电极半方程式预测器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>电解质体系：<select id="c6Sys"><option value="pbbr2">熔融溴化铅 PbBr₂(l)（惰性石墨极）</option><option value="brine">浓食盐水 NaCl(aq)（惰性石墨极）</option><option value="h2so4">稀硫酸 H₂SO₄(aq)（惰性铂/石墨极）</option><option value="cuso4c">硫酸铜溶液 CuSO₄(aq)（惰性碳极）</option><option value="cuso4cu">硫酸铜溶液 CuSO₄(aq)（活性铜电极）</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c6Out"></div></div></div>';
+      const cases = {
+        pbbr2: '<div><strong>阴极 (−, Cathode)</strong>：熔融仅有 Pb²⁺ → 银灰熔融铅粒：<code>Pb²⁺ + 2e⁻ → Pb</code>（还原）</div><div><strong>阳极 (+, Anode)</strong>：Br⁻ 失电子 → 红棕色溴蒸气：<code>2Br⁻ → Br₂ + 2e⁻</code>（氧化）</div>',
+        brine: '<div><strong>阴极 (−)</strong>：H⁺ 比 Na⁺ 更易得电子 → 无色气体 H₂：<code>2H⁺ + 2e⁻ → H₂</code></div><div><strong>阳极 (+)</strong>：高浓度 Cl⁻ 优先放电 → 黄绿色氯气 Cl₂：<code>2Cl⁻ → Cl₂ + 2e⁻</code>；溶液留存 <strong>NaOH(aq)</strong></div>',
+        h2so4: '<div><strong>阴极 (−)</strong>：<code>2H⁺ + 2e⁻ → H₂</code>（体积为氧气的 2 倍）</div><div><strong>阳极 (+)</strong>：<code>4OH⁻ → O₂ + 2H₂O + 4e⁻</code>（带火星木条复燃）</div>',
+        cuso4c: '<div><strong>阴极 (−)</strong>：Cu²⁺ 在 H 之下优先析出 → 附着红棕色铜：<code>Cu²⁺ + 2e⁻ → Cu</code></div><div><strong>阳极 (+)</strong>：SO₄²⁻ 不放电，OH⁻ 放电：<code>4OH⁻ → O₂ + 2H₂O + 4e⁻</code>；溶液蓝退色且变酸 (H₂SO₄)</div>',
+        cuso4cu: '<div><strong>阴极 (−, 增重)</strong>：Cu²⁺ 得电子析出：<code>Cu²⁺ + 2e⁻ → Cu</code></div><div><strong>阳极 (+, 溶解减重)</strong>：活性铜阳极自身氧化补充进溶液：<code>Cu → Cu²⁺ + 2e⁻</code>；<strong>溶液蓝度不变</strong>（广泛用于电镀铜与电解精炼铜）</div>'
+      };
+      bindInputs(function () {
+        el.querySelector('#c6Out').innerHTML = cases[el.querySelector('#c6Sys').value];
+      });
+    } else if (t === 'c07') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 7 交互实验室 · 键能计算 ΔH = Σ断键 − Σ成键与反应能量历程图</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>Σ断键吸热 (kJ/mol)：<input type="number" id="c7Brk" value="679" min="50" max="5000"></label>' +
+        '<label>Σ成键放热 (kJ/mol)：<input type="number" id="c7Mak" value="864" min="50" max="5000"></label>' +
+        '<label>Ea 活化能：<input type="range" id="c7Ea" min="20" max="120" value="55"><span id="c7EaL">55</span></label>' +
+        '</div><div class="lab-grid-2col"><div><svg id="c7Svg" viewBox="0 0 360 150" width="360" height="150"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c7Out"></div></div></div></div>';
+      bindInputs(function () {
+        const brk = Number(el.querySelector('#c7Brk').value) || 0;
+        const mak = Number(el.querySelector('#c7Mak').value) || 0;
+        const ea = Number(el.querySelector('#c7Ea').value);
+        el.querySelector('#c7EaL').textContent = ea;
+        const dh = brk - mak;
+        const exo = dh < 0;
+        const yR = exo ? 62 : 102;
+        const yP = exo ? 104 : 58;
+        const yPeak = Math.max(20, Math.min(yR, yP) - ea * 0.45);
+        el.querySelector('#c7Svg').innerHTML =
+          '<line x1="28" y1="16" x2="28" y2="132" stroke="var(--svg-ink)" stroke-width="1.6"/>' +
+          '<line x1="28" y1="132" x2="342" y2="132" stroke="var(--svg-ink)" stroke-width="1.6"/>' +
+          '<path d="M 46 ' + yR + ' L 110 ' + yR + ' Q 180 ' + yPeak.toFixed(1) + ' 250 ' + yP + ' L 324 ' + yP + '" fill="none" stroke="' + (exo ? 'var(--svg-blue)' : 'var(--svg-red)') + '" stroke-width="2.6"/>' +
+          '<line x1="110" y1="' + yR + '" x2="250" y2="' + yR + '" stroke="var(--svg-muted)" stroke-width="1" stroke-dasharray="3,3"/>' +
+          '<line x1="180" y1="' + yR + '" x2="180" y2="' + ((yR + yPeak) * 0.5).toFixed(1) + '" stroke="var(--svg-amber)" stroke-width="1.8"/>' +
+          '<line x1="250" y1="' + yR + '" x2="250" y2="' + yP + '" stroke="var(--svg-green)" stroke-width="2.2"/>' +
+          '<text x="78" y="' + (yR - 6) + '" text-anchor="middle" font-size="9.5" font-weight="700" fill="var(--svg-ink)">反应物</text>' +
+          '<text x="290" y="' + (yP - 6) + '" text-anchor="middle" font-size="9.5" font-weight="700" fill="var(--svg-ink)">生成物</text>' +
+          '<text x="192" y="' + (yPeak + 14).toFixed(1) + '" font-size="9.5" font-weight="800" fill="var(--svg-amber)">Ea</text>' +
+          '<text x="262" y="' + ((yR + yP) / 2 + 4).toFixed(1) + '" font-size="9.5" font-weight="800" fill="var(--svg-green)">ΔH = ' + (dh > 0 ? '+' : '') + dh + '</text>';
+        el.querySelector('#c7Out').innerHTML =
+          '<div>ΔH = Σ(断键吸热 ' + brk + ') − Σ(成键放热 ' + mak + ') = <strong>' + (dh > 0 ? '+' : '') + dh + ' kJ/mol</strong></div>' +
+          '<div>结论：<strong>' + (exo ? '放热反应 (Exothermic，ΔH < 0，生成物能量更低，环境温度上升)' : (dh > 0 ? '吸热反应 (Endothermic，ΔH > 0，生成物能量更高，环境温度下降)' : '等焓变化 ΔH = 0')) + '</strong></div>';
+      });
+    } else if (t === 'c08') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 8 交互实验室 · 浓度、温度与催化剂对反应速率-气体体积曲线的影响</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>反应物相对浓度：<input type="range" id="c8C" min="1" max="3" step="0.5" value="1"><span id="c8CL">1.0×</span></label>' +
+        '<label>温度升高倍数：<input type="range" id="c8T" min="1" max="3" step="0.5" value="1"><span id="c8TL">20 °C</span></label>' +
+        '<label>酸是否加倍 (若酸过量无影响)：<select id="c8Lim"><option value="1">金属限量 (终体积不变)</option><option value="2">酸量加倍且过量酸未满 (终体积翻倍)</option></select></label>' +
+        '</div><div class="lab-grid-2col"><div><svg id="c8Svg" viewBox="0 0 360 150" width="360" height="150"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c8Out"></div></div></div></div>';
+      bindInputs(function () {
+        const c = Number(el.querySelector('#c8C').value);
+        const tf = Number(el.querySelector('#c8T').value);
+        const vFactor = Number(el.querySelector('#c8Lim').value);
+        el.querySelector('#c8CL').textContent = c.toFixed(1) + '×';
+        el.querySelector('#c8TL').textContent = Math.round(20 + (tf - 1) * 15) + ' °C';
+        const k = 0.08 * c * tf;
+        const p = makePlot(360, 150, 0, 60, 0, 110);
+        let basePts = [], newPts = [];
+        for (let t0 = 0; t0 <= 60; t0 += 3) {
+          basePts.push(p.toX(t0).toFixed(1) + ',' + p.toY(45 * (1 - Math.exp(-0.08 * t0))).toFixed(1));
+          newPts.push(p.toX(t0).toFixed(1) + ',' + p.toY(45 * vFactor * (1 - Math.exp(-k * t0))).toFixed(1));
+        }
+        el.querySelector('#c8Svg').innerHTML = plotBase(p, 't (s)', 'V(气体)') +
+          '<polyline points="' + basePts.join(' ') + '" fill="none" stroke="var(--svg-muted)" stroke-width="2" stroke-dasharray="4,3"/>' +
+          '<polyline points="' + newPts.join(' ') + '" fill="none" stroke="var(--svg-blue)" stroke-width="2.6"/>' +
+          '<text x="330" y="34" text-anchor="end" font-size="9.5" font-weight="700" fill="var(--svg-blue)">当前条件曲线</text>' +
+          '<text x="330" y="48" text-anchor="end" font-size="9.5" fill="var(--svg-muted)">基准虚线</text>';
+        el.querySelector('#c8Out').innerHTML =
+          '<div>初始斜率比例：<strong>' + (c * tf).toFixed(2) + '×</strong>（温度越高、粒子数越密 → 单位时间有效碰撞次数 frequency of successful collisions 越频繁）。</div>' +
+          '<div>终产物总体积：' + (vFactor === 1 ? '仅加快/改速率，<strong>最终气体总体积相同</strong>（由限量反应物决定）。' : '限量反应物翻倍 → 曲线既更陡、<strong>最终气体平台也翻倍</strong>！') + '</div>';
+      });
+    } else if (t === 'c09') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 9 交互实验室 · 勒夏特列动态平衡移动与哈伯/接触法条件模拟</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>反应体系：<select id="c9Sys"><option value="haber">哈伯法：N₂(g) + 3H₂(g) ⇌ 2NH₃(g) [ΔH < 0, 4→2 mol]</option><option value="contact">接触法：2SO₂(g) + O₂(g) ⇌ 2SO₃(g) [ΔH < 0, 3→2 mol]</option></select></label>' +
+        '<label>改变条件：<select id="c9Act"><option value="tUp">升高温度 T↑</option><option value="tDown">降低温度 T↓</option><option value="pUp">增大压强 P↑</option><option value="cat">加入催化剂</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c9Out"></div></div></div>';
+      bindInputs(function () {
+        const sys = el.querySelector('#c9Sys').value;
+        const act = el.querySelector('#c9Act').value;
+        const isHaber = sys === 'haber';
+        const prod = isHaber ? 'NH₃' : 'SO₃';
+        const cond = isHaber ? '450 °C, 20 000 kPa (200 atm), Fe 催化剂' : '450 °C, 200 kPa (2 atm), V₂O₅ 催化剂';
+        let msg = '';
+        if (act === 'tUp') msg = '正反应为放热反应 → 升温平衡向<strong>吸热逆方向（左）</strong>移动 → ' + prod + ' 平衡产率↓，但反应速率加快（因此工业采用折中温度 450 °C）。';
+        else if (act === 'tDown') msg = '升温相反，降温有利于<strong>放热正方向（右）</strong>移动 → ' + prod + ' 平衡产率↑，但速率过慢不经济。';
+        else if (act === 'pUp') msg = '加压平衡向<strong>气体摩尔数更少的一侧（右）</strong>移动（' + (isHaber ? '4 mol → 2 mol' : '3 mol → 2 mol') + '）→ ' + prod + ' 产率↑且速率加快。';
+        else msg = '催化剂只提供低活化能 Ea 替代路径，同时同等加快正逆速率 → <strong>不改变平衡位置与产率</strong>，只更快达到平衡！';
+        el.querySelector('#c9Out').innerHTML = '<div>' + msg + '</div><div>2023 考纲必背工业条件：<strong>' + cond + '</strong></div>';
+      });
+    } else if (t === 'c10') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 10 交互实验室 · 氧化数 (Oxidation Number) 与 OIL RIG 判别器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>粒子/反应例：<select id="c10Ex"><option value="fe">Fe²⁺ → Fe³⁺ + e⁻</option><option value="kmno4">酸化 MnO₄⁻ (+7) → Mn²⁺ (+2)</option><option value="ki">2I⁻ (−1) → I₂ (0) + 2e⁻</option><option value="displ">Zn + Cu²⁺ → Zn²⁺ + Cu</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c10Out"></div></div></div>';
+      const mp = {
+        fe: 'Fe 氧化数从 +2 升至 +3（失去电子，<strong>Oxidation Is Loss</strong>）→ 被氧化；若反向反应则为还原。',
+        kmno4: 'Mn 从 +7 降至 +2（得电子，被还原）→ 酸化 KMnO₄(aq) 是强<strong>氧化剂 (oxidising agent)</strong>，检验还原剂时现象为<strong>紫色褪为无色 (purple → colourless)</strong>！',
+        ki: 'I⁻ 从 −1 升至 0（失电子，被氧化）→ KI(aq) 是典型<strong>还原剂 (reducing agent)</strong>，检验氧化剂时现象为<strong>无色变棕黄色 (colourless → brown)</strong>！',
+        displ: 'Zn (0 → +2) 失电子被氧化，作还原剂；Cu²⁺ (+2 → 0) 得电子被还原，作氧化剂（同一反应中氧化与还原必同时发生 = Redox）。'
+      };
+      bindInputs(function () { el.querySelector('#c10Out').innerHTML = mp[el.querySelector('#c10Ex').value]; });
+    } else if (t === 'c11') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 11 交互实验室 · pH 尺度与三大指示剂 (含 2023 新增 Thymolphthalein) 变色槽</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>调节溶液 pH：<input type="range" id="c11Ph" min="0" max="14" step="0.5" value="7"><span id="c11PhL">pH 7.0</span></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c11Out"></div></div></div>';
+      bindInputs(function () {
+        const ph = Number(el.querySelector('#c11Ph').value);
+        el.querySelector('#c11PhL').textContent = 'pH ' + ph.toFixed(1);
+        const nature = ph < 7 ? (ph < 3 ? '强酸性 (高浓度 H⁺)' : '弱酸性') : (ph === 7 ? '中性 (H⁺ = OH⁻)' : (ph > 11 ? '强碱性 (高浓度 OH⁻)' : '弱碱性'));
+        const litmus = ph < 4.5 ? '<span class="swatch" style="background:#EF4444;"></span>红色 (Red)' : (ph > 8.3 ? '<span class="swatch" style="background:#3B82F6;"></span>蓝色 (Blue)' : '紫色/过渡色');
+        const mo = ph < 3.2 ? '<span class="swatch" style="background:#EF4444;"></span>红色 (Red)' : (ph > 4.4 ? '<span class="swatch" style="background:#FACC15;"></span>黄色 (Yellow)' : '<span class="swatch" style="background:#FB923C;"></span>橙色 (Orange)');
+        const thymol = ph >= 9.3 ? '<span class="swatch" style="background:#2563EB;"></span>蓝色 (Blue, 碱性)' : '<span class="swatch" style="background:#F8FAFC;"></span>无色 (Colourless, 酸/中性)';
+        el.querySelector('#c11Out').innerHTML =
+          '<div>溶液性质：<strong>' + nature + '</strong></div>' +
+          '<div>石蕊 Litmus：' + litmus + ' | 甲基橙 Methyl orange：' + mo + ' | <strong>百里酚酞 Thymolphthalein (2023)：</strong>' + thymol + '</div>';
+      });
+    } else if (t === 'c12') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 12 交互实验室 · 目标盐溶解性判断与三大标准制盐路线决策器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>目标纯盐：<select id="c12Salt"><option value="cuso4">硫酸铜 CuSO₄(aq→s)</option><option value="zncl2">氯化锌 ZnCl₂(aq→s)</option><option value="nacl">氯化钠 NaCl / 硝酸钾 KNO₃</option><option value="baso4">硫酸钡 BaSO₄(s) / 氯化银 AgCl(s)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c12Out"></div></div></div>';
+      const routes = {
+        cuso4: '<strong>可溶性过渡金属盐 → 路线 A（过量不溶碱/碳酸盐反应法）</strong>：稀 H₂SO₄ 微热 + <strong>过量 CuO(s) 或 CuCO₃(s)</strong> 至固体不再溶解 → <strong>过滤除过量固体</strong> → 蒸发浓缩至结晶点 → 冷却结晶 → 过滤用滤纸吸干（防破坏结晶水 CuSO₄·5H₂O）。',
+        zncl2: '<strong>可溶性活泼金属盐 → 路线 A（过量金属/氧化物法）</strong>：稀 HCl + <strong>过量 Zn(s)</strong> 至停止冒气泡 → 过滤除去未反应锌粒 → 蒸发浓缩并冷却结晶。',
+        nacl: '<strong>钠/钾/铵可溶盐 → 路线 B（滴定法 Titration）</strong>：因碱 NaOH/KOH/NH₃ 与产物均全溶无法通过过滤去过量碱！先加几滴 <strong>thymolphthalein 或甲基橙</strong>用滴定管测出精确中和酸体积 V → <strong>不加指示剂重复相同酸碱体积混合</strong> → 蒸发结晶得纯净白盐。',
+        baso4: '<strong>不溶性盐 → 路线 C（复分解沉淀法 Precipitation）</strong>：混合两种含对应离子的可溶性盐溶液（如 Ba(NO₃)₂(aq) + Na₂SO₄(aq)）→ 瞬间生成沉淀 → <strong>过滤 (Filter) → 大量蒸馏水洗涤 (Wash with distilled water) 除杂离子 → 低温烘箱/滤纸干燥 (Dry)</strong>。'
+      };
+      bindInputs(function () { el.querySelector('#c12Out').innerHTML = routes[el.querySelector('#c12Salt').value]; });
+    } else if (t === 'c13') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 13 交互实验室 · 第 I 族与第 VII 族卤素置换反应模拟器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>加入卤素单质：<select id="c13Hal"><option value="cl2">氯水 Cl₂(aq)（黄绿）</option><option value="br2">溴水 Br₂(aq)（橙棕）</option><option value="i2">碘水 I₂(aq)（棕色）</option></select></label>' +
+        '<label>卤化物溶液：<select id="c13Sol"><option value="kcl">KCl(aq)（无色）</option><option value="kbr">KBr(aq)（无色）</option><option value="ki">KI(aq)（无色）</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c13Out"></div></div></div>';
+      const rank = { cl2: 3, br2: 2, i2: 1, kcl: 3, kbr: 2, ki: 1 };
+      bindInputs(function () {
+        const h = el.querySelector('#c13Hal').value, s = el.querySelector('#c13Sol').value;
+        let out = '';
+        if (rank[h] > rank[s]) {
+          if (h === 'cl2' && s === 'kbr') out = '<strong>发生置换！</strong> Cl₂ 氧化性强于 Br₂ → <code>Cl₂ + 2Br⁻ → 2Cl⁻ + Br₂</code>，无色溶液变为<strong>橙棕色 (orange/brown)</strong>。';
+          else if (h === 'cl2' && s === 'ki') out = '<strong>发生置换！</strong> <code>Cl₂ + 2I⁻ → 2Cl⁻ + I₂</code>，溶液变为<strong>深棕色/出现灰黑碘沉淀</strong>。';
+          else out = '<strong>发生置换！</strong> Br₂ 氧化性强于 I₂ → <code>Br₂ + 2I⁻ → 2Br⁻ + I₂</code>，溶液由橙变<strong>深棕色 (red-brown/dark brown)</strong>。';
+        } else {
+          out = '<strong>无反应 (No reaction)</strong>：位于第 VII 族下方的卤素单质原子半径更大、核对最外层电子吸引力更弱，得电子能力更弱，无法置换上方卤离子！';
+        }
+        el.querySelector('#c13Out').innerHTML = out;
+      });
+    } else if (t === 'c14') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 14 交互实验室 · 纯金属 vs 合金晶格滑移与性能对比器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>金属材料：<select id="c14Mat"><option value="pure">纯铜 / 纯铁（同尺寸规则原子层）</option><option value="brass">黄铜 Brass（70% Cu + 30% Zn 合金）</option><option value="steel">不锈钢 Stainless steel（Fe + C/Cr/Ni 合金）</option></select></label>' +
+        '</div><div class="lab-grid-2col"><div><svg id="c14Svg" viewBox="0 0 360 120" width="360" height="120"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c14Out"></div></div></div></div>';
+      bindInputs(function () {
+        const m = el.querySelector('#c14Mat').value;
+        let svg = '';
+        for (let r = 0; r < 3; r++) {
+          for (let c = 0; c < 6; c++) {
+            const isDiff = m !== 'pure' && ((r === 1 && c === 2) || (r === 0 && c === 4) || (r === 2 && c === 1));
+            const cx = 64 + c * 42 + (m !== 'pure' && r === 1 ? 8 : 0);
+            const cy = 28 + r * 30 + (isDiff ? (m === 'brass' ? -2 : 2) : 0);
+            const rad = isDiff ? (m === 'brass' ? 14 : 9) : 11;
+            const col = isDiff ? 'var(--svg-amber)' : 'var(--svg-blue)';
+            svg += '<circle cx="' + cx + '" cy="' + cy + '" r="' + rad + '" fill="' + col + '" opacity="0.82" stroke="var(--svg-ink)" stroke-width="1"/>';
+          }
+        }
+        el.querySelector('#c14Svg').innerHTML = svg;
+        el.querySelector('#c14Out').innerHTML = m === 'pure'
+          ? '<strong>纯金属</strong>：正离子大小完全相同，排列整齐 → 受力时原子层极易相互<strong>滑移 (layers slide over each other)</strong> → 较软且极具延展性。'
+          : '<strong>合金 (Mixture，非化合物)</strong>：掺入<strong>不同半径的异种原子</strong>打乱了规则层状结构，<strong>阻碍原子层滑移 (stops layers sliding easily)</strong> → 显著比纯金属更硬更强！（' + (m === 'brass' ? '黄铜用于乐器与插头插脚' : '不锈钢含 Cr/Ni 抗腐蚀，用于餐具与化工容器') + '）';
+      });
+    } else if (t === 'c15') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 15 交互实验室 · 金属活动性顺序与置换反应判定器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>投入金属：<select id="c15M"><option value="K|9">K 钾</option><option value="Mg|7">Mg 镁</option><option value="Al|6">Al 铝</option><option value="Zn|5">Zn 锌</option><option value="Fe|4">Fe 铁</option><option value="Cu|1">Cu 铜</option></select></label>' +
+        '<label>反应介质：<select id="c15Med"><option value="water">冷水 H₂O(l)</option><option value="acid">稀盐酸 HCl(aq)</option><option value="cuso4">硫酸铜溶液 CuSO₄(aq)</option><option value="fe2o3">高温加热氧化铁 Fe₂O₃(s)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c15Out"></div></div></div>';
+      bindInputs(function () {
+        const mParts = el.querySelector('#c15M').value.split('|');
+        const sym = mParts[0], rank = Number(mParts[1]);
+        const med = el.querySelector('#c15Med').value;
+        let res = '';
+        if (med === 'water') {
+          if (sym === 'K') res = '剧烈反应浮游熔球且伴随<strong>紫丁香色火焰</strong>释放 H₂，生成强碱 KOH(aq)。';
+          else if (sym === 'Mg') res = '冷水极慢（遇高温水蒸气猛烈生成 MgO + H₂）。';
+          else if (sym === 'Al') res = '表面致密 <strong>Al₂O₃ 氧化膜</strong>阻隔反应，看似不反应！';
+          else res = '不与冷水反应（Fe、Zn 可与高温水蒸气生成氧化物与 H₂；Cu 完全不反应）。';
+        } else if (med === 'acid') {
+          if (rank >= 4) res = '产生 H₂ 气泡且金属溶解：<code>' + sym + ' + 2H⁺ → ' + sym + 'ⁿ⁺ + H₂↑</code>' + (sym === 'Al' ? '（初期因 Al₂O₃ 保护膜延迟起泡，膜溶后迅速反应！）' : '');
+          else res = 'Cu 位于氢之下，<strong>不与稀盐酸反应</strong>！';
+        } else if (med === 'cuso4') {
+          if (rank > 1) res = '发生金属置换！溶液<strong>蓝色变浅</strong>，表面析出<strong>红棕色 Cu</strong>：如 <code>' + sym + ' + Cu²⁺ → ' + sym + 'ⁿ⁺ + Cu</code>';
+          else res = '同种金属不发生净反应。';
+        } else {
+          if (rank > 4) res = '金属比铁更活泼，发生固态热置换（如 Al + Fe₂O₃ 铝热反应放剧热生成液态 Fe）！';
+          else res = '活动性不强于 Fe，无法从 Fe₂O₃ 中置换出铁。';
+        }
+        el.querySelector('#c15Out').innerHTML = res;
+      });
+    } else if (t === 'c16') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 16 交互实验室 · 高炉炼铁 vs 电解炼铝工艺与防锈对比台</div></div>' +
+        '<div class="lab-panel"><div class="tab-row">' +
+        '<button type="button" class="tab-btn active" data-proc="iron">高炉炼铁 (Blast Furnace)</button>' +
+        '<button type="button" class="tab-btn" data-proc="al">电解炼铝 (Hall-Héroult)</button>' +
+        '<button type="button" class="tab-btn" data-proc="rust">铁防锈与牺牲阳极</button>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c16Out"></div></div></div>';
+      const mp = {
+        iron: '<strong>原料</strong>：赤铁矿 Fe₂O₃、焦炭 C、石灰石 CaCO₃、热空气。核心还原反应：<code>Fe₂O₃ + 3CO → 2Fe + 3CO₂</code>；石灰石高温分解 <code>CaCO₃ → CaO + CO₂</code> 后 <code>CaO + SiO₂ → CaSiO₃</code> 除酸性脉石得炉渣 (slag)。',
+        al: '<strong>原料</strong>：纯净氧化铝 Al₂O₃ 溶于<strong>熔融冰晶石 Na₃AlF₆ (cryolite)</strong>（大幅降低熔点由 2000°C 至 ~950°C，省电并提高导电性）。<strong>阴极</strong>：<code>Al³⁺ + 3e⁻ → Al</code>；<strong>阳极</strong>：<code>2O²⁻ → O₂ + 4e⁻</code>（高温下氧气灼烧石墨阳极生成 CO₂，故需<strong>定期更换碳阳极</strong>！）。',
+        rust: '<strong>生锈必备双条件</strong>：同时有<strong>氧气 + 水</strong>（生成水合氧化铁(III)）。<strong>隔绝法</strong>：涂漆/抹油/包塑；<strong>镀锌 (Galvanising) 与牺牲阳极保护 (Sacrificial protection)</strong>：将 Zn/Mg 接在铁表面，即使涂层划破，更活泼的 Zn 优先失去电子替铁被氧化 (<code>Zn → Zn²⁺ + 2e⁻</code>)，从而强制电子流向铁抑制铁生锈！'
+      };
+      const showP = function (k) {
+        el.querySelectorAll('.tab-btn').forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-proc') === k); });
+        el.querySelector('#c16Out').innerHTML = mp[k];
+      };
+      el.querySelectorAll('.tab-btn').forEach(function (b) { b.addEventListener('click', function () { showP(b.getAttribute('data-proc')); }); });
+      showP('iron');
+    } else if (t === 'c17') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 17 交互实验室 · 大气五大污染物来源/危害/治理 & 温室效应检索器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>污染物：<select id="c17Pol"><option value="co">一氧化碳 CO</option><option value="so2">二氧化硫 SO₂</option><option value="nox">氮氧化物 NOₓ</option><option value="part">颗粒物 Particulates & 未燃烃</option><option value="ghg">二氧化碳 CO₂ & 甲烷 CH₄ (温室气体)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c17Out"></div></div></div>';
+      const mp = {
+        co: '<strong>来源</strong>：含碳燃料<strong>不完全燃烧</strong>（氧气不足）。<strong>危害</strong>：有毒气体（与血红蛋白结合致缺氧）。<strong>治理</strong>：汽车排气管装<strong>三元催化器 (Catalytic converter)</strong> 将 CO 氧化为 CO₂：<code>2CO + 2NO → 2CO₂ + N₂</code>。',
+        so2: '<strong>来源</strong>：含硫化石燃料（煤等）燃烧。<strong>危害</strong>：形成<strong>酸雨 (acid rain)</strong> 腐蚀大理石建筑、酸化水土杀伤鱼林。<strong>治理</strong>：烟气脱硫（CaO/CaCO₃ 洗涤）及使用低硫燃料。',
+        nox: '<strong>来源</strong>：高温内燃机内空气中 N₂ 与 O₂ 直接化合。<strong>危害</strong>：酸雨 + 光化学烟雾 + 呼吸损伤。<strong>治理</strong>：<strong>三元催化器</strong>用 Pt/Rh 催化将 NO 还原回无害 N₂。',
+        part: '<strong>来源</strong>：柴油机不完全燃烧（碳黑颗粒、未燃烃）。<strong>危害</strong>：诱发呼吸道疾病与癌症、增强光化学烟雾。<strong>治理</strong>：颗粒捕集器与优化空燃比。',
+        ghg: '<strong>来源</strong>：CO₂（化石燃料完全燃烧）；CH₄（牲畜反刍与有机腐败）。<strong>2023 考纲必填温室机理</strong>：温室气体<strong>吸收地球表面释放的长波红外辐射 (thermal/infrared energy radiated by Earth)</strong> 并向各个方向<strong>重新发射部分热能回地球</strong>，导致全球气候变暖与海平面上升。'
+      };
+      bindInputs(function () { el.querySelector('#c17Out').innerHTML = mp[el.querySelector('#c17Pol').value]; });
+    } else if (t === 'c18') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 18 交互实验室 · 有机同系物通式与 C1–C4 IUPAC 命名生成器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>同系物家族：<select id="c18Fam"><option value="alkane">烷烃 Alkane (CₙH₂ₙ₊₂)</option><option value="alkene">烯烃 Alkene (CₙH₂ₙ)</option><option value="alcohol">醇类 Alcohol (CₙH₂ₙ₊₁OH)</option><option value="acid">羧酸 Carboxylic acid (CₙH₂ₙ₊₁COOH)</option></select></label>' +
+        '<label>碳原子总数 n (1–4)：<input type="range" id="c18N" min="1" max="4" value="2"><span id="c18NL">n = 2</span></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c18Out"></div></div></div>';
+      const prefs = ['', 'meth', 'eth', 'prop', 'but'];
+      bindInputs(function () {
+        const fam = el.querySelector('#c18Fam').value;
+        let n = Number(el.querySelector('#c18N').value);
+        if (fam === 'alkene' && n < 2) n = 2;
+        el.querySelector('#c18NL').textContent = '总碳数 = ' + n;
+        let name = '', formula = '', fg = '';
+        if (fam === 'alkane') { name = prefs[n] + 'ane'; formula = 'C' + (n > 1 ? n : '') + 'H' + (2 * n + 2); fg = '全为 C–C 单键（饱和烃）'; }
+        else if (fam === 'alkene') { name = prefs[n] + 'ene' + (n === 4 ? ' (but-1-ene / but-2-ene)' : ''); formula = 'C' + n + 'H' + (2 * n); fg = '含 1 个 C=C 双键（不饱和烃）'; }
+        else if (fam === 'alcohol') { name = (n >= 3 ? prefs[n] + 'an-1-ol / ' + prefs[n] + 'an-2-ol' : prefs[n] + 'anol'); formula = 'C' + (n > 1 ? n : '') + 'H' + (2 * n + 1) + 'OH'; fg = '羟基 –OH'; }
+        else { name = prefs[n] + 'anoic acid'; const k = n - 1; formula = (k === 0 ? 'HCOOH' : 'C' + (k > 1 ? k : '') + 'H' + (2 * k + 1) + 'COOH'); fg = '羧基 –COOH'; }
+        el.querySelector('#c18Out').innerHTML =
+          '<div>IUPAC 名称：<strong>' + name + '</strong> | 分子式：<strong>' + formula + '</strong></div>' +
+          '<div>官能团 (Functional group)：' + fg + '（相邻成员相差 <strong>CH₂</strong>，有共同通式、相似化学性质与渐变物理性质）。</div>';
+      });
+    } else if (t === 'c19') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 19 交互实验室 · 烃/醇/羧酸/酯反应条件与现象速查台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>有机反应：<select id="c19Rx"><option value="sub">烷烃 + Cl₂（紫外光 UV 取代）</option><option value="br">烯烃 + Br₂(aq) 溴水加成</option><option value="hyd">乙烯 + 水蒸气 → 乙醇（水合法）</option><option value="ox">乙醇氧化 → 乙酸</option><option value="est">乙醇 + 乙酸 → 乙酸乙酯 + 水</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c19Out"></div></div></div>';
+      const mp = {
+        sub: '<strong>条件</strong>：<strong>UV 紫外光</strong>提供活化能（光化学取代反应，每次只用一个 Cl 换掉一个 H）。方程式：<code>CH₄ + Cl₂ → CH₃Cl + HCl</code>（氯气黄绿色渐褪）。',
+        br: '<strong>不饱和度权威检验！</strong> 烯烃常温直接与橙棕色溴水发生加成反应生成无色二溴烷，现象：<strong>橙棕色溴水迅速褪为无色 (orange/brown → colourless)</strong>（烷烃无 UV 则不变色！）。',
+        hyd: '<strong>条件 (2023 必背)</strong>：<strong>300 °C、6000 kPa (60 atm)、磷酸 H₃PO₄ 催化剂</strong>。特点：原子利用率 100%、连续高速、得纯乙醇；缺点：乙烯源于不可再生石油，需高温高压能耗。',
+        ox: '途径1：空气细菌氧化（醋酸酿造）；途径2：加<strong>酸化高锰酸钾 KMnO₄(aq)</strong>（<strong>紫→无色</strong>）共热，将 <code>CH₃CH₂OH</code> 氧化为 <code>CH₃COOH</code>。',
+        est: '<strong>条件</strong>：浓硫酸作催化剂并加热。生成具果香味的<strong>乙酸乙酯 (ethyl ethanoate)</strong>：<code>CH₃COOH + C₂H₅OH ⇌ CH₃COOC₂H₅ + H₂O</code>（可逆反应，注意酯命名：先写醇侧乙基 ethyl，再写酸侧乙酸酯 ethanoate！）。'
+      };
+      bindInputs(function () { el.querySelector('#c19Out').innerHTML = mp[el.querySelector('#c19Rx').value]; });
+    } else if (t === 'c20') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 20 交互实验室 · 石油分馏塔馏分定位与加聚/缩聚 (PET & 尼龙) 转换台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>查看主题：<select id="c20Top"><option value="frac">分馏塔馏分顺序 (上→下)</option><option value="add">加聚单体 ↔ 重复单元</option><option value="nylon">缩聚：尼龙 (Polyamide)</option><option value="pet">缩聚：PET 聚酯 (2023 重点)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c20Out"></div></div></div>';
+      const mp = {
+        frac: '<strong>自塔顶(冷,短链,低沸点,高挥发,低粘度)向塔底(热,长链,高沸点,黑稠)</strong>：炼油气 Refinery gas (燃料/取暖) → 汽油 Gasoline (汽车) → 石脑油 Naphtha (化工原料) → 煤油 Kerosene (航空燃油) → 柴油 Diesel (货车/火车) → 燃料油 Fuel oil (轮船/电站) → 润滑油 Lubricating oil → 沥青 Bitumen (铺路/屋顶)。',
+        add: '<strong>核心技巧</strong>：把单体 C=C 双键打开成单键并向两侧伸出短线：如单体 <code>CH₂=CHCl</code>（氯乙烯）→ 重复单元 <code>–[CH₂–CHCl]–</code>（聚氯乙烯 PVC），原子 100% 进入聚合物、<strong>无副产物生成</strong>。',
+        nylon: '由<strong>二元羧酸 + 二元胺</strong>缩去水分子生成 <strong>酰胺键 –CONH– (amide link)</strong>；与天然蛋白质（由多种氨基酸缩聚的多肽 polyamide）共享相同酰胺键！',
+        pet: '由<strong>二元羧酸 + 二元醇</strong>缩去小分子水生成 <strong>酯键 –COO– (ester link)</strong>，如聚对苯二甲酸乙二酯 <strong>PET</strong>（2023 考纲强调：PET 可通过化学解聚变回单体重新合成新聚酯，实现闭环回收）。'
+      };
+      bindInputs(function () { el.querySelector('#c20Out').innerHTML = mp[el.querySelector('#c20Top').value]; });
+    } else if (t === 'c21') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 21 交互实验室 · 纸层析比移值 Rf 计算器与混合物分离匹配仪</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>斑点爬行距离 (cm)：<input type="number" id="c21S" value="4.2" step="0.1" min="0"></label>' +
+        '<label>溶剂前沿距离 (cm)：<input type="number" id="c21F" value="7.0" step="0.1" min="0.5"></label>' +
+        '</div><div class="lab-grid-2col"><div><svg id="c21Svg" viewBox="0 0 360 130" width="360" height="130"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c21Out"></div></div></div></div>';
+      bindInputs(function () {
+        const front = Math.max(0.5, Number(el.querySelector('#c21F').value) || 7.0);
+        const spot = Math.min(front, Math.max(0, Number(el.querySelector('#c21S').value) || 0));
+        const rf = spot / front;
+        const yBase = 108, yFront = 22, ySpot = yBase - rf * (yBase - yFront);
+        el.querySelector('#c21Svg').innerHTML =
+          '<rect x="120" y="10" width="120" height="114" fill="none" stroke="var(--svg-ink)" stroke-width="1.6"/>' +
+          '<line x1="120" y1="' + yBase + '" x2="240" y2="' + yBase + '" stroke="var(--svg-muted)" stroke-width="1.5"/>' +
+          '<line x1="120" y1="' + yFront + '" x2="240" y2="' + yFront + '" stroke="var(--svg-blue)" stroke-width="1.5" stroke-dasharray="4,3"/>' +
+          '<circle cx="180" cy="' + ySpot.toFixed(1) + '" r="7" fill="var(--svg-purple)"/>' +
+          '<text x="114" y="' + (yBase + 4) + '" text-anchor="end" font-size="9.5" fill="var(--svg-muted)">铅笔基线 (0)</text>' +
+          '<text x="114" y="' + (yFront + 4) + '" text-anchor="end" font-size="9.5" fill="var(--svg-blue)">溶剂前沿 (' + front.toFixed(1) + ')</text>' +
+          '<text x="246" y="' + (ySpot + 4).toFixed(1) + '" font-size="9.5" font-weight="800" fill="var(--svg-purple)">斑点 (' + spot.toFixed(1) + ' cm)</text>';
+        el.querySelector('#c21Out').innerHTML =
+          '<div>比移值 <strong>Rf = ' + spot.toFixed(1) + ' / ' + front.toFixed(1) + ' = ' + rf.toFixed(3) + '</strong>（恒在 0 到 1 之间，无单位！）</div>' +
+          '<div>必背要点：基线须用<strong>铅笔 (pencil)</strong> 画（防墨水被溶剂溶解）；无色氨基酸需喷<strong>显色剂 (locating agent)</strong> 显色。</div>';
+      });
+    } else if (t === 'c22') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 22 交互实验室 · 阴阳离子沉淀、2023 新增焰色与气体定性分析交互仪</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>待检微粒：<select id="c22Ion"><option value="al">Al³⁺ 铝离子</option><option value="zn">Zn²⁺ 锌离子</option><option value="cr">Cr³⁺ 铬(III)离子</option><option value="cu">Cu²⁺ 铜(II)离子</option><option value="fe2">Fe²⁺ / Fe³⁺ 铁离子</option><option value="ca_ba">Ca²⁺ / Ba²⁺ 焰色反应 (2023)</option><option value="so3">SO₃²⁻ 亚硫酸根 (2023)</option><option value="hal">Cl⁻ / Br⁻ / I⁻ 卤离子</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c22Out"></div></div></div>';
+      const mp = {
+        al: '<span class="swatch" style="background:#FFFFFF;"></span>加 NaOH：<strong>白色沉淀，过量溶于无色溶液</strong>；加 NH₃(aq)：<strong>白色沉淀，过量不溶</strong>（与 Zn²⁺ 核心区分点！）。',
+        zn: '<span class="swatch" style="background:#FFFFFF;"></span>加 NaOH：<strong>白色沉淀，过量溶解</strong>；加 NH₃(aq)：<strong>白色沉淀，过量也溶解得无色溶液</strong>。',
+        cr: '<span class="swatch" style="background:#15803D;"></span>加 NaOH：<strong>绿色沉淀，过量溶于深绿溶液</strong>；加 NH₃(aq)：<strong>灰绿色沉淀，过量不溶</strong>。',
+        cu: '<span class="swatch" style="background:#38BDF8;"></span>加 NaOH：<strong>浅蓝沉淀不溶于过量</strong>；加 NH₃(aq)：<strong>浅蓝沉淀，过量溶解成深宝蓝色溶液</strong>；焰色：<strong>蓝绿色 (blue-green)</strong>。',
+        fe2: '<span class="swatch" style="background:#22C55E;"></span><strong>Fe²⁺</strong>：加 NaOH/NH₃ 均生<strong>绿色沉淀，过量不溶，静置表面变棕</strong>。<span class="swatch" style="background:#9A3412;"></span><strong>Fe³⁺</strong>：加 NaOH/NH₃ 均生<strong>红棕色沉淀不溶</strong>。',
+        ca_ba: '<strong>Ca²⁺</strong>：焰色呈<strong>橙红色 (orange-red / brick-red)</strong>；NaOH 白沉不溶，NH₃ 无/极微沉淀。<strong>Ba²⁺ (2023 考纲必考)</strong>：焰色呈<strong>浅绿色 (light green)</strong>；加酸化稀硫酸/硫酸盐生白色 BaSO₄ 沉淀。',
+        so3: '<strong>2023 必考检验</strong>：加<strong>稀盐酸 (dilute HCl)</strong> 微热，放出刺鼻气体 SO₂，能使<strong>酸化高锰酸钾 (acidified KMnO₄) 纸/液从紫色褪为无色 (purple → colourless)</strong>！',
+        hal: '先加<strong>稀硝酸 (dilute HNO₃) 酸化</strong>（防 CO₃²⁻ 干扰），再加 <strong>AgNO₃(aq)</strong>：<span class="swatch" style="background:#FFFFFF;"></span>Cl⁻ <strong>白沉</strong> | <span class="swatch" style="background:#FEF3C7;"></span>Br⁻ <strong>乳白/米黄沉</strong> | <span class="swatch" style="background:#FACC15;"></span>I⁻ <strong>黄色沉淀</strong>。'
+      };
+      bindInputs(function () { el.querySelector('#c22Out').innerHTML = mp[el.querySelector('#c22Ion').value]; });
+    }
+  }
+
+  document.querySelectorAll('.lab-box[data-lab-type]').forEach(mountChemistryLab);
+
+  // ---------- 11. Initialize View & Scroll Spy ----------
+  applyViewMode(currentViewMode);
+  applyQuizMask(quizMasked);
+
+  const backTopBtn = document.getElementById('backTopBtn');
+  const trackedSections = Array.from(document.querySelectorAll('.topic-section[id]'));
+  const navLinks = Array.from(document.querySelectorAll('.sidebar .nav-link'));
+
+  window.addEventListener('scroll', function () {
+    if (backTopBtn) backTopBtn.classList.toggle('visible', window.scrollY > 360);
+    const y = window.scrollY + 110;
+    let currentId = '';
+    trackedSections.forEach(function (sec) {
+      if (sec.offsetTop <= y) currentId = sec.id;
+    });
+    if (currentId) {
+      navLinks.forEach(function (lnk) {
+        const href = lnk.getAttribute('href') || '';
+        if (href.charAt(0) === '#') {
+          lnk.classList.toggle('active', href === '#' + currentId);
+        }
+      });
+    }
+  }, { passive: true });
+
+  if (backTopBtn) {
+    backTopBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+})();
+
+  </script>
+</body>
+</html>
