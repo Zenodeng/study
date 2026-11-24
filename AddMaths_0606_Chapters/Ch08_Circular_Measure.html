@@ -1,0 +1,2043 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="--accent: #0D9488;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch08 · Chapter 8: Circular measure — IGCSE Add Maths (0606) 精讲</title>
+  <style>
+/* ==========================================================================
+   Cambridge IGCSE Additional Mathematics (0606 · 3rd Ed. Sue Pemberton)
+   16-Chapter Suite Shared Stylesheet (Offline, Zero CDN, Print-Ready)
+   ========================================================================== */
+
+:root {
+  --bg-page: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --bg-sidebar: #FFFFFF;
+  --bg-code: #EFF6FF;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-faint: #64748B;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+
+  --accent: #4338CA;
+  --accent-hover: #3730A3;
+  --accent-soft: #E0E7FF;
+
+  --p1-bg: #E0E7FF;
+  --p1-text: #3730A3;
+  --p1-border: #C7D2FE;
+  --p2-bg: #FEF3C7;
+  --p2-text: #92400E;
+  --p2-border: #FDE68A;
+
+  --deep-bg: #EFF6FF;
+  --deep-border: #2563EB;
+  --tip-bg: #FFFBEB;
+  --tip-border: #D97706;
+  --mistake-bg: #FFF1F2;
+  --mistake-border: #E11D48;
+  --example-bg: #F0FDF4;
+  --example-border: #16A34A;
+  --formula-bg: #F8FAFC;
+  --formula-border: #4338CA;
+
+  --ok-bg: #DCFCE7;
+  --ok-text: #166534;
+  --ok-border: #86EFAC;
+  --err-bg: #FEE2E2;
+  --err-text: #991B1B;
+  --err-border: #FCA5A5;
+
+  --svg-bg: #FFFFFF;
+  --svg-grid: #E2E8F0;
+  --svg-ink: #0F172A;
+  --svg-muted: #64748B;
+  --svg-blue: #2563EB;
+  --svg-indigo: #4338CA;
+  --svg-teal: #0F766E;
+  --svg-amber: #D97706;
+  --svg-red: #DC2626;
+  --svg-green: #16A34A;
+  --svg-purple: #6D28D9;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.07);
+  --shadow-lg: 0 10px 26px rgba(15, 23, 42, 0.11);
+
+  --sidebar-w: 288px;
+  --topbar-h: 58px;
+  --radius-sm: 7px;
+  --radius-md: 11px;
+  --radius-lg: 16px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Songti SC", "Noto Serif SC", Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+[data-theme="dark"] {
+  --bg-page: #0B1120;
+  --bg-surface: #111827;
+  --bg-subtle: #1E293B;
+  --bg-sidebar: #0F172A;
+  --bg-code: #1E293B;
+  --text-main: #F1F5F9;
+  --text-muted: #CBD5E1;
+  --text-faint: #94A3B8;
+  --border: #1E293B;
+  --border-strong: #334155;
+
+  --accent: #818CF8;
+  --accent-hover: #A5B4FC;
+  --accent-soft: rgba(129, 140, 248, 0.18);
+
+  --p1-bg: rgba(129, 140, 248, 0.18);
+  --p1-text: #C7D2FE;
+  --p1-border: rgba(129, 140, 248, 0.38);
+  --p2-bg: rgba(245, 158, 11, 0.16);
+  --p2-text: #FDE68A;
+  --p2-border: rgba(245, 158, 11, 0.35);
+
+  --deep-bg: rgba(37, 99, 235, 0.14);
+  --deep-border: #60A5FA;
+  --tip-bg: rgba(217, 119, 6, 0.14);
+  --tip-border: #FBBF24;
+  --mistake-bg: rgba(225, 29, 72, 0.15);
+  --mistake-border: #FB7185;
+  --example-bg: rgba(22, 163, 74, 0.13);
+  --example-border: #4ADE80;
+  --formula-bg: #172033;
+  --formula-border: #818CF8;
+
+  --ok-bg: rgba(22, 163, 74, 0.22);
+  --ok-text: #BBF7D0;
+  --ok-border: #22C55E;
+  --err-bg: rgba(220, 38, 38, 0.22);
+  --err-text: #FECACA;
+  --err-border: #EF4444;
+
+  --svg-bg: #0F172A;
+  --svg-grid: #334155;
+  --svg-ink: #F1F5F9;
+  --svg-muted: #94A3B8;
+  --svg-blue: #60A5FA;
+  --svg-indigo: #818CF8;
+  --svg-teal: #2DD4BF;
+  --svg-amber: #FBBF24;
+  --svg-red: #F87171;
+  --svg-green: #34D399;
+  --svg-purple: #A78BFA;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--topbar-h) + 18px); }
+body { margin: 0; font-family: var(--font-sans); background: var(--bg-page); color: var(--text-main); line-height: 1.72; font-size: 15.5px; -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4 { margin: 0 0 0.55em 0; line-height: 1.32; font-weight: 700; color: var(--text-main); }
+p { margin: 0 0 0.9em 0; }
+ul, ol { margin: 0 0 1em 0; padding-left: 1.45em; }
+li { margin-bottom: 0.35em; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { font-family: var(--font-mono); font-size: 0.9em; background: var(--bg-code); color: var(--accent); padding: 2px 6px; border-radius: 4px; }
+
+/* View Mode Filters */
+body.mode-book .sme-section { display: none !important; }
+body.mode-sme .book-section { display: none !important; }
+
+/* Math Formatting Helpers (Pure CSS, Zero CDN) */
+.math { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 1.04em; letter-spacing: 0.01em; }
+.math-upright { font-family: Georgia, "Times New Roman", serif; font-style: normal; }
+.frac { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; font-size: 0.88em; line-height: 1.1; margin: 0 2px; font-style: normal; font-family: Georgia, "Times New Roman", serif; }
+.frac .num { border-bottom: 1.5px solid currentColor; padding: 0 4px 1px 4px; }
+.frac .den { padding: 1px 4px 0 4px; }
+.sqrt { display: inline-flex; align-items: baseline; font-family: Georgia, "Times New Roman", serif; }
+.sqrt-rad { border-top: 1.4px solid currentColor; padding: 0 3px 0 2px; margin-left: 1px; }
+.vec-col { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; border-left: 1.5px solid currentColor; border-right: 1.5px solid currentColor; border-radius: 4px; padding: 1px 6px; line-height: 1.25; font-style: normal; font-family: Georgia, "Times New Roman", serif; margin: 0 3px; font-size: 0.92em; }
+.ncr-stack { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; border-left: 1.4px solid currentColor; border-right: 1.4px solid currentColor; border-radius: 6px; padding: 0 5px; line-height: 1.15; font-style: normal; font-family: Georgia, "Times New Roman", serif; margin: 0 2px; font-size: 0.9em; }
+
+.formula-card { background: var(--formula-bg); border: 1.5px solid var(--border-strong); border-left: 5px solid var(--formula-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; font-size: 15px; }
+.formula-main { font-family: Georgia, "Times New Roman", serif; font-size: 16.5px; font-weight: 700; color: var(--accent); margin: 4px 0 6px 0; }
+.matrix-shoe { display: inline-flex; align-items: center; gap: 6px; background: var(--bg-surface); border: 1px solid var(--border-strong); padding: 8px 14px; border-radius: 8px; font-family: Georgia, "Times New Roman", serif; font-size: 15.5px; margin: 8px 0; flex-wrap: wrap; }
+.shoe-cols { display: inline-flex; gap: 16px; border-left: 2px solid var(--text-main); border-right: 2px solid var(--text-main); padding: 4px 12px; }
+.shoe-col { display: flex; flex-direction: column; align-items: center; line-height: 1.45; }
+
+/* Topbar & Responsive Controls */
+.topbar {
+  position: sticky; top: 0; z-index: 100; height: var(--topbar-h);
+  background: var(--bg-surface); border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm); display: flex; align-items: center;
+  justify-content: space-between; gap: 10px; padding: 0 16px;
+}
+.topbar-left { display: flex; align-items: center; gap: 8px; min-width: 0; flex-shrink: 1; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 34px; padding: 0 11px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--bg-surface); color: var(--text-main); font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; text-decoration: none; }
+.icon-btn:hover { background: var(--bg-subtle); border-color: var(--accent); text-decoration: none; }
+.icon-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.menu-toggle { display: none; }
+.brand-pill { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; white-space: nowrap; flex-shrink: 1; min-width: 0; }
+.brand-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 240px; }
+.brand-code { background: var(--accent); color: #fff; padding: 2px 8px; border-radius: 5px; font-size: 12px; letter-spacing: 0.4px; white-space: nowrap; flex-shrink: 0; }
+.search-wrap { position: relative; flex: 1 1 160px; min-width: 140px; max-width: 280px; }
+.search-input { width: 100%; height: 34px; padding: 0 30px 0 32px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--bg-subtle); color: var(--text-main); font-size: 13.5px; outline: none; }
+.search-input:focus { border-color: var(--accent); background: var(--bg-surface); }
+.search-input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.search-icon { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); color: var(--text-faint); font-size: 13px; pointer-events: none; }
+.search-clear { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); border: none; background: transparent; color: var(--text-faint); cursor: pointer; font-size: 14px; display: none; }
+.search-results-bar { display: none; background: var(--accent-soft); border-bottom: 1px solid var(--border); padding: 8px 20px; font-size: 13.5px; color: var(--text-main); align-items: center; justify-content: space-between; gap: 12px; }
+.search-results-bar.visible { display: flex; }
+.topbar-controls { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.seg-group { display: inline-flex; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); overflow: hidden; background: var(--bg-subtle); }
+.seg-btn { border: none; background: transparent; color: var(--text-muted); padding: 6px 10px; font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.seg-btn.active { background: var(--accent); color: #fff; }
+.progress-chip { display: flex; align-items: center; gap: 8px; padding: 4px 10px; border-radius: 999px; background: var(--bg-subtle); border: 1px solid var(--border); font-size: 12.5px; font-weight: 600; white-space: nowrap; }
+.progress-track { width: 54px; height: 7px; background: var(--border-strong); border-radius: 99px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), #0F766E); transition: width 0.25s ease; }
+
+.app-layout { display: flex; min-height: calc(100vh - var(--topbar-h)); }
+.sidebar { width: var(--sidebar-w); flex-shrink: 0; background: var(--bg-sidebar); border-right: 1px solid var(--border); position: sticky; top: var(--topbar-h); height: calc(100vh - var(--topbar-h)); overflow-y: auto; padding: 14px 10px 44px 10px; }
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 99px; }
+.nav-unit { margin-bottom: 8px; }
+.nav-unit-btn { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border: none; border-radius: var(--radius-sm); background: transparent; color: var(--text-main); font-size: 13px; font-weight: 700; text-align: left; cursor: pointer; }
+.nav-unit-btn:hover { background: var(--bg-subtle); }
+.nav-unit-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.nav-unit-title { flex: 1; display: flex; align-items: center; gap: 7px; line-height: 1.3; }
+.nav-chevron { font-size: 11px; color: var(--text-faint); transition: transform 0.2s; }
+.nav-unit.collapsed .nav-chevron { transform: rotate(-90deg); }
+.nav-unit.collapsed .nav-links { display: none; }
+.nav-links { list-style: none; padding: 2px 0 4px 12px; margin: 0 0 0 14px; border-left: 2px solid var(--border); }
+.nav-link { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 5px 9px; margin: 2px 0; border-radius: var(--radius-sm); color: var(--text-muted); font-size: 12.6px; line-height: 1.35; text-decoration: none; }
+.nav-link:hover { background: var(--bg-subtle); color: var(--text-main); text-decoration: none; }
+.nav-link.active { background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+.nav-done-mark { color: #10B981; font-weight: 800; font-size: 12px; opacity: 0; }
+.nav-link.mastered .nav-done-mark { opacity: 1; }
+.main-content { flex: 1; min-width: 0; padding: 26px 32px 80px 32px; }
+.content-inner { max-width: 960px; margin: 0 auto; }
+
+.hero-card { background: linear-gradient(135deg, #1E1B4B 0%, var(--accent) 55%, #0F766E 100%); color: #fff; border-radius: var(--radius-lg); padding: 28px 32px; margin-bottom: 26px; box-shadow: var(--shadow-lg); }
+.hero-card h1 { color: #fff; font-size: 25px; margin-bottom: 8px; letter-spacing: -0.3px; }
+.hero-sub { color: rgba(255,255,255,0.92); font-size: 14.8px; max-width: 820px; margin-bottom: 16px; }
+.hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.hero-pill { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.28); color: #fff; padding: 4px 11px; border-radius: 999px; font-size: 12.5px; font-weight: 600; }
+.unit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+.unit-tile { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.24); border-radius: var(--radius-md); padding: 12px 14px; color: #fff; text-decoration: none; display: block; transition: transform 0.15s, background 0.15s; }
+.unit-tile:hover { transform: translateY(-2px); background: rgba(255,255,255,0.22); text-decoration: none; }
+.unit-tile-num { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.7px; opacity: 0.85; font-weight: 700; }
+.unit-tile-title { font-size: 14.5px; font-weight: 700; margin: 3px 0; }
+.unit-tile-meta { font-size: 12px; opacity: 0.88; }
+
+.topic-section { background: var(--bg-surface); border: 1px solid var(--border); border-top: 4px solid var(--accent); border-radius: var(--radius-md); padding: 24px 26px; margin-bottom: 24px; box-shadow: var(--shadow-sm); }
+.topic-section.search-dim { display: none; }
+.section-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 2px solid var(--border); }
+.section-title-group h3 { font-size: 19.5px; margin-bottom: 4px; }
+.section-en-sub { font-size: 13.5px; color: var(--text-faint); font-weight: 600; }
+.tier-row { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 7px; }
+.badge-p1, .badge-p2 { display: inline-block; font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.badge-p1 { background: var(--p1-bg); color: var(--p1-text); border: 1px solid var(--p1-border); }
+.badge-p2 { background: var(--p2-bg); color: var(--p2-text); border: 1px solid var(--p2-border); }
+.master-btn { flex-shrink: 0; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-muted); font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.master-btn:hover { border-color: #10B981; color: #10B981; }
+.master-btn.is-mastered { background: var(--ok-bg); color: var(--ok-text); border-color: var(--ok-border); }
+.subtopic { margin-bottom: 20px; }
+.subtopic:last-of-type { margin-bottom: 12px; }
+.subtopic h4 { font-size: 16px; color: var(--accent); margin: 0 0 10px 0; padding-bottom: 4px; border-bottom: 1px dashed var(--border); display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+
+.worked-example { background: var(--example-bg); border: 1px solid var(--border); border-left: 4px solid var(--example-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; }
+.worked-title { font-weight: 800; font-size: 14px; color: var(--example-border); margin-bottom: 6px; }
+.callout { border-radius: var(--radius-sm); padding: 13px 16px; margin: 14px 0; border-left: 4px solid var(--border-strong); font-size: 14.5px; }
+.callout-title { font-weight: 800; font-size: 13.5px; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+.deep-dive { background: var(--deep-bg); border-left-color: var(--deep-border); }
+.deep-dive .callout-title { color: var(--deep-border); }
+.examiner-tip { background: var(--tip-bg); border-left-color: var(--tip-border); }
+.examiner-tip .callout-title { color: var(--tip-border); }
+.common-mistake { background: var(--mistake-bg); border-left-color: var(--mistake-border); }
+.common-mistake .callout-title { color: var(--mistake-border); }
+
+.table-wrap { width: 100%; overflow-x: auto; margin: 14px 0; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+table.am-table { width: 100%; border-collapse: collapse; font-size: 13.8px; text-align: left; }
+table.am-table th { background: var(--bg-subtle); color: var(--text-main); font-weight: 700; padding: 9px 12px; border-bottom: 2px solid var(--border-strong); white-space: nowrap; }
+table.am-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.am-table tr:last-child td { border-bottom: none; }
+table.am-table tbody tr:hover { background: var(--bg-subtle); }
+
+.svg-figure { background: var(--svg-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px; margin: 16px 0; text-align: center; break-inside: avoid; }
+.svg-figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.svg-caption { margin-top: 8px; font-size: 13px; color: var(--text-faint); font-weight: 600; }
+
+/* Interactive Labs */
+.lab-box { background: var(--bg-subtle); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px; margin: 18px 0; break-inside: avoid; }
+.lab-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+.lab-title { font-size: 15.5px; font-weight: 800; color: var(--accent); display: flex; align-items: center; gap: 7px; }
+.lab-panel { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; }
+.lab-controls { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-bottom: 12px; align-items: center; }
+.lab-controls label { font-size: 13px; font-weight: 700; color: var(--text-muted); display: inline-flex; align-items: center; gap: 6px; }
+.lab-controls input[type="number"], .lab-controls select { padding: 5px 8px; border-radius: 6px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-main); font-size: 13.2px; font-weight: 700; }
+.lab-controls input[type="number"] { width: 68px; text-align: center; }
+.lab-controls input[type="range"] { width: 120px; accent-color: var(--accent); }
+.lab-grid-2col { display: grid; grid-template-columns: 1.12fr 1fr; gap: 14px; align-items: start; }
+@media (max-width: 820px) { .lab-grid-2col { grid-template-columns: 1fr; } }
+.tab-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.tab-btn { border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-muted); padding: 5px 10px; border-radius: 6px; font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.tab-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.lab-readout { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; font-size: 13.2px; font-weight: 600; }
+.readout-pill { background: var(--bg-page); border: 1px solid var(--border-strong); padding: 7px 10px; border-radius: 6px; width: 100%; line-height: 1.5; }
+
+/* Practice Questions & Concepts */
+.practice-block { margin-top: 18px; padding-top: 14px; border-top: 2px dashed var(--border-strong); }
+.practice-heading { font-size: 16px; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.exam-q { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 14px; break-inside: avoid; }
+.exam-q-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; font-size: 12.5px; }
+.q-tag { font-weight: 800; color: var(--accent); background: var(--accent-soft); padding: 2px 8px; border-radius: 5px; }
+.q-marks { font-weight: 700; color: var(--text-faint); }
+.q-stem-en { font-size: 14.8px; font-weight: 600; color: var(--text-main); margin-bottom: 6px; }
+.q-stem-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 12px; }
+.mcq-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin-bottom: 10px; }
+.mcq-opt { text-align: left; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 13.8px; cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.mcq-opt:hover { border-color: var(--accent); background: var(--bg-subtle); }
+.mcq-opt.correct { background: var(--ok-bg); border-color: var(--ok-border); color: var(--ok-text); font-weight: 700; }
+.mcq-opt.wrong { background: var(--err-bg); border-color: var(--err-border); color: var(--err-text); }
+.mcq-feedback { display: none; font-size: 13.5px; padding: 10px 12px; border-radius: var(--radius-sm); margin-top: 8px; }
+.mcq-feedback.visible { display: block; }
+.mcq-feedback.ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.mcq-feedback.err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+details.ms-details { margin-top: 10px; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 12px; }
+details.ms-details summary { cursor: pointer; font-weight: 700; font-size: 13.5px; color: var(--accent); user-select: none; }
+.ms-body { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 13.8px; }
+.ms-mark { display: inline-block; font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--p1-text); background: var(--p1-bg); padding: 1px 5px; border-radius: 4px; margin-right: 4px; }
+.ms-cn { color: var(--text-muted); margin-top: 4px; }
+
+.concept-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 14px; margin-bottom: 18px; }
+.concept-filter-group { display: flex; flex-wrap: wrap; gap: 6px; }
+.concept-actions { display: flex; align-items: center; gap: 10px; }
+.concept-count-pill { font-size: 12.5px; font-weight: 700; color: var(--text-muted); }
+.concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 14px; }
+.concept-card { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; gap: 8px; break-inside: avoid; }
+.concept-card:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
+.concept-card.concept-hidden { display: none !important; }
+.cq-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.cq-en { font-weight: 700; font-size: 14.5px; color: var(--text-main); line-height: 1.45; }
+.cq-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 2px; }
+.cq-answer { position: relative; margin-top: auto; background: var(--bg-surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius-sm); padding: 11px 13px; font-size: 13.8px; line-height: 1.6; }
+.kw { color: var(--accent); background: var(--accent-soft); padding: 0 4px; border-radius: 3px; font-weight: 700; }
+.cq-mask-hint { display: none; }
+.concept-card.masked .cq-answer { cursor: pointer; }
+.concept-card.masked .cq-answer-inner { filter: blur(7px); opacity: 0.22; user-select: none; pointer-events: none; transition: filter 0.2s, opacity 0.2s; }
+.concept-card.masked .cq-mask-hint { display: flex; align-items: center; justify-content: center; position: absolute; inset: 0; font-size: 13.5px; font-weight: 700; color: var(--accent); background: rgba(255,255,255,0.25); border-radius: var(--radius-sm); }
+[data-theme="dark"] .concept-card.masked .cq-mask-hint { background: rgba(15,23,42,0.35); }
+
+/* Chapter Pager & Hub Grid */
+.chapter-pager { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 28px; padding: 16px 20px; background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); }
+.pager-btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: var(--radius-sm); background: var(--bg-subtle); border: 1px solid var(--border-strong); color: var(--text-main); font-size: 13.5px; font-weight: 700; text-decoration: none; }
+.pager-btn:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); text-decoration: none; }
+.pager-btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.pager-btn.primary:hover { background: var(--accent-hover); color: #fff; }
+
+.hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px; margin-top: 18px; }
+.hub-card { display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-surface); border: 1px solid var(--border-strong); border-top: 5px solid var(--card-color, var(--accent)); border-radius: var(--radius-md); padding: 18px 18px 14px 18px; color: var(--text-main); text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; box-shadow: var(--shadow-sm); }
+.hub-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--card-color, var(--accent)); text-decoration: none; }
+.hub-card-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+.hub-badge { font-size: 11.5px; font-weight: 800; color: #fff; background: var(--card-color, var(--accent)); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill { font-size: 12px; font-weight: 700; color: var(--text-muted); background: var(--bg-subtle); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill.done { background: var(--ok-bg); color: var(--ok-text); }
+.hub-title { font-size: 16.5px; font-weight: 800; margin-bottom: 4px; }
+.hub-en { font-size: 12.8px; color: var(--text-faint); font-weight: 600; margin-bottom: 8px; }
+.hub-sub { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; }
+.hub-foot { font-size: 13px; font-weight: 700; color: var(--card-color, var(--accent)); display: flex; align-items: center; justify-content: space-between; }
+
+.back-top-btn { position: fixed; right: 22px; bottom: 22px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); box-shadow: var(--shadow-md); cursor: pointer; display: none; align-items: center; justify-content: center; font-size: 17px; font-weight: 800; z-index: 80; }
+.back-top-btn.visible { display: flex; }
+
+@media (max-width: 1200px) {
+  .brand-title, .btn-label { display: none; }
+  .seg-btn { padding: 6px 8px; }
+}
+@media (max-width: 980px) {
+  .menu-toggle { display: inline-flex; }
+  .sidebar { position: fixed; left: 0; top: var(--topbar-h); z-index: 95; transform: translateX(-100%); transition: transform 0.22s ease; box-shadow: var(--shadow-lg); }
+  .sidebar.open { transform: translateX(0); }
+  .main-content { padding: 18px 14px 64px 14px; }
+  .topic-section { padding: 18px 16px; }
+  .progress-chip { display: none; }
+  .search-wrap { min-width: 130px; }
+}
+@media (max-width: 640px) {
+  .topbar { padding: 0 10px; gap: 6px; }
+  .search-wrap { max-width: none; }
+  .concept-grid, .hub-grid { grid-template-columns: 1fr; }
+}
+@media print {
+  .topbar, .sidebar, .search-results-bar, .back-top-btn, .master-btn, .lab-controls button, .concept-toolbar, .cq-mask-hint, .chapter-pager { display: none !important; }
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  .main-content { padding: 0 !important; }
+  .content-inner { max-width: 100% !important; }
+  .topic-section, .exam-q, .callout, .worked-example, .svg-figure, .concept-card { box-shadow: none !important; break-inside: avoid; border-color: #CBD5E1 !important; }
+  details.ms-details, details.ms-details .ms-body, .mcq-feedback { display: block !important; }
+  .concept-card.masked .cq-answer-inner { filter: none !important; opacity: 1 !important; }
+}
+
+  </style>
+</head>
+<body data-chapter-code="Ch08">
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="展开目录">☰ 目录</button>
+      <a class="icon-btn" href="index.html" title="返回 16 章总目录"><span>🏠</span><span class="btn-label">总目录</span></a>
+      <div class="brand-pill">
+        <span class="brand-code">Ch08</span>
+        <span class="brand-title">Chapter 8: Circular measure</span>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="search" id="searchInput" class="search-input" placeholder="搜索本章定理、例题、真题与概念..." autocomplete="off" />
+      <button type="button" class="search-clear" id="searchClear" title="清空搜索">✕</button>
+    </div>
+
+    <div class="topbar-controls">
+      <div class="seg-group" role="group" aria-label="视图筛选">
+        <button type="button" class="seg-btn active" data-view-mode="all">All</button>
+        <button type="button" class="seg-btn" data-view-mode="book">教材精讲</button>
+        <button type="button" class="seg-btn" data-view-mode="sme">SaveMyExams 真题</button>
+      </div>
+
+      <div class="progress-chip" title="本章小节与真题模块掌握进度">
+        <span id="progressText">0/0</span>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+
+      <button type="button" class="icon-btn" id="toggleAllMs" title="展开或收起全部解析"><span>📝</span><span class="btn-label">展开解析</span></button>
+      <button type="button" class="icon-btn" id="themeToggle" title="切换亮色/暗色主题"><span id="themeIcon">🌙</span><span class="btn-label">主题</span></button>
+      <button type="button" class="icon-btn" id="printBtn" title="打印或导出为 PDF"><span>🖨️</span><span class="btn-label">导出 PDF</span></button>
+    </div>
+  </header>
+
+  <div class="search-results-bar" id="searchBar">
+    <span id="searchSummary">找到 0 个匹配板块</span>
+    <button type="button" class="icon-btn" id="searchResetBtn">重置过滤</button>
+  </div>
+
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="本章知识点导航">
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #0D9488;"></span>Ch08 本章小节目录</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#sec-8-1"><span>8.1 弧度制 (Radians) 与无计算器特殊角精确三角值</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-8-2"><span>8.2 弧长公式 s = rθ 与扇形周长问题</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-8-3"><span>8.3 扇形面积、弓形面积、弦长与组合阴影区域</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-sme"><span>SaveMyExams 0606 高频真题精选与评分细则</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#app-concepts"><span>考前概念与公式默写卡 · Chapter 8 (16 张高频卡片)</span><span class="nav-done-mark">✓</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #0F766E;"></span>全书 16 章快速切换</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="Ch01_Functions.html"><span>Ch01 · 函数、复合、绝对值与反函数</span></a></li>
+          <li><a class="nav-link" href="Ch02_Simultaneous_Quadratics.html"><span>Ch02 · 联立方程组与二次函数最值、不等式及判别式</span></a></li>
+          <li><a class="nav-link" href="Ch03_Factors_Polynomials.html"><span>Ch03 · 多项式除法、因式定理与余数定理</span></a></li>
+          <li><a class="nav-link" href="Ch04_Equations_Inequalities_Graphs.html"><span>Ch04 · 绝对值不等式、三次图像与变元二次方程</span></a></li>
+          <li><a class="nav-link" href="Ch05_Logarithmic_Exponential.html"><span>Ch05 · 对数、指数方程、换底公式与图像</span></a></li>
+          <li><a class="nav-link" href="Ch06_Straight_Line_Graphs.html"><span>Ch06 · 直线几何、鞋带面积与线性化 (Linear Law)</span></a></li>
+          <li><a class="nav-link" href="Ch07_Circle_Geometry.html"><span>Ch07 · 圆的解析方程、切线法线与双圆位置</span></a></li>
+          <li><a class="nav-link active" href="Ch08_Circular_Measure.html"><span>Ch08 · 弧度制、弧长与扇形弓形周长面积</span></a></li>
+          <li><a class="nav-link" href="Ch09_Trigonometry.html"><span>Ch09 · CAST 象限角、三角图像、方程与恒等式</span></a></li>
+          <li><a class="nav-link" href="Ch10_Permutations_Combinations.html"><span>Ch10 · 阶乘、约束排列 (nPr) 与分组组合 (nCr)</span></a></li>
+          <li><a class="nav-link" href="Ch11_Series.html"><span>Ch11 · 杨辉三角、二项式定理与 AP / GP / S∞</span></a></li>
+          <li><a class="nav-link" href="Ch12_Differentiation_1.html"><span>Ch12 · 幂函数求导、链乘商法则、切法线与极值应用</span></a></li>
+          <li><a class="nav-link" href="Ch13_Vectors.html"><span>Ch13 · 单位向量、位置向量几何比与匀速运动追及</span></a></li>
+          <li><a class="nav-link" href="Ch14_Differentiation_2.html"><span>Ch14 · 指数、对数与三角函数求导及其综合应用</span></a></li>
+          <li><a class="nav-link" href="Ch15_Integration.html"><span>Ch15 · 不定积分、逆微分技巧、定积分与曲边面积</span></a></li>
+          <li><a class="nav-link" href="Ch16_Kinematics.html"><span>Ch16 · 运动学微积分：s-v-a 互推、瞬间静止与总路程</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-inner">
+        <section class="hero-card" id="top">
+          <h1>Chapter 8: Circular measure · 第 8 章 · 弧度制、弧长与扇形弓形周长面积</h1>
+          <p class="hero-sub">
+            完整覆盖 <strong>Sue Pemberton 第 3 版教材（2025–2027 新考纲 · Paper 1 禁用计算器 Non-Calculator）</strong>本章全部小节：<code>8.1 弧度制与 π 精确互化 · 8.2 弧长 s = rθ · 8.3 扇形面积 ½r²θ、弓形与组合阴影区域</code>，并结合 SaveMyExams 0606 真题精讲、交互实验室与考前概念默写卡。
+          </p>
+          <div class="hero-badges">
+            <span class="hero-pill">📘 Sue Pemberton 3rd Ed. · 2025–2027</span>
+            <span class="hero-pill">🚫 Paper 1 无计算器精确解法</span>
+            <span class="hero-pill">🧪 本章专属交互动态实验室</span>
+            <a class="hero-pill" href="#sec-sme" style="text-decoration: none;">📝 直达 SaveMyExams 真题 →</a>
+            <a class="hero-pill" href="#app-concepts" style="text-decoration: none; background: rgba(255,255,255,0.24);">🧠 直达中英概念默写库 →</a>
+          </div>
+          <div class="unit-grid">
+            <a class="unit-tile" href="#sec-8-1">
+              <div class="unit-tile-num">Section 8-1</div>
+              <div class="unit-tile-title">8.1 弧度制 (Radians) 与无计算器特殊角精确三角值</div>
+            </a>
+            <a class="unit-tile" href="#sec-8-2">
+              <div class="unit-tile-num">Section 8-2</div>
+              <div class="unit-tile-title">8.2 弧长公式 s = rθ 与扇形周长问题</div>
+            </a>
+            <a class="unit-tile" href="#sec-8-3">
+              <div class="unit-tile-num">Section 8-3</div>
+              <div class="unit-tile-title">8.3 扇形面积、弓形面积、弦长与组合阴影区域</div>
+            </a>
+            <a class="unit-tile" href="#sec-sme">
+              <div class="unit-tile-num">Section sme</div>
+              <div class="unit-tile-title">SaveMyExams 0606 高频真题精选与评分细则</div>
+            </a>
+          </div>
+        </section>
+
+        <div id="emptySearchNotice" class="callout deep-dive" style="display: none;">
+          <div class="callout-title">🔍 未找到匹配内容</div>
+          <p style="margin-bottom: 0;">请尝试更换关键词，或点击右上角“重置过滤”恢复显示。</p>
+        </div>
+
+<!-- ==================== CHAPTER 8: CIRCULAR MEASURE ==================== -->
+
+<!-- SEC 8.1 -->
+<article class="topic-section book-section" id="sec-8-1">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>8.1 弧度制 (Radians) 与无计算器特殊角精确三角值</h3>
+      <div class="section-en-sub">8.1 Radian Measure &amp; Exact Values for π/6, π/4, π/3 Without a Calculator</div>
+      <div class="tier-row">
+        <span class="badge-p1">Paper 1 禁用计算器：背熟两大特殊三角形</span>
+        <span class="badge-p2">Paper 2 务必把计算器切换为 RAD 模式</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-8-1">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>8.1.1 弧度定义与角度/弧度精确互化</h4>
+    <p><strong>1 弧度 (1 radian)</strong> 定义为：当圆弧的长度恰好等于圆半径 <span class="math">r</span> 时，该圆弧所对的圆心角即为 <span class="math">1 rad</span>（<span class="math">1 rad ≈ 57.3°</span>）。由于整圆周长为 <span class="math">2πr</span>，一周角 <span class="math">360° = 2π rad</span>，因此核心换算恒等式为：</p>
+    <div class="formula-card">
+      <div class="formula-main">
+        π rad = 180° &nbsp;&nbsp;|&nbsp;&nbsp;
+        角度 → 弧度：× <span class="frac"><span class="num">π</span><span class="den">180°</span></span> &nbsp;&nbsp;|&nbsp;&nbsp;
+        弧度 → 角度：× <span class="frac"><span class="num">180°</span><span class="den">π</span></span>
+      </div>
+      <p style="margin-bottom: 0;">
+        <strong>Paper 1 书写规范：</strong>常见角度换弧度必须保留 <span class="math">π</span> 的最简分数形式（例如 <span class="math">150° = <span class="frac"><span class="num">5π</span><span class="den">6</span></span></span>，<span class="math">225° = <span class="frac"><span class="num">5π</span><span class="den">4</span></span></span>），不要乘出小数 <span class="math">3.14159</span>！
+      </p>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>8.1.2 无计算器特殊角精确三角函数表（<span class="math">π/6, π/4, π/3</span> 及钝角扩展）</h4>
+    <div class="table-wrap">
+      <table class="am-table">
+        <thead>
+          <tr><th>角度 (deg)</th><th>0°</th><th>30°</th><th>45°</th><th>60°</th><th>90°</th><th>120°</th><th>135°</th><th>150°</th><th>180°</th></tr>
+          <tr><th>弧度 (rad)</th><th><span class="math">0</span></th><th><span class="math"><span class="frac"><span class="num">π</span><span class="den">6</span></span></span></th><th><span class="math"><span class="frac"><span class="num">π</span><span class="den">4</span></span></span></th><th><span class="math"><span class="frac"><span class="num">π</span><span class="den">3</span></span></span></th><th><span class="math"><span class="frac"><span class="num">π</span><span class="den">2</span></span></span></th><th><span class="math"><span class="frac"><span class="num">2π</span><span class="den">3</span></span></span></th><th><span class="math"><span class="frac"><span class="num">3π</span><span class="den">4</span></span></span></th><th><span class="math"><span class="frac"><span class="num">5π</span><span class="den">6</span></span></span></th><th><span class="math">π</span></th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span class="math">sin θ</span></strong></td>
+            <td><span class="math">0</span></td>
+            <td><span class="frac"><span class="num">1</span><span class="den">2</span></span></td>
+            <td><span class="frac"><span class="num"><span class="sqrt">√<span class="sqrt-rad">2</span></span></span><span class="den">2</span></span></td>
+            <td><span class="frac"><span class="num"><span class="sqrt">√<span class="sqrt-rad">3</span></span></span><span class="den">2</span></span></td>
+            <td><span class="math">1</span></td>
+            <td><span class="frac"><span class="num"><span class="sqrt">√<span class="sqrt-rad">3</span></span></span><span class="den">2</span></span></td>
+            <td><span class="frac"><span class="num"><span class="sqrt">√<span class="sqrt-rad">2</span></span></span><span class="den">2</span></span></td>
+            <td><span class="frac"><span class="num">1</span><span class="den">2</span></span></td>
+            <td><span class="math">0</span></td>
+          </tr>
+          <tr>
+            <td><strong><span class="math">cos θ</span></strong></td>
+            <td><span class="math">1</span></td>
+            <td><span class="frac"><span class="num"><span class="sqrt">√<span class="sqrt-rad">3</span></span></span><span class="den">2</span></span></td>
+            <td><span class="frac"><span class="num"><span class="sqrt">√<span class="sqrt-rad">2</span></span></span><span class="den">2</span></span></td>
+            <td><span class="frac"><span class="num">1</span><span class="den">2</span></span></td>
+            <td><span class="math">0</span></td>
+            <td><span class="math">−<span class="frac"><span class="num">1</span><span class="den">2</span></span></span></td>
+            <td><span class="math">−<span class="frac"><span class="num"><span class="sqrt">√<span class="sqrt-rad">2</span></span></span><span class="den">2</span></span></span></td>
+            <td><span class="math">−<span class="frac"><span class="num"><span class="sqrt">√<span class="sqrt-rad">3</span></span></span><span class="den">2</span></span></span></td>
+            <td><span class="math">−1</span></td>
+          </tr>
+          <tr>
+            <td><strong><span class="math">tan θ</span></strong></td>
+            <td><span class="math">0</span></td>
+            <td><span class="frac"><span class="num">1</span><span class="den"><span class="sqrt">√<span class="sqrt-rad">3</span></span></span></span></td>
+            <td><span class="math">1</span></td>
+            <td><span class="math"><span class="sqrt">√<span class="sqrt-rad">3</span></span></span></td>
+            <td>无定义</td>
+            <td><span class="math">−<span class="sqrt">√<span class="sqrt-rad">3</span></span></span></td>
+            <td><span class="math">−1</span></td>
+            <td><span class="math">−<span class="frac"><span class="num">1</span><span class="den"><span class="sqrt">√<span class="sqrt-rad">3</span></span></span></span></span></td>
+            <td><span class="math">0</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 215" width="740" height="215" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="1弧度几何定义与π/4和π/6及π/3无计算器特殊直角三角形">
+        <rect x="0" y="0" width="740" height="215" rx="10" fill="none" />
+        <!-- Panel 1: 1 Radian Definition -->
+        <rect x="14" y="10" width="228" height="195" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="128" y="30" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-ink)">1 弧度定义 (s = r)</text>
+        <!-- Sector centre (66, 154), R=94, a1=0 -> (160,154), a2=-1 rad -> (66+94*0.5403, 154-94*0.8415) = (116.8, 74.9) -->
+        <path d="M 66 154 L 160 154 A 94 94 0 0 0 116.8 74.9 Z" fill="rgba(13,148,136,0.12)" stroke="var(--svg-teal)" stroke-width="2.2" />
+        <circle cx="66" cy="154" r="3.5" fill="var(--svg-ink)" />
+        <text x="54" y="164" font-size="11" font-weight="700" fill="var(--svg-ink)">O</text>
+        <text x="112" y="170" text-anchor="middle" font-size="11" font-weight="700" fill="var(--svg-ink)">r</text>
+        <text x="80" y="108" font-size="11" font-weight="700" fill="var(--svg-ink)">r</text>
+        <text x="155" y="105" font-size="11.5" font-weight="800" fill="var(--svg-teal)">弧长 s = r</text>
+        <text x="115" y="141" font-size="11" font-weight="800" fill="var(--svg-red)">1 rad</text>
+        <text x="128" y="194" text-anchor="middle" font-size="11" font-weight="700" fill="var(--svg-blue)">π rad = 180° (≈ 57.3°/rad)</text>
+
+        <!-- Panel 2: pi/4 Triangle (1, 1, sqrt(2)) -->
+        <rect x="256" y="10" width="228" height="195" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="370" y="30" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-ink)">等腰直角三角形 (π/4 = 45°)</text>
+        <polygon points="306,162 426,162 306,56" fill="rgba(37,99,235,0.09)" stroke="var(--svg-blue)" stroke-width="2.2" />
+        <polyline points="306,148 320,148 320,162" fill="none" stroke="var(--svg-ink)" stroke-width="1.4" />
+        <text x="366" y="178" text-anchor="middle" font-size="12" font-weight="800" fill="var(--svg-ink)">1</text>
+        <text x="292" y="114" text-anchor="end" font-size="12" font-weight="800" fill="var(--svg-ink)">1</text>
+        <text x="378" y="102" font-size="12.5" font-weight="800" fill="var(--svg-blue)">√2</text>
+        <text x="392" y="154" font-size="11" font-weight="800" fill="var(--svg-red)">π/4</text>
+        <text x="314" y="88" font-size="11" font-weight="800" fill="var(--svg-red)">π/4</text>
+        <text x="370" y="196" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-teal)">sin(π/4)=cos(π/4)=1/√2, tan=1</text>
+
+        <!-- Panel 3: pi/6 and pi/3 Triangle (1, sqrt(3), 2) -->
+        <rect x="498" y="10" width="228" height="195" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="612" y="30" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-ink)">半等边三角形 (π/6, π/3)</text>
+        <polygon points="558,162 642,162 558,52" fill="rgba(217,119,6,0.10)" stroke="var(--svg-amber)" stroke-width="2.2" />
+        <polyline points="558,148 572,148 572,162" fill="none" stroke="var(--svg-ink)" stroke-width="1.4" />
+        <text x="600" y="178" text-anchor="middle" font-size="12" font-weight="800" fill="var(--svg-ink)">1</text>
+        <text x="546" y="112" text-anchor="end" font-size="12" font-weight="800" fill="var(--svg-ink)">√3</text>
+        <text x="612" y="102" font-size="12.5" font-weight="800" fill="var(--svg-amber)">2</text>
+        <text x="614" y="154" font-size="11" font-weight="800" fill="var(--svg-red)">π/3</text>
+        <text x="564" y="88" font-size="11" font-weight="800" fill="var(--svg-red)">π/6</text>
+        <text x="612" y="196" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-teal)">sin(π/6)=½, sin(π/3)=√3/2</text>
+      </svg>
+      <div class="svg-caption">图 8.1 · 1 弧度几何定义与无计算器 Paper 1 必背的两大特殊直角三角形（1-1-√2 与 1-√3-2）</div>
+    </div>
+  </div>
+</article>
+
+<!-- SEC 8.2 -->
+<article class="topic-section book-section" id="sec-8-2">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>8.2 弧长公式 s = rθ 与扇形周长问题</h3>
+      <div class="section-en-sub">8.2 Length of an Arc (s = rθ) &amp; Perimeter of Minor / Major Sectors</div>
+      <div class="tier-row">
+        <span class="badge-p1">θ 必须先化为弧度 Radian!</span>
+        <span class="badge-p2">扇形周长 = s + 2r（勿漏两条半径!）</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-8-2">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>8.2.1 弧长与周长公式及优弧/劣弧区分</h4>
+    <div class="formula-card">
+      <div class="formula-main">
+        弧长 (Arc Length)：s = r θ &nbsp;&nbsp;|&nbsp;&nbsp; 扇形周长 (Sector Perimeter)：P = r θ + 2r = r(θ + 2)
+      </div>
+      <p style="margin-bottom: 0;">
+        <strong>重大区分：</strong>① <strong>Minor arc / sector (劣弧/小扇形)</strong> 对应圆心角 <span class="math">θ &lt; π</span>；② <strong>Major arc / sector (优弧/大扇形)</strong> 对应圆心角 <strong><span class="math">2π − θ</span></strong>。<br>
+        ③ <strong>周长必加两条直边：</strong>算扇形周长 (Perimeter of sector <span class="math">OAB</span>) 时，除圆弧 <span class="math">rθ</span> 外<strong>必须加上半径 <span class="math">OA + OB = 2r</span></strong>！
+      </p>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">例题 8.2 · 优扇形周长反推半径与角度</div>
+      <p style="margin-bottom: 0;">
+        圆心角为 <span class="math">120°</span> 的劣扇形 <span class="math">OAB</span> 半径为 <span class="math">r = 6 cm</span>，求优扇形 (Major Sector) 的精确弧长与周长。<br>
+        <strong>解：</strong>劣弧圆心角 <span class="math">120° = <span class="frac"><span class="num">2π</span><span class="den">3</span></span> rad</span> ⇒ 优扇形圆心角 <span class="math">θ<sub>major</sub> = 2π − <span class="frac"><span class="num">2π</span><span class="den">3</span></span> = <span class="frac"><span class="num">4π</span><span class="den">3</span></span> rad</span>。<br>
+        优弧长 <span class="math">s = 6 × <span class="frac"><span class="num">4π</span><span class="den">3</span></span> = <strong>8π cm</strong></span>；优扇形周长 <span class="math">= 8π + 2(6) = <strong>(8π + 12) cm</strong></span>。
+      </p>
+    </div>
+  </div>
+</article>
+
+<!-- SEC 8.3 -->
+<article class="topic-section book-section" id="sec-8-3">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>8.3 扇形面积、弓形面积、弦长与组合阴影区域</h3>
+      <div class="section-en-sub">8.3 Area of a Sector (½r²θ), Segment ½r²(θ − sin θ), Chord 2r sin(θ/2) &amp; Compound Shaded Regions</div>
+      <div class="tier-row">
+        <span class="badge-p1">弓形 = 扇形 − 三角形</span>
+        <span class="badge-p2">五大组合图形割补母题模板</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-8-3">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>8.3.1 扇形、弓形与弦长三大核心公式</h4>
+    <div class="formula-card">
+      <div class="formula-main">
+        1. 扇形面积 (Sector Area)：A<sub>sector</sub> = <span class="frac"><span class="num">1</span><span class="den">2</span></span> r² θ = <span class="frac"><span class="num">1</span><span class="den">2</span></span> r s<br>
+        2. 弓形面积 (Segment Area)：A<sub>segment</sub> = <span class="frac"><span class="num">1</span><span class="den">2</span></span> r² θ − <span class="frac"><span class="num">1</span><span class="den">2</span></span> r² sin θ = <span class="frac"><span class="num">1</span><span class="den">2</span></span> r² (θ − sin θ)<br>
+        3. 弦长公式 (Chord Length AB)：AB = 2r sin(<span class="frac"><span class="num">θ</span><span class="den">2</span></span>) &nbsp;&nbsp;[或余弦定理 <span class="sqrt">√<span class="sqrt-rad">2r²(1 − cos θ)</span></span>]
+      </div>
+      <p style="margin-bottom: 0;">
+        <strong>优弓形 (Major Segment) 技巧：</strong>用“整圆面积 <span class="math">πr²</span> 减去劣弓形面积”最快！若直接代公式 <span class="math"><span class="frac"><span class="num">1</span><span class="den">2</span></span>r²(θ<sub>major</sub> − sin θ<sub>major</sub>)</span>，注意因 <span class="math">θ<sub>major</sub> &gt; π</span> 故 <span class="math">sin θ<sub>major</sub> &lt; 0</span>，负负得正等效于加上三角形 <span class="math">ΔOAB</span>！
+      </p>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">例题 8.3A · Paper 1 精确弓形面积与周长 (<span class="math">r = 6, θ = 2π/3</span>)</div>
+      <p style="margin-bottom: 0;">
+        圆半径 <span class="math">r = 6 cm</span>，圆心角 <span class="math">θ = <span class="frac"><span class="num">2π</span><span class="den">3</span></span> rad</span>。求劣弓形 (Minor Segment) 的精确周长与面积。<br>
+        ① 弦长 <span class="math">AB = 2(6) sin(<span class="frac"><span class="num">π</span><span class="den">3</span></span>) = 12 × <span class="frac"><span class="num"><span class="sqrt">√<span class="sqrt-rad">3</span></span></span><span class="den">2</span></span> = 6<span class="sqrt">√<span class="sqrt-rad">3</span></span> cm</span>；弧长 <span class="math">s = 6(<span class="frac"><span class="num">2π</span><span class="den">3</span></span>) = 4π cm</span>。<br>
+        ② <strong>弓形周长 = 弧长 + 弦长 = <span class="math">(4π + 6<span class="sqrt">√<span class="sqrt-rad">3</span></span>) cm</span></strong>（注意弓形周长不是加 <span class="math">2r</span>！）。<br>
+        ③ <strong>弓形面积 = <span class="frac"><span class="num">1</span><span class="den">2</span></span>(36)(<span class="frac"><span class="num">2π</span><span class="den">3</span></span> − sin <span class="frac"><span class="num">2π</span><span class="den">3</span></span>) = 18(<span class="frac"><span class="num">2π</span><span class="den">3</span></span> − <span class="frac"><span class="num"><span class="sqrt">√<span class="sqrt-rad">3</span></span></span><span class="den">2</span></span>) = <span class="math">(12π − 9<span class="sqrt">√<span class="sqrt-rad">3</span></span>) cm²</span></strong>。
+      </p>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>8.3.2 五大组合阴影区域 (Shaded Compound Regions) &amp; 扇形内切模型</h4>
+    <div class="table-wrap">
+      <table class="am-table">
+        <thead>
+          <tr><th>高频组合图形类型</th><th>面积拆解策略 (Area)</th><th>周长拆解策略 (Perimeter — 沿着阴影外框走一圈！)</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. 切线直角三角形减扇形</strong><br>（<span class="math">AT</span> 切圆于 <span class="math">A</span>，交半径延长线于 <span class="math">T</span>）</td>
+            <td><span class="math">Area(ΔOAT) − Area(OAB)</span><br>= <span class="math"><span class="frac"><span class="num">1</span><span class="den">2</span></span> r² (tan θ − θ)</span></td>
+            <td><span class="math">AT + BT + Arc(AB)</span><br>= <span class="math">r tan θ + (<span class="frac"><span class="num">r</span><span class="den">cos θ</span></span> − r) + rθ</span></td>
+          </tr>
+          <tr>
+            <td><strong>2. 两圆相交重叠“透镜形”</strong><br>（Lens Region）</td>
+            <td>拆成两个背靠背的<strong>弓形</strong>：<br><span class="math">Seg₁ + Seg₂</span></td>
+            <td>只算外围两段圆弧：<br><span class="math">r₁θ₁ + r₂θ₂</span>（<strong>绝不能加中间公共弦！</strong>）</td>
+          </tr>
+          <tr>
+            <td><strong>3. 扇形内接三角形</strong><br>（如直径半圆内接直角三角形）</td>
+            <td>先用直角或正弦/余弦定理求内接三角形边长，再 <span class="math">Sector − Δ</span></td>
+            <td>半圆内接角 <span class="math">∠APB = 90°</span> ⇒ <span class="math">PA = 2r cos α, PB = 2r sin α</span></td>
+          </tr>
+          <tr>
+            <td><strong>4. 扇形内切小圆</strong><br>（圆心距 <span class="math">R − ρ</span> 沿角平分线）</td>
+            <td>利用垂直切线直角三角形：<br><span class="math">sin(<span class="frac"><span class="num">θ</span><span class="den">2</span></span>) = <span class="frac"><span class="num">ρ</span><span class="den">R − ρ</span></span></span> 求出 <span class="math">ρ</span></td>
+            <td>阴影 <span class="math">= Sector − πρ²</span>；周长 <span class="math">= Rθ + 2R + 2πρ</span></td>
+          </tr>
+          <tr>
+            <td><strong>5. 定周长扇形最大面积</strong><br>（如周长固定为 <span class="math">P</span>）</td>
+            <td>由 <span class="math">2r + rθ = P ⇒ rθ = P − 2r</span><br>代入 <span class="math">A = <span class="frac"><span class="num">1</span><span class="den">2</span></span>r(P − 2r) = <span class="frac"><span class="num">P</span><span class="den">2</span></span>r − r²</span></td>
+            <td>配方求最值：当 <span class="math">r = <span class="frac"><span class="num">P</span><span class="den">4</span></span></span> 时面积最大，此时恒有 <strong><span class="math">θ = 2 rad</span></strong>！</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">例题 8.3B · 切线直角三角形阴影 (<span class="math">r = 6, θ = π/3</span>) 与定周长最值</div>
+      <p style="margin-bottom: 6px;">
+        (a) 如图 8.2 右图，扇形 <span class="math">OAB</span> 半径 <span class="math">r = 6 cm</span>，<span class="math">∠AOB = <span class="frac"><span class="num">π</span><span class="den">3</span></span></span>，<span class="math">AT</span> 为圆在 <span class="math">A</span> 点的切线交 <span class="math">OB</span> 延长线于 <span class="math">T</span>。求阴影区域 <span class="math">ABT</span> 的精确周长与面积。<br>
+        (b) 若某扇形周长固定为 <span class="math">20 cm</span>，求其最大面积及对应的圆心角 <span class="math">θ</span>。
+      </p>
+      <p style="margin-bottom: 0;">
+        <strong>(a)</strong> 因为 <span class="math">∠OAT = <span class="frac"><span class="num">π</span><span class="den">2</span></span></span>：<span class="math">AT = 6 tan(<span class="frac"><span class="num">π</span><span class="den">3</span></span>) = 6<span class="sqrt">√<span class="sqrt-rad">3</span></span> cm</span>；<span class="math">OT = <span class="frac"><span class="num">6</span><span class="den">cos(π/3)</span></span> = 12 cm ⇒ BT = 12 − 6 = 6 cm</span>；弧 <span class="math">AB = 6(<span class="frac"><span class="num">π</span><span class="den">3</span></span>) = 2π cm</span>。<br>
+        阴影周长 = <strong><span class="math">(6<span class="sqrt">√<span class="sqrt-rad">3</span></span> + 6 + 2π) cm</span></strong>；阴影面积 = <span class="math"><span class="frac"><span class="num">1</span><span class="den">2</span></span>(6)(6<span class="sqrt">√<span class="sqrt-rad">3</span></span>) − <span class="frac"><span class="num">1</span><span class="den">2</span></span>(36)(<span class="frac"><span class="num">π</span><span class="den">3</span></span>) = <strong>(18<span class="sqrt">√<span class="sqrt-rad">3</span></span> − 6π) cm²</strong></span>。<br>
+        <strong>(b)</strong> <span class="math">2r + rθ = 20 ⇒ rθ = 20 − 2r</span> ⇒ <span class="math">A = <span class="frac"><span class="num">1</span><span class="den">2</span></span>r(20 − 2r) = 10r − r² = 25 − (r − 5)²</span>。<br>
+        当 <span class="math">r = 5 cm</span> 时面积最大为 <strong><span class="math">25 cm²</span></strong>，此时 <span class="math">θ = <span class="frac"><span class="num">20 − 10</span><span class="den">5</span></span> = <strong>2 rad</strong></span>。
+      </p>
+    </div>
+
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 225" width="740" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="扇形弓形弦长半角分解与切线直角三角形组合阴影图">
+        <rect x="0" y="0" width="740" height="225" rx="10" fill="none" />
+        <!-- Left: Sector, Chord 2r sin(theta/2) and Segment -->
+        <rect x="14" y="10" width="346" height="205" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="187" y="30" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-ink)">扇形、弦长 2r sin(θ/2) 与弓形拆解</text>
+        <!-- O(110, 175), R=115, A(225, 175), a2=-1.15 -> B(157.0, 70.1) -->
+        <path d="M 110 175 L 225 175 A 115 115 0 0 0 157.0 70.1 Z" fill="rgba(13,148,136,0.10)" stroke="var(--svg-teal)" stroke-width="2.2" />
+        <path d="M 225 175 A 115 115 0 0 0 157.0 70.1 Z" fill="rgba(217,119,6,0.28)" stroke="var(--svg-amber)" stroke-width="2" />
+        <line x1="110" y1="175" x2="191.0" y2="122.6" stroke="var(--svg-muted)" stroke-width="1.5" stroke-dasharray="4,3" />
+        <circle cx="110" cy="175" r="4" fill="var(--svg-ink)" />
+        <circle cx="225" cy="175" r="4" fill="var(--svg-teal)" />
+        <circle cx="157" cy="70.1" r="4" fill="var(--svg-teal)" />
+        <text x="96" y="182" text-anchor="end" font-size="11" font-weight="700" fill="var(--svg-ink)">O</text>
+        <text x="234" y="180" font-size="11" font-weight="700" fill="var(--svg-teal)">A</text>
+        <text x="147" y="64" text-anchor="end" font-size="11" font-weight="700" fill="var(--svg-teal)">B</text>
+        <text x="166" y="191" text-anchor="middle" font-size="11" font-weight="700" fill="var(--svg-ink)">r</text>
+        <text x="142" y="146" font-size="10.5" font-weight="700" fill="var(--svg-red)">θ/2</text>
+        <text x="220" y="106" font-size="11" font-weight="800" fill="var(--svg-amber)">弓形 ½r²(θ−sin θ)</text>
+        <text x="255" y="145" font-size="10.5" font-weight="700" fill="var(--svg-blue)">弦 AB = 2r sin(θ/2)</text>
+        <text x="187" y="206" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-teal)">弧长 s = rθ</text>
+
+        <!-- Right: Tangent triangle OAT minus Sector OAB -->
+        <rect x="380" y="10" width="346" height="205" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="553" y="30" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-ink)">组合阴影：切线直角 ΔOAT − 扇形 OAB</text>
+        <!-- O(435, 178), A(545, 178) R=110, T(545, 68), OT = sqrt(110^2+110^2)=155.56 -> B=(435+77.8, 178-77.8)=(512.8, 100.2) -->
+        <polygon points="435,178 545,178 545,68" fill="rgba(217,119,6,0.20)" stroke="var(--svg-amber)" stroke-width="2" />
+        <path d="M 435 178 L 545 178 A 110 110 0 0 0 512.8 100.2 Z" fill="var(--svg-bg)" stroke="var(--svg-teal)" stroke-width="2.2" />
+        <path d="M 435 178 L 545 178 A 110 110 0 0 0 512.8 100.2 Z" fill="rgba(13,148,136,0.12)" stroke="none" />
+        <polyline points="533,178 533,166 545,166" fill="none" stroke="var(--svg-ink)" stroke-width="1.4" />
+        <circle cx="435" cy="178" r="4" fill="var(--svg-ink)" />
+        <circle cx="545" cy="178" r="4" fill="var(--svg-teal)" />
+        <circle cx="512.8" cy="100.2" r="4" fill="var(--svg-teal)" />
+        <circle cx="545" cy="68" r="4" fill="var(--svg-amber)" />
+        <text x="422" y="182" text-anchor="end" font-size="11" font-weight="700" fill="var(--svg-ink)">O</text>
+        <text x="554" y="182" font-size="11" font-weight="700" fill="var(--svg-teal)">A</text>
+        <text x="498" y="96" text-anchor="end" font-size="11" font-weight="700" fill="var(--svg-teal)">B</text>
+        <text x="554" y="68" font-size="11" font-weight="700" fill="var(--svg-amber)">T</text>
+        <text x="466" y="168" font-size="11" font-weight="700" fill="var(--svg-red)">θ</text>
+        <text x="554" y="128" font-size="11" font-weight="700" fill="var(--svg-amber)">AT = r tan θ</text>
+        <text x="645" y="102" text-anchor="middle" font-size="11" font-weight="800" fill="var(--svg-amber)">阴影面积 =</text>
+        <text x="645" y="119" text-anchor="middle" font-size="11" font-weight="800" fill="var(--svg-amber)">½r²(tan θ − θ)</text>
+        <text x="553" y="206" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-ink)">阴影周长 = AT + (OT − r) + rθ</text>
+      </svg>
+      <div class="svg-caption">图 8.2 · 扇形半角求弦长与弓形面积（左）以及切线三角形减扇形经典组合阴影模型（右）</div>
+    </div>
+
+    <!-- Interactive Lab Ch08 -->
+    <div class="lab-box" data-lab-type="ch08"></div>
+  </div>
+</article>
+
+<!-- SEC SME -->
+<article class="topic-section sme-section" id="sec-sme">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>SaveMyExams 0606 高频真题精选与评分细则</h3>
+      <div class="section-en-sub">MCQ Checkpoint &amp; Structured Circular Measure Problems (Paper 1 Exact &amp; Paper 2 Compound)</div>
+      <div class="tier-row">
+        <span class="badge-p1">4 道高频避坑快选</span>
+        <span class="badge-p2">4 道完整 Mark Scheme 压轴大题</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-sme">○ 标记掌握</button>
+  </div>
+
+  <div class="practice-block" style="margin-top: 0; padding-top: 0; border-top: none;">
+    <div class="practice-heading">⚡ 第一部分：高频易错 MCQ 快答</div>
+
+    <div class="exam-q" data-mcq-answer="C">
+      <div class="exam-q-head"><span class="q-tag">Ch08 · MCQ 1 (无计算器特殊角精确运算 · Paper 1)</span><span class="q-marks">[2 marks]</span></div>
+      <div class="q-stem-en">Without using a calculator, find the exact value of <span class="math">sin(<span class="frac"><span class="num">2π</span><span class="den">3</span></span>) cos(<span class="frac"><span class="num">π</span><span class="den">6</span></span>) + tan(<span class="frac"><span class="num">π</span><span class="den">4</span></span>)</span>.</div>
+      <div class="q-stem-cn">无计算器：求该弧度三角表达式的精确值。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><span class="frac"><span class="num">5</span><span class="den">4</span></span></span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><span class="frac"><span class="num"><span class="sqrt">√<span class="sqrt-rad">3</span></span> + 2</span><span class="den">2</span></span></span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><span class="frac"><span class="num">7</span><span class="den">4</span></span></span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><span class="frac"><span class="num">1</span><span class="den">4</span></span></span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！sin(2π/3) = √3/2，cos(π/6) = √3/2，tan(π/4) = 1 ⇒ (√3/2)(√3/2) + 1 = 3/4 + 1 = 7/4！" data-err="❌ 第二象限 2π/3 的 sin 为正 √3/2，乘 cos(π/6) = √3/2 得 3/4，再加上 tan(π/4) = 1 得 7/4。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head"><span class="q-tag">Ch08 · MCQ 2 (扇形周长漏加 2r 陷阱)</span><span class="q-marks">[2 marks]</span></div>
+      <div class="q-stem-en">A sector of radius <span class="math">5 cm</span> subtends an angle of <span class="math">1.4 radians</span> at the centre. Find the perimeter of the sector.</div>
+      <div class="q-stem-cn">半径 <span class="math">5 cm</span>、圆心角 <span class="math">1.4 rad</span> 的扇形周长是多少？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><span class="math">7 cm</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><span class="math">17 cm</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><span class="math">17.5 cm</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><span class="math">12 cm</span></span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！弧长 s = 5 × 1.4 = 7 cm，扇形周长还要加上两条半径 2r = 10 cm ⇒ 7 + 10 = 17 cm！" data-err="❌ A 只算了弧长 s = 7 cm！题目问的是扇形周长 Perimeter = s + 2r = 7 + 2(5) = 17 cm。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="D">
+      <div class="exam-q-head"><span class="q-tag">Ch08 · MCQ 3 (由弧长与面积反推半径与角度)</span><span class="q-marks">[2 marks]</span></div>
+      <div class="q-stem-en">A sector has arc length <span class="math">9 cm</span> and area <span class="math">27 cm²</span>. Find the angle of the sector in radians.</div>
+      <div class="q-stem-cn">已知扇形弧长 <span class="math">9 cm</span>、面积 <span class="math">27 cm²</span>，求圆心角（弧度）。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><span class="math">3 rad</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><span class="math">0.75 rad</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><span class="math">6 rad</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><span class="math">1.5 rad</span></span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 满分！用 A = ½ r s ⇒ 27 = ½ r (9) ⇒ r = 6 cm；再由 s = rθ ⇒ θ = 9 / 6 = 1.5 rad！" data-err="❌ 先用 A = ½ r s 算出 r = 6，再用 θ = s / r = 9 / 6 = 1.5 rad。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="A">
+      <div class="exam-q-head"><span class="q-tag">Ch08 · MCQ 4 (Paper 1 精确弓形面积)</span><span class="q-marks">[2 marks]</span></div>
+      <div class="q-stem-en">Find the exact area of the minor segment of a circle of radius <span class="math">4 cm</span> subtended by an angle of <span class="math"><span class="frac"><span class="num">π</span><span class="den">3</span></span></span> radians.</div>
+      <div class="q-stem-cn">求半径 <span class="math">4 cm</span>、圆心角 <span class="math">π/3 rad</span> 的劣弓形精确面积。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><span class="math"><span class="frac"><span class="num">8π</span><span class="den">3</span></span> − 4<span class="sqrt">√<span class="sqrt-rad">3</span></span> cm²</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><span class="math"><span class="frac"><span class="num">8π</span><span class="den">3</span></span> − 8<span class="sqrt">√<span class="sqrt-rad">3</span></span> cm²</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><span class="math"><span class="frac"><span class="num">16π</span><span class="den">3</span></span> − 4<span class="sqrt">√<span class="sqrt-rad">3</span></span> cm²</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><span class="math"><span class="frac"><span class="num">8π</span><span class="den">3</span></span> − 4 cm²</span></span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！½ r² (θ − sin θ) = 8(π/3 − √3/2) = 8π/3 − 4√3 cm²！" data-err="❌ 套公式 ½(4)²(π/3 − sin(π/3)) = 8(π/3 − √3/2) = 8π/3 − 4√3。"></div>
+    </div>
+  </div>
+
+  <div class="practice-block">
+    <div class="practice-heading">📝 第二部分：SaveMyExams 综合解答大题</div>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">SME 8.1 · Paper 1 无计算器精确劣弓形与优弓形面积</span><span class="q-marks">[6 marks]</span></div>
+      <div class="q-stem-en">
+        A circle has centre <span class="math">O</span> and radius <span class="math">12 cm</span>. Chord <span class="math">AB</span> subtends an angle of <span class="math"><span class="frac"><span class="num">π</span><span class="den">3</span></span></span> radians at <span class="math">O</span>.<br>
+        (a) Find the exact perimeter of the minor segment bounded by chord <span class="math">AB</span> and arc <span class="math">AB</span>. [3]<br>
+        (b) Find the exact area of the minor segment and hence the exact area of the major segment. [3]
+      </div>
+      <div class="q-stem-cn">无计算器：求劣弓形的精确周长，以及劣弓形与优弓形的精确面积。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 6 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">B1</span> (a) Minor arc <span class="math">AB = 12 × <span class="frac"><span class="num">π</span><span class="den">3</span></span> = 4π cm</span>.</p>
+          <p><span class="ms-mark">M1</span> Chord <span class="math">AB = 2(12) sin(<span class="frac"><span class="num">π</span><span class="den">6</span></span>) = 24 × <span class="frac"><span class="num">1</span><span class="den">2</span></span> = 12 cm</span> (since <span class="math">ΔOAB</span> is equilateral).</p>
+          <p><span class="ms-mark">A1</span> Perimeter of minor segment = <strong><span class="math">(4π + 12) cm</span></strong>.</p>
+          <p><span class="ms-mark">M1</span> (b) Minor segment area = <span class="math"><span class="frac"><span class="num">1</span><span class="den">2</span></span>(12)²(<span class="frac"><span class="num">π</span><span class="den">3</span></span> − sin <span class="frac"><span class="num">π</span><span class="den">3</span></span>) = 72(<span class="frac"><span class="num">π</span><span class="den">3</span></span> − <span class="frac"><span class="num"><span class="sqrt">√<span class="sqrt-rad">3</span></span></span><span class="den">2</span></span>) = <strong>(24π − 36<span class="sqrt">√<span class="sqrt-rad">3</span></span>) cm²</strong></span> (<span class="ms-mark">A1</span>).</p>
+          <p><span class="ms-mark">A1</span> Major segment area = <span class="math">π(12)² − (24π − 36<span class="sqrt">√<span class="sqrt-rad">3</span></span>) = <strong>(120π + 36<span class="sqrt">√<span class="sqrt-rad">3</span></span>) cm²</strong></span>.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">SME 8.2 · 切线直角三角形减扇形组合阴影 (Paper 2 RAD)</span><span class="q-marks">[7 marks]</span></div>
+      <div class="q-stem-en">
+        <span class="math">OAB</span> is a sector of a circle of radius <span class="math">8 cm</span> with <span class="math">∠AOB = 1.1 radians</span>. The tangent to the circle at <span class="math">A</span> meets <span class="math">OB</span> produced at <span class="math">T</span>.<br>
+        (a) Find the lengths <span class="math">AT</span> and <span class="math">BT</span>, and hence the perimeter of the shaded region <span class="math">ABT</span>, correct to 3 significant figures. [4]<br>
+        (b) Find the area of the shaded region <span class="math">ABT</span> to 3 significant figures. [3]
+      </div>
+      <div class="q-stem-cn">计算切线与扇形外围所夹阴影区域 <span class="math">ABT</span> 的周长与面积（计算器务必使用 RAD 模式！）。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 7 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">M1</span> (a) Since <span class="math">∠OAT = <span class="frac"><span class="num">π</span><span class="den">2</span></span></span>, <span class="math">AT = 8 tan(1.1) = 15.718… cm</span> (in RAD mode!).</p>
+          <p><span class="ms-mark">M1</span> <span class="math">OT = <span class="frac"><span class="num">8</span><span class="den">cos(1.1)</span></span> = 17.637… cm ⇒ BT = 17.637 − 8 = 9.637… cm</span>.</p>
+          <p><span class="ms-mark">B1</span> Arc <span class="math">AB = 8 × 1.1 = 8.8 cm</span>.</p>
+          <p><span class="ms-mark">A1</span> Perimeter = <span class="math">15.718 + 9.637 + 8.8 = <strong>34.2 cm</strong></span> (to 3 s.f.).</p>
+          <p><span class="ms-mark">M1</span> (b) Area <span class="math">ΔOAT = <span class="frac"><span class="num">1</span><span class="den">2</span></span>(8)(15.718…) = 62.872… cm²</span>；Sector <span class="math">OAB = <span class="frac"><span class="num">1</span><span class="den">2</span></span>(8)²(1.1) = 35.2 cm²</span> (<span class="ms-mark">M1</span>).</p>
+          <p><span class="ms-mark">A1</span> Shaded area = <span class="math">62.872 − 35.2 = <strong>27.7 cm²</strong></span> (to 3 s.f.).</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">SME 8.3 · 两圆互相过圆心交叠“透镜”精确面积与周长 (Paper 1)</span><span class="q-marks">[7 marks]</span></div>
+      <div class="q-stem-en">
+        Two identical circles of radius <span class="math">6 cm</span> have centres <span class="math">O₁</span> and <span class="math">O₂</span> such that each circle passes through the centre of the other. The circles intersect at <span class="math">A</span> and <span class="math">B</span>.<br>
+        (a) Explain why <span class="math">∠AO₁B = <span class="frac"><span class="num">2π</span><span class="den">3</span></span></span> radians. [2]<br>
+        (b) Find the exact perimeter of the overlapping lens region bounded by the two arcs <span class="math">AB</span>. [2]<br>
+        (c) Find the exact area of this overlapping lens region. [3]
+      </div>
+      <div class="q-stem-cn">两等圆各自经过对方圆心，证明圆心角为 <span class="math">2π/3</span> 并求重叠透镜区的精确周长与面积。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 7 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">M1</span> (a) <span class="math">O₁A = O₂A = O₁O₂ = 6 cm</span> (all radii!), so <span class="math">ΔO₁AO₂</span> and <span class="math">ΔO₁BO₂</span> are equilateral.</p>
+          <p><span class="ms-mark">A1</span> Each angle <span class="math">∠AO₁O₂ = ∠BO₁O₂ = <span class="frac"><span class="num">π</span><span class="den">3</span></span> ⇒ ∠AO₁B = <strong><span class="frac"><span class="num">2π</span><span class="den">3</span></span> rad</strong></span>.</p>
+          <p><span class="ms-mark">M1</span> (b) Lens perimeter = <span class="math">2 ×</span> arc <span class="math">AB = 2 × 6(<span class="frac"><span class="num">2π</span><span class="den">3</span></span>) = <strong>8π cm</strong></span> (<span class="ms-mark">A1</span>).</p>
+          <p><span class="ms-mark">M1</span> (c) Area of one segment = <span class="math"><span class="frac"><span class="num">1</span><span class="den">2</span></span>(6)²(<span class="frac"><span class="num">2π</span><span class="den">3</span></span> − sin <span class="frac"><span class="num">2π</span><span class="den">3</span></span>) = 18(<span class="frac"><span class="num">2π</span><span class="den">3</span></span> − <span class="frac"><span class="num"><span class="sqrt">√<span class="sqrt-rad">3</span></span></span><span class="den">2</span></span>) = 12π − 9<span class="sqrt">√<span class="sqrt-rad">3</span></span></span>.</p>
+          <p><span class="ms-mark">M1</span> Lens area = <span class="math">2 ×</span> segment = <strong><span class="math">(24π − 18<span class="sqrt">√<span class="sqrt-rad">3</span></span>) cm²</span></strong> (<span class="ms-mark">A1</span>).</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">SME 8.4 · 扇形内切圆精确半径与阴影面积 (Paper 1)</span><span class="q-marks">[7 marks]</span></div>
+      <div class="q-stem-en">
+        A sector <span class="math">OAB</span> has centre <span class="math">O</span>, radius <span class="math">9 cm</span> and <span class="math">∠AOB = <span class="frac"><span class="num">π</span><span class="den">3</span></span></span> radians. A circle of centre <span class="math">C</span> and radius <span class="math">ρ cm</span> is inscribed inside the sector so that it touches <span class="math">OA</span>, <span class="math">OB</span> and the arc <span class="math">AB</span>.<br>
+        (a) Express <span class="math">OC</span> in terms of <span class="math">ρ</span> and show that <span class="math">ρ = 3</span>. [4]<br>
+        (b) Find the exact area of the region inside sector <span class="math">OAB</span> that lies outside the inscribed circle. [3]
+      </div>
+      <div class="q-stem-cn">半径 <span class="math">9 cm</span>、圆心角 <span class="math">π/3</span> 的扇形内切一圆，求内切圆半径 <span class="math">ρ</span> 及扇形内余下阴影精确面积。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 7 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">B1</span> (a) Since the circle touches arc <span class="math">AB</span> internally, <span class="math">OC = 9 − ρ</span>.</p>
+          <p><span class="ms-mark">M1</span> By symmetry, <span class="math">OC</span> bisects <span class="math">∠AOB</span>, so in right triangle with radius to <span class="math">OA</span> (<span class="math">⊥ OA</span>), angle is <span class="math"><span class="frac"><span class="num">π</span><span class="den">6</span></span></span>:</p>
+          <p><span class="ms-mark">M1</span> <span class="math">sin(<span class="frac"><span class="num">π</span><span class="den">6</span></span>) = <span class="frac"><span class="num">ρ</span><span class="den">9 − ρ</span></span> ⇒ <span class="frac"><span class="num">1</span><span class="den">2</span></span> = <span class="frac"><span class="num">ρ</span><span class="den">9 − ρ</span></span></span>.</p>
+          <p><span class="ms-mark">A1</span> <span class="math">9 − ρ = 2ρ ⇒ 3ρ = 9 ⇒ <strong>ρ = 3</strong></span>.</p>
+          <p><span class="ms-mark">M1</span> (b) Sector area = <span class="math"><span class="frac"><span class="num">1</span><span class="den">2</span></span>(9)²(<span class="frac"><span class="num">π</span><span class="den">3</span></span>) = <span class="frac"><span class="num">27π</span><span class="den">2</span></span></span>；Circle area = <span class="math">π(3)² = 9π</span> (<span class="ms-mark">M1</span>).</p>
+          <p><span class="ms-mark">A1</span> Shaded area = <span class="math"><span class="frac"><span class="num">27π</span><span class="den">2</span></span> − 9π = <strong><span class="frac"><span class="num">9π</span><span class="den">2</span></span> cm²</strong></span>.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</article>
+
+<!-- SEC CONCEPTS: 16 Flashcards -->
+<article class="topic-section" id="app-concepts">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>考前概念与公式默写卡 · Chapter 8 (16 张高频卡片)</h3>
+      <div class="section-en-sub">Bilingual Concept &amp; Formula Flashcards (8.1–8.3 Circular Measure)</div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="app-concepts">○ 标记掌握</button>
+  </div>
+
+  <div class="concept-toolbar">
+    <div class="concept-filter-group" id="conceptFilterTabs">
+      <button type="button" class="tab-btn active" data-concept-part="all">全部 16 题</button>
+      <button type="button" class="tab-btn" data-concept-part="81">8.1 弧度与特殊角 (5)</button>
+      <button type="button" class="tab-btn" data-concept-part="82">8.2 弧长与周长 (3)</button>
+      <button type="button" class="tab-btn" data-concept-part="83">8.3 扇形弓形与弦长 (4)</button>
+      <button type="button" class="tab-btn" data-concept-part="84">综合阴影与最值 (4)</button>
+    </div>
+    <div class="concept-actions">
+      <span class="concept-count-pill" id="conceptCountPill">显示 16 / 16 题</span>
+      <button type="button" class="icon-btn" id="conceptQuizToggle">🙈 开启遮罩自测</button>
+    </div>
+  </div>
+
+  <div class="concept-grid" id="conceptGrid">
+    <div class="concept-card" data-part="81">
+      <div class="cq-head"><span class="q-tag">C8-01 · 8.1 弧度定义</span><span class="badge-p1">Radian</span></div>
+      <div class="cq-en">Define <span class="math">1 radian</span> geometrically and state the exact conversion between degrees and radians.</div>
+      <div class="cq-cn">写出 1 弧度的几何定义及角度与弧度的精确换算关系。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">1 radian is the angle subtended at the centre when <span class="kw">arc length equals radius (s = r)</span>. Conversion: <span class="kw">π rad = 180°</span> (<span class="kw">× π/180</span> to rad, <span class="kw">× 180/π</span> to deg).</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="81">
+      <div class="cq-head"><span class="q-tag">C8-02 · 8.1 π/4 三角形</span><span class="badge-p1">Exact Trig</span></div>
+      <div class="cq-en">State exact <span class="math">sin, cos, tan</span> of <span class="math"><span class="frac"><span class="num">π</span><span class="den">4</span></span></span> and <span class="math"><span class="frac"><span class="num">3π</span><span class="den">4</span></span></span> without a calculator.</div>
+      <div class="cq-cn">无计算器默写 <span class="math">π/4</span> 与 <span class="math">3π/4</span> 的 <span class="math">sin, cos, tan</span> 精确值。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">From 1–1–√2 triangle: <span class="kw">sin(π/4) = cos(π/4) = √2/2</span>, <span class="kw">tan(π/4) = 1</span>. In Q2 (<span class="kw">3π/4</span>): sin stays <span class="kw">+√2/2</span>, while <span class="kw">cos = −√2/2</span> and <span class="kw">tan = −1</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="81">
+      <div class="cq-head"><span class="q-tag">C8-03 · 8.1 π/6 三角形</span><span class="badge-p1">Exact Trig</span></div>
+      <div class="cq-en">State exact <span class="math">sin, cos, tan</span> of <span class="math"><span class="frac"><span class="num">π</span><span class="den">6</span></span></span> and <span class="math"><span class="frac"><span class="num">π</span><span class="den">3</span></span></span> from the <span class="math">1–<span class="sqrt">√<span class="sqrt-rad">3</span></span>–2</span> triangle.</div>
+      <div class="cq-cn">利用 <span class="math">1−√3−2</span> 直角三角形默写 <span class="math">π/6</span> 与 <span class="math">π/3</span> 的精确三角值。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner"><span class="kw">sin(π/6) = cos(π/3) = ½</span>；<span class="kw">cos(π/6) = sin(π/3) = √3/2</span>；<span class="kw">tan(π/6) = 1/√3</span>；<span class="kw">tan(π/3) = √3</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="81">
+      <div class="cq-head"><span class="q-tag">C8-04 · 8.1 钝角符号</span><span class="badge-p1">Obtuse Angle</span></div>
+      <div class="cq-en">What are the exact values of <span class="math">sin(<span class="frac"><span class="num">2π</span><span class="den">3</span></span>), cos(<span class="frac"><span class="num">2π</span><span class="den">3</span></span>), sin(<span class="frac"><span class="num">5π</span><span class="den">6</span></span>), cos(<span class="frac"><span class="num">5π</span><span class="den">6</span></span>)</span>?</div>
+      <div class="cq-cn">写出扇形钝角 <span class="math">2π/3</span> 与 <span class="math">5π/6</span> 的正余弦精确值。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">In Q2, sin is positive and cos is negative: <span class="kw">sin(2π/3) = √3/2, cos(2π/3) = −½</span>；<span class="kw">sin(5π/6) = ½, cos(5π/6) = −√3/2</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="81">
+      <div class="cq-head"><span class="q-tag">C8-05 · 8.1 考场模式</span><span class="badge-p2">Calculator Trap</span></div>
+      <div class="cq-en">What is the #1 calculator mistake in Paper 2 circular measure questions?</div>
+      <div class="cq-cn">Paper 2 做弧度制计算题最致命的计算器误操作是什么？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">Leaving calculator in <span class="kw">DEG mode</span> when computing sin(1.2) or tan(0.8)! Always check for the <span class="kw">R / RAD</span> indicator on screen.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="82">
+      <div class="cq-head"><span class="q-tag">C8-06 · 8.2 弧长</span><span class="badge-p1">Arc Length</span></div>
+      <div class="cq-en">Write the arc length formula <span class="math">s</span> and the mandatory unit requirement on <span class="math">θ</span>.</div>
+      <div class="cq-cn">默写弧长公式及对圆心角 <span class="math">θ</span> 的单位前提条件。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner"><span class="kw">s = r θ</span>, where <span class="kw">θ MUST be in radians</span>! If given θ in degrees, convert by × π/180 before using s = rθ.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="82">
+      <div class="cq-head"><span class="q-tag">C8-07 · 8.2 扇形周长</span><span class="badge-p1">Perimeter</span></div>
+      <div class="cq-en">Why is the perimeter of a sector NOT equal to <span class="math">rθ</span>, and what is the correct formula?</div>
+      <div class="cq-cn">为什么扇形周长不等于 <span class="math">rθ</span>？正确公式是什么？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">A sector has two straight radii as well as the curved arc: <span class="kw">Perimeter = rθ + 2r = r(θ + 2)</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="82">
+      <div class="cq-head"><span class="q-tag">C8-08 · 8.2 优劣转换</span><span class="badge-p1">Major vs Minor</span></div>
+      <div class="cq-en">If minor sector angle is <span class="math">θ</span>, what is the angle of the major sector?</div>
+      <div class="cq-cn">若劣扇形圆心角为 <span class="math">θ</span> 弧度，则优扇形圆心角是多少？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner"><span class="kw">θ<sub>major</sub> = 2π − θ</span> (remember full circle = 2π, NOT 360!).</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="83">
+      <div class="cq-head"><span class="q-tag">C8-09 · 8.3 扇形面积</span><span class="badge-p1">Sector Area</span></div>
+      <div class="cq-en">State both forms of the area of a sector (in terms of <span class="math">r, θ</span> and in terms of <span class="math">r, s</span>).</div>
+      <div class="cq-cn">写出扇形面积的两个等价公式。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner"><span class="kw">A = ½ r² θ</span> and <span class="kw">A = ½ r s</span> (since s = rθ; super handy when given arc length and area!).</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="83">
+      <div class="cq-head"><span class="q-tag">C8-10 · 8.3 弓形面积</span><span class="badge-p1">Segment Area</span></div>
+      <div class="cq-en">State the minor segment area formula and explain how each term arises geometrically.</div>
+      <div class="cq-cn">默写劣弓形面积公式，并说明其中两项的几何来源。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner"><span class="kw">Area = ½ r² (θ − sin θ)</span> = Sector (<span class="kw">½r²θ</span>) minus Isosceles Triangle OAB (<span class="kw">½r² sin θ</span>).</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="83">
+      <div class="cq-head"><span class="q-tag">C8-11 · 8.3 弦长公式</span><span class="badge-p1">Chord Length</span></div>
+      <div class="cq-en">Give TWO exact formulas for chord length <span class="math">AB</span> of a circle of radius <span class="math">r</span> and angle <span class="math">θ</span>.</div>
+      <div class="cq-cn">写出求半径 <span class="math">r</span>、圆心角 <span class="math">θ</span> 的圆弦长 <span class="math">AB</span> 的两个公式。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">① Half-angle right triangle: <span class="kw">AB = 2r sin(θ/2)</span>; ② Cosine rule: <span class="kw">AB = √[2r²(1 − cos θ)]</span>. Note perimeter of segment = <span class="kw">rθ + 2r sin(θ/2)</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="83">
+      <div class="cq-head"><span class="q-tag">C8-12 · 8.3 优弓形</span><span class="badge-p1">Major Segment</span></div>
+      <div class="cq-en">What is the safest way to find the area of a MAJOR segment without sign errors?</div>
+      <div class="cq-cn">怎样求优弓形 (Major Segment) 面积最不容易算错符号？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner"><span class="kw">Area<sub>major</sub> = πr² − Area<sub>minor segment</sub></span> = <span class="kw">πr² − ½r²(θ − sin θ)</span> (or Major Sector + Triangle OAB).</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="84">
+      <div class="cq-head"><span class="q-tag">C8-13 · 切线阴影</span><span class="badge-p1">Tangent Sector</span></div>
+      <div class="cq-en">Tangent at <span class="math">A</span> meets <span class="math">OB</span> produced at <span class="math">T</span> (<span class="math">∠AOB = θ</span>). Write the area and perimeter of shaded <span class="math">ABT</span>.</div>
+      <div class="cq-cn">写出切线三角形 <span class="math">OAT</span> 减去扇形 <span class="math">OAB</span> 的阴影面积与周长。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">Since ∠OAT = 90°, AT = <span class="kw">r tan θ</span> and OT = <span class="kw">r / cos θ</span>. Area = <span class="kw">½ r² (tan θ − θ)</span>; Perimeter = <span class="kw">r tan θ + (r/cos θ − r) + rθ</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="84">
+      <div class="cq-head"><span class="q-tag">C8-14 · 重叠透镜</span><span class="badge-p1">Overlapping</span></div>
+      <div class="cq-en">How do you find the perimeter and area of the overlapping lens of two intersecting circles?</div>
+      <div class="cq-cn">如何拆解两个圆重叠形成的“透镜区域”的周长与面积？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">Area = sum of <span class="kw">two segments</span> (<span class="kw">Seg₁ + Seg₂</span>); Perimeter = <span class="kw">Arc₁ + Arc₂</span> (NEVER include the internal common chord!).</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="84">
+      <div class="cq-head"><span class="q-tag">C8-15 · 扇形内切圆</span><span class="badge-p2">Inscribed Circle</span></div>
+      <div class="cq-en">A circle of radius <span class="math">ρ</span> is inscribed in a sector of radius <span class="math">R</span> and angle <span class="math">θ</span>. Write the relation linking <span class="math">ρ, R, θ</span>.</div>
+      <div class="cq-cn">写出扇形内切圆半径 <span class="math">ρ</span> 与扇形半径 <span class="math">R</span>、圆心角 <span class="math">θ</span> 满足的关系式。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">Line of centres passes along angle bisector (<span class="kw">θ/2</span>) with <span class="kw">OC = R − ρ</span>: <span class="kw">sin(θ/2) = ρ / (R − ρ)</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="84">
+      <div class="cq-head"><span class="q-tag">C8-16 · 定周长最值</span><span class="badge-p2">Max Sector Area</span></div>
+      <div class="cq-en">For any sector with fixed perimeter <span class="math">P</span>, what value of <span class="math">θ</span> maximises its area?</div>
+      <div class="cq-cn">周长 <span class="math">P</span> 固定的扇形，圆心角 <span class="math">θ</span> 为多少时面积达到最大值？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">A = ½r(P − 2r) = ½Pr − r² peaks at <span class="kw">r = P/4</span>, giving arc s = P/2 ⇒ <span class="kw">θ = 2 radians</span> ALWAYS!</div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+        <nav class="chapter-pager" aria-label="章节切换导航">
+          <div><a class="pager-btn" href="Ch07_Circle_Geometry.html">← Ch07 圆的解析方程、切线法线与双圆位置</a></div>
+          <div><a class="pager-btn primary" href="index.html">🏠 返回 16 章全书总目录</a></div>
+          <div><a class="pager-btn" href="Ch09_Trigonometry.html">Ch09 CAST 象限角、三角图像、方程与恒等式 →</a></div>
+        </nav>
+      </div>
+    </main>
+  </div>
+
+  <button type="button" class="back-top-btn" id="backTopBtn" title="返回顶部">↑</button>
+
+  <script>
+(function () {
+  'use strict';
+
+  const THEME_KEY = 'igcse_am0606_theme';
+  const chapterCode = (document.body && document.body.getAttribute('data-chapter-code')) || 'HUB';
+  const STORAGE_PREFIX = 'igcse_am0606_' + chapterCode.toLowerCase() + '_';
+  const htmlEl = document.documentElement;
+  const bodyEl = document.body;
+
+  // All module-level state variables declared at top of IIFE (prevents TDZ issues)
+  let currentViewMode = localStorage.getItem(STORAGE_PREFIX + 'viewMode') || 'all';
+  let activeConceptPart = 'all';
+  let quizMasked = localStorage.getItem(STORAGE_PREFIX + 'quizMasked') === '1';
+  let allMsExpanded = false;
+  let masteredIds = [];
+  try {
+    masteredIds = JSON.parse(localStorage.getItem(STORAGE_PREFIX + 'mastered') || '[]');
+    if (!Array.isArray(masteredIds)) masteredIds = [];
+  } catch (e) {
+    masteredIds = [];
+  }
+
+  // ---------- Utility Helpers ----------
+  function gcd(a, b) {
+    a = Math.abs(Math.round(a));
+    b = Math.abs(Math.round(b));
+    while (b !== 0) { const t = a % b; a = b; b = t; }
+    return a || 1;
+  }
+
+  function formatFrac(num, den) {
+    if (den === 0) return 'undefined';
+    if (num === 0) return '0';
+    if (den < 0) { num = -num; den = -den; }
+    const g = gcd(num, den);
+    num /= g; den /= g;
+    return den === 1 ? String(num) : num + '/' + den;
+  }
+
+  function formatSurd(n) {
+    n = Math.round(n);
+    if (n <= 0) return '0';
+    let out = 1, ins = n;
+    for (let f = 2; f * f <= ins; f++) {
+      while (ins % (f * f) === 0) { out *= f; ins /= (f * f); }
+    }
+    if (ins === 1) return String(out);
+    return (out === 1 ? '' : String(out)) + '√' + ins;
+  }
+
+  function fact(n) {
+    let r = 1;
+    for (let i = 2; i <= n; i++) r *= i;
+    return r;
+  }
+
+  function nCr(n, r) {
+    if (r < 0 || r > n) return 0;
+    if (r > n - r) r = n - r;
+    let res = 1;
+    for (let i = 1; i <= r; i++) res = (res * (n - r + i)) / i;
+    return Math.round(res);
+  }
+
+  function nPr(n, r) {
+    if (r < 0 || r > n) return 0;
+    let res = 1;
+    for (let i = 0; i < r; i++) res *= (n - i);
+    return res;
+  }
+
+  // ---------- 1. Theme Toggle ----------
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+
+  function applyTheme(theme) {
+    htmlEl.setAttribute('data-theme', theme);
+    if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem(THEME_KEY, theme);
+  }
+  applyTheme(localStorage.getItem(THEME_KEY) || 'light');
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      applyTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  }
+
+  // ---------- 2. View Mode Filter (All / Book / SME) ----------
+  function applyViewMode(mode) {
+    currentViewMode = mode;
+    bodyEl.classList.remove('mode-book', 'mode-sme');
+    if (mode === 'book') bodyEl.classList.add('mode-book');
+    if (mode === 'sme') bodyEl.classList.add('mode-sme');
+    document.querySelectorAll('[data-view-mode]').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-view-mode') === mode);
+    });
+    localStorage.setItem(STORAGE_PREFIX + 'viewMode', mode);
+  }
+  document.querySelectorAll('[data-view-mode]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      applyViewMode(btn.getAttribute('data-view-mode'));
+    });
+  });
+
+  // ---------- 3. Sidebar Drawer & Accordion ----------
+  const sidebar = document.getElementById('sidebar');
+  const menuToggle = document.getElementById('menuToggle');
+  if (menuToggle && sidebar) {
+    menuToggle.addEventListener('click', function () { sidebar.classList.toggle('open'); });
+    sidebar.querySelectorAll('.nav-link').forEach(function (lnk) {
+      lnk.addEventListener('click', function () {
+        if (window.innerWidth <= 980) sidebar.classList.remove('open');
+      });
+    });
+  }
+  document.querySelectorAll('.nav-unit-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const unit = btn.closest('.nav-unit');
+      if (unit) unit.classList.toggle('collapsed');
+    });
+  });
+
+  // ---------- 4. Mastery Tracker (Dynamic per chapter) ----------
+  const progressText = document.getElementById('progressText');
+  const progressFill = document.getElementById('progressFill');
+  const masterBtns = Array.from(document.querySelectorAll('.master-btn'));
+  const totalSections = masterBtns.length;
+  const validSectionIds = new Set(masterBtns.map(function (b) { return b.getAttribute('data-section-id'); }));
+
+  function renderMastery() {
+    const doneList = masteredIds.filter(function (id) { return validSectionIds.has(id); });
+    localStorage.setItem(STORAGE_PREFIX + 'total', String(totalSections));
+    if (progressText) progressText.textContent = doneList.length + '/' + totalSections;
+    if (progressFill && totalSections > 0) {
+      progressFill.style.width = Math.round((doneList.length / totalSections) * 100) + '%';
+    }
+    masterBtns.forEach(function (btn) {
+      const sid = btn.getAttribute('data-section-id');
+      const done = doneList.indexOf(sid) !== -1;
+      btn.classList.toggle('is-mastered', done);
+      btn.textContent = done ? '✓ 已掌握' : '○ 标记掌握';
+    });
+    document.querySelectorAll('.nav-link').forEach(function (lnk) {
+      const id = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('mastered', doneList.indexOf(id) !== -1);
+    });
+  }
+
+  masterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const sid = btn.getAttribute('data-section-id');
+      const idx = masteredIds.indexOf(sid);
+      if (idx === -1) masteredIds.push(sid);
+      else masteredIds.splice(idx, 1);
+      localStorage.setItem(STORAGE_PREFIX + 'mastered', JSON.stringify(masteredIds));
+      renderMastery();
+    });
+  });
+  if (totalSections > 0) renderMastery();
+
+  // ---------- 5. Global Toggle Details & Print ----------
+  const toggleAllMs = document.getElementById('toggleAllMs');
+  if (toggleAllMs) {
+    toggleAllMs.addEventListener('click', function () {
+      allMsExpanded = !allMsExpanded;
+      document.querySelectorAll('details.ms-details').forEach(function (det) { det.open = allMsExpanded; });
+      const lbl = toggleAllMs.querySelector('.btn-label');
+      if (lbl) lbl.textContent = allMsExpanded ? '收起解析' : '展开解析';
+      toggleAllMs.classList.toggle('active', allMsExpanded);
+    });
+  }
+  const printBtn = document.getElementById('printBtn');
+  if (printBtn) printBtn.addEventListener('click', function () { window.print(); });
+
+  // ---------- 6. Instant Search Filter ----------
+  const searchInput = document.getElementById('searchInput');
+  const searchClear = document.getElementById('searchClear');
+  const searchBar = document.getElementById('searchBar');
+  const searchSummary = document.getElementById('searchSummary');
+  const searchResetBtn = document.getElementById('searchResetBtn');
+  const emptySearchNotice = document.getElementById('emptySearchNotice');
+
+  function runSearch() {
+    if (!searchInput) return;
+    const raw = searchInput.value.trim().toLowerCase();
+    if (searchClear) searchClear.style.display = raw ? 'block' : 'none';
+    const sections = Array.from(document.querySelectorAll('.topic-section'));
+    if (!raw) {
+      sections.forEach(function (s) { s.classList.remove('search-dim'); });
+      if (searchBar) searchBar.classList.remove('visible');
+      if (emptySearchNotice) emptySearchNotice.style.display = 'none';
+      return;
+    }
+    let hits = 0;
+    sections.forEach(function (sec) {
+      const ok = sec.textContent.toLowerCase().indexOf(raw) !== -1;
+      sec.classList.toggle('search-dim', !ok);
+      if (ok) hits++;
+    });
+    if (searchBar) searchBar.classList.add('visible');
+    if (searchSummary) searchSummary.textContent = '关键词 “' + searchInput.value.trim() + '” 匹配 ' + hits + ' 个板块';
+    if (emptySearchNotice) emptySearchNotice.style.display = hits === 0 ? 'block' : 'none';
+  }
+  if (searchInput) searchInput.addEventListener('input', runSearch);
+  function resetSearch() { if (searchInput) searchInput.value = ''; runSearch(); }
+  if (searchClear) searchClear.addEventListener('click', resetSearch);
+  if (searchResetBtn) searchResetBtn.addEventListener('click', resetSearch);
+
+  // ---------- 7. Interactive MCQ Grading ----------
+  document.querySelectorAll('.exam-q[data-mcq-answer]').forEach(function (qBox) {
+    const ans = qBox.getAttribute('data-mcq-answer');
+    const fb = qBox.querySelector('.mcq-feedback');
+    const opts = qBox.querySelectorAll('.mcq-opt');
+    opts.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const chosen = btn.getAttribute('data-opt');
+        opts.forEach(function (o) { o.classList.remove('correct', 'wrong'); });
+        if (chosen === ans) {
+          btn.classList.add('correct');
+          if (fb) {
+            fb.textContent = fb.getAttribute('data-ok') || '✅ 回答正确！';
+            fb.className = 'mcq-feedback visible ok';
+          }
+        } else {
+          btn.classList.add('wrong');
+          opts.forEach(function (o) { if (o.getAttribute('data-opt') === ans) o.classList.add('correct'); });
+          if (fb) {
+            fb.textContent = fb.getAttribute('data-err') || '❌ 未选对，请检查步骤。';
+            fb.className = 'mcq-feedback visible err';
+          }
+        }
+      });
+    });
+  });
+
+  // ---------- 8. Concept Flashcards Filter & Mask Quiz ----------
+  const conceptCountPill = document.getElementById('conceptCountPill');
+  const conceptQuizToggle = document.getElementById('conceptQuizToggle');
+
+  function filterConcepts() {
+    const cards = Array.from(document.querySelectorAll('#conceptGrid .concept-card'));
+    if (!cards.length) return;
+    let visible = 0;
+    cards.forEach(function (card) {
+      const part = card.getAttribute('data-part');
+      const show = activeConceptPart === 'all' || part === activeConceptPart;
+      card.classList.toggle('concept-hidden', !show);
+      if (show) visible++;
+    });
+    if (conceptCountPill) conceptCountPill.textContent = '显示 ' + visible + ' / ' + cards.length + ' 题';
+  }
+
+  document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      activeConceptPart = btn.getAttribute('data-concept-part');
+      document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      filterConcepts();
+    });
+  });
+
+  function applyQuizMask(masked) {
+    quizMasked = masked;
+    document.querySelectorAll('#conceptGrid .concept-card').forEach(function (c) { c.classList.toggle('masked', masked); });
+    if (conceptQuizToggle) {
+      conceptQuizToggle.textContent = masked ? '👁️ 显示全部答案' : '🙈 开启遮罩自测';
+      conceptQuizToggle.classList.toggle('active', masked);
+    }
+    localStorage.setItem(STORAGE_PREFIX + 'quizMasked', masked ? '1' : '0');
+  }
+  if (conceptQuizToggle) {
+    conceptQuizToggle.addEventListener('click', function () { applyQuizMask(!quizMasked); });
+  }
+  document.querySelectorAll('#conceptGrid .cq-answer').forEach(function (box) {
+    box.addEventListener('click', function () {
+      const card = box.closest('.concept-card');
+      if (card && card.classList.contains('masked')) card.classList.remove('masked');
+    });
+  });
+
+  // ---------- 9. 2D Plotter Engine for Chapter Interactive Labs ----------
+  function makePlotter(w, h, xmin, xmax, ymin, ymax) {
+    const pad = 24;
+    const toX = function (x) { return pad + ((x - xmin) / (xmax - xmin)) * (w - 2 * pad); };
+    const toY = function (y) { return h - pad - ((y - ymin) / (ymax - ymin)) * (h - 2 * pad); };
+    return { w: w, h: h, xmin: xmin, xmax: xmax, ymin: ymin, ymax: ymax, toX: toX, toY: toY };
+  }
+
+  function renderPlotBase(p) {
+    let s = '<rect x="2" y="2" width="' + (p.w - 4) + '" height="' + (p.h - 4) + '" rx="6" fill="none" stroke="var(--svg-grid)" stroke-width="1"/>';
+    const xStep = Math.max(1, Math.round((p.xmax - p.xmin) / 8));
+    const yStep = Math.max(1, Math.round((p.ymax - p.ymin) / 8));
+    for (let x = Math.ceil(p.xmin); x <= p.xmax; x += xStep) {
+      const px = p.toX(x);
+      s += '<line x1="' + px.toFixed(1) + '" y1="12" x2="' + px.toFixed(1) + '" y2="' + (p.h - 12) + '" stroke="var(--svg-grid)" stroke-width="0.7"/>';
+    }
+    for (let y = Math.ceil(p.ymin); y <= p.ymax; y += yStep) {
+      const py = p.toY(y);
+      s += '<line x1="12" y1="' + py.toFixed(1) + '" x2="' + (p.w - 12) + '" y2="' + py.toFixed(1) + '" stroke="var(--svg-grid)" stroke-width="0.7"/>';
+    }
+    if (p.xmin <= 0 && p.xmax >= 0) {
+      const ox = p.toX(0);
+      s += '<line x1="' + ox.toFixed(1) + '" y1="10" x2="' + ox.toFixed(1) + '" y2="' + (p.h - 10) + '" stroke="var(--svg-muted)" stroke-width="1.4"/>';
+      s += '<text x="' + Math.min(p.w - 16, ox + 6).toFixed(1) + '" y="22" font-size="10.5" font-weight="700" fill="var(--svg-muted)">y</text>';
+    }
+    if (p.ymin <= 0 && p.ymax >= 0) {
+      const oy = p.toY(0);
+      s += '<line x1="10" y1="' + oy.toFixed(1) + '" x2="' + (p.w - 10) + '" y2="' + oy.toFixed(1) + '" stroke="var(--svg-muted)" stroke-width="1.4"/>';
+      s += '<text x="' + (p.w - 18) + '" y="' + Math.max(20, oy - 5).toFixed(1) + '" font-size="10.5" font-weight="700" fill="var(--svg-muted)">x</text>';
+    }
+    return s;
+  }
+
+  function plotCurve(p, fn, color, dashed, samples) {
+    const N = samples || 120;
+    let d = '';
+    let penDown = false;
+    for (let i = 0; i <= N; i++) {
+      const x = p.xmin + (i / N) * (p.xmax - p.xmin);
+      const y = fn(x);
+      if (!Number.isFinite(y) || y < p.ymin - 1 || y > p.ymax + 1) {
+        penDown = false;
+        continue;
+      }
+      const px = p.toX(x), py = p.toY(y);
+      d += (penDown ? ' L ' : ' M ') + px.toFixed(1) + ' ' + py.toFixed(1);
+      penDown = true;
+    }
+    if (!d) return '';
+    return '<path d="' + d.trim() + '" fill="none" stroke="' + color + '" stroke-width="2.4"' + (dashed ? ' stroke-dasharray="5,4"' : '') + '/>';
+  }
+
+  function plotDot(p, x, y, color, label) {
+    if (x < p.xmin || x > p.xmax || y < p.ymin || y > p.ymax) return '';
+    const px = p.toX(x), py = p.toY(y);
+    let s = '<circle cx="' + px.toFixed(1) + '" cy="' + py.toFixed(1) + '" r="4.8" fill="' + color + '"/>';
+    if (label) {
+      s += '<text x="' + Math.min(p.w - 42, Math.max(12, px + 7)).toFixed(1) + '" y="' + Math.max(18, py - 6).toFixed(1) + '" font-size="10.5" font-weight="700" fill="' + color + '">' + label + '</text>';
+    }
+    return s;
+  }
+
+  // ---------- 10. Chapter-Specific Interactive Lab Mounts (Ch01–Ch16) ----------
+  function mountChapterLab(el) {
+    const type = el.getAttribute('data-lab-type');
+    if (!type) return;
+
+    if (type === 'ch01') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 1 交互实验室 · 线性绝对值 |ax + b| 与反函数 y = x 对称台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>a：<input type="number" id="c1A" value="2" min="-4" max="4"></label>' +
+        '<label>b：<input type="number" id="c1B" value="-4" min="-8" max="8"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c1Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c1Vertex"></div><div class="readout-pill" id="c1Inv"></div><div class="readout-pill" id="c1Sym"></div></div></div></div>';
+      const draw = function () {
+        let a = Math.round(Number(el.querySelector('#c1A').value) || 2); if (a === 0) a = 1;
+        const b = Math.round(Number(el.querySelector('#c1B').value) || 0);
+        const vx = -b / a;
+        const p = makePlotter(360, 270, -6, 6, -6, 6);
+        let svg = renderPlotBase(p);
+        svg += plotCurve(p, function (x) { return x; }, 'var(--svg-muted)', true);
+        svg += plotCurve(p, function (x) { return a * x + b; }, 'var(--svg-blue)', true);
+        svg += plotCurve(p, function (x) { return (x - b) / a; }, 'var(--svg-teal)', false);
+        svg += plotCurve(p, function (x) { return Math.abs(a * x + b); }, 'var(--svg-indigo)', false);
+        svg += plotDot(p, vx, 0, 'var(--svg-red)', 'V(' + formatFrac(-b, a) + ',0)');
+        el.querySelector('#c1Svg').innerHTML = svg;
+        el.querySelector('#c1Vertex').textContent = '折线 y = |' + a + 'x + (' + b + ')| 顶点 (V字尖点)：(' + formatFrac(-b, a) + ', 0)，值域 y ≥ 0';
+        el.querySelector('#c1Inv').textContent = '原直线 f(x) = ' + a + 'x + (' + b + ') 的反函数：f⁻¹(x) = (x − (' + b + ')) / ' + a + '（青色实线）';
+        el.querySelector('#c1Sym').textContent = '对称规则：f(x) 与 f⁻¹(x) 严格关于虚线 y = x 镜面对称，且两者交点必在 y = x 上。';
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch02') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 2 交互实验室 · 配方法、判别式 Δ 与二次绝对值 |ax²+bx+c| 翻折台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>a：<input type="number" id="c2A" value="1" min="-3" max="3"></label>' +
+        '<label>b：<input type="number" id="c2B" value="-4" min="-8" max="8"></label>' +
+        '<label>c：<input type="number" id="c2C" value="3" min="-8" max="8"></label>' +
+        '<label><input type="checkbox" id="c2Abs"> 显示 y = |f(x)| 向上翻折</label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c2Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c2Comp"></div><div class="readout-pill" id="c2Disc"></div><div class="readout-pill" id="c2Ineq"></div></div></div></div>';
+      const draw = function () {
+        let a = Math.round(Number(el.querySelector('#c2A').value) || 1); if (a === 0) a = 1;
+        const b = Math.round(Number(el.querySelector('#c2B').value) || 0);
+        const c = Math.round(Number(el.querySelector('#c2C').value) || 0);
+        const absOn = el.querySelector('#c2Abs').checked;
+        const h = -b / (2 * a);
+        const k = c - (b * b) / (4 * a);
+        const disc = b * b - 4 * a * c;
+        const p = makePlotter(360, 270, -6, 8, -8, 10);
+        let svg = renderPlotBase(p);
+        svg += plotCurve(p, function (x) { const y = a * x * x + b * x + c; return absOn ? Math.abs(y) : y; }, 'var(--svg-indigo)', false);
+        svg += plotDot(p, h, absOn ? Math.abs(k) : k, 'var(--svg-red)', 'V(' + h.toFixed(2) + ',' + (absOn ? Math.abs(k) : k).toFixed(2) + ')');
+        el.querySelector('#c2Svg').innerHTML = svg;
+        el.querySelector('#c2Comp').textContent = '配方法顶点：x = ' + formatFrac(-b, 2 * a) + '，极值 k = ' + k.toFixed(2) + (absOn ? '（翻折后最低必 ≥ 0）' : (a > 0 ? ' (最小值 Min)' : ' (最大值 Max)'));
+        el.querySelector('#c2Disc').textContent = '判别式 Δ = b² − 4ac = ' + disc + (disc > 0 ? ' (>0：两相异实根)' : disc === 0 ? ' (=0：唯一重根/相切)' : ' (<0：无实根)');
+        el.querySelector('#c2Ineq').textContent = absOn ? 'y = |f(x)| 把 x 轴下方负值部分全部对称翻折到上方！' : '开口方向：' + (a > 0 ? '向上 (U形)，解 f(x) < 0 取两根之间' : '向下 (∩形)，解 f(x) > 0 取两根之间');
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch03') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 3 交互实验室 · 三次多项式余数/因式定理试根台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>f(x) = x³ + <input type="number" id="c3B" value="-2">x² + <input type="number" id="c3C" value="-5">x + <input type="number" id="c3D" value="6"></label>' +
+        '<label>测试因子 (x − k) 中的 k：<input type="number" id="c3K" value="1" step="0.5"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c3Rem"></div><div class="readout-pill" id="c3Quot"></div></div></div>';
+      const draw = function () {
+        const b = Number(el.querySelector('#c3B').value) || 0;
+        const c = Number(el.querySelector('#c3C').value) || 0;
+        const d = Number(el.querySelector('#c3D').value) || 0;
+        const k = Number(el.querySelector('#c3K').value) || 0;
+        const q2 = 1;
+        const q1 = b + k * q2;
+        const q0 = c + k * q1;
+        const rem = d + k * q0;
+        el.querySelector('#c3Rem').textContent = '代入余数定理 f(' + k + ') = ' + rem + (Math.abs(rem) < 1e-9 ? '  ✅ 余数为 0 ⇒ (x − (' + k + ')) 是因式 (Factor)!' : '  → 非 0，不是因式');
+        el.querySelector('#c3Quot').textContent = '长除/综合除法结果：f(x) = (x − (' + k + '))(x² + ' + q1 + 'x + ' + q0 + ') + (' + rem + ')';
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch04') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 4 交互实验室 · 三次函数草图、|ax³+...| 翻折与不等式符号分析台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>r₁：<input type="number" id="c4R1" value="-2"></label>' +
+        '<label>r₂：<input type="number" id="c4R2" value="1"></label>' +
+        '<label>r₃：<input type="number" id="c4R3" value="3"></label>' +
+        '<label>首项系数：<select id="c4S"><option value="1">+1 (正系数)</option><option value="-1">−1 (负系数)</option></select></label>' +
+        '<label><input type="checkbox" id="c4Abs"> 套绝对值 |f(x)|</label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c4Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c4Roots"></div><div class="readout-pill" id="c4Ineq"></div></div></div></div>';
+      const draw = function () {
+        const roots = [Number(el.querySelector('#c4R1').value) || 0, Number(el.querySelector('#c4R2').value) || 0, Number(el.querySelector('#c4R3').value) || 0].sort(function (x, y) { return x - y; });
+        const sgn = Number(el.querySelector('#c4S').value) || 1;
+        const absOn = el.querySelector('#c4Abs').checked;
+        const p = makePlotter(360, 270, -5, 6, -12, 12);
+        let svg = renderPlotBase(p);
+        svg += plotCurve(p, function (x) {
+          const y = sgn * (x - roots[0]) * (x - roots[1]) * (x - roots[2]);
+          return absOn ? Math.abs(y) : y;
+        }, 'var(--svg-purple)', false);
+        roots.forEach(function (r, idx) { svg += plotDot(p, r, 0, 'var(--svg-red)', 'r' + (idx + 1)); });
+        el.querySelector('#c4Svg').innerHTML = svg;
+        el.querySelector('#c4Roots').textContent = '有序零点：' + roots.join(' ≤ ') + '；y 轴截距 = ' + (-sgn * roots[0] * roots[1] * roots[2]);
+        el.querySelector('#c4Ineq').textContent = sgn > 0
+          ? 'f(x) > 0 穿根法区间：' + roots[0] + ' < x < ' + roots[1] + ' 或 x > ' + roots[2]
+          : 'f(x) > 0 穿根法区间：x < ' + roots[0] + ' 或 ' + roots[1] + ' < x < ' + roots[2];
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch05') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 5 交互实验室 · y = ke^(nx) + a 与 y = k ln(ax + b) 渐近线画板</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>函数类型：<select id="c5Type"><option value="exp">指数 y = k·e^(nx) + a</option><option value="ln">对数 y = k·ln(ax + b)</option></select></label>' +
+        '<label>k：<input type="number" id="c5K" value="2"></label>' +
+        '<label>n 或 a：<input type="number" id="c5N" value="1"></label>' +
+        '<label>a 或 b：<input type="number" id="c5B" value="-1"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c5Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c5Asym"></div><div class="readout-pill" id="c5Int"></div><div class="readout-pill" id="c5Dom"></div></div></div></div>';
+      const draw = function () {
+        const mode = el.querySelector('#c5Type').value;
+        const k = Number(el.querySelector('#c5K').value) || 1;
+        let na = Number(el.querySelector('#c5N').value) || 1; if (na === 0) na = 1;
+        const b = Number(el.querySelector('#c5B').value) || 0;
+        const p = makePlotter(360, 270, -5, 6, -6, 8);
+        let svg = renderPlotBase(p);
+        if (mode === 'exp') {
+          svg += plotCurve(p, function () { return b; }, 'var(--svg-red)', true);
+          svg += plotCurve(p, function (x) { return k * Math.exp(na * x) + b; }, 'var(--svg-amber)', false);
+          svg += plotDot(p, 0, k + b, 'var(--svg-blue)', '(0,' + (k + b) + ')');
+          el.querySelector('#c5Asym').textContent = '水平渐近线 (Horizontal Asymptote)：y = ' + b;
+          el.querySelector('#c5Int').textContent = 'y 轴截距 (令 x = 0)：(0, ' + (k + b) + ')';
+          el.querySelector('#c5Dom').textContent = '定义域 x ∈ ℝ；值域：y ' + (k > 0 ? '> ' : '< ') + b + '（切勿触及 y = ' + b + '）';
+        } else {
+          const xAsym = -b / na;
+          const ax = p.toX(xAsym);
+          if (ax > 10 && ax < 350) svg += '<line x1="' + ax.toFixed(1) + '" y1="10" x2="' + ax.toFixed(1) + '" y2="260" stroke="var(--svg-red)" stroke-width="2" stroke-dasharray="5,3"/>';
+          svg += plotCurve(p, function (x) { const arg = na * x + b; return arg > 0.02 ? k * Math.log(arg) : NaN; }, 'var(--svg-teal)', false, 180);
+          const xInt = (1 - b) / na;
+          svg += plotDot(p, xInt, 0, 'var(--svg-blue)', 'x₀=' + xInt.toFixed(2));
+          el.querySelector('#c5Asym').textContent = '铅垂渐近线 (Vertical Asymptote)：ax + b = 0 ⇒ x = ' + formatFrac(-b, na);
+          el.querySelector('#c5Int').textContent = 'x 轴交点 (令 ax + b = 1)：x = ' + formatFrac(1 - b, na);
+          el.querySelector('#c5Dom').textContent = '真数必须为正！定义域：' + na + 'x + (' + b + ') > 0；值域：y ∈ ℝ';
+        }
+        el.querySelector('#c5Svg').innerHTML = svg;
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch06') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 6 交互实验室 · 直线线段与 Linear Law 线性化对照台</div>' +
+        '<div class="tab-row"><button type="button" class="tab-btn active" data-c6m="lin">6.5–6.6 Linear Law 线性化转换</button><button type="button" class="tab-btn" data-c6m="seg">6.1–6.3 线段与垂直平分线</button></div></div>' +
+        '<div class="lab-panel" id="c6Body"></div>';
+      let mode = 'lin';
+      const renderC6 = function () {
+        const box = el.querySelector('#c6Body');
+        if (mode === 'lin') {
+          box.innerHTML =
+            '<div class="lab-controls">' +
+            '<label>原方程模型：<select id="c6Model"><option value="pow">y = a xⁿ (幂函数型)</option><option value="exp">y = a bˣ (指数型)</option><option value="e">y = A e^(kx) (自然指数)</option><option value="inv">y = a/x + b (倒数型)</option></select></label>' +
+            '<label>直线斜率 m：<input type="number" id="c6M" value="2" step="0.5"></label>' +
+            '<label>纵轴截距 c：<input type="number" id="c6C" value="3" step="0.5"></label>' +
+            '</div><div class="lab-readout"><div class="readout-pill" id="c6Axes"></div><div class="readout-pill" id="c6Line"></div><div class="readout-pill" id="c6Params"></div></div>';
+          const calc = function () {
+            const md = box.querySelector('#c6Model').value;
+            const m = Number(box.querySelector('#c6M').value) || 0;
+            const c = Number(box.querySelector('#c6C').value) || 0;
+            if (md === 'pow') {
+              box.querySelector('#c6Axes').textContent = '坐标轴设定：纵轴 Y = lg y，横轴 X = lg x';
+              box.querySelector('#c6Line').textContent = '线性式：lg y = n(lg x) + lg a ⇒ 斜率 m = n，纵截距 c = lg a';
+              box.querySelector('#c6Params').textContent = '反推原参数：n = ' + m + '，a = 10^(' + c + ') = ' + Math.pow(10, c).toPrecision(4);
+            } else if (md === 'exp') {
+              box.querySelector('#c6Axes').textContent = '坐标轴设定：纵轴 Y = lg y，横轴 X = x';
+              box.querySelector('#c6Line').textContent = '线性式：lg y = (lg b) x + lg a ⇒ 斜率 m = lg b，纵截距 c = lg a';
+              box.querySelector('#c6Params').textContent = '反推原参数：b = 10^(' + m + ') = ' + Math.pow(10, m).toPrecision(4) + '，a = 10^(' + c + ') = ' + Math.pow(10, c).toPrecision(4);
+            } else if (md === 'e') {
+              box.querySelector('#c6Axes').textContent = '坐标轴设定：纵轴 Y = ln y，横轴 X = x';
+              box.querySelector('#c6Line').textContent = '线性式：ln y = kx + ln A ⇒ 斜率 m = k，纵截距 c = ln A';
+              box.querySelector('#c6Params').textContent = '反推原参数：k = ' + m + '，A = e^(' + c + ') ≈ ' + Math.exp(c).toPrecision(4);
+            } else {
+              box.querySelector('#c6Axes').textContent = '坐标轴设定：纵轴 Y = y（或 xy），横轴 X = 1/x（或 x）';
+              box.querySelector('#c6Line').textContent = '线性式：y = a(1/x) + b ⇒ 斜率 m = a，纵截距 c = b';
+              box.querySelector('#c6Params').textContent = '反推原参数：a = ' + m + '，b = ' + c + '，原关系 y = ' + m + '/x + (' + c + ')';
+            }
+          };
+          box.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', calc); i.addEventListener('change', calc); });
+          calc();
+        } else {
+          box.innerHTML =
+            '<div class="lab-controls">' +
+            '<label>A(<input type="number" id="c6Ax" value="-1">,<input type="number" id="c6Ay" value="6">)</label>' +
+            '<label>B(<input type="number" id="c6Bx" value="5">,<input type="number" id="c6By" value="2">)</label>' +
+            '</div><div class="lab-readout"><div class="readout-pill" id="c6Out1"></div><div class="readout-pill" id="c6Out2"></div></div>';
+          const calc = function () {
+            const ax = Number(box.querySelector('#c6Ax').value) || 0, ay = Number(box.querySelector('#c6Ay').value) || 0;
+            const bx = Number(box.querySelector('#c6Bx').value) || 0, by = Number(box.querySelector('#c6By').value) || 0;
+            const d2 = (bx - ax) * (bx - ax) + (by - ay) * (by - ay);
+            box.querySelector('#c6Out1').textContent = '精确长度 AB = √' + d2 + ' = ' + formatSurd(d2) + '；中点 M = (' + formatFrac(ax + bx, 2) + ', ' + formatFrac(ay + by, 2) + ')';
+            box.querySelector('#c6Out2').textContent = d2 === 0 ? '两点重合' : '斜率 m_AB = ' + formatFrac(by - ay, bx - ax) + '，垂直斜率 m_⊥ = ' + formatFrac(-(bx - ax), by - ay);
+          };
+          box.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', calc); });
+          calc();
+        }
+      };
+      el.querySelectorAll('[data-c6m]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          mode = btn.getAttribute('data-c6m');
+          el.querySelectorAll('[data-c6m]').forEach(function (b) { b.classList.toggle('active', b === btn); });
+          renderC6();
+        });
+      });
+      renderC6();
+    } else if (type === 'ch07') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 7 交互实验室 · 圆方程与直线相交 / 相切 / 相离判别画板</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>圆心 (<input type="number" id="c7H" value="1">,<input type="number" id="c7K" value="-1">) r=<input type="number" id="c7R" value="4" min="1" max="8"></label>' +
+        '<label>直线 y = <input type="number" id="c7M" value="1" step="0.5">x + <input type="number" id="c7C" value="3" step="0.5"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c7Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c7Eq"></div><div class="readout-pill" id="c7Dist"></div><div class="readout-pill" id="c7Rel"></div></div></div></div>';
+      const draw = function () {
+        const h = Number(el.querySelector('#c7H').value) || 0;
+        const k = Number(el.querySelector('#c7K').value) || 0;
+        const r = Math.max(1, Number(el.querySelector('#c7R').value) || 4);
+        const m = Number(el.querySelector('#c7M').value) || 0;
+        const c = Number(el.querySelector('#c7C').value) || 0;
+        const d = Math.abs(m * h - k + c) / Math.hypot(m, 1);
+        const p = makePlotter(360, 270, h - r - 3, h + r + 3, k - r - 3, k + r + 3);
+        let svg = renderPlotBase(p);
+        const cx = p.toX(h), cy = p.toY(k), rx = Math.abs(p.toX(h + r) - cx);
+        svg += '<circle cx="' + cx.toFixed(1) + '" cy="' + cy.toFixed(1) + '" r="' + rx.toFixed(1) + '" fill="rgba(5,150,105,0.12)" stroke="var(--svg-teal)" stroke-width="2.4"/>';
+        svg += plotCurve(p, function (x) { return m * x + c; }, 'var(--svg-red)', false);
+        svg += plotDot(p, h, k, 'var(--svg-indigo)', 'C(' + h + ',' + k + ')');
+        el.querySelector('#c7Svg').innerHTML = svg;
+        el.querySelector('#c7Eq').textContent = '标准圆方程：(x − (' + h + '))² + (y − (' + k + '))² = ' + (r * r);
+        el.querySelector('#c7Dist').textContent = '圆心到直线垂直距离 d = ' + d.toFixed(3) + ' vs 半径 r = ' + r;
+        el.querySelector('#c7Rel').textContent = Math.abs(d - r) < 0.02 ? '🎯 判定：d = r (Δ = 0) → 恰好相切 (Tangent)！' : d < r ? '✂️ 判定：d < r (Δ > 0) → 相交于两点 (Secant / Chord)！' : '🚫 判定：d > r (Δ < 0) → 相离 (No intersection)！';
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch08') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 8 交互实验室 · 弧度制 θ、弧长 s = rθ 与弓形阴影面积实时计算</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>半径 r (cm)：<input type="range" id="c8R" min="2" max="12" step="1" value="6"><span id="c8RLbl">6</span></label>' +
+        '<label>圆心角 θ (rad)：<input type="range" id="c8T" min="0.2" max="3.0" step="0.1" value="1.2"><span id="c8TLbl">1.20</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c8Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c8Arc"></div><div class="readout-pill" id="c8Sec"></div><div class="readout-pill" id="c8Seg"></div></div></div></div>';
+      const draw = function () {
+        const r = Number(el.querySelector('#c8R').value) || 6;
+        const t = Number(el.querySelector('#c8T').value) || 1.2;
+        el.querySelector('#c8RLbl').textContent = r;
+        el.querySelector('#c8TLbl').textContent = t.toFixed(2);
+        const arc = r * t, chord = 2 * r * Math.sin(t / 2), sec = 0.5 * r * r * t, tri = 0.5 * r * r * Math.sin(t), seg = sec - tri;
+        const cx = 135, cy = 195, R = 95 + r * 4;
+        const a1 = -0.15, a2 = a1 - t;
+        const x1 = cx + R * Math.cos(a1), y1 = cy + R * Math.sin(a1);
+        const x2 = cx + R * Math.cos(a2), y2 = cy + R * Math.sin(a2);
+        const large = t > Math.PI ? 1 : 0;
+        let svg = '<path d="M ' + cx + ' ' + cy + ' L ' + x1.toFixed(1) + ' ' + y1.toFixed(1) + ' A ' + R + ' ' + R + ' 0 ' + large + ' 0 ' + x2.toFixed(1) + ' ' + y2.toFixed(1) + ' Z" fill="rgba(13,148,136,0.14)" stroke="var(--svg-teal)" stroke-width="2.2"/>';
+        svg += '<path d="M ' + x1.toFixed(1) + ' ' + y1.toFixed(1) + ' A ' + R + ' ' + R + ' 0 ' + large + ' 0 ' + x2.toFixed(1) + ' ' + y2.toFixed(1) + ' Z" fill="rgba(217,119,6,0.28)" stroke="var(--svg-amber)" stroke-width="2"/>';
+        svg += '<circle cx="' + cx + '" cy="' + cy + '" r="4" fill="var(--svg-ink)"/><text x="' + (cx - 18) + '" y="' + (cy + 16) + '" font-size="11.5" font-weight="700" fill="var(--svg-ink)">O</text>';
+        svg += '<text x="' + (cx + 28) + '" y="' + (cy - 12) + '" font-size="11.5" font-weight="700" fill="var(--svg-teal)">θ = ' + t.toFixed(2) + ' rad</text>';
+        el.querySelector('#c8Svg').innerHTML = svg;
+        el.querySelector('#c8Arc').textContent = '弧长 s = rθ = ' + arc.toFixed(3) + ' cm | 弦长 AB = 2r sin(θ/2) = ' + chord.toFixed(3) + ' cm';
+        el.querySelector('#c8Sec').textContent = '扇形面积 ½r²θ = ' + sec.toFixed(3) + ' cm² | 扇形周长 = s + 2r = ' + (arc + 2 * r).toFixed(3) + ' cm';
+        el.querySelector('#c8Seg').textContent = '阴影弓形面积 (Segment) = ½r²(θ − sin θ) = ' + seg.toFixed(3) + ' cm²';
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch09') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 9 交互实验室 · y = a sin/cos(bx) + c 与 |f(x)| 三角波形诊断台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>函数：<select id="c9Fn"><option value="sin">a sin(bx) + c</option><option value="cos">a cos(bx) + c</option><option value="abs">|a sin(bx) + c|</option></select></label>' +
+        '<label>a：<input type="number" id="c9A" value="2"></label><label>b：<input type="number" id="c9B" value="2"></label><label>c：<input type="number" id="c9C" value="1"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c9Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c9Per"></div><div class="readout-pill" id="c9Rng"></div><div class="readout-pill" id="c9Cast"></div></div></div></div>';
+      const draw = function () {
+        const fn = el.querySelector('#c9Fn').value;
+        const a = Number(el.querySelector('#c9A').value) || 2;
+        let b = Number(el.querySelector('#c9B').value) || 1; if (b <= 0) b = 1;
+        const c = Number(el.querySelector('#c9C').value) || 0;
+        const p = makePlotter(360, 270, 0, 360, -5, 6);
+        let svg = renderPlotBase(p);
+        svg += plotCurve(p, function (deg) {
+          const rad = (deg * Math.PI) / 180;
+          const v = fn === 'cos' ? a * Math.cos(b * rad) + c : a * Math.sin(b * rad) + c;
+          return fn === 'abs' ? Math.abs(v) : v;
+        }, 'var(--svg-indigo)', false, 180);
+        el.querySelector('#c9Svg').innerHTML = svg;
+        const ymin = c - Math.abs(a), ymax = c + Math.abs(a);
+        el.querySelector('#c9Per').textContent = '周期 Period = ' + (fn === 'abs' && c === 0 ? (180 / b).toFixed(1) : (360 / b).toFixed(1)) + '° (弧度 ' + formatFrac(fn === 'abs' && c === 0 ? 1 : 2, b) + 'π)';
+        el.querySelector('#c9Rng').textContent = fn === 'abs'
+          ? '值域 Range (绝对值翻折)：[' + ((ymin <= 0 && ymax >= 0) ? 0 : Math.min(Math.abs(ymin), Math.abs(ymax))) + ', ' + Math.max(Math.abs(ymin), Math.abs(ymax)) + ']'
+          : '值域 Range：[' + ymin + ', ' + ymax + '] | 振幅 |a| = ' + Math.abs(a);
+        el.querySelector('#c9Cast').textContent = 'CAST 口诀 (0°→360°)：I 全正 (All) · II 仅 sin 正 · III 仅 tan 正 · IV 仅 cos 正';
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch10') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 10 交互实验室 · 排列 nPr / 组合 nCr / 捆绑插空计数对比器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>总元素 n：<input type="number" id="c10N" value="7" min="1" max="12"></label>' +
+        '<label>选取数 r：<input type="number" id="c10R" value="3" min="0" max="12"></label>' +
+        '<label>捆绑测试块大小 k：<input type="number" id="c10K" value="2" min="1" max="6"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c10P"></div><div class="readout-pill" id="c10C"></div><div class="readout-pill" id="c10Glue"></div></div></div>';
+      const draw = function () {
+        const n = Math.min(12, Math.max(1, Math.round(Number(el.querySelector('#c10N').value) || 7)));
+        const r = Math.min(n, Math.max(0, Math.round(Number(el.querySelector('#c10R').value) || 3)));
+        const k = Math.min(n, Math.max(1, Math.round(Number(el.querySelector('#c10K').value) || 2)));
+        el.querySelector('#c10P').textContent = '有序排列 ⁿPᵣ = ' + n + '! / (' + n + '−' + r + ')! = ' + nPr(n, r).toLocaleString();
+        el.querySelector('#c10C').textContent = '无序组合 ⁿCᵣ = ' + n + '! / [' + r + '!(' + n + '−' + r + ')!] = ' + nCr(n, r).toLocaleString() + '（关系：ⁿPᵣ = r! · ⁿCᵣ）';
+        const glueVal = fact(n - k + 1) * fact(k);
+        const rem = n - k;
+        const gapVal = k <= rem + 1 ? fact(rem) * nPr(rem + 1, k) : 0;
+        el.querySelector('#c10Glue').textContent = 'n 个中特定 k 个全排列：① 相邻捆绑 (' + (n - k + 1) + ')! × ' + k + '! = ' + glueVal.toLocaleString() + '；② 全不相邻插空 ' + rem + '! × ᴾ(' + (rem + 1) + ',' + k + ') = ' + gapVal.toLocaleString();
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch11') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 11 交互实验室 · 二项式展开 (a + bx)ⁿ 与 AP/GP/S∞ 验算台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>二项式 a：<input type="number" id="c11A" value="2"></label><label>b：<input type="number" id="c11B" value="-3"></label><label>幂 n：<input type="number" id="c11N" value="5" min="2" max="9"></label>' +
+        '<label>GP 首项 u₁：<input type="number" id="c11U" value="12"></label><label>公比 r：<input type="number" id="c11R" value="0.5" step="0.25"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c11Bin"></div><div class="readout-pill" id="c11Gp"></div></div></div>';
+      const draw = function () {
+        const a = Number(el.querySelector('#c11A').value) || 0;
+        const b = Number(el.querySelector('#c11B').value) || 0;
+        const n = Math.min(9, Math.max(2, Math.round(Number(el.querySelector('#c11N').value) || 5)));
+        const terms = [];
+        for (let r = 0; r <= Math.min(3, n); r++) {
+          const coef = nCr(n, r) * Math.pow(a, n - r) * Math.pow(b, r);
+          terms.push((r === 0 ? '' : (coef >= 0 ? ' + ' : ' − ')) + (r === 0 ? coef : Math.abs(coef)) + (r === 0 ? '' : r === 1 ? 'x' : 'x^' + r));
+        }
+        el.querySelector('#c11Bin').textContent = '(' + a + ' + ' + b + 'x)^' + n + ' 前四项 = ' + terms.join('') + ' + …';
+        const u1 = Number(el.querySelector('#c11U').value) || 0;
+        const rRatio = Number(el.querySelector('#c11R').value) || 0;
+        const conv = Math.abs(rRatio) < 1;
+        el.querySelector('#c11Gp').textContent = 'GP u₅ = ' + (u1 * Math.pow(rRatio, 4)).toFixed(3) + ' | ' + (conv ? '✅ |r| < 1 收敛！S∞ = u₁/(1−r) = ' + (u1 / (1 - rRatio)).toFixed(3) : '🚫 |r| ≥ 1 级数发散，S∞ 不存在！');
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch12') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 12 交互实验室 · y = x³ − 3px + 2 切线、法线与二阶导驻点台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>系数 p：<input type="number" id="c12P" value="3" min="1" max="6"></label>' +
+        '<label>点横坐标 x₀：<input type="range" id="c12X" min="-3" max="3" step="0.25" value="-1"><span id="c12XLbl">-1.00</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c12Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c12D1"></div><div class="readout-pill" id="c12D2"></div><div class="readout-pill" id="c12Tan"></div></div></div></div>';
+      const draw = function () {
+        const P = Math.max(1, Number(el.querySelector('#c12P').value) || 3);
+        const x0 = Number(el.querySelector('#c12X').value) || 0;
+        el.querySelector('#c12XLbl').textContent = x0.toFixed(2);
+        const y0 = x0 * x0 * x0 - 3 * P * x0 + 2;
+        const m = 3 * x0 * x0 - 3 * P;
+        const d2 = 6 * x0;
+        const p = makePlotter(360, 270, -4, 4, -18, 22);
+        let svg = renderPlotBase(p);
+        svg += plotCurve(p, function (x) { return x * x * x - 3 * P * x + 2; }, 'var(--svg-indigo)', false);
+        svg += plotCurve(p, function (x) { return y0 + m * (x - x0); }, 'var(--svg-red)', true);
+        svg += plotDot(p, x0, y0, 'var(--svg-red)', 'P(' + x0 + ',' + y0.toFixed(1) + ')');
+        el.querySelector('#c12Svg').innerHTML = svg;
+        el.querySelector('#c12D1').textContent = '一阶导 dy/dx = 3x² − ' + (3 * P) + '，在 x₀=' + x0 + ' 处切线斜率 = ' + m.toFixed(2) + (Math.abs(m) < 0.01 ? ' 🎯 驻点 (dy/dx = 0)!' : '');
+        el.querySelector('#c12D2').textContent = '二阶导 d²y/dx² = 6x = ' + d2.toFixed(2) + (d2 < 0 ? ' (< 0：局部极大值形状 ∩)' : d2 > 0 ? ' (> 0：局部极小值形状 U)' : ' (= 0 需查符号变化)');
+        el.querySelector('#c12Tan').textContent = Math.abs(m) < 0.01 ? '水平切线：y = ' + y0.toFixed(2) + '；法线斜率无定义 (铅垂 x = ' + x0 + ')' : '切线 y − ' + y0.toFixed(2) + ' = ' + m.toFixed(2) + '(x − ' + x0 + ') | 法线斜率 m⊥ = ' + (-1 / m).toFixed(2);
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch13') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 13 交互实验室 · 向量合成 u + v、模长与单位向量动态 SVG</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>u = (<input type="number" id="c13Ux" value="3">,<input type="number" id="c13Uy" value="4">)</label>' +
+        '<label>v = (<input type="number" id="c13Vx" value="4">,<input type="number" id="c13Vy" value="-1">)</label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c13Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c13Mag"></div><div class="readout-pill" id="c13Unit"></div><div class="readout-pill" id="c13Sum"></div></div></div></div>';
+      const draw = function () {
+        const ux = Number(el.querySelector('#c13Ux').value) || 0, uy = Number(el.querySelector('#c13Uy').value) || 0;
+        const vx = Number(el.querySelector('#c13Vx').value) || 0, vy = Number(el.querySelector('#c13Vy').value) || 0;
+        const sx = ux + vx, sy = uy + vy;
+        const p = makePlotter(360, 270, Math.min(-2, ux, vx, sx) - 2, Math.max(4, ux, vx, sx) + 2, Math.min(-2, uy, vy, sy) - 2, Math.max(4, uy, vy, sy) + 2);
+        let svg = renderPlotBase(p);
+        const arrow = function (x1, y1, x2, y2, col, lbl) {
+          const mx = (p.toX(x1) + p.toX(x2)) / 2, my = (p.toY(y1) + p.toY(y2)) / 2;
+          return '<line x1="' + p.toX(x1).toFixed(1) + '" y1="' + p.toY(y1).toFixed(1) + '" x2="' + p.toX(x2).toFixed(1) + '" y2="' + p.toY(y2).toFixed(1) + '" stroke="' + col + '" stroke-width="2.6"/><circle cx="' + p.toX(x2).toFixed(1) + '" cy="' + p.toY(y2).toFixed(1) + '" r="4" fill="' + col + '"/><text x="' + (mx + 6).toFixed(1) + '" y="' + (my - 5).toFixed(1) + '" font-size="11" font-weight="700" fill="' + col + '">' + lbl + '</text>';
+        };
+        svg += arrow(0, 0, ux, uy, 'var(--svg-blue)', 'u');
+        svg += arrow(ux, uy, sx, sy, 'var(--svg-amber)', 'v');
+        svg += arrow(0, 0, sx, sy, 'var(--svg-teal)', 'u+v');
+        el.querySelector('#c13Svg').innerHTML = svg;
+        const u2 = ux * ux + uy * uy, s2 = sx * sx + sy * sy;
+        el.querySelector('#c13Mag').textContent = '精确模长 |u| = ' + formatSurd(u2) + '；合成向量的模 |u + v| = ' + formatSurd(s2);
+        el.querySelector('#c13Unit').textContent = u2 === 0 ? '零向量无单位向量' : 'u 方向单位向量 û = (1/' + formatSurd(u2) + ') (' + ux + 'i + ' + uy + 'j)';
+        el.querySelector('#c13Sum').textContent = '合成向量 u + v = (' + sx + ', ' + sy + ')；差向量 u − v = (' + (ux - vx) + ', ' + (uy - vy) + ')';
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch14') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 14 交互实验室 · 指数、对数与三角链式导数验证台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>函数 y：<select id="c14F"><option value="exp">k e^(ax+b)</option><option value="ln">k ln(ax+b)</option><option value="sin">k sin(ax+b)</option><option value="cos">k cos(ax+b)</option><option value="tan">k tan(ax+b)</option></select></label>' +
+        '<label>k：<input type="number" id="c14K" value="2"></label><label>a：<input type="number" id="c14A" value="3"></label><label>b：<input type="number" id="c14B" value="1"></label>' +
+        '<label>检验 x₀：<input type="number" id="c14X" value="0" step="0.5"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c14Der"></div><div class="readout-pill" id="c14Val"></div></div></div>';
+      const draw = function () {
+        const f = el.querySelector('#c14F').value;
+        const k = Number(el.querySelector('#c14K').value) || 1;
+        const a = Number(el.querySelector('#c14A').value) || 1;
+        const b = Number(el.querySelector('#c14B').value) || 0;
+        const x = Number(el.querySelector('#c14X').value) || 0;
+        const arg = a * x + b;
+        let dtxt = '', val = NaN;
+        if (f === 'exp') { dtxt = (k * a) + ' e^(' + a + 'x + (' + b + '))'; val = k * a * Math.exp(arg); }
+        else if (f === 'ln') { dtxt = formatFrac(k * a, 1) + '·a 约去系数得 ' + k + '·(' + a + ') / (' + a + 'x + (' + b + '))  （注：ln 里常数 k 与系数 a 对消规律：d/dx[ln(ax+b)] = a/(ax+b)！）'; val = arg !== 0 ? (k * a) / arg : NaN; }
+        else if (f === 'sin') { dtxt = (k * a) + ' cos(' + a + 'x + (' + b + '))'; val = k * a * Math.cos(arg); }
+        else if (f === 'cos') { dtxt = (-k * a) + ' sin(' + a + 'x + (' + b + '))  (注意负号!)'; val = -k * a * Math.sin(arg); }
+        else { dtxt = (k * a) + ' sec²(' + a + 'x + (' + b + '))'; val = Math.abs(Math.cos(arg)) > 0.01 ? (k * a) / (Math.cos(arg) * Math.cos(arg)) : NaN; }
+        el.querySelector('#c14Der').textContent = '导数表达式 dy/dx = ' + dtxt;
+        el.querySelector('#c14Val').textContent = '在 x₀ = ' + x + ' rad 处斜率数值 ≈ ' + (Number.isFinite(val) ? val.toFixed(4) : '未定义（除数为 0）');
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch15') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 15 交互实验室 · 定积分“代数净值” vs “绝对几何面积”对照仪</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>被积函数：<select id="c15F"><option value="par">y = x² − 4</option><option value="cub">y = x³ − 4x</option><option value="sin">y = 3 sin(x)</option></select></label>' +
+        '<label>下限 a：<input type="number" id="c15A" value="-1" step="0.5"></label><label>上限 b：<input type="number" id="c15B" value="3" step="0.5"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c15Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c15Net"></div><div class="readout-pill" id="c15Geom"></div><div class="readout-pill" id="c15Rule"></div></div></div></div>';
+      const draw = function () {
+        const mode = el.querySelector('#c15F').value;
+        let a = Number(el.querySelector('#c15A').value) || -1;
+        let b = Number(el.querySelector('#c15B').value) || 3;
+        if (b < a) { const t = a; a = b; b = t; }
+        const fn = function (x) { return mode === 'par' ? x * x - 4 : mode === 'cub' ? x * x * x - 4 * x : 3 * Math.sin(x); };
+        const p = makePlotter(360, 270, Math.min(-3, a - 0.5), Math.max(4, b + 0.5), -6, 7);
+        let svg = renderPlotBase(p);
+        const N = 120, dx = (b - a) / N;
+        let net = 0, geom = 0;
+        for (let i = 0; i < N; i++) {
+          const x1 = a + i * dx, x2 = x1 + dx, xm = (x1 + x2) / 2, ym = fn(xm);
+          net += ym * dx;
+          geom += Math.abs(ym) * dx;
+          const top = ym >= 0 ? p.toY(ym) : p.toY(0);
+          const ht = Math.abs(p.toY(ym) - p.toY(0));
+          svg += '<rect x="' + p.toX(x1).toFixed(1) + '" y="' + top.toFixed(1) + '" width="' + Math.max(1.5, p.toX(x2) - p.toX(x1)).toFixed(1) + '" height="' + ht.toFixed(1) + '" fill="' + (ym >= 0 ? 'rgba(22,163,74,0.35)' : 'rgba(220,38,38,0.35)') + '"/>';
+        }
+        svg += plotCurve(p, fn, 'var(--svg-indigo)', false);
+        el.querySelector('#c15Svg').innerHTML = svg;
+        el.querySelector('#c15Net').textContent = '定积分代数和 ∫ₐᵇ f(x) dx ≈ ' + net.toFixed(3) + '（x 轴下方红色贡献为负，互相抵消）';
+        el.querySelector('#c15Geom').textContent = '总几何围成面积 ∫ₐᵇ |f(x)| dx ≈ ' + geom.toFixed(3) + '（必须按零点分段取 |…| 相加！）';
+        el.querySelector('#c15Rule').textContent = '考场避坑：求 x 轴下方区域面积务必加负号 −∫ 或取绝对值 |∫|！';
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch16') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 16 交互实验室 · 运动学 s–v–a 瞬时静止折返与总路程拆分器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>速度模型 v(t)：<select id="c16M"><option value="q">v = t² − 4t + 3 (t=1,3 折返)</option><option value="lin">v = 6 − 2t (t=3 折返)</option></select></label>' +
+        '<label>终止时刻 T (s)：<input type="range" id="c16T" min="0.5" max="5" step="0.5" value="4"><span id="c16TLbl">4.0s</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c16Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c16Inst"></div><div class="readout-pill" id="c16Disp"></div><div class="readout-pill" id="c16Dist"></div></div></div></div>';
+      const draw = function () {
+        const mode = el.querySelector('#c16M').value;
+        const T = Number(el.querySelector('#c16T').value) || 4;
+        el.querySelector('#c16TLbl').textContent = T.toFixed(1) + 's';
+        const vFn = function (t) { return mode === 'q' ? t * t - 4 * t + 3 : 6 - 2 * t; };
+        const aFn = function (t) { return mode === 'q' ? 2 * t - 4 : -2; };
+        const p = makePlotter(360, 270, 0, 5.2, -5, 9);
+        let svg = renderPlotBase(p);
+        const N = 100, dt = T / N;
+        let disp = 0, dist = 0;
+        for (let i = 0; i < N; i++) {
+          const t1 = i * dt, tm = t1 + dt / 2, vm = vFn(tm);
+          disp += vm * dt;
+          dist += Math.abs(vm) * dt;
+          const top = vm >= 0 ? p.toY(vm) : p.toY(0);
+          svg += '<rect x="' + p.toX(t1).toFixed(1) + '" y="' + top.toFixed(1) + '" width="' + Math.max(1.5, p.toX(t1 + dt) - p.toX(t1)).toFixed(1) + '" height="' + Math.abs(p.toY(vm) - p.toY(0)).toFixed(1) + '" fill="' + (vm >= 0 ? 'rgba(3,105,161,0.3)' : 'rgba(220,38,38,0.32)') + '"/>';
+        }
+        svg += plotCurve(p, vFn, 'var(--svg-indigo)', false);
+        svg += plotDot(p, T, vFn(T), 'var(--svg-red)', 't=' + T.toFixed(1));
+        el.querySelector('#c16Svg').innerHTML = svg;
+        el.querySelector('#c16Inst').textContent = '在 t = ' + T.toFixed(1) + 's：瞬时速度 v = ' + vFn(T).toFixed(2) + ' m/s，加速度 a = dv/dt = ' + aFn(T).toFixed(2) + ' m/s²';
+        el.querySelector('#c16Disp').textContent = '净位移 Displacement (∫₀ᵀ v dt) = ' + disp.toFixed(2) + ' m';
+        el.querySelector('#c16Dist').textContent = '总路程 Total Distance (在 v=0 处拆分取 |…|) = ' + dist.toFixed(2) + ' m' + (Math.abs(dist - Math.abs(disp)) > 0.05 ? ' （已折返！）' : '');
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    }
+  }
+
+  document.querySelectorAll('.lab-box[data-lab-type]').forEach(mountChapterLab);
+
+  // ---------- 11. Initialize State & Scroll Spy ----------
+  applyViewMode(currentViewMode);
+  applyQuizMask(quizMasked);
+
+  const backTopBtn = document.getElementById('backTopBtn');
+  const trackedSections = Array.from(document.querySelectorAll('.topic-section[id]'));
+  const navLinks = Array.from(document.querySelectorAll('.sidebar .nav-link'));
+
+  window.addEventListener('scroll', function () {
+    if (backTopBtn) backTopBtn.classList.toggle('visible', window.scrollY > 360);
+    const y = window.scrollY + 110;
+    let currentId = '';
+    for (let i = 0; i < trackedSections.length; i++) {
+      if (trackedSections[i].offsetTop <= y && getComputedStyle(trackedSections[i]).display !== 'none') {
+        currentId = trackedSections[i].id;
+      }
+    }
+    navLinks.forEach(function (lnk) {
+      const h = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('active', h === currentId);
+    });
+  }, { passive: true });
+
+  if (backTopBtn) {
+    backTopBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  }
+})();
+
+  </script>
+</body>
+</html>

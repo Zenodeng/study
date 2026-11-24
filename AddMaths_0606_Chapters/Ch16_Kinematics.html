@@ -1,0 +1,1962 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="--accent: #0369A1;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch16 · Chapter 16: Kinematics — IGCSE Add Maths (0606) 精讲</title>
+  <style>
+/* ==========================================================================
+   Cambridge IGCSE Additional Mathematics (0606 · 3rd Ed. Sue Pemberton)
+   16-Chapter Suite Shared Stylesheet (Offline, Zero CDN, Print-Ready)
+   ========================================================================== */
+
+:root {
+  --bg-page: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --bg-sidebar: #FFFFFF;
+  --bg-code: #EFF6FF;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-faint: #64748B;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+
+  --accent: #4338CA;
+  --accent-hover: #3730A3;
+  --accent-soft: #E0E7FF;
+
+  --p1-bg: #E0E7FF;
+  --p1-text: #3730A3;
+  --p1-border: #C7D2FE;
+  --p2-bg: #FEF3C7;
+  --p2-text: #92400E;
+  --p2-border: #FDE68A;
+
+  --deep-bg: #EFF6FF;
+  --deep-border: #2563EB;
+  --tip-bg: #FFFBEB;
+  --tip-border: #D97706;
+  --mistake-bg: #FFF1F2;
+  --mistake-border: #E11D48;
+  --example-bg: #F0FDF4;
+  --example-border: #16A34A;
+  --formula-bg: #F8FAFC;
+  --formula-border: #4338CA;
+
+  --ok-bg: #DCFCE7;
+  --ok-text: #166534;
+  --ok-border: #86EFAC;
+  --err-bg: #FEE2E2;
+  --err-text: #991B1B;
+  --err-border: #FCA5A5;
+
+  --svg-bg: #FFFFFF;
+  --svg-grid: #E2E8F0;
+  --svg-ink: #0F172A;
+  --svg-muted: #64748B;
+  --svg-blue: #2563EB;
+  --svg-indigo: #4338CA;
+  --svg-teal: #0F766E;
+  --svg-amber: #D97706;
+  --svg-red: #DC2626;
+  --svg-green: #16A34A;
+  --svg-purple: #6D28D9;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.07);
+  --shadow-lg: 0 10px 26px rgba(15, 23, 42, 0.11);
+
+  --sidebar-w: 288px;
+  --topbar-h: 58px;
+  --radius-sm: 7px;
+  --radius-md: 11px;
+  --radius-lg: 16px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Songti SC", "Noto Serif SC", Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+[data-theme="dark"] {
+  --bg-page: #0B1120;
+  --bg-surface: #111827;
+  --bg-subtle: #1E293B;
+  --bg-sidebar: #0F172A;
+  --bg-code: #1E293B;
+  --text-main: #F1F5F9;
+  --text-muted: #CBD5E1;
+  --text-faint: #94A3B8;
+  --border: #1E293B;
+  --border-strong: #334155;
+
+  --accent: #818CF8;
+  --accent-hover: #A5B4FC;
+  --accent-soft: rgba(129, 140, 248, 0.18);
+
+  --p1-bg: rgba(129, 140, 248, 0.18);
+  --p1-text: #C7D2FE;
+  --p1-border: rgba(129, 140, 248, 0.38);
+  --p2-bg: rgba(245, 158, 11, 0.16);
+  --p2-text: #FDE68A;
+  --p2-border: rgba(245, 158, 11, 0.35);
+
+  --deep-bg: rgba(37, 99, 235, 0.14);
+  --deep-border: #60A5FA;
+  --tip-bg: rgba(217, 119, 6, 0.14);
+  --tip-border: #FBBF24;
+  --mistake-bg: rgba(225, 29, 72, 0.15);
+  --mistake-border: #FB7185;
+  --example-bg: rgba(22, 163, 74, 0.13);
+  --example-border: #4ADE80;
+  --formula-bg: #172033;
+  --formula-border: #818CF8;
+
+  --ok-bg: rgba(22, 163, 74, 0.22);
+  --ok-text: #BBF7D0;
+  --ok-border: #22C55E;
+  --err-bg: rgba(220, 38, 38, 0.22);
+  --err-text: #FECACA;
+  --err-border: #EF4444;
+
+  --svg-bg: #0F172A;
+  --svg-grid: #334155;
+  --svg-ink: #F1F5F9;
+  --svg-muted: #94A3B8;
+  --svg-blue: #60A5FA;
+  --svg-indigo: #818CF8;
+  --svg-teal: #2DD4BF;
+  --svg-amber: #FBBF24;
+  --svg-red: #F87171;
+  --svg-green: #34D399;
+  --svg-purple: #A78BFA;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--topbar-h) + 18px); }
+body { margin: 0; font-family: var(--font-sans); background: var(--bg-page); color: var(--text-main); line-height: 1.72; font-size: 15.5px; -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4 { margin: 0 0 0.55em 0; line-height: 1.32; font-weight: 700; color: var(--text-main); }
+p { margin: 0 0 0.9em 0; }
+ul, ol { margin: 0 0 1em 0; padding-left: 1.45em; }
+li { margin-bottom: 0.35em; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { font-family: var(--font-mono); font-size: 0.9em; background: var(--bg-code); color: var(--accent); padding: 2px 6px; border-radius: 4px; }
+
+/* View Mode Filters */
+body.mode-book .sme-section { display: none !important; }
+body.mode-sme .book-section { display: none !important; }
+
+/* Math Formatting Helpers (Pure CSS, Zero CDN) */
+.math { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 1.04em; letter-spacing: 0.01em; }
+.math-upright { font-family: Georgia, "Times New Roman", serif; font-style: normal; }
+.frac { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; font-size: 0.88em; line-height: 1.1; margin: 0 2px; font-style: normal; font-family: Georgia, "Times New Roman", serif; }
+.frac .num { border-bottom: 1.5px solid currentColor; padding: 0 4px 1px 4px; }
+.frac .den { padding: 1px 4px 0 4px; }
+.sqrt { display: inline-flex; align-items: baseline; font-family: Georgia, "Times New Roman", serif; }
+.sqrt-rad { border-top: 1.4px solid currentColor; padding: 0 3px 0 2px; margin-left: 1px; }
+.vec-col { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; border-left: 1.5px solid currentColor; border-right: 1.5px solid currentColor; border-radius: 4px; padding: 1px 6px; line-height: 1.25; font-style: normal; font-family: Georgia, "Times New Roman", serif; margin: 0 3px; font-size: 0.92em; }
+.ncr-stack { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; border-left: 1.4px solid currentColor; border-right: 1.4px solid currentColor; border-radius: 6px; padding: 0 5px; line-height: 1.15; font-style: normal; font-family: Georgia, "Times New Roman", serif; margin: 0 2px; font-size: 0.9em; }
+
+.formula-card { background: var(--formula-bg); border: 1.5px solid var(--border-strong); border-left: 5px solid var(--formula-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; font-size: 15px; }
+.formula-main { font-family: Georgia, "Times New Roman", serif; font-size: 16.5px; font-weight: 700; color: var(--accent); margin: 4px 0 6px 0; }
+.matrix-shoe { display: inline-flex; align-items: center; gap: 6px; background: var(--bg-surface); border: 1px solid var(--border-strong); padding: 8px 14px; border-radius: 8px; font-family: Georgia, "Times New Roman", serif; font-size: 15.5px; margin: 8px 0; flex-wrap: wrap; }
+.shoe-cols { display: inline-flex; gap: 16px; border-left: 2px solid var(--text-main); border-right: 2px solid var(--text-main); padding: 4px 12px; }
+.shoe-col { display: flex; flex-direction: column; align-items: center; line-height: 1.45; }
+
+/* Topbar & Responsive Controls */
+.topbar {
+  position: sticky; top: 0; z-index: 100; height: var(--topbar-h);
+  background: var(--bg-surface); border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm); display: flex; align-items: center;
+  justify-content: space-between; gap: 10px; padding: 0 16px;
+}
+.topbar-left { display: flex; align-items: center; gap: 8px; min-width: 0; flex-shrink: 1; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 34px; padding: 0 11px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--bg-surface); color: var(--text-main); font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; text-decoration: none; }
+.icon-btn:hover { background: var(--bg-subtle); border-color: var(--accent); text-decoration: none; }
+.icon-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.menu-toggle { display: none; }
+.brand-pill { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; white-space: nowrap; flex-shrink: 1; min-width: 0; }
+.brand-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 240px; }
+.brand-code { background: var(--accent); color: #fff; padding: 2px 8px; border-radius: 5px; font-size: 12px; letter-spacing: 0.4px; white-space: nowrap; flex-shrink: 0; }
+.search-wrap { position: relative; flex: 1 1 160px; min-width: 140px; max-width: 280px; }
+.search-input { width: 100%; height: 34px; padding: 0 30px 0 32px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--bg-subtle); color: var(--text-main); font-size: 13.5px; outline: none; }
+.search-input:focus { border-color: var(--accent); background: var(--bg-surface); }
+.search-input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.search-icon { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); color: var(--text-faint); font-size: 13px; pointer-events: none; }
+.search-clear { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); border: none; background: transparent; color: var(--text-faint); cursor: pointer; font-size: 14px; display: none; }
+.search-results-bar { display: none; background: var(--accent-soft); border-bottom: 1px solid var(--border); padding: 8px 20px; font-size: 13.5px; color: var(--text-main); align-items: center; justify-content: space-between; gap: 12px; }
+.search-results-bar.visible { display: flex; }
+.topbar-controls { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.seg-group { display: inline-flex; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); overflow: hidden; background: var(--bg-subtle); }
+.seg-btn { border: none; background: transparent; color: var(--text-muted); padding: 6px 10px; font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.seg-btn.active { background: var(--accent); color: #fff; }
+.progress-chip { display: flex; align-items: center; gap: 8px; padding: 4px 10px; border-radius: 999px; background: var(--bg-subtle); border: 1px solid var(--border); font-size: 12.5px; font-weight: 600; white-space: nowrap; }
+.progress-track { width: 54px; height: 7px; background: var(--border-strong); border-radius: 99px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), #0F766E); transition: width 0.25s ease; }
+
+.app-layout { display: flex; min-height: calc(100vh - var(--topbar-h)); }
+.sidebar { width: var(--sidebar-w); flex-shrink: 0; background: var(--bg-sidebar); border-right: 1px solid var(--border); position: sticky; top: var(--topbar-h); height: calc(100vh - var(--topbar-h)); overflow-y: auto; padding: 14px 10px 44px 10px; }
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 99px; }
+.nav-unit { margin-bottom: 8px; }
+.nav-unit-btn { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border: none; border-radius: var(--radius-sm); background: transparent; color: var(--text-main); font-size: 13px; font-weight: 700; text-align: left; cursor: pointer; }
+.nav-unit-btn:hover { background: var(--bg-subtle); }
+.nav-unit-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.nav-unit-title { flex: 1; display: flex; align-items: center; gap: 7px; line-height: 1.3; }
+.nav-chevron { font-size: 11px; color: var(--text-faint); transition: transform 0.2s; }
+.nav-unit.collapsed .nav-chevron { transform: rotate(-90deg); }
+.nav-unit.collapsed .nav-links { display: none; }
+.nav-links { list-style: none; padding: 2px 0 4px 12px; margin: 0 0 0 14px; border-left: 2px solid var(--border); }
+.nav-link { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 5px 9px; margin: 2px 0; border-radius: var(--radius-sm); color: var(--text-muted); font-size: 12.6px; line-height: 1.35; text-decoration: none; }
+.nav-link:hover { background: var(--bg-subtle); color: var(--text-main); text-decoration: none; }
+.nav-link.active { background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+.nav-done-mark { color: #10B981; font-weight: 800; font-size: 12px; opacity: 0; }
+.nav-link.mastered .nav-done-mark { opacity: 1; }
+.main-content { flex: 1; min-width: 0; padding: 26px 32px 80px 32px; }
+.content-inner { max-width: 960px; margin: 0 auto; }
+
+.hero-card { background: linear-gradient(135deg, #1E1B4B 0%, var(--accent) 55%, #0F766E 100%); color: #fff; border-radius: var(--radius-lg); padding: 28px 32px; margin-bottom: 26px; box-shadow: var(--shadow-lg); }
+.hero-card h1 { color: #fff; font-size: 25px; margin-bottom: 8px; letter-spacing: -0.3px; }
+.hero-sub { color: rgba(255,255,255,0.92); font-size: 14.8px; max-width: 820px; margin-bottom: 16px; }
+.hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.hero-pill { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.28); color: #fff; padding: 4px 11px; border-radius: 999px; font-size: 12.5px; font-weight: 600; }
+.unit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+.unit-tile { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.24); border-radius: var(--radius-md); padding: 12px 14px; color: #fff; text-decoration: none; display: block; transition: transform 0.15s, background 0.15s; }
+.unit-tile:hover { transform: translateY(-2px); background: rgba(255,255,255,0.22); text-decoration: none; }
+.unit-tile-num { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.7px; opacity: 0.85; font-weight: 700; }
+.unit-tile-title { font-size: 14.5px; font-weight: 700; margin: 3px 0; }
+.unit-tile-meta { font-size: 12px; opacity: 0.88; }
+
+.topic-section { background: var(--bg-surface); border: 1px solid var(--border); border-top: 4px solid var(--accent); border-radius: var(--radius-md); padding: 24px 26px; margin-bottom: 24px; box-shadow: var(--shadow-sm); }
+.topic-section.search-dim { display: none; }
+.section-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 2px solid var(--border); }
+.section-title-group h3 { font-size: 19.5px; margin-bottom: 4px; }
+.section-en-sub { font-size: 13.5px; color: var(--text-faint); font-weight: 600; }
+.tier-row { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 7px; }
+.badge-p1, .badge-p2 { display: inline-block; font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.badge-p1 { background: var(--p1-bg); color: var(--p1-text); border: 1px solid var(--p1-border); }
+.badge-p2 { background: var(--p2-bg); color: var(--p2-text); border: 1px solid var(--p2-border); }
+.master-btn { flex-shrink: 0; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-muted); font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.master-btn:hover { border-color: #10B981; color: #10B981; }
+.master-btn.is-mastered { background: var(--ok-bg); color: var(--ok-text); border-color: var(--ok-border); }
+.subtopic { margin-bottom: 20px; }
+.subtopic:last-of-type { margin-bottom: 12px; }
+.subtopic h4 { font-size: 16px; color: var(--accent); margin: 0 0 10px 0; padding-bottom: 4px; border-bottom: 1px dashed var(--border); display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+
+.worked-example { background: var(--example-bg); border: 1px solid var(--border); border-left: 4px solid var(--example-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; }
+.worked-title { font-weight: 800; font-size: 14px; color: var(--example-border); margin-bottom: 6px; }
+.callout { border-radius: var(--radius-sm); padding: 13px 16px; margin: 14px 0; border-left: 4px solid var(--border-strong); font-size: 14.5px; }
+.callout-title { font-weight: 800; font-size: 13.5px; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+.deep-dive { background: var(--deep-bg); border-left-color: var(--deep-border); }
+.deep-dive .callout-title { color: var(--deep-border); }
+.examiner-tip { background: var(--tip-bg); border-left-color: var(--tip-border); }
+.examiner-tip .callout-title { color: var(--tip-border); }
+.common-mistake { background: var(--mistake-bg); border-left-color: var(--mistake-border); }
+.common-mistake .callout-title { color: var(--mistake-border); }
+
+.table-wrap { width: 100%; overflow-x: auto; margin: 14px 0; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+table.am-table { width: 100%; border-collapse: collapse; font-size: 13.8px; text-align: left; }
+table.am-table th { background: var(--bg-subtle); color: var(--text-main); font-weight: 700; padding: 9px 12px; border-bottom: 2px solid var(--border-strong); white-space: nowrap; }
+table.am-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.am-table tr:last-child td { border-bottom: none; }
+table.am-table tbody tr:hover { background: var(--bg-subtle); }
+
+.svg-figure { background: var(--svg-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px; margin: 16px 0; text-align: center; break-inside: avoid; }
+.svg-figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.svg-caption { margin-top: 8px; font-size: 13px; color: var(--text-faint); font-weight: 600; }
+
+/* Interactive Labs */
+.lab-box { background: var(--bg-subtle); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px; margin: 18px 0; break-inside: avoid; }
+.lab-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+.lab-title { font-size: 15.5px; font-weight: 800; color: var(--accent); display: flex; align-items: center; gap: 7px; }
+.lab-panel { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; }
+.lab-controls { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-bottom: 12px; align-items: center; }
+.lab-controls label { font-size: 13px; font-weight: 700; color: var(--text-muted); display: inline-flex; align-items: center; gap: 6px; }
+.lab-controls input[type="number"], .lab-controls select { padding: 5px 8px; border-radius: 6px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-main); font-size: 13.2px; font-weight: 700; }
+.lab-controls input[type="number"] { width: 68px; text-align: center; }
+.lab-controls input[type="range"] { width: 120px; accent-color: var(--accent); }
+.lab-grid-2col { display: grid; grid-template-columns: 1.12fr 1fr; gap: 14px; align-items: start; }
+@media (max-width: 820px) { .lab-grid-2col { grid-template-columns: 1fr; } }
+.tab-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.tab-btn { border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-muted); padding: 5px 10px; border-radius: 6px; font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.tab-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.lab-readout { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; font-size: 13.2px; font-weight: 600; }
+.readout-pill { background: var(--bg-page); border: 1px solid var(--border-strong); padding: 7px 10px; border-radius: 6px; width: 100%; line-height: 1.5; }
+
+/* Practice Questions & Concepts */
+.practice-block { margin-top: 18px; padding-top: 14px; border-top: 2px dashed var(--border-strong); }
+.practice-heading { font-size: 16px; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.exam-q { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 14px; break-inside: avoid; }
+.exam-q-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; font-size: 12.5px; }
+.q-tag { font-weight: 800; color: var(--accent); background: var(--accent-soft); padding: 2px 8px; border-radius: 5px; }
+.q-marks { font-weight: 700; color: var(--text-faint); }
+.q-stem-en { font-size: 14.8px; font-weight: 600; color: var(--text-main); margin-bottom: 6px; }
+.q-stem-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 12px; }
+.mcq-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin-bottom: 10px; }
+.mcq-opt { text-align: left; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 13.8px; cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.mcq-opt:hover { border-color: var(--accent); background: var(--bg-subtle); }
+.mcq-opt.correct { background: var(--ok-bg); border-color: var(--ok-border); color: var(--ok-text); font-weight: 700; }
+.mcq-opt.wrong { background: var(--err-bg); border-color: var(--err-border); color: var(--err-text); }
+.mcq-feedback { display: none; font-size: 13.5px; padding: 10px 12px; border-radius: var(--radius-sm); margin-top: 8px; }
+.mcq-feedback.visible { display: block; }
+.mcq-feedback.ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.mcq-feedback.err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+details.ms-details { margin-top: 10px; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 12px; }
+details.ms-details summary { cursor: pointer; font-weight: 700; font-size: 13.5px; color: var(--accent); user-select: none; }
+.ms-body { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 13.8px; }
+.ms-mark { display: inline-block; font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--p1-text); background: var(--p1-bg); padding: 1px 5px; border-radius: 4px; margin-right: 4px; }
+.ms-cn { color: var(--text-muted); margin-top: 4px; }
+
+.concept-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 14px; margin-bottom: 18px; }
+.concept-filter-group { display: flex; flex-wrap: wrap; gap: 6px; }
+.concept-actions { display: flex; align-items: center; gap: 10px; }
+.concept-count-pill { font-size: 12.5px; font-weight: 700; color: var(--text-muted); }
+.concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 14px; }
+.concept-card { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; gap: 8px; break-inside: avoid; }
+.concept-card:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
+.concept-card.concept-hidden { display: none !important; }
+.cq-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.cq-en { font-weight: 700; font-size: 14.5px; color: var(--text-main); line-height: 1.45; }
+.cq-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 2px; }
+.cq-answer { position: relative; margin-top: auto; background: var(--bg-surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius-sm); padding: 11px 13px; font-size: 13.8px; line-height: 1.6; }
+.kw { color: var(--accent); background: var(--accent-soft); padding: 0 4px; border-radius: 3px; font-weight: 700; }
+.cq-mask-hint { display: none; }
+.concept-card.masked .cq-answer { cursor: pointer; }
+.concept-card.masked .cq-answer-inner { filter: blur(7px); opacity: 0.22; user-select: none; pointer-events: none; transition: filter 0.2s, opacity 0.2s; }
+.concept-card.masked .cq-mask-hint { display: flex; align-items: center; justify-content: center; position: absolute; inset: 0; font-size: 13.5px; font-weight: 700; color: var(--accent); background: rgba(255,255,255,0.25); border-radius: var(--radius-sm); }
+[data-theme="dark"] .concept-card.masked .cq-mask-hint { background: rgba(15,23,42,0.35); }
+
+/* Chapter Pager & Hub Grid */
+.chapter-pager { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 28px; padding: 16px 20px; background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); }
+.pager-btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: var(--radius-sm); background: var(--bg-subtle); border: 1px solid var(--border-strong); color: var(--text-main); font-size: 13.5px; font-weight: 700; text-decoration: none; }
+.pager-btn:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); text-decoration: none; }
+.pager-btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.pager-btn.primary:hover { background: var(--accent-hover); color: #fff; }
+
+.hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px; margin-top: 18px; }
+.hub-card { display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-surface); border: 1px solid var(--border-strong); border-top: 5px solid var(--card-color, var(--accent)); border-radius: var(--radius-md); padding: 18px 18px 14px 18px; color: var(--text-main); text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; box-shadow: var(--shadow-sm); }
+.hub-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--card-color, var(--accent)); text-decoration: none; }
+.hub-card-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+.hub-badge { font-size: 11.5px; font-weight: 800; color: #fff; background: var(--card-color, var(--accent)); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill { font-size: 12px; font-weight: 700; color: var(--text-muted); background: var(--bg-subtle); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill.done { background: var(--ok-bg); color: var(--ok-text); }
+.hub-title { font-size: 16.5px; font-weight: 800; margin-bottom: 4px; }
+.hub-en { font-size: 12.8px; color: var(--text-faint); font-weight: 600; margin-bottom: 8px; }
+.hub-sub { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; }
+.hub-foot { font-size: 13px; font-weight: 700; color: var(--card-color, var(--accent)); display: flex; align-items: center; justify-content: space-between; }
+
+.back-top-btn { position: fixed; right: 22px; bottom: 22px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); box-shadow: var(--shadow-md); cursor: pointer; display: none; align-items: center; justify-content: center; font-size: 17px; font-weight: 800; z-index: 80; }
+.back-top-btn.visible { display: flex; }
+
+@media (max-width: 1200px) {
+  .brand-title, .btn-label { display: none; }
+  .seg-btn { padding: 6px 8px; }
+}
+@media (max-width: 980px) {
+  .menu-toggle { display: inline-flex; }
+  .sidebar { position: fixed; left: 0; top: var(--topbar-h); z-index: 95; transform: translateX(-100%); transition: transform 0.22s ease; box-shadow: var(--shadow-lg); }
+  .sidebar.open { transform: translateX(0); }
+  .main-content { padding: 18px 14px 64px 14px; }
+  .topic-section { padding: 18px 16px; }
+  .progress-chip { display: none; }
+  .search-wrap { min-width: 130px; }
+}
+@media (max-width: 640px) {
+  .topbar { padding: 0 10px; gap: 6px; }
+  .search-wrap { max-width: none; }
+  .concept-grid, .hub-grid { grid-template-columns: 1fr; }
+}
+@media print {
+  .topbar, .sidebar, .search-results-bar, .back-top-btn, .master-btn, .lab-controls button, .concept-toolbar, .cq-mask-hint, .chapter-pager { display: none !important; }
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  .main-content { padding: 0 !important; }
+  .content-inner { max-width: 100% !important; }
+  .topic-section, .exam-q, .callout, .worked-example, .svg-figure, .concept-card { box-shadow: none !important; break-inside: avoid; border-color: #CBD5E1 !important; }
+  details.ms-details, details.ms-details .ms-body, .mcq-feedback { display: block !important; }
+  .concept-card.masked .cq-answer-inner { filter: none !important; opacity: 1 !important; }
+}
+
+  </style>
+</head>
+<body data-chapter-code="Ch16">
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="展开目录">☰ 目录</button>
+      <a class="icon-btn" href="index.html" title="返回 16 章总目录"><span>🏠</span><span class="btn-label">总目录</span></a>
+      <div class="brand-pill">
+        <span class="brand-code">Ch16</span>
+        <span class="brand-title">Chapter 16: Kinematics</span>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="search" id="searchInput" class="search-input" placeholder="搜索本章定理、例题、真题与概念..." autocomplete="off" />
+      <button type="button" class="search-clear" id="searchClear" title="清空搜索">✕</button>
+    </div>
+
+    <div class="topbar-controls">
+      <div class="seg-group" role="group" aria-label="视图筛选">
+        <button type="button" class="seg-btn active" data-view-mode="all">All</button>
+        <button type="button" class="seg-btn" data-view-mode="book">教材精讲</button>
+        <button type="button" class="seg-btn" data-view-mode="sme">SaveMyExams 真题</button>
+      </div>
+
+      <div class="progress-chip" title="本章小节与真题模块掌握进度">
+        <span id="progressText">0/0</span>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+
+      <button type="button" class="icon-btn" id="toggleAllMs" title="展开或收起全部解析"><span>📝</span><span class="btn-label">展开解析</span></button>
+      <button type="button" class="icon-btn" id="themeToggle" title="切换亮色/暗色主题"><span id="themeIcon">🌙</span><span class="btn-label">主题</span></button>
+      <button type="button" class="icon-btn" id="printBtn" title="打印或导出为 PDF"><span>🖨️</span><span class="btn-label">导出 PDF</span></button>
+    </div>
+  </header>
+
+  <div class="search-results-bar" id="searchBar">
+    <span id="searchSummary">找到 0 个匹配板块</span>
+    <button type="button" class="icon-btn" id="searchResetBtn">重置过滤</button>
+  </div>
+
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="本章知识点导航">
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #0369A1;"></span>Ch16 本章小节目录</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#sec-16-1"><span>16.1 微分在运动学中的应用：s → v → a 与运动图像</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-16-2"><span>16.2 积分在运动学中的应用：求 +c、位移 vs 总路程与超越函数</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-sme"><span>SaveMyExams 0606 高频真题与评分标准 (Ch 16)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#app-concepts"><span>考前概念双语默写库 (Ch 16 运动学微积分与总路程 · 16 题)</span><span class="nav-done-mark">✓</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #0F766E;"></span>全书 16 章快速切换</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="Ch01_Functions.html"><span>Ch01 · 函数、复合、绝对值与反函数</span></a></li>
+          <li><a class="nav-link" href="Ch02_Simultaneous_Quadratics.html"><span>Ch02 · 联立方程组与二次函数最值、不等式及判别式</span></a></li>
+          <li><a class="nav-link" href="Ch03_Factors_Polynomials.html"><span>Ch03 · 多项式除法、因式定理与余数定理</span></a></li>
+          <li><a class="nav-link" href="Ch04_Equations_Inequalities_Graphs.html"><span>Ch04 · 绝对值不等式、三次图像与变元二次方程</span></a></li>
+          <li><a class="nav-link" href="Ch05_Logarithmic_Exponential.html"><span>Ch05 · 对数、指数方程、换底公式与图像</span></a></li>
+          <li><a class="nav-link" href="Ch06_Straight_Line_Graphs.html"><span>Ch06 · 直线几何、鞋带面积与线性化 (Linear Law)</span></a></li>
+          <li><a class="nav-link" href="Ch07_Circle_Geometry.html"><span>Ch07 · 圆的解析方程、切线法线与双圆位置</span></a></li>
+          <li><a class="nav-link" href="Ch08_Circular_Measure.html"><span>Ch08 · 弧度制、弧长与扇形弓形周长面积</span></a></li>
+          <li><a class="nav-link" href="Ch09_Trigonometry.html"><span>Ch09 · CAST 象限角、三角图像、方程与恒等式</span></a></li>
+          <li><a class="nav-link" href="Ch10_Permutations_Combinations.html"><span>Ch10 · 阶乘、约束排列 (nPr) 与分组组合 (nCr)</span></a></li>
+          <li><a class="nav-link" href="Ch11_Series.html"><span>Ch11 · 杨辉三角、二项式定理与 AP / GP / S∞</span></a></li>
+          <li><a class="nav-link" href="Ch12_Differentiation_1.html"><span>Ch12 · 幂函数求导、链乘商法则、切法线与极值应用</span></a></li>
+          <li><a class="nav-link" href="Ch13_Vectors.html"><span>Ch13 · 单位向量、位置向量几何比与匀速运动追及</span></a></li>
+          <li><a class="nav-link" href="Ch14_Differentiation_2.html"><span>Ch14 · 指数、对数与三角函数求导及其综合应用</span></a></li>
+          <li><a class="nav-link" href="Ch15_Integration.html"><span>Ch15 · 不定积分、逆微分技巧、定积分与曲边面积</span></a></li>
+          <li><a class="nav-link active" href="Ch16_Kinematics.html"><span>Ch16 · 运动学微积分：s-v-a 互推、瞬间静止与总路程</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-inner">
+        <section class="hero-card" id="top">
+          <h1>Chapter 16: Kinematics · 第 16 章 · 运动学微积分：s-v-a 互推、瞬间静止与总路程</h1>
+          <p class="hero-sub">
+            完整覆盖 <strong>Sue Pemberton 第 3 版教材（2025–2027 新考纲 · Paper 1 禁用计算器 Non-Calculator）</strong>本章全部小节：<code>16.1 微分求速度加速度、瞬时静止 v=0、最大速度 a=0 与 s-t/v-t 图像 · 16.2 积分求速度位移 +c 及折返总路程拆分</code>，并结合 SaveMyExams 0606 真题精讲、交互实验室与考前概念默写卡。
+          </p>
+          <div class="hero-badges">
+            <span class="hero-pill">📘 Sue Pemberton 3rd Ed. · 2025–2027</span>
+            <span class="hero-pill">🚫 Paper 1 无计算器精确解法</span>
+            <span class="hero-pill">🧪 本章专属交互动态实验室</span>
+            <a class="hero-pill" href="#sec-sme" style="text-decoration: none;">📝 直达 SaveMyExams 真题 →</a>
+            <a class="hero-pill" href="#app-concepts" style="text-decoration: none; background: rgba(255,255,255,0.24);">🧠 直达中英概念默写库 →</a>
+          </div>
+          <div class="unit-grid">
+            <a class="unit-tile" href="#sec-16-1">
+              <div class="unit-tile-num">Section 16-1</div>
+              <div class="unit-tile-title">16.1 微分在运动学中的应用：s → v → a 与运动图像</div>
+            </a>
+            <a class="unit-tile" href="#sec-16-2">
+              <div class="unit-tile-num">Section 16-2</div>
+              <div class="unit-tile-title">16.2 积分在运动学中的应用：求 +c、位移 vs 总路程与超越函数</div>
+            </a>
+            <a class="unit-tile" href="#sec-sme">
+              <div class="unit-tile-num">Section sme</div>
+              <div class="unit-tile-title">SaveMyExams 0606 高频真题与评分标准 (Ch 16)</div>
+            </a>
+            <a class="unit-tile" href="#app-concepts">
+              <div class="unit-tile-num">Concept Bank</div>
+              <div class="unit-tile-title">考前概念双语默写库 (Ch 16 运动学微积分与总路程 · 16 题)</div>
+            </a>
+          </div>
+        </section>
+
+        <div id="emptySearchNotice" class="callout deep-dive" style="display: none;">
+          <div class="callout-title">🔍 未找到匹配内容</div>
+          <p style="margin-bottom: 0;">请尝试更换关键词，或点击右上角“重置过滤”恢复显示。</p>
+        </div>
+
+<!-- ================= 16.1 Differentiation in Kinematics ================= -->
+<article class="topic-section book-section" id="sec-16-1">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>16.1 微分在运动学中的应用：s → v → a 与运动图像</h3>
+      <div class="section-en-sub">Applications of Differentiation in Kinematics: s, v = ds/dt, a = dv/dt &amp; s–t / v–t Graphs</div>
+      <div class="tier-row">
+        <span class="badge-p1">变加速运动禁用 SUVAT 公式！</span>
+        <span class="badge-p2">0606 高频压轴：英文关键词秒译</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-16-1">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>16.1.1 位移 s、速度 v、加速度 a 的微分链条与考题英文翻译表</h4>
+    <p>当质点沿直线做<strong>变加速运动（Variable acceleration）</strong>时，物理中的等加速 SUVAT 公式（<span class="math">v = u + at</span> 等）全部失效，必须使用微积分定义处理时间 <span class="math">t</span>（<span class="math">t ≥ 0</span>）的函数关系：</p>
+
+    <div class="formula-card">
+      <div class="formula-main">
+        位移 Displacement <span class="math">s(t)</span> &nbsp;── 求导 ──▶&nbsp; 速度 Velocity <span class="math">v = <span class="frac"><span class="num">ds</span><span class="den">dt</span></span></span> &nbsp;── 求导 ──▶&nbsp; 加速度 Acceleration <span class="math">a = <span class="frac"><span class="num">dv</span><span class="den">dt</span></span> = <span class="frac"><span class="num">d²s</span><span class="den">dt²</span></span></span>
+      </div>
+      <div style="margin-top: 6px; font-size: 14px; color: var(--text-muted);">
+        <strong>三大概念严防混淆：</strong><br>
+        • <strong>位移 (Displacement, <span class="math">s</span>)：</strong>带正负方向，表示“当前相对于固定原点 <span class="math">O</span> 的有向位置”。<br>
+        • <strong>速度 (Velocity, <span class="math">v</span>) vs 速率 (Speed, <span class="math">|v|</span>)：</strong><span class="math">v &gt; 0</span> 向正方向走，<span class="math">v &lt; 0</span> 向反方向折返；速率为非负值 <span class="math">|v|</span>。<br>
+        • <strong>最大/最小速度：</strong>令加速度 <span class="math">a = <span class="frac"><span class="num">dv</span><span class="den">dt</span></span> = 0</span>（极值条件，绝不是令 <span class="math">v = 0</span>！）。
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table class="am-table">
+        <thead>
+          <tr>
+            <th>考卷英文原句 (Exam Phrasing)</th>
+            <th>必须列出的数学方程</th>
+            <th>Paper 1/2 考场避坑点</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><em>“Starts from a fixed point O”</em></td>
+            <td>当 <span class="math">t = 0</span> 时，<strong>s = 0</strong></td>
+            <td>用于积分还原位移时确定常数 <span class="math">+ c</span>（注意有时说 <em>“starts 5 m from O”</em> 则 <span class="math">s = 5</span>）。</td>
+          </tr>
+          <tr>
+            <td><em>“Initial velocity / initially”</em></td>
+            <td>代入 <strong>t = 0</strong> 求 <span class="math">v(0)</span> 或 <span class="math">a(0)</span></td>
+            <td>指数/三角题代入 <span class="math">t = 0</span> 时谨记 <span class="math">e⁰ = 1</span>、<span class="math">cos 0 = 1</span>！</td>
+          </tr>
+          <tr>
+            <td><em>“Instantaneously at rest / changes direction”</em></td>
+            <td>解方程 <strong>v = 0</strong></td>
+            <td><strong>必须舍去负时间 <span class="math">t &lt; 0</span></strong>！解出所有 <span class="math">t &gt; 0</span> 的折返时刻。</td>
+          </tr>
+          <tr>
+            <td><em>“Returns to O / passes through O again”</em></td>
+            <td>解方程 <strong>s = 0</strong>（取 <span class="math">t &gt; 0</span>）</td>
+            <td>注意区分“回到原点 <span class="math">s = 0</span>”与“停在原地 <span class="math">v = 0</span>”，千万别解错函数！</td>
+          </tr>
+          <tr>
+            <td><em>“Maximum / minimum velocity”</em></td>
+            <td>解 <strong>a = dv/dt = 0</strong> 并查 <span class="math">d²v/dt²</span></td>
+            <td>若题目问最大/最小 <strong>Speed（速率）</strong>，还需比较端点及 <span class="math">|v|</span> 的绝对值！</td>
+          </tr>
+          <tr>
+            <td><em>“Deceleration / retardation”</em></td>
+            <td>负加速度值或与速度反向</td>
+            <td>题目问 <em>“Find the deceleration”</em> 时，若算出 <span class="math">a = −6</span> m s⁻²，应答 deceleration = <strong>6 m s⁻²</strong>。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>16.1.2 s–t 图像与 v–t 图像的斜率、面积联动对应</h4>
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 240" width="740" height="240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="位移时间图 s-t 与速度时间图 v-t 微分积分几何对应关系">
+        <defs>
+          <marker id="v16-ax" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--svg-ink)" />
+          </marker>
+        </defs>
+        <!-- Left panel: s-t graph for s = t^3 - 6t^2 + 9t -->
+        <rect x="12" y="10" width="348" height="220" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="186" y="31" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-ink)">位移–时间图 (s–t)：切线斜率 = 速度 v</text>
+        <line x1="48" y1="176" x2="338" y2="176" stroke="var(--svg-ink)" stroke-width="1.5" marker-end="url(#v16-ax)" />
+        <line x1="60" y1="196" x2="60" y2="46" stroke="var(--svg-ink)" stroke-width="1.5" marker-end="url(#v16-ax)" />
+        <text x="336" y="191" font-size="11" font-weight="700" fill="var(--svg-ink)">t</text>
+        <text x="48" y="54" font-size="11" font-weight="700" fill="var(--svg-ink)">s</text>
+        <!-- Curve: t=0 (60,176), t=1 max s=4 (125,76), t=2 inflect (190,126), t=3 min s=0 (255,176), t=4 s=4 (320,76) -->
+        <path d="M 60 176 C 85 110, 105 76, 125 76 C 145 76, 170 110, 190 126 C 210 142, 235 176, 255 176 C 275 176, 295 140, 320 76" fill="none" stroke="var(--svg-indigo)" stroke-width="2.6" />
+        <line x1="95" y1="76" x2="155" y2="76" stroke="var(--svg-red)" stroke-width="1.8" stroke-dasharray="4,2" />
+        <circle cx="125" cy="76" r="4.5" fill="var(--svg-red)" />
+        <circle cx="190" cy="126" r="4" fill="var(--svg-amber)" />
+        <circle cx="255" cy="176" r="4.5" fill="var(--svg-red)" />
+        <text x="125" y="65" text-anchor="middle" font-size="10.5" font-weight="800" fill="var(--svg-red)">t=1: v=0 折返 (s=4)</text>
+        <text x="190" y="114" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-amber)">t=2: 反向最快 (a=0)</text>
+        <text x="255" y="194" text-anchor="middle" font-size="10.5" font-weight="800" fill="var(--svg-red)">t=3: 回O且v=0</text>
+        <text x="186" y="216" text-anchor="middle" font-size="10.8" font-weight="700" fill="var(--svg-indigo)">水平切线 (ds/dt = 0) ⇔ 瞬时静止点</text>
+
+        <!-- Right panel: v-t graph for v = 3t^2 - 12t + 9 -->
+        <rect x="380" y="10" width="348" height="220" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="554" y="31" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-ink)">速度–时间图 (v–t)：斜率 = a，面积 = 位移/路程</text>
+        <line x1="416" y1="138" x2="708" y2="138" stroke="var(--svg-ink)" stroke-width="1.5" marker-end="url(#v16-ax)" />
+        <line x1="428" y1="196" x2="428" y2="46" stroke="var(--svg-ink)" stroke-width="1.5" marker-end="url(#v16-ax)" />
+        <text x="706" y="153" font-size="11" font-weight="700" fill="var(--svg-ink)">t</text>
+        <text x="415" y="54" font-size="11" font-weight="700" fill="var(--svg-ink)">v</text>
+        <!-- Shaded areas: t=0..1 positive, t=1..3 negative -->
+        <path d="M 428 66 Q 460 112 493 138 L 428 138 Z" fill="rgba(22,163,74,0.28)" stroke="none" />
+        <path d="M 493 138 Q 558 188 623 138 Z" fill="rgba(220,38,38,0.28)" stroke="none" />
+        <!-- Parabola: t=0 (428,66), t=1 (493,138), t=2 (558,166), t=3 (623,138), t=4 (688,66) -->
+        <path d="M 428 66 Q 558 266 688 66" fill="none" stroke="var(--svg-blue)" stroke-width="2.6" />
+        <circle cx="493" cy="138" r="4.5" fill="var(--svg-red)" />
+        <circle cx="558" cy="166" r="4.5" fill="var(--svg-amber)" />
+        <circle cx="623" cy="138" r="4.5" fill="var(--svg-red)" />
+        <text x="458" y="128" text-anchor="middle" font-size="10.5" font-weight="800" fill="var(--svg-green)">+4m</text>
+        <text x="558" y="152" text-anchor="middle" font-size="10.5" font-weight="800" fill="var(--svg-red)">−4m</text>
+        <text x="558" y="185" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-amber)">v_min=−3 (a=0)</text>
+        <text x="493" y="126" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-red)">t=1</text>
+        <text x="635" y="126" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-red)">t=3</text>
+        <text x="554" y="216" text-anchor="middle" font-size="10.8" font-weight="700" fill="var(--svg-blue)">0→3s: 净位移 = +4−4 = 0m | 总路程 = 4+4 = 8m!</text>
+      </svg>
+      <div class="svg-caption">图 16.1 · s–t 图切线斜率对应 v–t 图纵坐标，v–t 图切线斜率对应加速度 a，带符号面积 = 位移、绝对面积 = 总路程</div>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">📘 例题 16.1 · 三次位移函数的完整微分运动分析（Paper 1）</div>
+      <p>质点从原点 <span class="math">O</span> 出发沿直线运动，<span class="math">t</span> 秒后的位移为 <span class="math">s = t³ − 6t² + 9t</span>（<span class="math">t ≥ 0</span>）。求：<br>
+      (a) 初速度（Initial velocity）；<br>
+      (b) 质点处于瞬时静止（Instantaneous rest）的时刻；<br>
+      (c) <span class="math">t = 3</span> 时的加速度；<br>
+      (d) 质点的最小速度及其发生时刻。</p>
+      <p><strong>解：</strong><br>
+      (a) <span class="math">v = <span class="frac"><span class="num">ds</span><span class="den">dt</span></span> = 3t² − 12t + 9</span>。令 <span class="math">t = 0</span> ⇒ 初速度 <span class="math">v(0) =</span> <strong>9 m s⁻¹</strong>。<br>
+      (b) 令 <span class="math">v = 0</span>：<span class="math">3(t² − 4t + 3) = 3(t − 1)(t − 3) = 0 ⇒</span> <strong>t = 1 s 与 t = 3 s</strong>。<br>
+      (c) <span class="math">a = <span class="frac"><span class="num">dv</span><span class="den">dt</span></span> = 6t − 12</span>。当 <span class="math">t = 3</span> 时，<span class="math">a = 6(3) − 12 =</span> <strong>6 m s⁻²</strong>。<br>
+      (d) 速度极值处 <span class="math">a = <span class="frac"><span class="num">dv</span><span class="den">dt</span></span> = 0 ⇒ 6t − 12 = 0 ⇒ t = 2 s</span>。因 <span class="math"><span class="frac"><span class="num">d²v</span><span class="den">dt²</span></span> = 6 &gt; 0</span>，故在 <span class="math">t = 2 s</span> 取最小速度 <span class="math">v<sub>min</sub> = 3(4) − 24 + 9 =</span> <strong>−3 m s⁻¹</strong>。</p>
+    </div>
+  </div>
+</article>
+
+<!-- ================= 16.2 Integration in Kinematics ================= -->
+<article class="topic-section book-section" id="sec-16-2">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>16.2 积分在运动学中的应用：求 +c、位移 vs 总路程与超越函数</h3>
+      <div class="section-en-sub">Applications of Integration: Boundary Conditions (+c), Displacement vs Total Distance &amp; Exp/Trig Velocity</div>
+      <div class="tier-row">
+        <span class="badge-p1">⚠️ 致命区别：净位移 Δs vs 总路程 Distance</span>
+        <span class="badge-p2">0606 压轴：含 e^(kt) 与 sin/cos 的运动学</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-16-2">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>16.2.1 积分反推链与“折返总路程”三步拆解法</h4>
+    <p>逆向过程是先由加速度积分求速度 <span class="math">v = ∫ a dt</span>（用已知速度条件定 <span class="math">+ c₁</span>），再由速度积分求位移 <span class="math">s = ∫ v dt</span>（用已知位置条件定 <span class="math">+ c₂</span>）。在求<strong>总路程（Total distance travelled）</strong>时，绝不能直接算出终末位移 <span class="math">s(T) − s(0)</span> 了事！</p>
+
+    <div class="formula-card">
+      <div class="formula-main">
+        净位移 Δs = s(T) − s(0) = ∫₀<sup>T</sup> v(t) dt
+        &nbsp;&nbsp;vs&nbsp;&nbsp;
+        总路程 Total Distance = ∫₀<sup>T</sup> |v(t)| dt
+      </div>
+      <div style="margin-top: 6px; font-size: 14px; color: var(--text-muted);">
+        <strong>求 [0, T] 内总路程标准三步法（绝不丢分）：</strong><br>
+        <strong>Step 1：</strong>解方程 <strong>v(t) = 0</strong>，找出<strong>严格落在区间 (0, T) 内</strong>的所有瞬时静止/折返时刻 <span class="math">t₁ &lt; t₂ &lt; …</span>（区间外的根直接忽略！）。<br>
+        <strong>Step 2：</strong>分别算出起始点、所有折返点与终点的位移：<span class="math">s(0), s(t₁), s(t₂), …, s(T)</span>。<br>
+        <strong>Step 3：</strong>分段取绝对值相加：<strong>Total Distance = |s(t₁) − s(0)| + |s(t₂) − s(t₁)| + … + |s(T) − s(t<sub>k</sub>)|</strong>！
+      </div>
+    </div>
+
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 240" width="740" height="240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="直线往返轨迹与位移总路程拆分图解">
+        <defs>
+          <marker id="v16-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--svg-blue)" />
+          </marker>
+          <marker id="v16-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--svg-red)" />
+          </marker>
+        </defs>
+        <!-- Left panel: 1D Path Track for v = t^2 - 4t + 3 on [0, 4] -->
+        <rect x="12" y="10" width="356" height="220" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="190" y="31" text-anchor="middle" font-size="12" font-weight="800" fill="var(--svg-ink)">例 16.2a 折返轨迹: v = t² − 4t + 3 (0 ≤ t ≤ 4)</text>
+        <!-- Number line s-axis -->
+        <line x1="42" y1="168" x2="342" y2="168" stroke="var(--svg-ink)" stroke-width="1.6" />
+        <circle cx="88" cy="168" r="5" fill="var(--svg-ink)" />
+        <circle cx="288" cy="168" r="5" fill="var(--svg-red)" />
+        <text x="88" y="187" text-anchor="middle" font-size="11" font-weight="700" fill="var(--svg-ink)">O (s = 0)</text>
+        <text x="288" y="187" text-anchor="middle" font-size="11" font-weight="700" fill="var(--svg-red)">A (s = 4/3)</text>
+        <!-- Leg 1: t=0->1: 0 -> 4/3 -->
+        <path d="M 88 152 L 280 152" fill="none" stroke="var(--svg-blue)" stroke-width="2.4" marker-end="url(#v16-m)" />
+        <text x="184" y="143" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-blue)">① 0→1s: 前进 4/3 m (v&gt;0)</text>
+        <!-- Leg 2: t=1->3: 4/3 -> 0 -->
+        <path d="M 288 112 L 96 112" fill="none" stroke="var(--svg-red)" stroke-width="2.4" marker-end="url(#v16-r)" />
+        <text x="192" y="103" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-red)">② 1→3s: 倒车 4/3 m (v&lt;0)</text>
+        <!-- Leg 3: t=3->4: 0 -> 4/3 -->
+        <path d="M 88 72 L 280 72" fill="none" stroke="var(--svg-blue)" stroke-width="2.4" marker-end="url(#v16-m)" />
+        <text x="184" y="63" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-blue)">③ 3→4s: 再前进 4/3 m (v&gt;0)</text>
+        <text x="190" y="213" text-anchor="middle" font-size="10.5" font-weight="800" fill="var(--svg-teal)">净位移 = 4/3 m | 总路程 = 4/3+4/3+4/3 = 4 m</text>
+
+        <!-- Right panel: 3-step algorithm & Exponential/Trig alert -->
+        <rect x="384" y="10" width="344" height="220" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="556" y="31" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-ink)">总路程与超越函数积分三大红线</text>
+        <rect x="400" y="46" width="312" height="50" rx="6" fill="rgba(3,105,161,0.08)" stroke="var(--svg-blue)" stroke-width="1.4" />
+        <text x="556" y="66" text-anchor="middle" font-size="11.2" font-weight="800" fill="var(--svg-blue)">1. 先找 (0, T) 内所有 v(t) = 0 的折返根 t₁, t₂</text>
+        <text x="556" y="85" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-ink)">按时间段 [0, t₁], [t₁, t₂], [t₂, T] 逐段计算 |Δs| 相加!</text>
+
+        <rect x="400" y="106" width="312" height="50" rx="6" fill="rgba(217,119,6,0.09)" stroke="var(--svg-amber)" stroke-width="1.4" />
+        <text x="556" y="126" text-anchor="middle" font-size="11.2" font-weight="800" fill="var(--svg-amber)">2. 指数/三角定 +c：绝对别把 t = 0 代成 0!</text>
+        <text x="556" y="145" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-ink)">t = 0 时 e⁰ = 1、cos 0 = 1 ⇒ 常出非零常数 c = ±k!</text>
+
+        <rect x="400" y="166" width="312" height="48" rx="6" fill="rgba(220,38,38,0.09)" stroke="var(--svg-red)" stroke-width="1.4" />
+        <text x="556" y="186" text-anchor="middle" font-size="11.2" font-weight="800" fill="var(--svg-red)">3. 三角运动学全程使用弧度制 (Radians)!</text>
+        <text x="556" y="203" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-ink)">例如 v = 4 cos(2t) = 0 ⇒ 2t = π/2 ⇒ t = π/4 s</text>
+      </svg>
+      <div class="svg-caption">图 16.2 · 折返直线的位移与总路程对比（左）及运动学积分三大考场防错警报（右）</div>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">📘 例题 16.2a · 二次速度函数两次折返的总路程（Paper 1）</div>
+      <p>质点沿直线运动，速度 <span class="math">v = t² − 4t + 3</span> m s⁻¹（<span class="math">t ≥ 0</span>），且 <span class="math">t = 0</span> 时过原点 <span class="math">O</span>（<span class="math">s = 0</span>）。求 <span class="math">0 ≤ t ≤ 4</span> 内质点的：<br>
+      (a) <span class="math">t = 4</span> 时的位移（Displacement）；&nbsp;&nbsp;(b) 行驶的<strong>总路程（Total distance travelled）</strong>。</p>
+      <p><strong>解：</strong><br>
+      ① 积分求位移：<span class="math">s = ∫ (t² − 4t + 3) dt = <span class="frac"><span class="num">1</span><span class="den">3</span></span>t³ − 2t² + 3t + c</span>。因 <span class="math">t = 0</span> 时 <span class="math">s = 0</span>，故 <span class="math">c = 0</span>。<br>
+      (a) 代入 <span class="math">t = 4</span>：<span class="math">s(4) = <span class="frac"><span class="num">64</span><span class="den">3</span></span> − 32 + 12 = <span class="frac"><span class="num">64</span><span class="den">3</span></span> − 20 =</span> <strong><span class="frac"><span class="num">4</span><span class="den">3</span></span> m</strong>。<br>
+      (b) 先找 <span class="math">(0, 4)</span> 内瞬时静止点：<span class="math">v = (t − 1)(t − 3) = 0 ⇒ t = 1, t = 3</span>（均在区间内！）。<br>
+      计算各关键时刻位移：<br>
+      • <span class="math">s(0) = 0</span>；<br>
+      • <span class="math">s(1) = <span class="frac"><span class="num">1</span><span class="den">3</span></span> − 2 + 3 = <span class="frac"><span class="num">4</span><span class="den">3</span></span></span>；<br>
+      • <span class="math">s(3) = 9 − 18 + 9 = 0</span>；<br>
+      • <span class="math">s(4) = <span class="frac"><span class="num">4</span><span class="den">3</span></span></span>。<br>
+      分段取绝对值相加：<span class="math">Total Distance = |<span class="frac"><span class="num">4</span><span class="den">3</span></span> − 0| + |0 − <span class="frac"><span class="num">4</span><span class="den">3</span></span>| + |<span class="frac"><span class="num">4</span><span class="den">3</span></span> − 0| =</span> <strong>4 m</strong>（是净位移的 3 倍！）。</p>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>16.2.2 含指数函数 e^(kt) 与三角函数 sin/cos 的运动学</h4>
+    <div class="worked-example">
+      <div class="worked-title">📘 例题 16.2b · 指数衰减加速度与极限速度 + 三角振荡总路程（Paper 1）</div>
+      <p><strong>【指数型】</strong> 质点从原点静止出发（<span class="math">t = 0</span> 时 <span class="math">s = 0, v = 0</span>），加速度 <span class="math">a = 6e<sup>−0.5t</sup></span> m s⁻²。求 <span class="math">v(t)</span> 与 <span class="math">s(t)</span> 表达式。<br>
+      <strong>解：</strong><br>
+      <span class="math">v = ∫ 6e<sup>−0.5t</sup> dt = <span class="frac"><span class="num">6</span><span class="den">−0.5</span></span> e<sup>−0.5t</sup> + c₁ = −12e<sup>−0.5t</sup> + c₁</span>。<br>
+      代入 <span class="math">t = 0, v = 0</span>（注意 <span class="math">e⁰ = 1</span>）：<span class="math">0 = −12(1) + c₁ ⇒ c₁ = 12</span>，故 <strong>v(t) = 12(1 − e<sup>−0.5t</sup>)</strong>（当 <span class="math">t → ∞</span> 时趋于极限速度 12 m s⁻¹）。<br>
+      再积分求位移：<span class="math">s = ∫ (12 − 12e<sup>−0.5t</sup>) dt = 12t + 24e<sup>−0.5t</sup> + c₂</span>。<br>
+      代入 <span class="math">t = 0, s = 0</span>：<span class="math">0 = 0 + 24(1) + c₂ ⇒ c₂ = −24</span>，故 <strong>s(t) = 12t + 24e<sup>−0.5t</sup> − 24</strong>。</p>
+      <hr style="border: none; border-top: 1px dashed var(--border-strong); margin: 12px 0;">
+      <p><strong>【三角型】</strong> 质点速度 <span class="math">v = 4 cos(2t)</span> m s⁻¹，初始位置 <span class="math">s = 1</span> m（<span class="math">t = 0</span>）。求在 <span class="math">0 ≤ t ≤ <span class="frac"><span class="num">π</span><span class="den">2</span></span></span> 内行驶的总路程。<br>
+      <strong>解：</strong><br>
+      <span class="math">s = ∫ 4 cos(2t) dt = 2 sin(2t) + c</span>。代入 <span class="math">t = 0, s = 1</span>：<span class="math">1 = 2(0) + c ⇒ c = 1</span>，故 <span class="math">s(t) = 2 sin(2t) + 1</span>。<br>
+      在 <span class="math">(0, <span class="frac"><span class="num">π</span><span class="den">2</span></span>)</span> 内令 <span class="math">v = 0</span>：<span class="math">cos(2t) = 0 ⇒ 2t = <span class="frac"><span class="num">π</span><span class="den">2</span></span> ⇒ t = <span class="frac"><span class="num">π</span><span class="den">4</span></span></span>。<br>
+      计算关键位移：<span class="math">s(0) = 1</span>；&nbsp;<span class="math">s(<span class="frac"><span class="num">π</span><span class="den">4</span></span>) = 2 sin(<span class="frac"><span class="num">π</span><span class="den">2</span></span>) + 1 = 3</span>；&nbsp;<span class="math">s(<span class="frac"><span class="num">π</span><span class="den">2</span></span>) = 2 sin π + 1 = 1</span>。<br>
+      总路程 = <span class="math">|3 − 1| + |1 − 3| = 2 + 2 =</span> <strong>4 m</strong>（虽然净位移为 0 m！）。</p>
+    </div>
+  </div>
+
+  <div class="lab-box" data-lab-type="ch16"></div>
+</article>
+
+<!-- ================= SaveMyExams Section ================= -->
+<article class="topic-section sme-section" id="sec-sme">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>SaveMyExams 0606 高频真题与评分标准 (Ch 16)</h3>
+      <div class="section-en-sub">Exam-Style MCQs &amp; Structured Mark-Scheme Questions: Kinematics</div>
+      <div class="tier-row">
+        <span class="badge-p1">4 道高频避坑选择</span>
+        <span class="badge-p2">4 道综合结构大题 (M1 / A1 / B1)</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-sme">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>Part A · 快速诊断选择题（4 题 · 点击选项即时批改）</h4>
+
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head"><span class="q-tag">MCQ 16.1 · Paper 1 瞬时静止时间（舍负根）</span><span class="q-marks">[1 mark]</span></div>
+      <div class="q-stem-en">A particle moves in a straight line with displacement <span class="math">s = t³ − 12t + 5</span> (<span class="math">t ≥ 0</span>). At what time <span class="math">t</span> is the particle instantaneously at rest?</div>
+      <div class="q-stem-cn">求质点处于瞬时静止（Instantaneous rest）的时刻 <span class="math">t</span>。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><span class="math">t = 0</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><span class="math">t = 2</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><span class="math">t = ±2</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><span class="math">t = 4</span></span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ v = ds/dt = 3t² − 12 = 0 ⇒ t² = 4 ⇒ t = 2 s（必须舍去物理无意义的负根 t = −2！）" data-err="❌ 时间必须非负 t ≥ 0！求导得 v = 3t² − 12 = 0 ⇒ t = 2 s（排除 −2）。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="C">
+      <div class="exam-q-head"><span class="q-tag">MCQ 16.2 · Paper 1 积分定 +c 求速度</span><span class="q-marks">[1 mark]</span></div>
+      <div class="q-stem-en">A particle has acceleration <span class="math">a = 4 − 2t</span> m s⁻². Given that its initial velocity is <span class="math">5</span> m s⁻¹, find its velocity when <span class="math">t = 3</span> s.</div>
+      <div class="q-stem-cn">已知加速度 <span class="math">a = 4 − 2t</span> 与初速度 <span class="math">5</span> m s⁻¹，求 <span class="math">t = 3</span> 时的速度。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>3 m s⁻¹</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>−2 m s⁻¹</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>8 m s⁻¹</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>11 m s⁻¹</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ v = ∫ (4 − 2t) dt = 4t − t² + 5。代入 t = 3 得 12 − 9 + 5 = 8 m s⁻¹！" data-err="❌ v = 4t − t² + c，由 v(0) = 5 得 c = 5，代入 t = 3 算得 8 m s⁻¹。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="D">
+      <div class="exam-q-head"><span class="q-tag">MCQ 16.3 · Paper 1 折返总路程 vs 净位移陷阱</span><span class="q-marks">[1 mark]</span></div>
+      <div class="q-stem-en">A particle moves with velocity <span class="math">v = 8 − 2t</span> m s⁻¹ (<span class="math">t ≥ 0</span>). Find the <strong>total distance travelled</strong> in the first <span class="math">6</span> seconds.</div>
+      <div class="q-stem-cn">质点速度 <span class="math">v = 8 − 2t</span>，求前 6 秒内行驶的<strong>总路程</strong>。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>12 m</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>16 m</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>24 m</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>20 m</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ v = 0 在 t = 4 折返！0→4s 走 ½(4)(8) = 16 m；4→6s 反向走 ½(2)(4) = 4 m ⇒ 总路程 = 16 + 4 = 20 m（12 m 只是净位移）！" data-err="❌ 12 m 是净位移不是总路程！质点在 t = 4 时 v = 0 折返了：前 4 秒前进 16 m，第 4~6 秒倒退 4 m，总路程 = 16 + 4 = 20 m。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="A">
+      <div class="exam-q-head"><span class="q-tag">MCQ 16.4 · Paper 1 指数减速运动特征</span><span class="q-marks">[1 mark]</span></div>
+      <div class="q-stem-en">A particle moves with velocity <span class="math">v = 10e<sup>−0.2t</sup></span> m s⁻¹ (<span class="math">t ≥ 0</span>). Which statement is true?</div>
+      <div class="q-stem-cn">已知 <span class="math">v = 10e<sup>−0.2t</sup></span>，判断下列哪项关于其加速度与静止时刻的描述正确？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><span class="math">a = −2e<sup>−0.2t</sup></span>, and the particle never comes to rest in finite time.</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><span class="math">a = −2e<sup>−0.2t</sup></span>, and it comes to rest at <span class="math">t = 5</span>.</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><span class="math">a = −50e<sup>−0.2t</sup></span>, and it comes to rest as <span class="math">t → ∞</span>.</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><span class="math">a = 10e<sup>−0.2t</sup></span>, so the particle is speeding up.</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ a = dv/dt = 10(−0.2)e^(−0.2t) = −2e^(−0.2t)，且因为指数函数恒大于 0，v 永远大于 0，有限时间内不会静止！" data-err="❌ 微分乘系数 (−0.2) 得 a = −2e^(−0.2t)；同时 e^(−0.2t) > 0 永不为 0，所以质点在有限时间内不会停止！"></div>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>Part B · SaveMyExams 风格结构大题（4 题 · 含 M1/A1/B1 评分细则）</h4>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">SME 16.1 · Paper 1 多项式速度双折返点总路程与极值速度</span><span class="q-marks">[7 marks]</span></div>
+      <div class="q-stem-en">
+        A particle travels in a straight line such that <span class="math">t</span> seconds after passing through a fixed point <span class="math">O</span>, its velocity <span class="math">v</span> m s⁻¹ is given by <span class="math">v = 3t² − 18t + 24</span>.<br>
+        (a) Find the times when the particle is instantaneously at rest and the acceleration at each of these times. [3]<br>
+        (b) Find the minimum velocity of the particle. [2]<br>
+        (c) Calculate the total distance travelled by the particle in the first 5 seconds (<span class="math">0 ≤ t ≤ 5</span>). [2]
+      </div>
+      <div class="q-stem-cn">无计算器经典大题：求两次瞬时静止时刻及其加速度、最小速度，以及前 5 秒跨双折返点的总路程。</div>
+      <details class="ms-details">
+        <summary>查看官方评分标准 (Mark Scheme · 7 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">M1</span> <span class="math">3t² − 18t + 24 = 0 ⇒ 3(t − 2)(t − 4) = 0 ⇒</span> <strong>t = 2 s, t = 4 s</strong> (<span class="ms-mark">A1</span>).</p>
+          <p><span class="ms-mark">A1</span> <span class="math">a = <span class="frac"><span class="num">dv</span><span class="den">dt</span></span> = 6t − 18</span>: at <span class="math">t = 2</span>, <strong>a = −6 m s⁻²</strong>; at <span class="math">t = 4</span>, <strong>a = +6 m s⁻²</strong>.</p>
+          <p><span class="ms-mark">M1</span> Minimum velocity when <span class="math">a = 0 ⇒ 6t − 18 = 0 ⇒ t = 3</span> (<span class="math">d²v/dt² = 6 &gt; 0</span>).</p>
+          <p><span class="ms-mark">A1</span> <span class="math">v<sub>min</sub> = 3(9) − 18(3) + 24 =</span> <strong>−3 m s⁻¹</strong>.</p>
+          <p><span class="ms-mark">M1</span> <span class="math">s = ∫ (3t² − 18t + 24) dt = t³ − 9t² + 24t</span> (<span class="math">s(0) = 0 ⇒ c = 0</span>).<br>
+            Values: <span class="math">s(0) = 0</span>, <span class="math">s(2) = 8 − 36 + 48 = 20</span>, <span class="math">s(4) = 64 − 144 + 96 = 16</span>, <span class="math">s(5) = 125 − 225 + 120 = 20</span>.</p>
+          <p><span class="ms-mark">A1</span> Total distance = <span class="math">|20 − 0| + |16 − 20| + |20 − 16| = 20 + 4 + 4 =</span> <strong>28 m</strong> (note: net displacement is only 20 m!).</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">SME 16.2 · Paper 1/2 指数速度折返与精确总路程</span><span class="q-marks">[8 marks]</span></div>
+      <div class="q-stem-en">
+        A particle leaves a fixed point <span class="math">O</span> at <span class="math">t = 0</span> and moves in a straight line with velocity <span class="math">v = 6e<sup>−0.5t</sup> − 2</span> m s⁻¹.<br>
+        (a) Find the exact time <span class="math">t</span> at which the particle is instantaneously at rest, and show that its acceleration at this instant is <span class="math">−1</span> m s⁻². [4]<br>
+        (b) Find an expression for the displacement <span class="math">s</span> in terms of <span class="math">t</span>. [2]<br>
+        (c) Find the exact total distance travelled in the interval <span class="math">0 ≤ t ≤ 4</span>, in the form <span class="math">p − q ln 3 + r e⁻²</span>. [2]
+      </div>
+      <div class="q-stem-cn">含自然指数的速度折返大题：求精确静止时刻 <span class="math">t = 2 ln 3</span>、加速度与折返后总路程的精确表达式。</div>
+      <details class="ms-details">
+        <summary>查看官方评分标准 (Mark Scheme · 8 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">M1</span> <span class="math">6e<sup>−0.5t</sup> − 2 = 0 ⇒ e<sup>−0.5t</sup> = <span class="frac"><span class="num">1</span><span class="den">3</span></span> ⇒ −0.5t = −ln 3 ⇒</span> <strong>t = 2 ln 3</strong> (<span class="ms-mark">A1</span>, ≈ 2.20 s ∈ (0, 4)).</p>
+          <p><span class="ms-mark">M1</span> <span class="math">a = <span class="frac"><span class="num">dv</span><span class="den">dt</span></span> = −3e<sup>−0.5t</sup></span>. At rest (<span class="math">e<sup>−0.5t</sup> = <span class="frac"><span class="num">1</span><span class="den">3</span></span></span>): <span class="math">a = −3(<span class="frac"><span class="num">1</span><span class="den">3</span></span>) =</span> <strong>−1 m s⁻²</strong> (<span class="ms-mark">A1</span>).</p>
+          <p><span class="ms-mark">M1</span> <span class="math">s = ∫ (6e<sup>−0.5t</sup> − 2) dt = −12e<sup>−0.5t</sup> − 2t + c</span>. Since <span class="math">s(0) = 0</span>: <span class="math">0 = −12(1) + c ⇒ c = 12</span>.</p>
+          <p><span class="ms-mark">A1</span> <strong>s(t) = 12 − 12e<sup>−0.5t</sup> − 2t</strong>.</p>
+          <p><span class="ms-mark">M1</span> At <span class="math">t = 2 ln 3</span>: <span class="math">s(2 ln 3) = 12 − 12(<span class="frac"><span class="num">1</span><span class="den">3</span></span>) − 4 ln 3 = 8 − 4 ln 3</span> (&gt; 0). At <span class="math">t = 4</span>: <span class="math">s(4) = 4 − 12e⁻²</span>.</p>
+          <p><span class="ms-mark">A1</span> Total distance = <span class="math">|s(2 ln 3) − 0| + |s(4) − s(2 ln 3)| = (8 − 4 ln 3) + [(8 − 4 ln 3) − (4 − 12e⁻²)] =</span> <strong>12 − 8 ln 3 + 12e⁻²</strong> (≈ 4.83 m).</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">SME 16.3 · Paper 1 双质点直线追及碰撞与等速时刻</span><span class="q-marks">[7 marks]</span></div>
+      <div class="q-stem-en">
+        Two particles <span class="math">P</span> and <span class="math">Q</span> move along the same straight line.<br>
+        At time <span class="math">t</span> seconds (<span class="math">t ≥ 0</span>), the displacement of <span class="math">P</span> from <span class="math">O</span> is <span class="math">s<sub>P</sub> = 3t² − 4t</span> metres.<br>
+        Particle <span class="math">Q</span> is at <span class="math">8</span> m from <span class="math">O</span> when <span class="math">t = 0</span>, and moves with velocity <span class="math">v<sub>Q</sub> = 2t + 2</span> m s⁻¹.<br>
+        (a) Find an expression for the displacement <span class="math">s<sub>Q</sub></span> from <span class="math">O</span> at time <span class="math">t</span>. [2]<br>
+        (b) Find the value of <span class="math">t</span> when <span class="math">P</span> and <span class="math">Q</span> have the same velocity. [2]<br>
+        (c) Find the time <span class="math">t</span> and the displacement from <span class="math">O</span> when <span class="math">P</span> and <span class="math">Q</span> collide. [3]
+      </div>
+      <div class="q-stem-cn">一维运动学双质点联动：一个给位移求导、一个给速度积分（留意初始位置 +8），分别求解等速与相遇碰撞。</div>
+      <details class="ms-details">
+        <summary>查看官方评分标准 (Mark Scheme · 7 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">M1</span> <span class="math">s<sub>Q</sub> = ∫ (2t + 2) dt = t² + 2t + c</span>. At <span class="math">t = 0, s<sub>Q</sub> = 8 ⇒ c = 8</span>.</p>
+          <p><span class="ms-mark">A1</span> <strong>s<sub>Q</sub> = t² + 2t + 8</strong>.</p>
+          <p><span class="ms-mark">M1</span> <span class="math">v<sub>P</sub> = <span class="frac"><span class="num">ds<sub>P</sub></span><span class="den">dt</span></span> = 6t − 4</span>. Set <span class="math">v<sub>P</sub> = v<sub>Q</sub> ⇒ 6t − 4 = 2t + 2 ⇒ 4t = 6</span>.</p>
+          <p><span class="ms-mark">A1</span> <strong>t = 1.5 s</strong> (<span class="frac"><span class="num">3</span><span class="den">2</span></span> s).</p>
+          <p><span class="ms-mark">M1</span> Collide when <span class="math">s<sub>P</sub> = s<sub>Q</sub> ⇒ 3t² − 4t = t² + 2t + 8 ⇒ 2t² − 6t − 8 = 0 ⇒ (t − 4)(t + 1) = 0</span>.</p>
+          <p><span class="ms-mark">A1</span> Since <span class="math">t ≥ 0</span>, <strong>t = 4 s</strong>.</p>
+          <p><span class="ms-mark">A1</span> Common displacement <span class="math">s = 3(16) − 16 =</span> <strong>32 m</strong> (check: <span class="math">4² + 2(4) + 8 = 32</span> ✓).</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">SME 16.4 · Paper 1 三角速度函数与弧度制精确总路程</span><span class="q-marks">[6 marks]</span></div>
+      <div class="q-stem-en">
+        A particle starts from <span class="math">O</span> at <span class="math">t = 0</span> and moves along a straight line with velocity <span class="math">v = 4 sin t − 2</span> m s⁻¹, where <span class="math">t</span> is in seconds (<span class="math">0 ≤ t ≤ <span class="frac"><span class="num">π</span><span class="den">2</span></span></span>).<br>
+        (a) Find the exact time when the particle is instantaneously at rest and its acceleration at this instant. [3]<br>
+        (b) Find the exact total distance travelled by the particle for <span class="math">0 ≤ t ≤ <span class="frac"><span class="num">π</span><span class="den">2</span></span></span>. [3]
+      </div>
+      <div class="q-stem-cn">无计算器三角运动学：利用弧度制求静止时刻、根式加速度，并分段求区间 <span class="math">[0, π/2]</span> 的精确总路程。</div>
+      <details class="ms-details">
+        <summary>查看官方评分标准 (Mark Scheme · 6 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">M1</span> <span class="math">4 sin t − 2 = 0 ⇒ sin t = <span class="frac"><span class="num">1</span><span class="den">2</span></span> ⇒</span> <strong>t = <span class="frac"><span class="num">π</span><span class="den">6</span></span> s</strong> (<span class="ms-mark">A1</span>, in <span class="math">[0, π/2]</span>).</p>
+          <p><span class="ms-mark">A1</span> <span class="math">a = <span class="frac"><span class="num">dv</span><span class="den">dt</span></span> = 4 cos t</span>; at <span class="math">t = <span class="frac"><span class="num">π</span><span class="den">6</span></span></span>, <strong>a = 4(<span class="frac"><span class="num"><span class="sqrt">√<span class="sqrt-rad">3</span></span></span><span class="den">2</span></span>) = 2<span class="sqrt">√<span class="sqrt-rad">3</span></span> m s⁻²</strong>.</p>
+          <p><span class="ms-mark">M1</span> <span class="math">s = ∫ (4 sin t − 2) dt = −4 cos t − 2t + c</span>. Since <span class="math">s(0) = 0</span>: <span class="math">0 = −4(1) + c ⇒ c = 4</span>, so <span class="math">s(t) = 4 − 4 cos t − 2t</span>.</p>
+          <p><span class="ms-mark">M1</span> Key displacements:<br>
+            <span class="math">s(0) = 0</span>； &nbsp;<span class="math">s(<span class="frac"><span class="num">π</span><span class="den">6</span></span>) = 4 − 2<span class="sqrt">√<span class="sqrt-rad">3</span></span> − <span class="frac"><span class="num">π</span><span class="den">3</span></span></span> (&lt; 0)； &nbsp;<span class="math">s(<span class="frac"><span class="num">π</span><span class="den">2</span></span>) = 4 − <span class="math">π</span></span> (&gt; 0).</p>
+          <p><span class="ms-mark">A1</span> Total distance = <span class="math">|s(<span class="frac"><span class="num">π</span><span class="den">6</span></span>) − 0| + |s(<span class="frac"><span class="num">π</span><span class="den">2</span></span>) − s(<span class="frac"><span class="num">π</span><span class="den">6</span></span>)| = (2<span class="sqrt">√<span class="sqrt-rad">3</span></span> + <span class="frac"><span class="num">π</span><span class="den">3</span></span> − 4) + (2<span class="sqrt">√<span class="sqrt-rad">3</span></span> − <span class="frac"><span class="num">2π</span><span class="den">3</span></span>) =</span> <strong>4<span class="sqrt">√<span class="sqrt-rad">3</span></span> − 4 − <span class="frac"><span class="num">π</span><span class="den">3</span></span> m</strong>.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</article>
+
+<!-- ================= Concept Flashcards ================= -->
+<article class="topic-section" id="app-concepts">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>考前概念双语默写库 (Ch 16 运动学微积分与总路程 · 16 题)</h3>
+      <div class="section-en-sub">Bilingual Direct-Write Kinematics Flashcards (Filter &amp; Mask Quiz)</div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="app-concepts">○ 标记掌握</button>
+  </div>
+
+  <div class="concept-toolbar">
+    <div class="concept-filter-group" id="conceptFilterTabs">
+      <button type="button" class="tab-btn active" data-concept-part="all">全部 16 题</button>
+      <button type="button" class="tab-btn" data-concept-part="161d">16.1 微分与关键词 (4题)</button>
+      <button type="button" class="tab-btn" data-concept-part="161g">16.1 s-t / v-t 图像 (4题)</button>
+      <button type="button" class="tab-btn" data-concept-part="162c">16.2 积分与 +c 条件 (4题)</button>
+      <button type="button" class="tab-btn" data-concept-part="162t">16.2 总路程与超越函数 (4题)</button>
+    </div>
+    <div class="concept-actions">
+      <span class="concept-count-pill" id="conceptCountPill">显示 16 / 16 题</span>
+      <button type="button" class="icon-btn" id="conceptQuizToggle">🙈 开启遮罩自测</button>
+    </div>
+  </div>
+
+  <div class="concept-grid" id="conceptGrid">
+    <div class="concept-card" data-part="161d">
+      <div class="cq-head"><span class="q-tag">K01 · Unit 16.1</span><span class="badge-p1">SUVAT Warning</span></div>
+      <div class="cq-en">When are constant-acceleration SUVAT equations INVALID, forcing you to use calculus?</div>
+      <div class="cq-cn">何时绝对不能使用物理 SUVAT 匀加速公式，而必须使用微积分？</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner">Whenever acceleration <span class="kw">a varies with time t</span> (i.e. <span class="math">a</span> is non-constant). Use <span class="kw">v = ds/dt, a = dv/dt</span> and integration!</div></div>
+    </div>
+
+    <div class="concept-card" data-part="161d">
+      <div class="cq-head"><span class="q-tag">K02 · Unit 16.1</span><span class="badge-p1">At Rest vs Origin</span></div>
+      <div class="cq-en">Contrast the equations solved for <em>“instantaneously at rest”</em> vs <em>“returns to O”</em>.</div>
+      <div class="cq-cn">对比“瞬时静止”与“返回原点 O”分别对应解哪两个方程？</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner">Instantaneous rest / reverses direction: solve <span class="kw">v = 0</span> (<span class="math">t &gt; 0</span>). Returns to <span class="math">O</span>: solve <span class="kw">s = 0</span> (<span class="math">t &gt; 0</span>).</div></div>
+    </div>
+
+    <div class="concept-card" data-part="161d">
+      <div class="cq-head"><span class="q-tag">K03 · Unit 16.1</span><span class="badge-p1">Max/Min Velocity</span></div>
+      <div class="cq-en">What equation do you solve to find the time of maximum or minimum velocity?</div>
+      <div class="cq-cn">求质点达到最大或最小速度的时刻应令什么等于 0？</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner">Solve <span class="kw">a = dv/dt = 0</span> (and verify nature via sign of <span class="kw">d²v/dt²</span>, never set <span class="math">v = 0</span>!).</div></div>
+    </div>
+
+    <div class="concept-card" data-part="161d">
+      <div class="cq-head"><span class="q-tag">K04 · Unit 16.1</span><span class="badge-p2">Deceleration</span></div>
+      <div class="cq-en">If <span class="math">v &gt; 0</span> and acceleration is calculated as <span class="math">a = −6</span> m s⁻², how should you state the deceleration?</div>
+      <div class="cq-cn">若正向运动中算出 <span class="math">a = −6</span> m s⁻²，回答“减速度 (Deceleration)”应写正数还是负数？</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner">State <span class="kw">deceleration = 6 m s⁻²</span> (positive value, since “deceleration” already carries the negative meaning).</div></div>
+    </div>
+
+    <div class="concept-card" data-part="161g">
+      <div class="cq-head"><span class="q-tag">K05 · Unit 16.1</span><span class="badge-p1">s-t Graph</span></div>
+      <div class="cq-en">What physical quantities correspond to the gradient and horizontal tangents of an <span class="math">s–t</span> graph?</div>
+      <div class="cq-cn">位移–时间图像（<span class="math">s–t</span>）的切线斜率和水平切线分别表示什么物理量？</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner">Gradient = <span class="kw">instantaneous velocity v</span>; horizontal tangents (<span class="math">ds/dt = 0</span>) represent <span class="kw">instantaneous rest / turning points</span>.</div></div>
+    </div>
+
+    <div class="concept-card" data-part="161g">
+      <div class="cq-head"><span class="q-tag">K06 · Unit 16.1</span><span class="badge-p1">v-t Graph</span></div>
+      <div class="cq-en">What do the gradient, <span class="math">t</span>-intercepts, and areas of a <span class="math">v–t</span> graph represent?</div>
+      <div class="cq-cn">速度–时间图像（<span class="math">v–t</span>）的斜率、横轴交点与曲线下面积各代表什么？</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner">Gradient = <span class="kw">acceleration a</span>; <span class="math">t</span>-intercept = <span class="kw">instantaneous rest (v = 0)</span>; signed area = <span class="kw">displacement</span>, total unsigned area = <span class="kw">distance</span>.</div></div>
+    </div>
+
+    <div class="concept-card" data-part="161g">
+      <div class="cq-head"><span class="q-tag">K07 · Unit 16.1</span><span class="badge-p2">Speed vs Velocity</span></div>
+      <div class="cq-en">Suppose <span class="math">v</span> ranges from <span class="math">−7</span> m s⁻¹ to <span class="math">+4</span> m s⁻¹. What is the maximum <strong>speed</strong>?</div>
+      <div class="cq-cn">若速度 <span class="math">v</span> 范围在 <span class="math">−7</span> 到 <span class="math">+4</span> m s⁻¹ 之间，最大<strong>速率 (Speed)</strong> 是多少？</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner"><span class="kw">7 m s⁻¹</span>! Speed is <span class="kw">|v|</span>, so check the largest magnitude including negative velocities!</div></div>
+    </div>
+
+    <div class="concept-card" data-part="161g">
+      <div class="cq-head"><span class="q-tag">K08 · Unit 16.1</span><span class="badge-p2">Collision 1D</span></div>
+      <div class="cq-en">What condition proves that two particles <span class="math">P</span> and <span class="math">Q</span> on the same line collide?</div>
+      <div class="cq-cn">同一条直线上的两个质点 <span class="math">P</span> 与 <span class="math">Q</span> 碰撞时，必须满足什么条件？</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner">Equate their displacements from the SAME origin at time <span class="math">t</span>: <span class="kw">s<sub>P</sub>(t) = s<sub>Q</sub>(t)</span> with <span class="kw">t ≥ 0</span>.</div></div>
+    </div>
+
+    <div class="concept-card" data-part="162c">
+      <div class="cq-head"><span class="q-tag">K09 · Unit 16.2</span><span class="badge-p1">Reverse Chain</span></div>
+      <div class="cq-en">Write the integration formulas linking <span class="math">a(t)</span>, <span class="math">v(t)</span> and <span class="math">s(t)</span>.</div>
+      <div class="cq-cn">写出由加速度积分求速度、由速度积分求位移的表达式及各自常数意义。</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner"><span class="kw">v = ∫ a dt + c₁</span> (find <span class="math">c₁</span> from velocity at a given <span class="math">t</span>) and <span class="kw">s = ∫ v dt + c₂</span> (find <span class="math">c₂</span> from initial/known position).</div></div>
+    </div>
+
+    <div class="concept-card" data-part="162c">
+      <div class="cq-head"><span class="q-tag">K10 · Unit 16.2</span><span class="badge-p1">Non-Zero c</span></div>
+      <div class="cq-en">If <span class="math">v = 6e<sup>−0.5t</sup></span> and <span class="math">s = 0</span> at <span class="math">t = 0</span>, why is <span class="math">c ≠ 0</span> in <span class="math">s = −12e<sup>−0.5t</sup> + c</span>?</div>
+      <div class="cq-cn">当 <span class="math">s(0) = 0</span> 时，为什么积分后的常数 <span class="math">c</span> 往往不等于 0？</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner">Because <span class="kw">e⁰ = 1</span> (and <span class="kw">cos 0 = 1</span>)! Setting <span class="math">0 = −12(1) + c</span> gives <span class="kw">c = +12</span>. Never assume <span class="math">t = 0</span> makes terms zero!</div></div>
+    </div>
+
+    <div class="concept-card" data-part="162c">
+      <div class="cq-head"><span class="q-tag">K11 · Unit 16.2</span><span class="badge-p1">Initial Position</span></div>
+      <div class="cq-en">What does <em>“starts 5 m to the right of O”</em> mean for the boundary condition on <span class="math">s(t)</span>?</div>
+      <div class="cq-cn">题干说“从原点 O 右侧 5 m 处出发”，如何写出位移边界条件？</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner">At <span class="math">t = 0</span>, <span class="kw">s = +5</span> (not 0!), used to find <span class="math">+ c</span> in <span class="math">s(t)</span>.</div></div>
+    </div>
+
+    <div class="concept-card" data-part="162c">
+      <div class="cq-head"><span class="q-tag">K12 · Unit 16.2</span><span class="badge-p2">Definite disp.</span></div>
+      <div class="cq-en">What does the definite integral <span class="math">∫<sub>t₁</sub><sup>t₂</sup> v(t) dt</span> compute directly?</div>
+      <div class="cq-cn">定积分 <span class="math">∫<sub>t₁</sub><sup>t₂</sup> v(t) dt</span> 直接算出的是位移还是总路程？</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner">It computes <span class="kw">change in displacement Δs = s(t₂) − s(t₁)</span>, which equals total distance ONLY if <span class="math">v(t)</span> does not change sign on <span class="math">(t₁, t₂)</span>!</div></div>
+    </div>
+
+    <div class="concept-card" data-part="162t">
+      <div class="cq-head"><span class="q-tag">K13 · Unit 16.2</span><span class="badge-p1">Total Distance</span></div>
+      <div class="cq-en">Write the 3-step algorithm for finding total distance travelled over <span class="math">0 ≤ t ≤ T</span>.</div>
+      <div class="cq-cn">默写计算 <span class="math">0 ≤ t ≤ T</span> 区间总路程（Total Distance）的三步标准流程。</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner">① Solve <span class="kw">v(t) = 0</span> for roots <span class="math">t₁, t₂ ∈ (0, T)</span>; ② Find <span class="kw">s(0), s(t₁), s(t₂), s(T)</span>; ③ Sum <span class="kw">|s(t₁)−s(0)| + |s(t₂)−s(t₁)| + |s(T)−s(t₂)|</span>.</div></div>
+    </div>
+
+    <div class="concept-card" data-part="162t">
+      <div class="cq-head"><span class="q-tag">K14 · Unit 16.2</span><span class="badge-p2">Terminal Velocity</span></div>
+      <div class="cq-en">For <span class="math">v = 12(1 − e<sup>−0.5t</sup>)</span>, find the limiting (terminal) velocity as <span class="math">t → ∞</span>.</div>
+      <div class="cq-cn">对于指数趋近模型 <span class="math">v = 12(1 − e<sup>−0.5t</sup>)</span>，当 <span class="math">t → ∞</span> 时极限速度是多少？</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner">As <span class="math">t → ∞</span>, <span class="kw">e<sup>−0.5t</sup> → 0</span>, so <span class="kw">v → 12 m s⁻¹</span> (approached asymptotically, never exceeded).</div></div>
+    </div>
+
+    <div class="concept-card" data-part="162t">
+      <div class="cq-head"><span class="q-tag">K15 · Unit 16.2</span><span class="badge-p1">Trig Kinematics</span></div>
+      <div class="cq-en">For <span class="math">v = 4 cos(2t)</span>, find the first positive time at rest and explain the angle unit rule.</div>
+      <div class="cq-cn">已知 <span class="math">v = 4 cos(2t)</span>，求首次静止的精确时间及计算器模式要求。</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner"><span class="math">cos(2t) = 0 ⇒ 2t = π/2 ⇒</span> <span class="kw">t = π/4 s</span>. Calculus requires <span class="kw">radians mode</span> throughout!</div></div>
+    </div>
+
+    <div class="concept-card" data-part="162t">
+      <div class="cq-head"><span class="q-tag">K16 · Unit 16.2</span><span class="badge-p1">Out-of-Range Roots</span></div>
+      <div class="cq-en">If <span class="math">v = 0</span> gives <span class="math">t = 1</span> and <span class="math">t = 5</span>, how do you split total distance on <span class="math">0 ≤ t ≤ 3</span>?</div>
+      <div class="cq-cn">若 <span class="math">v = 0</span> 的根是 <span class="math">t = 1</span> 和 <span class="math">t = 5</span>，求 <span class="math">0 ≤ t ≤ 3</span> 总路程时如何分段？</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner">Only <span class="kw">t = 1</span> lies inside <span class="math">(0, 3)</span> (ignore <span class="math">t = 5</span>!), so split only at <span class="math">t = 1</span>: <span class="kw">|s(1) − s(0)| + |s(3) − s(1)|</span>.</div></div>
+    </div>
+  </div>
+</article>
+
+
+        <nav class="chapter-pager" aria-label="章节切换导航">
+          <div><a class="pager-btn" href="Ch15_Integration.html">← Ch15 不定积分、逆微分技巧、定积分与曲边面积</a></div>
+          <div><a class="pager-btn primary" href="index.html">🏠 返回 16 章全书总目录</a></div>
+          <div><span style="color:var(--text-faint);font-size:13px;">已是全书最后一章</span></div>
+        </nav>
+      </div>
+    </main>
+  </div>
+
+  <button type="button" class="back-top-btn" id="backTopBtn" title="返回顶部">↑</button>
+
+  <script>
+(function () {
+  'use strict';
+
+  const THEME_KEY = 'igcse_am0606_theme';
+  const chapterCode = (document.body && document.body.getAttribute('data-chapter-code')) || 'HUB';
+  const STORAGE_PREFIX = 'igcse_am0606_' + chapterCode.toLowerCase() + '_';
+  const htmlEl = document.documentElement;
+  const bodyEl = document.body;
+
+  // All module-level state variables declared at top of IIFE (prevents TDZ issues)
+  let currentViewMode = localStorage.getItem(STORAGE_PREFIX + 'viewMode') || 'all';
+  let activeConceptPart = 'all';
+  let quizMasked = localStorage.getItem(STORAGE_PREFIX + 'quizMasked') === '1';
+  let allMsExpanded = false;
+  let masteredIds = [];
+  try {
+    masteredIds = JSON.parse(localStorage.getItem(STORAGE_PREFIX + 'mastered') || '[]');
+    if (!Array.isArray(masteredIds)) masteredIds = [];
+  } catch (e) {
+    masteredIds = [];
+  }
+
+  // ---------- Utility Helpers ----------
+  function gcd(a, b) {
+    a = Math.abs(Math.round(a));
+    b = Math.abs(Math.round(b));
+    while (b !== 0) { const t = a % b; a = b; b = t; }
+    return a || 1;
+  }
+
+  function formatFrac(num, den) {
+    if (den === 0) return 'undefined';
+    if (num === 0) return '0';
+    if (den < 0) { num = -num; den = -den; }
+    const g = gcd(num, den);
+    num /= g; den /= g;
+    return den === 1 ? String(num) : num + '/' + den;
+  }
+
+  function formatSurd(n) {
+    n = Math.round(n);
+    if (n <= 0) return '0';
+    let out = 1, ins = n;
+    for (let f = 2; f * f <= ins; f++) {
+      while (ins % (f * f) === 0) { out *= f; ins /= (f * f); }
+    }
+    if (ins === 1) return String(out);
+    return (out === 1 ? '' : String(out)) + '√' + ins;
+  }
+
+  function fact(n) {
+    let r = 1;
+    for (let i = 2; i <= n; i++) r *= i;
+    return r;
+  }
+
+  function nCr(n, r) {
+    if (r < 0 || r > n) return 0;
+    if (r > n - r) r = n - r;
+    let res = 1;
+    for (let i = 1; i <= r; i++) res = (res * (n - r + i)) / i;
+    return Math.round(res);
+  }
+
+  function nPr(n, r) {
+    if (r < 0 || r > n) return 0;
+    let res = 1;
+    for (let i = 0; i < r; i++) res *= (n - i);
+    return res;
+  }
+
+  // ---------- 1. Theme Toggle ----------
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+
+  function applyTheme(theme) {
+    htmlEl.setAttribute('data-theme', theme);
+    if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem(THEME_KEY, theme);
+  }
+  applyTheme(localStorage.getItem(THEME_KEY) || 'light');
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      applyTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  }
+
+  // ---------- 2. View Mode Filter (All / Book / SME) ----------
+  function applyViewMode(mode) {
+    currentViewMode = mode;
+    bodyEl.classList.remove('mode-book', 'mode-sme');
+    if (mode === 'book') bodyEl.classList.add('mode-book');
+    if (mode === 'sme') bodyEl.classList.add('mode-sme');
+    document.querySelectorAll('[data-view-mode]').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-view-mode') === mode);
+    });
+    localStorage.setItem(STORAGE_PREFIX + 'viewMode', mode);
+  }
+  document.querySelectorAll('[data-view-mode]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      applyViewMode(btn.getAttribute('data-view-mode'));
+    });
+  });
+
+  // ---------- 3. Sidebar Drawer & Accordion ----------
+  const sidebar = document.getElementById('sidebar');
+  const menuToggle = document.getElementById('menuToggle');
+  if (menuToggle && sidebar) {
+    menuToggle.addEventListener('click', function () { sidebar.classList.toggle('open'); });
+    sidebar.querySelectorAll('.nav-link').forEach(function (lnk) {
+      lnk.addEventListener('click', function () {
+        if (window.innerWidth <= 980) sidebar.classList.remove('open');
+      });
+    });
+  }
+  document.querySelectorAll('.nav-unit-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const unit = btn.closest('.nav-unit');
+      if (unit) unit.classList.toggle('collapsed');
+    });
+  });
+
+  // ---------- 4. Mastery Tracker (Dynamic per chapter) ----------
+  const progressText = document.getElementById('progressText');
+  const progressFill = document.getElementById('progressFill');
+  const masterBtns = Array.from(document.querySelectorAll('.master-btn'));
+  const totalSections = masterBtns.length;
+  const validSectionIds = new Set(masterBtns.map(function (b) { return b.getAttribute('data-section-id'); }));
+
+  function renderMastery() {
+    const doneList = masteredIds.filter(function (id) { return validSectionIds.has(id); });
+    localStorage.setItem(STORAGE_PREFIX + 'total', String(totalSections));
+    if (progressText) progressText.textContent = doneList.length + '/' + totalSections;
+    if (progressFill && totalSections > 0) {
+      progressFill.style.width = Math.round((doneList.length / totalSections) * 100) + '%';
+    }
+    masterBtns.forEach(function (btn) {
+      const sid = btn.getAttribute('data-section-id');
+      const done = doneList.indexOf(sid) !== -1;
+      btn.classList.toggle('is-mastered', done);
+      btn.textContent = done ? '✓ 已掌握' : '○ 标记掌握';
+    });
+    document.querySelectorAll('.nav-link').forEach(function (lnk) {
+      const id = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('mastered', doneList.indexOf(id) !== -1);
+    });
+  }
+
+  masterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const sid = btn.getAttribute('data-section-id');
+      const idx = masteredIds.indexOf(sid);
+      if (idx === -1) masteredIds.push(sid);
+      else masteredIds.splice(idx, 1);
+      localStorage.setItem(STORAGE_PREFIX + 'mastered', JSON.stringify(masteredIds));
+      renderMastery();
+    });
+  });
+  if (totalSections > 0) renderMastery();
+
+  // ---------- 5. Global Toggle Details & Print ----------
+  const toggleAllMs = document.getElementById('toggleAllMs');
+  if (toggleAllMs) {
+    toggleAllMs.addEventListener('click', function () {
+      allMsExpanded = !allMsExpanded;
+      document.querySelectorAll('details.ms-details').forEach(function (det) { det.open = allMsExpanded; });
+      const lbl = toggleAllMs.querySelector('.btn-label');
+      if (lbl) lbl.textContent = allMsExpanded ? '收起解析' : '展开解析';
+      toggleAllMs.classList.toggle('active', allMsExpanded);
+    });
+  }
+  const printBtn = document.getElementById('printBtn');
+  if (printBtn) printBtn.addEventListener('click', function () { window.print(); });
+
+  // ---------- 6. Instant Search Filter ----------
+  const searchInput = document.getElementById('searchInput');
+  const searchClear = document.getElementById('searchClear');
+  const searchBar = document.getElementById('searchBar');
+  const searchSummary = document.getElementById('searchSummary');
+  const searchResetBtn = document.getElementById('searchResetBtn');
+  const emptySearchNotice = document.getElementById('emptySearchNotice');
+
+  function runSearch() {
+    if (!searchInput) return;
+    const raw = searchInput.value.trim().toLowerCase();
+    if (searchClear) searchClear.style.display = raw ? 'block' : 'none';
+    const sections = Array.from(document.querySelectorAll('.topic-section'));
+    if (!raw) {
+      sections.forEach(function (s) { s.classList.remove('search-dim'); });
+      if (searchBar) searchBar.classList.remove('visible');
+      if (emptySearchNotice) emptySearchNotice.style.display = 'none';
+      return;
+    }
+    let hits = 0;
+    sections.forEach(function (sec) {
+      const ok = sec.textContent.toLowerCase().indexOf(raw) !== -1;
+      sec.classList.toggle('search-dim', !ok);
+      if (ok) hits++;
+    });
+    if (searchBar) searchBar.classList.add('visible');
+    if (searchSummary) searchSummary.textContent = '关键词 “' + searchInput.value.trim() + '” 匹配 ' + hits + ' 个板块';
+    if (emptySearchNotice) emptySearchNotice.style.display = hits === 0 ? 'block' : 'none';
+  }
+  if (searchInput) searchInput.addEventListener('input', runSearch);
+  function resetSearch() { if (searchInput) searchInput.value = ''; runSearch(); }
+  if (searchClear) searchClear.addEventListener('click', resetSearch);
+  if (searchResetBtn) searchResetBtn.addEventListener('click', resetSearch);
+
+  // ---------- 7. Interactive MCQ Grading ----------
+  document.querySelectorAll('.exam-q[data-mcq-answer]').forEach(function (qBox) {
+    const ans = qBox.getAttribute('data-mcq-answer');
+    const fb = qBox.querySelector('.mcq-feedback');
+    const opts = qBox.querySelectorAll('.mcq-opt');
+    opts.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const chosen = btn.getAttribute('data-opt');
+        opts.forEach(function (o) { o.classList.remove('correct', 'wrong'); });
+        if (chosen === ans) {
+          btn.classList.add('correct');
+          if (fb) {
+            fb.textContent = fb.getAttribute('data-ok') || '✅ 回答正确！';
+            fb.className = 'mcq-feedback visible ok';
+          }
+        } else {
+          btn.classList.add('wrong');
+          opts.forEach(function (o) { if (o.getAttribute('data-opt') === ans) o.classList.add('correct'); });
+          if (fb) {
+            fb.textContent = fb.getAttribute('data-err') || '❌ 未选对，请检查步骤。';
+            fb.className = 'mcq-feedback visible err';
+          }
+        }
+      });
+    });
+  });
+
+  // ---------- 8. Concept Flashcards Filter & Mask Quiz ----------
+  const conceptCountPill = document.getElementById('conceptCountPill');
+  const conceptQuizToggle = document.getElementById('conceptQuizToggle');
+
+  function filterConcepts() {
+    const cards = Array.from(document.querySelectorAll('#conceptGrid .concept-card'));
+    if (!cards.length) return;
+    let visible = 0;
+    cards.forEach(function (card) {
+      const part = card.getAttribute('data-part');
+      const show = activeConceptPart === 'all' || part === activeConceptPart;
+      card.classList.toggle('concept-hidden', !show);
+      if (show) visible++;
+    });
+    if (conceptCountPill) conceptCountPill.textContent = '显示 ' + visible + ' / ' + cards.length + ' 题';
+  }
+
+  document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      activeConceptPart = btn.getAttribute('data-concept-part');
+      document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      filterConcepts();
+    });
+  });
+
+  function applyQuizMask(masked) {
+    quizMasked = masked;
+    document.querySelectorAll('#conceptGrid .concept-card').forEach(function (c) { c.classList.toggle('masked', masked); });
+    if (conceptQuizToggle) {
+      conceptQuizToggle.textContent = masked ? '👁️ 显示全部答案' : '🙈 开启遮罩自测';
+      conceptQuizToggle.classList.toggle('active', masked);
+    }
+    localStorage.setItem(STORAGE_PREFIX + 'quizMasked', masked ? '1' : '0');
+  }
+  if (conceptQuizToggle) {
+    conceptQuizToggle.addEventListener('click', function () { applyQuizMask(!quizMasked); });
+  }
+  document.querySelectorAll('#conceptGrid .cq-answer').forEach(function (box) {
+    box.addEventListener('click', function () {
+      const card = box.closest('.concept-card');
+      if (card && card.classList.contains('masked')) card.classList.remove('masked');
+    });
+  });
+
+  // ---------- 9. 2D Plotter Engine for Chapter Interactive Labs ----------
+  function makePlotter(w, h, xmin, xmax, ymin, ymax) {
+    const pad = 24;
+    const toX = function (x) { return pad + ((x - xmin) / (xmax - xmin)) * (w - 2 * pad); };
+    const toY = function (y) { return h - pad - ((y - ymin) / (ymax - ymin)) * (h - 2 * pad); };
+    return { w: w, h: h, xmin: xmin, xmax: xmax, ymin: ymin, ymax: ymax, toX: toX, toY: toY };
+  }
+
+  function renderPlotBase(p) {
+    let s = '<rect x="2" y="2" width="' + (p.w - 4) + '" height="' + (p.h - 4) + '" rx="6" fill="none" stroke="var(--svg-grid)" stroke-width="1"/>';
+    const xStep = Math.max(1, Math.round((p.xmax - p.xmin) / 8));
+    const yStep = Math.max(1, Math.round((p.ymax - p.ymin) / 8));
+    for (let x = Math.ceil(p.xmin); x <= p.xmax; x += xStep) {
+      const px = p.toX(x);
+      s += '<line x1="' + px.toFixed(1) + '" y1="12" x2="' + px.toFixed(1) + '" y2="' + (p.h - 12) + '" stroke="var(--svg-grid)" stroke-width="0.7"/>';
+    }
+    for (let y = Math.ceil(p.ymin); y <= p.ymax; y += yStep) {
+      const py = p.toY(y);
+      s += '<line x1="12" y1="' + py.toFixed(1) + '" x2="' + (p.w - 12) + '" y2="' + py.toFixed(1) + '" stroke="var(--svg-grid)" stroke-width="0.7"/>';
+    }
+    if (p.xmin <= 0 && p.xmax >= 0) {
+      const ox = p.toX(0);
+      s += '<line x1="' + ox.toFixed(1) + '" y1="10" x2="' + ox.toFixed(1) + '" y2="' + (p.h - 10) + '" stroke="var(--svg-muted)" stroke-width="1.4"/>';
+      s += '<text x="' + Math.min(p.w - 16, ox + 6).toFixed(1) + '" y="22" font-size="10.5" font-weight="700" fill="var(--svg-muted)">y</text>';
+    }
+    if (p.ymin <= 0 && p.ymax >= 0) {
+      const oy = p.toY(0);
+      s += '<line x1="10" y1="' + oy.toFixed(1) + '" x2="' + (p.w - 10) + '" y2="' + oy.toFixed(1) + '" stroke="var(--svg-muted)" stroke-width="1.4"/>';
+      s += '<text x="' + (p.w - 18) + '" y="' + Math.max(20, oy - 5).toFixed(1) + '" font-size="10.5" font-weight="700" fill="var(--svg-muted)">x</text>';
+    }
+    return s;
+  }
+
+  function plotCurve(p, fn, color, dashed, samples) {
+    const N = samples || 120;
+    let d = '';
+    let penDown = false;
+    for (let i = 0; i <= N; i++) {
+      const x = p.xmin + (i / N) * (p.xmax - p.xmin);
+      const y = fn(x);
+      if (!Number.isFinite(y) || y < p.ymin - 1 || y > p.ymax + 1) {
+        penDown = false;
+        continue;
+      }
+      const px = p.toX(x), py = p.toY(y);
+      d += (penDown ? ' L ' : ' M ') + px.toFixed(1) + ' ' + py.toFixed(1);
+      penDown = true;
+    }
+    if (!d) return '';
+    return '<path d="' + d.trim() + '" fill="none" stroke="' + color + '" stroke-width="2.4"' + (dashed ? ' stroke-dasharray="5,4"' : '') + '/>';
+  }
+
+  function plotDot(p, x, y, color, label) {
+    if (x < p.xmin || x > p.xmax || y < p.ymin || y > p.ymax) return '';
+    const px = p.toX(x), py = p.toY(y);
+    let s = '<circle cx="' + px.toFixed(1) + '" cy="' + py.toFixed(1) + '" r="4.8" fill="' + color + '"/>';
+    if (label) {
+      s += '<text x="' + Math.min(p.w - 42, Math.max(12, px + 7)).toFixed(1) + '" y="' + Math.max(18, py - 6).toFixed(1) + '" font-size="10.5" font-weight="700" fill="' + color + '">' + label + '</text>';
+    }
+    return s;
+  }
+
+  // ---------- 10. Chapter-Specific Interactive Lab Mounts (Ch01–Ch16) ----------
+  function mountChapterLab(el) {
+    const type = el.getAttribute('data-lab-type');
+    if (!type) return;
+
+    if (type === 'ch01') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 1 交互实验室 · 线性绝对值 |ax + b| 与反函数 y = x 对称台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>a：<input type="number" id="c1A" value="2" min="-4" max="4"></label>' +
+        '<label>b：<input type="number" id="c1B" value="-4" min="-8" max="8"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c1Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c1Vertex"></div><div class="readout-pill" id="c1Inv"></div><div class="readout-pill" id="c1Sym"></div></div></div></div>';
+      const draw = function () {
+        let a = Math.round(Number(el.querySelector('#c1A').value) || 2); if (a === 0) a = 1;
+        const b = Math.round(Number(el.querySelector('#c1B').value) || 0);
+        const vx = -b / a;
+        const p = makePlotter(360, 270, -6, 6, -6, 6);
+        let svg = renderPlotBase(p);
+        svg += plotCurve(p, function (x) { return x; }, 'var(--svg-muted)', true);
+        svg += plotCurve(p, function (x) { return a * x + b; }, 'var(--svg-blue)', true);
+        svg += plotCurve(p, function (x) { return (x - b) / a; }, 'var(--svg-teal)', false);
+        svg += plotCurve(p, function (x) { return Math.abs(a * x + b); }, 'var(--svg-indigo)', false);
+        svg += plotDot(p, vx, 0, 'var(--svg-red)', 'V(' + formatFrac(-b, a) + ',0)');
+        el.querySelector('#c1Svg').innerHTML = svg;
+        el.querySelector('#c1Vertex').textContent = '折线 y = |' + a + 'x + (' + b + ')| 顶点 (V字尖点)：(' + formatFrac(-b, a) + ', 0)，值域 y ≥ 0';
+        el.querySelector('#c1Inv').textContent = '原直线 f(x) = ' + a + 'x + (' + b + ') 的反函数：f⁻¹(x) = (x − (' + b + ')) / ' + a + '（青色实线）';
+        el.querySelector('#c1Sym').textContent = '对称规则：f(x) 与 f⁻¹(x) 严格关于虚线 y = x 镜面对称，且两者交点必在 y = x 上。';
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch02') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 2 交互实验室 · 配方法、判别式 Δ 与二次绝对值 |ax²+bx+c| 翻折台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>a：<input type="number" id="c2A" value="1" min="-3" max="3"></label>' +
+        '<label>b：<input type="number" id="c2B" value="-4" min="-8" max="8"></label>' +
+        '<label>c：<input type="number" id="c2C" value="3" min="-8" max="8"></label>' +
+        '<label><input type="checkbox" id="c2Abs"> 显示 y = |f(x)| 向上翻折</label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c2Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c2Comp"></div><div class="readout-pill" id="c2Disc"></div><div class="readout-pill" id="c2Ineq"></div></div></div></div>';
+      const draw = function () {
+        let a = Math.round(Number(el.querySelector('#c2A').value) || 1); if (a === 0) a = 1;
+        const b = Math.round(Number(el.querySelector('#c2B').value) || 0);
+        const c = Math.round(Number(el.querySelector('#c2C').value) || 0);
+        const absOn = el.querySelector('#c2Abs').checked;
+        const h = -b / (2 * a);
+        const k = c - (b * b) / (4 * a);
+        const disc = b * b - 4 * a * c;
+        const p = makePlotter(360, 270, -6, 8, -8, 10);
+        let svg = renderPlotBase(p);
+        svg += plotCurve(p, function (x) { const y = a * x * x + b * x + c; return absOn ? Math.abs(y) : y; }, 'var(--svg-indigo)', false);
+        svg += plotDot(p, h, absOn ? Math.abs(k) : k, 'var(--svg-red)', 'V(' + h.toFixed(2) + ',' + (absOn ? Math.abs(k) : k).toFixed(2) + ')');
+        el.querySelector('#c2Svg').innerHTML = svg;
+        el.querySelector('#c2Comp').textContent = '配方法顶点：x = ' + formatFrac(-b, 2 * a) + '，极值 k = ' + k.toFixed(2) + (absOn ? '（翻折后最低必 ≥ 0）' : (a > 0 ? ' (最小值 Min)' : ' (最大值 Max)'));
+        el.querySelector('#c2Disc').textContent = '判别式 Δ = b² − 4ac = ' + disc + (disc > 0 ? ' (>0：两相异实根)' : disc === 0 ? ' (=0：唯一重根/相切)' : ' (<0：无实根)');
+        el.querySelector('#c2Ineq').textContent = absOn ? 'y = |f(x)| 把 x 轴下方负值部分全部对称翻折到上方！' : '开口方向：' + (a > 0 ? '向上 (U形)，解 f(x) < 0 取两根之间' : '向下 (∩形)，解 f(x) > 0 取两根之间');
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch03') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 3 交互实验室 · 三次多项式余数/因式定理试根台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>f(x) = x³ + <input type="number" id="c3B" value="-2">x² + <input type="number" id="c3C" value="-5">x + <input type="number" id="c3D" value="6"></label>' +
+        '<label>测试因子 (x − k) 中的 k：<input type="number" id="c3K" value="1" step="0.5"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c3Rem"></div><div class="readout-pill" id="c3Quot"></div></div></div>';
+      const draw = function () {
+        const b = Number(el.querySelector('#c3B').value) || 0;
+        const c = Number(el.querySelector('#c3C').value) || 0;
+        const d = Number(el.querySelector('#c3D').value) || 0;
+        const k = Number(el.querySelector('#c3K').value) || 0;
+        const q2 = 1;
+        const q1 = b + k * q2;
+        const q0 = c + k * q1;
+        const rem = d + k * q0;
+        el.querySelector('#c3Rem').textContent = '代入余数定理 f(' + k + ') = ' + rem + (Math.abs(rem) < 1e-9 ? '  ✅ 余数为 0 ⇒ (x − (' + k + ')) 是因式 (Factor)!' : '  → 非 0，不是因式');
+        el.querySelector('#c3Quot').textContent = '长除/综合除法结果：f(x) = (x − (' + k + '))(x² + ' + q1 + 'x + ' + q0 + ') + (' + rem + ')';
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch04') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 4 交互实验室 · 三次函数草图、|ax³+...| 翻折与不等式符号分析台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>r₁：<input type="number" id="c4R1" value="-2"></label>' +
+        '<label>r₂：<input type="number" id="c4R2" value="1"></label>' +
+        '<label>r₃：<input type="number" id="c4R3" value="3"></label>' +
+        '<label>首项系数：<select id="c4S"><option value="1">+1 (正系数)</option><option value="-1">−1 (负系数)</option></select></label>' +
+        '<label><input type="checkbox" id="c4Abs"> 套绝对值 |f(x)|</label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c4Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c4Roots"></div><div class="readout-pill" id="c4Ineq"></div></div></div></div>';
+      const draw = function () {
+        const roots = [Number(el.querySelector('#c4R1').value) || 0, Number(el.querySelector('#c4R2').value) || 0, Number(el.querySelector('#c4R3').value) || 0].sort(function (x, y) { return x - y; });
+        const sgn = Number(el.querySelector('#c4S').value) || 1;
+        const absOn = el.querySelector('#c4Abs').checked;
+        const p = makePlotter(360, 270, -5, 6, -12, 12);
+        let svg = renderPlotBase(p);
+        svg += plotCurve(p, function (x) {
+          const y = sgn * (x - roots[0]) * (x - roots[1]) * (x - roots[2]);
+          return absOn ? Math.abs(y) : y;
+        }, 'var(--svg-purple)', false);
+        roots.forEach(function (r, idx) { svg += plotDot(p, r, 0, 'var(--svg-red)', 'r' + (idx + 1)); });
+        el.querySelector('#c4Svg').innerHTML = svg;
+        el.querySelector('#c4Roots').textContent = '有序零点：' + roots.join(' ≤ ') + '；y 轴截距 = ' + (-sgn * roots[0] * roots[1] * roots[2]);
+        el.querySelector('#c4Ineq').textContent = sgn > 0
+          ? 'f(x) > 0 穿根法区间：' + roots[0] + ' < x < ' + roots[1] + ' 或 x > ' + roots[2]
+          : 'f(x) > 0 穿根法区间：x < ' + roots[0] + ' 或 ' + roots[1] + ' < x < ' + roots[2];
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch05') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 5 交互实验室 · y = ke^(nx) + a 与 y = k ln(ax + b) 渐近线画板</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>函数类型：<select id="c5Type"><option value="exp">指数 y = k·e^(nx) + a</option><option value="ln">对数 y = k·ln(ax + b)</option></select></label>' +
+        '<label>k：<input type="number" id="c5K" value="2"></label>' +
+        '<label>n 或 a：<input type="number" id="c5N" value="1"></label>' +
+        '<label>a 或 b：<input type="number" id="c5B" value="-1"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c5Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c5Asym"></div><div class="readout-pill" id="c5Int"></div><div class="readout-pill" id="c5Dom"></div></div></div></div>';
+      const draw = function () {
+        const mode = el.querySelector('#c5Type').value;
+        const k = Number(el.querySelector('#c5K').value) || 1;
+        let na = Number(el.querySelector('#c5N').value) || 1; if (na === 0) na = 1;
+        const b = Number(el.querySelector('#c5B').value) || 0;
+        const p = makePlotter(360, 270, -5, 6, -6, 8);
+        let svg = renderPlotBase(p);
+        if (mode === 'exp') {
+          svg += plotCurve(p, function () { return b; }, 'var(--svg-red)', true);
+          svg += plotCurve(p, function (x) { return k * Math.exp(na * x) + b; }, 'var(--svg-amber)', false);
+          svg += plotDot(p, 0, k + b, 'var(--svg-blue)', '(0,' + (k + b) + ')');
+          el.querySelector('#c5Asym').textContent = '水平渐近线 (Horizontal Asymptote)：y = ' + b;
+          el.querySelector('#c5Int').textContent = 'y 轴截距 (令 x = 0)：(0, ' + (k + b) + ')';
+          el.querySelector('#c5Dom').textContent = '定义域 x ∈ ℝ；值域：y ' + (k > 0 ? '> ' : '< ') + b + '（切勿触及 y = ' + b + '）';
+        } else {
+          const xAsym = -b / na;
+          const ax = p.toX(xAsym);
+          if (ax > 10 && ax < 350) svg += '<line x1="' + ax.toFixed(1) + '" y1="10" x2="' + ax.toFixed(1) + '" y2="260" stroke="var(--svg-red)" stroke-width="2" stroke-dasharray="5,3"/>';
+          svg += plotCurve(p, function (x) { const arg = na * x + b; return arg > 0.02 ? k * Math.log(arg) : NaN; }, 'var(--svg-teal)', false, 180);
+          const xInt = (1 - b) / na;
+          svg += plotDot(p, xInt, 0, 'var(--svg-blue)', 'x₀=' + xInt.toFixed(2));
+          el.querySelector('#c5Asym').textContent = '铅垂渐近线 (Vertical Asymptote)：ax + b = 0 ⇒ x = ' + formatFrac(-b, na);
+          el.querySelector('#c5Int').textContent = 'x 轴交点 (令 ax + b = 1)：x = ' + formatFrac(1 - b, na);
+          el.querySelector('#c5Dom').textContent = '真数必须为正！定义域：' + na + 'x + (' + b + ') > 0；值域：y ∈ ℝ';
+        }
+        el.querySelector('#c5Svg').innerHTML = svg;
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch06') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 6 交互实验室 · 直线线段与 Linear Law 线性化对照台</div>' +
+        '<div class="tab-row"><button type="button" class="tab-btn active" data-c6m="lin">6.5–6.6 Linear Law 线性化转换</button><button type="button" class="tab-btn" data-c6m="seg">6.1–6.3 线段与垂直平分线</button></div></div>' +
+        '<div class="lab-panel" id="c6Body"></div>';
+      let mode = 'lin';
+      const renderC6 = function () {
+        const box = el.querySelector('#c6Body');
+        if (mode === 'lin') {
+          box.innerHTML =
+            '<div class="lab-controls">' +
+            '<label>原方程模型：<select id="c6Model"><option value="pow">y = a xⁿ (幂函数型)</option><option value="exp">y = a bˣ (指数型)</option><option value="e">y = A e^(kx) (自然指数)</option><option value="inv">y = a/x + b (倒数型)</option></select></label>' +
+            '<label>直线斜率 m：<input type="number" id="c6M" value="2" step="0.5"></label>' +
+            '<label>纵轴截距 c：<input type="number" id="c6C" value="3" step="0.5"></label>' +
+            '</div><div class="lab-readout"><div class="readout-pill" id="c6Axes"></div><div class="readout-pill" id="c6Line"></div><div class="readout-pill" id="c6Params"></div></div>';
+          const calc = function () {
+            const md = box.querySelector('#c6Model').value;
+            const m = Number(box.querySelector('#c6M').value) || 0;
+            const c = Number(box.querySelector('#c6C').value) || 0;
+            if (md === 'pow') {
+              box.querySelector('#c6Axes').textContent = '坐标轴设定：纵轴 Y = lg y，横轴 X = lg x';
+              box.querySelector('#c6Line').textContent = '线性式：lg y = n(lg x) + lg a ⇒ 斜率 m = n，纵截距 c = lg a';
+              box.querySelector('#c6Params').textContent = '反推原参数：n = ' + m + '，a = 10^(' + c + ') = ' + Math.pow(10, c).toPrecision(4);
+            } else if (md === 'exp') {
+              box.querySelector('#c6Axes').textContent = '坐标轴设定：纵轴 Y = lg y，横轴 X = x';
+              box.querySelector('#c6Line').textContent = '线性式：lg y = (lg b) x + lg a ⇒ 斜率 m = lg b，纵截距 c = lg a';
+              box.querySelector('#c6Params').textContent = '反推原参数：b = 10^(' + m + ') = ' + Math.pow(10, m).toPrecision(4) + '，a = 10^(' + c + ') = ' + Math.pow(10, c).toPrecision(4);
+            } else if (md === 'e') {
+              box.querySelector('#c6Axes').textContent = '坐标轴设定：纵轴 Y = ln y，横轴 X = x';
+              box.querySelector('#c6Line').textContent = '线性式：ln y = kx + ln A ⇒ 斜率 m = k，纵截距 c = ln A';
+              box.querySelector('#c6Params').textContent = '反推原参数：k = ' + m + '，A = e^(' + c + ') ≈ ' + Math.exp(c).toPrecision(4);
+            } else {
+              box.querySelector('#c6Axes').textContent = '坐标轴设定：纵轴 Y = y（或 xy），横轴 X = 1/x（或 x）';
+              box.querySelector('#c6Line').textContent = '线性式：y = a(1/x) + b ⇒ 斜率 m = a，纵截距 c = b';
+              box.querySelector('#c6Params').textContent = '反推原参数：a = ' + m + '，b = ' + c + '，原关系 y = ' + m + '/x + (' + c + ')';
+            }
+          };
+          box.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', calc); i.addEventListener('change', calc); });
+          calc();
+        } else {
+          box.innerHTML =
+            '<div class="lab-controls">' +
+            '<label>A(<input type="number" id="c6Ax" value="-1">,<input type="number" id="c6Ay" value="6">)</label>' +
+            '<label>B(<input type="number" id="c6Bx" value="5">,<input type="number" id="c6By" value="2">)</label>' +
+            '</div><div class="lab-readout"><div class="readout-pill" id="c6Out1"></div><div class="readout-pill" id="c6Out2"></div></div>';
+          const calc = function () {
+            const ax = Number(box.querySelector('#c6Ax').value) || 0, ay = Number(box.querySelector('#c6Ay').value) || 0;
+            const bx = Number(box.querySelector('#c6Bx').value) || 0, by = Number(box.querySelector('#c6By').value) || 0;
+            const d2 = (bx - ax) * (bx - ax) + (by - ay) * (by - ay);
+            box.querySelector('#c6Out1').textContent = '精确长度 AB = √' + d2 + ' = ' + formatSurd(d2) + '；中点 M = (' + formatFrac(ax + bx, 2) + ', ' + formatFrac(ay + by, 2) + ')';
+            box.querySelector('#c6Out2').textContent = d2 === 0 ? '两点重合' : '斜率 m_AB = ' + formatFrac(by - ay, bx - ax) + '，垂直斜率 m_⊥ = ' + formatFrac(-(bx - ax), by - ay);
+          };
+          box.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', calc); });
+          calc();
+        }
+      };
+      el.querySelectorAll('[data-c6m]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          mode = btn.getAttribute('data-c6m');
+          el.querySelectorAll('[data-c6m]').forEach(function (b) { b.classList.toggle('active', b === btn); });
+          renderC6();
+        });
+      });
+      renderC6();
+    } else if (type === 'ch07') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 7 交互实验室 · 圆方程与直线相交 / 相切 / 相离判别画板</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>圆心 (<input type="number" id="c7H" value="1">,<input type="number" id="c7K" value="-1">) r=<input type="number" id="c7R" value="4" min="1" max="8"></label>' +
+        '<label>直线 y = <input type="number" id="c7M" value="1" step="0.5">x + <input type="number" id="c7C" value="3" step="0.5"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c7Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c7Eq"></div><div class="readout-pill" id="c7Dist"></div><div class="readout-pill" id="c7Rel"></div></div></div></div>';
+      const draw = function () {
+        const h = Number(el.querySelector('#c7H').value) || 0;
+        const k = Number(el.querySelector('#c7K').value) || 0;
+        const r = Math.max(1, Number(el.querySelector('#c7R').value) || 4);
+        const m = Number(el.querySelector('#c7M').value) || 0;
+        const c = Number(el.querySelector('#c7C').value) || 0;
+        const d = Math.abs(m * h - k + c) / Math.hypot(m, 1);
+        const p = makePlotter(360, 270, h - r - 3, h + r + 3, k - r - 3, k + r + 3);
+        let svg = renderPlotBase(p);
+        const cx = p.toX(h), cy = p.toY(k), rx = Math.abs(p.toX(h + r) - cx);
+        svg += '<circle cx="' + cx.toFixed(1) + '" cy="' + cy.toFixed(1) + '" r="' + rx.toFixed(1) + '" fill="rgba(5,150,105,0.12)" stroke="var(--svg-teal)" stroke-width="2.4"/>';
+        svg += plotCurve(p, function (x) { return m * x + c; }, 'var(--svg-red)', false);
+        svg += plotDot(p, h, k, 'var(--svg-indigo)', 'C(' + h + ',' + k + ')');
+        el.querySelector('#c7Svg').innerHTML = svg;
+        el.querySelector('#c7Eq').textContent = '标准圆方程：(x − (' + h + '))² + (y − (' + k + '))² = ' + (r * r);
+        el.querySelector('#c7Dist').textContent = '圆心到直线垂直距离 d = ' + d.toFixed(3) + ' vs 半径 r = ' + r;
+        el.querySelector('#c7Rel').textContent = Math.abs(d - r) < 0.02 ? '🎯 判定：d = r (Δ = 0) → 恰好相切 (Tangent)！' : d < r ? '✂️ 判定：d < r (Δ > 0) → 相交于两点 (Secant / Chord)！' : '🚫 判定：d > r (Δ < 0) → 相离 (No intersection)！';
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch08') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 8 交互实验室 · 弧度制 θ、弧长 s = rθ 与弓形阴影面积实时计算</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>半径 r (cm)：<input type="range" id="c8R" min="2" max="12" step="1" value="6"><span id="c8RLbl">6</span></label>' +
+        '<label>圆心角 θ (rad)：<input type="range" id="c8T" min="0.2" max="3.0" step="0.1" value="1.2"><span id="c8TLbl">1.20</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c8Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c8Arc"></div><div class="readout-pill" id="c8Sec"></div><div class="readout-pill" id="c8Seg"></div></div></div></div>';
+      const draw = function () {
+        const r = Number(el.querySelector('#c8R').value) || 6;
+        const t = Number(el.querySelector('#c8T').value) || 1.2;
+        el.querySelector('#c8RLbl').textContent = r;
+        el.querySelector('#c8TLbl').textContent = t.toFixed(2);
+        const arc = r * t, chord = 2 * r * Math.sin(t / 2), sec = 0.5 * r * r * t, tri = 0.5 * r * r * Math.sin(t), seg = sec - tri;
+        const cx = 135, cy = 195, R = 95 + r * 4;
+        const a1 = -0.15, a2 = a1 - t;
+        const x1 = cx + R * Math.cos(a1), y1 = cy + R * Math.sin(a1);
+        const x2 = cx + R * Math.cos(a2), y2 = cy + R * Math.sin(a2);
+        const large = t > Math.PI ? 1 : 0;
+        let svg = '<path d="M ' + cx + ' ' + cy + ' L ' + x1.toFixed(1) + ' ' + y1.toFixed(1) + ' A ' + R + ' ' + R + ' 0 ' + large + ' 0 ' + x2.toFixed(1) + ' ' + y2.toFixed(1) + ' Z" fill="rgba(13,148,136,0.14)" stroke="var(--svg-teal)" stroke-width="2.2"/>';
+        svg += '<path d="M ' + x1.toFixed(1) + ' ' + y1.toFixed(1) + ' A ' + R + ' ' + R + ' 0 ' + large + ' 0 ' + x2.toFixed(1) + ' ' + y2.toFixed(1) + ' Z" fill="rgba(217,119,6,0.28)" stroke="var(--svg-amber)" stroke-width="2"/>';
+        svg += '<circle cx="' + cx + '" cy="' + cy + '" r="4" fill="var(--svg-ink)"/><text x="' + (cx - 18) + '" y="' + (cy + 16) + '" font-size="11.5" font-weight="700" fill="var(--svg-ink)">O</text>';
+        svg += '<text x="' + (cx + 28) + '" y="' + (cy - 12) + '" font-size="11.5" font-weight="700" fill="var(--svg-teal)">θ = ' + t.toFixed(2) + ' rad</text>';
+        el.querySelector('#c8Svg').innerHTML = svg;
+        el.querySelector('#c8Arc').textContent = '弧长 s = rθ = ' + arc.toFixed(3) + ' cm | 弦长 AB = 2r sin(θ/2) = ' + chord.toFixed(3) + ' cm';
+        el.querySelector('#c8Sec').textContent = '扇形面积 ½r²θ = ' + sec.toFixed(3) + ' cm² | 扇形周长 = s + 2r = ' + (arc + 2 * r).toFixed(3) + ' cm';
+        el.querySelector('#c8Seg').textContent = '阴影弓形面积 (Segment) = ½r²(θ − sin θ) = ' + seg.toFixed(3) + ' cm²';
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch09') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 9 交互实验室 · y = a sin/cos(bx) + c 与 |f(x)| 三角波形诊断台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>函数：<select id="c9Fn"><option value="sin">a sin(bx) + c</option><option value="cos">a cos(bx) + c</option><option value="abs">|a sin(bx) + c|</option></select></label>' +
+        '<label>a：<input type="number" id="c9A" value="2"></label><label>b：<input type="number" id="c9B" value="2"></label><label>c：<input type="number" id="c9C" value="1"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c9Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c9Per"></div><div class="readout-pill" id="c9Rng"></div><div class="readout-pill" id="c9Cast"></div></div></div></div>';
+      const draw = function () {
+        const fn = el.querySelector('#c9Fn').value;
+        const a = Number(el.querySelector('#c9A').value) || 2;
+        let b = Number(el.querySelector('#c9B').value) || 1; if (b <= 0) b = 1;
+        const c = Number(el.querySelector('#c9C').value) || 0;
+        const p = makePlotter(360, 270, 0, 360, -5, 6);
+        let svg = renderPlotBase(p);
+        svg += plotCurve(p, function (deg) {
+          const rad = (deg * Math.PI) / 180;
+          const v = fn === 'cos' ? a * Math.cos(b * rad) + c : a * Math.sin(b * rad) + c;
+          return fn === 'abs' ? Math.abs(v) : v;
+        }, 'var(--svg-indigo)', false, 180);
+        el.querySelector('#c9Svg').innerHTML = svg;
+        const ymin = c - Math.abs(a), ymax = c + Math.abs(a);
+        el.querySelector('#c9Per').textContent = '周期 Period = ' + (fn === 'abs' && c === 0 ? (180 / b).toFixed(1) : (360 / b).toFixed(1)) + '° (弧度 ' + formatFrac(fn === 'abs' && c === 0 ? 1 : 2, b) + 'π)';
+        el.querySelector('#c9Rng').textContent = fn === 'abs'
+          ? '值域 Range (绝对值翻折)：[' + ((ymin <= 0 && ymax >= 0) ? 0 : Math.min(Math.abs(ymin), Math.abs(ymax))) + ', ' + Math.max(Math.abs(ymin), Math.abs(ymax)) + ']'
+          : '值域 Range：[' + ymin + ', ' + ymax + '] | 振幅 |a| = ' + Math.abs(a);
+        el.querySelector('#c9Cast').textContent = 'CAST 口诀 (0°→360°)：I 全正 (All) · II 仅 sin 正 · III 仅 tan 正 · IV 仅 cos 正';
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch10') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 10 交互实验室 · 排列 nPr / 组合 nCr / 捆绑插空计数对比器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>总元素 n：<input type="number" id="c10N" value="7" min="1" max="12"></label>' +
+        '<label>选取数 r：<input type="number" id="c10R" value="3" min="0" max="12"></label>' +
+        '<label>捆绑测试块大小 k：<input type="number" id="c10K" value="2" min="1" max="6"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c10P"></div><div class="readout-pill" id="c10C"></div><div class="readout-pill" id="c10Glue"></div></div></div>';
+      const draw = function () {
+        const n = Math.min(12, Math.max(1, Math.round(Number(el.querySelector('#c10N').value) || 7)));
+        const r = Math.min(n, Math.max(0, Math.round(Number(el.querySelector('#c10R').value) || 3)));
+        const k = Math.min(n, Math.max(1, Math.round(Number(el.querySelector('#c10K').value) || 2)));
+        el.querySelector('#c10P').textContent = '有序排列 ⁿPᵣ = ' + n + '! / (' + n + '−' + r + ')! = ' + nPr(n, r).toLocaleString();
+        el.querySelector('#c10C').textContent = '无序组合 ⁿCᵣ = ' + n + '! / [' + r + '!(' + n + '−' + r + ')!] = ' + nCr(n, r).toLocaleString() + '（关系：ⁿPᵣ = r! · ⁿCᵣ）';
+        const glueVal = fact(n - k + 1) * fact(k);
+        const rem = n - k;
+        const gapVal = k <= rem + 1 ? fact(rem) * nPr(rem + 1, k) : 0;
+        el.querySelector('#c10Glue').textContent = 'n 个中特定 k 个全排列：① 相邻捆绑 (' + (n - k + 1) + ')! × ' + k + '! = ' + glueVal.toLocaleString() + '；② 全不相邻插空 ' + rem + '! × ᴾ(' + (rem + 1) + ',' + k + ') = ' + gapVal.toLocaleString();
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch11') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 11 交互实验室 · 二项式展开 (a + bx)ⁿ 与 AP/GP/S∞ 验算台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>二项式 a：<input type="number" id="c11A" value="2"></label><label>b：<input type="number" id="c11B" value="-3"></label><label>幂 n：<input type="number" id="c11N" value="5" min="2" max="9"></label>' +
+        '<label>GP 首项 u₁：<input type="number" id="c11U" value="12"></label><label>公比 r：<input type="number" id="c11R" value="0.5" step="0.25"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c11Bin"></div><div class="readout-pill" id="c11Gp"></div></div></div>';
+      const draw = function () {
+        const a = Number(el.querySelector('#c11A').value) || 0;
+        const b = Number(el.querySelector('#c11B').value) || 0;
+        const n = Math.min(9, Math.max(2, Math.round(Number(el.querySelector('#c11N').value) || 5)));
+        const terms = [];
+        for (let r = 0; r <= Math.min(3, n); r++) {
+          const coef = nCr(n, r) * Math.pow(a, n - r) * Math.pow(b, r);
+          terms.push((r === 0 ? '' : (coef >= 0 ? ' + ' : ' − ')) + (r === 0 ? coef : Math.abs(coef)) + (r === 0 ? '' : r === 1 ? 'x' : 'x^' + r));
+        }
+        el.querySelector('#c11Bin').textContent = '(' + a + ' + ' + b + 'x)^' + n + ' 前四项 = ' + terms.join('') + ' + …';
+        const u1 = Number(el.querySelector('#c11U').value) || 0;
+        const rRatio = Number(el.querySelector('#c11R').value) || 0;
+        const conv = Math.abs(rRatio) < 1;
+        el.querySelector('#c11Gp').textContent = 'GP u₅ = ' + (u1 * Math.pow(rRatio, 4)).toFixed(3) + ' | ' + (conv ? '✅ |r| < 1 收敛！S∞ = u₁/(1−r) = ' + (u1 / (1 - rRatio)).toFixed(3) : '🚫 |r| ≥ 1 级数发散，S∞ 不存在！');
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch12') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 12 交互实验室 · y = x³ − 3px + 2 切线、法线与二阶导驻点台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>系数 p：<input type="number" id="c12P" value="3" min="1" max="6"></label>' +
+        '<label>点横坐标 x₀：<input type="range" id="c12X" min="-3" max="3" step="0.25" value="-1"><span id="c12XLbl">-1.00</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c12Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c12D1"></div><div class="readout-pill" id="c12D2"></div><div class="readout-pill" id="c12Tan"></div></div></div></div>';
+      const draw = function () {
+        const P = Math.max(1, Number(el.querySelector('#c12P').value) || 3);
+        const x0 = Number(el.querySelector('#c12X').value) || 0;
+        el.querySelector('#c12XLbl').textContent = x0.toFixed(2);
+        const y0 = x0 * x0 * x0 - 3 * P * x0 + 2;
+        const m = 3 * x0 * x0 - 3 * P;
+        const d2 = 6 * x0;
+        const p = makePlotter(360, 270, -4, 4, -18, 22);
+        let svg = renderPlotBase(p);
+        svg += plotCurve(p, function (x) { return x * x * x - 3 * P * x + 2; }, 'var(--svg-indigo)', false);
+        svg += plotCurve(p, function (x) { return y0 + m * (x - x0); }, 'var(--svg-red)', true);
+        svg += plotDot(p, x0, y0, 'var(--svg-red)', 'P(' + x0 + ',' + y0.toFixed(1) + ')');
+        el.querySelector('#c12Svg').innerHTML = svg;
+        el.querySelector('#c12D1').textContent = '一阶导 dy/dx = 3x² − ' + (3 * P) + '，在 x₀=' + x0 + ' 处切线斜率 = ' + m.toFixed(2) + (Math.abs(m) < 0.01 ? ' 🎯 驻点 (dy/dx = 0)!' : '');
+        el.querySelector('#c12D2').textContent = '二阶导 d²y/dx² = 6x = ' + d2.toFixed(2) + (d2 < 0 ? ' (< 0：局部极大值形状 ∩)' : d2 > 0 ? ' (> 0：局部极小值形状 U)' : ' (= 0 需查符号变化)');
+        el.querySelector('#c12Tan').textContent = Math.abs(m) < 0.01 ? '水平切线：y = ' + y0.toFixed(2) + '；法线斜率无定义 (铅垂 x = ' + x0 + ')' : '切线 y − ' + y0.toFixed(2) + ' = ' + m.toFixed(2) + '(x − ' + x0 + ') | 法线斜率 m⊥ = ' + (-1 / m).toFixed(2);
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch13') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 13 交互实验室 · 向量合成 u + v、模长与单位向量动态 SVG</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>u = (<input type="number" id="c13Ux" value="3">,<input type="number" id="c13Uy" value="4">)</label>' +
+        '<label>v = (<input type="number" id="c13Vx" value="4">,<input type="number" id="c13Vy" value="-1">)</label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c13Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c13Mag"></div><div class="readout-pill" id="c13Unit"></div><div class="readout-pill" id="c13Sum"></div></div></div></div>';
+      const draw = function () {
+        const ux = Number(el.querySelector('#c13Ux').value) || 0, uy = Number(el.querySelector('#c13Uy').value) || 0;
+        const vx = Number(el.querySelector('#c13Vx').value) || 0, vy = Number(el.querySelector('#c13Vy').value) || 0;
+        const sx = ux + vx, sy = uy + vy;
+        const p = makePlotter(360, 270, Math.min(-2, ux, vx, sx) - 2, Math.max(4, ux, vx, sx) + 2, Math.min(-2, uy, vy, sy) - 2, Math.max(4, uy, vy, sy) + 2);
+        let svg = renderPlotBase(p);
+        const arrow = function (x1, y1, x2, y2, col, lbl) {
+          const mx = (p.toX(x1) + p.toX(x2)) / 2, my = (p.toY(y1) + p.toY(y2)) / 2;
+          return '<line x1="' + p.toX(x1).toFixed(1) + '" y1="' + p.toY(y1).toFixed(1) + '" x2="' + p.toX(x2).toFixed(1) + '" y2="' + p.toY(y2).toFixed(1) + '" stroke="' + col + '" stroke-width="2.6"/><circle cx="' + p.toX(x2).toFixed(1) + '" cy="' + p.toY(y2).toFixed(1) + '" r="4" fill="' + col + '"/><text x="' + (mx + 6).toFixed(1) + '" y="' + (my - 5).toFixed(1) + '" font-size="11" font-weight="700" fill="' + col + '">' + lbl + '</text>';
+        };
+        svg += arrow(0, 0, ux, uy, 'var(--svg-blue)', 'u');
+        svg += arrow(ux, uy, sx, sy, 'var(--svg-amber)', 'v');
+        svg += arrow(0, 0, sx, sy, 'var(--svg-teal)', 'u+v');
+        el.querySelector('#c13Svg').innerHTML = svg;
+        const u2 = ux * ux + uy * uy, s2 = sx * sx + sy * sy;
+        el.querySelector('#c13Mag').textContent = '精确模长 |u| = ' + formatSurd(u2) + '；合成向量的模 |u + v| = ' + formatSurd(s2);
+        el.querySelector('#c13Unit').textContent = u2 === 0 ? '零向量无单位向量' : 'u 方向单位向量 û = (1/' + formatSurd(u2) + ') (' + ux + 'i + ' + uy + 'j)';
+        el.querySelector('#c13Sum').textContent = '合成向量 u + v = (' + sx + ', ' + sy + ')；差向量 u − v = (' + (ux - vx) + ', ' + (uy - vy) + ')';
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch14') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 14 交互实验室 · 指数、对数与三角链式导数验证台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>函数 y：<select id="c14F"><option value="exp">k e^(ax+b)</option><option value="ln">k ln(ax+b)</option><option value="sin">k sin(ax+b)</option><option value="cos">k cos(ax+b)</option><option value="tan">k tan(ax+b)</option></select></label>' +
+        '<label>k：<input type="number" id="c14K" value="2"></label><label>a：<input type="number" id="c14A" value="3"></label><label>b：<input type="number" id="c14B" value="1"></label>' +
+        '<label>检验 x₀：<input type="number" id="c14X" value="0" step="0.5"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c14Der"></div><div class="readout-pill" id="c14Val"></div></div></div>';
+      const draw = function () {
+        const f = el.querySelector('#c14F').value;
+        const k = Number(el.querySelector('#c14K').value) || 1;
+        const a = Number(el.querySelector('#c14A').value) || 1;
+        const b = Number(el.querySelector('#c14B').value) || 0;
+        const x = Number(el.querySelector('#c14X').value) || 0;
+        const arg = a * x + b;
+        let dtxt = '', val = NaN;
+        if (f === 'exp') { dtxt = (k * a) + ' e^(' + a + 'x + (' + b + '))'; val = k * a * Math.exp(arg); }
+        else if (f === 'ln') { dtxt = formatFrac(k * a, 1) + '·a 约去系数得 ' + k + '·(' + a + ') / (' + a + 'x + (' + b + '))  （注：ln 里常数 k 与系数 a 对消规律：d/dx[ln(ax+b)] = a/(ax+b)！）'; val = arg !== 0 ? (k * a) / arg : NaN; }
+        else if (f === 'sin') { dtxt = (k * a) + ' cos(' + a + 'x + (' + b + '))'; val = k * a * Math.cos(arg); }
+        else if (f === 'cos') { dtxt = (-k * a) + ' sin(' + a + 'x + (' + b + '))  (注意负号!)'; val = -k * a * Math.sin(arg); }
+        else { dtxt = (k * a) + ' sec²(' + a + 'x + (' + b + '))'; val = Math.abs(Math.cos(arg)) > 0.01 ? (k * a) / (Math.cos(arg) * Math.cos(arg)) : NaN; }
+        el.querySelector('#c14Der').textContent = '导数表达式 dy/dx = ' + dtxt;
+        el.querySelector('#c14Val').textContent = '在 x₀ = ' + x + ' rad 处斜率数值 ≈ ' + (Number.isFinite(val) ? val.toFixed(4) : '未定义（除数为 0）');
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch15') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 15 交互实验室 · 定积分“代数净值” vs “绝对几何面积”对照仪</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>被积函数：<select id="c15F"><option value="par">y = x² − 4</option><option value="cub">y = x³ − 4x</option><option value="sin">y = 3 sin(x)</option></select></label>' +
+        '<label>下限 a：<input type="number" id="c15A" value="-1" step="0.5"></label><label>上限 b：<input type="number" id="c15B" value="3" step="0.5"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c15Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c15Net"></div><div class="readout-pill" id="c15Geom"></div><div class="readout-pill" id="c15Rule"></div></div></div></div>';
+      const draw = function () {
+        const mode = el.querySelector('#c15F').value;
+        let a = Number(el.querySelector('#c15A').value) || -1;
+        let b = Number(el.querySelector('#c15B').value) || 3;
+        if (b < a) { const t = a; a = b; b = t; }
+        const fn = function (x) { return mode === 'par' ? x * x - 4 : mode === 'cub' ? x * x * x - 4 * x : 3 * Math.sin(x); };
+        const p = makePlotter(360, 270, Math.min(-3, a - 0.5), Math.max(4, b + 0.5), -6, 7);
+        let svg = renderPlotBase(p);
+        const N = 120, dx = (b - a) / N;
+        let net = 0, geom = 0;
+        for (let i = 0; i < N; i++) {
+          const x1 = a + i * dx, x2 = x1 + dx, xm = (x1 + x2) / 2, ym = fn(xm);
+          net += ym * dx;
+          geom += Math.abs(ym) * dx;
+          const top = ym >= 0 ? p.toY(ym) : p.toY(0);
+          const ht = Math.abs(p.toY(ym) - p.toY(0));
+          svg += '<rect x="' + p.toX(x1).toFixed(1) + '" y="' + top.toFixed(1) + '" width="' + Math.max(1.5, p.toX(x2) - p.toX(x1)).toFixed(1) + '" height="' + ht.toFixed(1) + '" fill="' + (ym >= 0 ? 'rgba(22,163,74,0.35)' : 'rgba(220,38,38,0.35)') + '"/>';
+        }
+        svg += plotCurve(p, fn, 'var(--svg-indigo)', false);
+        el.querySelector('#c15Svg').innerHTML = svg;
+        el.querySelector('#c15Net').textContent = '定积分代数和 ∫ₐᵇ f(x) dx ≈ ' + net.toFixed(3) + '（x 轴下方红色贡献为负，互相抵消）';
+        el.querySelector('#c15Geom').textContent = '总几何围成面积 ∫ₐᵇ |f(x)| dx ≈ ' + geom.toFixed(3) + '（必须按零点分段取 |…| 相加！）';
+        el.querySelector('#c15Rule').textContent = '考场避坑：求 x 轴下方区域面积务必加负号 −∫ 或取绝对值 |∫|！';
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch16') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 16 交互实验室 · 运动学 s–v–a 瞬时静止折返与总路程拆分器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>速度模型 v(t)：<select id="c16M"><option value="q">v = t² − 4t + 3 (t=1,3 折返)</option><option value="lin">v = 6 − 2t (t=3 折返)</option></select></label>' +
+        '<label>终止时刻 T (s)：<input type="range" id="c16T" min="0.5" max="5" step="0.5" value="4"><span id="c16TLbl">4.0s</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c16Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c16Inst"></div><div class="readout-pill" id="c16Disp"></div><div class="readout-pill" id="c16Dist"></div></div></div></div>';
+      const draw = function () {
+        const mode = el.querySelector('#c16M').value;
+        const T = Number(el.querySelector('#c16T').value) || 4;
+        el.querySelector('#c16TLbl').textContent = T.toFixed(1) + 's';
+        const vFn = function (t) { return mode === 'q' ? t * t - 4 * t + 3 : 6 - 2 * t; };
+        const aFn = function (t) { return mode === 'q' ? 2 * t - 4 : -2; };
+        const p = makePlotter(360, 270, 0, 5.2, -5, 9);
+        let svg = renderPlotBase(p);
+        const N = 100, dt = T / N;
+        let disp = 0, dist = 0;
+        for (let i = 0; i < N; i++) {
+          const t1 = i * dt, tm = t1 + dt / 2, vm = vFn(tm);
+          disp += vm * dt;
+          dist += Math.abs(vm) * dt;
+          const top = vm >= 0 ? p.toY(vm) : p.toY(0);
+          svg += '<rect x="' + p.toX(t1).toFixed(1) + '" y="' + top.toFixed(1) + '" width="' + Math.max(1.5, p.toX(t1 + dt) - p.toX(t1)).toFixed(1) + '" height="' + Math.abs(p.toY(vm) - p.toY(0)).toFixed(1) + '" fill="' + (vm >= 0 ? 'rgba(3,105,161,0.3)' : 'rgba(220,38,38,0.32)') + '"/>';
+        }
+        svg += plotCurve(p, vFn, 'var(--svg-indigo)', false);
+        svg += plotDot(p, T, vFn(T), 'var(--svg-red)', 't=' + T.toFixed(1));
+        el.querySelector('#c16Svg').innerHTML = svg;
+        el.querySelector('#c16Inst').textContent = '在 t = ' + T.toFixed(1) + 's：瞬时速度 v = ' + vFn(T).toFixed(2) + ' m/s，加速度 a = dv/dt = ' + aFn(T).toFixed(2) + ' m/s²';
+        el.querySelector('#c16Disp').textContent = '净位移 Displacement (∫₀ᵀ v dt) = ' + disp.toFixed(2) + ' m';
+        el.querySelector('#c16Dist').textContent = '总路程 Total Distance (在 v=0 处拆分取 |…|) = ' + dist.toFixed(2) + ' m' + (Math.abs(dist - Math.abs(disp)) > 0.05 ? ' （已折返！）' : '');
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    }
+  }
+
+  document.querySelectorAll('.lab-box[data-lab-type]').forEach(mountChapterLab);
+
+  // ---------- 11. Initialize State & Scroll Spy ----------
+  applyViewMode(currentViewMode);
+  applyQuizMask(quizMasked);
+
+  const backTopBtn = document.getElementById('backTopBtn');
+  const trackedSections = Array.from(document.querySelectorAll('.topic-section[id]'));
+  const navLinks = Array.from(document.querySelectorAll('.sidebar .nav-link'));
+
+  window.addEventListener('scroll', function () {
+    if (backTopBtn) backTopBtn.classList.toggle('visible', window.scrollY > 360);
+    const y = window.scrollY + 110;
+    let currentId = '';
+    for (let i = 0; i < trackedSections.length; i++) {
+      if (trackedSections[i].offsetTop <= y && getComputedStyle(trackedSections[i]).display !== 'none') {
+        currentId = trackedSections[i].id;
+      }
+    }
+    navLinks.forEach(function (lnk) {
+      const h = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('active', h === currentId);
+    });
+  }, { passive: true });
+
+  if (backTopBtn) {
+    backTopBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  }
+})();
+
+  </script>
+</body>
+</html>

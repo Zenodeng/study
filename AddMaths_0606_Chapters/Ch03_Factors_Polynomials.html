@@ -1,0 +1,2045 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="--accent: #2563EB;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch03 · Chapter 3: Factors and polynomials — IGCSE Add Maths (0606) 精讲</title>
+  <style>
+/* ==========================================================================
+   Cambridge IGCSE Additional Mathematics (0606 · 3rd Ed. Sue Pemberton)
+   16-Chapter Suite Shared Stylesheet (Offline, Zero CDN, Print-Ready)
+   ========================================================================== */
+
+:root {
+  --bg-page: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --bg-sidebar: #FFFFFF;
+  --bg-code: #EFF6FF;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-faint: #64748B;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+
+  --accent: #4338CA;
+  --accent-hover: #3730A3;
+  --accent-soft: #E0E7FF;
+
+  --p1-bg: #E0E7FF;
+  --p1-text: #3730A3;
+  --p1-border: #C7D2FE;
+  --p2-bg: #FEF3C7;
+  --p2-text: #92400E;
+  --p2-border: #FDE68A;
+
+  --deep-bg: #EFF6FF;
+  --deep-border: #2563EB;
+  --tip-bg: #FFFBEB;
+  --tip-border: #D97706;
+  --mistake-bg: #FFF1F2;
+  --mistake-border: #E11D48;
+  --example-bg: #F0FDF4;
+  --example-border: #16A34A;
+  --formula-bg: #F8FAFC;
+  --formula-border: #4338CA;
+
+  --ok-bg: #DCFCE7;
+  --ok-text: #166534;
+  --ok-border: #86EFAC;
+  --err-bg: #FEE2E2;
+  --err-text: #991B1B;
+  --err-border: #FCA5A5;
+
+  --svg-bg: #FFFFFF;
+  --svg-grid: #E2E8F0;
+  --svg-ink: #0F172A;
+  --svg-muted: #64748B;
+  --svg-blue: #2563EB;
+  --svg-indigo: #4338CA;
+  --svg-teal: #0F766E;
+  --svg-amber: #D97706;
+  --svg-red: #DC2626;
+  --svg-green: #16A34A;
+  --svg-purple: #6D28D9;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.07);
+  --shadow-lg: 0 10px 26px rgba(15, 23, 42, 0.11);
+
+  --sidebar-w: 288px;
+  --topbar-h: 58px;
+  --radius-sm: 7px;
+  --radius-md: 11px;
+  --radius-lg: 16px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Songti SC", "Noto Serif SC", Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+[data-theme="dark"] {
+  --bg-page: #0B1120;
+  --bg-surface: #111827;
+  --bg-subtle: #1E293B;
+  --bg-sidebar: #0F172A;
+  --bg-code: #1E293B;
+  --text-main: #F1F5F9;
+  --text-muted: #CBD5E1;
+  --text-faint: #94A3B8;
+  --border: #1E293B;
+  --border-strong: #334155;
+
+  --accent: #818CF8;
+  --accent-hover: #A5B4FC;
+  --accent-soft: rgba(129, 140, 248, 0.18);
+
+  --p1-bg: rgba(129, 140, 248, 0.18);
+  --p1-text: #C7D2FE;
+  --p1-border: rgba(129, 140, 248, 0.38);
+  --p2-bg: rgba(245, 158, 11, 0.16);
+  --p2-text: #FDE68A;
+  --p2-border: rgba(245, 158, 11, 0.35);
+
+  --deep-bg: rgba(37, 99, 235, 0.14);
+  --deep-border: #60A5FA;
+  --tip-bg: rgba(217, 119, 6, 0.14);
+  --tip-border: #FBBF24;
+  --mistake-bg: rgba(225, 29, 72, 0.15);
+  --mistake-border: #FB7185;
+  --example-bg: rgba(22, 163, 74, 0.13);
+  --example-border: #4ADE80;
+  --formula-bg: #172033;
+  --formula-border: #818CF8;
+
+  --ok-bg: rgba(22, 163, 74, 0.22);
+  --ok-text: #BBF7D0;
+  --ok-border: #22C55E;
+  --err-bg: rgba(220, 38, 38, 0.22);
+  --err-text: #FECACA;
+  --err-border: #EF4444;
+
+  --svg-bg: #0F172A;
+  --svg-grid: #334155;
+  --svg-ink: #F1F5F9;
+  --svg-muted: #94A3B8;
+  --svg-blue: #60A5FA;
+  --svg-indigo: #818CF8;
+  --svg-teal: #2DD4BF;
+  --svg-amber: #FBBF24;
+  --svg-red: #F87171;
+  --svg-green: #34D399;
+  --svg-purple: #A78BFA;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--topbar-h) + 18px); }
+body { margin: 0; font-family: var(--font-sans); background: var(--bg-page); color: var(--text-main); line-height: 1.72; font-size: 15.5px; -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4 { margin: 0 0 0.55em 0; line-height: 1.32; font-weight: 700; color: var(--text-main); }
+p { margin: 0 0 0.9em 0; }
+ul, ol { margin: 0 0 1em 0; padding-left: 1.45em; }
+li { margin-bottom: 0.35em; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { font-family: var(--font-mono); font-size: 0.9em; background: var(--bg-code); color: var(--accent); padding: 2px 6px; border-radius: 4px; }
+
+/* View Mode Filters */
+body.mode-book .sme-section { display: none !important; }
+body.mode-sme .book-section { display: none !important; }
+
+/* Math Formatting Helpers (Pure CSS, Zero CDN) */
+.math { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 1.04em; letter-spacing: 0.01em; }
+.math-upright { font-family: Georgia, "Times New Roman", serif; font-style: normal; }
+.frac { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; font-size: 0.88em; line-height: 1.1; margin: 0 2px; font-style: normal; font-family: Georgia, "Times New Roman", serif; }
+.frac .num { border-bottom: 1.5px solid currentColor; padding: 0 4px 1px 4px; }
+.frac .den { padding: 1px 4px 0 4px; }
+.sqrt { display: inline-flex; align-items: baseline; font-family: Georgia, "Times New Roman", serif; }
+.sqrt-rad { border-top: 1.4px solid currentColor; padding: 0 3px 0 2px; margin-left: 1px; }
+.vec-col { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; border-left: 1.5px solid currentColor; border-right: 1.5px solid currentColor; border-radius: 4px; padding: 1px 6px; line-height: 1.25; font-style: normal; font-family: Georgia, "Times New Roman", serif; margin: 0 3px; font-size: 0.92em; }
+.ncr-stack { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; border-left: 1.4px solid currentColor; border-right: 1.4px solid currentColor; border-radius: 6px; padding: 0 5px; line-height: 1.15; font-style: normal; font-family: Georgia, "Times New Roman", serif; margin: 0 2px; font-size: 0.9em; }
+
+.formula-card { background: var(--formula-bg); border: 1.5px solid var(--border-strong); border-left: 5px solid var(--formula-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; font-size: 15px; }
+.formula-main { font-family: Georgia, "Times New Roman", serif; font-size: 16.5px; font-weight: 700; color: var(--accent); margin: 4px 0 6px 0; }
+.matrix-shoe { display: inline-flex; align-items: center; gap: 6px; background: var(--bg-surface); border: 1px solid var(--border-strong); padding: 8px 14px; border-radius: 8px; font-family: Georgia, "Times New Roman", serif; font-size: 15.5px; margin: 8px 0; flex-wrap: wrap; }
+.shoe-cols { display: inline-flex; gap: 16px; border-left: 2px solid var(--text-main); border-right: 2px solid var(--text-main); padding: 4px 12px; }
+.shoe-col { display: flex; flex-direction: column; align-items: center; line-height: 1.45; }
+
+/* Topbar & Responsive Controls */
+.topbar {
+  position: sticky; top: 0; z-index: 100; height: var(--topbar-h);
+  background: var(--bg-surface); border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm); display: flex; align-items: center;
+  justify-content: space-between; gap: 10px; padding: 0 16px;
+}
+.topbar-left { display: flex; align-items: center; gap: 8px; min-width: 0; flex-shrink: 1; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 34px; padding: 0 11px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--bg-surface); color: var(--text-main); font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; text-decoration: none; }
+.icon-btn:hover { background: var(--bg-subtle); border-color: var(--accent); text-decoration: none; }
+.icon-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.menu-toggle { display: none; }
+.brand-pill { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; white-space: nowrap; flex-shrink: 1; min-width: 0; }
+.brand-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 240px; }
+.brand-code { background: var(--accent); color: #fff; padding: 2px 8px; border-radius: 5px; font-size: 12px; letter-spacing: 0.4px; white-space: nowrap; flex-shrink: 0; }
+.search-wrap { position: relative; flex: 1 1 160px; min-width: 140px; max-width: 280px; }
+.search-input { width: 100%; height: 34px; padding: 0 30px 0 32px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--bg-subtle); color: var(--text-main); font-size: 13.5px; outline: none; }
+.search-input:focus { border-color: var(--accent); background: var(--bg-surface); }
+.search-input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.search-icon { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); color: var(--text-faint); font-size: 13px; pointer-events: none; }
+.search-clear { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); border: none; background: transparent; color: var(--text-faint); cursor: pointer; font-size: 14px; display: none; }
+.search-results-bar { display: none; background: var(--accent-soft); border-bottom: 1px solid var(--border); padding: 8px 20px; font-size: 13.5px; color: var(--text-main); align-items: center; justify-content: space-between; gap: 12px; }
+.search-results-bar.visible { display: flex; }
+.topbar-controls { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.seg-group { display: inline-flex; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); overflow: hidden; background: var(--bg-subtle); }
+.seg-btn { border: none; background: transparent; color: var(--text-muted); padding: 6px 10px; font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.seg-btn.active { background: var(--accent); color: #fff; }
+.progress-chip { display: flex; align-items: center; gap: 8px; padding: 4px 10px; border-radius: 999px; background: var(--bg-subtle); border: 1px solid var(--border); font-size: 12.5px; font-weight: 600; white-space: nowrap; }
+.progress-track { width: 54px; height: 7px; background: var(--border-strong); border-radius: 99px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), #0F766E); transition: width 0.25s ease; }
+
+.app-layout { display: flex; min-height: calc(100vh - var(--topbar-h)); }
+.sidebar { width: var(--sidebar-w); flex-shrink: 0; background: var(--bg-sidebar); border-right: 1px solid var(--border); position: sticky; top: var(--topbar-h); height: calc(100vh - var(--topbar-h)); overflow-y: auto; padding: 14px 10px 44px 10px; }
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 99px; }
+.nav-unit { margin-bottom: 8px; }
+.nav-unit-btn { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border: none; border-radius: var(--radius-sm); background: transparent; color: var(--text-main); font-size: 13px; font-weight: 700; text-align: left; cursor: pointer; }
+.nav-unit-btn:hover { background: var(--bg-subtle); }
+.nav-unit-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.nav-unit-title { flex: 1; display: flex; align-items: center; gap: 7px; line-height: 1.3; }
+.nav-chevron { font-size: 11px; color: var(--text-faint); transition: transform 0.2s; }
+.nav-unit.collapsed .nav-chevron { transform: rotate(-90deg); }
+.nav-unit.collapsed .nav-links { display: none; }
+.nav-links { list-style: none; padding: 2px 0 4px 12px; margin: 0 0 0 14px; border-left: 2px solid var(--border); }
+.nav-link { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 5px 9px; margin: 2px 0; border-radius: var(--radius-sm); color: var(--text-muted); font-size: 12.6px; line-height: 1.35; text-decoration: none; }
+.nav-link:hover { background: var(--bg-subtle); color: var(--text-main); text-decoration: none; }
+.nav-link.active { background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+.nav-done-mark { color: #10B981; font-weight: 800; font-size: 12px; opacity: 0; }
+.nav-link.mastered .nav-done-mark { opacity: 1; }
+.main-content { flex: 1; min-width: 0; padding: 26px 32px 80px 32px; }
+.content-inner { max-width: 960px; margin: 0 auto; }
+
+.hero-card { background: linear-gradient(135deg, #1E1B4B 0%, var(--accent) 55%, #0F766E 100%); color: #fff; border-radius: var(--radius-lg); padding: 28px 32px; margin-bottom: 26px; box-shadow: var(--shadow-lg); }
+.hero-card h1 { color: #fff; font-size: 25px; margin-bottom: 8px; letter-spacing: -0.3px; }
+.hero-sub { color: rgba(255,255,255,0.92); font-size: 14.8px; max-width: 820px; margin-bottom: 16px; }
+.hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.hero-pill { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.28); color: #fff; padding: 4px 11px; border-radius: 999px; font-size: 12.5px; font-weight: 600; }
+.unit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+.unit-tile { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.24); border-radius: var(--radius-md); padding: 12px 14px; color: #fff; text-decoration: none; display: block; transition: transform 0.15s, background 0.15s; }
+.unit-tile:hover { transform: translateY(-2px); background: rgba(255,255,255,0.22); text-decoration: none; }
+.unit-tile-num { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.7px; opacity: 0.85; font-weight: 700; }
+.unit-tile-title { font-size: 14.5px; font-weight: 700; margin: 3px 0; }
+.unit-tile-meta { font-size: 12px; opacity: 0.88; }
+
+.topic-section { background: var(--bg-surface); border: 1px solid var(--border); border-top: 4px solid var(--accent); border-radius: var(--radius-md); padding: 24px 26px; margin-bottom: 24px; box-shadow: var(--shadow-sm); }
+.topic-section.search-dim { display: none; }
+.section-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 2px solid var(--border); }
+.section-title-group h3 { font-size: 19.5px; margin-bottom: 4px; }
+.section-en-sub { font-size: 13.5px; color: var(--text-faint); font-weight: 600; }
+.tier-row { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 7px; }
+.badge-p1, .badge-p2 { display: inline-block; font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.badge-p1 { background: var(--p1-bg); color: var(--p1-text); border: 1px solid var(--p1-border); }
+.badge-p2 { background: var(--p2-bg); color: var(--p2-text); border: 1px solid var(--p2-border); }
+.master-btn { flex-shrink: 0; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-muted); font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.master-btn:hover { border-color: #10B981; color: #10B981; }
+.master-btn.is-mastered { background: var(--ok-bg); color: var(--ok-text); border-color: var(--ok-border); }
+.subtopic { margin-bottom: 20px; }
+.subtopic:last-of-type { margin-bottom: 12px; }
+.subtopic h4 { font-size: 16px; color: var(--accent); margin: 0 0 10px 0; padding-bottom: 4px; border-bottom: 1px dashed var(--border); display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+
+.worked-example { background: var(--example-bg); border: 1px solid var(--border); border-left: 4px solid var(--example-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; }
+.worked-title { font-weight: 800; font-size: 14px; color: var(--example-border); margin-bottom: 6px; }
+.callout { border-radius: var(--radius-sm); padding: 13px 16px; margin: 14px 0; border-left: 4px solid var(--border-strong); font-size: 14.5px; }
+.callout-title { font-weight: 800; font-size: 13.5px; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+.deep-dive { background: var(--deep-bg); border-left-color: var(--deep-border); }
+.deep-dive .callout-title { color: var(--deep-border); }
+.examiner-tip { background: var(--tip-bg); border-left-color: var(--tip-border); }
+.examiner-tip .callout-title { color: var(--tip-border); }
+.common-mistake { background: var(--mistake-bg); border-left-color: var(--mistake-border); }
+.common-mistake .callout-title { color: var(--mistake-border); }
+
+.table-wrap { width: 100%; overflow-x: auto; margin: 14px 0; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+table.am-table { width: 100%; border-collapse: collapse; font-size: 13.8px; text-align: left; }
+table.am-table th { background: var(--bg-subtle); color: var(--text-main); font-weight: 700; padding: 9px 12px; border-bottom: 2px solid var(--border-strong); white-space: nowrap; }
+table.am-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.am-table tr:last-child td { border-bottom: none; }
+table.am-table tbody tr:hover { background: var(--bg-subtle); }
+
+.svg-figure { background: var(--svg-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px; margin: 16px 0; text-align: center; break-inside: avoid; }
+.svg-figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.svg-caption { margin-top: 8px; font-size: 13px; color: var(--text-faint); font-weight: 600; }
+
+/* Interactive Labs */
+.lab-box { background: var(--bg-subtle); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px; margin: 18px 0; break-inside: avoid; }
+.lab-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+.lab-title { font-size: 15.5px; font-weight: 800; color: var(--accent); display: flex; align-items: center; gap: 7px; }
+.lab-panel { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; }
+.lab-controls { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-bottom: 12px; align-items: center; }
+.lab-controls label { font-size: 13px; font-weight: 700; color: var(--text-muted); display: inline-flex; align-items: center; gap: 6px; }
+.lab-controls input[type="number"], .lab-controls select { padding: 5px 8px; border-radius: 6px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-main); font-size: 13.2px; font-weight: 700; }
+.lab-controls input[type="number"] { width: 68px; text-align: center; }
+.lab-controls input[type="range"] { width: 120px; accent-color: var(--accent); }
+.lab-grid-2col { display: grid; grid-template-columns: 1.12fr 1fr; gap: 14px; align-items: start; }
+@media (max-width: 820px) { .lab-grid-2col { grid-template-columns: 1fr; } }
+.tab-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.tab-btn { border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-muted); padding: 5px 10px; border-radius: 6px; font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.tab-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.lab-readout { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; font-size: 13.2px; font-weight: 600; }
+.readout-pill { background: var(--bg-page); border: 1px solid var(--border-strong); padding: 7px 10px; border-radius: 6px; width: 100%; line-height: 1.5; }
+
+/* Practice Questions & Concepts */
+.practice-block { margin-top: 18px; padding-top: 14px; border-top: 2px dashed var(--border-strong); }
+.practice-heading { font-size: 16px; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.exam-q { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 14px; break-inside: avoid; }
+.exam-q-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; font-size: 12.5px; }
+.q-tag { font-weight: 800; color: var(--accent); background: var(--accent-soft); padding: 2px 8px; border-radius: 5px; }
+.q-marks { font-weight: 700; color: var(--text-faint); }
+.q-stem-en { font-size: 14.8px; font-weight: 600; color: var(--text-main); margin-bottom: 6px; }
+.q-stem-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 12px; }
+.mcq-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin-bottom: 10px; }
+.mcq-opt { text-align: left; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 13.8px; cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.mcq-opt:hover { border-color: var(--accent); background: var(--bg-subtle); }
+.mcq-opt.correct { background: var(--ok-bg); border-color: var(--ok-border); color: var(--ok-text); font-weight: 700; }
+.mcq-opt.wrong { background: var(--err-bg); border-color: var(--err-border); color: var(--err-text); }
+.mcq-feedback { display: none; font-size: 13.5px; padding: 10px 12px; border-radius: var(--radius-sm); margin-top: 8px; }
+.mcq-feedback.visible { display: block; }
+.mcq-feedback.ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.mcq-feedback.err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+details.ms-details { margin-top: 10px; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 12px; }
+details.ms-details summary { cursor: pointer; font-weight: 700; font-size: 13.5px; color: var(--accent); user-select: none; }
+.ms-body { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 13.8px; }
+.ms-mark { display: inline-block; font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--p1-text); background: var(--p1-bg); padding: 1px 5px; border-radius: 4px; margin-right: 4px; }
+.ms-cn { color: var(--text-muted); margin-top: 4px; }
+
+.concept-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 14px; margin-bottom: 18px; }
+.concept-filter-group { display: flex; flex-wrap: wrap; gap: 6px; }
+.concept-actions { display: flex; align-items: center; gap: 10px; }
+.concept-count-pill { font-size: 12.5px; font-weight: 700; color: var(--text-muted); }
+.concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 14px; }
+.concept-card { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; gap: 8px; break-inside: avoid; }
+.concept-card:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
+.concept-card.concept-hidden { display: none !important; }
+.cq-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.cq-en { font-weight: 700; font-size: 14.5px; color: var(--text-main); line-height: 1.45; }
+.cq-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 2px; }
+.cq-answer { position: relative; margin-top: auto; background: var(--bg-surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius-sm); padding: 11px 13px; font-size: 13.8px; line-height: 1.6; }
+.kw { color: var(--accent); background: var(--accent-soft); padding: 0 4px; border-radius: 3px; font-weight: 700; }
+.cq-mask-hint { display: none; }
+.concept-card.masked .cq-answer { cursor: pointer; }
+.concept-card.masked .cq-answer-inner { filter: blur(7px); opacity: 0.22; user-select: none; pointer-events: none; transition: filter 0.2s, opacity 0.2s; }
+.concept-card.masked .cq-mask-hint { display: flex; align-items: center; justify-content: center; position: absolute; inset: 0; font-size: 13.5px; font-weight: 700; color: var(--accent); background: rgba(255,255,255,0.25); border-radius: var(--radius-sm); }
+[data-theme="dark"] .concept-card.masked .cq-mask-hint { background: rgba(15,23,42,0.35); }
+
+/* Chapter Pager & Hub Grid */
+.chapter-pager { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 28px; padding: 16px 20px; background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); }
+.pager-btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: var(--radius-sm); background: var(--bg-subtle); border: 1px solid var(--border-strong); color: var(--text-main); font-size: 13.5px; font-weight: 700; text-decoration: none; }
+.pager-btn:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); text-decoration: none; }
+.pager-btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.pager-btn.primary:hover { background: var(--accent-hover); color: #fff; }
+
+.hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px; margin-top: 18px; }
+.hub-card { display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-surface); border: 1px solid var(--border-strong); border-top: 5px solid var(--card-color, var(--accent)); border-radius: var(--radius-md); padding: 18px 18px 14px 18px; color: var(--text-main); text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; box-shadow: var(--shadow-sm); }
+.hub-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--card-color, var(--accent)); text-decoration: none; }
+.hub-card-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+.hub-badge { font-size: 11.5px; font-weight: 800; color: #fff; background: var(--card-color, var(--accent)); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill { font-size: 12px; font-weight: 700; color: var(--text-muted); background: var(--bg-subtle); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill.done { background: var(--ok-bg); color: var(--ok-text); }
+.hub-title { font-size: 16.5px; font-weight: 800; margin-bottom: 4px; }
+.hub-en { font-size: 12.8px; color: var(--text-faint); font-weight: 600; margin-bottom: 8px; }
+.hub-sub { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; }
+.hub-foot { font-size: 13px; font-weight: 700; color: var(--card-color, var(--accent)); display: flex; align-items: center; justify-content: space-between; }
+
+.back-top-btn { position: fixed; right: 22px; bottom: 22px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); box-shadow: var(--shadow-md); cursor: pointer; display: none; align-items: center; justify-content: center; font-size: 17px; font-weight: 800; z-index: 80; }
+.back-top-btn.visible { display: flex; }
+
+@media (max-width: 1200px) {
+  .brand-title, .btn-label { display: none; }
+  .seg-btn { padding: 6px 8px; }
+}
+@media (max-width: 980px) {
+  .menu-toggle { display: inline-flex; }
+  .sidebar { position: fixed; left: 0; top: var(--topbar-h); z-index: 95; transform: translateX(-100%); transition: transform 0.22s ease; box-shadow: var(--shadow-lg); }
+  .sidebar.open { transform: translateX(0); }
+  .main-content { padding: 18px 14px 64px 14px; }
+  .topic-section { padding: 18px 16px; }
+  .progress-chip { display: none; }
+  .search-wrap { min-width: 130px; }
+}
+@media (max-width: 640px) {
+  .topbar { padding: 0 10px; gap: 6px; }
+  .search-wrap { max-width: none; }
+  .concept-grid, .hub-grid { grid-template-columns: 1fr; }
+}
+@media print {
+  .topbar, .sidebar, .search-results-bar, .back-top-btn, .master-btn, .lab-controls button, .concept-toolbar, .cq-mask-hint, .chapter-pager { display: none !important; }
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  .main-content { padding: 0 !important; }
+  .content-inner { max-width: 100% !important; }
+  .topic-section, .exam-q, .callout, .worked-example, .svg-figure, .concept-card { box-shadow: none !important; break-inside: avoid; border-color: #CBD5E1 !important; }
+  details.ms-details, details.ms-details .ms-body, .mcq-feedback { display: block !important; }
+  .concept-card.masked .cq-answer-inner { filter: none !important; opacity: 1 !important; }
+}
+
+  </style>
+</head>
+<body data-chapter-code="Ch03">
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="展开目录">☰ 目录</button>
+      <a class="icon-btn" href="index.html" title="返回 16 章总目录"><span>🏠</span><span class="btn-label">总目录</span></a>
+      <div class="brand-pill">
+        <span class="brand-code">Ch03</span>
+        <span class="brand-title">Chapter 3: Factors and polynomials</span>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="search" id="searchInput" class="search-input" placeholder="搜索本章定理、例题、真题与概念..." autocomplete="off" />
+      <button type="button" class="search-clear" id="searchClear" title="清空搜索">✕</button>
+    </div>
+
+    <div class="topbar-controls">
+      <div class="seg-group" role="group" aria-label="视图筛选">
+        <button type="button" class="seg-btn active" data-view-mode="all">All</button>
+        <button type="button" class="seg-btn" data-view-mode="book">教材精讲</button>
+        <button type="button" class="seg-btn" data-view-mode="sme">SaveMyExams 真题</button>
+      </div>
+
+      <div class="progress-chip" title="本章小节与真题模块掌握进度">
+        <span id="progressText">0/0</span>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+
+      <button type="button" class="icon-btn" id="toggleAllMs" title="展开或收起全部解析"><span>📝</span><span class="btn-label">展开解析</span></button>
+      <button type="button" class="icon-btn" id="themeToggle" title="切换亮色/暗色主题"><span id="themeIcon">🌙</span><span class="btn-label">主题</span></button>
+      <button type="button" class="icon-btn" id="printBtn" title="打印或导出为 PDF"><span>🖨️</span><span class="btn-label">导出 PDF</span></button>
+    </div>
+  </header>
+
+  <div class="search-results-bar" id="searchBar">
+    <span id="searchSummary">找到 0 个匹配板块</span>
+    <button type="button" class="icon-btn" id="searchResetBtn">重置过滤</button>
+  </div>
+
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="本章知识点导航">
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #2563EB;"></span>Ch03 本章小节目录</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#sec-3-1"><span>3.1 多项式加减乘与恒等式比较 (Adding, Subtracting &amp; Multiplying Polynomials)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-3-2"><span>3.2 多项式除法：长除法与比较系数法 (Division of Polynomials)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-3-3"><span>3.3 因式定理 (The Factor Theorem)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-3-4"><span>3.4 三次式因式分解与三次方程求根 (Cubic Expressions &amp; Equations)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-3-5"><span>3.5 余数定理与重线性因式 (Remainder Theorem &amp; Repeated Factors)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-sme"><span>SaveMyExams 0606 真题与综合演练</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#app-concepts"><span>本章核心概念与证题句型直接默写库 (12题)</span><span class="nav-done-mark">✓</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #0F766E;"></span>全书 16 章快速切换</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="Ch01_Functions.html"><span>Ch01 · 函数、复合、绝对值与反函数</span></a></li>
+          <li><a class="nav-link" href="Ch02_Simultaneous_Quadratics.html"><span>Ch02 · 联立方程组与二次函数最值、不等式及判别式</span></a></li>
+          <li><a class="nav-link active" href="Ch03_Factors_Polynomials.html"><span>Ch03 · 多项式除法、因式定理与余数定理</span></a></li>
+          <li><a class="nav-link" href="Ch04_Equations_Inequalities_Graphs.html"><span>Ch04 · 绝对值不等式、三次图像与变元二次方程</span></a></li>
+          <li><a class="nav-link" href="Ch05_Logarithmic_Exponential.html"><span>Ch05 · 对数、指数方程、换底公式与图像</span></a></li>
+          <li><a class="nav-link" href="Ch06_Straight_Line_Graphs.html"><span>Ch06 · 直线几何、鞋带面积与线性化 (Linear Law)</span></a></li>
+          <li><a class="nav-link" href="Ch07_Circle_Geometry.html"><span>Ch07 · 圆的解析方程、切线法线与双圆位置</span></a></li>
+          <li><a class="nav-link" href="Ch08_Circular_Measure.html"><span>Ch08 · 弧度制、弧长与扇形弓形周长面积</span></a></li>
+          <li><a class="nav-link" href="Ch09_Trigonometry.html"><span>Ch09 · CAST 象限角、三角图像、方程与恒等式</span></a></li>
+          <li><a class="nav-link" href="Ch10_Permutations_Combinations.html"><span>Ch10 · 阶乘、约束排列 (nPr) 与分组组合 (nCr)</span></a></li>
+          <li><a class="nav-link" href="Ch11_Series.html"><span>Ch11 · 杨辉三角、二项式定理与 AP / GP / S∞</span></a></li>
+          <li><a class="nav-link" href="Ch12_Differentiation_1.html"><span>Ch12 · 幂函数求导、链乘商法则、切法线与极值应用</span></a></li>
+          <li><a class="nav-link" href="Ch13_Vectors.html"><span>Ch13 · 单位向量、位置向量几何比与匀速运动追及</span></a></li>
+          <li><a class="nav-link" href="Ch14_Differentiation_2.html"><span>Ch14 · 指数、对数与三角函数求导及其综合应用</span></a></li>
+          <li><a class="nav-link" href="Ch15_Integration.html"><span>Ch15 · 不定积分、逆微分技巧、定积分与曲边面积</span></a></li>
+          <li><a class="nav-link" href="Ch16_Kinematics.html"><span>Ch16 · 运动学微积分：s-v-a 互推、瞬间静止与总路程</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-inner">
+        <section class="hero-card" id="top">
+          <h1>Chapter 3: Factors and polynomials · 第 3 章 · 多项式除法、因式定理与余数定理</h1>
+          <p class="hero-sub">
+            完整覆盖 <strong>Sue Pemberton 第 3 版教材（2025–2027 新考纲 · Paper 1 禁用计算器 Non-Calculator）</strong>本章全部小节：<code>3.1 多项式加减乘 · 3.2 多项式长除与系数比较 · 3.3 因式定理 · 3.4 三次式分解与求根 · 3.5 余数定理</code>，并结合 SaveMyExams 0606 真题精讲、交互实验室与考前概念默写卡。
+          </p>
+          <div class="hero-badges">
+            <span class="hero-pill">📘 Sue Pemberton 3rd Ed. · 2025–2027</span>
+            <span class="hero-pill">🚫 Paper 1 无计算器精确解法</span>
+            <span class="hero-pill">🧪 本章专属交互动态实验室</span>
+            <a class="hero-pill" href="#sec-sme" style="text-decoration: none;">📝 直达 SaveMyExams 真题 →</a>
+            <a class="hero-pill" href="#app-concepts" style="text-decoration: none; background: rgba(255,255,255,0.24);">🧠 直达中英概念默写库 →</a>
+          </div>
+          <div class="unit-grid">
+            <a class="unit-tile" href="#sec-3-1">
+              <div class="unit-tile-num">Section 3-1</div>
+              <div class="unit-tile-title">3.1 多项式加减乘与恒等式比较 (Adding, Subtracting &amp; Multiplying Polynomials)</div>
+            </a>
+            <a class="unit-tile" href="#sec-3-2">
+              <div class="unit-tile-num">Section 3-2</div>
+              <div class="unit-tile-title">3.2 多项式除法：长除法与比较系数法 (Division of Polynomials)</div>
+            </a>
+            <a class="unit-tile" href="#sec-3-3">
+              <div class="unit-tile-num">Section 3-3</div>
+              <div class="unit-tile-title">3.3 因式定理 (The Factor Theorem)</div>
+            </a>
+            <a class="unit-tile" href="#sec-3-4">
+              <div class="unit-tile-num">Section 3-4</div>
+              <div class="unit-tile-title">3.4 三次式因式分解与三次方程求根 (Cubic Expressions &amp; Equations)</div>
+            </a>
+          </div>
+        </section>
+
+        <div id="emptySearchNotice" class="callout deep-dive" style="display: none;">
+          <div class="callout-title">🔍 未找到匹配内容</div>
+          <p style="margin-bottom: 0;">请尝试更换关键词，或点击右上角“重置过滤”恢复显示。</p>
+        </div>
+
+<!-- ==================== CHAPTER 3: FACTORS AND POLYNOMIALS ==================== -->
+<article class="topic-section book-section" id="sec-3-1">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>3.1 多项式加减乘与恒等式比较 (Adding, Subtracting &amp; Multiplying Polynomials)</h3>
+      <div class="section-en-sub">Degree of a Polynomial, Targeted Coefficient Extraction &amp; Polynomial Identities (≡)</div>
+      <div class="tier-row">
+        <span class="badge-p1">Paper 1 基础运算</span>
+        <span class="badge-p2">系数比较法底层原理</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-3-1">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>3.1.1 多项式的严格定义、次数与“定点抽项”乘法</h4>
+    <p>
+      <strong>多项式 (Polynomial)</strong> 是形如 <span class="math">P(x) = a<sub>n</sub>xⁿ + a<sub>n−1</sub>xⁿ⁻¹ + ... + a₁x + a₀</span>（<span class="math">a<sub>n</sub> ≠ 0</span>）的代数式，其中指数 <span class="math">n</span> 必须是<strong>非负整数 (0, 1, 2, 3, ...)</strong>。因此像 <span class="math"><span class="frac"><span class="num">2</span><span class="den">x</span></span> = 2x⁻¹</span> 或 <span class="math"><span class="sqrt">√<span class="sqrt-rad">x</span></span> = x<sup>1/2</sup></span> <strong>都不是多项式</strong>！
+    </p>
+    <div class="formula-card">
+      <div class="formula-main">
+        次数法则：deg(P · Q) = deg(P) + deg(Q) &nbsp;|&nbsp; 恒等号 (≡)：两个多项式恒等 ⇔ 所有同次幂系数一一相等
+      </div>
+      <p style="margin-bottom: 0;">
+        <strong>Paper 1 速算技巧（定点抽项）</strong>：当题目只问乘积中某一项（如 <span class="math">x²</span>）的系数时，<strong>不要全部展开</strong>，只把能凑出 <span class="math">x²</span> 的几对相乘相加即可！
+      </p>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">📘 例题 3.1 · 乘积定点抽项与多项式恒等式求参</div>
+      <p>
+        (a) Find the coefficient of <span class="math">x²</span> in the expansion of <span class="math">(2x² − 3x + 5)(x² + 4x − 1)</span>.<br>
+        (b) Given <span class="math">2x³ + px² + qx − 6 ≡ (x − 2)(2x² + 5x + r)</span> for all <span class="math">x</span>, find <span class="math">p, q</span> and <span class="math">r</span>.
+      </p>
+      <p style="margin-bottom: 0;">
+        <strong>解析 (Solution)：</strong><br>
+        (a) 只找乘积为 <span class="math">x²</span> 的配对：<br>
+        <span class="math">(2x²)(−1) + (−3x)(4x) + 5(x²) = (−2 − 12 + 5)x² = −9x²</span> ⇒ <span class="math">x²</span> 系数为 <strong><span class="math">−9</span></strong>。<br>
+        (b) 对比常数项：<span class="math">−6 = −2r ⇒ <strong>r = 3</strong></span>。<br>
+        对比 <span class="math">x²</span> 系数：<span class="math">p = 5 − 2(2) = <strong>1</strong></span>。<br>
+        对比 <span class="math">x</span> 系数：<span class="math">q = r − 2(5) = 3 − 10 = <strong>−7</strong></span>。
+      </p>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-3-2">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>3.2 多项式除法：长除法与比较系数法 (Division of Polynomials)</h3>
+      <div class="section-en-sub">Algebraic Long Division with 0x² Placeholders, Comparing Coefficients &amp; Quadratic Divisors</div>
+      <div class="tier-row">
+        <span class="badge-p1">Paper 1 必会基本功</span>
+        <span class="badge-p2">缺项补 0 铁律</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-3-2">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>3.2.1 多项式带余除法恒等式与两种等价解法</h4>
+    <div class="formula-card">
+      <div class="formula-main">
+        P(x) ≡ Divisor(x) · Quotient(x) + Remainder(x) &nbsp;&nbsp;（其中 deg(Remainder) &lt; deg(Divisor)）
+      </div>
+      <p style="margin-bottom: 0;">
+        • 除式是一次式 <span class="math">(ax + b)</span> ⇒ 余数是一个<strong>常数 <span class="math">R</span></strong>；<br>
+        • 除式是二次式 <span class="math">(ax² + bx + c)</span> ⇒ 余数是一次式 <strong><span class="math">px + q</span></strong>（最多一次！）。
+      </p>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">📘 例题 3.2A · 双法对比：除以一次式（注意缺项补 0x²！）</div>
+      <p>Divide <span class="math">2x³ − 3x + 5</span> by <span class="math">(x − 2)</span> to find the quotient and remainder.</p>
+      <p style="margin-bottom: 0;">
+        <strong>解法 1（待定系数比较法，Paper 1 最稳最快）：</strong><br>
+        设 <span class="math">2x³ + 0x² − 3x + 5 ≡ (x − 2)(ax² + bx + c) + R</span>：<br>
+        • 对比 <span class="math">x³</span>：<span class="math">a = 2</span>；<br>
+        • 对比 <span class="math">x²</span>：<span class="math">0 = b − 2a = b − 4 ⇒ b = 4</span>；<br>
+        • 对比 <span class="math">x¹</span>：<span class="math">−3 = c − 2b = c − 8 ⇒ c = 5</span>；<br>
+        • 对比常数：<span class="math">5 = −2c + R = −10 + R ⇒ R = 15</span>。<br>
+        <strong>解法 2（长除法验证）：</strong>按降幂写齐 <span class="math">2x³ + 0x² − 3x + 5</span>，逐列相减（详见图 3-1）。<br>
+        结论：商式 <strong>Quotient = <span class="math">2x² + 4x + 5</span></strong>，余数 <strong>Remainder = <span class="math">15</span></strong>。
+      </p>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">📘 例题 3.2B · 四次多项式除以二次多项式（产生一次余式！）</div>
+      <p>Find the quotient and remainder when <span class="math">x⁴ + 2x³ − 5x + 1</span> is divided by <span class="math">x² − x + 2</span>.</p>
+      <p style="margin-bottom: 0;">
+        <strong>解析 (Solution)：</strong><br>
+        设 <span class="math">x⁴ + 2x³ + 0x² − 5x + 1 ≡ (x² − x + 2)(ax² + bx + c) + (px + q)</span>。<br>
+        • <span class="math">x⁴</span>：<span class="math">a = 1</span>；<br>
+        • <span class="math">x³</span>：<span class="math">2 = b − a ⇒ b = 3</span>；<br>
+        • <span class="math">x²</span>：<span class="math">0 = c − b + 2a = c − 3 + 2 ⇒ c = 1</span>；<br>
+        • <span class="math">x¹</span>：<span class="math">−5 = −c + 2b + p = −1 + 6 + p ⇒ p = −10</span>；<br>
+        • 常数：<span class="math">1 = 2c + q = 2 + q ⇒ q = −1</span>。<br>
+        结果：<strong>Quotient = <span class="math">x² + 3x + 1</span></strong>，<strong>Remainder = <span class="math">−10x − 1</span></strong>。
+      </p>
+    </div>
+
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 255" width="740" height="255" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="多项式长除法缺项补零与待定系数比较法对照图">
+        <rect x="0" y="0" width="740" height="255" rx="10" fill="none" />
+        <!-- Left panel: Long Division -->
+        <rect x="14" y="10" width="356" height="235" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="192" y="31" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-ink)">方法一：长除法 (务必补全缺项 0x²!)</text>
+        <text x="174" y="55" font-size="12" font-weight="800" fill="var(--svg-teal)" font-family="Georgia, serif">2x² + 4x + 5</text>
+        <text x="278" y="55" font-size="10" font-weight="700" fill="var(--svg-teal)">← 商 Q(x)</text>
+        <line x1="126" y1="62" x2="314" y2="62" stroke="var(--svg-ink)" stroke-width="1.8" />
+        <line x1="126" y1="62" x2="126" y2="85" stroke="var(--svg-ink)" stroke-width="1.8" />
+        <text x="68" y="80" font-size="12" font-weight="700" fill="var(--svg-ink)" font-family="Georgia, serif">x − 2</text>
+        <text x="132" y="80" font-size="12" font-weight="700" fill="var(--svg-ink)" font-family="Georgia, serif">2x³ +</text>
+        <rect x="174" y="66" width="30" height="18" rx="4" fill="none" stroke="var(--svg-red)" stroke-width="1.4" />
+        <text x="189" y="80" text-anchor="middle" font-size="12" font-weight="800" fill="var(--svg-red)" font-family="Georgia, serif">0x²</text>
+        <text x="210" y="80" font-size="12" font-weight="700" fill="var(--svg-ink)" font-family="Georgia, serif">− 3x + 5</text>
+
+        <text x="128" y="103" font-size="11.5" fill="var(--svg-muted)" font-family="Georgia, serif">−(2x³ − 4x²)</text>
+        <line x1="130" y1="109" x2="232" y2="109" stroke="var(--svg-muted)" stroke-width="1.2" />
+        <text x="174" y="126" font-size="11.5" font-weight="700" fill="var(--svg-indigo)" font-family="Georgia, serif">4x² − 3x</text>
+        <text x="166" y="145" font-size="11.5" fill="var(--svg-muted)" font-family="Georgia, serif">−(4x² − 8x)</text>
+        <line x1="168" y1="151" x2="258" y2="151" stroke="var(--svg-muted)" stroke-width="1.2" />
+        <text x="208" y="168" font-size="11.5" font-weight="700" fill="var(--svg-indigo)" font-family="Georgia, serif">5x + 5</text>
+        <text x="200" y="187" font-size="11.5" fill="var(--svg-muted)" font-family="Georgia, serif">−(5x − 10)</text>
+        <line x1="202" y1="193" x2="294" y2="193" stroke="var(--svg-muted)" stroke-width="1.2" />
+        <text x="260" y="213" font-size="13" font-weight="800" fill="var(--svg-red)" font-family="Georgia, serif">15</text>
+        <text x="292" y="213" font-size="10" font-weight="700" fill="var(--svg-red)">← 余数 R</text>
+        <text x="192" y="233" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-red)">易错：0x² − (−4x²) = +4x²，减负得正！</text>
+
+        <!-- Right panel: Comparing Coefficients -->
+        <rect x="386" y="10" width="340" height="235" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="556" y="31" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-ink)">方法二：比较系数法 (Zero Sign Errors)</text>
+        <rect x="404" y="46" width="304" height="36" rx="6" fill="none" stroke="var(--svg-indigo)" stroke-width="1.5" />
+        <text x="556" y="69" text-anchor="middle" font-size="11.8" font-weight="700" fill="var(--svg-indigo)" font-family="Georgia, serif">2x³ + 0x² − 3x + 5 ≡ (x − 2)(ax² + bx + c) + R</text>
+        <text x="414" y="106" font-size="11.2" font-weight="700" fill="var(--svg-ink)">① x³ 项：2 = a</text>
+        <text x="560" y="106" font-size="11.2" font-weight="800" fill="var(--svg-teal)">⇒ a = 2</text>
+        <text x="414" y="132" font-size="11.2" font-weight="700" fill="var(--svg-ink)">② x² 项：0 = b − 2a</text>
+        <text x="560" y="132" font-size="11.2" font-weight="800" fill="var(--svg-teal)">⇒ b = 4</text>
+        <text x="414" y="158" font-size="11.2" font-weight="700" fill="var(--svg-ink)">③ x¹ 项：−3 = c − 2b</text>
+        <text x="560" y="158" font-size="11.2" font-weight="800" fill="var(--svg-teal)">⇒ c = 5</text>
+        <text x="414" y="184" font-size="11.2" font-weight="700" fill="var(--svg-ink)">④ 常数：5 = −2c + R</text>
+        <text x="560" y="184" font-size="11.2" font-weight="800" fill="var(--svg-red)">⇒ R = 15</text>
+        <rect x="404" y="200" width="304" height="34" rx="6" fill="none" stroke="var(--svg-amber)" stroke-width="1.4" stroke-dasharray="4,3" />
+        <text x="556" y="221" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-amber)">技巧：比较系数避开长除竖式符号减错，速度更快！</text>
+      </svg>
+      <div class="svg-caption">图 3-1 · 多项式长除法缺项补零与待定系数比较法分步对照</div>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-3-3">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>3.3 因式定理 (The Factor Theorem)</h3>
+      <div class="section-en-sub">Linear Factor (ax − b) ⇔ P(b/a) = 0, Finding Unknown Constants &amp; Rational Root Trials</div>
+      <div class="tier-row">
+        <span class="badge-p1">Paper 1 核心定理</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-3-3">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>3.3.1 因式定理通用版与无计算器快速试根策略</h4>
+    <div class="formula-card">
+      <div class="formula-main">
+        (x − a) 是 P(x) 的因式 ⇔ P(a) = 0 &nbsp;&nbsp;|&nbsp;&nbsp; 通用版：(ax − b) 是 P(x) 的因式 ⇔ P(<span class="frac"><span class="num">b</span><span class="den">a</span></span>) = 0
+      </div>
+      <p style="margin-bottom: 0;">
+        <strong>Paper 1 试根规律</strong>：对于整系数多项式 <span class="math">ax³ + bx² + cx + d</span>，有理根 <span class="math"><span class="frac"><span class="num">p</span><span class="den">q</span></span></span> 必满足：分子 <span class="math">p</span> 整除常数项 <span class="math">d</span>，分母 <span class="math">q</span> 整除首项系数 <span class="math">a</span>！考场优先试 <span class="math">x = ±1, ±2, ±3</span>，若首项不为 1 再试分数 <span class="math">±<span class="frac"><span class="num">1</span><span class="den">2</span></span>, ±<span class="frac"><span class="num">1</span><span class="den">3</span></span></span>。
+      </p>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">📘 例题 3.3 · 已知两个一次因式反求未知系数并彻底分解</div>
+      <p>
+        The polynomial <span class="math">P(x) = 2x³ + ax² + bx − 6</span> has factors <span class="math">(2x − 1)</span> and <span class="math">(x + 2)</span>. Find <span class="math">a</span> and <span class="math">b</span>, and hence factorise <span class="math">P(x)</span> completely.
+      </p>
+      <p style="margin-bottom: 0;">
+        <strong>解析 (Solution)：</strong><br>
+        令 <span class="math">2x − 1 = 0 ⇒ x = <span class="frac"><span class="num">1</span><span class="den">2</span></span></span>；令 <span class="math">x + 2 = 0 ⇒ x = −2</span>。<br>
+        由因式定理：<br>
+        • <span class="math">P(<span class="frac"><span class="num">1</span><span class="den">2</span></span>) = 2(<span class="frac"><span class="num">1</span><span class="den">8</span></span>) + a(<span class="frac"><span class="num">1</span><span class="den">4</span></span>) + b(<span class="frac"><span class="num">1</span><span class="den">2</span></span>) − 6 = 0</span>（两边乘 4）：<span class="math">1 + a + 2b − 24 = 0 ⇒ a + 2b = 23</span> ①<br>
+        • <span class="math">P(−2) = 2(−8) + 4a − 2b − 6 = 0 ⇒ 4a − 2b = 22</span> ②<br>
+        ① + ②：<span class="math">5a = 45 ⇒ <strong>a = 9</strong></span>；代回 ① 得 <span class="math">2b = 14 ⇒ <strong>b = 7</strong></span>。<br>
+        于是 <span class="math">P(x) = (2x − 1)(x + 2)(kx + c) = (2x² + 3x − 2)(kx + c)</span>。对比首项 <span class="math">2k = 2 ⇒ k = 1</span>，常数项 <span class="math">−2c = −6 ⇒ c = 3</span>。<br>
+        彻底分解：<strong><span class="math">P(x) = (2x − 1)(x + 2)(x + 3)</span></strong>。
+      </p>
+    </div>
+
+    <div class="callout common-mistake">
+      <div class="callout-title">⚠️ 易错警报：用 (2x + 3) 除却代入 x = +3/2 或 x = −3！</div>
+      <p style="margin-bottom: 0;">
+        找代入值永远先令除式等于 0 解方程：<span class="math">2x + 3 = 0 ⇒ x = −<span class="frac"><span class="num">3</span><span class="den">2</span></span></span>。正负号一旦错，满盘皆输！
+      </p>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-3-4">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>3.4 三次式因式分解与三次方程求根 (Cubic Expressions &amp; Equations)</h3>
+      <div class="section-en-sub">3-Step Cubic Solving Workflow, Exact Surd Roots &amp; Proving "Only One Real Root"</div>
+      <div class="tier-row">
+        <span class="badge-p1">Paper 1 必考题型</span>
+        <span class="badge-p2">二次因式判别式判定实根数</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-3-4">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>3.4.1 三次方程求解三步走与非有理根处理</h4>
+    <ol>
+      <li><strong>试根定一因式</strong>：代入简单整数/分数找到一个 <span class="math">P(<span class="frac"><span class="num">b</span><span class="den">a</span></span>) = 0</span>，写出一次因式 <span class="math">(ax − b)</span>；</li>
+      <li><strong>降次为二次</strong>：用比较系数法或长除法写出 <span class="math">P(x) = (ax − b)(Ax² + Bx + C)</span>；</li>
+      <li><strong>处理二次因式 <span class="math">Ax² + Bx + C = 0</span></strong>：
+        <br>• 若 <span class="math">Δ = B² − 4AC</span> 为完全平方数 ⇒ 拆为 3 个一次因式；
+        <br>• 若 <span class="math">Δ &gt; 0</span> 但非完全平方数 ⇒ 用求根公式保留最简根式（Paper 1）；
+        <br>• 若 <span class="math">Δ &lt; 0</span> ⇒ 明确写明 <span class="math">B² − 4AC &lt; 0</span>，证明二次因式无实根，从而原三次方程<strong>仅有一个实根</strong>！</li>
+    </ol>
+
+    <div class="worked-example">
+      <div class="worked-title">📘 例题 3.4 · 含三个有理根、含根式根与“仅有一实根”三类母题</div>
+      <p>
+        (a) Solve <span class="math">2x³ − 3x² − 11x + 6 = 0</span>.<br>
+        (b) Solve <span class="math">x³ − 4x² + 2x + 4 = 0</span>, giving exact answers.<br>
+        (c) Show that <span class="math">x³ − 2x² + 3x − 6 = 0</span> has only one real root.
+      </p>
+      <p style="margin-bottom: 0;">
+        <strong>解析 (Solution)：</strong><br>
+        (a) 试根 <span class="math">x = 3</span>：<span class="math">2(27) − 3(9) − 33 + 6 = 54 − 27 − 33 + 6 = 0 ⇒ (x − 3)</span> 是因式。<br>
+        比较系数得：<span class="math">(x − 3)(2x² + 3x − 2) = 0 ⇒ (x − 3)(2x − 1)(x + 2) = 0</span>。<br>
+        三根为：<strong><span class="math">x = −2, <span class="frac"><span class="num">1</span><span class="den">2</span></span>, 3</span></strong>。<br>
+        (b) 试根 <span class="math">x = 2</span>：<span class="math">8 − 16 + 4 + 4 = 0 ⇒ (x − 2)</span> 是因式。<br>
+        分解：<span class="math">(x − 2)(x² − 2x − 2) = 0</span>。<br>
+        二次式用求根公式：<span class="math">x = <span class="frac"><span class="num">2 ± <span class="sqrt">√<span class="sqrt-rad">4 + 8</span></span></span><span class="den">2</span></span> = 1 ± <span class="sqrt">√<span class="sqrt-rad">3</span></span></span>。<br>
+        全部实根：<strong><span class="math">x = 2, 1 + <span class="sqrt">√<span class="sqrt-rad">3</span></span>, 1 − <span class="sqrt">√<span class="sqrt-rad">3</span></span></span></strong>。<br>
+        (c) 分组或试根得 <span class="math">(x − 2)(x² + 3) = 0</span>。对于 <span class="math">x² + 3 = 0</span>，判别式 <span class="math">Δ = 0² − 4(1)(3) = −12 &lt; 0</span>（且 <span class="math">x² ≥ 0 ⇒ x² + 3 ≥ 3 &gt; 0</span>），无实根。因此 <strong><span class="math">x = 2</span> 是唯一实根</strong>。
+      </p>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-3-5">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>3.5 余数定理与重线性因式 (Remainder Theorem &amp; Repeated Factors)</h3>
+      <div class="section-en-sub">Remainder P(b/a), Quadratic Divisor Remainder Ax + B &amp; Repeated Factor (x − a)²</div>
+      <div class="tier-row">
+        <span class="badge-p1">Paper 1 压轴高频</span>
+        <span class="badge-p2">交互实验室在本节</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-3-5">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>3.5.1 余数定理、二次除式余式与重因式 <span class="math">(x − a)²</span> 的两种处理方法</h4>
+    <div class="formula-card">
+      <div class="formula-main">
+        1. 线性余数：P(x) 除以 (ax − b) 的余数 R = P(<span class="frac"><span class="num">b</span><span class="den">a</span></span>)<br>
+        2. 二次除式余数：P(x) ≡ (x − α)(x − β)Q(x) + Ax + B ⇒ 代入 x = α, β 解联立方程求 A, B
+      </div>
+      <p style="margin-bottom: 0;">
+        <strong>3. 重线性因式 (Repeated Linear Factor) <span class="math">(x − a)²</span></strong>：<br>
+        • <strong>系数比较法（Ch 3 首选）</strong>：直接设 <span class="math">P(x) = (x − a)²(px + q)</span> 展开对比系数；或先用 <span class="math">P(a) = 0</span> 求出商式 <span class="math">Q(x)</span>，再用一次 <strong><span class="math">Q(a) = 0</span></strong>！<br>
+        • <strong>微积分拓展（学完 Ch 12 后可秒杀）</strong>：<span class="math">(x − a)²</span> 是因式 ⇔ <span class="math">P(a) = 0</span> 且一阶导数 <span class="math">P'(a) = 0</span>！
+      </p>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">📘 例题 3.5A · 除以二次式 (x − 1)(x + 2) 求一次余式参数</div>
+      <p>When <span class="math">P(x) = x⁴ + ax² + bx + 3</span> is divided by <span class="math">(x − 1)(x + 2)</span>, the remainder is <span class="math">2x + 5</span>. Find <span class="math">a</span> and <span class="math">b</span>.</p>
+      <p style="margin-bottom: 0;">
+        <strong>解析 (Solution)：</strong><br>
+        写出除法恒等式：<span class="math">x⁴ + ax² + bx + 3 ≡ (x − 1)(x + 2)Q(x) + (2x + 5)</span>。<br>
+        无需知道商式 <span class="math">Q(x)</span>，直接取使除式归零的 <span class="math">x = 1</span> 和 <span class="math">x = −2</span>：<br>
+        • <span class="math">x = 1</span>：<span class="math">1 + a + b + 3 = 2(1) + 5 ⇒ a + b = 3</span> ①<br>
+        • <span class="math">x = −2</span>：<span class="math">16 + 4a − 2b + 3 = 2(−2) + 5 ⇒ 4a − 2b = −18 ⇒ 2a − b = −9</span> ②<br>
+        ① + ②：<span class="math">3a = −6 ⇒ <strong>a = −2</strong></span>，代回 ① 得 <strong><span class="math">b = 5</span></strong>。
+      </p>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">📘 例题 3.5B · 含重因式 (x − 2)² 的三次多项式待定系数</div>
+      <p>Given that <span class="math">(x − 2)²</span> is a factor of <span class="math">P(x) = x³ + px² + qx + 12</span>, find <span class="math">p</span> and <span class="math">q</span>.</p>
+      <p style="margin-bottom: 0;">
+        <strong>解析 (Solution)：</strong><br>
+        设 <span class="math">x³ + px² + qx + 12 ≡ (x − 2)²(x + c) = (x² − 4x + 4)(x + c)</span>。<br>
+        展开右边：<span class="math">x³ + (c − 4)x² + (4 − 4c)x + 4c</span>。<br>
+        对比常数项：<span class="math">4c = 12 ⇒ c = 3</span>。<br>
+        从而：<span class="math"><strong>p</strong> = c − 4 = 3 − 4 = <strong>−1</strong></span>；<span class="math"><strong>q</strong> = 4 − 4(3) = <strong>−8</strong></span>。
+      </p>
+    </div>
+
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 250" width="740" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="因式定理、余数定理、二次除式余式与重因式决策图">
+        <rect x="0" y="0" width="740" height="250" rx="10" fill="none" />
+        <text x="370" y="30" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-ink)">Ch 3 四大核心定理考场决策树 (Remainder &amp; Factor Toolkit)</text>
+        <!-- Box 1 -->
+        <rect x="16" y="48" width="166" height="186" rx="8" fill="none" stroke="var(--svg-blue)" stroke-width="1.8" />
+        <text x="99" y="72" text-anchor="middle" font-size="11.8" font-weight="800" fill="var(--svg-blue)">1. 余数定理</text>
+        <text x="99" y="92" text-anchor="middle" font-size="10.2" fill="var(--svg-muted)">Divided by (ax − b)</text>
+        <line x1="30" y1="104" x2="168" y2="104" stroke="var(--svg-grid)" stroke-width="1" />
+        <text x="99" y="130" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-ink)" font-family="Georgia, serif">R = P(b/a)</text>
+        <text x="99" y="156" text-anchor="middle" font-size="10" fill="var(--svg-ink)">只需知道余数时</text>
+        <text x="99" y="174" text-anchor="middle" font-size="10" fill="var(--svg-ink)">直接代入 x = b/a</text>
+        <text x="99" y="192" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-blue)">不用做长除法！</text>
+
+        <!-- Box 2 -->
+        <rect x="196" y="48" width="166" height="186" rx="8" fill="none" stroke="var(--svg-teal)" stroke-width="1.8" />
+        <text x="279" y="72" text-anchor="middle" font-size="11.8" font-weight="800" fill="var(--svg-teal)">2. 因式定理</text>
+        <text x="279" y="92" text-anchor="middle" font-size="10.2" fill="var(--svg-muted)">(ax − b) is a factor</text>
+        <line x1="210" y1="104" x2="348" y2="104" stroke="var(--svg-grid)" stroke-width="1" />
+        <text x="279" y="130" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-ink)" font-family="Georgia, serif">P(b/a) = 0</text>
+        <text x="279" y="156" text-anchor="middle" font-size="10" fill="var(--svg-ink)">余数为 0 的特例</text>
+        <text x="279" y="174" text-anchor="middle" font-size="10" fill="var(--svg-ink)">试根后再除得二次式</text>
+        <text x="279" y="192" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-teal)">检验 Δ 判实根个数</text>
+
+        <!-- Box 3 -->
+        <rect x="376" y="48" width="170" height="186" rx="8" fill="none" stroke="var(--svg-indigo)" stroke-width="1.8" />
+        <text x="461" y="72" text-anchor="middle" font-size="11.8" font-weight="800" fill="var(--svg-indigo)">3. 二次除式余式</text>
+        <text x="461" y="92" text-anchor="middle" font-size="10.2" fill="var(--svg-muted)">Divided by (x−α)(x−β)</text>
+        <line x1="390" y1="104" x2="532" y2="104" stroke="var(--svg-grid)" stroke-width="1" />
+        <text x="461" y="128" text-anchor="middle" font-size="11" font-weight="800" fill="var(--svg-ink)" font-family="Georgia, serif">R(x) = Ax + B</text>
+        <text x="461" y="154" text-anchor="middle" font-size="10" fill="var(--svg-ink)">写出恒等式后代两根：</text>
+        <text x="461" y="173" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-indigo)">P(α) = Aα + B</text>
+        <text x="461" y="191" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-indigo)">P(β) = Aβ + B</text>
+
+        <!-- Box 4 -->
+        <rect x="560" y="48" width="166" height="186" rx="8" fill="none" stroke="var(--svg-amber)" stroke-width="1.8" />
+        <text x="643" y="72" text-anchor="middle" font-size="11.8" font-weight="800" fill="var(--svg-amber)">4. 重线性因式</text>
+        <text x="643" y="92" text-anchor="middle" font-size="10.2" fill="var(--svg-muted)">(x − a)² is a factor</text>
+        <line x1="574" y1="104" x2="712" y2="104" stroke="var(--svg-grid)" stroke-width="1" />
+        <text x="643" y="128" text-anchor="middle" font-size="10.8" font-weight="800" fill="var(--svg-ink)" font-family="Georgia, serif">(x − a)²(px + q)</text>
+        <text x="643" y="154" text-anchor="middle" font-size="10" fill="var(--svg-ink)">法① 展开对比系数</text>
+        <text x="643" y="173" text-anchor="middle" font-size="10" fill="var(--svg-ink)">法② P(a)=0 且商 Q(a)=0</text>
+        <text x="643" y="192" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-amber)">(学求导后可用 P'(a)=0)</text>
+      </svg>
+      <div class="svg-caption">图 3-2 · Ch 3 余数定理、因式定理、二次除式与重因式四大题型解题地图</div>
+    </div>
+
+    <div class="lab-box" data-lab-type="ch03"></div>
+  </div>
+</article>
+
+<!-- ==================== SAVEMAXAMS PRACTICE CH03 ==================== -->
+<article class="topic-section sme-section" id="sec-sme">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>SaveMyExams 0606 真题与综合演练</h3>
+      <div class="section-en-sub">4 Speed MCQs + 4 Multi-Part Non-Calculator Exam Problems with Mark Schemes</div>
+      <div class="tier-row">
+        <span class="badge-p1">Paper 1 多项式精确演草</span>
+        <span class="badge-p2">含完整评分细则 M1/A1/B1</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-sme">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>Section A · 高频易错选择题 (4 题)</h4>
+
+    <div class="exam-q" data-mcq-answer="D">
+      <div class="exam-q-head"><span class="q-tag">Ch03 MCQ 1 · 非首一一次余数定理</span><span class="q-marks">[2 marks]</span></div>
+      <div class="q-stem-en">When <span class="math">P(x) = 2x³ − 5x² + ax − 3</span> is divided by <span class="math">(2x − 1)</span>, the remainder is <span class="math">−2</span>. Find <span class="math">a</span>.</div>
+      <div class="q-stem-cn">利用余数定理求含参三次多项式的系数 <span class="math">a</span>。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><span class="math">a = −4</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><span class="math">a = 2</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><span class="math">a = 8</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><span class="math">a = 4</span></span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！令 2x − 1 = 0 得 x = 1/2，代入 P(1/2) = 1/4 − 5/4 + a/2 − 3 = −4 + a/2 = −2 ⇒ a = 4！" data-err="❌ 注意代入 x = 1/2（不是 x = 1 或 x = −1/2）：2(1/8) − 5(1/4) + a(1/2) − 3 = −2 ⇒ a/2 = 2 ⇒ a = 4。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head"><span class="q-tag">Ch03 MCQ 2 · 缺项多项式除法</span><span class="q-marks">[2 marks]</span></div>
+      <div class="q-stem-en">Find the quotient and remainder when <span class="math">x³ − 4x + 7</span> is divided by <span class="math">(x + 2)</span>.</div>
+      <div class="q-stem-cn">多项式 <span class="math">x³ − 4x + 7</span> 缺少 <span class="math">x²</span> 项，求除以 <span class="math">(x + 2)</span> 的商与余数。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>Quotient <span class="math">x² − 2x − 8</span>, Remainder <span class="math">23</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>Quotient <span class="math">x² − 2x</span>, Remainder <span class="math">7</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>Quotient <span class="math">x² + 2x</span>, Remainder <span class="math">7</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>Quotient <span class="math">x² − 6</span>, Remainder <span class="math">19</span></span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！(x + 2)(x² − 2x) + 7 = x³ − 4x + 7，余数用 P(−2) = −8 + 8 + 7 = 7 秒验！" data-err="❌ 别漏写缺项 0x²！0x² − 2x² = −2x² ⇒ 商的第二项是 −2x，接着 −4x − (−4x) = 0，故常数商为 0，余数为 7！"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="C">
+      <div class="exam-q-head"><span class="q-tag">Ch03 MCQ 3 · 重线性因式求双参</span><span class="q-marks">[2 marks]</span></div>
+      <div class="q-stem-en"><span class="math">(x − 1)²</span> is a factor of <span class="math">x³ + px² + qx − 3</span>. Find <span class="math">p</span> and <span class="math">q</span>.</div>
+      <div class="q-stem-cn">已知 <span class="math">(x − 1)²</span> 为三次式因式，求常数 <span class="math">p, q</span>。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><span class="math">p = 5, q = −7</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><span class="math">p = −1, q = 3</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><span class="math">p = −5, q = 7</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><span class="math">p = 1, q = 1</span></span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！设 (x − 1)²(x + c) = (x² − 2x + 1)(x + c)，对比常数 c = −3，展开得 (x² − 2x + 1)(x − 3) = x³ − 5x² + 7x − 3！" data-err="❌ 设第三个因式为 (x + c)，由常数项 1 × c = −3 得 c = −3，再展开 (x² − 2x + 1)(x − 3) 即可！"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="A">
+      <div class="exam-q-head"><span class="q-tag">Ch03 MCQ 4 · 唯一实根判定</span><span class="q-marks">[2 marks]</span></div>
+      <div class="q-stem-en">Which cubic equation has <strong>only one real root</strong>?</div>
+      <div class="q-stem-cn">以下哪个三次方程有且仅有一个实数根？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><span class="math">x³ − 1 = 0</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><span class="math">x³ − x = 0</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><span class="math">(x − 1)(x² − 2) = 0</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><span class="math">(x − 1)²(x + 2) = 0</span></span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！x³ − 1 = (x − 1)(x² + x + 1) = 0，其中二次因式判别式 Δ = 1 − 4 = −3 < 0 无实根，故仅有 x = 1 一个实根！" data-err="❌ B 有 0, ±1 三根；C 有 1, ±√2 三根；D 有重根 1 与 −2 两相异实根；只有 A 分解出的 x² + x + 1 判别式为负！"></div>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>Section B · SaveMyExams 0606 多步结构化大题 (4 题)</h4>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">SME 1 · 因式与余数定理联立求参 + 彻底分解</span><span class="q-marks">[8 marks]</span></div>
+      <div class="q-stem-en">
+        Let <span class="math">P(x) = 2x³ + ax² + bx + 6</span>. Given that <span class="math">(x − 2)</span> is a factor of <span class="math">P(x)</span> and that the remainder when <span class="math">P(x)</span> is divided by <span class="math">(x + 1)</span> is <span class="math">18</span>:<br>
+        (a) Find the values of <span class="math">a</span> and <span class="math">b</span>. [4]<br>
+        (b) Factorise <span class="math">P(x)</span> completely, and hence solve <span class="math">P(x) = 0</span>. [4]
+      </div>
+      <div class="q-stem-cn">无计算器：联立求参数后再做三次因式分解与求解。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 8 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">M1</span> (a) <span class="math">P(2) = 16 + 4a + 2b + 6 = 0 ⇒ 2a + b = −11</span>.<br>
+          <span class="ms-mark">M1</span> <span class="math">P(−1) = −2 + a − b + 6 = 18 ⇒ a − b = 14</span>.<br>
+          <span class="ms-mark">M1</span> Add equations: <span class="math">3a = 3</span> ⇒ <span class="ms-mark">A1</span> <strong><span class="math">a = 1, b = −13</span></strong>.</p>
+          <p><span class="ms-mark">M1</span> (b) <span class="math">2x³ + x² − 13x + 6 = (x − 2)(2x² + 5x − 3)</span> (<span class="ms-mark">A1</span>).<br>
+          <span class="ms-mark">M1</span> Factorise quadratic: <span class="math"><strong>(x − 2)(2x − 1)(x + 3)</strong></span>.<br>
+          <span class="ms-mark">A1</span> Roots: <strong><span class="math">x = −3, <span class="frac"><span class="num">1</span><span class="den">2</span></span>, 2</span></strong>.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">SME 2 · 三次方程求精确根式解</span><span class="q-marks">[6 marks]</span></div>
+      <div class="q-stem-en">
+        The polynomial <span class="math">Q(x) = x³ − 5x² + 4x + 4</span>.<br>
+        (a) Show that <span class="math">(x − 2)</span> is a factor of <span class="math">Q(x)</span>. [1]<br>
+        (b) Solve <span class="math">Q(x) = 0</span>, giving all solutions in exact form. [5]
+      </div>
+      <div class="q-stem-cn">无计算器：试根分解后对不可因式分解的二次因式使用求根公式并化简。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 6 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">B1</span> (a) <span class="math">Q(2) = 2³ − 5(2²) + 4(2) + 4 = 8 − 20 + 8 + 4 = 0</span>, hence <span class="math">(x − 2)</span> is a factor.</p>
+          <p><span class="ms-mark">M1</span> (b) Divide by <span class="math">(x − 2)</span> (or compare coefficients): <span class="math">Q(x) = (x − 2)(x² − 3x − 2)</span> (<span class="ms-mark">A1</span>).</p>
+          <p><span class="ms-mark">M1</span> Solve <span class="math">x² − 3x − 2 = 0</span>: <span class="math">x = <span class="frac"><span class="num">3 ± <span class="sqrt">√<span class="sqrt-rad">(−3)² − 4(1)(−2)</span></span></span><span class="den">2</span></span> = <span class="frac"><span class="num">3 ± <span class="sqrt">√<span class="sqrt-rad">17</span></span></span><span class="den">2</span></span></span> (<span class="ms-mark">A1</span>).<br>
+          <span class="ms-mark">A1</span> Exact roots: <strong><span class="math">x = 2, <span class="frac"><span class="num">3 + <span class="sqrt">√<span class="sqrt-rad">17</span></span></span><span class="den">2</span></span>, <span class="frac"><span class="num">3 − <span class="sqrt">√<span class="sqrt-rad">17</span></span></span><span class="den">2</span></span></span></strong>.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">SME 3 · 四次式除以二次因式求余数系数</span><span class="q-marks">[6 marks]</span></div>
+      <div class="q-stem-en">
+        When <span class="math">f(x) = x⁴ + 3x³ + px + q</span> is divided by <span class="math">(x − 2)(x + 1)</span>, the remainder is <span class="math">5x − 3</span>.<br>
+        (a) Find the values of <span class="math">p</span> and <span class="math">q</span>. [5]<br>
+        (b) Hence state the remainder when <span class="math">f(x)</span> is divided by <span class="math">(x − 2)</span>. [1]
+      </div>
+      <div class="q-stem-cn">无计算器：写出 <span class="math">f(x) = (x − 2)(x + 1)Q(x) + 5x − 3</span>，代零点秒杀双参数。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 6 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">M1</span> (a) <span class="math">f(x) ≡ (x − 2)(x + 1)Q(x) + (5x − 3)</span>.<br>
+          <span class="ms-mark">M1</span> Set <span class="math">x = 2</span>: <span class="math">16 + 24 + 2p + q = 5(2) − 3 = 7 ⇒ 2p + q = −33</span>.<br>
+          <span class="ms-mark">M1</span> Set <span class="math">x = −1</span>: <span class="math">1 − 3 − p + q = 5(−1) − 3 = −8 ⇒ −p + q = −6</span>.<br>
+          <span class="ms-mark">M1</span> Subtract: <span class="math">3p = −27</span> ⇒ <span class="ms-mark">A1</span> <strong><span class="math">p = −9, q = −15</span></strong>.</p>
+          <p><span class="ms-mark">B1</span> (b) Remainder by <span class="math">(x − 2)</span> is <span class="math">f(2) = 5(2) − 3 = <strong>7</strong></span>.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">SME 4 · 待定系数 + 证明三次方程唯一实根</span><span class="q-marks">[6 marks]</span></div>
+      <div class="q-stem-en">
+        The polynomial <span class="math">P(x) = 2x³ − 3x² + ax − 6</span> has <span class="math">(x − 2)</span> as a factor.<br>
+        (a) Find the value of <span class="math">a</span>. [2]<br>
+        (b) Factorise <span class="math">P(x)</span> as a linear factor times a quadratic factor, and prove that <span class="math">P(x) = 0</span> has only one real root. [4]
+      </div>
+      <div class="q-stem-cn">无计算器：求参分解后必须计算二次因式判别式来严谨完成“唯一实根”证明。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 6 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">M1</span> (a) <span class="math">P(2) = 16 − 12 + 2a − 6 = 0 ⇒ 2a − 2 = 0</span> ⇒ <span class="ms-mark">A1</span> <strong><span class="math">a = 1</span></strong>.</p>
+          <p><span class="ms-mark">M1</span> (b) Divide <span class="math">2x³ − 3x² + x − 6</span> by <span class="math">(x − 2)</span>: <span class="math"><strong>P(x) = (x − 2)(2x² + x + 3)</strong></span> (<span class="ms-mark">A1</span>).<br>
+          <span class="ms-mark">M1</span> For <span class="math">2x² + x + 3 = 0</span>, discriminant <span class="math">Δ = 1² − 4(2)(3) = −23 &lt; 0</span>, so <span class="math">2x² + x + 3 = 0</span> has no real roots.<br>
+          <span class="ms-mark">A1</span> Therefore <span class="math">x = 2</span> is the only real root of <span class="math">P(x) = 0</span>.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</article>
+
+<!-- ==================== CONCEPT BANK CH03 ==================== -->
+<article class="topic-section" id="app-concepts">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>本章核心概念与证题句型直接默写库 (12题)</h3>
+      <div class="section-en-sub">Bilingual Polynomial Division, Factor/Remainder Theorems &amp; Cubic Proof Phrasing (Hide/Unmask Quiz)</div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="app-concepts">○ 标记掌握</button>
+  </div>
+
+  <div class="concept-toolbar">
+    <div class="concept-filter-group" id="conceptFilterTabs">
+      <button type="button" class="tab-btn active" data-concept-part="all">全部 12 题</button>
+      <button type="button" class="tab-btn" data-concept-part="p1">3.1–3.2 运算与除法 (4题)</button>
+      <button type="button" class="tab-btn" data-concept-part="p2">3.3–3.4 因式与三次 (4题)</button>
+      <button type="button" class="tab-btn" data-concept-part="p3">3.5 余数与重因式 (4题)</button>
+    </div>
+    <div class="concept-actions">
+      <span class="concept-count-pill" id="conceptCountPill">显示 12 / 12 题</span>
+      <button type="button" class="icon-btn" id="conceptQuizToggle">🙈 开启遮罩自测</button>
+    </div>
+  </div>
+
+  <div class="concept-grid" id="conceptGrid">
+    <div class="concept-card" data-part="p1">
+      <div class="cq-head"><span class="q-tag">C01 · 3.1 Polynomial</span><span class="badge-p1">Definition</span></div>
+      <div class="cq-en">What exponents are permitted in a polynomial, and why are 1/x and √x not polynomials?</div>
+      <div class="cq-cn">多项式对未知数的幂次有何严格规定？为什么 1/x 与 √x 不是多项式？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">All powers of x must be <span class="kw">non-negative integers (0, 1, 2, ...)</span>. Terms like x⁻¹ or x^(1/2) have negative or fractional exponents, so they are <span class="kw">not polynomials</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p1">
+      <div class="cq-head"><span class="q-tag">C02 · 3.1 Identity</span><span class="badge-p1">Principle</span></div>
+      <div class="cq-en">What does the identity sign ≡ tell you when comparing two polynomials?</div>
+      <div class="cq-cn">恒等号 ≡ 在比较两个多项式时给你什么直接操作权？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">Two polynomials are identical for all x if and only if the <span class="kw">coefficients of every corresponding power of x are equal</span> (method of equating coefficients).</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p1">
+      <div class="cq-head"><span class="q-tag">C03 · 3.2 Division Identity</span><span class="badge-p1">Formula</span></div>
+      <div class="cq-en">State the polynomial division identity and the rule linking the degrees of Divisor and Remainder.</div>
+      <div class="cq-cn">写出多项式带余除法恒等式，并说明余式与除式次数的关系。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner"><span class="kw">P(x) ≡ D(x)·Q(x) + R(x)</span>, where <span class="kw">deg(R) &lt; deg(D)</span> (e.g. quadratic divisor leaves linear remainder Ax + B).</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p1">
+      <div class="cq-head"><span class="q-tag">C04 · 3.2 Missing Terms</span><span class="badge-p2">Trap</span></div>
+      <div class="cq-en">What essential preparation must be made before doing long division on 2x³ − 3x + 5?</div>
+      <div class="cq-cn">对 2x³ − 3x + 5 做多项式长除法前，必须先做什么防错准备？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">Insert <span class="kw">zero placeholders</span> for all missing powers (e.g. write <span class="kw">2x³ + 0x² − 3x + 5</span>) so like powers stay vertically aligned.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p2">
+      <div class="cq-head"><span class="q-tag">C05 · 3.3 Factor Theorem</span><span class="badge-p1">Theorem</span></div>
+      <div class="cq-en">State the generalised Factor Theorem for a linear divisor (ax − b).</div>
+      <div class="cq-cn">默写一般一次式 (ax − b) 的因式定理。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner"><span class="kw">(ax − b)</span> is a factor of polynomial P(x) if and only if <span class="kw">P(b/a) = 0</span> (set ax − b = 0 to find the test value).</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p2">
+      <div class="cq-head"><span class="q-tag">C06 · 3.3 Rational Root Trial</span><span class="badge-p2">Paper 1</span></div>
+      <div class="cq-en">In P(x) = ax³ + bx² + cx + d with integer coefficients, which fractions p/q should you test first?</div>
+      <div class="cq-cn">在无计算器下，整系数三次式 ax³ + bx² + cx + d 试根的候选有理数规则是什么？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">Try <span class="kw">p/q</span> where <span class="kw">p divides constant term d</span> and <span class="kw">q divides leading coefficient a</span> (start with ±1, ±2, ±3, then ±1/a).</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p2">
+      <div class="cq-head"><span class="q-tag">C07 · 3.4 Cubic Solving</span><span class="badge-p1">Workflow</span></div>
+      <div class="cq-en">Outline the 3-step strategy to solve a cubic equation P(x) = 0 completely.</div>
+      <div class="cq-cn">简述彻底解三次方程 P(x) = 0 的标准三步流水线。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">① Find one linear factor <span class="kw">(ax − b)</span> via Factor Theorem; ② divide P(x) by (ax − b) to get a <span class="kw">quadratic factor</span>; ③ factorise or apply <span class="kw">quadratic formula</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p2">
+      <div class="cq-head"><span class="q-tag">C08 · 3.4 Only One Real Root</span><span class="badge-p2">Proof Phrasing</span></div>
+      <div class="cq-en">How do you formally prove that (x − k)(Ax² + Bx + C) = 0 has only one real root?</div>
+      <div class="cq-cn">如何规范写出证明三次方程 (x − k)(Ax² + Bx + C) = 0 “仅有一个实根”的英文得分句？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">Calculate the discriminant of the quadratic factor: show <span class="kw">B² − 4AC &lt; 0</span>, therefore Ax² + Bx + C = 0 has <span class="kw">no real roots</span>, leaving <span class="kw">x = k as the only real root</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p3">
+      <div class="cq-head"><span class="q-tag">C09 · 3.5 Remainder Theorem</span><span class="badge-p1">Theorem</span></div>
+      <div class="cq-en">State the Remainder Theorem when P(x) is divided by (ax + b).</div>
+      <div class="cq-cn">写出 P(x) 除以一次式 (ax + b) 时的余数定理。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">When P(x) is divided by (ax + b), the constant remainder equals <span class="kw">P(−b/a)</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p3">
+      <div class="cq-head"><span class="q-tag">C10 · 3.5 Quadratic Divisor</span><span class="badge-p2">Method</span></div>
+      <div class="cq-en">How do you find the linear remainder R(x) = Ax + B when P(x) is divided by (x − α)(x − β)?</div>
+      <div class="cq-cn">当 P(x) 除以二次式 (x − α)(x − β) 时，如何不求出商 Q(x) 就直接算出一次余式 Ax + B？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">Write <span class="kw">P(x) ≡ (x − α)(x − β)Q(x) + Ax + B</span>, then substitute <span class="kw">x = α</span> and <span class="kw">x = β</span> so Q(x) vanishes, solving <span class="kw">P(α) = Aα + B</span> and <span class="kw">P(β) = Aβ + B</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p3">
+      <div class="cq-head"><span class="q-tag">C11 · 3.5 Repeated Factor</span><span class="badge-p2">Algebra</span></div>
+      <div class="cq-en">Give two algebraic methods (without calculus) when (x − a)² is given as a factor of cubic P(x).</div>
+      <div class="cq-cn">已知 (x − a)² 是三次式 P(x) 的重因式，不用微积分时有哪两种代数解法？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">Method ① Write <span class="kw">P(x) ≡ (x − a)²(px + q)</span> and equate coefficients; Method ② Use <span class="kw">P(a) = 0</span>, divide by (x − a) to get Q(x), then set <span class="kw">Q(a) = 0</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p3">
+      <div class="cq-head"><span class="q-tag">C12 · 3.5 Factor vs Remainder</span><span class="badge-p1">Distinction</span></div>
+      <div class="cq-en">If P(x) leaves the same remainder when divided by (x − 1) and (x + 3), what equation do you form?</div>
+      <div class="cq-cn">题目若说“P(x) 除以 (x − 1) 与 (x + 3) 余数相同”，第一步应写出什么等式？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">By the Remainder Theorem, equate the two remainders directly: <span class="kw">P(1) = P(−3)</span>.</div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+        <nav class="chapter-pager" aria-label="章节切换导航">
+          <div><a class="pager-btn" href="Ch02_Simultaneous_Quadratics.html">← Ch02 联立方程组与二次函数最值、不等式及判别式</a></div>
+          <div><a class="pager-btn primary" href="index.html">🏠 返回 16 章全书总目录</a></div>
+          <div><a class="pager-btn" href="Ch04_Equations_Inequalities_Graphs.html">Ch04 绝对值不等式、三次图像与变元二次方程 →</a></div>
+        </nav>
+      </div>
+    </main>
+  </div>
+
+  <button type="button" class="back-top-btn" id="backTopBtn" title="返回顶部">↑</button>
+
+  <script>
+(function () {
+  'use strict';
+
+  const THEME_KEY = 'igcse_am0606_theme';
+  const chapterCode = (document.body && document.body.getAttribute('data-chapter-code')) || 'HUB';
+  const STORAGE_PREFIX = 'igcse_am0606_' + chapterCode.toLowerCase() + '_';
+  const htmlEl = document.documentElement;
+  const bodyEl = document.body;
+
+  // All module-level state variables declared at top of IIFE (prevents TDZ issues)
+  let currentViewMode = localStorage.getItem(STORAGE_PREFIX + 'viewMode') || 'all';
+  let activeConceptPart = 'all';
+  let quizMasked = localStorage.getItem(STORAGE_PREFIX + 'quizMasked') === '1';
+  let allMsExpanded = false;
+  let masteredIds = [];
+  try {
+    masteredIds = JSON.parse(localStorage.getItem(STORAGE_PREFIX + 'mastered') || '[]');
+    if (!Array.isArray(masteredIds)) masteredIds = [];
+  } catch (e) {
+    masteredIds = [];
+  }
+
+  // ---------- Utility Helpers ----------
+  function gcd(a, b) {
+    a = Math.abs(Math.round(a));
+    b = Math.abs(Math.round(b));
+    while (b !== 0) { const t = a % b; a = b; b = t; }
+    return a || 1;
+  }
+
+  function formatFrac(num, den) {
+    if (den === 0) return 'undefined';
+    if (num === 0) return '0';
+    if (den < 0) { num = -num; den = -den; }
+    const g = gcd(num, den);
+    num /= g; den /= g;
+    return den === 1 ? String(num) : num + '/' + den;
+  }
+
+  function formatSurd(n) {
+    n = Math.round(n);
+    if (n <= 0) return '0';
+    let out = 1, ins = n;
+    for (let f = 2; f * f <= ins; f++) {
+      while (ins % (f * f) === 0) { out *= f; ins /= (f * f); }
+    }
+    if (ins === 1) return String(out);
+    return (out === 1 ? '' : String(out)) + '√' + ins;
+  }
+
+  function fact(n) {
+    let r = 1;
+    for (let i = 2; i <= n; i++) r *= i;
+    return r;
+  }
+
+  function nCr(n, r) {
+    if (r < 0 || r > n) return 0;
+    if (r > n - r) r = n - r;
+    let res = 1;
+    for (let i = 1; i <= r; i++) res = (res * (n - r + i)) / i;
+    return Math.round(res);
+  }
+
+  function nPr(n, r) {
+    if (r < 0 || r > n) return 0;
+    let res = 1;
+    for (let i = 0; i < r; i++) res *= (n - i);
+    return res;
+  }
+
+  // ---------- 1. Theme Toggle ----------
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+
+  function applyTheme(theme) {
+    htmlEl.setAttribute('data-theme', theme);
+    if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem(THEME_KEY, theme);
+  }
+  applyTheme(localStorage.getItem(THEME_KEY) || 'light');
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      applyTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  }
+
+  // ---------- 2. View Mode Filter (All / Book / SME) ----------
+  function applyViewMode(mode) {
+    currentViewMode = mode;
+    bodyEl.classList.remove('mode-book', 'mode-sme');
+    if (mode === 'book') bodyEl.classList.add('mode-book');
+    if (mode === 'sme') bodyEl.classList.add('mode-sme');
+    document.querySelectorAll('[data-view-mode]').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-view-mode') === mode);
+    });
+    localStorage.setItem(STORAGE_PREFIX + 'viewMode', mode);
+  }
+  document.querySelectorAll('[data-view-mode]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      applyViewMode(btn.getAttribute('data-view-mode'));
+    });
+  });
+
+  // ---------- 3. Sidebar Drawer & Accordion ----------
+  const sidebar = document.getElementById('sidebar');
+  const menuToggle = document.getElementById('menuToggle');
+  if (menuToggle && sidebar) {
+    menuToggle.addEventListener('click', function () { sidebar.classList.toggle('open'); });
+    sidebar.querySelectorAll('.nav-link').forEach(function (lnk) {
+      lnk.addEventListener('click', function () {
+        if (window.innerWidth <= 980) sidebar.classList.remove('open');
+      });
+    });
+  }
+  document.querySelectorAll('.nav-unit-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const unit = btn.closest('.nav-unit');
+      if (unit) unit.classList.toggle('collapsed');
+    });
+  });
+
+  // ---------- 4. Mastery Tracker (Dynamic per chapter) ----------
+  const progressText = document.getElementById('progressText');
+  const progressFill = document.getElementById('progressFill');
+  const masterBtns = Array.from(document.querySelectorAll('.master-btn'));
+  const totalSections = masterBtns.length;
+  const validSectionIds = new Set(masterBtns.map(function (b) { return b.getAttribute('data-section-id'); }));
+
+  function renderMastery() {
+    const doneList = masteredIds.filter(function (id) { return validSectionIds.has(id); });
+    localStorage.setItem(STORAGE_PREFIX + 'total', String(totalSections));
+    if (progressText) progressText.textContent = doneList.length + '/' + totalSections;
+    if (progressFill && totalSections > 0) {
+      progressFill.style.width = Math.round((doneList.length / totalSections) * 100) + '%';
+    }
+    masterBtns.forEach(function (btn) {
+      const sid = btn.getAttribute('data-section-id');
+      const done = doneList.indexOf(sid) !== -1;
+      btn.classList.toggle('is-mastered', done);
+      btn.textContent = done ? '✓ 已掌握' : '○ 标记掌握';
+    });
+    document.querySelectorAll('.nav-link').forEach(function (lnk) {
+      const id = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('mastered', doneList.indexOf(id) !== -1);
+    });
+  }
+
+  masterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const sid = btn.getAttribute('data-section-id');
+      const idx = masteredIds.indexOf(sid);
+      if (idx === -1) masteredIds.push(sid);
+      else masteredIds.splice(idx, 1);
+      localStorage.setItem(STORAGE_PREFIX + 'mastered', JSON.stringify(masteredIds));
+      renderMastery();
+    });
+  });
+  if (totalSections > 0) renderMastery();
+
+  // ---------- 5. Global Toggle Details & Print ----------
+  const toggleAllMs = document.getElementById('toggleAllMs');
+  if (toggleAllMs) {
+    toggleAllMs.addEventListener('click', function () {
+      allMsExpanded = !allMsExpanded;
+      document.querySelectorAll('details.ms-details').forEach(function (det) { det.open = allMsExpanded; });
+      const lbl = toggleAllMs.querySelector('.btn-label');
+      if (lbl) lbl.textContent = allMsExpanded ? '收起解析' : '展开解析';
+      toggleAllMs.classList.toggle('active', allMsExpanded);
+    });
+  }
+  const printBtn = document.getElementById('printBtn');
+  if (printBtn) printBtn.addEventListener('click', function () { window.print(); });
+
+  // ---------- 6. Instant Search Filter ----------
+  const searchInput = document.getElementById('searchInput');
+  const searchClear = document.getElementById('searchClear');
+  const searchBar = document.getElementById('searchBar');
+  const searchSummary = document.getElementById('searchSummary');
+  const searchResetBtn = document.getElementById('searchResetBtn');
+  const emptySearchNotice = document.getElementById('emptySearchNotice');
+
+  function runSearch() {
+    if (!searchInput) return;
+    const raw = searchInput.value.trim().toLowerCase();
+    if (searchClear) searchClear.style.display = raw ? 'block' : 'none';
+    const sections = Array.from(document.querySelectorAll('.topic-section'));
+    if (!raw) {
+      sections.forEach(function (s) { s.classList.remove('search-dim'); });
+      if (searchBar) searchBar.classList.remove('visible');
+      if (emptySearchNotice) emptySearchNotice.style.display = 'none';
+      return;
+    }
+    let hits = 0;
+    sections.forEach(function (sec) {
+      const ok = sec.textContent.toLowerCase().indexOf(raw) !== -1;
+      sec.classList.toggle('search-dim', !ok);
+      if (ok) hits++;
+    });
+    if (searchBar) searchBar.classList.add('visible');
+    if (searchSummary) searchSummary.textContent = '关键词 “' + searchInput.value.trim() + '” 匹配 ' + hits + ' 个板块';
+    if (emptySearchNotice) emptySearchNotice.style.display = hits === 0 ? 'block' : 'none';
+  }
+  if (searchInput) searchInput.addEventListener('input', runSearch);
+  function resetSearch() { if (searchInput) searchInput.value = ''; runSearch(); }
+  if (searchClear) searchClear.addEventListener('click', resetSearch);
+  if (searchResetBtn) searchResetBtn.addEventListener('click', resetSearch);
+
+  // ---------- 7. Interactive MCQ Grading ----------
+  document.querySelectorAll('.exam-q[data-mcq-answer]').forEach(function (qBox) {
+    const ans = qBox.getAttribute('data-mcq-answer');
+    const fb = qBox.querySelector('.mcq-feedback');
+    const opts = qBox.querySelectorAll('.mcq-opt');
+    opts.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const chosen = btn.getAttribute('data-opt');
+        opts.forEach(function (o) { o.classList.remove('correct', 'wrong'); });
+        if (chosen === ans) {
+          btn.classList.add('correct');
+          if (fb) {
+            fb.textContent = fb.getAttribute('data-ok') || '✅ 回答正确！';
+            fb.className = 'mcq-feedback visible ok';
+          }
+        } else {
+          btn.classList.add('wrong');
+          opts.forEach(function (o) { if (o.getAttribute('data-opt') === ans) o.classList.add('correct'); });
+          if (fb) {
+            fb.textContent = fb.getAttribute('data-err') || '❌ 未选对，请检查步骤。';
+            fb.className = 'mcq-feedback visible err';
+          }
+        }
+      });
+    });
+  });
+
+  // ---------- 8. Concept Flashcards Filter & Mask Quiz ----------
+  const conceptCountPill = document.getElementById('conceptCountPill');
+  const conceptQuizToggle = document.getElementById('conceptQuizToggle');
+
+  function filterConcepts() {
+    const cards = Array.from(document.querySelectorAll('#conceptGrid .concept-card'));
+    if (!cards.length) return;
+    let visible = 0;
+    cards.forEach(function (card) {
+      const part = card.getAttribute('data-part');
+      const show = activeConceptPart === 'all' || part === activeConceptPart;
+      card.classList.toggle('concept-hidden', !show);
+      if (show) visible++;
+    });
+    if (conceptCountPill) conceptCountPill.textContent = '显示 ' + visible + ' / ' + cards.length + ' 题';
+  }
+
+  document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      activeConceptPart = btn.getAttribute('data-concept-part');
+      document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      filterConcepts();
+    });
+  });
+
+  function applyQuizMask(masked) {
+    quizMasked = masked;
+    document.querySelectorAll('#conceptGrid .concept-card').forEach(function (c) { c.classList.toggle('masked', masked); });
+    if (conceptQuizToggle) {
+      conceptQuizToggle.textContent = masked ? '👁️ 显示全部答案' : '🙈 开启遮罩自测';
+      conceptQuizToggle.classList.toggle('active', masked);
+    }
+    localStorage.setItem(STORAGE_PREFIX + 'quizMasked', masked ? '1' : '0');
+  }
+  if (conceptQuizToggle) {
+    conceptQuizToggle.addEventListener('click', function () { applyQuizMask(!quizMasked); });
+  }
+  document.querySelectorAll('#conceptGrid .cq-answer').forEach(function (box) {
+    box.addEventListener('click', function () {
+      const card = box.closest('.concept-card');
+      if (card && card.classList.contains('masked')) card.classList.remove('masked');
+    });
+  });
+
+  // ---------- 9. 2D Plotter Engine for Chapter Interactive Labs ----------
+  function makePlotter(w, h, xmin, xmax, ymin, ymax) {
+    const pad = 24;
+    const toX = function (x) { return pad + ((x - xmin) / (xmax - xmin)) * (w - 2 * pad); };
+    const toY = function (y) { return h - pad - ((y - ymin) / (ymax - ymin)) * (h - 2 * pad); };
+    return { w: w, h: h, xmin: xmin, xmax: xmax, ymin: ymin, ymax: ymax, toX: toX, toY: toY };
+  }
+
+  function renderPlotBase(p) {
+    let s = '<rect x="2" y="2" width="' + (p.w - 4) + '" height="' + (p.h - 4) + '" rx="6" fill="none" stroke="var(--svg-grid)" stroke-width="1"/>';
+    const xStep = Math.max(1, Math.round((p.xmax - p.xmin) / 8));
+    const yStep = Math.max(1, Math.round((p.ymax - p.ymin) / 8));
+    for (let x = Math.ceil(p.xmin); x <= p.xmax; x += xStep) {
+      const px = p.toX(x);
+      s += '<line x1="' + px.toFixed(1) + '" y1="12" x2="' + px.toFixed(1) + '" y2="' + (p.h - 12) + '" stroke="var(--svg-grid)" stroke-width="0.7"/>';
+    }
+    for (let y = Math.ceil(p.ymin); y <= p.ymax; y += yStep) {
+      const py = p.toY(y);
+      s += '<line x1="12" y1="' + py.toFixed(1) + '" x2="' + (p.w - 12) + '" y2="' + py.toFixed(1) + '" stroke="var(--svg-grid)" stroke-width="0.7"/>';
+    }
+    if (p.xmin <= 0 && p.xmax >= 0) {
+      const ox = p.toX(0);
+      s += '<line x1="' + ox.toFixed(1) + '" y1="10" x2="' + ox.toFixed(1) + '" y2="' + (p.h - 10) + '" stroke="var(--svg-muted)" stroke-width="1.4"/>';
+      s += '<text x="' + Math.min(p.w - 16, ox + 6).toFixed(1) + '" y="22" font-size="10.5" font-weight="700" fill="var(--svg-muted)">y</text>';
+    }
+    if (p.ymin <= 0 && p.ymax >= 0) {
+      const oy = p.toY(0);
+      s += '<line x1="10" y1="' + oy.toFixed(1) + '" x2="' + (p.w - 10) + '" y2="' + oy.toFixed(1) + '" stroke="var(--svg-muted)" stroke-width="1.4"/>';
+      s += '<text x="' + (p.w - 18) + '" y="' + Math.max(20, oy - 5).toFixed(1) + '" font-size="10.5" font-weight="700" fill="var(--svg-muted)">x</text>';
+    }
+    return s;
+  }
+
+  function plotCurve(p, fn, color, dashed, samples) {
+    const N = samples || 120;
+    let d = '';
+    let penDown = false;
+    for (let i = 0; i <= N; i++) {
+      const x = p.xmin + (i / N) * (p.xmax - p.xmin);
+      const y = fn(x);
+      if (!Number.isFinite(y) || y < p.ymin - 1 || y > p.ymax + 1) {
+        penDown = false;
+        continue;
+      }
+      const px = p.toX(x), py = p.toY(y);
+      d += (penDown ? ' L ' : ' M ') + px.toFixed(1) + ' ' + py.toFixed(1);
+      penDown = true;
+    }
+    if (!d) return '';
+    return '<path d="' + d.trim() + '" fill="none" stroke="' + color + '" stroke-width="2.4"' + (dashed ? ' stroke-dasharray="5,4"' : '') + '/>';
+  }
+
+  function plotDot(p, x, y, color, label) {
+    if (x < p.xmin || x > p.xmax || y < p.ymin || y > p.ymax) return '';
+    const px = p.toX(x), py = p.toY(y);
+    let s = '<circle cx="' + px.toFixed(1) + '" cy="' + py.toFixed(1) + '" r="4.8" fill="' + color + '"/>';
+    if (label) {
+      s += '<text x="' + Math.min(p.w - 42, Math.max(12, px + 7)).toFixed(1) + '" y="' + Math.max(18, py - 6).toFixed(1) + '" font-size="10.5" font-weight="700" fill="' + color + '">' + label + '</text>';
+    }
+    return s;
+  }
+
+  // ---------- 10. Chapter-Specific Interactive Lab Mounts (Ch01–Ch16) ----------
+  function mountChapterLab(el) {
+    const type = el.getAttribute('data-lab-type');
+    if (!type) return;
+
+    if (type === 'ch01') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 1 交互实验室 · 线性绝对值 |ax + b| 与反函数 y = x 对称台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>a：<input type="number" id="c1A" value="2" min="-4" max="4"></label>' +
+        '<label>b：<input type="number" id="c1B" value="-4" min="-8" max="8"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c1Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c1Vertex"></div><div class="readout-pill" id="c1Inv"></div><div class="readout-pill" id="c1Sym"></div></div></div></div>';
+      const draw = function () {
+        let a = Math.round(Number(el.querySelector('#c1A').value) || 2); if (a === 0) a = 1;
+        const b = Math.round(Number(el.querySelector('#c1B').value) || 0);
+        const vx = -b / a;
+        const p = makePlotter(360, 270, -6, 6, -6, 6);
+        let svg = renderPlotBase(p);
+        svg += plotCurve(p, function (x) { return x; }, 'var(--svg-muted)', true);
+        svg += plotCurve(p, function (x) { return a * x + b; }, 'var(--svg-blue)', true);
+        svg += plotCurve(p, function (x) { return (x - b) / a; }, 'var(--svg-teal)', false);
+        svg += plotCurve(p, function (x) { return Math.abs(a * x + b); }, 'var(--svg-indigo)', false);
+        svg += plotDot(p, vx, 0, 'var(--svg-red)', 'V(' + formatFrac(-b, a) + ',0)');
+        el.querySelector('#c1Svg').innerHTML = svg;
+        el.querySelector('#c1Vertex').textContent = '折线 y = |' + a + 'x + (' + b + ')| 顶点 (V字尖点)：(' + formatFrac(-b, a) + ', 0)，值域 y ≥ 0';
+        el.querySelector('#c1Inv').textContent = '原直线 f(x) = ' + a + 'x + (' + b + ') 的反函数：f⁻¹(x) = (x − (' + b + ')) / ' + a + '（青色实线）';
+        el.querySelector('#c1Sym').textContent = '对称规则：f(x) 与 f⁻¹(x) 严格关于虚线 y = x 镜面对称，且两者交点必在 y = x 上。';
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch02') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 2 交互实验室 · 配方法、判别式 Δ 与二次绝对值 |ax²+bx+c| 翻折台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>a：<input type="number" id="c2A" value="1" min="-3" max="3"></label>' +
+        '<label>b：<input type="number" id="c2B" value="-4" min="-8" max="8"></label>' +
+        '<label>c：<input type="number" id="c2C" value="3" min="-8" max="8"></label>' +
+        '<label><input type="checkbox" id="c2Abs"> 显示 y = |f(x)| 向上翻折</label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c2Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c2Comp"></div><div class="readout-pill" id="c2Disc"></div><div class="readout-pill" id="c2Ineq"></div></div></div></div>';
+      const draw = function () {
+        let a = Math.round(Number(el.querySelector('#c2A').value) || 1); if (a === 0) a = 1;
+        const b = Math.round(Number(el.querySelector('#c2B').value) || 0);
+        const c = Math.round(Number(el.querySelector('#c2C').value) || 0);
+        const absOn = el.querySelector('#c2Abs').checked;
+        const h = -b / (2 * a);
+        const k = c - (b * b) / (4 * a);
+        const disc = b * b - 4 * a * c;
+        const p = makePlotter(360, 270, -6, 8, -8, 10);
+        let svg = renderPlotBase(p);
+        svg += plotCurve(p, function (x) { const y = a * x * x + b * x + c; return absOn ? Math.abs(y) : y; }, 'var(--svg-indigo)', false);
+        svg += plotDot(p, h, absOn ? Math.abs(k) : k, 'var(--svg-red)', 'V(' + h.toFixed(2) + ',' + (absOn ? Math.abs(k) : k).toFixed(2) + ')');
+        el.querySelector('#c2Svg').innerHTML = svg;
+        el.querySelector('#c2Comp').textContent = '配方法顶点：x = ' + formatFrac(-b, 2 * a) + '，极值 k = ' + k.toFixed(2) + (absOn ? '（翻折后最低必 ≥ 0）' : (a > 0 ? ' (最小值 Min)' : ' (最大值 Max)'));
+        el.querySelector('#c2Disc').textContent = '判别式 Δ = b² − 4ac = ' + disc + (disc > 0 ? ' (>0：两相异实根)' : disc === 0 ? ' (=0：唯一重根/相切)' : ' (<0：无实根)');
+        el.querySelector('#c2Ineq').textContent = absOn ? 'y = |f(x)| 把 x 轴下方负值部分全部对称翻折到上方！' : '开口方向：' + (a > 0 ? '向上 (U形)，解 f(x) < 0 取两根之间' : '向下 (∩形)，解 f(x) > 0 取两根之间');
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch03') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 3 交互实验室 · 三次多项式余数/因式定理试根台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>f(x) = x³ + <input type="number" id="c3B" value="-2">x² + <input type="number" id="c3C" value="-5">x + <input type="number" id="c3D" value="6"></label>' +
+        '<label>测试因子 (x − k) 中的 k：<input type="number" id="c3K" value="1" step="0.5"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c3Rem"></div><div class="readout-pill" id="c3Quot"></div></div></div>';
+      const draw = function () {
+        const b = Number(el.querySelector('#c3B').value) || 0;
+        const c = Number(el.querySelector('#c3C').value) || 0;
+        const d = Number(el.querySelector('#c3D').value) || 0;
+        const k = Number(el.querySelector('#c3K').value) || 0;
+        const q2 = 1;
+        const q1 = b + k * q2;
+        const q0 = c + k * q1;
+        const rem = d + k * q0;
+        el.querySelector('#c3Rem').textContent = '代入余数定理 f(' + k + ') = ' + rem + (Math.abs(rem) < 1e-9 ? '  ✅ 余数为 0 ⇒ (x − (' + k + ')) 是因式 (Factor)!' : '  → 非 0，不是因式');
+        el.querySelector('#c3Quot').textContent = '长除/综合除法结果：f(x) = (x − (' + k + '))(x² + ' + q1 + 'x + ' + q0 + ') + (' + rem + ')';
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch04') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 4 交互实验室 · 三次函数草图、|ax³+...| 翻折与不等式符号分析台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>r₁：<input type="number" id="c4R1" value="-2"></label>' +
+        '<label>r₂：<input type="number" id="c4R2" value="1"></label>' +
+        '<label>r₃：<input type="number" id="c4R3" value="3"></label>' +
+        '<label>首项系数：<select id="c4S"><option value="1">+1 (正系数)</option><option value="-1">−1 (负系数)</option></select></label>' +
+        '<label><input type="checkbox" id="c4Abs"> 套绝对值 |f(x)|</label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c4Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c4Roots"></div><div class="readout-pill" id="c4Ineq"></div></div></div></div>';
+      const draw = function () {
+        const roots = [Number(el.querySelector('#c4R1').value) || 0, Number(el.querySelector('#c4R2').value) || 0, Number(el.querySelector('#c4R3').value) || 0].sort(function (x, y) { return x - y; });
+        const sgn = Number(el.querySelector('#c4S').value) || 1;
+        const absOn = el.querySelector('#c4Abs').checked;
+        const p = makePlotter(360, 270, -5, 6, -12, 12);
+        let svg = renderPlotBase(p);
+        svg += plotCurve(p, function (x) {
+          const y = sgn * (x - roots[0]) * (x - roots[1]) * (x - roots[2]);
+          return absOn ? Math.abs(y) : y;
+        }, 'var(--svg-purple)', false);
+        roots.forEach(function (r, idx) { svg += plotDot(p, r, 0, 'var(--svg-red)', 'r' + (idx + 1)); });
+        el.querySelector('#c4Svg').innerHTML = svg;
+        el.querySelector('#c4Roots').textContent = '有序零点：' + roots.join(' ≤ ') + '；y 轴截距 = ' + (-sgn * roots[0] * roots[1] * roots[2]);
+        el.querySelector('#c4Ineq').textContent = sgn > 0
+          ? 'f(x) > 0 穿根法区间：' + roots[0] + ' < x < ' + roots[1] + ' 或 x > ' + roots[2]
+          : 'f(x) > 0 穿根法区间：x < ' + roots[0] + ' 或 ' + roots[1] + ' < x < ' + roots[2];
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch05') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 5 交互实验室 · y = ke^(nx) + a 与 y = k ln(ax + b) 渐近线画板</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>函数类型：<select id="c5Type"><option value="exp">指数 y = k·e^(nx) + a</option><option value="ln">对数 y = k·ln(ax + b)</option></select></label>' +
+        '<label>k：<input type="number" id="c5K" value="2"></label>' +
+        '<label>n 或 a：<input type="number" id="c5N" value="1"></label>' +
+        '<label>a 或 b：<input type="number" id="c5B" value="-1"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c5Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c5Asym"></div><div class="readout-pill" id="c5Int"></div><div class="readout-pill" id="c5Dom"></div></div></div></div>';
+      const draw = function () {
+        const mode = el.querySelector('#c5Type').value;
+        const k = Number(el.querySelector('#c5K').value) || 1;
+        let na = Number(el.querySelector('#c5N').value) || 1; if (na === 0) na = 1;
+        const b = Number(el.querySelector('#c5B').value) || 0;
+        const p = makePlotter(360, 270, -5, 6, -6, 8);
+        let svg = renderPlotBase(p);
+        if (mode === 'exp') {
+          svg += plotCurve(p, function () { return b; }, 'var(--svg-red)', true);
+          svg += plotCurve(p, function (x) { return k * Math.exp(na * x) + b; }, 'var(--svg-amber)', false);
+          svg += plotDot(p, 0, k + b, 'var(--svg-blue)', '(0,' + (k + b) + ')');
+          el.querySelector('#c5Asym').textContent = '水平渐近线 (Horizontal Asymptote)：y = ' + b;
+          el.querySelector('#c5Int').textContent = 'y 轴截距 (令 x = 0)：(0, ' + (k + b) + ')';
+          el.querySelector('#c5Dom').textContent = '定义域 x ∈ ℝ；值域：y ' + (k > 0 ? '> ' : '< ') + b + '（切勿触及 y = ' + b + '）';
+        } else {
+          const xAsym = -b / na;
+          const ax = p.toX(xAsym);
+          if (ax > 10 && ax < 350) svg += '<line x1="' + ax.toFixed(1) + '" y1="10" x2="' + ax.toFixed(1) + '" y2="260" stroke="var(--svg-red)" stroke-width="2" stroke-dasharray="5,3"/>';
+          svg += plotCurve(p, function (x) { const arg = na * x + b; return arg > 0.02 ? k * Math.log(arg) : NaN; }, 'var(--svg-teal)', false, 180);
+          const xInt = (1 - b) / na;
+          svg += plotDot(p, xInt, 0, 'var(--svg-blue)', 'x₀=' + xInt.toFixed(2));
+          el.querySelector('#c5Asym').textContent = '铅垂渐近线 (Vertical Asymptote)：ax + b = 0 ⇒ x = ' + formatFrac(-b, na);
+          el.querySelector('#c5Int').textContent = 'x 轴交点 (令 ax + b = 1)：x = ' + formatFrac(1 - b, na);
+          el.querySelector('#c5Dom').textContent = '真数必须为正！定义域：' + na + 'x + (' + b + ') > 0；值域：y ∈ ℝ';
+        }
+        el.querySelector('#c5Svg').innerHTML = svg;
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch06') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 6 交互实验室 · 直线线段与 Linear Law 线性化对照台</div>' +
+        '<div class="tab-row"><button type="button" class="tab-btn active" data-c6m="lin">6.5–6.6 Linear Law 线性化转换</button><button type="button" class="tab-btn" data-c6m="seg">6.1–6.3 线段与垂直平分线</button></div></div>' +
+        '<div class="lab-panel" id="c6Body"></div>';
+      let mode = 'lin';
+      const renderC6 = function () {
+        const box = el.querySelector('#c6Body');
+        if (mode === 'lin') {
+          box.innerHTML =
+            '<div class="lab-controls">' +
+            '<label>原方程模型：<select id="c6Model"><option value="pow">y = a xⁿ (幂函数型)</option><option value="exp">y = a bˣ (指数型)</option><option value="e">y = A e^(kx) (自然指数)</option><option value="inv">y = a/x + b (倒数型)</option></select></label>' +
+            '<label>直线斜率 m：<input type="number" id="c6M" value="2" step="0.5"></label>' +
+            '<label>纵轴截距 c：<input type="number" id="c6C" value="3" step="0.5"></label>' +
+            '</div><div class="lab-readout"><div class="readout-pill" id="c6Axes"></div><div class="readout-pill" id="c6Line"></div><div class="readout-pill" id="c6Params"></div></div>';
+          const calc = function () {
+            const md = box.querySelector('#c6Model').value;
+            const m = Number(box.querySelector('#c6M').value) || 0;
+            const c = Number(box.querySelector('#c6C').value) || 0;
+            if (md === 'pow') {
+              box.querySelector('#c6Axes').textContent = '坐标轴设定：纵轴 Y = lg y，横轴 X = lg x';
+              box.querySelector('#c6Line').textContent = '线性式：lg y = n(lg x) + lg a ⇒ 斜率 m = n，纵截距 c = lg a';
+              box.querySelector('#c6Params').textContent = '反推原参数：n = ' + m + '，a = 10^(' + c + ') = ' + Math.pow(10, c).toPrecision(4);
+            } else if (md === 'exp') {
+              box.querySelector('#c6Axes').textContent = '坐标轴设定：纵轴 Y = lg y，横轴 X = x';
+              box.querySelector('#c6Line').textContent = '线性式：lg y = (lg b) x + lg a ⇒ 斜率 m = lg b，纵截距 c = lg a';
+              box.querySelector('#c6Params').textContent = '反推原参数：b = 10^(' + m + ') = ' + Math.pow(10, m).toPrecision(4) + '，a = 10^(' + c + ') = ' + Math.pow(10, c).toPrecision(4);
+            } else if (md === 'e') {
+              box.querySelector('#c6Axes').textContent = '坐标轴设定：纵轴 Y = ln y，横轴 X = x';
+              box.querySelector('#c6Line').textContent = '线性式：ln y = kx + ln A ⇒ 斜率 m = k，纵截距 c = ln A';
+              box.querySelector('#c6Params').textContent = '反推原参数：k = ' + m + '，A = e^(' + c + ') ≈ ' + Math.exp(c).toPrecision(4);
+            } else {
+              box.querySelector('#c6Axes').textContent = '坐标轴设定：纵轴 Y = y（或 xy），横轴 X = 1/x（或 x）';
+              box.querySelector('#c6Line').textContent = '线性式：y = a(1/x) + b ⇒ 斜率 m = a，纵截距 c = b';
+              box.querySelector('#c6Params').textContent = '反推原参数：a = ' + m + '，b = ' + c + '，原关系 y = ' + m + '/x + (' + c + ')';
+            }
+          };
+          box.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', calc); i.addEventListener('change', calc); });
+          calc();
+        } else {
+          box.innerHTML =
+            '<div class="lab-controls">' +
+            '<label>A(<input type="number" id="c6Ax" value="-1">,<input type="number" id="c6Ay" value="6">)</label>' +
+            '<label>B(<input type="number" id="c6Bx" value="5">,<input type="number" id="c6By" value="2">)</label>' +
+            '</div><div class="lab-readout"><div class="readout-pill" id="c6Out1"></div><div class="readout-pill" id="c6Out2"></div></div>';
+          const calc = function () {
+            const ax = Number(box.querySelector('#c6Ax').value) || 0, ay = Number(box.querySelector('#c6Ay').value) || 0;
+            const bx = Number(box.querySelector('#c6Bx').value) || 0, by = Number(box.querySelector('#c6By').value) || 0;
+            const d2 = (bx - ax) * (bx - ax) + (by - ay) * (by - ay);
+            box.querySelector('#c6Out1').textContent = '精确长度 AB = √' + d2 + ' = ' + formatSurd(d2) + '；中点 M = (' + formatFrac(ax + bx, 2) + ', ' + formatFrac(ay + by, 2) + ')';
+            box.querySelector('#c6Out2').textContent = d2 === 0 ? '两点重合' : '斜率 m_AB = ' + formatFrac(by - ay, bx - ax) + '，垂直斜率 m_⊥ = ' + formatFrac(-(bx - ax), by - ay);
+          };
+          box.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', calc); });
+          calc();
+        }
+      };
+      el.querySelectorAll('[data-c6m]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          mode = btn.getAttribute('data-c6m');
+          el.querySelectorAll('[data-c6m]').forEach(function (b) { b.classList.toggle('active', b === btn); });
+          renderC6();
+        });
+      });
+      renderC6();
+    } else if (type === 'ch07') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 7 交互实验室 · 圆方程与直线相交 / 相切 / 相离判别画板</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>圆心 (<input type="number" id="c7H" value="1">,<input type="number" id="c7K" value="-1">) r=<input type="number" id="c7R" value="4" min="1" max="8"></label>' +
+        '<label>直线 y = <input type="number" id="c7M" value="1" step="0.5">x + <input type="number" id="c7C" value="3" step="0.5"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c7Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c7Eq"></div><div class="readout-pill" id="c7Dist"></div><div class="readout-pill" id="c7Rel"></div></div></div></div>';
+      const draw = function () {
+        const h = Number(el.querySelector('#c7H').value) || 0;
+        const k = Number(el.querySelector('#c7K').value) || 0;
+        const r = Math.max(1, Number(el.querySelector('#c7R').value) || 4);
+        const m = Number(el.querySelector('#c7M').value) || 0;
+        const c = Number(el.querySelector('#c7C').value) || 0;
+        const d = Math.abs(m * h - k + c) / Math.hypot(m, 1);
+        const p = makePlotter(360, 270, h - r - 3, h + r + 3, k - r - 3, k + r + 3);
+        let svg = renderPlotBase(p);
+        const cx = p.toX(h), cy = p.toY(k), rx = Math.abs(p.toX(h + r) - cx);
+        svg += '<circle cx="' + cx.toFixed(1) + '" cy="' + cy.toFixed(1) + '" r="' + rx.toFixed(1) + '" fill="rgba(5,150,105,0.12)" stroke="var(--svg-teal)" stroke-width="2.4"/>';
+        svg += plotCurve(p, function (x) { return m * x + c; }, 'var(--svg-red)', false);
+        svg += plotDot(p, h, k, 'var(--svg-indigo)', 'C(' + h + ',' + k + ')');
+        el.querySelector('#c7Svg').innerHTML = svg;
+        el.querySelector('#c7Eq').textContent = '标准圆方程：(x − (' + h + '))² + (y − (' + k + '))² = ' + (r * r);
+        el.querySelector('#c7Dist').textContent = '圆心到直线垂直距离 d = ' + d.toFixed(3) + ' vs 半径 r = ' + r;
+        el.querySelector('#c7Rel').textContent = Math.abs(d - r) < 0.02 ? '🎯 判定：d = r (Δ = 0) → 恰好相切 (Tangent)！' : d < r ? '✂️ 判定：d < r (Δ > 0) → 相交于两点 (Secant / Chord)！' : '🚫 判定：d > r (Δ < 0) → 相离 (No intersection)！';
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch08') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 8 交互实验室 · 弧度制 θ、弧长 s = rθ 与弓形阴影面积实时计算</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>半径 r (cm)：<input type="range" id="c8R" min="2" max="12" step="1" value="6"><span id="c8RLbl">6</span></label>' +
+        '<label>圆心角 θ (rad)：<input type="range" id="c8T" min="0.2" max="3.0" step="0.1" value="1.2"><span id="c8TLbl">1.20</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c8Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c8Arc"></div><div class="readout-pill" id="c8Sec"></div><div class="readout-pill" id="c8Seg"></div></div></div></div>';
+      const draw = function () {
+        const r = Number(el.querySelector('#c8R').value) || 6;
+        const t = Number(el.querySelector('#c8T').value) || 1.2;
+        el.querySelector('#c8RLbl').textContent = r;
+        el.querySelector('#c8TLbl').textContent = t.toFixed(2);
+        const arc = r * t, chord = 2 * r * Math.sin(t / 2), sec = 0.5 * r * r * t, tri = 0.5 * r * r * Math.sin(t), seg = sec - tri;
+        const cx = 135, cy = 195, R = 95 + r * 4;
+        const a1 = -0.15, a2 = a1 - t;
+        const x1 = cx + R * Math.cos(a1), y1 = cy + R * Math.sin(a1);
+        const x2 = cx + R * Math.cos(a2), y2 = cy + R * Math.sin(a2);
+        const large = t > Math.PI ? 1 : 0;
+        let svg = '<path d="M ' + cx + ' ' + cy + ' L ' + x1.toFixed(1) + ' ' + y1.toFixed(1) + ' A ' + R + ' ' + R + ' 0 ' + large + ' 0 ' + x2.toFixed(1) + ' ' + y2.toFixed(1) + ' Z" fill="rgba(13,148,136,0.14)" stroke="var(--svg-teal)" stroke-width="2.2"/>';
+        svg += '<path d="M ' + x1.toFixed(1) + ' ' + y1.toFixed(1) + ' A ' + R + ' ' + R + ' 0 ' + large + ' 0 ' + x2.toFixed(1) + ' ' + y2.toFixed(1) + ' Z" fill="rgba(217,119,6,0.28)" stroke="var(--svg-amber)" stroke-width="2"/>';
+        svg += '<circle cx="' + cx + '" cy="' + cy + '" r="4" fill="var(--svg-ink)"/><text x="' + (cx - 18) + '" y="' + (cy + 16) + '" font-size="11.5" font-weight="700" fill="var(--svg-ink)">O</text>';
+        svg += '<text x="' + (cx + 28) + '" y="' + (cy - 12) + '" font-size="11.5" font-weight="700" fill="var(--svg-teal)">θ = ' + t.toFixed(2) + ' rad</text>';
+        el.querySelector('#c8Svg').innerHTML = svg;
+        el.querySelector('#c8Arc').textContent = '弧长 s = rθ = ' + arc.toFixed(3) + ' cm | 弦长 AB = 2r sin(θ/2) = ' + chord.toFixed(3) + ' cm';
+        el.querySelector('#c8Sec').textContent = '扇形面积 ½r²θ = ' + sec.toFixed(3) + ' cm² | 扇形周长 = s + 2r = ' + (arc + 2 * r).toFixed(3) + ' cm';
+        el.querySelector('#c8Seg').textContent = '阴影弓形面积 (Segment) = ½r²(θ − sin θ) = ' + seg.toFixed(3) + ' cm²';
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch09') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 9 交互实验室 · y = a sin/cos(bx) + c 与 |f(x)| 三角波形诊断台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>函数：<select id="c9Fn"><option value="sin">a sin(bx) + c</option><option value="cos">a cos(bx) + c</option><option value="abs">|a sin(bx) + c|</option></select></label>' +
+        '<label>a：<input type="number" id="c9A" value="2"></label><label>b：<input type="number" id="c9B" value="2"></label><label>c：<input type="number" id="c9C" value="1"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c9Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c9Per"></div><div class="readout-pill" id="c9Rng"></div><div class="readout-pill" id="c9Cast"></div></div></div></div>';
+      const draw = function () {
+        const fn = el.querySelector('#c9Fn').value;
+        const a = Number(el.querySelector('#c9A').value) || 2;
+        let b = Number(el.querySelector('#c9B').value) || 1; if (b <= 0) b = 1;
+        const c = Number(el.querySelector('#c9C').value) || 0;
+        const p = makePlotter(360, 270, 0, 360, -5, 6);
+        let svg = renderPlotBase(p);
+        svg += plotCurve(p, function (deg) {
+          const rad = (deg * Math.PI) / 180;
+          const v = fn === 'cos' ? a * Math.cos(b * rad) + c : a * Math.sin(b * rad) + c;
+          return fn === 'abs' ? Math.abs(v) : v;
+        }, 'var(--svg-indigo)', false, 180);
+        el.querySelector('#c9Svg').innerHTML = svg;
+        const ymin = c - Math.abs(a), ymax = c + Math.abs(a);
+        el.querySelector('#c9Per').textContent = '周期 Period = ' + (fn === 'abs' && c === 0 ? (180 / b).toFixed(1) : (360 / b).toFixed(1)) + '° (弧度 ' + formatFrac(fn === 'abs' && c === 0 ? 1 : 2, b) + 'π)';
+        el.querySelector('#c9Rng').textContent = fn === 'abs'
+          ? '值域 Range (绝对值翻折)：[' + ((ymin <= 0 && ymax >= 0) ? 0 : Math.min(Math.abs(ymin), Math.abs(ymax))) + ', ' + Math.max(Math.abs(ymin), Math.abs(ymax)) + ']'
+          : '值域 Range：[' + ymin + ', ' + ymax + '] | 振幅 |a| = ' + Math.abs(a);
+        el.querySelector('#c9Cast').textContent = 'CAST 口诀 (0°→360°)：I 全正 (All) · II 仅 sin 正 · III 仅 tan 正 · IV 仅 cos 正';
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch10') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 10 交互实验室 · 排列 nPr / 组合 nCr / 捆绑插空计数对比器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>总元素 n：<input type="number" id="c10N" value="7" min="1" max="12"></label>' +
+        '<label>选取数 r：<input type="number" id="c10R" value="3" min="0" max="12"></label>' +
+        '<label>捆绑测试块大小 k：<input type="number" id="c10K" value="2" min="1" max="6"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c10P"></div><div class="readout-pill" id="c10C"></div><div class="readout-pill" id="c10Glue"></div></div></div>';
+      const draw = function () {
+        const n = Math.min(12, Math.max(1, Math.round(Number(el.querySelector('#c10N').value) || 7)));
+        const r = Math.min(n, Math.max(0, Math.round(Number(el.querySelector('#c10R').value) || 3)));
+        const k = Math.min(n, Math.max(1, Math.round(Number(el.querySelector('#c10K').value) || 2)));
+        el.querySelector('#c10P').textContent = '有序排列 ⁿPᵣ = ' + n + '! / (' + n + '−' + r + ')! = ' + nPr(n, r).toLocaleString();
+        el.querySelector('#c10C').textContent = '无序组合 ⁿCᵣ = ' + n + '! / [' + r + '!(' + n + '−' + r + ')!] = ' + nCr(n, r).toLocaleString() + '（关系：ⁿPᵣ = r! · ⁿCᵣ）';
+        const glueVal = fact(n - k + 1) * fact(k);
+        const rem = n - k;
+        const gapVal = k <= rem + 1 ? fact(rem) * nPr(rem + 1, k) : 0;
+        el.querySelector('#c10Glue').textContent = 'n 个中特定 k 个全排列：① 相邻捆绑 (' + (n - k + 1) + ')! × ' + k + '! = ' + glueVal.toLocaleString() + '；② 全不相邻插空 ' + rem + '! × ᴾ(' + (rem + 1) + ',' + k + ') = ' + gapVal.toLocaleString();
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch11') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 11 交互实验室 · 二项式展开 (a + bx)ⁿ 与 AP/GP/S∞ 验算台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>二项式 a：<input type="number" id="c11A" value="2"></label><label>b：<input type="number" id="c11B" value="-3"></label><label>幂 n：<input type="number" id="c11N" value="5" min="2" max="9"></label>' +
+        '<label>GP 首项 u₁：<input type="number" id="c11U" value="12"></label><label>公比 r：<input type="number" id="c11R" value="0.5" step="0.25"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c11Bin"></div><div class="readout-pill" id="c11Gp"></div></div></div>';
+      const draw = function () {
+        const a = Number(el.querySelector('#c11A').value) || 0;
+        const b = Number(el.querySelector('#c11B').value) || 0;
+        const n = Math.min(9, Math.max(2, Math.round(Number(el.querySelector('#c11N').value) || 5)));
+        const terms = [];
+        for (let r = 0; r <= Math.min(3, n); r++) {
+          const coef = nCr(n, r) * Math.pow(a, n - r) * Math.pow(b, r);
+          terms.push((r === 0 ? '' : (coef >= 0 ? ' + ' : ' − ')) + (r === 0 ? coef : Math.abs(coef)) + (r === 0 ? '' : r === 1 ? 'x' : 'x^' + r));
+        }
+        el.querySelector('#c11Bin').textContent = '(' + a + ' + ' + b + 'x)^' + n + ' 前四项 = ' + terms.join('') + ' + …';
+        const u1 = Number(el.querySelector('#c11U').value) || 0;
+        const rRatio = Number(el.querySelector('#c11R').value) || 0;
+        const conv = Math.abs(rRatio) < 1;
+        el.querySelector('#c11Gp').textContent = 'GP u₅ = ' + (u1 * Math.pow(rRatio, 4)).toFixed(3) + ' | ' + (conv ? '✅ |r| < 1 收敛！S∞ = u₁/(1−r) = ' + (u1 / (1 - rRatio)).toFixed(3) : '🚫 |r| ≥ 1 级数发散，S∞ 不存在！');
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch12') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 12 交互实验室 · y = x³ − 3px + 2 切线、法线与二阶导驻点台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>系数 p：<input type="number" id="c12P" value="3" min="1" max="6"></label>' +
+        '<label>点横坐标 x₀：<input type="range" id="c12X" min="-3" max="3" step="0.25" value="-1"><span id="c12XLbl">-1.00</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c12Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c12D1"></div><div class="readout-pill" id="c12D2"></div><div class="readout-pill" id="c12Tan"></div></div></div></div>';
+      const draw = function () {
+        const P = Math.max(1, Number(el.querySelector('#c12P').value) || 3);
+        const x0 = Number(el.querySelector('#c12X').value) || 0;
+        el.querySelector('#c12XLbl').textContent = x0.toFixed(2);
+        const y0 = x0 * x0 * x0 - 3 * P * x0 + 2;
+        const m = 3 * x0 * x0 - 3 * P;
+        const d2 = 6 * x0;
+        const p = makePlotter(360, 270, -4, 4, -18, 22);
+        let svg = renderPlotBase(p);
+        svg += plotCurve(p, function (x) { return x * x * x - 3 * P * x + 2; }, 'var(--svg-indigo)', false);
+        svg += plotCurve(p, function (x) { return y0 + m * (x - x0); }, 'var(--svg-red)', true);
+        svg += plotDot(p, x0, y0, 'var(--svg-red)', 'P(' + x0 + ',' + y0.toFixed(1) + ')');
+        el.querySelector('#c12Svg').innerHTML = svg;
+        el.querySelector('#c12D1').textContent = '一阶导 dy/dx = 3x² − ' + (3 * P) + '，在 x₀=' + x0 + ' 处切线斜率 = ' + m.toFixed(2) + (Math.abs(m) < 0.01 ? ' 🎯 驻点 (dy/dx = 0)!' : '');
+        el.querySelector('#c12D2').textContent = '二阶导 d²y/dx² = 6x = ' + d2.toFixed(2) + (d2 < 0 ? ' (< 0：局部极大值形状 ∩)' : d2 > 0 ? ' (> 0：局部极小值形状 U)' : ' (= 0 需查符号变化)');
+        el.querySelector('#c12Tan').textContent = Math.abs(m) < 0.01 ? '水平切线：y = ' + y0.toFixed(2) + '；法线斜率无定义 (铅垂 x = ' + x0 + ')' : '切线 y − ' + y0.toFixed(2) + ' = ' + m.toFixed(2) + '(x − ' + x0 + ') | 法线斜率 m⊥ = ' + (-1 / m).toFixed(2);
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch13') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 13 交互实验室 · 向量合成 u + v、模长与单位向量动态 SVG</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>u = (<input type="number" id="c13Ux" value="3">,<input type="number" id="c13Uy" value="4">)</label>' +
+        '<label>v = (<input type="number" id="c13Vx" value="4">,<input type="number" id="c13Vy" value="-1">)</label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c13Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c13Mag"></div><div class="readout-pill" id="c13Unit"></div><div class="readout-pill" id="c13Sum"></div></div></div></div>';
+      const draw = function () {
+        const ux = Number(el.querySelector('#c13Ux').value) || 0, uy = Number(el.querySelector('#c13Uy').value) || 0;
+        const vx = Number(el.querySelector('#c13Vx').value) || 0, vy = Number(el.querySelector('#c13Vy').value) || 0;
+        const sx = ux + vx, sy = uy + vy;
+        const p = makePlotter(360, 270, Math.min(-2, ux, vx, sx) - 2, Math.max(4, ux, vx, sx) + 2, Math.min(-2, uy, vy, sy) - 2, Math.max(4, uy, vy, sy) + 2);
+        let svg = renderPlotBase(p);
+        const arrow = function (x1, y1, x2, y2, col, lbl) {
+          const mx = (p.toX(x1) + p.toX(x2)) / 2, my = (p.toY(y1) + p.toY(y2)) / 2;
+          return '<line x1="' + p.toX(x1).toFixed(1) + '" y1="' + p.toY(y1).toFixed(1) + '" x2="' + p.toX(x2).toFixed(1) + '" y2="' + p.toY(y2).toFixed(1) + '" stroke="' + col + '" stroke-width="2.6"/><circle cx="' + p.toX(x2).toFixed(1) + '" cy="' + p.toY(y2).toFixed(1) + '" r="4" fill="' + col + '"/><text x="' + (mx + 6).toFixed(1) + '" y="' + (my - 5).toFixed(1) + '" font-size="11" font-weight="700" fill="' + col + '">' + lbl + '</text>';
+        };
+        svg += arrow(0, 0, ux, uy, 'var(--svg-blue)', 'u');
+        svg += arrow(ux, uy, sx, sy, 'var(--svg-amber)', 'v');
+        svg += arrow(0, 0, sx, sy, 'var(--svg-teal)', 'u+v');
+        el.querySelector('#c13Svg').innerHTML = svg;
+        const u2 = ux * ux + uy * uy, s2 = sx * sx + sy * sy;
+        el.querySelector('#c13Mag').textContent = '精确模长 |u| = ' + formatSurd(u2) + '；合成向量的模 |u + v| = ' + formatSurd(s2);
+        el.querySelector('#c13Unit').textContent = u2 === 0 ? '零向量无单位向量' : 'u 方向单位向量 û = (1/' + formatSurd(u2) + ') (' + ux + 'i + ' + uy + 'j)';
+        el.querySelector('#c13Sum').textContent = '合成向量 u + v = (' + sx + ', ' + sy + ')；差向量 u − v = (' + (ux - vx) + ', ' + (uy - vy) + ')';
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch14') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 14 交互实验室 · 指数、对数与三角链式导数验证台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>函数 y：<select id="c14F"><option value="exp">k e^(ax+b)</option><option value="ln">k ln(ax+b)</option><option value="sin">k sin(ax+b)</option><option value="cos">k cos(ax+b)</option><option value="tan">k tan(ax+b)</option></select></label>' +
+        '<label>k：<input type="number" id="c14K" value="2"></label><label>a：<input type="number" id="c14A" value="3"></label><label>b：<input type="number" id="c14B" value="1"></label>' +
+        '<label>检验 x₀：<input type="number" id="c14X" value="0" step="0.5"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c14Der"></div><div class="readout-pill" id="c14Val"></div></div></div>';
+      const draw = function () {
+        const f = el.querySelector('#c14F').value;
+        const k = Number(el.querySelector('#c14K').value) || 1;
+        const a = Number(el.querySelector('#c14A').value) || 1;
+        const b = Number(el.querySelector('#c14B').value) || 0;
+        const x = Number(el.querySelector('#c14X').value) || 0;
+        const arg = a * x + b;
+        let dtxt = '', val = NaN;
+        if (f === 'exp') { dtxt = (k * a) + ' e^(' + a + 'x + (' + b + '))'; val = k * a * Math.exp(arg); }
+        else if (f === 'ln') { dtxt = formatFrac(k * a, 1) + '·a 约去系数得 ' + k + '·(' + a + ') / (' + a + 'x + (' + b + '))  （注：ln 里常数 k 与系数 a 对消规律：d/dx[ln(ax+b)] = a/(ax+b)！）'; val = arg !== 0 ? (k * a) / arg : NaN; }
+        else if (f === 'sin') { dtxt = (k * a) + ' cos(' + a + 'x + (' + b + '))'; val = k * a * Math.cos(arg); }
+        else if (f === 'cos') { dtxt = (-k * a) + ' sin(' + a + 'x + (' + b + '))  (注意负号!)'; val = -k * a * Math.sin(arg); }
+        else { dtxt = (k * a) + ' sec²(' + a + 'x + (' + b + '))'; val = Math.abs(Math.cos(arg)) > 0.01 ? (k * a) / (Math.cos(arg) * Math.cos(arg)) : NaN; }
+        el.querySelector('#c14Der').textContent = '导数表达式 dy/dx = ' + dtxt;
+        el.querySelector('#c14Val').textContent = '在 x₀ = ' + x + ' rad 处斜率数值 ≈ ' + (Number.isFinite(val) ? val.toFixed(4) : '未定义（除数为 0）');
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch15') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 15 交互实验室 · 定积分“代数净值” vs “绝对几何面积”对照仪</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>被积函数：<select id="c15F"><option value="par">y = x² − 4</option><option value="cub">y = x³ − 4x</option><option value="sin">y = 3 sin(x)</option></select></label>' +
+        '<label>下限 a：<input type="number" id="c15A" value="-1" step="0.5"></label><label>上限 b：<input type="number" id="c15B" value="3" step="0.5"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c15Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c15Net"></div><div class="readout-pill" id="c15Geom"></div><div class="readout-pill" id="c15Rule"></div></div></div></div>';
+      const draw = function () {
+        const mode = el.querySelector('#c15F').value;
+        let a = Number(el.querySelector('#c15A').value) || -1;
+        let b = Number(el.querySelector('#c15B').value) || 3;
+        if (b < a) { const t = a; a = b; b = t; }
+        const fn = function (x) { return mode === 'par' ? x * x - 4 : mode === 'cub' ? x * x * x - 4 * x : 3 * Math.sin(x); };
+        const p = makePlotter(360, 270, Math.min(-3, a - 0.5), Math.max(4, b + 0.5), -6, 7);
+        let svg = renderPlotBase(p);
+        const N = 120, dx = (b - a) / N;
+        let net = 0, geom = 0;
+        for (let i = 0; i < N; i++) {
+          const x1 = a + i * dx, x2 = x1 + dx, xm = (x1 + x2) / 2, ym = fn(xm);
+          net += ym * dx;
+          geom += Math.abs(ym) * dx;
+          const top = ym >= 0 ? p.toY(ym) : p.toY(0);
+          const ht = Math.abs(p.toY(ym) - p.toY(0));
+          svg += '<rect x="' + p.toX(x1).toFixed(1) + '" y="' + top.toFixed(1) + '" width="' + Math.max(1.5, p.toX(x2) - p.toX(x1)).toFixed(1) + '" height="' + ht.toFixed(1) + '" fill="' + (ym >= 0 ? 'rgba(22,163,74,0.35)' : 'rgba(220,38,38,0.35)') + '"/>';
+        }
+        svg += plotCurve(p, fn, 'var(--svg-indigo)', false);
+        el.querySelector('#c15Svg').innerHTML = svg;
+        el.querySelector('#c15Net').textContent = '定积分代数和 ∫ₐᵇ f(x) dx ≈ ' + net.toFixed(3) + '（x 轴下方红色贡献为负，互相抵消）';
+        el.querySelector('#c15Geom').textContent = '总几何围成面积 ∫ₐᵇ |f(x)| dx ≈ ' + geom.toFixed(3) + '（必须按零点分段取 |…| 相加！）';
+        el.querySelector('#c15Rule').textContent = '考场避坑：求 x 轴下方区域面积务必加负号 −∫ 或取绝对值 |∫|！';
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch16') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 16 交互实验室 · 运动学 s–v–a 瞬时静止折返与总路程拆分器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>速度模型 v(t)：<select id="c16M"><option value="q">v = t² − 4t + 3 (t=1,3 折返)</option><option value="lin">v = 6 − 2t (t=3 折返)</option></select></label>' +
+        '<label>终止时刻 T (s)：<input type="range" id="c16T" min="0.5" max="5" step="0.5" value="4"><span id="c16TLbl">4.0s</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c16Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c16Inst"></div><div class="readout-pill" id="c16Disp"></div><div class="readout-pill" id="c16Dist"></div></div></div></div>';
+      const draw = function () {
+        const mode = el.querySelector('#c16M').value;
+        const T = Number(el.querySelector('#c16T').value) || 4;
+        el.querySelector('#c16TLbl').textContent = T.toFixed(1) + 's';
+        const vFn = function (t) { return mode === 'q' ? t * t - 4 * t + 3 : 6 - 2 * t; };
+        const aFn = function (t) { return mode === 'q' ? 2 * t - 4 : -2; };
+        const p = makePlotter(360, 270, 0, 5.2, -5, 9);
+        let svg = renderPlotBase(p);
+        const N = 100, dt = T / N;
+        let disp = 0, dist = 0;
+        for (let i = 0; i < N; i++) {
+          const t1 = i * dt, tm = t1 + dt / 2, vm = vFn(tm);
+          disp += vm * dt;
+          dist += Math.abs(vm) * dt;
+          const top = vm >= 0 ? p.toY(vm) : p.toY(0);
+          svg += '<rect x="' + p.toX(t1).toFixed(1) + '" y="' + top.toFixed(1) + '" width="' + Math.max(1.5, p.toX(t1 + dt) - p.toX(t1)).toFixed(1) + '" height="' + Math.abs(p.toY(vm) - p.toY(0)).toFixed(1) + '" fill="' + (vm >= 0 ? 'rgba(3,105,161,0.3)' : 'rgba(220,38,38,0.32)') + '"/>';
+        }
+        svg += plotCurve(p, vFn, 'var(--svg-indigo)', false);
+        svg += plotDot(p, T, vFn(T), 'var(--svg-red)', 't=' + T.toFixed(1));
+        el.querySelector('#c16Svg').innerHTML = svg;
+        el.querySelector('#c16Inst').textContent = '在 t = ' + T.toFixed(1) + 's：瞬时速度 v = ' + vFn(T).toFixed(2) + ' m/s，加速度 a = dv/dt = ' + aFn(T).toFixed(2) + ' m/s²';
+        el.querySelector('#c16Disp').textContent = '净位移 Displacement (∫₀ᵀ v dt) = ' + disp.toFixed(2) + ' m';
+        el.querySelector('#c16Dist').textContent = '总路程 Total Distance (在 v=0 处拆分取 |…|) = ' + dist.toFixed(2) + ' m' + (Math.abs(dist - Math.abs(disp)) > 0.05 ? ' （已折返！）' : '');
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    }
+  }
+
+  document.querySelectorAll('.lab-box[data-lab-type]').forEach(mountChapterLab);
+
+  // ---------- 11. Initialize State & Scroll Spy ----------
+  applyViewMode(currentViewMode);
+  applyQuizMask(quizMasked);
+
+  const backTopBtn = document.getElementById('backTopBtn');
+  const trackedSections = Array.from(document.querySelectorAll('.topic-section[id]'));
+  const navLinks = Array.from(document.querySelectorAll('.sidebar .nav-link'));
+
+  window.addEventListener('scroll', function () {
+    if (backTopBtn) backTopBtn.classList.toggle('visible', window.scrollY > 360);
+    const y = window.scrollY + 110;
+    let currentId = '';
+    for (let i = 0; i < trackedSections.length; i++) {
+      if (trackedSections[i].offsetTop <= y && getComputedStyle(trackedSections[i]).display !== 'none') {
+        currentId = trackedSections[i].id;
+      }
+    }
+    navLinks.forEach(function (lnk) {
+      const h = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('active', h === currentId);
+    });
+  }, { passive: true });
+
+  if (backTopBtn) {
+    backTopBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  }
+})();
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,2243 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="--accent: #4338CA;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch01 · Chapter 1: Functions — IGCSE Add Maths (0606) 精讲</title>
+  <style>
+/* ==========================================================================
+   Cambridge IGCSE Additional Mathematics (0606 · 3rd Ed. Sue Pemberton)
+   16-Chapter Suite Shared Stylesheet (Offline, Zero CDN, Print-Ready)
+   ========================================================================== */
+
+:root {
+  --bg-page: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --bg-sidebar: #FFFFFF;
+  --bg-code: #EFF6FF;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-faint: #64748B;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+
+  --accent: #4338CA;
+  --accent-hover: #3730A3;
+  --accent-soft: #E0E7FF;
+
+  --p1-bg: #E0E7FF;
+  --p1-text: #3730A3;
+  --p1-border: #C7D2FE;
+  --p2-bg: #FEF3C7;
+  --p2-text: #92400E;
+  --p2-border: #FDE68A;
+
+  --deep-bg: #EFF6FF;
+  --deep-border: #2563EB;
+  --tip-bg: #FFFBEB;
+  --tip-border: #D97706;
+  --mistake-bg: #FFF1F2;
+  --mistake-border: #E11D48;
+  --example-bg: #F0FDF4;
+  --example-border: #16A34A;
+  --formula-bg: #F8FAFC;
+  --formula-border: #4338CA;
+
+  --ok-bg: #DCFCE7;
+  --ok-text: #166534;
+  --ok-border: #86EFAC;
+  --err-bg: #FEE2E2;
+  --err-text: #991B1B;
+  --err-border: #FCA5A5;
+
+  --svg-bg: #FFFFFF;
+  --svg-grid: #E2E8F0;
+  --svg-ink: #0F172A;
+  --svg-muted: #64748B;
+  --svg-blue: #2563EB;
+  --svg-indigo: #4338CA;
+  --svg-teal: #0F766E;
+  --svg-amber: #D97706;
+  --svg-red: #DC2626;
+  --svg-green: #16A34A;
+  --svg-purple: #6D28D9;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.07);
+  --shadow-lg: 0 10px 26px rgba(15, 23, 42, 0.11);
+
+  --sidebar-w: 288px;
+  --topbar-h: 58px;
+  --radius-sm: 7px;
+  --radius-md: 11px;
+  --radius-lg: 16px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Songti SC", "Noto Serif SC", Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+[data-theme="dark"] {
+  --bg-page: #0B1120;
+  --bg-surface: #111827;
+  --bg-subtle: #1E293B;
+  --bg-sidebar: #0F172A;
+  --bg-code: #1E293B;
+  --text-main: #F1F5F9;
+  --text-muted: #CBD5E1;
+  --text-faint: #94A3B8;
+  --border: #1E293B;
+  --border-strong: #334155;
+
+  --accent: #818CF8;
+  --accent-hover: #A5B4FC;
+  --accent-soft: rgba(129, 140, 248, 0.18);
+
+  --p1-bg: rgba(129, 140, 248, 0.18);
+  --p1-text: #C7D2FE;
+  --p1-border: rgba(129, 140, 248, 0.38);
+  --p2-bg: rgba(245, 158, 11, 0.16);
+  --p2-text: #FDE68A;
+  --p2-border: rgba(245, 158, 11, 0.35);
+
+  --deep-bg: rgba(37, 99, 235, 0.14);
+  --deep-border: #60A5FA;
+  --tip-bg: rgba(217, 119, 6, 0.14);
+  --tip-border: #FBBF24;
+  --mistake-bg: rgba(225, 29, 72, 0.15);
+  --mistake-border: #FB7185;
+  --example-bg: rgba(22, 163, 74, 0.13);
+  --example-border: #4ADE80;
+  --formula-bg: #172033;
+  --formula-border: #818CF8;
+
+  --ok-bg: rgba(22, 163, 74, 0.22);
+  --ok-text: #BBF7D0;
+  --ok-border: #22C55E;
+  --err-bg: rgba(220, 38, 38, 0.22);
+  --err-text: #FECACA;
+  --err-border: #EF4444;
+
+  --svg-bg: #0F172A;
+  --svg-grid: #334155;
+  --svg-ink: #F1F5F9;
+  --svg-muted: #94A3B8;
+  --svg-blue: #60A5FA;
+  --svg-indigo: #818CF8;
+  --svg-teal: #2DD4BF;
+  --svg-amber: #FBBF24;
+  --svg-red: #F87171;
+  --svg-green: #34D399;
+  --svg-purple: #A78BFA;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--topbar-h) + 18px); }
+body { margin: 0; font-family: var(--font-sans); background: var(--bg-page); color: var(--text-main); line-height: 1.72; font-size: 15.5px; -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4 { margin: 0 0 0.55em 0; line-height: 1.32; font-weight: 700; color: var(--text-main); }
+p { margin: 0 0 0.9em 0; }
+ul, ol { margin: 0 0 1em 0; padding-left: 1.45em; }
+li { margin-bottom: 0.35em; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { font-family: var(--font-mono); font-size: 0.9em; background: var(--bg-code); color: var(--accent); padding: 2px 6px; border-radius: 4px; }
+
+/* View Mode Filters */
+body.mode-book .sme-section { display: none !important; }
+body.mode-sme .book-section { display: none !important; }
+
+/* Math Formatting Helpers (Pure CSS, Zero CDN) */
+.math { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 1.04em; letter-spacing: 0.01em; }
+.math-upright { font-family: Georgia, "Times New Roman", serif; font-style: normal; }
+.frac { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; font-size: 0.88em; line-height: 1.1; margin: 0 2px; font-style: normal; font-family: Georgia, "Times New Roman", serif; }
+.frac .num { border-bottom: 1.5px solid currentColor; padding: 0 4px 1px 4px; }
+.frac .den { padding: 1px 4px 0 4px; }
+.sqrt { display: inline-flex; align-items: baseline; font-family: Georgia, "Times New Roman", serif; }
+.sqrt-rad { border-top: 1.4px solid currentColor; padding: 0 3px 0 2px; margin-left: 1px; }
+.vec-col { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; border-left: 1.5px solid currentColor; border-right: 1.5px solid currentColor; border-radius: 4px; padding: 1px 6px; line-height: 1.25; font-style: normal; font-family: Georgia, "Times New Roman", serif; margin: 0 3px; font-size: 0.92em; }
+.ncr-stack { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; border-left: 1.4px solid currentColor; border-right: 1.4px solid currentColor; border-radius: 6px; padding: 0 5px; line-height: 1.15; font-style: normal; font-family: Georgia, "Times New Roman", serif; margin: 0 2px; font-size: 0.9em; }
+
+.formula-card { background: var(--formula-bg); border: 1.5px solid var(--border-strong); border-left: 5px solid var(--formula-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; font-size: 15px; }
+.formula-main { font-family: Georgia, "Times New Roman", serif; font-size: 16.5px; font-weight: 700; color: var(--accent); margin: 4px 0 6px 0; }
+.matrix-shoe { display: inline-flex; align-items: center; gap: 6px; background: var(--bg-surface); border: 1px solid var(--border-strong); padding: 8px 14px; border-radius: 8px; font-family: Georgia, "Times New Roman", serif; font-size: 15.5px; margin: 8px 0; flex-wrap: wrap; }
+.shoe-cols { display: inline-flex; gap: 16px; border-left: 2px solid var(--text-main); border-right: 2px solid var(--text-main); padding: 4px 12px; }
+.shoe-col { display: flex; flex-direction: column; align-items: center; line-height: 1.45; }
+
+/* Topbar & Responsive Controls */
+.topbar {
+  position: sticky; top: 0; z-index: 100; height: var(--topbar-h);
+  background: var(--bg-surface); border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm); display: flex; align-items: center;
+  justify-content: space-between; gap: 10px; padding: 0 16px;
+}
+.topbar-left { display: flex; align-items: center; gap: 8px; min-width: 0; flex-shrink: 1; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 34px; padding: 0 11px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--bg-surface); color: var(--text-main); font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; text-decoration: none; }
+.icon-btn:hover { background: var(--bg-subtle); border-color: var(--accent); text-decoration: none; }
+.icon-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.menu-toggle { display: none; }
+.brand-pill { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; white-space: nowrap; flex-shrink: 1; min-width: 0; }
+.brand-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 240px; }
+.brand-code { background: var(--accent); color: #fff; padding: 2px 8px; border-radius: 5px; font-size: 12px; letter-spacing: 0.4px; white-space: nowrap; flex-shrink: 0; }
+.search-wrap { position: relative; flex: 1 1 160px; min-width: 140px; max-width: 280px; }
+.search-input { width: 100%; height: 34px; padding: 0 30px 0 32px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--bg-subtle); color: var(--text-main); font-size: 13.5px; outline: none; }
+.search-input:focus { border-color: var(--accent); background: var(--bg-surface); }
+.search-input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.search-icon { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); color: var(--text-faint); font-size: 13px; pointer-events: none; }
+.search-clear { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); border: none; background: transparent; color: var(--text-faint); cursor: pointer; font-size: 14px; display: none; }
+.search-results-bar { display: none; background: var(--accent-soft); border-bottom: 1px solid var(--border); padding: 8px 20px; font-size: 13.5px; color: var(--text-main); align-items: center; justify-content: space-between; gap: 12px; }
+.search-results-bar.visible { display: flex; }
+.topbar-controls { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.seg-group { display: inline-flex; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); overflow: hidden; background: var(--bg-subtle); }
+.seg-btn { border: none; background: transparent; color: var(--text-muted); padding: 6px 10px; font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.seg-btn.active { background: var(--accent); color: #fff; }
+.progress-chip { display: flex; align-items: center; gap: 8px; padding: 4px 10px; border-radius: 999px; background: var(--bg-subtle); border: 1px solid var(--border); font-size: 12.5px; font-weight: 600; white-space: nowrap; }
+.progress-track { width: 54px; height: 7px; background: var(--border-strong); border-radius: 99px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), #0F766E); transition: width 0.25s ease; }
+
+.app-layout { display: flex; min-height: calc(100vh - var(--topbar-h)); }
+.sidebar { width: var(--sidebar-w); flex-shrink: 0; background: var(--bg-sidebar); border-right: 1px solid var(--border); position: sticky; top: var(--topbar-h); height: calc(100vh - var(--topbar-h)); overflow-y: auto; padding: 14px 10px 44px 10px; }
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 99px; }
+.nav-unit { margin-bottom: 8px; }
+.nav-unit-btn { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border: none; border-radius: var(--radius-sm); background: transparent; color: var(--text-main); font-size: 13px; font-weight: 700; text-align: left; cursor: pointer; }
+.nav-unit-btn:hover { background: var(--bg-subtle); }
+.nav-unit-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.nav-unit-title { flex: 1; display: flex; align-items: center; gap: 7px; line-height: 1.3; }
+.nav-chevron { font-size: 11px; color: var(--text-faint); transition: transform 0.2s; }
+.nav-unit.collapsed .nav-chevron { transform: rotate(-90deg); }
+.nav-unit.collapsed .nav-links { display: none; }
+.nav-links { list-style: none; padding: 2px 0 4px 12px; margin: 0 0 0 14px; border-left: 2px solid var(--border); }
+.nav-link { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 5px 9px; margin: 2px 0; border-radius: var(--radius-sm); color: var(--text-muted); font-size: 12.6px; line-height: 1.35; text-decoration: none; }
+.nav-link:hover { background: var(--bg-subtle); color: var(--text-main); text-decoration: none; }
+.nav-link.active { background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+.nav-done-mark { color: #10B981; font-weight: 800; font-size: 12px; opacity: 0; }
+.nav-link.mastered .nav-done-mark { opacity: 1; }
+.main-content { flex: 1; min-width: 0; padding: 26px 32px 80px 32px; }
+.content-inner { max-width: 960px; margin: 0 auto; }
+
+.hero-card { background: linear-gradient(135deg, #1E1B4B 0%, var(--accent) 55%, #0F766E 100%); color: #fff; border-radius: var(--radius-lg); padding: 28px 32px; margin-bottom: 26px; box-shadow: var(--shadow-lg); }
+.hero-card h1 { color: #fff; font-size: 25px; margin-bottom: 8px; letter-spacing: -0.3px; }
+.hero-sub { color: rgba(255,255,255,0.92); font-size: 14.8px; max-width: 820px; margin-bottom: 16px; }
+.hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.hero-pill { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.28); color: #fff; padding: 4px 11px; border-radius: 999px; font-size: 12.5px; font-weight: 600; }
+.unit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+.unit-tile { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.24); border-radius: var(--radius-md); padding: 12px 14px; color: #fff; text-decoration: none; display: block; transition: transform 0.15s, background 0.15s; }
+.unit-tile:hover { transform: translateY(-2px); background: rgba(255,255,255,0.22); text-decoration: none; }
+.unit-tile-num { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.7px; opacity: 0.85; font-weight: 700; }
+.unit-tile-title { font-size: 14.5px; font-weight: 700; margin: 3px 0; }
+.unit-tile-meta { font-size: 12px; opacity: 0.88; }
+
+.topic-section { background: var(--bg-surface); border: 1px solid var(--border); border-top: 4px solid var(--accent); border-radius: var(--radius-md); padding: 24px 26px; margin-bottom: 24px; box-shadow: var(--shadow-sm); }
+.topic-section.search-dim { display: none; }
+.section-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 2px solid var(--border); }
+.section-title-group h3 { font-size: 19.5px; margin-bottom: 4px; }
+.section-en-sub { font-size: 13.5px; color: var(--text-faint); font-weight: 600; }
+.tier-row { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 7px; }
+.badge-p1, .badge-p2 { display: inline-block; font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.badge-p1 { background: var(--p1-bg); color: var(--p1-text); border: 1px solid var(--p1-border); }
+.badge-p2 { background: var(--p2-bg); color: var(--p2-text); border: 1px solid var(--p2-border); }
+.master-btn { flex-shrink: 0; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-muted); font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.master-btn:hover { border-color: #10B981; color: #10B981; }
+.master-btn.is-mastered { background: var(--ok-bg); color: var(--ok-text); border-color: var(--ok-border); }
+.subtopic { margin-bottom: 20px; }
+.subtopic:last-of-type { margin-bottom: 12px; }
+.subtopic h4 { font-size: 16px; color: var(--accent); margin: 0 0 10px 0; padding-bottom: 4px; border-bottom: 1px dashed var(--border); display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+
+.worked-example { background: var(--example-bg); border: 1px solid var(--border); border-left: 4px solid var(--example-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; }
+.worked-title { font-weight: 800; font-size: 14px; color: var(--example-border); margin-bottom: 6px; }
+.callout { border-radius: var(--radius-sm); padding: 13px 16px; margin: 14px 0; border-left: 4px solid var(--border-strong); font-size: 14.5px; }
+.callout-title { font-weight: 800; font-size: 13.5px; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+.deep-dive { background: var(--deep-bg); border-left-color: var(--deep-border); }
+.deep-dive .callout-title { color: var(--deep-border); }
+.examiner-tip { background: var(--tip-bg); border-left-color: var(--tip-border); }
+.examiner-tip .callout-title { color: var(--tip-border); }
+.common-mistake { background: var(--mistake-bg); border-left-color: var(--mistake-border); }
+.common-mistake .callout-title { color: var(--mistake-border); }
+
+.table-wrap { width: 100%; overflow-x: auto; margin: 14px 0; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+table.am-table { width: 100%; border-collapse: collapse; font-size: 13.8px; text-align: left; }
+table.am-table th { background: var(--bg-subtle); color: var(--text-main); font-weight: 700; padding: 9px 12px; border-bottom: 2px solid var(--border-strong); white-space: nowrap; }
+table.am-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.am-table tr:last-child td { border-bottom: none; }
+table.am-table tbody tr:hover { background: var(--bg-subtle); }
+
+.svg-figure { background: var(--svg-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px; margin: 16px 0; text-align: center; break-inside: avoid; }
+.svg-figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.svg-caption { margin-top: 8px; font-size: 13px; color: var(--text-faint); font-weight: 600; }
+
+/* Interactive Labs */
+.lab-box { background: var(--bg-subtle); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px; margin: 18px 0; break-inside: avoid; }
+.lab-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+.lab-title { font-size: 15.5px; font-weight: 800; color: var(--accent); display: flex; align-items: center; gap: 7px; }
+.lab-panel { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; }
+.lab-controls { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-bottom: 12px; align-items: center; }
+.lab-controls label { font-size: 13px; font-weight: 700; color: var(--text-muted); display: inline-flex; align-items: center; gap: 6px; }
+.lab-controls input[type="number"], .lab-controls select { padding: 5px 8px; border-radius: 6px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-main); font-size: 13.2px; font-weight: 700; }
+.lab-controls input[type="number"] { width: 68px; text-align: center; }
+.lab-controls input[type="range"] { width: 120px; accent-color: var(--accent); }
+.lab-grid-2col { display: grid; grid-template-columns: 1.12fr 1fr; gap: 14px; align-items: start; }
+@media (max-width: 820px) { .lab-grid-2col { grid-template-columns: 1fr; } }
+.tab-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.tab-btn { border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-muted); padding: 5px 10px; border-radius: 6px; font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.tab-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.lab-readout { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; font-size: 13.2px; font-weight: 600; }
+.readout-pill { background: var(--bg-page); border: 1px solid var(--border-strong); padding: 7px 10px; border-radius: 6px; width: 100%; line-height: 1.5; }
+
+/* Practice Questions & Concepts */
+.practice-block { margin-top: 18px; padding-top: 14px; border-top: 2px dashed var(--border-strong); }
+.practice-heading { font-size: 16px; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.exam-q { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 14px; break-inside: avoid; }
+.exam-q-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; font-size: 12.5px; }
+.q-tag { font-weight: 800; color: var(--accent); background: var(--accent-soft); padding: 2px 8px; border-radius: 5px; }
+.q-marks { font-weight: 700; color: var(--text-faint); }
+.q-stem-en { font-size: 14.8px; font-weight: 600; color: var(--text-main); margin-bottom: 6px; }
+.q-stem-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 12px; }
+.mcq-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin-bottom: 10px; }
+.mcq-opt { text-align: left; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 13.8px; cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.mcq-opt:hover { border-color: var(--accent); background: var(--bg-subtle); }
+.mcq-opt.correct { background: var(--ok-bg); border-color: var(--ok-border); color: var(--ok-text); font-weight: 700; }
+.mcq-opt.wrong { background: var(--err-bg); border-color: var(--err-border); color: var(--err-text); }
+.mcq-feedback { display: none; font-size: 13.5px; padding: 10px 12px; border-radius: var(--radius-sm); margin-top: 8px; }
+.mcq-feedback.visible { display: block; }
+.mcq-feedback.ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.mcq-feedback.err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+details.ms-details { margin-top: 10px; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 12px; }
+details.ms-details summary { cursor: pointer; font-weight: 700; font-size: 13.5px; color: var(--accent); user-select: none; }
+.ms-body { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 13.8px; }
+.ms-mark { display: inline-block; font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--p1-text); background: var(--p1-bg); padding: 1px 5px; border-radius: 4px; margin-right: 4px; }
+.ms-cn { color: var(--text-muted); margin-top: 4px; }
+
+.concept-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 14px; margin-bottom: 18px; }
+.concept-filter-group { display: flex; flex-wrap: wrap; gap: 6px; }
+.concept-actions { display: flex; align-items: center; gap: 10px; }
+.concept-count-pill { font-size: 12.5px; font-weight: 700; color: var(--text-muted); }
+.concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 14px; }
+.concept-card { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; gap: 8px; break-inside: avoid; }
+.concept-card:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
+.concept-card.concept-hidden { display: none !important; }
+.cq-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.cq-en { font-weight: 700; font-size: 14.5px; color: var(--text-main); line-height: 1.45; }
+.cq-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 2px; }
+.cq-answer { position: relative; margin-top: auto; background: var(--bg-surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius-sm); padding: 11px 13px; font-size: 13.8px; line-height: 1.6; }
+.kw { color: var(--accent); background: var(--accent-soft); padding: 0 4px; border-radius: 3px; font-weight: 700; }
+.cq-mask-hint { display: none; }
+.concept-card.masked .cq-answer { cursor: pointer; }
+.concept-card.masked .cq-answer-inner { filter: blur(7px); opacity: 0.22; user-select: none; pointer-events: none; transition: filter 0.2s, opacity 0.2s; }
+.concept-card.masked .cq-mask-hint { display: flex; align-items: center; justify-content: center; position: absolute; inset: 0; font-size: 13.5px; font-weight: 700; color: var(--accent); background: rgba(255,255,255,0.25); border-radius: var(--radius-sm); }
+[data-theme="dark"] .concept-card.masked .cq-mask-hint { background: rgba(15,23,42,0.35); }
+
+/* Chapter Pager & Hub Grid */
+.chapter-pager { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 28px; padding: 16px 20px; background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); }
+.pager-btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: var(--radius-sm); background: var(--bg-subtle); border: 1px solid var(--border-strong); color: var(--text-main); font-size: 13.5px; font-weight: 700; text-decoration: none; }
+.pager-btn:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); text-decoration: none; }
+.pager-btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.pager-btn.primary:hover { background: var(--accent-hover); color: #fff; }
+
+.hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px; margin-top: 18px; }
+.hub-card { display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-surface); border: 1px solid var(--border-strong); border-top: 5px solid var(--card-color, var(--accent)); border-radius: var(--radius-md); padding: 18px 18px 14px 18px; color: var(--text-main); text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; box-shadow: var(--shadow-sm); }
+.hub-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--card-color, var(--accent)); text-decoration: none; }
+.hub-card-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+.hub-badge { font-size: 11.5px; font-weight: 800; color: #fff; background: var(--card-color, var(--accent)); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill { font-size: 12px; font-weight: 700; color: var(--text-muted); background: var(--bg-subtle); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill.done { background: var(--ok-bg); color: var(--ok-text); }
+.hub-title { font-size: 16.5px; font-weight: 800; margin-bottom: 4px; }
+.hub-en { font-size: 12.8px; color: var(--text-faint); font-weight: 600; margin-bottom: 8px; }
+.hub-sub { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; }
+.hub-foot { font-size: 13px; font-weight: 700; color: var(--card-color, var(--accent)); display: flex; align-items: center; justify-content: space-between; }
+
+.back-top-btn { position: fixed; right: 22px; bottom: 22px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); box-shadow: var(--shadow-md); cursor: pointer; display: none; align-items: center; justify-content: center; font-size: 17px; font-weight: 800; z-index: 80; }
+.back-top-btn.visible { display: flex; }
+
+@media (max-width: 1200px) {
+  .brand-title, .btn-label { display: none; }
+  .seg-btn { padding: 6px 8px; }
+}
+@media (max-width: 980px) {
+  .menu-toggle { display: inline-flex; }
+  .sidebar { position: fixed; left: 0; top: var(--topbar-h); z-index: 95; transform: translateX(-100%); transition: transform 0.22s ease; box-shadow: var(--shadow-lg); }
+  .sidebar.open { transform: translateX(0); }
+  .main-content { padding: 18px 14px 64px 14px; }
+  .topic-section { padding: 18px 16px; }
+  .progress-chip { display: none; }
+  .search-wrap { min-width: 130px; }
+}
+@media (max-width: 640px) {
+  .topbar { padding: 0 10px; gap: 6px; }
+  .search-wrap { max-width: none; }
+  .concept-grid, .hub-grid { grid-template-columns: 1fr; }
+}
+@media print {
+  .topbar, .sidebar, .search-results-bar, .back-top-btn, .master-btn, .lab-controls button, .concept-toolbar, .cq-mask-hint, .chapter-pager { display: none !important; }
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  .main-content { padding: 0 !important; }
+  .content-inner { max-width: 100% !important; }
+  .topic-section, .exam-q, .callout, .worked-example, .svg-figure, .concept-card { box-shadow: none !important; break-inside: avoid; border-color: #CBD5E1 !important; }
+  details.ms-details, details.ms-details .ms-body, .mcq-feedback { display: block !important; }
+  .concept-card.masked .cq-answer-inner { filter: none !important; opacity: 1 !important; }
+}
+
+  </style>
+</head>
+<body data-chapter-code="Ch01">
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="展开目录">☰ 目录</button>
+      <a class="icon-btn" href="index.html" title="返回 16 章总目录"><span>🏠</span><span class="btn-label">总目录</span></a>
+      <div class="brand-pill">
+        <span class="brand-code">Ch01</span>
+        <span class="brand-title">Chapter 1: Functions</span>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="search" id="searchInput" class="search-input" placeholder="搜索本章定理、例题、真题与概念..." autocomplete="off" />
+      <button type="button" class="search-clear" id="searchClear" title="清空搜索">✕</button>
+    </div>
+
+    <div class="topbar-controls">
+      <div class="seg-group" role="group" aria-label="视图筛选">
+        <button type="button" class="seg-btn active" data-view-mode="all">All</button>
+        <button type="button" class="seg-btn" data-view-mode="book">教材精讲</button>
+        <button type="button" class="seg-btn" data-view-mode="sme">SaveMyExams 真题</button>
+      </div>
+
+      <div class="progress-chip" title="本章小节与真题模块掌握进度">
+        <span id="progressText">0/0</span>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+
+      <button type="button" class="icon-btn" id="toggleAllMs" title="展开或收起全部解析"><span>📝</span><span class="btn-label">展开解析</span></button>
+      <button type="button" class="icon-btn" id="themeToggle" title="切换亮色/暗色主题"><span id="themeIcon">🌙</span><span class="btn-label">主题</span></button>
+      <button type="button" class="icon-btn" id="printBtn" title="打印或导出为 PDF"><span>🖨️</span><span class="btn-label">导出 PDF</span></button>
+    </div>
+  </header>
+
+  <div class="search-results-bar" id="searchBar">
+    <span id="searchSummary">找到 0 个匹配板块</span>
+    <button type="button" class="icon-btn" id="searchResetBtn">重置过滤</button>
+  </div>
+
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="本章知识点导航">
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #4338CA;"></span>Ch01 本章小节目录</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#sec-1-1"><span>1.1 映射与对应关系 (Mappings)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-1-2"><span>1.2 函数定义：定义域、值域与一一对应 (Definition of a Function)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-1-3"><span>1.3 复合函数 (Composite Functions)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-1-4"><span>1.4 绝对值函数基础 (Modulus Functions)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-1-5"><span>1.5 线性绝对值函数图像 (Graphs of y = |f(x)|, f linear)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-1-6"><span>1.6 反函数与定义域限制 (Inverse Functions &amp; Domain Restriction)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-1-7"><span>1.7 原函数与反函数图像的对称性 (Graph of f and f⁻¹ Symmetrical in y = x)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-sme"><span>SaveMyExams 0606 真题与综合演练</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#app-concepts"><span>本章核心概念与证题句型直接默写库 (12题)</span><span class="nav-done-mark">✓</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #0F766E;"></span>全书 16 章快速切换</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link active" href="Ch01_Functions.html"><span>Ch01 · 函数、复合、绝对值与反函数</span></a></li>
+          <li><a class="nav-link" href="Ch02_Simultaneous_Quadratics.html"><span>Ch02 · 联立方程组与二次函数最值、不等式及判别式</span></a></li>
+          <li><a class="nav-link" href="Ch03_Factors_Polynomials.html"><span>Ch03 · 多项式除法、因式定理与余数定理</span></a></li>
+          <li><a class="nav-link" href="Ch04_Equations_Inequalities_Graphs.html"><span>Ch04 · 绝对值不等式、三次图像与变元二次方程</span></a></li>
+          <li><a class="nav-link" href="Ch05_Logarithmic_Exponential.html"><span>Ch05 · 对数、指数方程、换底公式与图像</span></a></li>
+          <li><a class="nav-link" href="Ch06_Straight_Line_Graphs.html"><span>Ch06 · 直线几何、鞋带面积与线性化 (Linear Law)</span></a></li>
+          <li><a class="nav-link" href="Ch07_Circle_Geometry.html"><span>Ch07 · 圆的解析方程、切线法线与双圆位置</span></a></li>
+          <li><a class="nav-link" href="Ch08_Circular_Measure.html"><span>Ch08 · 弧度制、弧长与扇形弓形周长面积</span></a></li>
+          <li><a class="nav-link" href="Ch09_Trigonometry.html"><span>Ch09 · CAST 象限角、三角图像、方程与恒等式</span></a></li>
+          <li><a class="nav-link" href="Ch10_Permutations_Combinations.html"><span>Ch10 · 阶乘、约束排列 (nPr) 与分组组合 (nCr)</span></a></li>
+          <li><a class="nav-link" href="Ch11_Series.html"><span>Ch11 · 杨辉三角、二项式定理与 AP / GP / S∞</span></a></li>
+          <li><a class="nav-link" href="Ch12_Differentiation_1.html"><span>Ch12 · 幂函数求导、链乘商法则、切法线与极值应用</span></a></li>
+          <li><a class="nav-link" href="Ch13_Vectors.html"><span>Ch13 · 单位向量、位置向量几何比与匀速运动追及</span></a></li>
+          <li><a class="nav-link" href="Ch14_Differentiation_2.html"><span>Ch14 · 指数、对数与三角函数求导及其综合应用</span></a></li>
+          <li><a class="nav-link" href="Ch15_Integration.html"><span>Ch15 · 不定积分、逆微分技巧、定积分与曲边面积</span></a></li>
+          <li><a class="nav-link" href="Ch16_Kinematics.html"><span>Ch16 · 运动学微积分：s-v-a 互推、瞬间静止与总路程</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-inner">
+        <section class="hero-card" id="top">
+          <h1>Chapter 1: Functions · 第 1 章 · 函数、复合、绝对值与反函数</h1>
+          <p class="hero-sub">
+            完整覆盖 <strong>Sue Pemberton 第 3 版教材（2025–2027 新考纲 · Paper 1 禁用计算器 Non-Calculator）</strong>本章全部小节：<code>1.1 Mappings · 1.2 函数定义 · 1.3 复合函数 · 1.4 绝对值函数 · 1.5 线性 |f(x)| 图像 · 1.6 反函数 · 1.7 原函数与反函数图像对称</code>，并结合 SaveMyExams 0606 真题精讲、交互实验室与考前概念默写卡。
+          </p>
+          <div class="hero-badges">
+            <span class="hero-pill">📘 Sue Pemberton 3rd Ed. · 2025–2027</span>
+            <span class="hero-pill">🚫 Paper 1 无计算器精确解法</span>
+            <span class="hero-pill">🧪 本章专属交互动态实验室</span>
+            <a class="hero-pill" href="#sec-sme" style="text-decoration: none;">📝 直达 SaveMyExams 真题 →</a>
+            <a class="hero-pill" href="#app-concepts" style="text-decoration: none; background: rgba(255,255,255,0.24);">🧠 直达中英概念默写库 →</a>
+          </div>
+          <div class="unit-grid">
+            <a class="unit-tile" href="#sec-1-1">
+              <div class="unit-tile-num">Section 1-1</div>
+              <div class="unit-tile-title">1.1 映射与对应关系 (Mappings)</div>
+            </a>
+            <a class="unit-tile" href="#sec-1-2">
+              <div class="unit-tile-num">Section 1-2</div>
+              <div class="unit-tile-title">1.2 函数定义：定义域、值域与一一对应 (Definition of a Function)</div>
+            </a>
+            <a class="unit-tile" href="#sec-1-3">
+              <div class="unit-tile-num">Section 1-3</div>
+              <div class="unit-tile-title">1.3 复合函数 (Composite Functions)</div>
+            </a>
+            <a class="unit-tile" href="#sec-1-4">
+              <div class="unit-tile-num">Section 1-4</div>
+              <div class="unit-tile-title">1.4 绝对值函数基础 (Modulus Functions)</div>
+            </a>
+          </div>
+        </section>
+
+        <div id="emptySearchNotice" class="callout deep-dive" style="display: none;">
+          <div class="callout-title">🔍 未找到匹配内容</div>
+          <p style="margin-bottom: 0;">请尝试更换关键词，或点击右上角“重置过滤”恢复显示。</p>
+        </div>
+
+<!-- ==================== CHAPTER 1: FUNCTIONS ==================== -->
+<article class="topic-section book-section" id="sec-1-1">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>1.1 映射与对应关系 (Mappings)</h3>
+      <div class="section-en-sub">Input-Output Mappings, Four Mapping Types &amp; Vertical Line Test</div>
+      <div class="tier-row">
+        <span class="badge-p1">Paper 1 基础概念</span>
+        <span class="badge-p2">判定是否为 Function</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-1-1">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>1.1.1 映射的四类基本关系与“函数门槛”</h4>
+    <p>
+      <strong>映射 (Mapping)</strong> 是指把输入集合（原像集 <strong>Object / Input set</strong>）中的每个元素 <span class="math">x</span>，按照某种规则对应到输出集合（像集 <strong>Image / Output set</strong>）中的元素 <span class="math">y</span>。根据输入与输出的数量配对方式，映射可分为 4 类：
+    </p>
+    <div class="table-wrap">
+      <table class="am-table">
+        <thead>
+          <tr>
+            <th>映射类型 (Mapping Type)</th>
+            <th>对应特征</th>
+            <th>是否为函数 (Function?)</th>
+            <th>是否存在反函数 (Inverse?)</th>
+            <th>典型示例</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>一对一 (One-one)</strong></td>
+            <td>每个 <span class="math">x</span> 只对应 1 个 <span class="math">y</span>，且每个 <span class="math">y</span> 只来自 1 个 <span class="math">x</span></td>
+            <td><strong>✅ 是 (Yes)</strong></td>
+            <td><strong>✅ 存在</strong></td>
+            <td><span class="math">x ↦ 2x + 1</span>（<span class="math">x ∈ ℝ</span>）</td>
+          </tr>
+          <tr>
+            <td><strong>多对一 (Many-one)</strong></td>
+            <td>多个不同 <span class="math">x</span> 可对应同一个 <span class="math">y</span>，但每个 <span class="math">x</span> 只有唯一输出</td>
+            <td><strong>✅ 是 (Yes)</strong></td>
+            <td><strong>❌ 不存在</strong>（除非限制定义域）</td>
+            <td><span class="math">x ↦ x²</span>（<span class="math">x ∈ ℝ</span>）</td>
+          </tr>
+          <tr>
+            <td><strong>一对多 (One-many)</strong></td>
+            <td>同一个输入 <span class="math">x</span> 对应两个或多个输出 <span class="math">y</span></td>
+            <td><strong>❌ 不是 (No)</strong></td>
+            <td>—</td>
+            <td><span class="math">x ↦ ±<span class="sqrt">√<span class="sqrt-rad">x</span></span></span>（<span class="math">x &gt; 0</span>）</td>
+          </tr>
+          <tr>
+            <td><strong>多对多 (Many-many)</strong></td>
+            <td>多个 <span class="math">x</span> 对应多个 <span class="math">y</span>，输入输出均不唯一</td>
+            <td><strong>❌ 不是 (No)</strong></td>
+            <td>—</td>
+            <td>圆 <span class="math">x² + y² = 25</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="formula-card">
+      <div class="formula-main">
+        函数准入铁律：Only <strong>one-one</strong> and <strong>many-one</strong> mappings are functions!
+      </div>
+      <p style="margin-bottom: 0;">
+        用图像判断看<strong>铅垂线检验 (Vertical Line Test)</strong>：任作一条竖直直线 <span class="math">x = c</span>（<span class="math">c</span> 在定义域内），若图像与该直线<strong>至多有 1 个交点</strong>，则为函数；若出现 2 个或以上交点（如开口向右的抛物线 <span class="math">y² = x</span> 或完整的圆），则属于 one-many / many-many，<strong>不是函数</strong>。
+      </p>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">📘 例题 1.1 · 映射分类与定义域对映射类型的改变</div>
+      <p>Classify each mapping and state whether it is a function:</p>
+      <p>
+        (a) <span class="math">x ↦ 3x − 4</span>, for <span class="math">x ∈ ℝ</span><br>
+        (b) <span class="math">x ↦ x²</span>, for <span class="math">x ∈ ℝ</span><br>
+        (c) <span class="math">x ↦ ±<span class="sqrt">√<span class="sqrt-rad">x</span></span></span>, for <span class="math">x ≥ 0</span><br>
+        (d) <span class="math">x ↦ x²</span>, for <span class="math">x ≥ 0</span>
+      </p>
+      <p style="margin-bottom: 0;">
+        <strong>解析 (Solution)：</strong><br>
+        (a) 线性且斜率非零：<span class="math">x₁ ≠ x₂ ⇒ 3x₁ − 4 ≠ 3x₂ − 4</span> ⇒ <strong>one-one</strong>，是函数。<br>
+        (b) 如 <span class="math">x = 2</span> 与 <span class="math">x = −2</span> 均映射到 <span class="math">4</span> ⇒ <strong>many-one</strong>，是函数。<br>
+        (c) 如 <span class="math">x = 9</span> 同时映射到 <span class="math">+3</span> 与 <span class="math">−3</span> ⇒ <strong>one-many</strong>，<strong>不是函数</strong>。<br>
+        (d) 限制了 <span class="math">x ≥ 0</span> 后，不存在两个不同非负数平方相等 ⇒ 从 many-one 变为 <strong>one-one</strong>，是函数（且因此存在反函数！）。
+      </p>
+    </div>
+
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 250" width="740" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="映射类型对比与铅垂线/水平线检验图">
+        <rect x="0" y="0" width="740" height="250" rx="10" fill="none" />
+        <!-- Panel 1: One-one & Many-one -->
+        <rect x="14" y="12" width="228" height="226" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="128" y="33" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-ink)">One-one vs Many-one (均为函数)</text>
+        <!-- One-one top -->
+        <text x="128" y="52" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-indigo)">One-one: x ↦ 2x + 1</text>
+        <ellipse cx="64" cy="92" rx="28" ry="30" fill="none" stroke="var(--svg-indigo)" stroke-width="1.6" />
+        <ellipse cx="192" cy="92" rx="28" ry="30" fill="none" stroke="var(--svg-teal)" stroke-width="1.6" />
+        <text x="64" y="84" text-anchor="middle" font-size="11" fill="var(--svg-ink)">1</text>
+        <text x="64" y="106" text-anchor="middle" font-size="11" fill="var(--svg-ink)">2</text>
+        <text x="192" y="84" text-anchor="middle" font-size="11" fill="var(--svg-ink)">3</text>
+        <text x="192" y="106" text-anchor="middle" font-size="11" fill="var(--svg-ink)">5</text>
+        <line x1="78" y1="81" x2="176" y2="81" stroke="var(--svg-indigo)" stroke-width="1.5" />
+        <polygon points="178,81 171,78 171,84" fill="var(--svg-indigo)" />
+        <line x1="78" y1="103" x2="176" y2="103" stroke="var(--svg-indigo)" stroke-width="1.5" />
+        <polygon points="178,103 171,100 171,106" fill="var(--svg-indigo)" />
+        <!-- Many-one bottom -->
+        <text x="128" y="143" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-blue)">Many-one: x ↦ x²</text>
+        <ellipse cx="64" cy="187" rx="28" ry="33" fill="none" stroke="var(--svg-blue)" stroke-width="1.6" />
+        <ellipse cx="192" cy="187" rx="28" ry="33" fill="none" stroke="var(--svg-teal)" stroke-width="1.6" />
+        <text x="64" y="175" text-anchor="middle" font-size="11" fill="var(--svg-ink)">−2</text>
+        <text x="64" y="203" text-anchor="middle" font-size="11" fill="var(--svg-ink)">+2</text>
+        <text x="192" y="191" text-anchor="middle" font-size="11" fill="var(--svg-ink)">4</text>
+        <line x1="79" y1="172" x2="176" y2="186" stroke="var(--svg-blue)" stroke-width="1.5" />
+        <polygon points="178,186 171,182 170,188" fill="var(--svg-blue)" />
+        <line x1="79" y1="201" x2="176" y2="190" stroke="var(--svg-blue)" stroke-width="1.5" />
+        <polygon points="178,190 170,188 171,194" fill="var(--svg-blue)" />
+
+        <!-- Panel 2: One-many (NOT a function) + Vertical Line Test -->
+        <rect x="256" y="12" width="228" height="226" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="370" y="33" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-red)">One-many · 非函数 (Vertical Test)</text>
+        <ellipse cx="304" cy="86" rx="26" ry="28" fill="none" stroke="var(--svg-red)" stroke-width="1.6" />
+        <ellipse cx="436" cy="86" rx="26" ry="28" fill="none" stroke="var(--svg-red)" stroke-width="1.6" />
+        <text x="304" y="90" text-anchor="middle" font-size="11" fill="var(--svg-ink)">9</text>
+        <text x="436" y="77" text-anchor="middle" font-size="11" fill="var(--svg-ink)">+3</text>
+        <text x="436" y="99" text-anchor="middle" font-size="11" fill="var(--svg-ink)">−3</text>
+        <line x1="316" y1="84" x2="418" y2="75" stroke="var(--svg-red)" stroke-width="1.5" />
+        <polygon points="420,75 412,72 413,78" fill="var(--svg-red)" />
+        <line x1="316" y1="88" x2="418" y2="97" stroke="var(--svg-red)" stroke-width="1.5" />
+        <polygon points="420,97 413,94 412,100" fill="var(--svg-red)" />
+        <!-- Sideways parabola vertical line test -->
+        <line x1="278" y1="176" x2="462" y2="176" stroke="var(--svg-muted)" stroke-width="1.2" />
+        <line x1="306" y1="130" x2="306" y2="222" stroke="var(--svg-muted)" stroke-width="1.2" />
+        <path d="M 426 138 Q 272 176 426 214" fill="none" stroke="var(--svg-ink)" stroke-width="2.2" />
+        <line x1="376" y1="128" x2="376" y2="224" stroke="var(--svg-red)" stroke-width="1.6" stroke-dasharray="4,3" />
+        <circle cx="376" cy="153" r="4" fill="var(--svg-red)" />
+        <circle cx="376" cy="199" r="4" fill="var(--svg-red)" />
+        <text x="424" y="135" font-size="10" font-weight="700" fill="var(--svg-red)">2 个交点 ⇒ 非函数</text>
+
+        <!-- Panel 3: Horizontal Line Test for One-one -->
+        <rect x="498" y="12" width="228" height="226" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="612" y="33" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-teal)">Horizontal Test · 判别 One-one</text>
+        <line x1="518" y1="186" x2="706" y2="186" stroke="var(--svg-muted)" stroke-width="1.2" />
+        <line x1="612" y1="54" x2="612" y2="208" stroke="var(--svg-muted)" stroke-width="1.2" />
+        <!-- Left branch dashed (removed), right branch solid (x >= 0) -->
+        <path d="M 544 68 Q 578 186 612 186" fill="none" stroke="var(--svg-muted)" stroke-width="2" stroke-dasharray="5,4" />
+        <path d="M 612 186 Q 646 186 680 68" fill="none" stroke="var(--svg-teal)" stroke-width="2.5" />
+        <!-- Horizontal test line y = c -->
+        <line x1="522" y1="112" x2="702" y2="112" stroke="var(--svg-amber)" stroke-width="1.6" stroke-dasharray="4,3" />
+        <circle cx="566" cy="112" r="3.8" fill="var(--svg-muted)" />
+        <circle cx="658" cy="112" r="4.2" fill="var(--svg-teal)" />
+        <text x="556" y="102" text-anchor="end" font-size="9.5" font-weight="700" fill="var(--svg-muted)">若保留 x &lt; 0</text>
+        <text x="665" y="102" font-size="9.5" font-weight="700" fill="var(--svg-teal)">x ≥ 0 仅 1 交点</text>
+        <text x="612" y="226" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-teal)">水平线至多 1 交点 ⇔ One-one (可逆)</text>
+      </svg>
+      <div class="svg-caption">图 1-1 · 四类映射分类、铅垂线检验（判是否为函数）与水平线检验（判是否为 one-one）</div>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-1-2">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>1.2 函数定义：定义域、值域与一一对应 (Definition of a Function)</h3>
+      <div class="section-en-sub">Notation f(x), Natural Domain, Exact Range &amp; One-One Criterion</div>
+      <div class="tier-row">
+        <span class="badge-p1">Paper 1 高频失分点</span>
+        <span class="badge-p2">二次函数区间值域陷阱</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-1-2">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>1.2.1 函数记号、自然定义域与值域求法</h4>
+    <p>
+      定义函数必须同时指明<strong>法则</strong>与<strong>定义域 (Domain)</strong>，常写作 <span class="math">f : x ↦ 2x + 1, x ∈ ℝ</span> 或 <span class="math">f(x) = 2x + 1 (x ≥ 0)</span>。其中：
+    </p>
+    <ul>
+      <li><strong>定义域 (Domain)</strong>：允许输入的所有 <span class="math">x</span> 的集合。若题目未显式给出，则需找<strong>最大自然定义域</strong>：
+        分母 ≠ 0（如 <span class="math"><span class="frac"><span class="num">1</span><span class="den">2x − 5</span></span> ⇒ x ≠ <span class="frac"><span class="num">5</span><span class="den">2</span></span></span>）；偶次根号内 ≥ 0（如 <span class="math"><span class="sqrt">√<span class="sqrt-rad">3x − 6</span></span> ⇒ x ≥ 2</span>）；分母中的根号需严格大于 0（如 <span class="math"><span class="frac"><span class="num">1</span><span class="den"><span class="sqrt">√<span class="sqrt-rad">10 − 2x</span></span></span></span> ⇒ x &lt; 5</span>）。</li>
+      <li><strong>值域 (Range)</strong>：输出值 <span class="math">f(x)</span> 在给定定义域内实际取遍的集合（必须用 <span class="math">f(x)</span> 或 <span class="math">y</span> 表示，不要写成 <span class="math">x</span>！）。</li>
+    </ul>
+
+    <div class="worked-example">
+      <div class="worked-title">📘 例题 1.2 · 闭区间上的二次函数值域与自然定义域</div>
+      <p>
+        (a) The function <span class="math">f</span> is defined by <span class="math">f(x) = x² − 6x + 5</span> for <span class="math">−1 ≤ x ≤ 5</span>. Find the range of <span class="math">f</span>.<br>
+        (b) State the largest possible domain of <span class="math">g(x) = <span class="frac"><span class="num">3</span><span class="den"><span class="sqrt">√<span class="sqrt-rad">10 − 2x</span></span></span></span></span>.
+      </p>
+      <p style="margin-bottom: 0;">
+        <strong>解析 (Solution)：</strong><br>
+        (a) 配方找顶点：<span class="math">f(x) = (x − 3)² − 4</span>，顶点在 <span class="math">(3, −4)</span>。<br>
+        检查顶点横坐标 <span class="math">x = 3</span> 是否落在区间 <span class="math">[−1, 5]</span> 内：<strong>是！</strong>因此最小值必在顶点取到：<span class="math">f(3) = −4</span>。<br>
+        再算两端点：<span class="math">f(−1) = (−4)² − 4 = 12</span>，<span class="math">f(5) = 2² − 4 = 0</span>。<br>
+        比较最大与最小输出，得值域：<strong><span class="math">−4 ≤ f(x) ≤ 12</span></strong>。<br>
+        (b) 分母不为 0 且根号内非负 ⇒ <span class="math">10 − 2x &gt; 0 ⇒ 2x &lt; 10 ⇒ <strong>x &lt; 5</strong></span>。
+      </p>
+    </div>
+
+    <div class="callout common-mistake">
+      <div class="callout-title">⚠️ 致命错题：求闭区间二次函数值域时只代入左右端点！</div>
+      <p style="margin-bottom: 0;">
+        很多同学在例 1.2(a) 中直接代 <span class="math">f(−1) = 12</span> 与 <span class="math">f(5) = 0</span>，错写成 <span class="math">0 ≤ f(x) ≤ 12</span>！只要开口向上（或向下）的抛物线对称轴落在给定定义域区间内，<strong>极值点（顶点）才是真正的一端边界</strong>。养成习惯：先画草图或先配方找顶点！
+      </p>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-1-3">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>1.3 复合函数 (Composite Functions)</h3>
+      <div class="section-en-sub">Order fg(x) = f(g(x)), Existence Condition Range(g) ⊆ Domain(f) &amp; Range of fg</div>
+      <div class="tier-row">
+        <span class="badge-p1">Paper 1 必考</span>
+        <span class="badge-p2">复合存在条件 &amp; 解域过滤</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-1-3">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>1.3.1 复合顺序、存在条件与复合值域两步流水线</h4>
+    <div class="formula-card">
+      <div class="formula-main">
+        fg(x) = f(g(x))（从右向左作用：先算内层 g，再代入外层 f）
+      </div>
+      <ul style="margin-bottom: 0;">
+        <li><strong>顺序不可交换</strong>：一般地 <span class="math">fg(x) ≠ gf(x)</span>；且 <span class="math">f²(x) = f(f(x))</span>，切忌当成 <span class="math">[f(x)]²</span>！</li>
+        <li><strong>复合存在条件 (Existence Condition)</strong>：<span class="math">fg</span> 有意义 ⇔ <strong><span class="math">Range(g) ⊆ Domain(f)</span></strong>（内层的值域必须完全落入外层的定义域内）。</li>
+        <li><strong>求 <span class="math">fg</span> 的值域</strong>：先根据 <span class="math">x</span> 的定义域求出内层值域 <span class="math">u = g(x)</span> 的范围，再把该范围作为输入代入外层 <span class="math">f(u)</span> 求最终输出范围。</li>
+      </ul>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">📘 例题 1.3A · 复合函数解析式、值域与解方程过滤定义域</div>
+      <p>
+        Given <span class="math">f(x) = x² + 2</span> (<span class="math">x ∈ ℝ</span>) and <span class="math">g(x) = 2x − 1</span> (<span class="math">x ≥ 1</span>):<br>
+        (a) Find an expression for <span class="math">fg(x)</span> and state the range of <span class="math">fg</span>.<br>
+        (b) Solve the equation <span class="math">fg(x) = gf(x)</span>.
+      </p>
+      <p style="margin-bottom: 0;">
+        <strong>解析 (Solution)：</strong><br>
+        (a) <span class="math">fg(x) = f(2x − 1) = (2x − 1)² + 2 = 4x² − 4x + 3</span>。<br>
+        求值域：因为 <span class="math">x ≥ 1</span>，所以内层 <span class="math">g(x) = 2x − 1 ≥ 2(1) − 1 = 1</span>。<br>
+        把 <span class="math">u = g(x) ≥ 1</span> 代入外层 <span class="math">f(u) = u² + 2</span>（在 <span class="math">u ≥ 1</span> 单调递增），最小值为 <span class="math">f(1) = 1² + 2 = 3</span>。<br>
+        故 <strong><span class="math">Range(fg): fg(x) ≥ 3</span></strong>（或 <span class="math">y ≥ 3</span>）。<br>
+        (b) 先算 <span class="math">gf(x) = g(x² + 2) = 2(x² + 2) − 1 = 2x² + 3</span>。<br>
+        联立 <span class="math">fg(x) = gf(x)</span>：<span class="math">4x² − 4x + 3 = 2x² + 3 ⇒ 2x² − 4x = 0 ⇒ 2x(x − 2) = 0 ⇒ x = 0</span> 或 <span class="math">x = 2</span>。<br>
+        <strong>关键验根</strong>：<span class="math">fg(x)</span> 的定义域继承自内层 <span class="math">g</span>（要求 <span class="math">x ≥ 1</span>），故 <span class="math">x = 0</span> 越界舍去，唯一解为 <strong><span class="math">x = 2</span></strong>！
+      </p>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">📘 例题 1.3B · 反求“使复合函数 fg 存在”的最小定义域限制</div>
+      <p>
+        Given <span class="math">f(x) = <span class="sqrt">√<span class="sqrt-rad">x − 3</span></span></span> (<span class="math">x ≥ 3</span>) and <span class="math">g(x) = 2x − 1</span> (<span class="math">x ∈ ℝ</span>). Explain why <span class="math">fg</span> does not exist for <span class="math">x ∈ ℝ</span>, and find the largest possible domain of <span class="math">g</span> for which <span class="math">fg</span> exists.
+      </p>
+      <p style="margin-bottom: 0;">
+        <strong>解析 (Solution)：</strong><br>
+        若 <span class="math">x ∈ ℝ</span>，则 <span class="math">Range(g) = ℝ</span>，它包含小于 <span class="math">3</span> 的数，并非 <span class="math">Domain(f) = {x ≥ 3}</span> 的子集，因此 <span class="math">fg</span> 不存在。<br>
+        要使 <span class="math">fg</span> 存在，必须满足 <span class="math">g(x) ≥ 3 ⇒ 2x − 1 ≥ 3 ⇒ <strong>x ≥ 2</strong></span>。
+      </p>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-1-4">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>1.4 绝对值函数基础 (Modulus Functions)</h3>
+      <div class="section-en-sub">Definition |x|, Algebraic Properties, |f(x)| vs f(|x|) &amp; Basic Modulus Equations</div>
+      <div class="tier-row">
+        <span class="badge-p1">Paper 1 基础代数</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-1-4">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>1.4.1 绝对值的分段定义与核心运算性质</h4>
+    <div class="formula-card">
+      <div class="formula-main">
+        |x| = x (当 x ≥ 0 时) &nbsp;&nbsp;|&nbsp;&nbsp; |x| = −x (当 x &lt; 0 时)
+      </div>
+      <p style="margin-bottom: 0;">
+        常用恒等式：<span class="math">|x| ≥ 0</span>；<span class="math">|ab| = |a|·|b|</span>；<span class="math">|x|² = x²</span>；<strong><span class="math"><span class="sqrt">√<span class="sqrt-rad">x²</span></span> = |x|</span></strong>（当 <span class="math">x &lt; 0</span> 时不是 <span class="math">x</span> 而是 <span class="math">−x</span>！）。<br>
+        基础方程：<span class="math">|ax + b| = c</span>，若 <span class="math">c &gt; 0 ⇒ ax + b = c</span> 或 <span class="math">ax + b = −c</span>；若 <span class="math">c &lt; 0 ⇒</span> <strong>无实数解 (No solution)</strong>。
+      </p>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">📘 例题 1.4 · 辨析 |f(x)| 与 f(|x|) 及含二次表达式的绝对值方程</div>
+      <p>
+        (a) Given <span class="math">f(x) = 2x − 5</span>, evaluate <span class="math">|f(−1)|</span> and <span class="math">f(|−1|)</span>.<br>
+        (b) Solve <span class="math">|x² − 5x| = 6</span>.
+      </p>
+      <p style="margin-bottom: 0;">
+        <strong>解析 (Solution)：</strong><br>
+        (a) <span class="math">|f(−1)| = |2(−1) − 5| = |−7| = <strong>7</strong></span>；而 <span class="math">f(|−1|) = f(1) = 2(1) − 5 = <strong>−3</strong></span>（两者完全不同！）。<br>
+        (b) 因右边 <span class="math">6 &gt; 0</span>，拆成两个二次方程：<br>
+        • <span class="math">x² − 5x = 6 ⇒ x² − 5x − 6 = 0 ⇒ (x − 6)(x + 1) = 0 ⇒ x = 6, −1</span><br>
+        • <span class="math">x² − 5x = −6 ⇒ x² − 5x + 6 = 0 ⇒ (x − 2)(x − 3) = 0 ⇒ x = 2, 3</span><br>
+        共 4 个精确解：<strong><span class="math">x = −1, 2, 3, 6</span></strong>。
+      </p>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-1-5">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>1.5 线性绝对值函数图像 (Graphs of y = |f(x)|, f linear)</h3>
+      <div class="section-en-sub">V-Shaped Reflection, Sharp Vertex, Vertical Shifts &amp; Graphical Solutions</div>
+      <div class="tier-row">
+        <span class="badge-p1">Paper 1 作图必考</span>
+        <span class="badge-p2">斜率比较防多解陷阱</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-1-5">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>1.5.1 四步画准 V 字图像 <span class="math">y = |mx + c|</span></h4>
+    <ol>
+      <li>先用轻虚线画出原一次函数 <span class="math">y = mx + c</span>，标出与 <span class="math">x</span> 轴交点 <span class="math">(−<span class="frac"><span class="num">c</span><span class="den">m</span></span>, 0)</span> 及 <span class="math">y</span> 轴截距 <span class="math">(0, c)</span>；</li>
+      <li>保留 <span class="math">x</span> 轴上方（<span class="math">y ≥ 0</span>）部分不动；</li>
+      <li>把 <span class="math">x</span> 轴下方（<span class="math">y &lt; 0</span>）的射线<strong>沿 <span class="math">x</span> 轴向上翻折</strong>（截距 <span class="math">(0, c)</span> 变成 <span class="math">(0, |c|)</span>）；</li>
+      <li>标出尖点（<strong>Vertex</strong>）<span class="math">(−<span class="frac"><span class="num">c</span><span class="den">m</span></span>, 0)</span>、左右支斜率 <span class="math">±m</span> 及对称轴 <span class="math">x = −<span class="frac"><span class="num">c</span><span class="den">m</span></span></span>。</li>
+    </ol>
+
+    <div class="callout examiner-tip">
+      <div class="callout-title">💡 考官技巧：从图像斜率秒判 |2x − 4| = px + q 有几个解</div>
+      <p style="margin-bottom: 0;">
+        画 <span class="math">y = |2x − 4|</span> 时左右两支斜率分别是 <span class="math">−2</span> 和 <span class="math">+2</span>。如果右端直线 <span class="math">y = x + 1</span> 的斜率 <span class="math">1 &lt; 2</span>，它会先后穿过左支和右支，有 <strong>2 个交点</strong>（<span class="math">x = 1</span> 和 <span class="math">x = 5</span>）；但如果右端直线是 <span class="math">y = 3x + 1</span>（斜率 <span class="math">3 &gt; 2</span>），左支会相交于 <span class="math">x = <span class="frac"><span class="num">3</span><span class="den">5</span></span></span>，而右支平行往右跑得比它慢，<strong>永远追不上</strong>（代数解出 <span class="math">x = −5</span> 在 <span class="math">x &lt; 2</span> 一侧，必须舍去）！
+      </p>
+    </div>
+
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 245" width="740" height="245" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="线性绝对值翻折作图与图像法求交点">
+        <rect x="0" y="0" width="740" height="245" rx="10" fill="none" />
+        <!-- Left panel: y = |2x - 4| step by step -->
+        <rect x="14" y="10" width="346" height="224" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="187" y="30" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-ink)">y = |2x − 4| 四步翻折作图法</text>
+        <!-- Axes -->
+        <line x1="36" y1="151.5" x2="344" y2="151.5" stroke="var(--svg-muted)" stroke-width="1.3" />
+        <line x1="68.2" y1="38" x2="68.2" y2="222" stroke="var(--svg-muted)" stroke-width="1.3" />
+        <text x="338" y="145" font-size="10.5" font-weight="700" fill="var(--svg-muted)">x</text>
+        <text x="74" y="48" font-size="10.5" font-weight="700" fill="var(--svg-muted)">y</text>
+        <!-- Dashed original y = 2x - 4 below x-axis -->
+        <line x1="68.2" y1="214.0" x2="164.8" y2="151.5" stroke="var(--svg-blue)" stroke-width="2" stroke-dasharray="5,4" />
+        <!-- Reflection arrow -->
+        <path d="M 88 192 C 80 165 80 135 88 108" fill="none" stroke="var(--svg-amber)" stroke-width="1.8" stroke-dasharray="3,2" />
+        <polygon points="88,105 84,113 92,113" fill="var(--svg-amber)" />
+        <text x="95" y="138" font-size="9.5" font-weight="700" fill="var(--svg-amber)">沿 x 轴翻折</text>
+        <!-- Solid V-graph y = |2x - 4| -->
+        <path d="M 44.0 73.3 L 164.8 151.5 L 334.0 42.0" fill="none" stroke="var(--svg-indigo)" stroke-width="2.8" />
+        <circle cx="68.2" cy="214.0" r="3.8" fill="var(--svg-blue)" />
+        <text x="75" y="218" font-size="10" font-weight="700" fill="var(--svg-blue)">原截距 (0, −4)</text>
+        <circle cx="68.2" cy="88.9" r="4.2" fill="var(--svg-indigo)" />
+        <text x="75" y="85" font-size="10.5" font-weight="700" fill="var(--svg-indigo)">(0, 4)</text>
+        <circle cx="164.8" cy="151.5" r="4.8" fill="var(--svg-red)" />
+        <text x="165" y="168" text-anchor="middle" font-size="10.5" font-weight="800" fill="var(--svg-red)">尖点 V(2, 0)</text>
+        <text x="278" y="65" font-size="10.5" font-weight="700" fill="var(--svg-indigo)">右支斜率 +2</text>
+
+        <!-- Right panel: |2x - 4| = x + 1 -->
+        <rect x="380" y="10" width="346" height="224" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="553" y="30" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-ink)">图像法求交点：|2x − 4| = x + 1</text>
+        <line x1="398" y1="193.8" x2="706" y2="193.8" stroke="var(--svg-muted)" stroke-width="1.3" />
+        <line x1="426.3" y1="38" x2="426.3" y2="218" stroke="var(--svg-muted)" stroke-width="1.3" />
+        <text x="700" y="187" font-size="10.5" font-weight="700" fill="var(--svg-muted)">x</text>
+        <text x="432" y="48" font-size="10.5" font-weight="700" fill="var(--svg-muted)">y</text>
+        <path d="M 404.0 92.6 L 515.5 193.8 L 681.9 42.8" fill="none" stroke="var(--svg-indigo)" stroke-width="2.6" />
+        <path d="M 404.0 183.6 L 694.0 52.1" fill="none" stroke="var(--svg-teal)" stroke-width="2.3" />
+        <circle cx="515.5" cy="193.8" r="4" fill="var(--svg-indigo)" />
+        <text x="515.5" y="210" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-indigo)">(2, 0)</text>
+        <circle cx="470.9" cy="153.3" r="4.8" fill="var(--svg-red)" />
+        <text x="466" y="142" text-anchor="end" font-size="10.5" font-weight="800" fill="var(--svg-red)">(1, 2)</text>
+        <circle cx="649.4" cy="72.4" r="4.8" fill="var(--svg-red)" />
+        <text x="641" y="64" text-anchor="end" font-size="10.5" font-weight="800" fill="var(--svg-red)">(5, 6)</text>
+        <text x="720" y="128" text-anchor="end" font-size="10.5" font-weight="700" fill="var(--svg-teal)">y = x + 1 (斜率 1 &lt; 2 ⇒ 2 交点)</text>
+      </svg>
+      <div class="svg-caption">图 1-2 · 线性绝对值 V 形翻折作图步骤与直线交点几何校验</div>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-1-6">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>1.6 反函数与定义域限制 (Inverse Functions &amp; Domain Restriction)</h3>
+      <div class="section-en-sub">Existence Condition (One-One), Domain-Range Swap, Quadratic Sign Choice &amp; Rational Inverses</div>
+      <div class="tier-row">
+        <span class="badge-p1">Paper 1 必考大题</span>
+        <span class="badge-p2">忘写 Domain(f⁻¹) 必扣分</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-1-6">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>1.6.1 反函数存在定理与定义域值域互换律</h4>
+    <div class="formula-card">
+      <div class="formula-main">
+        f⁻¹ 存在 ⇔ f 必须是 One-One 函数 &nbsp;|&nbsp; Domain(f⁻¹) = Range(f) &nbsp;且&nbsp; Range(f⁻¹) = Domain(f)
+      </div>
+      <p style="margin-bottom: 0;">
+        求 <span class="math">f⁻¹(x)</span> 四步走：① 令 <span class="math">y = f(x)</span>；② 反解出 <span class="math">x</span>（用 <span class="math">y</span> 表示）；③ 互换 <span class="math">x</span> 与 <span class="math">y</span> 写成 <span class="math">f⁻¹(x) = ...</span>；④ <strong>务必同时写出 <span class="math">f⁻¹</span> 的定义域（即原函数 <span class="math">f</span> 的值域）！</strong>
+      </p>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">📘 例题 1.6A · 二次函数限制定义域使其可逆（开方符号选择！）</div>
+      <p>
+        Let <span class="math">f(x) = x² − 6x + 11</span> for <span class="math">x ≥ k</span>.<br>
+        (a) Find the least value of <span class="math">k</span> for which <span class="math">f⁻¹</span> exists.<br>
+        (b) For this value of <span class="math">k</span>, find <span class="math">f⁻¹(x)</span> and state its domain and range.
+      </p>
+      <p style="margin-bottom: 0;">
+        <strong>解析 (Solution)：</strong><br>
+        (a) 配方：<span class="math">f(x) = (x − 3)² + 2</span>。抛物线对称轴为 <span class="math">x = 3</span>。为了使函数在 <span class="math">x ≥ k</span> 上保持单调（one-one），<span class="math">k</span> 不能跨过对称轴向左，故最小值为 <strong><span class="math">k = 3</span></strong>。<br>
+        (b) 当 <span class="math">x ≥ 3</span> 时，<span class="math">(x − 3)² ≥ 0 ⇒ f(x) ≥ 2</span>，即 <span class="math">Range(f) = {y ≥ 2}</span>。<br>
+        令 <span class="math">y = (x − 3)² + 2 ⇒ (x − 3)² = y − 2 ⇒ x − 3 = ±<span class="sqrt">√<span class="sqrt-rad">y − 2</span></span></span>。<br>
+        因为 <span class="math">x ≥ 3 ⇒ x − 3 ≥ 0</span>，<strong>取正号 <span class="math">+</span></strong>：<span class="math">x = 3 + <span class="sqrt">√<span class="sqrt-rad">y − 2</span></span></span>。<br>
+        互换字母并注明定义域与值域：<br>
+        <strong><span class="math">f⁻¹(x) = 3 + <span class="sqrt">√<span class="sqrt-rad">x − 2</span></span></span></strong>，<strong>Domain: <span class="math">x ≥ 2</span></strong>，<strong>Range: <span class="math">f⁻¹(x) ≥ 3</span></strong>。<br>
+        （注：若题设改为 <span class="math">x ≤ 3</span>，则 <span class="math">x − 3 ≤ 0</span>，必须取负号得 <span class="math">f⁻¹(x) = 3 − <span class="sqrt">√<span class="sqrt-rad">x − 2</span></span></span>！）
+      </p>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">📘 例题 1.6B · 分式线性函数求反函数</div>
+      <p>Given <span class="math">g(x) = <span class="frac"><span class="num">2x + 1</span><span class="den">x − 3</span></span></span> (<span class="math">x ≠ 3</span>), find <span class="math">g⁻¹(x)</span> and state the value of <span class="math">x</span> not in the domain of <span class="math">g⁻¹</span>.</p>
+      <p style="margin-bottom: 0;">
+        <strong>解析 (Solution)：</strong><br>
+        令 <span class="math">y = <span class="frac"><span class="num">2x + 1</span><span class="den">x − 3</span></span> ⇒ y(x − 3) = 2x + 1 ⇒ xy − 2x = 3y + 1 ⇒ x(y − 2) = 3y + 1 ⇒ x = <span class="frac"><span class="num">3y + 1</span><span class="den">y − 2</span></span></span>。<br>
+        故 <strong><span class="math">g⁻¹(x) = <span class="frac"><span class="num">3x + 1</span><span class="den">x − 2</span></span></span></strong>，Excluded value: <strong><span class="math">x ≠ 2</span></strong>（这也正是原函数 <span class="math">g(x)</span> 永远取不到的水平渐近线值 <span class="math">y = 2</span>！）。
+      </p>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-1-7">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>1.7 原函数与反函数图像的对称性 (Graph of f and f⁻¹ Symmetrical in y = x)</h3>
+      <div class="section-en-sub">Reflection in y = x, Swapped Coordinates &amp; Solving f(x) = f⁻¹(x) via f(x) = x</div>
+      <div class="tier-row">
+        <span class="badge-p1">Paper 1 图像与方程联动</span>
+        <span class="badge-p2">交互实验室在本节</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-1-7">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>1.7.1 关于直线 <span class="math">y = x</span> 的镜像规则与交点捷径</h4>
+    <ul>
+      <li>若点 <span class="math">(a, b)</span> 在 <span class="math">y = f(x)</span> 上，则点 <span class="math">(b, a)</span> 必在 <span class="math">y = f⁻¹(x)</span> 上。两曲线严格关于直线 <strong><span class="math">y = x</span></strong> 轴对称。</li>
+      <li>特殊要素同步互换：<span class="math">f</span> 的起点/顶点 <span class="math">(p, q)</span> 变为 <span class="math">f⁻¹</span> 的起点 <span class="math">(q, p)</span>；<span class="math">y</span> 轴截距 <span class="math">(0, c)</span> 变为 <span class="math">x</span> 轴截距 <span class="math">(c, 0)</span>；铅垂渐近线 <span class="math">x = a</span> 变为水平渐近线 <span class="math">y = a</span>。</li>
+      <li><strong>求解 <span class="math">f(x) = f⁻¹(x)</span> 的提速捷径</strong>：对于严格单调递增函数，<span class="math">f</span> 与 <span class="math">f⁻¹</span> 的所有交点都在对称轴 <span class="math">y = x</span> 上！因此不必硬算 <span class="math">f(x) = f⁻¹(x)</span>（往往会出现四次方程或根式嵌套），只需直接解更简单的 <strong><span class="math">f(x) = x</span></strong>（并检验解在定义域内）！</li>
+    </ul>
+
+    <div class="callout examiner-tip">
+      <div class="callout-title">💡 考官提醒：递减函数可能有“不在 y = x 上”的对称交点！</div>
+      <p style="margin-bottom: 0;">
+        仅当 <span class="math">f</span> 在其定义域上<strong>严格递增</strong>时，才有 <span class="math">f(x) = f⁻¹(x) ⇔ f(x) = x</span>。对于单调递减函数（例如 <span class="math">f(x) = 4 − x</span> 是自身反函数 <span class="math">f = f⁻¹</span>，整条直线重合！），交点可能成对出现在 <span class="math">(a, b)</span> 与 <span class="math">(b, a)</span>（<span class="math">a ≠ b</span>）。但 0606 绝大多数考题给的是递增二次半支或对数/指数函数，直接解 <span class="math">f(x) = x</span> 即可秒杀！
+      </p>
+    </div>
+
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 265" width="740" height="265" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="f(x) 与 f⁻¹(x) 关于 y=x 对称图像及定义域值域互换图">
+        <rect x="0" y="0" width="740" height="265" rx="10" fill="none" />
+        <!-- Left panel: Symmetric graph -->
+        <rect x="14" y="10" width="372" height="244" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="200" y="30" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-ink)">f(x) = (x − 1)² + 1 (x ≥ 1) 与反函数关于 y = x 对称</text>
+        <line x1="34" y1="235.0" x2="368" y2="235.0" stroke="var(--svg-muted)" stroke-width="1.3" />
+        <line x1="44.0" y1="36" x2="44.0" y2="244" stroke="var(--svg-muted)" stroke-width="1.3" />
+        <text x="364" y="229" font-size="10.5" font-weight="700" fill="var(--svg-muted)">x</text>
+        <text x="50" y="47" font-size="10.5" font-weight="700" fill="var(--svg-muted)">y</text>
+        <!-- y = x dashed line -->
+        <line x1="44.0" y1="235.0" x2="320.9" y2="55.0" stroke="var(--svg-muted)" stroke-width="1.8" stroke-dasharray="6,4" />
+        <text x="323" y="54" font-size="10.5" font-weight="800" fill="var(--svg-muted)">y = x</text>
+        <!-- Reflection connector between (3,5) and (5,3) -->
+        <line x1="182.5" y1="85.0" x2="274.8" y2="145.0" stroke="var(--svg-amber)" stroke-width="1.5" stroke-dasharray="3,3" />
+        <!-- f(x) curve -->
+        <path d="M 90.2 205.0 L 92.5 204.9 L 94.8 204.7 L 97.1 204.3 L 99.4 203.8 L 101.7 203.1 L 104.0 202.3 L 106.3 201.3 L 108.6 200.2 L 110.9 198.9 L 113.2 197.5 L 115.5 195.9 L 117.8 194.2 L 120.2 192.3 L 122.5 190.3 L 124.8 188.1 L 127.1 185.8 L 129.4 183.3 L 131.7 180.7 L 134.0 177.9 L 136.3 175.0 L 138.6 171.9 L 140.9 168.7 L 143.2 165.3 L 145.5 161.8 L 147.8 158.1 L 150.2 154.3 L 152.5 150.3 L 154.8 146.2 L 157.1 141.9 L 159.4 137.5 L 161.7 132.9 L 164.0 128.2 L 166.3 123.3 L 168.6 118.3 L 170.9 113.1 L 173.2 107.8 L 175.5 102.3 L 177.8 96.7 L 180.2 90.9 L 182.5 85.0 L 184.8 78.9 L 187.1 72.7 L 189.4 66.3 L 191.7 59.8 L 194.0 53.1 L 196.3 46.3" fill="none" stroke="var(--svg-indigo)" stroke-width="2.6" />
+        <!-- f^-1(x) curve -->
+        <path d="M 90.2 205.0 L 92.5 198.3 L 94.8 195.5 L 97.1 193.4 L 99.4 191.6 L 101.7 190.0 L 104.0 188.6 L 106.3 187.3 L 108.6 186.0 L 110.9 184.9 L 113.2 183.8 L 115.5 182.8 L 117.8 181.8 L 120.2 180.8 L 122.5 179.9 L 124.8 179.0 L 127.1 178.2 L 129.4 177.3 L 131.7 176.5 L 134.0 175.8 L 136.3 175.0 L 138.6 174.3 L 140.9 173.5 L 143.2 172.8 L 145.5 172.1 L 147.8 171.5 L 150.2 170.8 L 152.5 170.1 L 154.8 169.5 L 157.1 168.9 L 159.4 168.3 L 161.7 167.7 L 164.0 167.1 L 166.3 166.5 L 168.6 165.9 L 170.9 165.3 L 173.2 164.8 L 175.5 164.2 L 177.8 163.6 L 180.2 163.1 L 182.5 162.6 L 184.8 162.0 L 187.1 161.5 L 189.4 161.0 L 191.7 160.5 L 194.0 160.0 L 196.3 159.5 L 198.6 159.0 L 200.9 158.5 L 203.2 158.0 L 205.5 157.6 L 207.8 157.1 L 210.2 156.6 L 212.5 156.2 L 214.8 155.7 L 217.1 155.3 L 219.4 154.8 L 221.7 154.4 L 224.0 153.9 L 226.3 153.5 L 228.6 153.0 L 230.9 152.6 L 233.2 152.2 L 235.5 151.8 L 237.8 151.3 L 240.2 150.9 L 242.5 150.5 L 244.8 150.1 L 247.1 149.7 L 249.4 149.3 L 251.7 148.9 L 254.0 148.5 L 256.3 148.1 L 258.6 147.7 L 260.9 147.3 L 263.2 146.9 L 265.5 146.5 L 267.8 146.1 L 270.2 145.8 L 272.5 145.4 L 274.8 145.0 L 277.1 144.6 L 279.4 144.3 L 281.7 143.9 L 284.0 143.5 L 286.3 143.2 L 288.6 142.8 L 290.9 142.4 L 293.2 142.1 L 295.5 141.7 L 297.8 141.4 L 300.2 141.0 L 302.5 140.7 L 304.8 140.3 L 307.1 140.0 L 309.4 139.6 L 311.7 139.3 L 314.0 138.9 L 316.3 138.6 L 318.6 138.3 L 320.9 137.9 L 323.2 137.6 L 325.5 137.3 L 327.8 136.9 L 330.2 136.6 L 332.5 136.3 L 334.8 135.9 L 337.1 135.6 L 339.4 135.3 L 341.7 135.0 L 344.0 134.6" fill="none" stroke="var(--svg-teal)" stroke-width="2.6" />
+        <!-- Key Dots -->
+        <circle cx="90.2" cy="205.0" r="4.2" fill="var(--svg-red)" />
+        <text x="90" y="221" text-anchor="middle" font-size="9.8" font-weight="700" fill="var(--svg-red)">(1, 1)</text>
+        <circle cx="136.3" cy="175.0" r="4.2" fill="var(--svg-red)" />
+        <text x="148" y="189" font-size="9.8" font-weight="700" fill="var(--svg-red)">(2, 2)</text>
+        <circle cx="182.5" cy="85.0" r="4.4" fill="var(--svg-indigo)" />
+        <text x="174" y="79" text-anchor="end" font-size="10" font-weight="700" fill="var(--svg-indigo)">f: (3, 5)</text>
+        <circle cx="274.8" cy="145.0" r="4.4" fill="var(--svg-teal)" />
+        <text x="278" y="160" font-size="10" font-weight="700" fill="var(--svg-teal)">f⁻¹: (5, 3)</text>
+        <text x="206" y="54" font-size="10.5" font-weight="800" fill="var(--svg-indigo)">y = f(x)</text>
+        <text x="342" y="126" text-anchor="end" font-size="10.5" font-weight="800" fill="var(--svg-teal)">y = f⁻¹(x)</text>
+
+        <!-- Right panel: Domain-Range Swap Architecture -->
+        <rect x="400" y="10" width="326" height="244" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="563" y="32" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-ink)">定义域 ↔ 值域 互换与考场秒杀模板</text>
+        <rect x="424" y="54" width="122" height="62" rx="8" fill="none" stroke="var(--svg-indigo)" stroke-width="1.8" />
+        <text x="485" y="79" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-indigo)">Domain(f)</text>
+        <text x="485" y="99" text-anchor="middle" font-size="10.5" fill="var(--svg-ink)">例: x ≥ 1</text>
+
+        <rect x="580" y="54" width="122" height="62" rx="8" fill="none" stroke="var(--svg-teal)" stroke-width="1.8" />
+        <text x="641" y="79" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-teal)">Range(f)</text>
+        <text x="641" y="99" text-anchor="middle" font-size="10.5" fill="var(--svg-ink)">例: f(x) ≥ 1</text>
+
+        <line x1="548" y1="78" x2="576" y2="78" stroke="var(--svg-indigo)" stroke-width="2" />
+        <polygon points="579,78 572,74 572,82" fill="var(--svg-indigo)" />
+        <text x="563" y="71" text-anchor="middle" font-size="10" font-weight="800" fill="var(--svg-indigo)">f</text>
+
+        <line x1="578" y1="98" x2="550" y2="98" stroke="var(--svg-teal)" stroke-width="2" />
+        <polygon points="547,98 554,94 554,102" fill="var(--svg-teal)" />
+        <text x="563" y="112" text-anchor="middle" font-size="10" font-weight="800" fill="var(--svg-teal)">f⁻¹</text>
+
+        <rect x="424" y="138" width="278" height="98" rx="8" fill="none" stroke="var(--svg-amber)" stroke-width="1.5" stroke-dasharray="4,3" />
+        <text x="563" y="160" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-amber)">Paper 1 四条零失分自检清单</text>
+        <text x="436" y="181" font-size="10.5" fill="var(--svg-ink)">1. 写 f⁻¹(x) 后必须补写定义域 Domain(f⁻¹) = Range(f)</text>
+        <text x="436" y="199" font-size="10.5" fill="var(--svg-ink)">2. 二次开方正负号：x ≥ h 取 +√，x ≤ h 取 −√</text>
+        <text x="436" y="217" font-size="10.5" fill="var(--svg-ink)">3. 增函数求 f(x) = f⁻¹(x) 直接转解 f(x) = x</text>
+      </svg>
+      <div class="svg-caption">图 1-3 · 原函数与反函数图像关于 y = x 对称与定义域值域互换法则</div>
+    </div>
+
+    <div class="lab-box" data-lab-type="ch01"></div>
+  </div>
+</article>
+
+<!-- ==================== SAVEMAXAMS PRACTICE CH01 ==================== -->
+<article class="topic-section sme-section" id="sec-sme">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>SaveMyExams 0606 真题与综合演练</h3>
+      <div class="section-en-sub">4 Speed MCQs + 4 Multi-Part Non-Calculator Exam Problems with Mark Schemes</div>
+      <div class="tier-row">
+        <span class="badge-p1">Paper 1 精确化简</span>
+        <span class="badge-p2">含完整评分细则 M1/A1/B1</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-sme">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>Section A · 高频易错选择题 (4 题)</h4>
+
+    <div class="exam-q" data-mcq-answer="C">
+      <div class="exam-q-head"><span class="q-tag">Ch01 MCQ 1 · One-one 函数识别</span><span class="q-marks">[2 marks]</span></div>
+      <div class="q-stem-en">Which of the following mappings defines a <strong>one-one function</strong>?</div>
+      <div class="q-stem-cn">下列哪个映射满足一对一函数（one-one function）的条件？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><span class="math">x ↦ x²</span> (<span class="math">x ∈ ℝ</span>)</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><span class="math">x ↦ ±<span class="sqrt">√<span class="sqrt-rad">x</span></span></span> (<span class="math">x ≥ 0</span>)</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><span class="math">x ↦ (x − 2)² + 1</span> (<span class="math">x ≥ 2</span>)</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><span class="math">x ↦ |x − 3|</span> (<span class="math">x ∈ ℝ</span>)</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！x ≥ 2 正好处于抛物线顶点右侧单调递增半支，通过水平线与铅垂线双重检验，是 one-one 函数！" data-err="❌ 再想想：A 和 D 都是对称函数（many-one），B 是 one-many 根本不是函数；只有 C 把定义域截在对称轴右侧 x ≥ 2！"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head"><span class="q-tag">Ch01 MCQ 2 · 复合函数值域陷阱</span><span class="q-marks">[2 marks]</span></div>
+      <div class="q-stem-en">Given <span class="math">f(x) = 3x − 1</span> (<span class="math">x ∈ ℝ</span>) and <span class="math">g(x) = x² + 2</span> (<span class="math">x ≥ −1</span>). What is the range of <span class="math">fg</span>?</div>
+      <div class="q-stem-cn">已知定义域限制在 <span class="math">x ≥ −1</span>，求复合函数 <span class="math">fg</span> 的精确值域。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><span class="math">fg(x) ≥ 8</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><span class="math">fg(x) ≥ 5</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><span class="math">fg(x) ≥ 2</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><span class="math">fg(x) ≥ −1</span></span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！当 x ≥ −1 时，g(x) = x² + 2 顶点 x = 0 在定义域内，故 Range(g) 为 g(x) ≥ 2（不是 ≥ 3！）；再代入 f(u) = 3u − 1 得 fg(x) ≥ 3(2) − 1 = 5！" data-err="❌ 掉进端点陷阱了！x ≥ −1 包含顶点 x = 0，因此 g(x) = x² + 2 的最小值是 g(0) = 2 而非 g(−1) = 3。再代入 f(2) = 5。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="D">
+      <div class="exam-q-head"><span class="q-tag">Ch01 MCQ 3 · 左半支二次函数求反函数</span><span class="q-marks">[2 marks]</span></div>
+      <div class="q-stem-en">The function <span class="math">f(x) = x² − 4x + 7</span> is defined for <span class="math">x ≤ 2</span>. Find <span class="math">f⁻¹(x)</span> and its domain.</div>
+      <div class="q-stem-cn">已知抛物线限制在对称轴左侧 <span class="math">x ≤ 2</span>，求其反函数及定义域。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><span class="math">2 + <span class="sqrt">√<span class="sqrt-rad">x − 3</span></span>, x ≥ 3</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><span class="math">2 − <span class="sqrt">√<span class="sqrt-rad">x − 3</span></span>, x ≤ 2</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><span class="math">2 + <span class="sqrt">√<span class="sqrt-rad">x − 7</span></span>, x ≥ 7</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><span class="math">2 − <span class="sqrt">√<span class="sqrt-rad">x − 3</span></span>, x ≥ 3</span></span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！f(x) = (x − 2)² + 3 值域为 y ≥ 3（即 Domain(f⁻¹)）；因 x ≤ 2 ⇒ x − 2 ≤ 0，开方必须取负号得 f⁻¹(x) = 2 − √(x − 3)！" data-err="❌ 注意两个要点：① x ≤ 2 说明 x − 2 ≤ 0，开方应取 −√；② 反函数定义域等于原函数值域 x ≥ 3，而非 x ≤ 2。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="A">
+      <div class="exam-q-head"><span class="q-tag">Ch01 MCQ 4 · 绝对值方程增根排查</span><span class="q-marks">[2 marks]</span></div>
+      <div class="q-stem-en">Find all real solutions of <span class="math">|x − 4| = 2x − 5</span>.</div>
+      <div class="q-stem-cn">求方程 <span class="math">|x − 4| = 2x − 5</span> 的全部实数解（注意右边非负检验）。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><span class="math">x = 3</span> only</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><span class="math">x = 1</span> or <span class="math">x = 3</span></span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><span class="math">x = 1</span> only</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>No real solutions</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！解得 x = 1 与 x = 3 后代入检验：x = 1 时右边 2(1) − 5 = −3 < 0（不可能等于绝对值！），故舍去 x = 1，仅保留 x = 3！" data-err="❌ 别忘检验非负性！当 x = 1 时左边 |1−4| = 3，右边 2(1)−5 = −3，并不相等！必须舍去增根 x = 1。"></div>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>Section B · SaveMyExams 0606 多步结构化大题 (4 题)</h4>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">SME 1 · 二次配方、定义域截断、反函数与复合解方程</span><span class="q-marks">[8 marks]</span></div>
+      <div class="q-stem-en">
+        The function <span class="math">f</span> is defined by <span class="math">f(x) = 2x² − 12x + 23</span> for <span class="math">x ≥ k</span>.<br>
+        (a) Express <span class="math">f(x)</span> in the form <span class="math">a(x − b)² + c</span>. [2]<br>
+        (b) State the smallest possible value of <span class="math">k</span> for which <span class="math">f⁻¹</span> exists. [1]<br>
+        (c) Using this value of <span class="math">k</span>, find <span class="math">f⁻¹(x)</span> and state its domain. [3]<br>
+        (d) Given <span class="math">g(x) = 4x − 1</span> for <span class="math">x ≥ 1</span>, solve <span class="math">fg(x) = 23</span>. [2]
+      </div>
+      <div class="q-stem-cn">无计算器：先配方确定反函数存在的最小 <span class="math">k</span>，再求反函数与定义域，最后利用域限解复合方程。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 8 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">M1</span> (a) <span class="math">2(x² − 6x) + 23 = 2[(x − 3)² − 9] + 23</span> <span class="ms-mark">A1</span> <span class="math"><strong>2(x − 3)² + 5</strong></span>.</p>
+          <p><span class="ms-mark">B1</span> (b) Axis of symmetry is <span class="math">x = 3</span>, so least <span class="math"><strong>k = 3</strong></span>.</p>
+          <p><span class="ms-mark">M1</span> (c) <span class="math">y = 2(x − 3)² + 5 ⇒ (x − 3)² = <span class="frac"><span class="num">y − 5</span><span class="den">2</span></span> ⇒ x = 3 + <span class="sqrt">√<span class="sqrt-rad"><span class="frac"><span class="num">y − 5</span><span class="den">2</span></span></span></span></span> (positive root since <span class="math">x ≥ 3</span>).<br>
+          <span class="ms-mark">A1</span> <span class="math"><strong>f⁻¹(x) = 3 + <span class="sqrt">√<span class="sqrt-rad"><span class="frac"><span class="num">x − 5</span><span class="den">2</span></span></span></span></strong></span>；<span class="ms-mark">B1</span> Domain: <strong><span class="math">x ≥ 5</span></strong>.</p>
+          <p><span class="ms-mark">M1</span> (d) <span class="math">2(g(x) − 3)² + 5 = 23 ⇒ (4x − 4)² = 9 ⇒ 4x − 4 = ±3 ⇒ x = <span class="frac"><span class="num">7</span><span class="den">4</span></span></span> or <span class="math"><span class="frac"><span class="num">1</span><span class="den">4</span></span></span>.<br>
+          <span class="ms-mark">A1</span> Since <span class="math">x ≥ 1</span>, reject <span class="math"><span class="frac"><span class="num">1</span><span class="den">4</span></span></span> ⇒ <strong><span class="math">x = <span class="frac"><span class="num">7</span><span class="den">4</span></span></span></strong>.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">SME 2 · 分式函数值域、反函数与对称轴 y = x 交点</span><span class="q-marks">[7 marks]</span></div>
+      <div class="q-stem-en">
+        The function <span class="math">f</span> is defined by <span class="math">f(x) = <span class="frac"><span class="num">3x + 2</span><span class="den">x + 2</span></span></span> for <span class="math">x &gt; −2</span>.<br>
+        (a) Find the range of <span class="math">f</span>. [2]<br>
+        (b) Find <span class="math">f⁻¹(x)</span> and state its domain. [3]<br>
+        (c) Solve <span class="math">f(x) = f⁻¹(x)</span>. [2]
+      </div>
+      <div class="q-stem-cn">无计算器：拆分常数法求分式函数值域，求反函数后用 <span class="math">f(x) = x</span> 快速求解交点。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 7 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">M1</span> (a) Rewrite <span class="math">f(x) = <span class="frac"><span class="num">3(x + 2) − 4</span><span class="den">x + 2</span></span> = 3 − <span class="frac"><span class="num">4</span><span class="den">x + 2</span></span></span>. Since <span class="math">x + 2 &gt; 0</span>, <span class="math"><span class="frac"><span class="num">4</span><span class="den">x + 2</span></span> &gt; 0</span> ⇒ <span class="ms-mark">A1</span> Range: <strong><span class="math">f(x) &lt; 3</span></strong>.</p>
+          <p><span class="ms-mark">M1</span> (b) <span class="math">y(x + 2) = 3x + 2 ⇒ x(3 − y) = 2y − 2 ⇒ x = <span class="frac"><span class="num">2y − 2</span><span class="den">3 − y</span></span></span>.<br>
+          <span class="ms-mark">A1</span> <span class="math"><strong>f⁻¹(x) = <span class="frac"><span class="num">2x − 2</span><span class="den">3 − x</span></span></strong></span>；<span class="ms-mark">B1</span> Domain: <strong><span class="math">x &lt; 3</span></strong>.</p>
+          <p><span class="ms-mark">M1</span> (c) Since <span class="math">f</span> is strictly increasing on <span class="math">x &gt; −2</span>, intersections lie on <span class="math">y = x</span>: <span class="math"><span class="frac"><span class="num">3x + 2</span><span class="den">x + 2</span></span> = x ⇒ x² + 2x = 3x + 2 ⇒ x² − x − 2 = 0 ⇒ (x − 2)(x + 1) = 0</span>.<br>
+          <span class="ms-mark">A1</span> Both <span class="math">x = 2</span> and <span class="math">x = −1</span> satisfy <span class="math">x &gt; −2</span> ⇒ <strong><span class="math">x = −1, 2</span></strong>.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">SME 3 · 根式复合存在条件与精确根式解</span><span class="q-marks">[7 marks]</span></div>
+      <div class="q-stem-en">
+        Functions <span class="math">f</span> and <span class="math">g</span> are defined by <span class="math">f(x) = <span class="sqrt">√<span class="sqrt-rad">x − 4</span></span> + 2</span> (<span class="math">x ≥ 4</span>) and <span class="math">g(x) = x² − 5</span> (<span class="math">x ≥ 0</span>).<br>
+        (a) State the range of <span class="math">f</span> and find <span class="math">f⁻¹(x)</span> with its domain. [3]<br>
+        (b) Find the restricted domain of <span class="math">x</span> for which <span class="math">fg(x)</span> exists. [2]<br>
+        (c) Solve <span class="math">fg(x) = 5</span>, giving your answer in simplest surd form. [2]
+      </div>
+      <div class="q-stem-cn">无计算器：考察复合函数存在域 <span class="math">Range(g) ⊆ Domain(f)</span> 与最简根式输出。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 7 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">B1</span> (a) Range of <span class="math">f</span>: <strong><span class="math">f(x) ≥ 2</span></strong>.<br>
+          <span class="ms-mark">M1</span> <span class="math">y − 2 = <span class="sqrt">√<span class="sqrt-rad">x − 4</span></span> ⇒ x = (y − 2)² + 4</span> ⇒ <span class="ms-mark">A1</span> <strong><span class="math">f⁻¹(x) = (x − 2)² + 4</span>, Domain: <span class="math">x ≥ 2</span></strong>.</p>
+          <p><span class="ms-mark">M1</span> (b) Need <span class="math">g(x) ≥ 4 ⇒ x² − 5 ≥ 4 ⇒ x² ≥ 9</span>. Since <span class="math">x ≥ 0</span>, <span class="ms-mark">A1</span> <strong><span class="math">x ≥ 3</span></strong>.</p>
+          <p><span class="ms-mark">M1</span> (c) <span class="math"><span class="sqrt">√<span class="sqrt-rad">(x² − 5) − 4</span></span> + 2 = 5 ⇒ <span class="sqrt">√<span class="sqrt-rad">x² − 9</span></span> = 3 ⇒ x² = 18</span>.<br>
+          <span class="ms-mark">A1</span> Since <span class="math">x ≥ 3</span>, <strong><span class="math">x = 3<span class="sqrt">√<span class="sqrt-rad">2</span></span></span></strong>.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">SME 4 · 平移型线性绝对值函数与直线交点</span><span class="q-marks">[7 marks]</span></div>
+      <div class="q-stem-en">
+        The function <span class="math">f</span> is defined by <span class="math">f(x) = |2x − 6| − 2</span> for <span class="math">0 ≤ x ≤ 6</span>.<br>
+        (a) State the coordinates of the vertex and intercepts of <span class="math">y = f(x)</span>, and find the range of <span class="math">f</span>. [3]<br>
+        (b) Explain why <span class="math">f</span> does not have an inverse on <span class="math">0 ≤ x ≤ 6</span>. [1]<br>
+        (c) Solve <span class="math">f(x) = <span class="frac"><span class="num">1</span><span class="den">2</span></span>x</span>. [3]
+      </div>
+      <div class="q-stem-cn">无计算器：含上下平移的绝对值函数端点与值域分析，并解与直线的交点。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 7 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">B1</span> (a) Vertex at <span class="math">(3, −2)</span>; <span class="math">y</span>-intercept <span class="math">(0, 4)</span>; <span class="math">x</span>-intercepts <span class="math">|2x − 6| = 2 ⇒ (2, 0), (4, 0)</span> (<span class="ms-mark">B1</span>).<br>
+          Endpoints <span class="math">f(0) = 4, f(6) = 4</span> ⇒ <span class="ms-mark">B1</span> Range: <strong><span class="math">−2 ≤ f(x) ≤ 4</span></strong>.</p>
+          <p><span class="ms-mark">B1</span> (b) <span class="math">f</span> is <strong>many-one</strong> (e.g. <span class="math">f(2) = f(4) = 0</span>), not one-one.</p>
+          <p><span class="ms-mark">M1</span> (c) <span class="math">|2x − 6| = <span class="frac"><span class="num">1</span><span class="den">2</span></span>x + 2</span>.<br>
+          Branch 1 (<span class="math">x ≥ 3</span>): <span class="math">2x − 6 = <span class="frac"><span class="num">1</span><span class="den">2</span></span>x + 2 ⇒ <span class="frac"><span class="num">3</span><span class="den">2</span></span>x = 8 ⇒ <strong>x = <span class="frac"><span class="num">16</span><span class="den">3</span></span></strong></span> (<span class="ms-mark">A1</span>).<br>
+          Branch 2 (<span class="math">x &lt; 3</span>): <span class="math">6 − 2x = <span class="frac"><span class="num">1</span><span class="den">2</span></span>x + 2 ⇒ <span class="frac"><span class="num">5</span><span class="den">2</span></span>x = 4 ⇒ <strong>x = <span class="frac"><span class="num">8</span><span class="den">5</span></span></strong></span> (<span class="ms-mark">A1</span>). Both lie in <span class="math">[0, 6]</span>.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</article>
+
+<!-- ==================== CONCEPT BANK CH01 ==================== -->
+<article class="topic-section" id="app-concepts">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>本章核心概念与证题句型直接默写库 (12题)</h3>
+      <div class="section-en-sub">Bilingual Function Definitions, Existence Conditions &amp; Examiner Phrasing (Hide/Unmask Quiz)</div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="app-concepts">○ 标记掌握</button>
+  </div>
+
+  <div class="concept-toolbar">
+    <div class="concept-filter-group" id="conceptFilterTabs">
+      <button type="button" class="tab-btn active" data-concept-part="all">全部 12 题</button>
+      <button type="button" class="tab-btn" data-concept-part="p1">1.1–1.3 映射与复合 (4题)</button>
+      <button type="button" class="tab-btn" data-concept-part="p2">1.4–1.5 绝对值图像 (4题)</button>
+      <button type="button" class="tab-btn" data-concept-part="p3">1.6–1.7 反函数与对称 (4题)</button>
+    </div>
+    <div class="concept-actions">
+      <span class="concept-count-pill" id="conceptCountPill">显示 12 / 12 题</span>
+      <button type="button" class="icon-btn" id="conceptQuizToggle">🙈 开启遮罩自测</button>
+    </div>
+  </div>
+
+  <div class="concept-grid" id="conceptGrid">
+    <div class="concept-card" data-part="p1">
+      <div class="cq-head"><span class="q-tag">C01 · 1.1 Mappings</span><span class="badge-p1">Definition</span></div>
+      <div class="cq-en">Which mapping types qualify as a function, and how does the Vertical Line Test confirm this?</div>
+      <div class="cq-cn">哪几类映射才能被称为函数？如何用铅垂线检验图像？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">Only <span class="kw">one-one</span> and <span class="kw">many-one</span> mappings are functions (each input has a unique output). A graph represents a function iff any <span class="kw">vertical line</span> cuts it <span class="kw">at most once</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p1">
+      <div class="cq-head"><span class="q-tag">C02 · 1.2 Domain &amp; Range</span><span class="badge-p1">Trap</span></div>
+      <div class="cq-en">What are the three natural domain exclusions in Paper 1, and what is the trap in finding the range of a quadratic on [a, b]?</div>
+      <div class="cq-cn">自然定义域的三大限制是什么？求闭区间二次函数值域的最大陷阱是什么？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">Exclusions: <span class="kw">denominator ≠ 0</span>, <span class="kw">even root ≥ 0</span>, <span class="kw">radicand in denominator &gt; 0</span>. Quadratic range trap: always check if the <span class="kw">vertex (turning point)</span> lies inside [a, b], never test endpoints only!</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p1">
+      <div class="cq-head"><span class="q-tag">C03 · 1.3 Composite Condition</span><span class="badge-p2">Existence</span></div>
+      <div class="cq-en">State the exact condition required for the composite function fg(x) to exist.</div>
+      <div class="cq-cn">默写复合函数 fg(x) 存在的剑桥考纲标准充要条件。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">fg(x) = f(g(x)) exists if and only if the <span class="kw">range of g is a subset of the domain of f</span> (<span class="kw">Range(g) ⊆ Domain(f)</span>).</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p1">
+      <div class="cq-head"><span class="q-tag">C04 · 1.3 Composite Range</span><span class="badge-p1">Method</span></div>
+      <div class="cq-en">What is the difference between f²(x) and [f(x)]², and how do you find the range of fg?</div>
+      <div class="cq-cn">区分 f²(x) 与 [f(x)]²，并简述求复合函数 fg 值域的两步法。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner"><span class="kw">f²(x) = f(f(x))</span> (apply f twice), not [f(x)]². Range of fg: ① find <span class="kw">Range(g)</span> on Domain(g); ② feed that interval as inputs into <span class="kw">f</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p2">
+      <div class="cq-head"><span class="q-tag">C05 · 1.4 Modulus</span><span class="badge-p1">Definition</span></div>
+      <div class="cq-en">Write the piecewise definition of |x| and simplify √(x²) for general real x.</div>
+      <div class="cq-cn">写出 |x| 的分段定义，并写出 √(x²) 对任意实数 x 的精确化简结果。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner"><span class="kw">|x| = x (x ≥ 0)</span> and <span class="kw">−x (x &lt; 0)</span>. Always <span class="kw">√(x²) = |x|</span> (not x when x &lt; 0).</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p2">
+      <div class="cq-head"><span class="q-tag">C06 · 1.4 Checking Roots</span><span class="badge-p2">Validation</span></div>
+      <div class="cq-en">Why must you substitute answers back when solving |ax + b| = cx + d?</div>
+      <div class="cq-cn">解方程 |ax + b| = cx + d 时为什么必须回代检验右边表达式？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">Because |ax + b| ≥ 0, any candidate root making <span class="kw">cx + d &lt; 0</span> is an <span class="kw">extraneous root</span> and must be rejected.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p2">
+      <div class="cq-head"><span class="q-tag">C07 · 1.5 Linear Modulus Graph</span><span class="badge-p1">Sketching</span></div>
+      <div class="cq-en">Give the vertex coordinates, range, and slopes of the two branches of y = |ax + b| (a &gt; 0).</div>
+      <div class="cq-cn">写出折线 y = |ax + b| (a &gt; 0) 的尖点坐标、值域与左右两支斜率。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">Sharp vertex at <span class="kw">(−b/a, 0)</span>; range <span class="kw">y ≥ 0</span>; right branch (x ≥ −b/a) has slope <span class="kw">+a</span>, reflected left branch has slope <span class="kw">−a</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p2">
+      <div class="cq-head"><span class="q-tag">C08 · 1.5 Intersection Count</span><span class="badge-p2">Gradient Rule</span></div>
+      <div class="cq-en">For |mx + c| = px + q (m &gt; 0, p &gt; 0), how does comparing p with m predict the number of roots?</div>
+      <div class="cq-cn">如何比较直线斜率 p 与折线斜率 m，直观预测 |mx + c| = px + q 的交点个数？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">If <span class="kw">p &lt; m</span>, the line crosses both branches (up to 2 roots depending on y-shift); if <span class="kw">p ≥ m</span>, it cannot catch the steeper right branch, leaving at most <span class="kw">1 intersection</span> on the left branch.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p3">
+      <div class="cq-head"><span class="q-tag">C09 · 1.6 Inverse Condition</span><span class="badge-p1">Existence</span></div>
+      <div class="cq-en">State why a function f has an inverse f⁻¹, and write the Domain-Range swap identity.</div>
+      <div class="cq-cn">默写反函数 f⁻¹ 存在的英文标准理由及定义域/值域互换律。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">f⁻¹ exists iff f is a <span class="kw">one-one function</span> (Horizontal Line Test). Always <span class="kw">Domain(f⁻¹) = Range(f)</span> and <span class="kw">Range(f⁻¹) = Domain(f)</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p3">
+      <div class="cq-head"><span class="q-tag">C10 · 1.6 Quadratic Sign Choice</span><span class="badge-p2">Algebra</span></div>
+      <div class="cq-en">When inverting f(x) = a(x − h)² + k (a &gt; 0), how do you choose + or − before the square root?</div>
+      <div class="cq-cn">对配方二次函数求反函数开方时，如何确定根号前取 + 还是 − ？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">Check the restricted domain: if <span class="kw">x ≥ h</span>, then x − h ≥ 0 so take <span class="kw">+√</span>; if <span class="kw">x ≤ h</span>, then x − h ≤ 0 so take <span class="kw">−√</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p3">
+      <div class="cq-head"><span class="q-tag">C11 · 1.7 Graph Symmetry</span><span class="badge-p1">Geometry</span></div>
+      <div class="cq-en">Describe the geometric relationship between y = f(x) and y = f⁻¹(x), and its effect on intercepts/asymptotes.</div>
+      <div class="cq-cn">描述 y = f(x) 与 y = f⁻¹(x) 图像的几何关系及其对截距/渐近线的影响。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">They are <span class="kw">reflections of each other in the line y = x</span>. Every point <span class="kw">(a, b)</span> maps to <span class="kw">(b, a)</span>; x-intercepts swap with y-intercepts, and vertical asymptotes <span class="kw">x = c</span> become horizontal <span class="kw">y = c</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p3">
+      <div class="cq-head"><span class="q-tag">C12 · 1.7 Solving f(x) = f⁻¹(x)</span><span class="badge-p2">Shortcut</span></div>
+      <div class="cq-en">Why is solving f(x) = f⁻¹(x) usually replaced by solving f(x) = x, and when must you be careful?</div>
+      <div class="cq-cn">为什么解 f(x) = f⁻¹(x) 常转为解 f(x) = x？什么情况下要小心特例？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考答案</div>
+        <div class="cq-answer-inner">For <span class="kw">strictly increasing</span> functions, all intersections of f and f⁻¹ lie on <span class="kw">y = x</span>, so solving <span class="kw">f(x) = x</span> gives the exact roots (check Domain!). Caution: <span class="kw">decreasing</span> functions can have off-diagonal pairs (a, b) &amp; (b, a).</div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+        <nav class="chapter-pager" aria-label="章节切换导航">
+          <div><span style="color:var(--text-faint);font-size:13px;">已是最前章</span></div>
+          <div><a class="pager-btn primary" href="index.html">🏠 返回 16 章全书总目录</a></div>
+          <div><a class="pager-btn" href="Ch02_Simultaneous_Quadratics.html">Ch02 联立方程组与二次函数最值、不等式及判别式 →</a></div>
+        </nav>
+      </div>
+    </main>
+  </div>
+
+  <button type="button" class="back-top-btn" id="backTopBtn" title="返回顶部">↑</button>
+
+  <script>
+(function () {
+  'use strict';
+
+  const THEME_KEY = 'igcse_am0606_theme';
+  const chapterCode = (document.body && document.body.getAttribute('data-chapter-code')) || 'HUB';
+  const STORAGE_PREFIX = 'igcse_am0606_' + chapterCode.toLowerCase() + '_';
+  const htmlEl = document.documentElement;
+  const bodyEl = document.body;
+
+  // All module-level state variables declared at top of IIFE (prevents TDZ issues)
+  let currentViewMode = localStorage.getItem(STORAGE_PREFIX + 'viewMode') || 'all';
+  let activeConceptPart = 'all';
+  let quizMasked = localStorage.getItem(STORAGE_PREFIX + 'quizMasked') === '1';
+  let allMsExpanded = false;
+  let masteredIds = [];
+  try {
+    masteredIds = JSON.parse(localStorage.getItem(STORAGE_PREFIX + 'mastered') || '[]');
+    if (!Array.isArray(masteredIds)) masteredIds = [];
+  } catch (e) {
+    masteredIds = [];
+  }
+
+  // ---------- Utility Helpers ----------
+  function gcd(a, b) {
+    a = Math.abs(Math.round(a));
+    b = Math.abs(Math.round(b));
+    while (b !== 0) { const t = a % b; a = b; b = t; }
+    return a || 1;
+  }
+
+  function formatFrac(num, den) {
+    if (den === 0) return 'undefined';
+    if (num === 0) return '0';
+    if (den < 0) { num = -num; den = -den; }
+    const g = gcd(num, den);
+    num /= g; den /= g;
+    return den === 1 ? String(num) : num + '/' + den;
+  }
+
+  function formatSurd(n) {
+    n = Math.round(n);
+    if (n <= 0) return '0';
+    let out = 1, ins = n;
+    for (let f = 2; f * f <= ins; f++) {
+      while (ins % (f * f) === 0) { out *= f; ins /= (f * f); }
+    }
+    if (ins === 1) return String(out);
+    return (out === 1 ? '' : String(out)) + '√' + ins;
+  }
+
+  function fact(n) {
+    let r = 1;
+    for (let i = 2; i <= n; i++) r *= i;
+    return r;
+  }
+
+  function nCr(n, r) {
+    if (r < 0 || r > n) return 0;
+    if (r > n - r) r = n - r;
+    let res = 1;
+    for (let i = 1; i <= r; i++) res = (res * (n - r + i)) / i;
+    return Math.round(res);
+  }
+
+  function nPr(n, r) {
+    if (r < 0 || r > n) return 0;
+    let res = 1;
+    for (let i = 0; i < r; i++) res *= (n - i);
+    return res;
+  }
+
+  // ---------- 1. Theme Toggle ----------
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+
+  function applyTheme(theme) {
+    htmlEl.setAttribute('data-theme', theme);
+    if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem(THEME_KEY, theme);
+  }
+  applyTheme(localStorage.getItem(THEME_KEY) || 'light');
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      applyTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  }
+
+  // ---------- 2. View Mode Filter (All / Book / SME) ----------
+  function applyViewMode(mode) {
+    currentViewMode = mode;
+    bodyEl.classList.remove('mode-book', 'mode-sme');
+    if (mode === 'book') bodyEl.classList.add('mode-book');
+    if (mode === 'sme') bodyEl.classList.add('mode-sme');
+    document.querySelectorAll('[data-view-mode]').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-view-mode') === mode);
+    });
+    localStorage.setItem(STORAGE_PREFIX + 'viewMode', mode);
+  }
+  document.querySelectorAll('[data-view-mode]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      applyViewMode(btn.getAttribute('data-view-mode'));
+    });
+  });
+
+  // ---------- 3. Sidebar Drawer & Accordion ----------
+  const sidebar = document.getElementById('sidebar');
+  const menuToggle = document.getElementById('menuToggle');
+  if (menuToggle && sidebar) {
+    menuToggle.addEventListener('click', function () { sidebar.classList.toggle('open'); });
+    sidebar.querySelectorAll('.nav-link').forEach(function (lnk) {
+      lnk.addEventListener('click', function () {
+        if (window.innerWidth <= 980) sidebar.classList.remove('open');
+      });
+    });
+  }
+  document.querySelectorAll('.nav-unit-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const unit = btn.closest('.nav-unit');
+      if (unit) unit.classList.toggle('collapsed');
+    });
+  });
+
+  // ---------- 4. Mastery Tracker (Dynamic per chapter) ----------
+  const progressText = document.getElementById('progressText');
+  const progressFill = document.getElementById('progressFill');
+  const masterBtns = Array.from(document.querySelectorAll('.master-btn'));
+  const totalSections = masterBtns.length;
+  const validSectionIds = new Set(masterBtns.map(function (b) { return b.getAttribute('data-section-id'); }));
+
+  function renderMastery() {
+    const doneList = masteredIds.filter(function (id) { return validSectionIds.has(id); });
+    localStorage.setItem(STORAGE_PREFIX + 'total', String(totalSections));
+    if (progressText) progressText.textContent = doneList.length + '/' + totalSections;
+    if (progressFill && totalSections > 0) {
+      progressFill.style.width = Math.round((doneList.length / totalSections) * 100) + '%';
+    }
+    masterBtns.forEach(function (btn) {
+      const sid = btn.getAttribute('data-section-id');
+      const done = doneList.indexOf(sid) !== -1;
+      btn.classList.toggle('is-mastered', done);
+      btn.textContent = done ? '✓ 已掌握' : '○ 标记掌握';
+    });
+    document.querySelectorAll('.nav-link').forEach(function (lnk) {
+      const id = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('mastered', doneList.indexOf(id) !== -1);
+    });
+  }
+
+  masterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const sid = btn.getAttribute('data-section-id');
+      const idx = masteredIds.indexOf(sid);
+      if (idx === -1) masteredIds.push(sid);
+      else masteredIds.splice(idx, 1);
+      localStorage.setItem(STORAGE_PREFIX + 'mastered', JSON.stringify(masteredIds));
+      renderMastery();
+    });
+  });
+  if (totalSections > 0) renderMastery();
+
+  // ---------- 5. Global Toggle Details & Print ----------
+  const toggleAllMs = document.getElementById('toggleAllMs');
+  if (toggleAllMs) {
+    toggleAllMs.addEventListener('click', function () {
+      allMsExpanded = !allMsExpanded;
+      document.querySelectorAll('details.ms-details').forEach(function (det) { det.open = allMsExpanded; });
+      const lbl = toggleAllMs.querySelector('.btn-label');
+      if (lbl) lbl.textContent = allMsExpanded ? '收起解析' : '展开解析';
+      toggleAllMs.classList.toggle('active', allMsExpanded);
+    });
+  }
+  const printBtn = document.getElementById('printBtn');
+  if (printBtn) printBtn.addEventListener('click', function () { window.print(); });
+
+  // ---------- 6. Instant Search Filter ----------
+  const searchInput = document.getElementById('searchInput');
+  const searchClear = document.getElementById('searchClear');
+  const searchBar = document.getElementById('searchBar');
+  const searchSummary = document.getElementById('searchSummary');
+  const searchResetBtn = document.getElementById('searchResetBtn');
+  const emptySearchNotice = document.getElementById('emptySearchNotice');
+
+  function runSearch() {
+    if (!searchInput) return;
+    const raw = searchInput.value.trim().toLowerCase();
+    if (searchClear) searchClear.style.display = raw ? 'block' : 'none';
+    const sections = Array.from(document.querySelectorAll('.topic-section'));
+    if (!raw) {
+      sections.forEach(function (s) { s.classList.remove('search-dim'); });
+      if (searchBar) searchBar.classList.remove('visible');
+      if (emptySearchNotice) emptySearchNotice.style.display = 'none';
+      return;
+    }
+    let hits = 0;
+    sections.forEach(function (sec) {
+      const ok = sec.textContent.toLowerCase().indexOf(raw) !== -1;
+      sec.classList.toggle('search-dim', !ok);
+      if (ok) hits++;
+    });
+    if (searchBar) searchBar.classList.add('visible');
+    if (searchSummary) searchSummary.textContent = '关键词 “' + searchInput.value.trim() + '” 匹配 ' + hits + ' 个板块';
+    if (emptySearchNotice) emptySearchNotice.style.display = hits === 0 ? 'block' : 'none';
+  }
+  if (searchInput) searchInput.addEventListener('input', runSearch);
+  function resetSearch() { if (searchInput) searchInput.value = ''; runSearch(); }
+  if (searchClear) searchClear.addEventListener('click', resetSearch);
+  if (searchResetBtn) searchResetBtn.addEventListener('click', resetSearch);
+
+  // ---------- 7. Interactive MCQ Grading ----------
+  document.querySelectorAll('.exam-q[data-mcq-answer]').forEach(function (qBox) {
+    const ans = qBox.getAttribute('data-mcq-answer');
+    const fb = qBox.querySelector('.mcq-feedback');
+    const opts = qBox.querySelectorAll('.mcq-opt');
+    opts.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const chosen = btn.getAttribute('data-opt');
+        opts.forEach(function (o) { o.classList.remove('correct', 'wrong'); });
+        if (chosen === ans) {
+          btn.classList.add('correct');
+          if (fb) {
+            fb.textContent = fb.getAttribute('data-ok') || '✅ 回答正确！';
+            fb.className = 'mcq-feedback visible ok';
+          }
+        } else {
+          btn.classList.add('wrong');
+          opts.forEach(function (o) { if (o.getAttribute('data-opt') === ans) o.classList.add('correct'); });
+          if (fb) {
+            fb.textContent = fb.getAttribute('data-err') || '❌ 未选对，请检查步骤。';
+            fb.className = 'mcq-feedback visible err';
+          }
+        }
+      });
+    });
+  });
+
+  // ---------- 8. Concept Flashcards Filter & Mask Quiz ----------
+  const conceptCountPill = document.getElementById('conceptCountPill');
+  const conceptQuizToggle = document.getElementById('conceptQuizToggle');
+
+  function filterConcepts() {
+    const cards = Array.from(document.querySelectorAll('#conceptGrid .concept-card'));
+    if (!cards.length) return;
+    let visible = 0;
+    cards.forEach(function (card) {
+      const part = card.getAttribute('data-part');
+      const show = activeConceptPart === 'all' || part === activeConceptPart;
+      card.classList.toggle('concept-hidden', !show);
+      if (show) visible++;
+    });
+    if (conceptCountPill) conceptCountPill.textContent = '显示 ' + visible + ' / ' + cards.length + ' 题';
+  }
+
+  document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      activeConceptPart = btn.getAttribute('data-concept-part');
+      document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      filterConcepts();
+    });
+  });
+
+  function applyQuizMask(masked) {
+    quizMasked = masked;
+    document.querySelectorAll('#conceptGrid .concept-card').forEach(function (c) { c.classList.toggle('masked', masked); });
+    if (conceptQuizToggle) {
+      conceptQuizToggle.textContent = masked ? '👁️ 显示全部答案' : '🙈 开启遮罩自测';
+      conceptQuizToggle.classList.toggle('active', masked);
+    }
+    localStorage.setItem(STORAGE_PREFIX + 'quizMasked', masked ? '1' : '0');
+  }
+  if (conceptQuizToggle) {
+    conceptQuizToggle.addEventListener('click', function () { applyQuizMask(!quizMasked); });
+  }
+  document.querySelectorAll('#conceptGrid .cq-answer').forEach(function (box) {
+    box.addEventListener('click', function () {
+      const card = box.closest('.concept-card');
+      if (card && card.classList.contains('masked')) card.classList.remove('masked');
+    });
+  });
+
+  // ---------- 9. 2D Plotter Engine for Chapter Interactive Labs ----------
+  function makePlotter(w, h, xmin, xmax, ymin, ymax) {
+    const pad = 24;
+    const toX = function (x) { return pad + ((x - xmin) / (xmax - xmin)) * (w - 2 * pad); };
+    const toY = function (y) { return h - pad - ((y - ymin) / (ymax - ymin)) * (h - 2 * pad); };
+    return { w: w, h: h, xmin: xmin, xmax: xmax, ymin: ymin, ymax: ymax, toX: toX, toY: toY };
+  }
+
+  function renderPlotBase(p) {
+    let s = '<rect x="2" y="2" width="' + (p.w - 4) + '" height="' + (p.h - 4) + '" rx="6" fill="none" stroke="var(--svg-grid)" stroke-width="1"/>';
+    const xStep = Math.max(1, Math.round((p.xmax - p.xmin) / 8));
+    const yStep = Math.max(1, Math.round((p.ymax - p.ymin) / 8));
+    for (let x = Math.ceil(p.xmin); x <= p.xmax; x += xStep) {
+      const px = p.toX(x);
+      s += '<line x1="' + px.toFixed(1) + '" y1="12" x2="' + px.toFixed(1) + '" y2="' + (p.h - 12) + '" stroke="var(--svg-grid)" stroke-width="0.7"/>';
+    }
+    for (let y = Math.ceil(p.ymin); y <= p.ymax; y += yStep) {
+      const py = p.toY(y);
+      s += '<line x1="12" y1="' + py.toFixed(1) + '" x2="' + (p.w - 12) + '" y2="' + py.toFixed(1) + '" stroke="var(--svg-grid)" stroke-width="0.7"/>';
+    }
+    if (p.xmin <= 0 && p.xmax >= 0) {
+      const ox = p.toX(0);
+      s += '<line x1="' + ox.toFixed(1) + '" y1="10" x2="' + ox.toFixed(1) + '" y2="' + (p.h - 10) + '" stroke="var(--svg-muted)" stroke-width="1.4"/>';
+      s += '<text x="' + Math.min(p.w - 16, ox + 6).toFixed(1) + '" y="22" font-size="10.5" font-weight="700" fill="var(--svg-muted)">y</text>';
+    }
+    if (p.ymin <= 0 && p.ymax >= 0) {
+      const oy = p.toY(0);
+      s += '<line x1="10" y1="' + oy.toFixed(1) + '" x2="' + (p.w - 10) + '" y2="' + oy.toFixed(1) + '" stroke="var(--svg-muted)" stroke-width="1.4"/>';
+      s += '<text x="' + (p.w - 18) + '" y="' + Math.max(20, oy - 5).toFixed(1) + '" font-size="10.5" font-weight="700" fill="var(--svg-muted)">x</text>';
+    }
+    return s;
+  }
+
+  function plotCurve(p, fn, color, dashed, samples) {
+    const N = samples || 120;
+    let d = '';
+    let penDown = false;
+    for (let i = 0; i <= N; i++) {
+      const x = p.xmin + (i / N) * (p.xmax - p.xmin);
+      const y = fn(x);
+      if (!Number.isFinite(y) || y < p.ymin - 1 || y > p.ymax + 1) {
+        penDown = false;
+        continue;
+      }
+      const px = p.toX(x), py = p.toY(y);
+      d += (penDown ? ' L ' : ' M ') + px.toFixed(1) + ' ' + py.toFixed(1);
+      penDown = true;
+    }
+    if (!d) return '';
+    return '<path d="' + d.trim() + '" fill="none" stroke="' + color + '" stroke-width="2.4"' + (dashed ? ' stroke-dasharray="5,4"' : '') + '/>';
+  }
+
+  function plotDot(p, x, y, color, label) {
+    if (x < p.xmin || x > p.xmax || y < p.ymin || y > p.ymax) return '';
+    const px = p.toX(x), py = p.toY(y);
+    let s = '<circle cx="' + px.toFixed(1) + '" cy="' + py.toFixed(1) + '" r="4.8" fill="' + color + '"/>';
+    if (label) {
+      s += '<text x="' + Math.min(p.w - 42, Math.max(12, px + 7)).toFixed(1) + '" y="' + Math.max(18, py - 6).toFixed(1) + '" font-size="10.5" font-weight="700" fill="' + color + '">' + label + '</text>';
+    }
+    return s;
+  }
+
+  // ---------- 10. Chapter-Specific Interactive Lab Mounts (Ch01–Ch16) ----------
+  function mountChapterLab(el) {
+    const type = el.getAttribute('data-lab-type');
+    if (!type) return;
+
+    if (type === 'ch01') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 1 交互实验室 · 线性绝对值 |ax + b| 与反函数 y = x 对称台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>a：<input type="number" id="c1A" value="2" min="-4" max="4"></label>' +
+        '<label>b：<input type="number" id="c1B" value="-4" min="-8" max="8"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c1Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c1Vertex"></div><div class="readout-pill" id="c1Inv"></div><div class="readout-pill" id="c1Sym"></div></div></div></div>';
+      const draw = function () {
+        let a = Math.round(Number(el.querySelector('#c1A').value) || 2); if (a === 0) a = 1;
+        const b = Math.round(Number(el.querySelector('#c1B').value) || 0);
+        const vx = -b / a;
+        const p = makePlotter(360, 270, -6, 6, -6, 6);
+        let svg = renderPlotBase(p);
+        svg += plotCurve(p, function (x) { return x; }, 'var(--svg-muted)', true);
+        svg += plotCurve(p, function (x) { return a * x + b; }, 'var(--svg-blue)', true);
+        svg += plotCurve(p, function (x) { return (x - b) / a; }, 'var(--svg-teal)', false);
+        svg += plotCurve(p, function (x) { return Math.abs(a * x + b); }, 'var(--svg-indigo)', false);
+        svg += plotDot(p, vx, 0, 'var(--svg-red)', 'V(' + formatFrac(-b, a) + ',0)');
+        el.querySelector('#c1Svg').innerHTML = svg;
+        el.querySelector('#c1Vertex').textContent = '折线 y = |' + a + 'x + (' + b + ')| 顶点 (V字尖点)：(' + formatFrac(-b, a) + ', 0)，值域 y ≥ 0';
+        el.querySelector('#c1Inv').textContent = '原直线 f(x) = ' + a + 'x + (' + b + ') 的反函数：f⁻¹(x) = (x − (' + b + ')) / ' + a + '（青色实线）';
+        el.querySelector('#c1Sym').textContent = '对称规则：f(x) 与 f⁻¹(x) 严格关于虚线 y = x 镜面对称，且两者交点必在 y = x 上。';
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch02') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 2 交互实验室 · 配方法、判别式 Δ 与二次绝对值 |ax²+bx+c| 翻折台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>a：<input type="number" id="c2A" value="1" min="-3" max="3"></label>' +
+        '<label>b：<input type="number" id="c2B" value="-4" min="-8" max="8"></label>' +
+        '<label>c：<input type="number" id="c2C" value="3" min="-8" max="8"></label>' +
+        '<label><input type="checkbox" id="c2Abs"> 显示 y = |f(x)| 向上翻折</label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c2Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c2Comp"></div><div class="readout-pill" id="c2Disc"></div><div class="readout-pill" id="c2Ineq"></div></div></div></div>';
+      const draw = function () {
+        let a = Math.round(Number(el.querySelector('#c2A').value) || 1); if (a === 0) a = 1;
+        const b = Math.round(Number(el.querySelector('#c2B').value) || 0);
+        const c = Math.round(Number(el.querySelector('#c2C').value) || 0);
+        const absOn = el.querySelector('#c2Abs').checked;
+        const h = -b / (2 * a);
+        const k = c - (b * b) / (4 * a);
+        const disc = b * b - 4 * a * c;
+        const p = makePlotter(360, 270, -6, 8, -8, 10);
+        let svg = renderPlotBase(p);
+        svg += plotCurve(p, function (x) { const y = a * x * x + b * x + c; return absOn ? Math.abs(y) : y; }, 'var(--svg-indigo)', false);
+        svg += plotDot(p, h, absOn ? Math.abs(k) : k, 'var(--svg-red)', 'V(' + h.toFixed(2) + ',' + (absOn ? Math.abs(k) : k).toFixed(2) + ')');
+        el.querySelector('#c2Svg').innerHTML = svg;
+        el.querySelector('#c2Comp').textContent = '配方法顶点：x = ' + formatFrac(-b, 2 * a) + '，极值 k = ' + k.toFixed(2) + (absOn ? '（翻折后最低必 ≥ 0）' : (a > 0 ? ' (最小值 Min)' : ' (最大值 Max)'));
+        el.querySelector('#c2Disc').textContent = '判别式 Δ = b² − 4ac = ' + disc + (disc > 0 ? ' (>0：两相异实根)' : disc === 0 ? ' (=0：唯一重根/相切)' : ' (<0：无实根)');
+        el.querySelector('#c2Ineq').textContent = absOn ? 'y = |f(x)| 把 x 轴下方负值部分全部对称翻折到上方！' : '开口方向：' + (a > 0 ? '向上 (U形)，解 f(x) < 0 取两根之间' : '向下 (∩形)，解 f(x) > 0 取两根之间');
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch03') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 3 交互实验室 · 三次多项式余数/因式定理试根台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>f(x) = x³ + <input type="number" id="c3B" value="-2">x² + <input type="number" id="c3C" value="-5">x + <input type="number" id="c3D" value="6"></label>' +
+        '<label>测试因子 (x − k) 中的 k：<input type="number" id="c3K" value="1" step="0.5"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c3Rem"></div><div class="readout-pill" id="c3Quot"></div></div></div>';
+      const draw = function () {
+        const b = Number(el.querySelector('#c3B').value) || 0;
+        const c = Number(el.querySelector('#c3C').value) || 0;
+        const d = Number(el.querySelector('#c3D').value) || 0;
+        const k = Number(el.querySelector('#c3K').value) || 0;
+        const q2 = 1;
+        const q1 = b + k * q2;
+        const q0 = c + k * q1;
+        const rem = d + k * q0;
+        el.querySelector('#c3Rem').textContent = '代入余数定理 f(' + k + ') = ' + rem + (Math.abs(rem) < 1e-9 ? '  ✅ 余数为 0 ⇒ (x − (' + k + ')) 是因式 (Factor)!' : '  → 非 0，不是因式');
+        el.querySelector('#c3Quot').textContent = '长除/综合除法结果：f(x) = (x − (' + k + '))(x² + ' + q1 + 'x + ' + q0 + ') + (' + rem + ')';
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch04') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 4 交互实验室 · 三次函数草图、|ax³+...| 翻折与不等式符号分析台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>r₁：<input type="number" id="c4R1" value="-2"></label>' +
+        '<label>r₂：<input type="number" id="c4R2" value="1"></label>' +
+        '<label>r₃：<input type="number" id="c4R3" value="3"></label>' +
+        '<label>首项系数：<select id="c4S"><option value="1">+1 (正系数)</option><option value="-1">−1 (负系数)</option></select></label>' +
+        '<label><input type="checkbox" id="c4Abs"> 套绝对值 |f(x)|</label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c4Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c4Roots"></div><div class="readout-pill" id="c4Ineq"></div></div></div></div>';
+      const draw = function () {
+        const roots = [Number(el.querySelector('#c4R1').value) || 0, Number(el.querySelector('#c4R2').value) || 0, Number(el.querySelector('#c4R3').value) || 0].sort(function (x, y) { return x - y; });
+        const sgn = Number(el.querySelector('#c4S').value) || 1;
+        const absOn = el.querySelector('#c4Abs').checked;
+        const p = makePlotter(360, 270, -5, 6, -12, 12);
+        let svg = renderPlotBase(p);
+        svg += plotCurve(p, function (x) {
+          const y = sgn * (x - roots[0]) * (x - roots[1]) * (x - roots[2]);
+          return absOn ? Math.abs(y) : y;
+        }, 'var(--svg-purple)', false);
+        roots.forEach(function (r, idx) { svg += plotDot(p, r, 0, 'var(--svg-red)', 'r' + (idx + 1)); });
+        el.querySelector('#c4Svg').innerHTML = svg;
+        el.querySelector('#c4Roots').textContent = '有序零点：' + roots.join(' ≤ ') + '；y 轴截距 = ' + (-sgn * roots[0] * roots[1] * roots[2]);
+        el.querySelector('#c4Ineq').textContent = sgn > 0
+          ? 'f(x) > 0 穿根法区间：' + roots[0] + ' < x < ' + roots[1] + ' 或 x > ' + roots[2]
+          : 'f(x) > 0 穿根法区间：x < ' + roots[0] + ' 或 ' + roots[1] + ' < x < ' + roots[2];
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch05') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 5 交互实验室 · y = ke^(nx) + a 与 y = k ln(ax + b) 渐近线画板</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>函数类型：<select id="c5Type"><option value="exp">指数 y = k·e^(nx) + a</option><option value="ln">对数 y = k·ln(ax + b)</option></select></label>' +
+        '<label>k：<input type="number" id="c5K" value="2"></label>' +
+        '<label>n 或 a：<input type="number" id="c5N" value="1"></label>' +
+        '<label>a 或 b：<input type="number" id="c5B" value="-1"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c5Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c5Asym"></div><div class="readout-pill" id="c5Int"></div><div class="readout-pill" id="c5Dom"></div></div></div></div>';
+      const draw = function () {
+        const mode = el.querySelector('#c5Type').value;
+        const k = Number(el.querySelector('#c5K').value) || 1;
+        let na = Number(el.querySelector('#c5N').value) || 1; if (na === 0) na = 1;
+        const b = Number(el.querySelector('#c5B').value) || 0;
+        const p = makePlotter(360, 270, -5, 6, -6, 8);
+        let svg = renderPlotBase(p);
+        if (mode === 'exp') {
+          svg += plotCurve(p, function () { return b; }, 'var(--svg-red)', true);
+          svg += plotCurve(p, function (x) { return k * Math.exp(na * x) + b; }, 'var(--svg-amber)', false);
+          svg += plotDot(p, 0, k + b, 'var(--svg-blue)', '(0,' + (k + b) + ')');
+          el.querySelector('#c5Asym').textContent = '水平渐近线 (Horizontal Asymptote)：y = ' + b;
+          el.querySelector('#c5Int').textContent = 'y 轴截距 (令 x = 0)：(0, ' + (k + b) + ')';
+          el.querySelector('#c5Dom').textContent = '定义域 x ∈ ℝ；值域：y ' + (k > 0 ? '> ' : '< ') + b + '（切勿触及 y = ' + b + '）';
+        } else {
+          const xAsym = -b / na;
+          const ax = p.toX(xAsym);
+          if (ax > 10 && ax < 350) svg += '<line x1="' + ax.toFixed(1) + '" y1="10" x2="' + ax.toFixed(1) + '" y2="260" stroke="var(--svg-red)" stroke-width="2" stroke-dasharray="5,3"/>';
+          svg += plotCurve(p, function (x) { const arg = na * x + b; return arg > 0.02 ? k * Math.log(arg) : NaN; }, 'var(--svg-teal)', false, 180);
+          const xInt = (1 - b) / na;
+          svg += plotDot(p, xInt, 0, 'var(--svg-blue)', 'x₀=' + xInt.toFixed(2));
+          el.querySelector('#c5Asym').textContent = '铅垂渐近线 (Vertical Asymptote)：ax + b = 0 ⇒ x = ' + formatFrac(-b, na);
+          el.querySelector('#c5Int').textContent = 'x 轴交点 (令 ax + b = 1)：x = ' + formatFrac(1 - b, na);
+          el.querySelector('#c5Dom').textContent = '真数必须为正！定义域：' + na + 'x + (' + b + ') > 0；值域：y ∈ ℝ';
+        }
+        el.querySelector('#c5Svg').innerHTML = svg;
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch06') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 6 交互实验室 · 直线线段与 Linear Law 线性化对照台</div>' +
+        '<div class="tab-row"><button type="button" class="tab-btn active" data-c6m="lin">6.5–6.6 Linear Law 线性化转换</button><button type="button" class="tab-btn" data-c6m="seg">6.1–6.3 线段与垂直平分线</button></div></div>' +
+        '<div class="lab-panel" id="c6Body"></div>';
+      let mode = 'lin';
+      const renderC6 = function () {
+        const box = el.querySelector('#c6Body');
+        if (mode === 'lin') {
+          box.innerHTML =
+            '<div class="lab-controls">' +
+            '<label>原方程模型：<select id="c6Model"><option value="pow">y = a xⁿ (幂函数型)</option><option value="exp">y = a bˣ (指数型)</option><option value="e">y = A e^(kx) (自然指数)</option><option value="inv">y = a/x + b (倒数型)</option></select></label>' +
+            '<label>直线斜率 m：<input type="number" id="c6M" value="2" step="0.5"></label>' +
+            '<label>纵轴截距 c：<input type="number" id="c6C" value="3" step="0.5"></label>' +
+            '</div><div class="lab-readout"><div class="readout-pill" id="c6Axes"></div><div class="readout-pill" id="c6Line"></div><div class="readout-pill" id="c6Params"></div></div>';
+          const calc = function () {
+            const md = box.querySelector('#c6Model').value;
+            const m = Number(box.querySelector('#c6M').value) || 0;
+            const c = Number(box.querySelector('#c6C').value) || 0;
+            if (md === 'pow') {
+              box.querySelector('#c6Axes').textContent = '坐标轴设定：纵轴 Y = lg y，横轴 X = lg x';
+              box.querySelector('#c6Line').textContent = '线性式：lg y = n(lg x) + lg a ⇒ 斜率 m = n，纵截距 c = lg a';
+              box.querySelector('#c6Params').textContent = '反推原参数：n = ' + m + '，a = 10^(' + c + ') = ' + Math.pow(10, c).toPrecision(4);
+            } else if (md === 'exp') {
+              box.querySelector('#c6Axes').textContent = '坐标轴设定：纵轴 Y = lg y，横轴 X = x';
+              box.querySelector('#c6Line').textContent = '线性式：lg y = (lg b) x + lg a ⇒ 斜率 m = lg b，纵截距 c = lg a';
+              box.querySelector('#c6Params').textContent = '反推原参数：b = 10^(' + m + ') = ' + Math.pow(10, m).toPrecision(4) + '，a = 10^(' + c + ') = ' + Math.pow(10, c).toPrecision(4);
+            } else if (md === 'e') {
+              box.querySelector('#c6Axes').textContent = '坐标轴设定：纵轴 Y = ln y，横轴 X = x';
+              box.querySelector('#c6Line').textContent = '线性式：ln y = kx + ln A ⇒ 斜率 m = k，纵截距 c = ln A';
+              box.querySelector('#c6Params').textContent = '反推原参数：k = ' + m + '，A = e^(' + c + ') ≈ ' + Math.exp(c).toPrecision(4);
+            } else {
+              box.querySelector('#c6Axes').textContent = '坐标轴设定：纵轴 Y = y（或 xy），横轴 X = 1/x（或 x）';
+              box.querySelector('#c6Line').textContent = '线性式：y = a(1/x) + b ⇒ 斜率 m = a，纵截距 c = b';
+              box.querySelector('#c6Params').textContent = '反推原参数：a = ' + m + '，b = ' + c + '，原关系 y = ' + m + '/x + (' + c + ')';
+            }
+          };
+          box.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', calc); i.addEventListener('change', calc); });
+          calc();
+        } else {
+          box.innerHTML =
+            '<div class="lab-controls">' +
+            '<label>A(<input type="number" id="c6Ax" value="-1">,<input type="number" id="c6Ay" value="6">)</label>' +
+            '<label>B(<input type="number" id="c6Bx" value="5">,<input type="number" id="c6By" value="2">)</label>' +
+            '</div><div class="lab-readout"><div class="readout-pill" id="c6Out1"></div><div class="readout-pill" id="c6Out2"></div></div>';
+          const calc = function () {
+            const ax = Number(box.querySelector('#c6Ax').value) || 0, ay = Number(box.querySelector('#c6Ay').value) || 0;
+            const bx = Number(box.querySelector('#c6Bx').value) || 0, by = Number(box.querySelector('#c6By').value) || 0;
+            const d2 = (bx - ax) * (bx - ax) + (by - ay) * (by - ay);
+            box.querySelector('#c6Out1').textContent = '精确长度 AB = √' + d2 + ' = ' + formatSurd(d2) + '；中点 M = (' + formatFrac(ax + bx, 2) + ', ' + formatFrac(ay + by, 2) + ')';
+            box.querySelector('#c6Out2').textContent = d2 === 0 ? '两点重合' : '斜率 m_AB = ' + formatFrac(by - ay, bx - ax) + '，垂直斜率 m_⊥ = ' + formatFrac(-(bx - ax), by - ay);
+          };
+          box.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', calc); });
+          calc();
+        }
+      };
+      el.querySelectorAll('[data-c6m]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          mode = btn.getAttribute('data-c6m');
+          el.querySelectorAll('[data-c6m]').forEach(function (b) { b.classList.toggle('active', b === btn); });
+          renderC6();
+        });
+      });
+      renderC6();
+    } else if (type === 'ch07') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 7 交互实验室 · 圆方程与直线相交 / 相切 / 相离判别画板</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>圆心 (<input type="number" id="c7H" value="1">,<input type="number" id="c7K" value="-1">) r=<input type="number" id="c7R" value="4" min="1" max="8"></label>' +
+        '<label>直线 y = <input type="number" id="c7M" value="1" step="0.5">x + <input type="number" id="c7C" value="3" step="0.5"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c7Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c7Eq"></div><div class="readout-pill" id="c7Dist"></div><div class="readout-pill" id="c7Rel"></div></div></div></div>';
+      const draw = function () {
+        const h = Number(el.querySelector('#c7H').value) || 0;
+        const k = Number(el.querySelector('#c7K').value) || 0;
+        const r = Math.max(1, Number(el.querySelector('#c7R').value) || 4);
+        const m = Number(el.querySelector('#c7M').value) || 0;
+        const c = Number(el.querySelector('#c7C').value) || 0;
+        const d = Math.abs(m * h - k + c) / Math.hypot(m, 1);
+        const p = makePlotter(360, 270, h - r - 3, h + r + 3, k - r - 3, k + r + 3);
+        let svg = renderPlotBase(p);
+        const cx = p.toX(h), cy = p.toY(k), rx = Math.abs(p.toX(h + r) - cx);
+        svg += '<circle cx="' + cx.toFixed(1) + '" cy="' + cy.toFixed(1) + '" r="' + rx.toFixed(1) + '" fill="rgba(5,150,105,0.12)" stroke="var(--svg-teal)" stroke-width="2.4"/>';
+        svg += plotCurve(p, function (x) { return m * x + c; }, 'var(--svg-red)', false);
+        svg += plotDot(p, h, k, 'var(--svg-indigo)', 'C(' + h + ',' + k + ')');
+        el.querySelector('#c7Svg').innerHTML = svg;
+        el.querySelector('#c7Eq').textContent = '标准圆方程：(x − (' + h + '))² + (y − (' + k + '))² = ' + (r * r);
+        el.querySelector('#c7Dist').textContent = '圆心到直线垂直距离 d = ' + d.toFixed(3) + ' vs 半径 r = ' + r;
+        el.querySelector('#c7Rel').textContent = Math.abs(d - r) < 0.02 ? '🎯 判定：d = r (Δ = 0) → 恰好相切 (Tangent)！' : d < r ? '✂️ 判定：d < r (Δ > 0) → 相交于两点 (Secant / Chord)！' : '🚫 判定：d > r (Δ < 0) → 相离 (No intersection)！';
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch08') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 8 交互实验室 · 弧度制 θ、弧长 s = rθ 与弓形阴影面积实时计算</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>半径 r (cm)：<input type="range" id="c8R" min="2" max="12" step="1" value="6"><span id="c8RLbl">6</span></label>' +
+        '<label>圆心角 θ (rad)：<input type="range" id="c8T" min="0.2" max="3.0" step="0.1" value="1.2"><span id="c8TLbl">1.20</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c8Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c8Arc"></div><div class="readout-pill" id="c8Sec"></div><div class="readout-pill" id="c8Seg"></div></div></div></div>';
+      const draw = function () {
+        const r = Number(el.querySelector('#c8R').value) || 6;
+        const t = Number(el.querySelector('#c8T').value) || 1.2;
+        el.querySelector('#c8RLbl').textContent = r;
+        el.querySelector('#c8TLbl').textContent = t.toFixed(2);
+        const arc = r * t, chord = 2 * r * Math.sin(t / 2), sec = 0.5 * r * r * t, tri = 0.5 * r * r * Math.sin(t), seg = sec - tri;
+        const cx = 135, cy = 195, R = 95 + r * 4;
+        const a1 = -0.15, a2 = a1 - t;
+        const x1 = cx + R * Math.cos(a1), y1 = cy + R * Math.sin(a1);
+        const x2 = cx + R * Math.cos(a2), y2 = cy + R * Math.sin(a2);
+        const large = t > Math.PI ? 1 : 0;
+        let svg = '<path d="M ' + cx + ' ' + cy + ' L ' + x1.toFixed(1) + ' ' + y1.toFixed(1) + ' A ' + R + ' ' + R + ' 0 ' + large + ' 0 ' + x2.toFixed(1) + ' ' + y2.toFixed(1) + ' Z" fill="rgba(13,148,136,0.14)" stroke="var(--svg-teal)" stroke-width="2.2"/>';
+        svg += '<path d="M ' + x1.toFixed(1) + ' ' + y1.toFixed(1) + ' A ' + R + ' ' + R + ' 0 ' + large + ' 0 ' + x2.toFixed(1) + ' ' + y2.toFixed(1) + ' Z" fill="rgba(217,119,6,0.28)" stroke="var(--svg-amber)" stroke-width="2"/>';
+        svg += '<circle cx="' + cx + '" cy="' + cy + '" r="4" fill="var(--svg-ink)"/><text x="' + (cx - 18) + '" y="' + (cy + 16) + '" font-size="11.5" font-weight="700" fill="var(--svg-ink)">O</text>';
+        svg += '<text x="' + (cx + 28) + '" y="' + (cy - 12) + '" font-size="11.5" font-weight="700" fill="var(--svg-teal)">θ = ' + t.toFixed(2) + ' rad</text>';
+        el.querySelector('#c8Svg').innerHTML = svg;
+        el.querySelector('#c8Arc').textContent = '弧长 s = rθ = ' + arc.toFixed(3) + ' cm | 弦长 AB = 2r sin(θ/2) = ' + chord.toFixed(3) + ' cm';
+        el.querySelector('#c8Sec').textContent = '扇形面积 ½r²θ = ' + sec.toFixed(3) + ' cm² | 扇形周长 = s + 2r = ' + (arc + 2 * r).toFixed(3) + ' cm';
+        el.querySelector('#c8Seg').textContent = '阴影弓形面积 (Segment) = ½r²(θ − sin θ) = ' + seg.toFixed(3) + ' cm²';
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch09') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 9 交互实验室 · y = a sin/cos(bx) + c 与 |f(x)| 三角波形诊断台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>函数：<select id="c9Fn"><option value="sin">a sin(bx) + c</option><option value="cos">a cos(bx) + c</option><option value="abs">|a sin(bx) + c|</option></select></label>' +
+        '<label>a：<input type="number" id="c9A" value="2"></label><label>b：<input type="number" id="c9B" value="2"></label><label>c：<input type="number" id="c9C" value="1"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c9Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c9Per"></div><div class="readout-pill" id="c9Rng"></div><div class="readout-pill" id="c9Cast"></div></div></div></div>';
+      const draw = function () {
+        const fn = el.querySelector('#c9Fn').value;
+        const a = Number(el.querySelector('#c9A').value) || 2;
+        let b = Number(el.querySelector('#c9B').value) || 1; if (b <= 0) b = 1;
+        const c = Number(el.querySelector('#c9C').value) || 0;
+        const p = makePlotter(360, 270, 0, 360, -5, 6);
+        let svg = renderPlotBase(p);
+        svg += plotCurve(p, function (deg) {
+          const rad = (deg * Math.PI) / 180;
+          const v = fn === 'cos' ? a * Math.cos(b * rad) + c : a * Math.sin(b * rad) + c;
+          return fn === 'abs' ? Math.abs(v) : v;
+        }, 'var(--svg-indigo)', false, 180);
+        el.querySelector('#c9Svg').innerHTML = svg;
+        const ymin = c - Math.abs(a), ymax = c + Math.abs(a);
+        el.querySelector('#c9Per').textContent = '周期 Period = ' + (fn === 'abs' && c === 0 ? (180 / b).toFixed(1) : (360 / b).toFixed(1)) + '° (弧度 ' + formatFrac(fn === 'abs' && c === 0 ? 1 : 2, b) + 'π)';
+        el.querySelector('#c9Rng').textContent = fn === 'abs'
+          ? '值域 Range (绝对值翻折)：[' + ((ymin <= 0 && ymax >= 0) ? 0 : Math.min(Math.abs(ymin), Math.abs(ymax))) + ', ' + Math.max(Math.abs(ymin), Math.abs(ymax)) + ']'
+          : '值域 Range：[' + ymin + ', ' + ymax + '] | 振幅 |a| = ' + Math.abs(a);
+        el.querySelector('#c9Cast').textContent = 'CAST 口诀 (0°→360°)：I 全正 (All) · II 仅 sin 正 · III 仅 tan 正 · IV 仅 cos 正';
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch10') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 10 交互实验室 · 排列 nPr / 组合 nCr / 捆绑插空计数对比器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>总元素 n：<input type="number" id="c10N" value="7" min="1" max="12"></label>' +
+        '<label>选取数 r：<input type="number" id="c10R" value="3" min="0" max="12"></label>' +
+        '<label>捆绑测试块大小 k：<input type="number" id="c10K" value="2" min="1" max="6"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c10P"></div><div class="readout-pill" id="c10C"></div><div class="readout-pill" id="c10Glue"></div></div></div>';
+      const draw = function () {
+        const n = Math.min(12, Math.max(1, Math.round(Number(el.querySelector('#c10N').value) || 7)));
+        const r = Math.min(n, Math.max(0, Math.round(Number(el.querySelector('#c10R').value) || 3)));
+        const k = Math.min(n, Math.max(1, Math.round(Number(el.querySelector('#c10K').value) || 2)));
+        el.querySelector('#c10P').textContent = '有序排列 ⁿPᵣ = ' + n + '! / (' + n + '−' + r + ')! = ' + nPr(n, r).toLocaleString();
+        el.querySelector('#c10C').textContent = '无序组合 ⁿCᵣ = ' + n + '! / [' + r + '!(' + n + '−' + r + ')!] = ' + nCr(n, r).toLocaleString() + '（关系：ⁿPᵣ = r! · ⁿCᵣ）';
+        const glueVal = fact(n - k + 1) * fact(k);
+        const rem = n - k;
+        const gapVal = k <= rem + 1 ? fact(rem) * nPr(rem + 1, k) : 0;
+        el.querySelector('#c10Glue').textContent = 'n 个中特定 k 个全排列：① 相邻捆绑 (' + (n - k + 1) + ')! × ' + k + '! = ' + glueVal.toLocaleString() + '；② 全不相邻插空 ' + rem + '! × ᴾ(' + (rem + 1) + ',' + k + ') = ' + gapVal.toLocaleString();
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch11') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 11 交互实验室 · 二项式展开 (a + bx)ⁿ 与 AP/GP/S∞ 验算台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>二项式 a：<input type="number" id="c11A" value="2"></label><label>b：<input type="number" id="c11B" value="-3"></label><label>幂 n：<input type="number" id="c11N" value="5" min="2" max="9"></label>' +
+        '<label>GP 首项 u₁：<input type="number" id="c11U" value="12"></label><label>公比 r：<input type="number" id="c11R" value="0.5" step="0.25"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c11Bin"></div><div class="readout-pill" id="c11Gp"></div></div></div>';
+      const draw = function () {
+        const a = Number(el.querySelector('#c11A').value) || 0;
+        const b = Number(el.querySelector('#c11B').value) || 0;
+        const n = Math.min(9, Math.max(2, Math.round(Number(el.querySelector('#c11N').value) || 5)));
+        const terms = [];
+        for (let r = 0; r <= Math.min(3, n); r++) {
+          const coef = nCr(n, r) * Math.pow(a, n - r) * Math.pow(b, r);
+          terms.push((r === 0 ? '' : (coef >= 0 ? ' + ' : ' − ')) + (r === 0 ? coef : Math.abs(coef)) + (r === 0 ? '' : r === 1 ? 'x' : 'x^' + r));
+        }
+        el.querySelector('#c11Bin').textContent = '(' + a + ' + ' + b + 'x)^' + n + ' 前四项 = ' + terms.join('') + ' + …';
+        const u1 = Number(el.querySelector('#c11U').value) || 0;
+        const rRatio = Number(el.querySelector('#c11R').value) || 0;
+        const conv = Math.abs(rRatio) < 1;
+        el.querySelector('#c11Gp').textContent = 'GP u₅ = ' + (u1 * Math.pow(rRatio, 4)).toFixed(3) + ' | ' + (conv ? '✅ |r| < 1 收敛！S∞ = u₁/(1−r) = ' + (u1 / (1 - rRatio)).toFixed(3) : '🚫 |r| ≥ 1 级数发散，S∞ 不存在！');
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch12') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 12 交互实验室 · y = x³ − 3px + 2 切线、法线与二阶导驻点台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>系数 p：<input type="number" id="c12P" value="3" min="1" max="6"></label>' +
+        '<label>点横坐标 x₀：<input type="range" id="c12X" min="-3" max="3" step="0.25" value="-1"><span id="c12XLbl">-1.00</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c12Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c12D1"></div><div class="readout-pill" id="c12D2"></div><div class="readout-pill" id="c12Tan"></div></div></div></div>';
+      const draw = function () {
+        const P = Math.max(1, Number(el.querySelector('#c12P').value) || 3);
+        const x0 = Number(el.querySelector('#c12X').value) || 0;
+        el.querySelector('#c12XLbl').textContent = x0.toFixed(2);
+        const y0 = x0 * x0 * x0 - 3 * P * x0 + 2;
+        const m = 3 * x0 * x0 - 3 * P;
+        const d2 = 6 * x0;
+        const p = makePlotter(360, 270, -4, 4, -18, 22);
+        let svg = renderPlotBase(p);
+        svg += plotCurve(p, function (x) { return x * x * x - 3 * P * x + 2; }, 'var(--svg-indigo)', false);
+        svg += plotCurve(p, function (x) { return y0 + m * (x - x0); }, 'var(--svg-red)', true);
+        svg += plotDot(p, x0, y0, 'var(--svg-red)', 'P(' + x0 + ',' + y0.toFixed(1) + ')');
+        el.querySelector('#c12Svg').innerHTML = svg;
+        el.querySelector('#c12D1').textContent = '一阶导 dy/dx = 3x² − ' + (3 * P) + '，在 x₀=' + x0 + ' 处切线斜率 = ' + m.toFixed(2) + (Math.abs(m) < 0.01 ? ' 🎯 驻点 (dy/dx = 0)!' : '');
+        el.querySelector('#c12D2').textContent = '二阶导 d²y/dx² = 6x = ' + d2.toFixed(2) + (d2 < 0 ? ' (< 0：局部极大值形状 ∩)' : d2 > 0 ? ' (> 0：局部极小值形状 U)' : ' (= 0 需查符号变化)');
+        el.querySelector('#c12Tan').textContent = Math.abs(m) < 0.01 ? '水平切线：y = ' + y0.toFixed(2) + '；法线斜率无定义 (铅垂 x = ' + x0 + ')' : '切线 y − ' + y0.toFixed(2) + ' = ' + m.toFixed(2) + '(x − ' + x0 + ') | 法线斜率 m⊥ = ' + (-1 / m).toFixed(2);
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch13') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 13 交互实验室 · 向量合成 u + v、模长与单位向量动态 SVG</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>u = (<input type="number" id="c13Ux" value="3">,<input type="number" id="c13Uy" value="4">)</label>' +
+        '<label>v = (<input type="number" id="c13Vx" value="4">,<input type="number" id="c13Vy" value="-1">)</label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c13Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c13Mag"></div><div class="readout-pill" id="c13Unit"></div><div class="readout-pill" id="c13Sum"></div></div></div></div>';
+      const draw = function () {
+        const ux = Number(el.querySelector('#c13Ux').value) || 0, uy = Number(el.querySelector('#c13Uy').value) || 0;
+        const vx = Number(el.querySelector('#c13Vx').value) || 0, vy = Number(el.querySelector('#c13Vy').value) || 0;
+        const sx = ux + vx, sy = uy + vy;
+        const p = makePlotter(360, 270, Math.min(-2, ux, vx, sx) - 2, Math.max(4, ux, vx, sx) + 2, Math.min(-2, uy, vy, sy) - 2, Math.max(4, uy, vy, sy) + 2);
+        let svg = renderPlotBase(p);
+        const arrow = function (x1, y1, x2, y2, col, lbl) {
+          const mx = (p.toX(x1) + p.toX(x2)) / 2, my = (p.toY(y1) + p.toY(y2)) / 2;
+          return '<line x1="' + p.toX(x1).toFixed(1) + '" y1="' + p.toY(y1).toFixed(1) + '" x2="' + p.toX(x2).toFixed(1) + '" y2="' + p.toY(y2).toFixed(1) + '" stroke="' + col + '" stroke-width="2.6"/><circle cx="' + p.toX(x2).toFixed(1) + '" cy="' + p.toY(y2).toFixed(1) + '" r="4" fill="' + col + '"/><text x="' + (mx + 6).toFixed(1) + '" y="' + (my - 5).toFixed(1) + '" font-size="11" font-weight="700" fill="' + col + '">' + lbl + '</text>';
+        };
+        svg += arrow(0, 0, ux, uy, 'var(--svg-blue)', 'u');
+        svg += arrow(ux, uy, sx, sy, 'var(--svg-amber)', 'v');
+        svg += arrow(0, 0, sx, sy, 'var(--svg-teal)', 'u+v');
+        el.querySelector('#c13Svg').innerHTML = svg;
+        const u2 = ux * ux + uy * uy, s2 = sx * sx + sy * sy;
+        el.querySelector('#c13Mag').textContent = '精确模长 |u| = ' + formatSurd(u2) + '；合成向量的模 |u + v| = ' + formatSurd(s2);
+        el.querySelector('#c13Unit').textContent = u2 === 0 ? '零向量无单位向量' : 'u 方向单位向量 û = (1/' + formatSurd(u2) + ') (' + ux + 'i + ' + uy + 'j)';
+        el.querySelector('#c13Sum').textContent = '合成向量 u + v = (' + sx + ', ' + sy + ')；差向量 u − v = (' + (ux - vx) + ', ' + (uy - vy) + ')';
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch14') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 14 交互实验室 · 指数、对数与三角链式导数验证台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>函数 y：<select id="c14F"><option value="exp">k e^(ax+b)</option><option value="ln">k ln(ax+b)</option><option value="sin">k sin(ax+b)</option><option value="cos">k cos(ax+b)</option><option value="tan">k tan(ax+b)</option></select></label>' +
+        '<label>k：<input type="number" id="c14K" value="2"></label><label>a：<input type="number" id="c14A" value="3"></label><label>b：<input type="number" id="c14B" value="1"></label>' +
+        '<label>检验 x₀：<input type="number" id="c14X" value="0" step="0.5"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c14Der"></div><div class="readout-pill" id="c14Val"></div></div></div>';
+      const draw = function () {
+        const f = el.querySelector('#c14F').value;
+        const k = Number(el.querySelector('#c14K').value) || 1;
+        const a = Number(el.querySelector('#c14A').value) || 1;
+        const b = Number(el.querySelector('#c14B').value) || 0;
+        const x = Number(el.querySelector('#c14X').value) || 0;
+        const arg = a * x + b;
+        let dtxt = '', val = NaN;
+        if (f === 'exp') { dtxt = (k * a) + ' e^(' + a + 'x + (' + b + '))'; val = k * a * Math.exp(arg); }
+        else if (f === 'ln') { dtxt = formatFrac(k * a, 1) + '·a 约去系数得 ' + k + '·(' + a + ') / (' + a + 'x + (' + b + '))  （注：ln 里常数 k 与系数 a 对消规律：d/dx[ln(ax+b)] = a/(ax+b)！）'; val = arg !== 0 ? (k * a) / arg : NaN; }
+        else if (f === 'sin') { dtxt = (k * a) + ' cos(' + a + 'x + (' + b + '))'; val = k * a * Math.cos(arg); }
+        else if (f === 'cos') { dtxt = (-k * a) + ' sin(' + a + 'x + (' + b + '))  (注意负号!)'; val = -k * a * Math.sin(arg); }
+        else { dtxt = (k * a) + ' sec²(' + a + 'x + (' + b + '))'; val = Math.abs(Math.cos(arg)) > 0.01 ? (k * a) / (Math.cos(arg) * Math.cos(arg)) : NaN; }
+        el.querySelector('#c14Der').textContent = '导数表达式 dy/dx = ' + dtxt;
+        el.querySelector('#c14Val').textContent = '在 x₀ = ' + x + ' rad 处斜率数值 ≈ ' + (Number.isFinite(val) ? val.toFixed(4) : '未定义（除数为 0）');
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch15') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 15 交互实验室 · 定积分“代数净值” vs “绝对几何面积”对照仪</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>被积函数：<select id="c15F"><option value="par">y = x² − 4</option><option value="cub">y = x³ − 4x</option><option value="sin">y = 3 sin(x)</option></select></label>' +
+        '<label>下限 a：<input type="number" id="c15A" value="-1" step="0.5"></label><label>上限 b：<input type="number" id="c15B" value="3" step="0.5"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c15Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c15Net"></div><div class="readout-pill" id="c15Geom"></div><div class="readout-pill" id="c15Rule"></div></div></div></div>';
+      const draw = function () {
+        const mode = el.querySelector('#c15F').value;
+        let a = Number(el.querySelector('#c15A').value) || -1;
+        let b = Number(el.querySelector('#c15B').value) || 3;
+        if (b < a) { const t = a; a = b; b = t; }
+        const fn = function (x) { return mode === 'par' ? x * x - 4 : mode === 'cub' ? x * x * x - 4 * x : 3 * Math.sin(x); };
+        const p = makePlotter(360, 270, Math.min(-3, a - 0.5), Math.max(4, b + 0.5), -6, 7);
+        let svg = renderPlotBase(p);
+        const N = 120, dx = (b - a) / N;
+        let net = 0, geom = 0;
+        for (let i = 0; i < N; i++) {
+          const x1 = a + i * dx, x2 = x1 + dx, xm = (x1 + x2) / 2, ym = fn(xm);
+          net += ym * dx;
+          geom += Math.abs(ym) * dx;
+          const top = ym >= 0 ? p.toY(ym) : p.toY(0);
+          const ht = Math.abs(p.toY(ym) - p.toY(0));
+          svg += '<rect x="' + p.toX(x1).toFixed(1) + '" y="' + top.toFixed(1) + '" width="' + Math.max(1.5, p.toX(x2) - p.toX(x1)).toFixed(1) + '" height="' + ht.toFixed(1) + '" fill="' + (ym >= 0 ? 'rgba(22,163,74,0.35)' : 'rgba(220,38,38,0.35)') + '"/>';
+        }
+        svg += plotCurve(p, fn, 'var(--svg-indigo)', false);
+        el.querySelector('#c15Svg').innerHTML = svg;
+        el.querySelector('#c15Net').textContent = '定积分代数和 ∫ₐᵇ f(x) dx ≈ ' + net.toFixed(3) + '（x 轴下方红色贡献为负，互相抵消）';
+        el.querySelector('#c15Geom').textContent = '总几何围成面积 ∫ₐᵇ |f(x)| dx ≈ ' + geom.toFixed(3) + '（必须按零点分段取 |…| 相加！）';
+        el.querySelector('#c15Rule').textContent = '考场避坑：求 x 轴下方区域面积务必加负号 −∫ 或取绝对值 |∫|！';
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch16') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 16 交互实验室 · 运动学 s–v–a 瞬时静止折返与总路程拆分器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>速度模型 v(t)：<select id="c16M"><option value="q">v = t² − 4t + 3 (t=1,3 折返)</option><option value="lin">v = 6 − 2t (t=3 折返)</option></select></label>' +
+        '<label>终止时刻 T (s)：<input type="range" id="c16T" min="0.5" max="5" step="0.5" value="4"><span id="c16TLbl">4.0s</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c16Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c16Inst"></div><div class="readout-pill" id="c16Disp"></div><div class="readout-pill" id="c16Dist"></div></div></div></div>';
+      const draw = function () {
+        const mode = el.querySelector('#c16M').value;
+        const T = Number(el.querySelector('#c16T').value) || 4;
+        el.querySelector('#c16TLbl').textContent = T.toFixed(1) + 's';
+        const vFn = function (t) { return mode === 'q' ? t * t - 4 * t + 3 : 6 - 2 * t; };
+        const aFn = function (t) { return mode === 'q' ? 2 * t - 4 : -2; };
+        const p = makePlotter(360, 270, 0, 5.2, -5, 9);
+        let svg = renderPlotBase(p);
+        const N = 100, dt = T / N;
+        let disp = 0, dist = 0;
+        for (let i = 0; i < N; i++) {
+          const t1 = i * dt, tm = t1 + dt / 2, vm = vFn(tm);
+          disp += vm * dt;
+          dist += Math.abs(vm) * dt;
+          const top = vm >= 0 ? p.toY(vm) : p.toY(0);
+          svg += '<rect x="' + p.toX(t1).toFixed(1) + '" y="' + top.toFixed(1) + '" width="' + Math.max(1.5, p.toX(t1 + dt) - p.toX(t1)).toFixed(1) + '" height="' + Math.abs(p.toY(vm) - p.toY(0)).toFixed(1) + '" fill="' + (vm >= 0 ? 'rgba(3,105,161,0.3)' : 'rgba(220,38,38,0.32)') + '"/>';
+        }
+        svg += plotCurve(p, vFn, 'var(--svg-indigo)', false);
+        svg += plotDot(p, T, vFn(T), 'var(--svg-red)', 't=' + T.toFixed(1));
+        el.querySelector('#c16Svg').innerHTML = svg;
+        el.querySelector('#c16Inst').textContent = '在 t = ' + T.toFixed(1) + 's：瞬时速度 v = ' + vFn(T).toFixed(2) + ' m/s，加速度 a = dv/dt = ' + aFn(T).toFixed(2) + ' m/s²';
+        el.querySelector('#c16Disp').textContent = '净位移 Displacement (∫₀ᵀ v dt) = ' + disp.toFixed(2) + ' m';
+        el.querySelector('#c16Dist').textContent = '总路程 Total Distance (在 v=0 处拆分取 |…|) = ' + dist.toFixed(2) + ' m' + (Math.abs(dist - Math.abs(disp)) > 0.05 ? ' （已折返！）' : '');
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    }
+  }
+
+  document.querySelectorAll('.lab-box[data-lab-type]').forEach(mountChapterLab);
+
+  // ---------- 11. Initialize State & Scroll Spy ----------
+  applyViewMode(currentViewMode);
+  applyQuizMask(quizMasked);
+
+  const backTopBtn = document.getElementById('backTopBtn');
+  const trackedSections = Array.from(document.querySelectorAll('.topic-section[id]'));
+  const navLinks = Array.from(document.querySelectorAll('.sidebar .nav-link'));
+
+  window.addEventListener('scroll', function () {
+    if (backTopBtn) backTopBtn.classList.toggle('visible', window.scrollY > 360);
+    const y = window.scrollY + 110;
+    let currentId = '';
+    for (let i = 0; i < trackedSections.length; i++) {
+      if (trackedSections[i].offsetTop <= y && getComputedStyle(trackedSections[i]).display !== 'none') {
+        currentId = trackedSections[i].id;
+      }
+    }
+    navLinks.forEach(function (lnk) {
+      const h = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('active', h === currentId);
+    });
+  }, { passive: true });
+
+  if (backTopBtn) {
+    backTopBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  }
+})();
+
+  </script>
+</body>
+</html>

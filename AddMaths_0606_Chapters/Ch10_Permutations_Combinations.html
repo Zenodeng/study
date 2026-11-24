@@ -1,0 +1,1969 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="--accent: #BE123C;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch10 · Chapter 10: Permutations and combinations — IGCSE Add Maths (0606) 精讲</title>
+  <style>
+/* ==========================================================================
+   Cambridge IGCSE Additional Mathematics (0606 · 3rd Ed. Sue Pemberton)
+   16-Chapter Suite Shared Stylesheet (Offline, Zero CDN, Print-Ready)
+   ========================================================================== */
+
+:root {
+  --bg-page: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --bg-sidebar: #FFFFFF;
+  --bg-code: #EFF6FF;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-faint: #64748B;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+
+  --accent: #4338CA;
+  --accent-hover: #3730A3;
+  --accent-soft: #E0E7FF;
+
+  --p1-bg: #E0E7FF;
+  --p1-text: #3730A3;
+  --p1-border: #C7D2FE;
+  --p2-bg: #FEF3C7;
+  --p2-text: #92400E;
+  --p2-border: #FDE68A;
+
+  --deep-bg: #EFF6FF;
+  --deep-border: #2563EB;
+  --tip-bg: #FFFBEB;
+  --tip-border: #D97706;
+  --mistake-bg: #FFF1F2;
+  --mistake-border: #E11D48;
+  --example-bg: #F0FDF4;
+  --example-border: #16A34A;
+  --formula-bg: #F8FAFC;
+  --formula-border: #4338CA;
+
+  --ok-bg: #DCFCE7;
+  --ok-text: #166534;
+  --ok-border: #86EFAC;
+  --err-bg: #FEE2E2;
+  --err-text: #991B1B;
+  --err-border: #FCA5A5;
+
+  --svg-bg: #FFFFFF;
+  --svg-grid: #E2E8F0;
+  --svg-ink: #0F172A;
+  --svg-muted: #64748B;
+  --svg-blue: #2563EB;
+  --svg-indigo: #4338CA;
+  --svg-teal: #0F766E;
+  --svg-amber: #D97706;
+  --svg-red: #DC2626;
+  --svg-green: #16A34A;
+  --svg-purple: #6D28D9;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.07);
+  --shadow-lg: 0 10px 26px rgba(15, 23, 42, 0.11);
+
+  --sidebar-w: 288px;
+  --topbar-h: 58px;
+  --radius-sm: 7px;
+  --radius-md: 11px;
+  --radius-lg: 16px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Songti SC", "Noto Serif SC", Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+[data-theme="dark"] {
+  --bg-page: #0B1120;
+  --bg-surface: #111827;
+  --bg-subtle: #1E293B;
+  --bg-sidebar: #0F172A;
+  --bg-code: #1E293B;
+  --text-main: #F1F5F9;
+  --text-muted: #CBD5E1;
+  --text-faint: #94A3B8;
+  --border: #1E293B;
+  --border-strong: #334155;
+
+  --accent: #818CF8;
+  --accent-hover: #A5B4FC;
+  --accent-soft: rgba(129, 140, 248, 0.18);
+
+  --p1-bg: rgba(129, 140, 248, 0.18);
+  --p1-text: #C7D2FE;
+  --p1-border: rgba(129, 140, 248, 0.38);
+  --p2-bg: rgba(245, 158, 11, 0.16);
+  --p2-text: #FDE68A;
+  --p2-border: rgba(245, 158, 11, 0.35);
+
+  --deep-bg: rgba(37, 99, 235, 0.14);
+  --deep-border: #60A5FA;
+  --tip-bg: rgba(217, 119, 6, 0.14);
+  --tip-border: #FBBF24;
+  --mistake-bg: rgba(225, 29, 72, 0.15);
+  --mistake-border: #FB7185;
+  --example-bg: rgba(22, 163, 74, 0.13);
+  --example-border: #4ADE80;
+  --formula-bg: #172033;
+  --formula-border: #818CF8;
+
+  --ok-bg: rgba(22, 163, 74, 0.22);
+  --ok-text: #BBF7D0;
+  --ok-border: #22C55E;
+  --err-bg: rgba(220, 38, 38, 0.22);
+  --err-text: #FECACA;
+  --err-border: #EF4444;
+
+  --svg-bg: #0F172A;
+  --svg-grid: #334155;
+  --svg-ink: #F1F5F9;
+  --svg-muted: #94A3B8;
+  --svg-blue: #60A5FA;
+  --svg-indigo: #818CF8;
+  --svg-teal: #2DD4BF;
+  --svg-amber: #FBBF24;
+  --svg-red: #F87171;
+  --svg-green: #34D399;
+  --svg-purple: #A78BFA;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--topbar-h) + 18px); }
+body { margin: 0; font-family: var(--font-sans); background: var(--bg-page); color: var(--text-main); line-height: 1.72; font-size: 15.5px; -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4 { margin: 0 0 0.55em 0; line-height: 1.32; font-weight: 700; color: var(--text-main); }
+p { margin: 0 0 0.9em 0; }
+ul, ol { margin: 0 0 1em 0; padding-left: 1.45em; }
+li { margin-bottom: 0.35em; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { font-family: var(--font-mono); font-size: 0.9em; background: var(--bg-code); color: var(--accent); padding: 2px 6px; border-radius: 4px; }
+
+/* View Mode Filters */
+body.mode-book .sme-section { display: none !important; }
+body.mode-sme .book-section { display: none !important; }
+
+/* Math Formatting Helpers (Pure CSS, Zero CDN) */
+.math { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 1.04em; letter-spacing: 0.01em; }
+.math-upright { font-family: Georgia, "Times New Roman", serif; font-style: normal; }
+.frac { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; font-size: 0.88em; line-height: 1.1; margin: 0 2px; font-style: normal; font-family: Georgia, "Times New Roman", serif; }
+.frac .num { border-bottom: 1.5px solid currentColor; padding: 0 4px 1px 4px; }
+.frac .den { padding: 1px 4px 0 4px; }
+.sqrt { display: inline-flex; align-items: baseline; font-family: Georgia, "Times New Roman", serif; }
+.sqrt-rad { border-top: 1.4px solid currentColor; padding: 0 3px 0 2px; margin-left: 1px; }
+.vec-col { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; border-left: 1.5px solid currentColor; border-right: 1.5px solid currentColor; border-radius: 4px; padding: 1px 6px; line-height: 1.25; font-style: normal; font-family: Georgia, "Times New Roman", serif; margin: 0 3px; font-size: 0.92em; }
+.ncr-stack { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; border-left: 1.4px solid currentColor; border-right: 1.4px solid currentColor; border-radius: 6px; padding: 0 5px; line-height: 1.15; font-style: normal; font-family: Georgia, "Times New Roman", serif; margin: 0 2px; font-size: 0.9em; }
+
+.formula-card { background: var(--formula-bg); border: 1.5px solid var(--border-strong); border-left: 5px solid var(--formula-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; font-size: 15px; }
+.formula-main { font-family: Georgia, "Times New Roman", serif; font-size: 16.5px; font-weight: 700; color: var(--accent); margin: 4px 0 6px 0; }
+.matrix-shoe { display: inline-flex; align-items: center; gap: 6px; background: var(--bg-surface); border: 1px solid var(--border-strong); padding: 8px 14px; border-radius: 8px; font-family: Georgia, "Times New Roman", serif; font-size: 15.5px; margin: 8px 0; flex-wrap: wrap; }
+.shoe-cols { display: inline-flex; gap: 16px; border-left: 2px solid var(--text-main); border-right: 2px solid var(--text-main); padding: 4px 12px; }
+.shoe-col { display: flex; flex-direction: column; align-items: center; line-height: 1.45; }
+
+/* Topbar & Responsive Controls */
+.topbar {
+  position: sticky; top: 0; z-index: 100; height: var(--topbar-h);
+  background: var(--bg-surface); border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm); display: flex; align-items: center;
+  justify-content: space-between; gap: 10px; padding: 0 16px;
+}
+.topbar-left { display: flex; align-items: center; gap: 8px; min-width: 0; flex-shrink: 1; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 34px; padding: 0 11px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--bg-surface); color: var(--text-main); font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; text-decoration: none; }
+.icon-btn:hover { background: var(--bg-subtle); border-color: var(--accent); text-decoration: none; }
+.icon-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.menu-toggle { display: none; }
+.brand-pill { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; white-space: nowrap; flex-shrink: 1; min-width: 0; }
+.brand-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 240px; }
+.brand-code { background: var(--accent); color: #fff; padding: 2px 8px; border-radius: 5px; font-size: 12px; letter-spacing: 0.4px; white-space: nowrap; flex-shrink: 0; }
+.search-wrap { position: relative; flex: 1 1 160px; min-width: 140px; max-width: 280px; }
+.search-input { width: 100%; height: 34px; padding: 0 30px 0 32px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--bg-subtle); color: var(--text-main); font-size: 13.5px; outline: none; }
+.search-input:focus { border-color: var(--accent); background: var(--bg-surface); }
+.search-input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.search-icon { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); color: var(--text-faint); font-size: 13px; pointer-events: none; }
+.search-clear { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); border: none; background: transparent; color: var(--text-faint); cursor: pointer; font-size: 14px; display: none; }
+.search-results-bar { display: none; background: var(--accent-soft); border-bottom: 1px solid var(--border); padding: 8px 20px; font-size: 13.5px; color: var(--text-main); align-items: center; justify-content: space-between; gap: 12px; }
+.search-results-bar.visible { display: flex; }
+.topbar-controls { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.seg-group { display: inline-flex; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); overflow: hidden; background: var(--bg-subtle); }
+.seg-btn { border: none; background: transparent; color: var(--text-muted); padding: 6px 10px; font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.seg-btn.active { background: var(--accent); color: #fff; }
+.progress-chip { display: flex; align-items: center; gap: 8px; padding: 4px 10px; border-radius: 999px; background: var(--bg-subtle); border: 1px solid var(--border); font-size: 12.5px; font-weight: 600; white-space: nowrap; }
+.progress-track { width: 54px; height: 7px; background: var(--border-strong); border-radius: 99px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), #0F766E); transition: width 0.25s ease; }
+
+.app-layout { display: flex; min-height: calc(100vh - var(--topbar-h)); }
+.sidebar { width: var(--sidebar-w); flex-shrink: 0; background: var(--bg-sidebar); border-right: 1px solid var(--border); position: sticky; top: var(--topbar-h); height: calc(100vh - var(--topbar-h)); overflow-y: auto; padding: 14px 10px 44px 10px; }
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 99px; }
+.nav-unit { margin-bottom: 8px; }
+.nav-unit-btn { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border: none; border-radius: var(--radius-sm); background: transparent; color: var(--text-main); font-size: 13px; font-weight: 700; text-align: left; cursor: pointer; }
+.nav-unit-btn:hover { background: var(--bg-subtle); }
+.nav-unit-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.nav-unit-title { flex: 1; display: flex; align-items: center; gap: 7px; line-height: 1.3; }
+.nav-chevron { font-size: 11px; color: var(--text-faint); transition: transform 0.2s; }
+.nav-unit.collapsed .nav-chevron { transform: rotate(-90deg); }
+.nav-unit.collapsed .nav-links { display: none; }
+.nav-links { list-style: none; padding: 2px 0 4px 12px; margin: 0 0 0 14px; border-left: 2px solid var(--border); }
+.nav-link { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 5px 9px; margin: 2px 0; border-radius: var(--radius-sm); color: var(--text-muted); font-size: 12.6px; line-height: 1.35; text-decoration: none; }
+.nav-link:hover { background: var(--bg-subtle); color: var(--text-main); text-decoration: none; }
+.nav-link.active { background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+.nav-done-mark { color: #10B981; font-weight: 800; font-size: 12px; opacity: 0; }
+.nav-link.mastered .nav-done-mark { opacity: 1; }
+.main-content { flex: 1; min-width: 0; padding: 26px 32px 80px 32px; }
+.content-inner { max-width: 960px; margin: 0 auto; }
+
+.hero-card { background: linear-gradient(135deg, #1E1B4B 0%, var(--accent) 55%, #0F766E 100%); color: #fff; border-radius: var(--radius-lg); padding: 28px 32px; margin-bottom: 26px; box-shadow: var(--shadow-lg); }
+.hero-card h1 { color: #fff; font-size: 25px; margin-bottom: 8px; letter-spacing: -0.3px; }
+.hero-sub { color: rgba(255,255,255,0.92); font-size: 14.8px; max-width: 820px; margin-bottom: 16px; }
+.hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.hero-pill { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.28); color: #fff; padding: 4px 11px; border-radius: 999px; font-size: 12.5px; font-weight: 600; }
+.unit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+.unit-tile { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.24); border-radius: var(--radius-md); padding: 12px 14px; color: #fff; text-decoration: none; display: block; transition: transform 0.15s, background 0.15s; }
+.unit-tile:hover { transform: translateY(-2px); background: rgba(255,255,255,0.22); text-decoration: none; }
+.unit-tile-num { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.7px; opacity: 0.85; font-weight: 700; }
+.unit-tile-title { font-size: 14.5px; font-weight: 700; margin: 3px 0; }
+.unit-tile-meta { font-size: 12px; opacity: 0.88; }
+
+.topic-section { background: var(--bg-surface); border: 1px solid var(--border); border-top: 4px solid var(--accent); border-radius: var(--radius-md); padding: 24px 26px; margin-bottom: 24px; box-shadow: var(--shadow-sm); }
+.topic-section.search-dim { display: none; }
+.section-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 2px solid var(--border); }
+.section-title-group h3 { font-size: 19.5px; margin-bottom: 4px; }
+.section-en-sub { font-size: 13.5px; color: var(--text-faint); font-weight: 600; }
+.tier-row { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 7px; }
+.badge-p1, .badge-p2 { display: inline-block; font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.badge-p1 { background: var(--p1-bg); color: var(--p1-text); border: 1px solid var(--p1-border); }
+.badge-p2 { background: var(--p2-bg); color: var(--p2-text); border: 1px solid var(--p2-border); }
+.master-btn { flex-shrink: 0; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-muted); font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.master-btn:hover { border-color: #10B981; color: #10B981; }
+.master-btn.is-mastered { background: var(--ok-bg); color: var(--ok-text); border-color: var(--ok-border); }
+.subtopic { margin-bottom: 20px; }
+.subtopic:last-of-type { margin-bottom: 12px; }
+.subtopic h4 { font-size: 16px; color: var(--accent); margin: 0 0 10px 0; padding-bottom: 4px; border-bottom: 1px dashed var(--border); display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+
+.worked-example { background: var(--example-bg); border: 1px solid var(--border); border-left: 4px solid var(--example-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; }
+.worked-title { font-weight: 800; font-size: 14px; color: var(--example-border); margin-bottom: 6px; }
+.callout { border-radius: var(--radius-sm); padding: 13px 16px; margin: 14px 0; border-left: 4px solid var(--border-strong); font-size: 14.5px; }
+.callout-title { font-weight: 800; font-size: 13.5px; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+.deep-dive { background: var(--deep-bg); border-left-color: var(--deep-border); }
+.deep-dive .callout-title { color: var(--deep-border); }
+.examiner-tip { background: var(--tip-bg); border-left-color: var(--tip-border); }
+.examiner-tip .callout-title { color: var(--tip-border); }
+.common-mistake { background: var(--mistake-bg); border-left-color: var(--mistake-border); }
+.common-mistake .callout-title { color: var(--mistake-border); }
+
+.table-wrap { width: 100%; overflow-x: auto; margin: 14px 0; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+table.am-table { width: 100%; border-collapse: collapse; font-size: 13.8px; text-align: left; }
+table.am-table th { background: var(--bg-subtle); color: var(--text-main); font-weight: 700; padding: 9px 12px; border-bottom: 2px solid var(--border-strong); white-space: nowrap; }
+table.am-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.am-table tr:last-child td { border-bottom: none; }
+table.am-table tbody tr:hover { background: var(--bg-subtle); }
+
+.svg-figure { background: var(--svg-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px; margin: 16px 0; text-align: center; break-inside: avoid; }
+.svg-figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.svg-caption { margin-top: 8px; font-size: 13px; color: var(--text-faint); font-weight: 600; }
+
+/* Interactive Labs */
+.lab-box { background: var(--bg-subtle); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px; margin: 18px 0; break-inside: avoid; }
+.lab-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+.lab-title { font-size: 15.5px; font-weight: 800; color: var(--accent); display: flex; align-items: center; gap: 7px; }
+.lab-panel { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; }
+.lab-controls { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-bottom: 12px; align-items: center; }
+.lab-controls label { font-size: 13px; font-weight: 700; color: var(--text-muted); display: inline-flex; align-items: center; gap: 6px; }
+.lab-controls input[type="number"], .lab-controls select { padding: 5px 8px; border-radius: 6px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-main); font-size: 13.2px; font-weight: 700; }
+.lab-controls input[type="number"] { width: 68px; text-align: center; }
+.lab-controls input[type="range"] { width: 120px; accent-color: var(--accent); }
+.lab-grid-2col { display: grid; grid-template-columns: 1.12fr 1fr; gap: 14px; align-items: start; }
+@media (max-width: 820px) { .lab-grid-2col { grid-template-columns: 1fr; } }
+.tab-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.tab-btn { border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-muted); padding: 5px 10px; border-radius: 6px; font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.tab-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.lab-readout { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; font-size: 13.2px; font-weight: 600; }
+.readout-pill { background: var(--bg-page); border: 1px solid var(--border-strong); padding: 7px 10px; border-radius: 6px; width: 100%; line-height: 1.5; }
+
+/* Practice Questions & Concepts */
+.practice-block { margin-top: 18px; padding-top: 14px; border-top: 2px dashed var(--border-strong); }
+.practice-heading { font-size: 16px; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.exam-q { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 14px; break-inside: avoid; }
+.exam-q-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; font-size: 12.5px; }
+.q-tag { font-weight: 800; color: var(--accent); background: var(--accent-soft); padding: 2px 8px; border-radius: 5px; }
+.q-marks { font-weight: 700; color: var(--text-faint); }
+.q-stem-en { font-size: 14.8px; font-weight: 600; color: var(--text-main); margin-bottom: 6px; }
+.q-stem-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 12px; }
+.mcq-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin-bottom: 10px; }
+.mcq-opt { text-align: left; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 13.8px; cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.mcq-opt:hover { border-color: var(--accent); background: var(--bg-subtle); }
+.mcq-opt.correct { background: var(--ok-bg); border-color: var(--ok-border); color: var(--ok-text); font-weight: 700; }
+.mcq-opt.wrong { background: var(--err-bg); border-color: var(--err-border); color: var(--err-text); }
+.mcq-feedback { display: none; font-size: 13.5px; padding: 10px 12px; border-radius: var(--radius-sm); margin-top: 8px; }
+.mcq-feedback.visible { display: block; }
+.mcq-feedback.ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.mcq-feedback.err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+details.ms-details { margin-top: 10px; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 12px; }
+details.ms-details summary { cursor: pointer; font-weight: 700; font-size: 13.5px; color: var(--accent); user-select: none; }
+.ms-body { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 13.8px; }
+.ms-mark { display: inline-block; font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--p1-text); background: var(--p1-bg); padding: 1px 5px; border-radius: 4px; margin-right: 4px; }
+.ms-cn { color: var(--text-muted); margin-top: 4px; }
+
+.concept-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 14px; margin-bottom: 18px; }
+.concept-filter-group { display: flex; flex-wrap: wrap; gap: 6px; }
+.concept-actions { display: flex; align-items: center; gap: 10px; }
+.concept-count-pill { font-size: 12.5px; font-weight: 700; color: var(--text-muted); }
+.concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 14px; }
+.concept-card { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; gap: 8px; break-inside: avoid; }
+.concept-card:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
+.concept-card.concept-hidden { display: none !important; }
+.cq-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.cq-en { font-weight: 700; font-size: 14.5px; color: var(--text-main); line-height: 1.45; }
+.cq-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 2px; }
+.cq-answer { position: relative; margin-top: auto; background: var(--bg-surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius-sm); padding: 11px 13px; font-size: 13.8px; line-height: 1.6; }
+.kw { color: var(--accent); background: var(--accent-soft); padding: 0 4px; border-radius: 3px; font-weight: 700; }
+.cq-mask-hint { display: none; }
+.concept-card.masked .cq-answer { cursor: pointer; }
+.concept-card.masked .cq-answer-inner { filter: blur(7px); opacity: 0.22; user-select: none; pointer-events: none; transition: filter 0.2s, opacity 0.2s; }
+.concept-card.masked .cq-mask-hint { display: flex; align-items: center; justify-content: center; position: absolute; inset: 0; font-size: 13.5px; font-weight: 700; color: var(--accent); background: rgba(255,255,255,0.25); border-radius: var(--radius-sm); }
+[data-theme="dark"] .concept-card.masked .cq-mask-hint { background: rgba(15,23,42,0.35); }
+
+/* Chapter Pager & Hub Grid */
+.chapter-pager { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 28px; padding: 16px 20px; background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); }
+.pager-btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: var(--radius-sm); background: var(--bg-subtle); border: 1px solid var(--border-strong); color: var(--text-main); font-size: 13.5px; font-weight: 700; text-decoration: none; }
+.pager-btn:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); text-decoration: none; }
+.pager-btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.pager-btn.primary:hover { background: var(--accent-hover); color: #fff; }
+
+.hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px; margin-top: 18px; }
+.hub-card { display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-surface); border: 1px solid var(--border-strong); border-top: 5px solid var(--card-color, var(--accent)); border-radius: var(--radius-md); padding: 18px 18px 14px 18px; color: var(--text-main); text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; box-shadow: var(--shadow-sm); }
+.hub-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--card-color, var(--accent)); text-decoration: none; }
+.hub-card-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+.hub-badge { font-size: 11.5px; font-weight: 800; color: #fff; background: var(--card-color, var(--accent)); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill { font-size: 12px; font-weight: 700; color: var(--text-muted); background: var(--bg-subtle); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill.done { background: var(--ok-bg); color: var(--ok-text); }
+.hub-title { font-size: 16.5px; font-weight: 800; margin-bottom: 4px; }
+.hub-en { font-size: 12.8px; color: var(--text-faint); font-weight: 600; margin-bottom: 8px; }
+.hub-sub { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; }
+.hub-foot { font-size: 13px; font-weight: 700; color: var(--card-color, var(--accent)); display: flex; align-items: center; justify-content: space-between; }
+
+.back-top-btn { position: fixed; right: 22px; bottom: 22px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); box-shadow: var(--shadow-md); cursor: pointer; display: none; align-items: center; justify-content: center; font-size: 17px; font-weight: 800; z-index: 80; }
+.back-top-btn.visible { display: flex; }
+
+@media (max-width: 1200px) {
+  .brand-title, .btn-label { display: none; }
+  .seg-btn { padding: 6px 8px; }
+}
+@media (max-width: 980px) {
+  .menu-toggle { display: inline-flex; }
+  .sidebar { position: fixed; left: 0; top: var(--topbar-h); z-index: 95; transform: translateX(-100%); transition: transform 0.22s ease; box-shadow: var(--shadow-lg); }
+  .sidebar.open { transform: translateX(0); }
+  .main-content { padding: 18px 14px 64px 14px; }
+  .topic-section { padding: 18px 16px; }
+  .progress-chip { display: none; }
+  .search-wrap { min-width: 130px; }
+}
+@media (max-width: 640px) {
+  .topbar { padding: 0 10px; gap: 6px; }
+  .search-wrap { max-width: none; }
+  .concept-grid, .hub-grid { grid-template-columns: 1fr; }
+}
+@media print {
+  .topbar, .sidebar, .search-results-bar, .back-top-btn, .master-btn, .lab-controls button, .concept-toolbar, .cq-mask-hint, .chapter-pager { display: none !important; }
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  .main-content { padding: 0 !important; }
+  .content-inner { max-width: 100% !important; }
+  .topic-section, .exam-q, .callout, .worked-example, .svg-figure, .concept-card { box-shadow: none !important; break-inside: avoid; border-color: #CBD5E1 !important; }
+  details.ms-details, details.ms-details .ms-body, .mcq-feedback { display: block !important; }
+  .concept-card.masked .cq-answer-inner { filter: none !important; opacity: 1 !important; }
+}
+
+  </style>
+</head>
+<body data-chapter-code="Ch10">
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="展开目录">☰ 目录</button>
+      <a class="icon-btn" href="index.html" title="返回 16 章总目录"><span>🏠</span><span class="btn-label">总目录</span></a>
+      <div class="brand-pill">
+        <span class="brand-code">Ch10</span>
+        <span class="brand-title">Chapter 10: Permutations and combinations</span>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="search" id="searchInput" class="search-input" placeholder="搜索本章定理、例题、真题与概念..." autocomplete="off" />
+      <button type="button" class="search-clear" id="searchClear" title="清空搜索">✕</button>
+    </div>
+
+    <div class="topbar-controls">
+      <div class="seg-group" role="group" aria-label="视图筛选">
+        <button type="button" class="seg-btn active" data-view-mode="all">All</button>
+        <button type="button" class="seg-btn" data-view-mode="book">教材精讲</button>
+        <button type="button" class="seg-btn" data-view-mode="sme">SaveMyExams 真题</button>
+      </div>
+
+      <div class="progress-chip" title="本章小节与真题模块掌握进度">
+        <span id="progressText">0/0</span>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+
+      <button type="button" class="icon-btn" id="toggleAllMs" title="展开或收起全部解析"><span>📝</span><span class="btn-label">展开解析</span></button>
+      <button type="button" class="icon-btn" id="themeToggle" title="切换亮色/暗色主题"><span id="themeIcon">🌙</span><span class="btn-label">主题</span></button>
+      <button type="button" class="icon-btn" id="printBtn" title="打印或导出为 PDF"><span>🖨️</span><span class="btn-label">导出 PDF</span></button>
+    </div>
+  </header>
+
+  <div class="search-results-bar" id="searchBar">
+    <span id="searchSummary">找到 0 个匹配板块</span>
+    <button type="button" class="icon-btn" id="searchResetBtn">重置过滤</button>
+  </div>
+
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="本章知识点导航">
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #BE123C;"></span>Ch10 本章小节目录</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#sec-10-1"><span>10.1 阶乘记号与含未知数阶乘化简</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-10-2"><span>10.2 乘法计数原理与受限数字排列</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-10-3"><span>10.3 排列 nPr：相邻捆绑法、不相邻插空法与重复元素排列</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-10-4"><span>10.4 组合 nCr：“至少/至多”、补集策略与先选后排混合题</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-sme"><span>SaveMyExams 0606 高频真题精讲与自测 (Chapter 10)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#app-concepts"><span>考前核心概念与计数策略默写库 (Chapter 10 · 14 题)</span><span class="nav-done-mark">✓</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #0F766E;"></span>全书 16 章快速切换</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="Ch01_Functions.html"><span>Ch01 · 函数、复合、绝对值与反函数</span></a></li>
+          <li><a class="nav-link" href="Ch02_Simultaneous_Quadratics.html"><span>Ch02 · 联立方程组与二次函数最值、不等式及判别式</span></a></li>
+          <li><a class="nav-link" href="Ch03_Factors_Polynomials.html"><span>Ch03 · 多项式除法、因式定理与余数定理</span></a></li>
+          <li><a class="nav-link" href="Ch04_Equations_Inequalities_Graphs.html"><span>Ch04 · 绝对值不等式、三次图像与变元二次方程</span></a></li>
+          <li><a class="nav-link" href="Ch05_Logarithmic_Exponential.html"><span>Ch05 · 对数、指数方程、换底公式与图像</span></a></li>
+          <li><a class="nav-link" href="Ch06_Straight_Line_Graphs.html"><span>Ch06 · 直线几何、鞋带面积与线性化 (Linear Law)</span></a></li>
+          <li><a class="nav-link" href="Ch07_Circle_Geometry.html"><span>Ch07 · 圆的解析方程、切线法线与双圆位置</span></a></li>
+          <li><a class="nav-link" href="Ch08_Circular_Measure.html"><span>Ch08 · 弧度制、弧长与扇形弓形周长面积</span></a></li>
+          <li><a class="nav-link" href="Ch09_Trigonometry.html"><span>Ch09 · CAST 象限角、三角图像、方程与恒等式</span></a></li>
+          <li><a class="nav-link active" href="Ch10_Permutations_Combinations.html"><span>Ch10 · 阶乘、约束排列 (nPr) 与分组组合 (nCr)</span></a></li>
+          <li><a class="nav-link" href="Ch11_Series.html"><span>Ch11 · 杨辉三角、二项式定理与 AP / GP / S∞</span></a></li>
+          <li><a class="nav-link" href="Ch12_Differentiation_1.html"><span>Ch12 · 幂函数求导、链乘商法则、切法线与极值应用</span></a></li>
+          <li><a class="nav-link" href="Ch13_Vectors.html"><span>Ch13 · 单位向量、位置向量几何比与匀速运动追及</span></a></li>
+          <li><a class="nav-link" href="Ch14_Differentiation_2.html"><span>Ch14 · 指数、对数与三角函数求导及其综合应用</span></a></li>
+          <li><a class="nav-link" href="Ch15_Integration.html"><span>Ch15 · 不定积分、逆微分技巧、定积分与曲边面积</span></a></li>
+          <li><a class="nav-link" href="Ch16_Kinematics.html"><span>Ch16 · 运动学微积分：s-v-a 互推、瞬间静止与总路程</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-inner">
+        <section class="hero-card" id="top">
+          <h1>Chapter 10: Permutations and combinations · 第 10 章 · 阶乘、约束排列 (nPr) 与分组组合 (nCr)</h1>
+          <p class="hero-sub">
+            完整覆盖 <strong>Sue Pemberton 第 3 版教材（2025–2027 新考纲 · Paper 1 禁用计算器 Non-Calculator）</strong>本章全部小节：<code>10.1 阶乘记号 · 10.2 相邻捆绑与不相邻插空 · 10.3 排列 nPr 与含重复元素 · 10.4 组合 nCr 与“至少/至多”策略</code>，并结合 SaveMyExams 0606 真题精讲、交互实验室与考前概念默写卡。
+          </p>
+          <div class="hero-badges">
+            <span class="hero-pill">📘 Sue Pemberton 3rd Ed. · 2025–2027</span>
+            <span class="hero-pill">🚫 Paper 1 无计算器精确解法</span>
+            <span class="hero-pill">🧪 本章专属交互动态实验室</span>
+            <a class="hero-pill" href="#sec-sme" style="text-decoration: none;">📝 直达 SaveMyExams 真题 →</a>
+            <a class="hero-pill" href="#app-concepts" style="text-decoration: none; background: rgba(255,255,255,0.24);">🧠 直达中英概念默写库 →</a>
+          </div>
+          <div class="unit-grid">
+            <a class="unit-tile" href="#sec-10-1">
+              <div class="unit-tile-num">Section 10-1</div>
+              <div class="unit-tile-title">10.1 阶乘记号与含未知数阶乘化简</div>
+            </a>
+            <a class="unit-tile" href="#sec-10-2">
+              <div class="unit-tile-num">Section 10-2</div>
+              <div class="unit-tile-title">10.2 乘法计数原理与受限数字排列</div>
+            </a>
+            <a class="unit-tile" href="#sec-10-3">
+              <div class="unit-tile-num">Section 10-3</div>
+              <div class="unit-tile-title">10.3 排列 nPr：相邻捆绑法、不相邻插空法与重复元素排列</div>
+            </a>
+            <a class="unit-tile" href="#sec-10-4">
+              <div class="unit-tile-num">Section 10-4</div>
+              <div class="unit-tile-title">10.4 组合 nCr：“至少/至多”、补集策略与先选后排混合题</div>
+            </a>
+          </div>
+        </section>
+
+        <div id="emptySearchNotice" class="callout deep-dive" style="display: none;">
+          <div class="callout-title">🔍 未找到匹配内容</div>
+          <p style="margin-bottom: 0;">请尝试更换关键词，或点击右上角“重置过滤”恢复显示。</p>
+        </div>
+
+<!-- Chapter 10: Permutations and combinations (Sue Pemberton 3rd Ed. · 2025–2027) -->
+<article class="topic-section book-section" id="sec-10-1">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>10.1 阶乘记号与含未知数阶乘化简</h3>
+      <div class="section-en-sub">Factorial Notation: n!, n! / (n − r)! &amp; Simplifying Algebraic Factorials</div>
+      <div class="tier-row">
+        <span class="badge-p1">Paper 1 无计算器约分技巧</span>
+        <span class="badge-p2">0! = 1 的本质约定</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-10-1">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>10.1.1 阶乘定义、递推性质与 <span class="math">0! = 1</span></h4>
+    <div class="formula-card">
+      <div class="formula-main">
+        对正整数 <span class="math">n</span>：<span class="math">n! = n × (n − 1) × (n − 2) × ··· × 2 × 1</span> &nbsp;|&nbsp; 特殊约定：<strong><span class="math">0! = 1</span></strong><br>
+        剥壳递推律：<span class="math">n! = n · (n − 1)! = n(n − 1) · (n − 2)!</span> &nbsp;|&nbsp;
+        <span class="math"><span class="frac"><span class="num">n!</span><span class="den">(n − r)!</span></span> = n(n − 1)···(n − r + 1)</span>
+      </div>
+      <p style="margin-bottom:0;font-size:13.5px;color:var(--text-muted);">
+        为什么 <span class="math">0! = 1</span>？由递推式 <span class="math">n! = n · (n − 1)!</span> 代入 <span class="math">n = 1</span> 得 <span class="math">1! = 1 · 0!</span>，且“将 0 个物品排列”有且仅有 1 种（空排列）方式，故 <span class="math">0! = 1</span>。
+      </p>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">📝 无计算器阶乘约分与代数求解</div>
+      <p><strong>题目：</strong> (a) Evaluate <span class="math"><span class="frac"><span class="num">10!</span><span class="den">7! · 3!</span></span></span> without a calculator. &nbsp; (b) Solve <span class="math">(n + 2)! = 30 · n!</span> for positive integer <span class="math">n</span>. &nbsp; (c) Simplify <span class="math"><span class="frac"><span class="num">n! + (n + 1)!</span><span class="den">(n − 1)!</span></span></span>.</p>
+      <p><strong>解析：</strong><br>
+      (a) 大阶乘向小阶乘“剥皮”约分：<span class="math"><span class="frac"><span class="num">10 × 9 × 8 × 7!</span><span class="den">7! × 3 × 2 × 1</span></span> = <span class="frac"><span class="num">10 × 9 × 8</span><span class="den">6</span></span> = 10 × 3 × 4 = <strong>120</strong></span>。<br>
+      (b) 把左侧展开到 <span class="math">n!</span>：<span class="math">(n + 2)(n + 1) · n! = 30 · n!</span>，两边消去 <span class="math">n! &gt; 0</span>：<br>
+      <span class="math">n² + 3n + 2 = 30 ⇒ n² + 3n − 28 = 0 ⇒ (n − 4)(n + 7) = 0</span>。因 <span class="math">n ∈ ℤ⁺</span>，故 <strong><span class="math">n = 4</span></strong>（舍去 <span class="math">−7</span>）。<br>
+      (c) 分子先提公因式 <span class="math">n!</span>：<span class="math"><span class="frac"><span class="num">n! [1 + (n + 1)]</span><span class="den">(n − 1)!</span></span> = <span class="frac"><span class="num">n(n − 1)! (n + 2)</span><span class="den">(n − 1)!</span></span> = <strong>n(n + 2)</strong></span>。</p>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-10-2">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>10.2 乘法计数原理与受限数字排列</h3>
+      <div class="section-en-sub">Arrangements &amp; Counting Principle: Digit Restrictions, Parity &amp; Case-Splitting</div>
+      <div class="tier-row">
+        <span class="badge-p1">先排“最苛刻位置”铁律</span>
+        <span class="badge-p2">首位非零与奇偶冲突分情况</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-10-2">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>10.2.1 乘法原理 vs 加法原理，以及数字排列三大陷阱</h4>
+    <ul>
+      <li><strong>乘法原理（Multiplication Principle / AND）：</strong>完成一件事分 <span class="math">k</span> 个依次步骤，各步选择数相<strong>乘</strong>：<span class="math">N = n₁ × n₂ × ··· × nₖ</span>。</li>
+      <li><strong>加法原理（Addition Principle / OR）：</strong>互斥的多种情况（Cases），各情况数相<strong>加</strong>。</li>
+      <li><strong>框格填数三大考场红线：</strong>
+        <ol>
+          <li><strong>看清是否允许重复使用数字</strong>（<em>with repetition</em> vs <em>without repetition</em> / <em>distinct digits</em>）。</li>
+          <li><strong>最受限制的位置优先填</strong>（首位不能为 0；末位决定奇偶数或 5 的倍数；首位决定是否 <span class="math">&gt; k</span>）。</li>
+          <li><strong>当首位限制与末位限制抢同一个数字池（尤其是 0 或同时可用做首位的数字）时，必须按互斥 Case 拆分！</strong></li>
+        </ol>
+      </li>
+    </ul>
+
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 225" width="740" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="受限四位数偶数的首位与末位冲突分情况框图">
+        <rect x="0" y="0" width="740" height="225" rx="10" fill="none" />
+        <!-- Left panel: Even 4-digit without 0 conflict -->
+        <rect x="14" y="10" width="352" height="205" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.4" />
+        <text x="190" y="30" text-anchor="middle" font-size="12" font-weight="800" fill="var(--svg-ink)">含 0 数字集 {0,1,2,3,4,5} 组 4 位偶数（不重复）</text>
+        <text x="190" y="48" text-anchor="middle" font-size="11" fill="var(--svg-red)">因 0 既不能作千位又可作个位，必须拆分末位！</text>
+        <!-- Case 1 -->
+        <text x="30" y="74" font-size="11.5" font-weight="800" fill="var(--svg-teal)">Case 1：个位固定为 0</text>
+        <rect x="30" y="84" width="52" height="36" rx="5" fill="rgba(15,118,110,0.12)" stroke="var(--svg-teal)" stroke-width="1.6" />
+        <rect x="92" y="84" width="52" height="36" rx="5" fill="none" stroke="var(--svg-muted)" stroke-width="1.4" />
+        <rect x="154" y="84" width="52" height="36" rx="5" fill="none" stroke="var(--svg-muted)" stroke-width="1.4" />
+        <rect x="216" y="84" width="52" height="36" rx="5" fill="rgba(220,38,38,0.14)" stroke="var(--svg-red)" stroke-width="1.6" />
+        <text x="56" y="106" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-teal)">5</text>
+        <text x="118" y="106" text-anchor="middle" font-size="13" font-weight="700" fill="var(--svg-ink)">4</text>
+        <text x="180" y="106" text-anchor="middle" font-size="13" font-weight="700" fill="var(--svg-ink)">3</text>
+        <text x="242" y="106" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-red)">1 (0)</text>
+        <text x="312" y="106" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-teal)">= 60</text>
+        <!-- Case 2 -->
+        <text x="30" y="142" font-size="11.5" font-weight="800" fill="var(--svg-indigo)">Case 2：个位为 2 或 4（首位仍禁 0！）</text>
+        <rect x="30" y="152" width="52" height="36" rx="5" fill="rgba(79,70,229,0.12)" stroke="var(--svg-indigo)" stroke-width="1.6" />
+        <rect x="92" y="152" width="52" height="36" rx="5" fill="none" stroke="var(--svg-muted)" stroke-width="1.4" />
+        <rect x="154" y="152" width="52" height="36" rx="5" fill="none" stroke="var(--svg-muted)" stroke-width="1.4" />
+        <rect x="216" y="152" width="52" height="36" rx="5" fill="rgba(220,38,38,0.14)" stroke="var(--svg-red)" stroke-width="1.6" />
+        <text x="56" y="174" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-indigo)">4</text>
+        <text x="118" y="174" text-anchor="middle" font-size="13" font-weight="700" fill="var(--svg-ink)">4</text>
+        <text x="180" y="174" text-anchor="middle" font-size="13" font-weight="700" fill="var(--svg-ink)">3</text>
+        <text x="242" y="174" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-red)">2</text>
+        <text x="312" y="174" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-indigo)">= 96</text>
+        <text x="190" y="205" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-ink)">总计相加 = 60 + 96 = 156 个</text>
+
+        <!-- Right panel: >4000 and odd -->
+        <rect x="380" y="10" width="346" height="205" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.4" />
+        <text x="553" y="30" text-anchor="middle" font-size="12" font-weight="800" fill="var(--svg-ink)">{1,2,3,4,5,6} 组 &gt; 4000 的 4 位奇数（不重复）</text>
+        <text x="553" y="48" text-anchor="middle" font-size="11" fill="var(--svg-amber)">首位可选 {4,5,6}，5 是奇数会抢占个位 {1,3,5}！</text>
+        <!-- Case A -->
+        <text x="396" y="74" font-size="11.5" font-weight="800" fill="var(--svg-teal)">Case A：千位取偶数 4 或 6（2种）</text>
+        <rect x="396" y="84" width="50" height="36" rx="5" fill="rgba(15,118,110,0.12)" stroke="var(--svg-teal)" stroke-width="1.6" />
+        <rect x="456" y="84" width="50" height="36" rx="5" fill="none" stroke="var(--svg-muted)" stroke-width="1.4" />
+        <rect x="516" y="84" width="50" height="36" rx="5" fill="none" stroke="var(--svg-muted)" stroke-width="1.4" />
+        <rect x="576" y="84" width="50" height="36" rx="5" fill="rgba(220,38,38,0.14)" stroke="var(--svg-red)" stroke-width="1.6" />
+        <text x="421" y="106" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-teal)">2</text>
+        <text x="481" y="106" text-anchor="middle" font-size="13" font-weight="700" fill="var(--svg-ink)">4</text>
+        <text x="541" y="106" text-anchor="middle" font-size="13" font-weight="700" fill="var(--svg-ink)">3</text>
+        <text x="601" y="106" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-red)">3</text>
+        <text x="676" y="106" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-teal)">= 72</text>
+        <!-- Case B -->
+        <text x="396" y="142" font-size="11.5" font-weight="800" fill="var(--svg-indigo)">Case B：千位取奇数 5（个位剩 {1,3}）</text>
+        <rect x="396" y="152" width="50" height="36" rx="5" fill="rgba(79,70,229,0.12)" stroke="var(--svg-indigo)" stroke-width="1.6" />
+        <rect x="456" y="152" width="50" height="36" rx="5" fill="none" stroke="var(--svg-muted)" stroke-width="1.4" />
+        <rect x="516" y="152" width="50" height="36" rx="5" fill="none" stroke="var(--svg-muted)" stroke-width="1.4" />
+        <rect x="576" y="152" width="50" height="36" rx="5" fill="rgba(220,38,38,0.14)" stroke="var(--svg-red)" stroke-width="1.6" />
+        <text x="421" y="174" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-indigo)">1 (5)</text>
+        <text x="481" y="174" text-anchor="middle" font-size="13" font-weight="700" fill="var(--svg-ink)">4</text>
+        <text x="541" y="174" text-anchor="middle" font-size="13" font-weight="700" fill="var(--svg-ink)">3</text>
+        <text x="601" y="174" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-red)">2</text>
+        <text x="676" y="174" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-indigo)">= 24</text>
+        <text x="553" y="205" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-ink)">总计相加 = 72 + 24 = 96 个</text>
+      </svg>
+      <div class="svg-caption">图 10.1 · 首位非零与奇偶冲突（左）、大小限制与奇偶冲突（右）的双层分情况框格法</div>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-10-3">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>10.3 排列 nPr：相邻捆绑法、不相邻插空法与重复元素排列</h3>
+      <div class="section-en-sub">Permutations nPr: Glue/Bundle Method, Gap/Slot Method &amp; Identical Repeated Letters</div>
+      <div class="tier-row">
+        <span class="badge-p1">捆绑乘法 · 插空先排后插</span>
+        <span class="badge-p2">k ≥ 3 严禁用“总减捆绑”！</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-10-3">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>10.3.1 排列公式与三大经典受限模型</h4>
+    <div class="formula-card">
+      <div class="formula-main">
+        1. 有序选取排列：<span class="math">ⁿPᵣ = <span class="frac"><span class="num">n!</span><span class="den">(n − r)!</span></span></span>（顺序敏感：<span class="math">AB ≠ BA</span>）<br>
+        2. 含重复元素全排列（<span class="math">n</span> 个中有 <span class="math">p</span> 个相同A、<span class="math">q</span> 个相同B…）：<strong><span class="math"><span class="frac"><span class="num">n!</span><span class="den">p! q! ···</span></span></span></strong>
+      </div>
+    </div>
+
+    <ul>
+      <li><strong>模型 A · 相邻捆绑法（Adjacent / Together — Glue &amp; Bundle）：</strong>
+        将必须挨在一起的 <span class="math">k</span> 个元素粘成 <strong>1 个超级大块</strong>，与其余 <span class="math">n − k</span> 个元素一起共 <span class="math">(n − k + 1)</span> 个大块全排列，再乘大块内部排列数：<br>
+        <strong><span class="math">(n − k + 1)! × k!</span></strong></li>
+      <li><strong>模型 B · 不相邻插空法（Separated / No two adjacent — Gap &amp; Slot）：</strong>
+        先将不受限的 <span class="math">(n − k)</span> 个元素排好（共 <span class="math">(n − k)!</span> 种），它们左右及两头产生 <strong><span class="math">(n − k + 1)</span> 个空隙</strong>，再从这些空隙中挑出 <span class="math">k</span> 个有序插入：<br>
+        <strong><span class="math">(n − k)! × ⁿ⁻ᵏ⁺¹Pₖ</span></strong>（若插入的 <span class="math">k</span> 个元素本身全同，则改为乘以 <strong><span class="math">ⁿ⁻ᵏ⁺¹Cₖ</span></strong>！）。</li>
+    </ul>
+
+    <div class="callout common-mistake">
+      <div class="callout-title">🚫 致命误区：3 个及以上元素要求“互不相邻（No two adjacent）”，绝对不能用 Total − All Together！</div>
+      <p style="margin-bottom: 0;">
+        当 <span class="math">k = 2</span> 时，“不相邻”只有 2 个分开，用 <span class="math">Total − Together</span> 确实等于插空法。<br>
+        但当 <strong><span class="math">k ≥ 3</span></strong>（如 3 个元音互不相邻）时，<code>All_Together</code> 只减掉了“3 个全粘在一起”的情况，漏减了<strong>“2 个元音粘在一起、另 1 个单飞”</strong>的情况！因此 3 个及以上要求互不相邻，必须老老实实用<strong>插空法（Gap Method）</strong>！
+      </p>
+    </div>
+
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 230" width="740" height="230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="相邻捆绑法与不相邻插空法图示对比">
+        <rect x="0" y="0" width="740" height="230" rx="10" fill="none" />
+        <!-- Left: Glue/Bundle -->
+        <rect x="14" y="10" width="346" height="210" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.4" />
+        <text x="187" y="30" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-ink)">捆绑法 (Glue)：EQUATION 元音全相邻</text>
+        <text x="187" y="50" text-anchor="middle" font-size="11" fill="var(--svg-muted)">5 个元音 (E,U,A,I,O) 捆成 1 块 + 3 个辅音 (Q,T,N)</text>
+        <!-- Bundle box -->
+        <rect x="34" y="72" width="152" height="44" rx="8" fill="rgba(190,18,60,0.12)" stroke="var(--svg-red)" stroke-width="2" stroke-dasharray="5,3" />
+        <text x="110" y="99" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-red)">[ E U A I O ]</text>
+        <rect x="200" y="76" width="36" height="36" rx="6" fill="rgba(37,99,235,0.12)" stroke="var(--svg-blue)" stroke-width="1.6" />
+        <text x="218" y="99" text-anchor="middle" font-size="13" font-weight="700" fill="var(--svg-blue)">Q</text>
+        <rect x="246" y="76" width="36" height="36" rx="6" fill="rgba(37,99,235,0.12)" stroke="var(--svg-blue)" stroke-width="1.6" />
+        <text x="264" y="99" text-anchor="middle" font-size="13" font-weight="700" fill="var(--svg-blue)">T</text>
+        <rect x="292" y="76" width="36" height="36" rx="6" fill="rgba(37,99,235,0.12)" stroke="var(--svg-blue)" stroke-width="1.6" />
+        <text x="310" y="99" text-anchor="middle" font-size="13" font-weight="700" fill="var(--svg-blue)">N</text>
+        <text x="110" y="140" text-anchor="middle" font-size="11" font-weight="700" fill="var(--svg-red)">内部全排列 5!</text>
+        <text x="187" y="168" text-anchor="middle" font-size="12" font-weight="800" fill="var(--svg-ink)">共 4 个大块全排：4! × 5!</text>
+        <text x="187" y="194" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-red)">= 24 × 120 = 2880 种</text>
+
+        <!-- Right: Gap/Slot -->
+        <rect x="378" y="10" width="348" height="210" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.4" />
+        <text x="552" y="30" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-ink)">插空法 (Gap)：3 辅音互不相邻</text>
+        <text x="552" y="50" text-anchor="middle" font-size="11" fill="var(--svg-muted)">先排 5 个元音 (5!)，产生 6 个空隙插 3 辅音</text>
+        <!-- 5 vowel tiles + 6 gaps -->
+        <text x="412" y="98" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-teal)">↑</text>
+        <rect x="424" y="76" width="32" height="34" rx="5" fill="rgba(79,70,229,0.12)" stroke="var(--svg-indigo)" stroke-width="1.5" />
+        <text x="440" y="98" text-anchor="middle" font-size="12" font-weight="700" fill="var(--svg-indigo)">E</text>
+        <text x="468" y="98" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-teal)">↑</text>
+        <rect x="480" y="76" width="32" height="34" rx="5" fill="rgba(79,70,229,0.12)" stroke="var(--svg-indigo)" stroke-width="1.5" />
+        <text x="496" y="98" text-anchor="middle" font-size="12" font-weight="700" fill="var(--svg-indigo)">U</text>
+        <text x="524" y="98" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-teal)">↑</text>
+        <rect x="536" y="76" width="32" height="34" rx="5" fill="rgba(79,70,229,0.12)" stroke="var(--svg-indigo)" stroke-width="1.5" />
+        <text x="552" y="98" text-anchor="middle" font-size="12" font-weight="700" fill="var(--svg-indigo)">A</text>
+        <text x="580" y="98" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-teal)">↑</text>
+        <rect x="592" y="76" width="32" height="34" rx="5" fill="rgba(79,70,229,0.12)" stroke="var(--svg-indigo)" stroke-width="1.5" />
+        <text x="608" y="98" text-anchor="middle" font-size="12" font-weight="700" fill="var(--svg-indigo)">I</text>
+        <text x="636" y="98" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-teal)">↑</text>
+        <rect x="648" y="76" width="32" height="34" rx="5" fill="rgba(79,70,229,0.12)" stroke="var(--svg-indigo)" stroke-width="1.5" />
+        <text x="664" y="98" text-anchor="middle" font-size="12" font-weight="700" fill="var(--svg-indigo)">O</text>
+        <text x="692" y="98" text-anchor="middle" font-size="13" font-weight="800" fill="var(--svg-teal)">↑</text>
+        <text x="552" y="140" text-anchor="middle" font-size="11" font-weight="700" fill="var(--svg-teal)">6 个空隙（含两端）选 3 个排列：P(6,3) = 120</text>
+        <text x="552" y="168" text-anchor="middle" font-size="12" font-weight="800" fill="var(--svg-ink)">共 5! × ⁶P₃ = 120 × 120</text>
+        <text x="552" y="194" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-teal)">= 14 400 种（绝不漏减 2 粘 1 散！）</text>
+      </svg>
+      <div class="svg-caption">图 10.2 · 相邻捆绑法（左）与不相邻插空法（右）构造图解</div>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">📝 含重复字母 + 不相邻混合题（PARALLEL）</div>
+      <p><strong>题目：</strong> Find the number of different arrangements of the 8 letters of the word <strong>PARALLEL</strong> in which: (a) there are no restrictions, (b) all three L's are together, (c) no two L's are adjacent.</p>
+      <p><strong>解析：</strong> 字母统计：<code>P(1), A(2), R(1), L(3), E(1)</code>，共 8 个字母。<br>
+      (a) 总排列数：<span class="math"><span class="frac"><span class="num">8!</span><span class="den">2! · 3!</span></span> = <span class="frac"><span class="num">40 320</span><span class="den">2 × 6</span></span> = <strong>3360</strong></span>。<br>
+      (b) 3 个 L 捆绑成 1 个大块 <code>[LLL]</code>，与 <code>P, A, A, R, E</code> 共 6 块（含 2 个相同 A；<code>[LLL]</code> 内部相同只有 1 种排法！）：<span class="math"><span class="frac"><span class="num">6!</span><span class="den">2!</span></span> = <strong>360</strong></span>。<br>
+      (c) 先排非 L 的 5 个字母 <code>P, A, A, R, E</code>：<span class="math"><span class="frac"><span class="num">5!</span><span class="den">2!</span></span> = 60</span> 种；产生 6 个空隙，由于 3 个 L <strong>完全相同</strong>，只需用组合挑出 3 个空隙放入（无需再排列！）：<span class="math">⁶C₃ = 20</span>。总计 <span class="math">60 × 20 = <strong>1200</strong></span>。</p>
+    </div>
+
+    <div class="lab-box" data-lab-type="ch10"></div>
+  </div>
+</article>
+
+<article class="topic-section book-section" id="sec-10-4">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>10.4 组合 nCr：“至少/至多”、补集策略与先选后排混合题</h3>
+      <div class="section-en-sub">Combinations nCr: Unordered Selection, Complement Rule &amp; Choose-Then-Arrange</div>
+      <div class="tier-row">
+        <span class="badge-p1">选团队不看顺序用 nCr</span>
+        <span class="badge-p2">“至少 1 个”优先用总减无</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-10-4">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>10.4.1 组合公式、性质与三大解题策略</h4>
+    <div class="formula-card">
+      <div class="formula-main">
+        无序组合：<span class="math">ⁿCᵣ = <span class="ncr-stack"><span>n</span><span>r</span></span> = <span class="frac"><span class="num">n!</span><span class="den">r!(n − r)!</span></span> = <span class="frac"><span class="num">ⁿPᵣ</span><span class="den">r!</span></span></span> &nbsp;|&nbsp;
+        对称性：<strong><span class="math">ⁿCᵣ = ⁿCₙ₋ᵣ</span></strong> &nbsp;|&nbsp; <span class="math">ⁿC₀ = ⁿCₙ = 1</span>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table class="am-table">
+        <thead>
+          <tr>
+            <th>题型策略</th>
+            <th>识别关键词</th>
+            <th>考场标准解法</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. 分类相加 vs 补集减法</strong></td>
+            <td><em>at least, at most</em>（至少/至多）</td>
+            <td>若正面情况少（如 2 种），直接相加；若出现 <strong>“at least 1”</strong>，一律用<strong>补集：<span class="math">Total − (None)</span></strong> 最快不漏！</td>
+          </tr>
+          <tr>
+            <td><strong>2. 某两人绝不同组</strong></td>
+            <td><em>A and B refuse to be together / cannot both be chosen</em></td>
+            <td><strong>补集秒杀：</strong> <span class="math">(无限制总数) − (A 与 B 均被选中的情况)</span>。例如从 10 人选 4 人，甲乙不同队：<span class="math">¹⁰C₄ − ⁸C₂ = 210 − 28 = 182</span>。</td>
+          </tr>
+          <tr>
+            <td><strong>3. 先选后排混合题</strong></td>
+            <td><em>selected … and then arranged in a row</em></td>
+            <td><strong>严格两步走：</strong>Step 1 用 <span class="math">ⁿCᵣ</span> 挑出人选；Step 2 用阶乘 / 捆绑 / 插空把选出的人排队，两者<strong>相乘</strong>！</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">📝 经典混合例题：组队 + 特定限制</div>
+      <p><strong>题目：</strong> A committee of 5 is chosen from 6 men and 4 women. Find the number of committees that include at least 2 women and at least 1 man.</p>
+      <p><strong>解析：</strong><br>
+      • <strong>补集法：</strong>总选法 <span class="math">¹⁰C₅ = 252</span>。不合格情况为：0 女 5 男 (<span class="math">⁶C₅ = 6</span>)、1 女 4 男 (<span class="math">⁴C₁ × ⁶C₄ = 4 × 15 = 60</span>)、0 男 5 女 (<span class="math">0</span>，因仅 4 女)。<br>
+      合法选法 = <span class="math">252 − (6 + 60) = <strong>186</strong></span>。<br>
+      • <strong>正面核对：</strong>2女3男 (<span class="math">⁶C₃·⁴C₂ = 20×6 = 120</span>) + 3女2男 (<span class="math">15×4 = 60</span>) + 4女1男 (<span class="math">6×1 = 6</span>) = <span class="math"><strong>186</strong></span> ✓。</p>
+    </div>
+  </div>
+</article>
+
+<!-- SaveMyExams & Practice Section -->
+<article class="topic-section sme-section" id="sec-sme">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>SaveMyExams 0606 高频真题精讲与自测 (Chapter 10)</h3>
+      <div class="section-en-sub">3 Rapid MCQs + 3 Structured Past-Paper Style Questions with Mark Schemes</div>
+      <div class="tier-row">
+        <span class="badge-p1">Paper 1 无计算器精算必考</span>
+        <span class="badge-p2">完整 M1/A1/B1 采分点</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-sme">○ 标记掌握</button>
+  </div>
+
+  <div class="practice-block" style="margin-top:0;padding-top:0;border-top:none;">
+    <h4 class="practice-heading">⚡ Part A · 易错点快测选择题 (MCQs)</h4>
+
+    <div class="exam-q" data-mcq-answer="C">
+      <div class="exam-q-head"><span class="q-tag">MCQ 10.1 · 首位大小与末位偶数冲突</span><span class="q-marks">[2 marks]</span></div>
+      <div class="q-stem-en">Using the digits <span class="math">{0, 1, 2, 3, 4, 5}</span> without repetition, how many 4-digit even numbers greater than <span class="math">3000</span> can be formed?</div>
+      <div class="q-stem-cn">用数字 <span class="math">0, 1, 2, 3, 4, 5</span>（不重复）组成大于 <span class="math">3000</span> 的四位偶数，共多少个？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A">A. 72</button>
+        <button type="button" class="mcq-opt" data-opt="B">B. 108</button>
+        <button type="button" class="mcq-opt" data-opt="C">C. 96</button>
+        <button type="button" class="mcq-opt" data-opt="D">D. 120</button>
+      </div>
+      <div class="mcq-feedback"
+           data-ok="✅ 正确！首位取 {3, 5}（奇数，2种）时个位仍有 {0,2,4} 共 3 种，中间 4×3=12 ⇒ 2×3×12=72；首位取 4（偶数，1种）时个位剩 {0,2} 共 2 种，中间 4×3=12 ⇒ 1×2×12=24。总计 72 + 24 = 96！"
+           data-err="❌ 切勿直接 3×4×3×3！千位数字 4 与个位偶数 {0,2,4} 冲突。拆分千位={3,5} 得 2×(4×3)×3 = 72，千位=4 得 1×(4×3)×2 = 24，相加得 96 (选 C)。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="A">
+      <div class="exam-q-head"><span class="q-tag">MCQ 10.2 · 含重复字母单词首尾受限排列</span><span class="q-marks">[2 marks]</span></div>
+      <div class="q-stem-en">Find the number of distinct arrangements of the letters of <strong>STATISTICS</strong> that begin with <strong>S</strong> and end with <strong>T</strong>.</div>
+      <div class="q-stem-cn">单词 <strong>STATISTICS</strong> 的全部字母重新排列，要求以 S 开头且以 T 结尾，有多少种不同排法？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A">A. 5040</button>
+        <button type="button" class="mcq-opt" data-opt="B">B. 40 320</button>
+        <button type="button" class="mcq-opt" data-opt="C">C. 10 080</button>
+        <button type="button" class="mcq-opt" data-opt="D">D. 20 160</button>
+      </div>
+      <div class="mcq-feedback"
+           data-ok="✅ 正确！原词 S×3, T×3, I×2, A×1, C×1。固定首位一个 S 和末位一个 T 后（相同字母只占 1 种），中间 8 个字母含 S×2, T×2, I×2 ⇒ 8! / (2! 2! 2!) = 40320 / 8 = 5040！"
+           data-err="❌ 固定首位一个 S 与末位一个 T 后，剩下 8 个位置由 S,S,T,T,I,I,A,C 组成，排列数为 8!/(2!2!2!) = 40320/8 = 5040 (选 A)。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="D">
+      <div class="exam-q-head"><span class="q-tag">MCQ 10.3 · 组合与排列转换方程</span><span class="q-marks">[2 marks]</span></div>
+      <div class="q-stem-en">Given that <span class="math">ⁿ⁺¹C₃ = 7 · ⁿC₂</span>, find the value of <span class="math">n</span>.</div>
+      <div class="q-stem-cn">已知 <span class="math">ⁿ⁺¹C₃ = 7 · ⁿC₂</span>，求正整数 <span class="math">n</span> 的值。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A">A. 14</button>
+        <button type="button" class="mcq-opt" data-opt="B">B. 18</button>
+        <button type="button" class="mcq-opt" data-opt="C">C. 21</button>
+        <button type="button" class="mcq-opt" data-opt="D">D. 20</button>
+      </div>
+      <div class="mcq-feedback"
+           data-ok="✅ 正确！展开得 (n+1)n(n−1)/6 = 7 · n(n−1)/2，两边约去 n(n−1) 得 (n+1)/3 = 7 ⇒ n + 1 = 21 ⇒ n = 20！"
+           data-err="❌ 展开组合数：(n+1)n(n−1)/6 = 7 · n(n−1)/2 ⇒ (n+1)/3 = 7 ⇒ n = 20 (选 D)。"></div>
+    </div>
+
+    <h4 class="practice-heading" style="margin-top:22px;">📝 Part B · SaveMyExams 综合解答大题 (Structured Questions)</h4>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">SME 10.1 · 代数排列组合证明与求解</span><span class="q-marks">[6 marks]</span></div>
+      <div class="q-stem-en">
+        (a) Show that <span class="math">ⁿP₃ − ⁿP₂ = n(n − 1)(n − 3)</span> for <span class="math">n ≥ 3</span>. [3]<br>
+        (b) Hence solve the equation <span class="math">ⁿP₃ − ⁿP₂ = 6 · ⁿC₂</span>. [3]
+      </div>
+      <div class="q-stem-cn">(a) 化简证明排列恒等式；(b) 由此解出满足条件的正整数 <span class="math">n</span>。</div>
+      <details class="ms-details">
+        <summary>查看 SaveMyExams 标准采分步骤 (Mark Scheme · 6 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">M1</span> <span class="math">ⁿP₃ = n(n − 1)(n − 2)</span> and <span class="math">ⁿP₂ = n(n − 1)</span>.</p>
+          <p><span class="ms-mark">M1</span> Factor out <span class="math">n(n − 1)</span>: <span class="math">LHS = n(n − 1)[(n − 2) − 1]</span>.</p>
+          <p><span class="ms-mark">A1</span> <span class="math">= <strong>n(n − 1)(n − 3)</strong></span> (shown).</p>
+          <p><span class="ms-mark">M1</span> (b) Substitute <span class="math">ⁿC₂ = <span class="frac"><span class="num">n(n − 1)</span><span class="den">2</span></span></span> into (a): <span class="math">n(n − 1)(n − 3) = 6 · <span class="frac"><span class="num">n(n − 1)</span><span class="den">2</span></span> = 3n(n − 1)</span>.</p>
+          <p><span class="ms-mark">M1</span> Since <span class="math">n ≥ 3</span>, <span class="math">n(n − 1) ≠ 0</span>; divide through: <span class="math">n − 3 = 3</span>.</p>
+          <p><span class="ms-mark">A1</span> <strong><span class="math">n = 6</span></strong>（检验：<span class="math">⁶P₃ − ⁶P₂ = 120 − 30 = 90</span>，<span class="math">6 · ⁶C₂ = 6 × 15 = 90</span> ✓）。</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">SME 10.2 · 重复字母单词捆绑与插空综合 (ARRANGE)</span><span class="q-marks">[7 marks]</span></div>
+      <div class="q-stem-en">
+        Find the number of different ways of arranging all 7 letters of the word <strong>ARRANGE</strong> such that:<br>
+        (a) there are no restrictions, [2]<br>
+        (b) the two R's are next to each other, [2]<br>
+        (c) no two vowels are next to each other. [3]
+      </div>
+      <div class="q-stem-cn">用 7 个字母单词 <strong>ARRANGE</strong>（含 A×2, R×2）求无限制、双 R 相邻、及任意两元音不相邻的排列数。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 7 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">M1</span> (a) Letters: 2 A's, 2 R's, 1 N, 1 G, 1 E. Total <span class="math">= <span class="frac"><span class="num">7!</span><span class="den">2! · 2!</span></span></span> <span class="ms-mark">A1</span> <span class="math">= <strong>1260</strong></span>.</p>
+          <p><span class="ms-mark">M1</span> (b) Bundle <code>[RR]</code> as 1 block → 6 blocks (with 2 A's): <span class="math"><span class="frac"><span class="num">6!</span><span class="den">2!</span></span></span> <span class="ms-mark">A1</span> <span class="math">= <strong>360</strong></span>.</p>
+          <p><span class="ms-mark">M1</span> (c) Consonants <code>R, R, N, G</code> (4 letters, 2 R's) arranged in <span class="math"><span class="frac"><span class="num">4!</span><span class="den">2!</span></span> = 12</span> ways, creating 5 gaps.</p>
+          <p><span class="ms-mark">M1</span> Choose 3 gaps out of 5 and arrange vowels <code>A, A, E</code>: <span class="math">⁵C₃ × <span class="frac"><span class="num">3!</span><span class="den">2!</span></span> = 10 × 3 = 30</span>.</p>
+          <p><span class="ms-mark">A1</span> Total = <span class="math">12 × 30 = <strong>360</strong></span>.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">SME 10.3 · 团队组合 + 拒绝同组 + 先选后排插空</span><span class="q-marks">[8 marks]</span></div>
+      <div class="q-stem-en">
+        A team of 5 students is to be chosen from 5 boys and 4 girls.<br>
+        (a) Find the number of different teams that contain at least 3 boys. [3]<br>
+        (b) One boy, Adam, and one girl, Bella, refuse to be in the team together. Find the number of teams with at least 3 boys in which Adam and Bella are not both included. [2]<br>
+        (c) If a chosen team of 3 boys and 2 girls is seated in a row of 5 chairs, find the number of ways this can be done if the 2 girls do not sit next to each other. [3]
+      </div>
+      <div class="q-stem-cn">从 5 男 4 女中选 5 人小队：(a) 至少 3 男；(b) 满足至少 3 男且男女两人不同队；(c) 选 3 男 2 女并排就座且两女不相邻。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 8 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">M1</span> (a) Cases (3B2G, 4B1G, 5B0G): <span class="math">⁵C₃ · ⁴C₂ + ⁵C₄ · ⁴C₁ + ⁵C₅ · ⁴C₀</span> (<span class="ms-mark">M1</span>).</p>
+          <p><span class="ms-mark">A1</span> <span class="math">= 10(6) + 5(4) + 1(1) = 60 + 20 + 1 = <strong>81</strong></span>.</p>
+          <p><span class="ms-mark">M1</span> (b) Subtract teams with both Adam &amp; Bella AND at least 3 boys (need 3 more from remaining 4B, 3G with ≥2B): <span class="math">⁴C₂ · ³C₁ + ⁴C₃ · ³C₀ = 18 + 4 = 22</span>.</p>
+          <p><span class="ms-mark">A1</span> Valid teams = <span class="math">81 − 22 = <strong>59</strong></span>.</p>
+          <p><span class="ms-mark">M1</span> (c) Choose 3B2G: <span class="math">⁵C₃ · ⁴C₂ = 60</span>；<span class="ms-mark">M1</span> Arrange 3 boys (<span class="math">3! = 6</span>) and slot 2 girls into 4 gaps (<span class="math">⁴P₂ = 12</span>).</p>
+          <p><span class="ms-mark">A1</span> Total = <span class="math">60 × 6 × 12 = <strong>4320</strong></span>.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</article>
+
+<!-- Concept Flashcards -->
+<article class="topic-section" id="app-concepts">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>考前核心概念与计数策略默写库 (Chapter 10 · 14 题)</h3>
+      <div class="section-en-sub">Bilingual Permutations &amp; Combinations Concept &amp; Pitfall Flashcards</div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="app-concepts">○ 标记掌握</button>
+  </div>
+
+  <div class="concept-toolbar">
+    <div class="concept-filter-group" id="conceptFilterTabs">
+      <button type="button" class="tab-btn active" data-concept-part="all">全部 14 题</button>
+      <button type="button" class="tab-btn" data-concept-part="101">10.1–10.2 阶乘与数字限制 (5题)</button>
+      <button type="button" class="tab-btn" data-concept-part="103">10.3 排列捆绑插空重复 (5题)</button>
+      <button type="button" class="tab-btn" data-concept-part="104">10.4 组合与混合策略 (4题)</button>
+    </div>
+    <div class="concept-actions">
+      <span class="concept-count-pill" id="conceptCountPill">显示 14 / 14 题</span>
+      <button type="button" class="icon-btn" id="conceptQuizToggle">🙈 开启遮罩自测</button>
+    </div>
+  </div>
+
+  <div class="concept-grid" id="conceptGrid">
+    <div class="concept-card" data-part="101">
+      <div class="cq-head"><span class="q-tag">PC01 · 10.1</span><span class="badge-p1">Factorial</span></div>
+      <div class="cq-en">State the value of <span class="math">0!</span> and show how to simplify <span class="math">(n + 1)! / (n − 1)!</span>.</div>
+      <div class="cq-cn">写出 <span class="math">0!</span> 的值并说明如何化简连续阶乘商。</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner">
+        <span class="kw">0! = 1</span>. Expand the larger factorial down to the smaller one: (n + 1)n(n − 1)! / (n − 1)! = <span class="kw">n(n + 1)</span>.
+      </div></div>
+    </div>
+
+    <div class="concept-card" data-part="101">
+      <div class="cq-head"><span class="q-tag">PC02 · 10.2</span><span class="badge-p1">Multiplication vs Addition</span></div>
+      <div class="cq-en">When do you multiply counts vs add counts in combinatorics?</div>
+      <div class="cq-cn">计数问题中什么时候用乘法（AND），什么时候用加法（OR）？</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner">
+        <span class="kw">Multiply</span> across consecutive stages of ONE task (AND); <span class="kw">Add</span> across mutually exclusive separate cases (OR).
+      </div></div>
+    </div>
+
+    <div class="concept-card" data-part="101">
+      <div class="cq-head"><span class="q-tag">PC03 · 10.2</span><span class="badge-p1">Most Restricted First</span></div>
+      <div class="cq-en">Which positions must always be filled first in constrained arrangement problems?</div>
+      <div class="cq-cn">受限排列问题中，填槽位的先后顺序铁律是什么？</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner">
+        Always fill the <span class="kw">most restricted positions first</span> (e.g., first digit ≠ 0, last digit even/odd, or endpoints fixed).
+      </div></div>
+    </div>
+
+    <div class="concept-card" data-part="101">
+      <div class="cq-head"><span class="q-tag">PC04 · 10.2</span><span class="badge-p1">Case-Split Trap</span></div>
+      <div class="cq-en">Why must you split into Case 1 (ends in 0) and Case 2 (ends in 2, 4, …) when forming even numbers from a set containing <span class="math">0</span> without repetition?</div>
+      <div class="cq-cn">用含 0 的数字集组不重复偶数时，为什么要把“个位为 0”单独拆成一种情况？</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner">
+        Because <span class="kw">0 is forbidden in the leading digit</span>! If 0 is already used at the end, the leading digit has 1 more available choice than if 2 or 4 is used at the end.
+      </div></div>
+    </div>
+
+    <div class="concept-card" data-part="101">
+      <div class="cq-head"><span class="q-tag">PC05 · 10.2</span><span class="badge-p1">Repetition Check</span></div>
+      <div class="cq-en">Contrast the number of 3-digit numbers from <span class="math">{1,2,3,4,5}</span> with repetition allowed vs without repetition.</div>
+      <div class="cq-cn">比较“可重复”与“不可重复”组成 3 位数的计算式差异。</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner">
+        With repetition: <span class="kw">5 × 5 × 5 = 5³ = 125</span>. Without repetition: <span class="kw">⁵P₃ = 5 × 4 × 3 = 60</span>.
+      </div></div>
+    </div>
+
+    <div class="concept-card" data-part="103">
+      <div class="cq-head"><span class="q-tag">PC06 · 10.3</span><span class="badge-p1">Perm vs Comb</span></div>
+      <div class="cq-en">Write the formulas for <span class="math">ⁿPᵣ</span> and <span class="math">ⁿCᵣ</span> and explain the single key difference between them.</div>
+      <div class="cq-cn">写出排列 <span class="math">ⁿPᵣ</span> 与组合 <span class="math">ⁿCᵣ</span> 公式，并说明核心区别。</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner">
+        <span class="kw">ⁿPᵣ = n!/(n−r)!</span> (<span class="kw">order matters</span>, e.g. digits/lining up); <span class="kw">ⁿCᵣ = n!/[r!(n−r)!]</span> (<span class="kw">order does NOT matter</span>, e.g. teams/committees), with <span class="kw">ⁿPᵣ = r! · ⁿCᵣ</span>.
+      </div></div>
+    </div>
+
+    <div class="concept-card" data-part="103">
+      <div class="cq-head"><span class="q-tag">PC07 · 10.3</span><span class="badge-p1">Glue Method</span></div>
+      <div class="cq-en">How do you arrange <span class="math">n</span> distinct items when <span class="math">k</span> specific items must all be adjacent ("together")?</div>
+      <div class="cq-cn">默写 <span class="math">k</span> 个元素必须“相邻（捆绑法）”的公式与两层逻辑。</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner">
+        Glue the k items into <span class="kw">1 super-block</span> → arrange (n − k + 1) blocks, then multiply by internal permutations: <span class="kw">(n − k + 1)! × k!</span>.
+      </div></div>
+    </div>
+
+    <div class="concept-card" data-part="103">
+      <div class="cq-head"><span class="q-tag">PC08 · 10.3</span><span class="badge-p1">Gap Method</span></div>
+      <div class="cq-en">How do you arrange <span class="math">n</span> distinct items when <span class="math">k</span> specific items must have NO two adjacent ("separated")?</div>
+      <div class="cq-cn">默写“互不相邻（插空法）”的标准两步公式。</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner">
+        First arrange the other (n − k) items in <span class="kw">(n − k)!</span> ways, creating <span class="kw">(n − k + 1) gaps</span> (including both ends), then slot k items: <span class="kw">(n − k)! × ⁿ⁻ᵏ⁺¹Pₖ</span>.
+      </div></div>
+    </div>
+
+    <div class="concept-card" data-part="103">
+      <div class="cq-head"><span class="q-tag">PC09 · 10.3</span><span class="badge-p1">k ≥ 3 Trap</span></div>
+      <div class="cq-en">Why does <span class="math">Total − All Together</span> give the WRONG answer when 3 items must have no two adjacent?</div>
+      <div class="cq-cn">为什么当 3 个元素互不相邻时，“总数 − 3 个全捆绑”会算错？</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner">
+        It fails to subtract cases where <span class="kw">2 of the 3 items are adjacent while the 3rd is separate</span>! Always use the Gap Method for k ≥ 3.
+      </div></div>
+    </div>
+
+    <div class="concept-card" data-part="103">
+      <div class="cq-head"><span class="q-tag">PC10 · 10.3</span><span class="badge-p1">Repeated Items</span></div>
+      <div class="cq-en">How do you find distinct permutations of <span class="math">n</span> items containing <span class="math">p</span> identical A's and <span class="math">q</span> identical B's?</div>
+      <div class="cq-cn">含相同重复元素的全排列公式是什么？如果把 3 个相同字母 L 插空，空隙选法用 P 还是 C？</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner">
+        Divide out identical swaps: <span class="kw">n! / (p! q! …)</span>. When slotting identical L's into m gaps, use <span class="kw">ᵐCₖ</span> (not ᵐPₖ, since identical L's have only 1 internal order!).
+      </div></div>
+    </div>
+
+    <div class="concept-card" data-part="104">
+      <div class="cq-head"><span class="q-tag">PC11 · 10.4</span><span class="badge-p1">Symmetry</span></div>
+      <div class="cq-en">State the symmetry property of <span class="math">ⁿCᵣ</span> and use it to solve <span class="math">¹⁵Cₓ = ¹⁵C₂ₓ₋₃</span> (two possible values!).</div>
+      <div class="cq-cn">写出组合对称恒等式，并指出求解 <span class="math">ⁿCₐ = ⁿC_b</span> 时的双解结构。</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner">
+        <span class="kw">ⁿCᵣ = ⁿCₙ₋ᵣ</span>. Either a = b (x = 2x−3 ⇒ x = 3) OR <span class="kw">a + b = n</span> (x + 2x − 3 = 15 ⇒ x = 6).
+      </div></div>
+    </div>
+
+    <div class="concept-card" data-part="104">
+      <div class="cq-head"><span class="q-tag">PC12 · 10.4</span><span class="badge-p1">Complement</span></div>
+      <div class="cq-en">What is the fastest strategy for "at least 1" or "A and B cannot both be selected"?</div>
+      <div class="cq-cn">“至少有 1 个”与“甲乙不同组”题型的统一高效策略是什么？</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner">
+        Use the <span class="kw">Complement Method: Total − Unwanted</span> (i.e., Total − None selected, or Total − Both A and B selected).
+      </div></div>
+    </div>
+
+    <div class="concept-card" data-part="104">
+      <div class="cq-head"><span class="q-tag">PC13 · 10.4</span><span class="badge-p1">Choose + Arrange</span></div>
+      <div class="cq-en">How do you count 5-letter passwords made by choosing 2 vowels from 5 and 3 consonants from 6, then arranging them?</div>
+      <div class="cq-cn">“从多组中分别抽取再排列”遵循什么计算步骤？</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner">
+        <span class="kw">Choose first, then Arrange</span>: (<span class="kw">⁵C₂ × ⁶C₃</span>) × <span class="kw">5!</span> (apply any adjacency/end rules in the arrange step!).
+      </div></div>
+    </div>
+
+    <div class="concept-card" data-part="104">
+      <div class="cq-head"><span class="q-tag">PC14 · 10.4</span><span class="badge-p2">Division vs Team</span></div>
+      <div class="cq-en">Compare splitting 6 people into a named Team A (3) &amp; Team B (3) vs two unnamed groups of 3.</div>
+      <div class="cq-cn">把 6 人分成“有名称的甲乙两队（各 3 人）”与“无名称的两组（各 3 人）”有何区别？</div>
+      <div class="cq-answer"><div class="cq-mask-hint">👆 点击查看参考答案</div><div class="cq-answer-inner">
+        Named teams: <span class="kw">⁶C₃ × ³C₃ = 20</span>. Unnamed equal-sized groups: divide by <span class="kw">2!</span> to avoid double-counting identical splits ⇒ <span class="kw">20 / 2! = 10</span>.
+      </div></div>
+    </div>
+  </div>
+</article>
+
+
+        <nav class="chapter-pager" aria-label="章节切换导航">
+          <div><a class="pager-btn" href="Ch09_Trigonometry.html">← Ch09 CAST 象限角、三角图像、方程与恒等式</a></div>
+          <div><a class="pager-btn primary" href="index.html">🏠 返回 16 章全书总目录</a></div>
+          <div><a class="pager-btn" href="Ch11_Series.html">Ch11 杨辉三角、二项式定理与 AP / GP / S∞ →</a></div>
+        </nav>
+      </div>
+    </main>
+  </div>
+
+  <button type="button" class="back-top-btn" id="backTopBtn" title="返回顶部">↑</button>
+
+  <script>
+(function () {
+  'use strict';
+
+  const THEME_KEY = 'igcse_am0606_theme';
+  const chapterCode = (document.body && document.body.getAttribute('data-chapter-code')) || 'HUB';
+  const STORAGE_PREFIX = 'igcse_am0606_' + chapterCode.toLowerCase() + '_';
+  const htmlEl = document.documentElement;
+  const bodyEl = document.body;
+
+  // All module-level state variables declared at top of IIFE (prevents TDZ issues)
+  let currentViewMode = localStorage.getItem(STORAGE_PREFIX + 'viewMode') || 'all';
+  let activeConceptPart = 'all';
+  let quizMasked = localStorage.getItem(STORAGE_PREFIX + 'quizMasked') === '1';
+  let allMsExpanded = false;
+  let masteredIds = [];
+  try {
+    masteredIds = JSON.parse(localStorage.getItem(STORAGE_PREFIX + 'mastered') || '[]');
+    if (!Array.isArray(masteredIds)) masteredIds = [];
+  } catch (e) {
+    masteredIds = [];
+  }
+
+  // ---------- Utility Helpers ----------
+  function gcd(a, b) {
+    a = Math.abs(Math.round(a));
+    b = Math.abs(Math.round(b));
+    while (b !== 0) { const t = a % b; a = b; b = t; }
+    return a || 1;
+  }
+
+  function formatFrac(num, den) {
+    if (den === 0) return 'undefined';
+    if (num === 0) return '0';
+    if (den < 0) { num = -num; den = -den; }
+    const g = gcd(num, den);
+    num /= g; den /= g;
+    return den === 1 ? String(num) : num + '/' + den;
+  }
+
+  function formatSurd(n) {
+    n = Math.round(n);
+    if (n <= 0) return '0';
+    let out = 1, ins = n;
+    for (let f = 2; f * f <= ins; f++) {
+      while (ins % (f * f) === 0) { out *= f; ins /= (f * f); }
+    }
+    if (ins === 1) return String(out);
+    return (out === 1 ? '' : String(out)) + '√' + ins;
+  }
+
+  function fact(n) {
+    let r = 1;
+    for (let i = 2; i <= n; i++) r *= i;
+    return r;
+  }
+
+  function nCr(n, r) {
+    if (r < 0 || r > n) return 0;
+    if (r > n - r) r = n - r;
+    let res = 1;
+    for (let i = 1; i <= r; i++) res = (res * (n - r + i)) / i;
+    return Math.round(res);
+  }
+
+  function nPr(n, r) {
+    if (r < 0 || r > n) return 0;
+    let res = 1;
+    for (let i = 0; i < r; i++) res *= (n - i);
+    return res;
+  }
+
+  // ---------- 1. Theme Toggle ----------
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+
+  function applyTheme(theme) {
+    htmlEl.setAttribute('data-theme', theme);
+    if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem(THEME_KEY, theme);
+  }
+  applyTheme(localStorage.getItem(THEME_KEY) || 'light');
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      applyTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  }
+
+  // ---------- 2. View Mode Filter (All / Book / SME) ----------
+  function applyViewMode(mode) {
+    currentViewMode = mode;
+    bodyEl.classList.remove('mode-book', 'mode-sme');
+    if (mode === 'book') bodyEl.classList.add('mode-book');
+    if (mode === 'sme') bodyEl.classList.add('mode-sme');
+    document.querySelectorAll('[data-view-mode]').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-view-mode') === mode);
+    });
+    localStorage.setItem(STORAGE_PREFIX + 'viewMode', mode);
+  }
+  document.querySelectorAll('[data-view-mode]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      applyViewMode(btn.getAttribute('data-view-mode'));
+    });
+  });
+
+  // ---------- 3. Sidebar Drawer & Accordion ----------
+  const sidebar = document.getElementById('sidebar');
+  const menuToggle = document.getElementById('menuToggle');
+  if (menuToggle && sidebar) {
+    menuToggle.addEventListener('click', function () { sidebar.classList.toggle('open'); });
+    sidebar.querySelectorAll('.nav-link').forEach(function (lnk) {
+      lnk.addEventListener('click', function () {
+        if (window.innerWidth <= 980) sidebar.classList.remove('open');
+      });
+    });
+  }
+  document.querySelectorAll('.nav-unit-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const unit = btn.closest('.nav-unit');
+      if (unit) unit.classList.toggle('collapsed');
+    });
+  });
+
+  // ---------- 4. Mastery Tracker (Dynamic per chapter) ----------
+  const progressText = document.getElementById('progressText');
+  const progressFill = document.getElementById('progressFill');
+  const masterBtns = Array.from(document.querySelectorAll('.master-btn'));
+  const totalSections = masterBtns.length;
+  const validSectionIds = new Set(masterBtns.map(function (b) { return b.getAttribute('data-section-id'); }));
+
+  function renderMastery() {
+    const doneList = masteredIds.filter(function (id) { return validSectionIds.has(id); });
+    localStorage.setItem(STORAGE_PREFIX + 'total', String(totalSections));
+    if (progressText) progressText.textContent = doneList.length + '/' + totalSections;
+    if (progressFill && totalSections > 0) {
+      progressFill.style.width = Math.round((doneList.length / totalSections) * 100) + '%';
+    }
+    masterBtns.forEach(function (btn) {
+      const sid = btn.getAttribute('data-section-id');
+      const done = doneList.indexOf(sid) !== -1;
+      btn.classList.toggle('is-mastered', done);
+      btn.textContent = done ? '✓ 已掌握' : '○ 标记掌握';
+    });
+    document.querySelectorAll('.nav-link').forEach(function (lnk) {
+      const id = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('mastered', doneList.indexOf(id) !== -1);
+    });
+  }
+
+  masterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const sid = btn.getAttribute('data-section-id');
+      const idx = masteredIds.indexOf(sid);
+      if (idx === -1) masteredIds.push(sid);
+      else masteredIds.splice(idx, 1);
+      localStorage.setItem(STORAGE_PREFIX + 'mastered', JSON.stringify(masteredIds));
+      renderMastery();
+    });
+  });
+  if (totalSections > 0) renderMastery();
+
+  // ---------- 5. Global Toggle Details & Print ----------
+  const toggleAllMs = document.getElementById('toggleAllMs');
+  if (toggleAllMs) {
+    toggleAllMs.addEventListener('click', function () {
+      allMsExpanded = !allMsExpanded;
+      document.querySelectorAll('details.ms-details').forEach(function (det) { det.open = allMsExpanded; });
+      const lbl = toggleAllMs.querySelector('.btn-label');
+      if (lbl) lbl.textContent = allMsExpanded ? '收起解析' : '展开解析';
+      toggleAllMs.classList.toggle('active', allMsExpanded);
+    });
+  }
+  const printBtn = document.getElementById('printBtn');
+  if (printBtn) printBtn.addEventListener('click', function () { window.print(); });
+
+  // ---------- 6. Instant Search Filter ----------
+  const searchInput = document.getElementById('searchInput');
+  const searchClear = document.getElementById('searchClear');
+  const searchBar = document.getElementById('searchBar');
+  const searchSummary = document.getElementById('searchSummary');
+  const searchResetBtn = document.getElementById('searchResetBtn');
+  const emptySearchNotice = document.getElementById('emptySearchNotice');
+
+  function runSearch() {
+    if (!searchInput) return;
+    const raw = searchInput.value.trim().toLowerCase();
+    if (searchClear) searchClear.style.display = raw ? 'block' : 'none';
+    const sections = Array.from(document.querySelectorAll('.topic-section'));
+    if (!raw) {
+      sections.forEach(function (s) { s.classList.remove('search-dim'); });
+      if (searchBar) searchBar.classList.remove('visible');
+      if (emptySearchNotice) emptySearchNotice.style.display = 'none';
+      return;
+    }
+    let hits = 0;
+    sections.forEach(function (sec) {
+      const ok = sec.textContent.toLowerCase().indexOf(raw) !== -1;
+      sec.classList.toggle('search-dim', !ok);
+      if (ok) hits++;
+    });
+    if (searchBar) searchBar.classList.add('visible');
+    if (searchSummary) searchSummary.textContent = '关键词 “' + searchInput.value.trim() + '” 匹配 ' + hits + ' 个板块';
+    if (emptySearchNotice) emptySearchNotice.style.display = hits === 0 ? 'block' : 'none';
+  }
+  if (searchInput) searchInput.addEventListener('input', runSearch);
+  function resetSearch() { if (searchInput) searchInput.value = ''; runSearch(); }
+  if (searchClear) searchClear.addEventListener('click', resetSearch);
+  if (searchResetBtn) searchResetBtn.addEventListener('click', resetSearch);
+
+  // ---------- 7. Interactive MCQ Grading ----------
+  document.querySelectorAll('.exam-q[data-mcq-answer]').forEach(function (qBox) {
+    const ans = qBox.getAttribute('data-mcq-answer');
+    const fb = qBox.querySelector('.mcq-feedback');
+    const opts = qBox.querySelectorAll('.mcq-opt');
+    opts.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const chosen = btn.getAttribute('data-opt');
+        opts.forEach(function (o) { o.classList.remove('correct', 'wrong'); });
+        if (chosen === ans) {
+          btn.classList.add('correct');
+          if (fb) {
+            fb.textContent = fb.getAttribute('data-ok') || '✅ 回答正确！';
+            fb.className = 'mcq-feedback visible ok';
+          }
+        } else {
+          btn.classList.add('wrong');
+          opts.forEach(function (o) { if (o.getAttribute('data-opt') === ans) o.classList.add('correct'); });
+          if (fb) {
+            fb.textContent = fb.getAttribute('data-err') || '❌ 未选对，请检查步骤。';
+            fb.className = 'mcq-feedback visible err';
+          }
+        }
+      });
+    });
+  });
+
+  // ---------- 8. Concept Flashcards Filter & Mask Quiz ----------
+  const conceptCountPill = document.getElementById('conceptCountPill');
+  const conceptQuizToggle = document.getElementById('conceptQuizToggle');
+
+  function filterConcepts() {
+    const cards = Array.from(document.querySelectorAll('#conceptGrid .concept-card'));
+    if (!cards.length) return;
+    let visible = 0;
+    cards.forEach(function (card) {
+      const part = card.getAttribute('data-part');
+      const show = activeConceptPart === 'all' || part === activeConceptPart;
+      card.classList.toggle('concept-hidden', !show);
+      if (show) visible++;
+    });
+    if (conceptCountPill) conceptCountPill.textContent = '显示 ' + visible + ' / ' + cards.length + ' 题';
+  }
+
+  document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      activeConceptPart = btn.getAttribute('data-concept-part');
+      document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      filterConcepts();
+    });
+  });
+
+  function applyQuizMask(masked) {
+    quizMasked = masked;
+    document.querySelectorAll('#conceptGrid .concept-card').forEach(function (c) { c.classList.toggle('masked', masked); });
+    if (conceptQuizToggle) {
+      conceptQuizToggle.textContent = masked ? '👁️ 显示全部答案' : '🙈 开启遮罩自测';
+      conceptQuizToggle.classList.toggle('active', masked);
+    }
+    localStorage.setItem(STORAGE_PREFIX + 'quizMasked', masked ? '1' : '0');
+  }
+  if (conceptQuizToggle) {
+    conceptQuizToggle.addEventListener('click', function () { applyQuizMask(!quizMasked); });
+  }
+  document.querySelectorAll('#conceptGrid .cq-answer').forEach(function (box) {
+    box.addEventListener('click', function () {
+      const card = box.closest('.concept-card');
+      if (card && card.classList.contains('masked')) card.classList.remove('masked');
+    });
+  });
+
+  // ---------- 9. 2D Plotter Engine for Chapter Interactive Labs ----------
+  function makePlotter(w, h, xmin, xmax, ymin, ymax) {
+    const pad = 24;
+    const toX = function (x) { return pad + ((x - xmin) / (xmax - xmin)) * (w - 2 * pad); };
+    const toY = function (y) { return h - pad - ((y - ymin) / (ymax - ymin)) * (h - 2 * pad); };
+    return { w: w, h: h, xmin: xmin, xmax: xmax, ymin: ymin, ymax: ymax, toX: toX, toY: toY };
+  }
+
+  function renderPlotBase(p) {
+    let s = '<rect x="2" y="2" width="' + (p.w - 4) + '" height="' + (p.h - 4) + '" rx="6" fill="none" stroke="var(--svg-grid)" stroke-width="1"/>';
+    const xStep = Math.max(1, Math.round((p.xmax - p.xmin) / 8));
+    const yStep = Math.max(1, Math.round((p.ymax - p.ymin) / 8));
+    for (let x = Math.ceil(p.xmin); x <= p.xmax; x += xStep) {
+      const px = p.toX(x);
+      s += '<line x1="' + px.toFixed(1) + '" y1="12" x2="' + px.toFixed(1) + '" y2="' + (p.h - 12) + '" stroke="var(--svg-grid)" stroke-width="0.7"/>';
+    }
+    for (let y = Math.ceil(p.ymin); y <= p.ymax; y += yStep) {
+      const py = p.toY(y);
+      s += '<line x1="12" y1="' + py.toFixed(1) + '" x2="' + (p.w - 12) + '" y2="' + py.toFixed(1) + '" stroke="var(--svg-grid)" stroke-width="0.7"/>';
+    }
+    if (p.xmin <= 0 && p.xmax >= 0) {
+      const ox = p.toX(0);
+      s += '<line x1="' + ox.toFixed(1) + '" y1="10" x2="' + ox.toFixed(1) + '" y2="' + (p.h - 10) + '" stroke="var(--svg-muted)" stroke-width="1.4"/>';
+      s += '<text x="' + Math.min(p.w - 16, ox + 6).toFixed(1) + '" y="22" font-size="10.5" font-weight="700" fill="var(--svg-muted)">y</text>';
+    }
+    if (p.ymin <= 0 && p.ymax >= 0) {
+      const oy = p.toY(0);
+      s += '<line x1="10" y1="' + oy.toFixed(1) + '" x2="' + (p.w - 10) + '" y2="' + oy.toFixed(1) + '" stroke="var(--svg-muted)" stroke-width="1.4"/>';
+      s += '<text x="' + (p.w - 18) + '" y="' + Math.max(20, oy - 5).toFixed(1) + '" font-size="10.5" font-weight="700" fill="var(--svg-muted)">x</text>';
+    }
+    return s;
+  }
+
+  function plotCurve(p, fn, color, dashed, samples) {
+    const N = samples || 120;
+    let d = '';
+    let penDown = false;
+    for (let i = 0; i <= N; i++) {
+      const x = p.xmin + (i / N) * (p.xmax - p.xmin);
+      const y = fn(x);
+      if (!Number.isFinite(y) || y < p.ymin - 1 || y > p.ymax + 1) {
+        penDown = false;
+        continue;
+      }
+      const px = p.toX(x), py = p.toY(y);
+      d += (penDown ? ' L ' : ' M ') + px.toFixed(1) + ' ' + py.toFixed(1);
+      penDown = true;
+    }
+    if (!d) return '';
+    return '<path d="' + d.trim() + '" fill="none" stroke="' + color + '" stroke-width="2.4"' + (dashed ? ' stroke-dasharray="5,4"' : '') + '/>';
+  }
+
+  function plotDot(p, x, y, color, label) {
+    if (x < p.xmin || x > p.xmax || y < p.ymin || y > p.ymax) return '';
+    const px = p.toX(x), py = p.toY(y);
+    let s = '<circle cx="' + px.toFixed(1) + '" cy="' + py.toFixed(1) + '" r="4.8" fill="' + color + '"/>';
+    if (label) {
+      s += '<text x="' + Math.min(p.w - 42, Math.max(12, px + 7)).toFixed(1) + '" y="' + Math.max(18, py - 6).toFixed(1) + '" font-size="10.5" font-weight="700" fill="' + color + '">' + label + '</text>';
+    }
+    return s;
+  }
+
+  // ---------- 10. Chapter-Specific Interactive Lab Mounts (Ch01–Ch16) ----------
+  function mountChapterLab(el) {
+    const type = el.getAttribute('data-lab-type');
+    if (!type) return;
+
+    if (type === 'ch01') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 1 交互实验室 · 线性绝对值 |ax + b| 与反函数 y = x 对称台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>a：<input type="number" id="c1A" value="2" min="-4" max="4"></label>' +
+        '<label>b：<input type="number" id="c1B" value="-4" min="-8" max="8"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c1Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c1Vertex"></div><div class="readout-pill" id="c1Inv"></div><div class="readout-pill" id="c1Sym"></div></div></div></div>';
+      const draw = function () {
+        let a = Math.round(Number(el.querySelector('#c1A').value) || 2); if (a === 0) a = 1;
+        const b = Math.round(Number(el.querySelector('#c1B').value) || 0);
+        const vx = -b / a;
+        const p = makePlotter(360, 270, -6, 6, -6, 6);
+        let svg = renderPlotBase(p);
+        svg += plotCurve(p, function (x) { return x; }, 'var(--svg-muted)', true);
+        svg += plotCurve(p, function (x) { return a * x + b; }, 'var(--svg-blue)', true);
+        svg += plotCurve(p, function (x) { return (x - b) / a; }, 'var(--svg-teal)', false);
+        svg += plotCurve(p, function (x) { return Math.abs(a * x + b); }, 'var(--svg-indigo)', false);
+        svg += plotDot(p, vx, 0, 'var(--svg-red)', 'V(' + formatFrac(-b, a) + ',0)');
+        el.querySelector('#c1Svg').innerHTML = svg;
+        el.querySelector('#c1Vertex').textContent = '折线 y = |' + a + 'x + (' + b + ')| 顶点 (V字尖点)：(' + formatFrac(-b, a) + ', 0)，值域 y ≥ 0';
+        el.querySelector('#c1Inv').textContent = '原直线 f(x) = ' + a + 'x + (' + b + ') 的反函数：f⁻¹(x) = (x − (' + b + ')) / ' + a + '（青色实线）';
+        el.querySelector('#c1Sym').textContent = '对称规则：f(x) 与 f⁻¹(x) 严格关于虚线 y = x 镜面对称，且两者交点必在 y = x 上。';
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch02') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 2 交互实验室 · 配方法、判别式 Δ 与二次绝对值 |ax²+bx+c| 翻折台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>a：<input type="number" id="c2A" value="1" min="-3" max="3"></label>' +
+        '<label>b：<input type="number" id="c2B" value="-4" min="-8" max="8"></label>' +
+        '<label>c：<input type="number" id="c2C" value="3" min="-8" max="8"></label>' +
+        '<label><input type="checkbox" id="c2Abs"> 显示 y = |f(x)| 向上翻折</label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c2Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c2Comp"></div><div class="readout-pill" id="c2Disc"></div><div class="readout-pill" id="c2Ineq"></div></div></div></div>';
+      const draw = function () {
+        let a = Math.round(Number(el.querySelector('#c2A').value) || 1); if (a === 0) a = 1;
+        const b = Math.round(Number(el.querySelector('#c2B').value) || 0);
+        const c = Math.round(Number(el.querySelector('#c2C').value) || 0);
+        const absOn = el.querySelector('#c2Abs').checked;
+        const h = -b / (2 * a);
+        const k = c - (b * b) / (4 * a);
+        const disc = b * b - 4 * a * c;
+        const p = makePlotter(360, 270, -6, 8, -8, 10);
+        let svg = renderPlotBase(p);
+        svg += plotCurve(p, function (x) { const y = a * x * x + b * x + c; return absOn ? Math.abs(y) : y; }, 'var(--svg-indigo)', false);
+        svg += plotDot(p, h, absOn ? Math.abs(k) : k, 'var(--svg-red)', 'V(' + h.toFixed(2) + ',' + (absOn ? Math.abs(k) : k).toFixed(2) + ')');
+        el.querySelector('#c2Svg').innerHTML = svg;
+        el.querySelector('#c2Comp').textContent = '配方法顶点：x = ' + formatFrac(-b, 2 * a) + '，极值 k = ' + k.toFixed(2) + (absOn ? '（翻折后最低必 ≥ 0）' : (a > 0 ? ' (最小值 Min)' : ' (最大值 Max)'));
+        el.querySelector('#c2Disc').textContent = '判别式 Δ = b² − 4ac = ' + disc + (disc > 0 ? ' (>0：两相异实根)' : disc === 0 ? ' (=0：唯一重根/相切)' : ' (<0：无实根)');
+        el.querySelector('#c2Ineq').textContent = absOn ? 'y = |f(x)| 把 x 轴下方负值部分全部对称翻折到上方！' : '开口方向：' + (a > 0 ? '向上 (U形)，解 f(x) < 0 取两根之间' : '向下 (∩形)，解 f(x) > 0 取两根之间');
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch03') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 3 交互实验室 · 三次多项式余数/因式定理试根台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>f(x) = x³ + <input type="number" id="c3B" value="-2">x² + <input type="number" id="c3C" value="-5">x + <input type="number" id="c3D" value="6"></label>' +
+        '<label>测试因子 (x − k) 中的 k：<input type="number" id="c3K" value="1" step="0.5"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c3Rem"></div><div class="readout-pill" id="c3Quot"></div></div></div>';
+      const draw = function () {
+        const b = Number(el.querySelector('#c3B').value) || 0;
+        const c = Number(el.querySelector('#c3C').value) || 0;
+        const d = Number(el.querySelector('#c3D').value) || 0;
+        const k = Number(el.querySelector('#c3K').value) || 0;
+        const q2 = 1;
+        const q1 = b + k * q2;
+        const q0 = c + k * q1;
+        const rem = d + k * q0;
+        el.querySelector('#c3Rem').textContent = '代入余数定理 f(' + k + ') = ' + rem + (Math.abs(rem) < 1e-9 ? '  ✅ 余数为 0 ⇒ (x − (' + k + ')) 是因式 (Factor)!' : '  → 非 0，不是因式');
+        el.querySelector('#c3Quot').textContent = '长除/综合除法结果：f(x) = (x − (' + k + '))(x² + ' + q1 + 'x + ' + q0 + ') + (' + rem + ')';
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch04') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 4 交互实验室 · 三次函数草图、|ax³+...| 翻折与不等式符号分析台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>r₁：<input type="number" id="c4R1" value="-2"></label>' +
+        '<label>r₂：<input type="number" id="c4R2" value="1"></label>' +
+        '<label>r₃：<input type="number" id="c4R3" value="3"></label>' +
+        '<label>首项系数：<select id="c4S"><option value="1">+1 (正系数)</option><option value="-1">−1 (负系数)</option></select></label>' +
+        '<label><input type="checkbox" id="c4Abs"> 套绝对值 |f(x)|</label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c4Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c4Roots"></div><div class="readout-pill" id="c4Ineq"></div></div></div></div>';
+      const draw = function () {
+        const roots = [Number(el.querySelector('#c4R1').value) || 0, Number(el.querySelector('#c4R2').value) || 0, Number(el.querySelector('#c4R3').value) || 0].sort(function (x, y) { return x - y; });
+        const sgn = Number(el.querySelector('#c4S').value) || 1;
+        const absOn = el.querySelector('#c4Abs').checked;
+        const p = makePlotter(360, 270, -5, 6, -12, 12);
+        let svg = renderPlotBase(p);
+        svg += plotCurve(p, function (x) {
+          const y = sgn * (x - roots[0]) * (x - roots[1]) * (x - roots[2]);
+          return absOn ? Math.abs(y) : y;
+        }, 'var(--svg-purple)', false);
+        roots.forEach(function (r, idx) { svg += plotDot(p, r, 0, 'var(--svg-red)', 'r' + (idx + 1)); });
+        el.querySelector('#c4Svg').innerHTML = svg;
+        el.querySelector('#c4Roots').textContent = '有序零点：' + roots.join(' ≤ ') + '；y 轴截距 = ' + (-sgn * roots[0] * roots[1] * roots[2]);
+        el.querySelector('#c4Ineq').textContent = sgn > 0
+          ? 'f(x) > 0 穿根法区间：' + roots[0] + ' < x < ' + roots[1] + ' 或 x > ' + roots[2]
+          : 'f(x) > 0 穿根法区间：x < ' + roots[0] + ' 或 ' + roots[1] + ' < x < ' + roots[2];
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch05') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 5 交互实验室 · y = ke^(nx) + a 与 y = k ln(ax + b) 渐近线画板</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>函数类型：<select id="c5Type"><option value="exp">指数 y = k·e^(nx) + a</option><option value="ln">对数 y = k·ln(ax + b)</option></select></label>' +
+        '<label>k：<input type="number" id="c5K" value="2"></label>' +
+        '<label>n 或 a：<input type="number" id="c5N" value="1"></label>' +
+        '<label>a 或 b：<input type="number" id="c5B" value="-1"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c5Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c5Asym"></div><div class="readout-pill" id="c5Int"></div><div class="readout-pill" id="c5Dom"></div></div></div></div>';
+      const draw = function () {
+        const mode = el.querySelector('#c5Type').value;
+        const k = Number(el.querySelector('#c5K').value) || 1;
+        let na = Number(el.querySelector('#c5N').value) || 1; if (na === 0) na = 1;
+        const b = Number(el.querySelector('#c5B').value) || 0;
+        const p = makePlotter(360, 270, -5, 6, -6, 8);
+        let svg = renderPlotBase(p);
+        if (mode === 'exp') {
+          svg += plotCurve(p, function () { return b; }, 'var(--svg-red)', true);
+          svg += plotCurve(p, function (x) { return k * Math.exp(na * x) + b; }, 'var(--svg-amber)', false);
+          svg += plotDot(p, 0, k + b, 'var(--svg-blue)', '(0,' + (k + b) + ')');
+          el.querySelector('#c5Asym').textContent = '水平渐近线 (Horizontal Asymptote)：y = ' + b;
+          el.querySelector('#c5Int').textContent = 'y 轴截距 (令 x = 0)：(0, ' + (k + b) + ')';
+          el.querySelector('#c5Dom').textContent = '定义域 x ∈ ℝ；值域：y ' + (k > 0 ? '> ' : '< ') + b + '（切勿触及 y = ' + b + '）';
+        } else {
+          const xAsym = -b / na;
+          const ax = p.toX(xAsym);
+          if (ax > 10 && ax < 350) svg += '<line x1="' + ax.toFixed(1) + '" y1="10" x2="' + ax.toFixed(1) + '" y2="260" stroke="var(--svg-red)" stroke-width="2" stroke-dasharray="5,3"/>';
+          svg += plotCurve(p, function (x) { const arg = na * x + b; return arg > 0.02 ? k * Math.log(arg) : NaN; }, 'var(--svg-teal)', false, 180);
+          const xInt = (1 - b) / na;
+          svg += plotDot(p, xInt, 0, 'var(--svg-blue)', 'x₀=' + xInt.toFixed(2));
+          el.querySelector('#c5Asym').textContent = '铅垂渐近线 (Vertical Asymptote)：ax + b = 0 ⇒ x = ' + formatFrac(-b, na);
+          el.querySelector('#c5Int').textContent = 'x 轴交点 (令 ax + b = 1)：x = ' + formatFrac(1 - b, na);
+          el.querySelector('#c5Dom').textContent = '真数必须为正！定义域：' + na + 'x + (' + b + ') > 0；值域：y ∈ ℝ';
+        }
+        el.querySelector('#c5Svg').innerHTML = svg;
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch06') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 6 交互实验室 · 直线线段与 Linear Law 线性化对照台</div>' +
+        '<div class="tab-row"><button type="button" class="tab-btn active" data-c6m="lin">6.5–6.6 Linear Law 线性化转换</button><button type="button" class="tab-btn" data-c6m="seg">6.1–6.3 线段与垂直平分线</button></div></div>' +
+        '<div class="lab-panel" id="c6Body"></div>';
+      let mode = 'lin';
+      const renderC6 = function () {
+        const box = el.querySelector('#c6Body');
+        if (mode === 'lin') {
+          box.innerHTML =
+            '<div class="lab-controls">' +
+            '<label>原方程模型：<select id="c6Model"><option value="pow">y = a xⁿ (幂函数型)</option><option value="exp">y = a bˣ (指数型)</option><option value="e">y = A e^(kx) (自然指数)</option><option value="inv">y = a/x + b (倒数型)</option></select></label>' +
+            '<label>直线斜率 m：<input type="number" id="c6M" value="2" step="0.5"></label>' +
+            '<label>纵轴截距 c：<input type="number" id="c6C" value="3" step="0.5"></label>' +
+            '</div><div class="lab-readout"><div class="readout-pill" id="c6Axes"></div><div class="readout-pill" id="c6Line"></div><div class="readout-pill" id="c6Params"></div></div>';
+          const calc = function () {
+            const md = box.querySelector('#c6Model').value;
+            const m = Number(box.querySelector('#c6M').value) || 0;
+            const c = Number(box.querySelector('#c6C').value) || 0;
+            if (md === 'pow') {
+              box.querySelector('#c6Axes').textContent = '坐标轴设定：纵轴 Y = lg y，横轴 X = lg x';
+              box.querySelector('#c6Line').textContent = '线性式：lg y = n(lg x) + lg a ⇒ 斜率 m = n，纵截距 c = lg a';
+              box.querySelector('#c6Params').textContent = '反推原参数：n = ' + m + '，a = 10^(' + c + ') = ' + Math.pow(10, c).toPrecision(4);
+            } else if (md === 'exp') {
+              box.querySelector('#c6Axes').textContent = '坐标轴设定：纵轴 Y = lg y，横轴 X = x';
+              box.querySelector('#c6Line').textContent = '线性式：lg y = (lg b) x + lg a ⇒ 斜率 m = lg b，纵截距 c = lg a';
+              box.querySelector('#c6Params').textContent = '反推原参数：b = 10^(' + m + ') = ' + Math.pow(10, m).toPrecision(4) + '，a = 10^(' + c + ') = ' + Math.pow(10, c).toPrecision(4);
+            } else if (md === 'e') {
+              box.querySelector('#c6Axes').textContent = '坐标轴设定：纵轴 Y = ln y，横轴 X = x';
+              box.querySelector('#c6Line').textContent = '线性式：ln y = kx + ln A ⇒ 斜率 m = k，纵截距 c = ln A';
+              box.querySelector('#c6Params').textContent = '反推原参数：k = ' + m + '，A = e^(' + c + ') ≈ ' + Math.exp(c).toPrecision(4);
+            } else {
+              box.querySelector('#c6Axes').textContent = '坐标轴设定：纵轴 Y = y（或 xy），横轴 X = 1/x（或 x）';
+              box.querySelector('#c6Line').textContent = '线性式：y = a(1/x) + b ⇒ 斜率 m = a，纵截距 c = b';
+              box.querySelector('#c6Params').textContent = '反推原参数：a = ' + m + '，b = ' + c + '，原关系 y = ' + m + '/x + (' + c + ')';
+            }
+          };
+          box.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', calc); i.addEventListener('change', calc); });
+          calc();
+        } else {
+          box.innerHTML =
+            '<div class="lab-controls">' +
+            '<label>A(<input type="number" id="c6Ax" value="-1">,<input type="number" id="c6Ay" value="6">)</label>' +
+            '<label>B(<input type="number" id="c6Bx" value="5">,<input type="number" id="c6By" value="2">)</label>' +
+            '</div><div class="lab-readout"><div class="readout-pill" id="c6Out1"></div><div class="readout-pill" id="c6Out2"></div></div>';
+          const calc = function () {
+            const ax = Number(box.querySelector('#c6Ax').value) || 0, ay = Number(box.querySelector('#c6Ay').value) || 0;
+            const bx = Number(box.querySelector('#c6Bx').value) || 0, by = Number(box.querySelector('#c6By').value) || 0;
+            const d2 = (bx - ax) * (bx - ax) + (by - ay) * (by - ay);
+            box.querySelector('#c6Out1').textContent = '精确长度 AB = √' + d2 + ' = ' + formatSurd(d2) + '；中点 M = (' + formatFrac(ax + bx, 2) + ', ' + formatFrac(ay + by, 2) + ')';
+            box.querySelector('#c6Out2').textContent = d2 === 0 ? '两点重合' : '斜率 m_AB = ' + formatFrac(by - ay, bx - ax) + '，垂直斜率 m_⊥ = ' + formatFrac(-(bx - ax), by - ay);
+          };
+          box.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', calc); });
+          calc();
+        }
+      };
+      el.querySelectorAll('[data-c6m]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          mode = btn.getAttribute('data-c6m');
+          el.querySelectorAll('[data-c6m]').forEach(function (b) { b.classList.toggle('active', b === btn); });
+          renderC6();
+        });
+      });
+      renderC6();
+    } else if (type === 'ch07') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 7 交互实验室 · 圆方程与直线相交 / 相切 / 相离判别画板</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>圆心 (<input type="number" id="c7H" value="1">,<input type="number" id="c7K" value="-1">) r=<input type="number" id="c7R" value="4" min="1" max="8"></label>' +
+        '<label>直线 y = <input type="number" id="c7M" value="1" step="0.5">x + <input type="number" id="c7C" value="3" step="0.5"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c7Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c7Eq"></div><div class="readout-pill" id="c7Dist"></div><div class="readout-pill" id="c7Rel"></div></div></div></div>';
+      const draw = function () {
+        const h = Number(el.querySelector('#c7H').value) || 0;
+        const k = Number(el.querySelector('#c7K').value) || 0;
+        const r = Math.max(1, Number(el.querySelector('#c7R').value) || 4);
+        const m = Number(el.querySelector('#c7M').value) || 0;
+        const c = Number(el.querySelector('#c7C').value) || 0;
+        const d = Math.abs(m * h - k + c) / Math.hypot(m, 1);
+        const p = makePlotter(360, 270, h - r - 3, h + r + 3, k - r - 3, k + r + 3);
+        let svg = renderPlotBase(p);
+        const cx = p.toX(h), cy = p.toY(k), rx = Math.abs(p.toX(h + r) - cx);
+        svg += '<circle cx="' + cx.toFixed(1) + '" cy="' + cy.toFixed(1) + '" r="' + rx.toFixed(1) + '" fill="rgba(5,150,105,0.12)" stroke="var(--svg-teal)" stroke-width="2.4"/>';
+        svg += plotCurve(p, function (x) { return m * x + c; }, 'var(--svg-red)', false);
+        svg += plotDot(p, h, k, 'var(--svg-indigo)', 'C(' + h + ',' + k + ')');
+        el.querySelector('#c7Svg').innerHTML = svg;
+        el.querySelector('#c7Eq').textContent = '标准圆方程：(x − (' + h + '))² + (y − (' + k + '))² = ' + (r * r);
+        el.querySelector('#c7Dist').textContent = '圆心到直线垂直距离 d = ' + d.toFixed(3) + ' vs 半径 r = ' + r;
+        el.querySelector('#c7Rel').textContent = Math.abs(d - r) < 0.02 ? '🎯 判定：d = r (Δ = 0) → 恰好相切 (Tangent)！' : d < r ? '✂️ 判定：d < r (Δ > 0) → 相交于两点 (Secant / Chord)！' : '🚫 判定：d > r (Δ < 0) → 相离 (No intersection)！';
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch08') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 8 交互实验室 · 弧度制 θ、弧长 s = rθ 与弓形阴影面积实时计算</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>半径 r (cm)：<input type="range" id="c8R" min="2" max="12" step="1" value="6"><span id="c8RLbl">6</span></label>' +
+        '<label>圆心角 θ (rad)：<input type="range" id="c8T" min="0.2" max="3.0" step="0.1" value="1.2"><span id="c8TLbl">1.20</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c8Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c8Arc"></div><div class="readout-pill" id="c8Sec"></div><div class="readout-pill" id="c8Seg"></div></div></div></div>';
+      const draw = function () {
+        const r = Number(el.querySelector('#c8R').value) || 6;
+        const t = Number(el.querySelector('#c8T').value) || 1.2;
+        el.querySelector('#c8RLbl').textContent = r;
+        el.querySelector('#c8TLbl').textContent = t.toFixed(2);
+        const arc = r * t, chord = 2 * r * Math.sin(t / 2), sec = 0.5 * r * r * t, tri = 0.5 * r * r * Math.sin(t), seg = sec - tri;
+        const cx = 135, cy = 195, R = 95 + r * 4;
+        const a1 = -0.15, a2 = a1 - t;
+        const x1 = cx + R * Math.cos(a1), y1 = cy + R * Math.sin(a1);
+        const x2 = cx + R * Math.cos(a2), y2 = cy + R * Math.sin(a2);
+        const large = t > Math.PI ? 1 : 0;
+        let svg = '<path d="M ' + cx + ' ' + cy + ' L ' + x1.toFixed(1) + ' ' + y1.toFixed(1) + ' A ' + R + ' ' + R + ' 0 ' + large + ' 0 ' + x2.toFixed(1) + ' ' + y2.toFixed(1) + ' Z" fill="rgba(13,148,136,0.14)" stroke="var(--svg-teal)" stroke-width="2.2"/>';
+        svg += '<path d="M ' + x1.toFixed(1) + ' ' + y1.toFixed(1) + ' A ' + R + ' ' + R + ' 0 ' + large + ' 0 ' + x2.toFixed(1) + ' ' + y2.toFixed(1) + ' Z" fill="rgba(217,119,6,0.28)" stroke="var(--svg-amber)" stroke-width="2"/>';
+        svg += '<circle cx="' + cx + '" cy="' + cy + '" r="4" fill="var(--svg-ink)"/><text x="' + (cx - 18) + '" y="' + (cy + 16) + '" font-size="11.5" font-weight="700" fill="var(--svg-ink)">O</text>';
+        svg += '<text x="' + (cx + 28) + '" y="' + (cy - 12) + '" font-size="11.5" font-weight="700" fill="var(--svg-teal)">θ = ' + t.toFixed(2) + ' rad</text>';
+        el.querySelector('#c8Svg').innerHTML = svg;
+        el.querySelector('#c8Arc').textContent = '弧长 s = rθ = ' + arc.toFixed(3) + ' cm | 弦长 AB = 2r sin(θ/2) = ' + chord.toFixed(3) + ' cm';
+        el.querySelector('#c8Sec').textContent = '扇形面积 ½r²θ = ' + sec.toFixed(3) + ' cm² | 扇形周长 = s + 2r = ' + (arc + 2 * r).toFixed(3) + ' cm';
+        el.querySelector('#c8Seg').textContent = '阴影弓形面积 (Segment) = ½r²(θ − sin θ) = ' + seg.toFixed(3) + ' cm²';
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch09') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 9 交互实验室 · y = a sin/cos(bx) + c 与 |f(x)| 三角波形诊断台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>函数：<select id="c9Fn"><option value="sin">a sin(bx) + c</option><option value="cos">a cos(bx) + c</option><option value="abs">|a sin(bx) + c|</option></select></label>' +
+        '<label>a：<input type="number" id="c9A" value="2"></label><label>b：<input type="number" id="c9B" value="2"></label><label>c：<input type="number" id="c9C" value="1"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c9Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c9Per"></div><div class="readout-pill" id="c9Rng"></div><div class="readout-pill" id="c9Cast"></div></div></div></div>';
+      const draw = function () {
+        const fn = el.querySelector('#c9Fn').value;
+        const a = Number(el.querySelector('#c9A').value) || 2;
+        let b = Number(el.querySelector('#c9B').value) || 1; if (b <= 0) b = 1;
+        const c = Number(el.querySelector('#c9C').value) || 0;
+        const p = makePlotter(360, 270, 0, 360, -5, 6);
+        let svg = renderPlotBase(p);
+        svg += plotCurve(p, function (deg) {
+          const rad = (deg * Math.PI) / 180;
+          const v = fn === 'cos' ? a * Math.cos(b * rad) + c : a * Math.sin(b * rad) + c;
+          return fn === 'abs' ? Math.abs(v) : v;
+        }, 'var(--svg-indigo)', false, 180);
+        el.querySelector('#c9Svg').innerHTML = svg;
+        const ymin = c - Math.abs(a), ymax = c + Math.abs(a);
+        el.querySelector('#c9Per').textContent = '周期 Period = ' + (fn === 'abs' && c === 0 ? (180 / b).toFixed(1) : (360 / b).toFixed(1)) + '° (弧度 ' + formatFrac(fn === 'abs' && c === 0 ? 1 : 2, b) + 'π)';
+        el.querySelector('#c9Rng').textContent = fn === 'abs'
+          ? '值域 Range (绝对值翻折)：[' + ((ymin <= 0 && ymax >= 0) ? 0 : Math.min(Math.abs(ymin), Math.abs(ymax))) + ', ' + Math.max(Math.abs(ymin), Math.abs(ymax)) + ']'
+          : '值域 Range：[' + ymin + ', ' + ymax + '] | 振幅 |a| = ' + Math.abs(a);
+        el.querySelector('#c9Cast').textContent = 'CAST 口诀 (0°→360°)：I 全正 (All) · II 仅 sin 正 · III 仅 tan 正 · IV 仅 cos 正';
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch10') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 10 交互实验室 · 排列 nPr / 组合 nCr / 捆绑插空计数对比器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>总元素 n：<input type="number" id="c10N" value="7" min="1" max="12"></label>' +
+        '<label>选取数 r：<input type="number" id="c10R" value="3" min="0" max="12"></label>' +
+        '<label>捆绑测试块大小 k：<input type="number" id="c10K" value="2" min="1" max="6"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c10P"></div><div class="readout-pill" id="c10C"></div><div class="readout-pill" id="c10Glue"></div></div></div>';
+      const draw = function () {
+        const n = Math.min(12, Math.max(1, Math.round(Number(el.querySelector('#c10N').value) || 7)));
+        const r = Math.min(n, Math.max(0, Math.round(Number(el.querySelector('#c10R').value) || 3)));
+        const k = Math.min(n, Math.max(1, Math.round(Number(el.querySelector('#c10K').value) || 2)));
+        el.querySelector('#c10P').textContent = '有序排列 ⁿPᵣ = ' + n + '! / (' + n + '−' + r + ')! = ' + nPr(n, r).toLocaleString();
+        el.querySelector('#c10C').textContent = '无序组合 ⁿCᵣ = ' + n + '! / [' + r + '!(' + n + '−' + r + ')!] = ' + nCr(n, r).toLocaleString() + '（关系：ⁿPᵣ = r! · ⁿCᵣ）';
+        const glueVal = fact(n - k + 1) * fact(k);
+        const rem = n - k;
+        const gapVal = k <= rem + 1 ? fact(rem) * nPr(rem + 1, k) : 0;
+        el.querySelector('#c10Glue').textContent = 'n 个中特定 k 个全排列：① 相邻捆绑 (' + (n - k + 1) + ')! × ' + k + '! = ' + glueVal.toLocaleString() + '；② 全不相邻插空 ' + rem + '! × ᴾ(' + (rem + 1) + ',' + k + ') = ' + gapVal.toLocaleString();
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch11') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 11 交互实验室 · 二项式展开 (a + bx)ⁿ 与 AP/GP/S∞ 验算台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>二项式 a：<input type="number" id="c11A" value="2"></label><label>b：<input type="number" id="c11B" value="-3"></label><label>幂 n：<input type="number" id="c11N" value="5" min="2" max="9"></label>' +
+        '<label>GP 首项 u₁：<input type="number" id="c11U" value="12"></label><label>公比 r：<input type="number" id="c11R" value="0.5" step="0.25"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c11Bin"></div><div class="readout-pill" id="c11Gp"></div></div></div>';
+      const draw = function () {
+        const a = Number(el.querySelector('#c11A').value) || 0;
+        const b = Number(el.querySelector('#c11B').value) || 0;
+        const n = Math.min(9, Math.max(2, Math.round(Number(el.querySelector('#c11N').value) || 5)));
+        const terms = [];
+        for (let r = 0; r <= Math.min(3, n); r++) {
+          const coef = nCr(n, r) * Math.pow(a, n - r) * Math.pow(b, r);
+          terms.push((r === 0 ? '' : (coef >= 0 ? ' + ' : ' − ')) + (r === 0 ? coef : Math.abs(coef)) + (r === 0 ? '' : r === 1 ? 'x' : 'x^' + r));
+        }
+        el.querySelector('#c11Bin').textContent = '(' + a + ' + ' + b + 'x)^' + n + ' 前四项 = ' + terms.join('') + ' + …';
+        const u1 = Number(el.querySelector('#c11U').value) || 0;
+        const rRatio = Number(el.querySelector('#c11R').value) || 0;
+        const conv = Math.abs(rRatio) < 1;
+        el.querySelector('#c11Gp').textContent = 'GP u₅ = ' + (u1 * Math.pow(rRatio, 4)).toFixed(3) + ' | ' + (conv ? '✅ |r| < 1 收敛！S∞ = u₁/(1−r) = ' + (u1 / (1 - rRatio)).toFixed(3) : '🚫 |r| ≥ 1 级数发散，S∞ 不存在！');
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch12') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 12 交互实验室 · y = x³ − 3px + 2 切线、法线与二阶导驻点台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>系数 p：<input type="number" id="c12P" value="3" min="1" max="6"></label>' +
+        '<label>点横坐标 x₀：<input type="range" id="c12X" min="-3" max="3" step="0.25" value="-1"><span id="c12XLbl">-1.00</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c12Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c12D1"></div><div class="readout-pill" id="c12D2"></div><div class="readout-pill" id="c12Tan"></div></div></div></div>';
+      const draw = function () {
+        const P = Math.max(1, Number(el.querySelector('#c12P').value) || 3);
+        const x0 = Number(el.querySelector('#c12X').value) || 0;
+        el.querySelector('#c12XLbl').textContent = x0.toFixed(2);
+        const y0 = x0 * x0 * x0 - 3 * P * x0 + 2;
+        const m = 3 * x0 * x0 - 3 * P;
+        const d2 = 6 * x0;
+        const p = makePlotter(360, 270, -4, 4, -18, 22);
+        let svg = renderPlotBase(p);
+        svg += plotCurve(p, function (x) { return x * x * x - 3 * P * x + 2; }, 'var(--svg-indigo)', false);
+        svg += plotCurve(p, function (x) { return y0 + m * (x - x0); }, 'var(--svg-red)', true);
+        svg += plotDot(p, x0, y0, 'var(--svg-red)', 'P(' + x0 + ',' + y0.toFixed(1) + ')');
+        el.querySelector('#c12Svg').innerHTML = svg;
+        el.querySelector('#c12D1').textContent = '一阶导 dy/dx = 3x² − ' + (3 * P) + '，在 x₀=' + x0 + ' 处切线斜率 = ' + m.toFixed(2) + (Math.abs(m) < 0.01 ? ' 🎯 驻点 (dy/dx = 0)!' : '');
+        el.querySelector('#c12D2').textContent = '二阶导 d²y/dx² = 6x = ' + d2.toFixed(2) + (d2 < 0 ? ' (< 0：局部极大值形状 ∩)' : d2 > 0 ? ' (> 0：局部极小值形状 U)' : ' (= 0 需查符号变化)');
+        el.querySelector('#c12Tan').textContent = Math.abs(m) < 0.01 ? '水平切线：y = ' + y0.toFixed(2) + '；法线斜率无定义 (铅垂 x = ' + x0 + ')' : '切线 y − ' + y0.toFixed(2) + ' = ' + m.toFixed(2) + '(x − ' + x0 + ') | 法线斜率 m⊥ = ' + (-1 / m).toFixed(2);
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch13') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 13 交互实验室 · 向量合成 u + v、模长与单位向量动态 SVG</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>u = (<input type="number" id="c13Ux" value="3">,<input type="number" id="c13Uy" value="4">)</label>' +
+        '<label>v = (<input type="number" id="c13Vx" value="4">,<input type="number" id="c13Vy" value="-1">)</label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c13Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c13Mag"></div><div class="readout-pill" id="c13Unit"></div><div class="readout-pill" id="c13Sum"></div></div></div></div>';
+      const draw = function () {
+        const ux = Number(el.querySelector('#c13Ux').value) || 0, uy = Number(el.querySelector('#c13Uy').value) || 0;
+        const vx = Number(el.querySelector('#c13Vx').value) || 0, vy = Number(el.querySelector('#c13Vy').value) || 0;
+        const sx = ux + vx, sy = uy + vy;
+        const p = makePlotter(360, 270, Math.min(-2, ux, vx, sx) - 2, Math.max(4, ux, vx, sx) + 2, Math.min(-2, uy, vy, sy) - 2, Math.max(4, uy, vy, sy) + 2);
+        let svg = renderPlotBase(p);
+        const arrow = function (x1, y1, x2, y2, col, lbl) {
+          const mx = (p.toX(x1) + p.toX(x2)) / 2, my = (p.toY(y1) + p.toY(y2)) / 2;
+          return '<line x1="' + p.toX(x1).toFixed(1) + '" y1="' + p.toY(y1).toFixed(1) + '" x2="' + p.toX(x2).toFixed(1) + '" y2="' + p.toY(y2).toFixed(1) + '" stroke="' + col + '" stroke-width="2.6"/><circle cx="' + p.toX(x2).toFixed(1) + '" cy="' + p.toY(y2).toFixed(1) + '" r="4" fill="' + col + '"/><text x="' + (mx + 6).toFixed(1) + '" y="' + (my - 5).toFixed(1) + '" font-size="11" font-weight="700" fill="' + col + '">' + lbl + '</text>';
+        };
+        svg += arrow(0, 0, ux, uy, 'var(--svg-blue)', 'u');
+        svg += arrow(ux, uy, sx, sy, 'var(--svg-amber)', 'v');
+        svg += arrow(0, 0, sx, sy, 'var(--svg-teal)', 'u+v');
+        el.querySelector('#c13Svg').innerHTML = svg;
+        const u2 = ux * ux + uy * uy, s2 = sx * sx + sy * sy;
+        el.querySelector('#c13Mag').textContent = '精确模长 |u| = ' + formatSurd(u2) + '；合成向量的模 |u + v| = ' + formatSurd(s2);
+        el.querySelector('#c13Unit').textContent = u2 === 0 ? '零向量无单位向量' : 'u 方向单位向量 û = (1/' + formatSurd(u2) + ') (' + ux + 'i + ' + uy + 'j)';
+        el.querySelector('#c13Sum').textContent = '合成向量 u + v = (' + sx + ', ' + sy + ')；差向量 u − v = (' + (ux - vx) + ', ' + (uy - vy) + ')';
+      };
+      el.querySelectorAll('input').forEach(function (i) { i.addEventListener('input', draw); });
+      draw();
+    } else if (type === 'ch14') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 14 交互实验室 · 指数、对数与三角链式导数验证台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>函数 y：<select id="c14F"><option value="exp">k e^(ax+b)</option><option value="ln">k ln(ax+b)</option><option value="sin">k sin(ax+b)</option><option value="cos">k cos(ax+b)</option><option value="tan">k tan(ax+b)</option></select></label>' +
+        '<label>k：<input type="number" id="c14K" value="2"></label><label>a：<input type="number" id="c14A" value="3"></label><label>b：<input type="number" id="c14B" value="1"></label>' +
+        '<label>检验 x₀：<input type="number" id="c14X" value="0" step="0.5"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="c14Der"></div><div class="readout-pill" id="c14Val"></div></div></div>';
+      const draw = function () {
+        const f = el.querySelector('#c14F').value;
+        const k = Number(el.querySelector('#c14K').value) || 1;
+        const a = Number(el.querySelector('#c14A').value) || 1;
+        const b = Number(el.querySelector('#c14B').value) || 0;
+        const x = Number(el.querySelector('#c14X').value) || 0;
+        const arg = a * x + b;
+        let dtxt = '', val = NaN;
+        if (f === 'exp') { dtxt = (k * a) + ' e^(' + a + 'x + (' + b + '))'; val = k * a * Math.exp(arg); }
+        else if (f === 'ln') { dtxt = formatFrac(k * a, 1) + '·a 约去系数得 ' + k + '·(' + a + ') / (' + a + 'x + (' + b + '))  （注：ln 里常数 k 与系数 a 对消规律：d/dx[ln(ax+b)] = a/(ax+b)！）'; val = arg !== 0 ? (k * a) / arg : NaN; }
+        else if (f === 'sin') { dtxt = (k * a) + ' cos(' + a + 'x + (' + b + '))'; val = k * a * Math.cos(arg); }
+        else if (f === 'cos') { dtxt = (-k * a) + ' sin(' + a + 'x + (' + b + '))  (注意负号!)'; val = -k * a * Math.sin(arg); }
+        else { dtxt = (k * a) + ' sec²(' + a + 'x + (' + b + '))'; val = Math.abs(Math.cos(arg)) > 0.01 ? (k * a) / (Math.cos(arg) * Math.cos(arg)) : NaN; }
+        el.querySelector('#c14Der').textContent = '导数表达式 dy/dx = ' + dtxt;
+        el.querySelector('#c14Val').textContent = '在 x₀ = ' + x + ' rad 处斜率数值 ≈ ' + (Number.isFinite(val) ? val.toFixed(4) : '未定义（除数为 0）');
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch15') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 15 交互实验室 · 定积分“代数净值” vs “绝对几何面积”对照仪</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>被积函数：<select id="c15F"><option value="par">y = x² − 4</option><option value="cub">y = x³ − 4x</option><option value="sin">y = 3 sin(x)</option></select></label>' +
+        '<label>下限 a：<input type="number" id="c15A" value="-1" step="0.5"></label><label>上限 b：<input type="number" id="c15B" value="3" step="0.5"></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c15Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c15Net"></div><div class="readout-pill" id="c15Geom"></div><div class="readout-pill" id="c15Rule"></div></div></div></div>';
+      const draw = function () {
+        const mode = el.querySelector('#c15F').value;
+        let a = Number(el.querySelector('#c15A').value) || -1;
+        let b = Number(el.querySelector('#c15B').value) || 3;
+        if (b < a) { const t = a; a = b; b = t; }
+        const fn = function (x) { return mode === 'par' ? x * x - 4 : mode === 'cub' ? x * x * x - 4 * x : 3 * Math.sin(x); };
+        const p = makePlotter(360, 270, Math.min(-3, a - 0.5), Math.max(4, b + 0.5), -6, 7);
+        let svg = renderPlotBase(p);
+        const N = 120, dx = (b - a) / N;
+        let net = 0, geom = 0;
+        for (let i = 0; i < N; i++) {
+          const x1 = a + i * dx, x2 = x1 + dx, xm = (x1 + x2) / 2, ym = fn(xm);
+          net += ym * dx;
+          geom += Math.abs(ym) * dx;
+          const top = ym >= 0 ? p.toY(ym) : p.toY(0);
+          const ht = Math.abs(p.toY(ym) - p.toY(0));
+          svg += '<rect x="' + p.toX(x1).toFixed(1) + '" y="' + top.toFixed(1) + '" width="' + Math.max(1.5, p.toX(x2) - p.toX(x1)).toFixed(1) + '" height="' + ht.toFixed(1) + '" fill="' + (ym >= 0 ? 'rgba(22,163,74,0.35)' : 'rgba(220,38,38,0.35)') + '"/>';
+        }
+        svg += plotCurve(p, fn, 'var(--svg-indigo)', false);
+        el.querySelector('#c15Svg').innerHTML = svg;
+        el.querySelector('#c15Net').textContent = '定积分代数和 ∫ₐᵇ f(x) dx ≈ ' + net.toFixed(3) + '（x 轴下方红色贡献为负，互相抵消）';
+        el.querySelector('#c15Geom').textContent = '总几何围成面积 ∫ₐᵇ |f(x)| dx ≈ ' + geom.toFixed(3) + '（必须按零点分段取 |…| 相加！）';
+        el.querySelector('#c15Rule').textContent = '考场避坑：求 x 轴下方区域面积务必加负号 −∫ 或取绝对值 |∫|！';
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    } else if (type === 'ch16') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧪 Ch 16 交互实验室 · 运动学 s–v–a 瞬时静止折返与总路程拆分器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>速度模型 v(t)：<select id="c16M"><option value="q">v = t² − 4t + 3 (t=1,3 折返)</option><option value="lin">v = 6 − 2t (t=3 折返)</option></select></label>' +
+        '<label>终止时刻 T (s)：<input type="range" id="c16T" min="0.5" max="5" step="0.5" value="4"><span id="c16TLbl">4.0s</span></label>' +
+        '</div><div class="lab-grid-2col"><div class="svg-figure" style="margin:0;padding:8px;"><svg id="c16Svg" viewBox="0 0 360 270" width="360" height="270"></svg></div>' +
+        '<div class="lab-readout"><div class="readout-pill" id="c16Inst"></div><div class="readout-pill" id="c16Disp"></div><div class="readout-pill" id="c16Dist"></div></div></div></div>';
+      const draw = function () {
+        const mode = el.querySelector('#c16M').value;
+        const T = Number(el.querySelector('#c16T').value) || 4;
+        el.querySelector('#c16TLbl').textContent = T.toFixed(1) + 's';
+        const vFn = function (t) { return mode === 'q' ? t * t - 4 * t + 3 : 6 - 2 * t; };
+        const aFn = function (t) { return mode === 'q' ? 2 * t - 4 : -2; };
+        const p = makePlotter(360, 270, 0, 5.2, -5, 9);
+        let svg = renderPlotBase(p);
+        const N = 100, dt = T / N;
+        let disp = 0, dist = 0;
+        for (let i = 0; i < N; i++) {
+          const t1 = i * dt, tm = t1 + dt / 2, vm = vFn(tm);
+          disp += vm * dt;
+          dist += Math.abs(vm) * dt;
+          const top = vm >= 0 ? p.toY(vm) : p.toY(0);
+          svg += '<rect x="' + p.toX(t1).toFixed(1) + '" y="' + top.toFixed(1) + '" width="' + Math.max(1.5, p.toX(t1 + dt) - p.toX(t1)).toFixed(1) + '" height="' + Math.abs(p.toY(vm) - p.toY(0)).toFixed(1) + '" fill="' + (vm >= 0 ? 'rgba(3,105,161,0.3)' : 'rgba(220,38,38,0.32)') + '"/>';
+        }
+        svg += plotCurve(p, vFn, 'var(--svg-indigo)', false);
+        svg += plotDot(p, T, vFn(T), 'var(--svg-red)', 't=' + T.toFixed(1));
+        el.querySelector('#c16Svg').innerHTML = svg;
+        el.querySelector('#c16Inst').textContent = '在 t = ' + T.toFixed(1) + 's：瞬时速度 v = ' + vFn(T).toFixed(2) + ' m/s，加速度 a = dv/dt = ' + aFn(T).toFixed(2) + ' m/s²';
+        el.querySelector('#c16Disp').textContent = '净位移 Displacement (∫₀ᵀ v dt) = ' + disp.toFixed(2) + ' m';
+        el.querySelector('#c16Dist').textContent = '总路程 Total Distance (在 v=0 处拆分取 |…|) = ' + dist.toFixed(2) + ' m' + (Math.abs(dist - Math.abs(disp)) > 0.05 ? ' （已折返！）' : '');
+      };
+      el.querySelectorAll('input,select').forEach(function (i) { i.addEventListener('input', draw); i.addEventListener('change', draw); });
+      draw();
+    }
+  }
+
+  document.querySelectorAll('.lab-box[data-lab-type]').forEach(mountChapterLab);
+
+  // ---------- 11. Initialize State & Scroll Spy ----------
+  applyViewMode(currentViewMode);
+  applyQuizMask(quizMasked);
+
+  const backTopBtn = document.getElementById('backTopBtn');
+  const trackedSections = Array.from(document.querySelectorAll('.topic-section[id]'));
+  const navLinks = Array.from(document.querySelectorAll('.sidebar .nav-link'));
+
+  window.addEventListener('scroll', function () {
+    if (backTopBtn) backTopBtn.classList.toggle('visible', window.scrollY > 360);
+    const y = window.scrollY + 110;
+    let currentId = '';
+    for (let i = 0; i < trackedSections.length; i++) {
+      if (trackedSections[i].offsetTop <= y && getComputedStyle(trackedSections[i]).display !== 'none') {
+        currentId = trackedSections[i].id;
+      }
+    }
+    navLinks.forEach(function (lnk) {
+      const h = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('active', h === currentId);
+    });
+  }, { passive: true });
+
+  if (backTopBtn) {
+    backTopBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  }
+})();
+
+  </script>
+</body>
+</html>
