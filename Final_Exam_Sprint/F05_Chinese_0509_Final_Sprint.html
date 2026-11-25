@@ -1,0 +1,2497 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="--accent: #DC2626;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>F05 · Chinese (0509) · Comprehension, Analysis & Essays — IGCSE 期末范围锁定冲刺</title>
+  <style>
+/* ==========================================================================
+   Cambridge IGCSE 6-Subject Final Exam Sprint Suite Shared Stylesheet
+   ========================================================================== */
+
+:root {
+  --bg-page: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --bg-sidebar: #FFFFFF;
+  --bg-code: #EFF6FF;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-faint: #64748B;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+
+  --accent: #2563EB;
+  --accent-hover: #1D4ED8;
+  --accent-soft: #DBEAFE;
+
+  --core-bg: #E0F2FE;
+  --core-text: #075985;
+  --core-border: #BAE6FD;
+  --ext-bg: #FEF3C7;
+  --ext-text: #92400E;
+  --ext-border: #FDE68A;
+
+  --deep-bg: #EFF6FF;
+  --deep-border: #2563EB;
+  --tip-bg: #FFFBEB;
+  --tip-border: #D97706;
+  --mistake-bg: #FFF1F2;
+  --mistake-border: #E11D48;
+  --example-bg: #F0FDF4;
+  --example-border: #16A34A;
+  --formula-bg: #F8FAFC;
+  --formula-border: #2563EB;
+
+  --ok-bg: #DCFCE7;
+  --ok-text: #166534;
+  --ok-border: #86EFAC;
+  --err-bg: #FEE2E2;
+  --err-text: #991B1B;
+  --err-border: #FCA5A5;
+
+  --svg-bg: #FFFFFF;
+  --svg-grid: #E2E8F0;
+  --svg-ink: #0F172A;
+  --svg-muted: #64748B;
+  --svg-blue: #2563EB;
+  --svg-indigo: #4338CA;
+  --svg-teal: #0D9488;
+  --svg-amber: #D97706;
+  --svg-red: #DC2626;
+  --svg-green: #16A34A;
+  --svg-purple: #7C3AED;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.07);
+  --shadow-lg: 0 10px 26px rgba(15, 23, 42, 0.11);
+
+  --sidebar-w: 280px;
+  --topbar-h: 58px;
+  --radius-sm: 7px;
+  --radius-md: 11px;
+  --radius-lg: 16px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+  --font-serif: Georgia, "Times New Roman", "Songti SC", "Noto Serif SC", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+[data-theme="dark"] {
+  --bg-page: #0B1120;
+  --bg-surface: #111827;
+  --bg-subtle: #1E293B;
+  --bg-sidebar: #0F172A;
+  --bg-code: #1E293B;
+  --text-main: #F1F5F9;
+  --text-muted: #CBD5E1;
+  --text-faint: #94A3B8;
+  --border: #1E293B;
+  --border-strong: #334155;
+
+  --accent: #38BDF8 !important;
+  --accent-hover: #7DD3FC;
+  --accent-soft: rgba(56, 189, 248, 0.18);
+
+  --core-bg: rgba(56, 189, 248, 0.16);
+  --core-text: #BAE6FD;
+  --core-border: rgba(56, 189, 248, 0.36);
+  --ext-bg: rgba(245, 158, 11, 0.16);
+  --ext-text: #FDE68A;
+  --ext-border: rgba(245, 158, 11, 0.36);
+
+  --deep-bg: rgba(37, 99, 235, 0.14);
+  --deep-border: #60A5FA;
+  --tip-bg: rgba(217, 119, 6, 0.14);
+  --tip-border: #FBBF24;
+  --mistake-bg: rgba(225, 29, 72, 0.15);
+  --mistake-border: #FB7185;
+  --example-bg: rgba(22, 163, 74, 0.13);
+  --example-border: #4ADE80;
+  --formula-bg: #172033;
+  --formula-border: #38BDF8;
+
+  --ok-bg: rgba(22, 163, 74, 0.22);
+  --ok-text: #BBF7D0;
+  --ok-border: #22C55E;
+  --err-bg: rgba(220, 38, 38, 0.22);
+  --err-text: #FECACA;
+  --err-border: #EF4444;
+
+  --svg-bg: #0F172A;
+  --svg-grid: #334155;
+  --svg-ink: #F1F5F9;
+  --svg-muted: #94A3B8;
+  --svg-blue: #60A5FA;
+  --svg-indigo: #818CF8;
+  --svg-teal: #2DD4BF;
+  --svg-amber: #FBBF24;
+  --svg-red: #F87171;
+  --svg-green: #34D399;
+  --svg-purple: #A78BFA;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .seg-btn.active,
+[data-theme="dark"] .tab-btn.active,
+[data-theme="dark"] .icon-btn.active,
+[data-theme="dark"] .brand-code,
+[data-theme="dark"] .pager-btn.primary,
+[data-theme="dark"] .clinic-btn-primary { color: #0B1120; }
+[data-theme="dark"] .hub-foot { color: #38BDF8; }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--topbar-h) + 18px); }
+body { margin: 0; font-family: var(--font-sans); background: var(--bg-page); color: var(--text-main); line-height: 1.72; font-size: 15.5px; -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4 { margin: 0 0 0.55em 0; line-height: 1.32; font-weight: 700; color: var(--text-main); }
+p { margin: 0 0 0.9em 0; }
+ul, ol { margin: 0 0 1em 0; padding-left: 1.45em; }
+li { margin-bottom: 0.35em; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { font-family: var(--font-mono); font-size: 0.9em; background: var(--bg-code); color: var(--accent); padding: 2px 6px; border-radius: 4px; }
+
+/* View Mode Filters */
+body.mode-summary .topic-section:not(.sec-summary) { display: none !important; }
+body.mode-practice .topic-section:not(.sec-practice) { display: none !important; }
+body.mode-clinic .topic-section:not(.sec-clinic) { display: none !important; }
+body.mode-cards .topic-section:not(.sec-cards) { display: none !important; }
+
+/* Math & Formula Styling */
+.math { font-family: var(--font-serif); font-style: italic; font-weight: 600; }
+.frac { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; font-size: 0.88em; line-height: 1.15; margin: 0 3px; }
+.frac .num { border-bottom: 1.5px solid currentColor; padding: 0 4px 1px 4px; }
+.frac .den { padding: 1px 4px 0 4px; }
+.sqrt { display: inline-flex; align-items: center; font-family: var(--font-serif); }
+.sqrt-rad { border-top: 1.5px solid currentColor; padding: 0 3px; margin-left: 1px; }
+
+.badge-c1, .badge-cw, .badge-core, .badge-ext { display: inline-block; font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.badge-c1, .badge-core { background: var(--core-bg); color: var(--core-text); border: 1px solid var(--core-border); }
+.badge-cw, .badge-ext { background: var(--ext-bg); color: var(--ext-text); border: 1px solid var(--ext-border); }
+
+.formula-card { background: var(--formula-bg); border: 1.5px solid var(--border-strong); border-left: 5px solid var(--formula-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; font-size: 15px; }
+.formula-main { font-family: var(--font-serif); font-size: 16.5px; font-weight: 700; color: var(--accent); margin: 4px 0 6px 0; }
+
+.source-box, .reading-passage { background: var(--bg-page); border: 1px solid var(--border-strong); border-left: 5px solid var(--accent); border-radius: var(--radius-md); padding: 16px 20px; margin: 14px 0; font-family: var(--font-serif); font-size: 15px; line-height: 1.76; }
+.reading-title { font-family: var(--font-sans); font-size: 15.8px; font-weight: 800; color: var(--text-main); margin-bottom: 8px; }
+.para-tag { display: inline-block; font-family: var(--font-sans); font-size: 11.5px; font-weight: 800; background: var(--accent-soft); color: var(--accent); padding: 1px 7px; border-radius: 4px; margin-right: 6px; }
+
+.model-essay { background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 20px; margin: 14px 0; box-shadow: var(--shadow-sm); }
+.essay-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; padding-bottom: 10px; margin-bottom: 12px; border-bottom: 1px solid var(--border); font-size: 13px; font-weight: 700; }
+.band-pill { padding: 2px 10px; border-radius: 999px; font-size: 12px; font-weight: 800; }
+.band-high { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.band-mid { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+.essay-body { font-family: var(--font-serif); font-size: 15px; line-height: 1.76; }
+mark.hl-content { background: rgba(37, 99, 235, 0.16); color: inherit; padding: 1px 3px; border-radius: 3px; }
+mark.hl-lang { background: rgba(22, 163, 74, 0.18); color: inherit; padding: 1px 3px; border-radius: 3px; }
+mark.hl-err { background: rgba(220, 38, 38, 0.16); color: inherit; padding: 1px 3px; border-radius: 3px; text-decoration: wavy underline rgba(220, 38, 38, 0.6); }
+
+.write-box { display: flex; flex-direction: column; gap: 10px; }
+.write-textarea { width: 100%; min-height: 140px; padding: 12px 14px; border-radius: var(--radius-sm); border: 1.5px solid var(--border-strong); background: var(--bg-page); color: var(--text-main); font-family: var(--font-serif); font-size: 14.8px; line-height: 1.65; resize: vertical; }
+.write-textarea:focus { outline: none; border-color: var(--accent); }
+.wc-meter { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 800; }
+.wc-ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.wc-warn { background: var(--tip-bg); color: var(--tip-border); border: 1px solid var(--tip-border); }
+.wc-err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+.timer-big { font-family: var(--font-mono); font-size: 20px; font-weight: 800; color: var(--accent); background: var(--bg-page); border: 1.5px solid var(--border-strong); padding: 4px 10px; border-radius: var(--radius-sm); }
+
+/* Topbar */
+.topbar {
+  position: sticky; top: 0; z-index: 100; height: var(--topbar-h);
+  background: var(--bg-surface); border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm); display: flex; align-items: center;
+  justify-content: space-between; gap: 8px; padding: 0 14px;
+}
+.topbar-left { display: flex; align-items: center; gap: 7px; min-width: 0; flex-shrink: 1; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; gap: 5px; height: 34px; padding: 0 9px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--bg-surface); color: var(--text-main); font-size: 12.8px; font-weight: 600; cursor: pointer; white-space: nowrap; text-decoration: none; }
+.icon-btn:hover { background: var(--bg-subtle); border-color: var(--accent); text-decoration: none; }
+.icon-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.menu-toggle { display: none; }
+.brand-pill { display: flex; align-items: center; gap: 7px; font-weight: 700; font-size: 13.8px; white-space: nowrap; flex-shrink: 1; min-width: 0; }
+.brand-code { background: var(--accent); color: #fff; padding: 2px 8px; border-radius: 5px; font-size: 12px; letter-spacing: 0.4px; white-space: nowrap; flex-shrink: 0; }
+.brand-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 170px; }
+.search-wrap { position: relative; flex: 1 1 130px; min-width: 120px; max-width: 225px; }
+.search-input { width: 100%; height: 34px; padding: 0 28px 0 30px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--bg-subtle); color: var(--text-main); font-size: 13px; outline: none; }
+.search-input:focus { border-color: var(--accent); background: var(--bg-surface); }
+.search-input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.search-icon { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--text-faint); font-size: 12.5px; pointer-events: none; }
+.search-clear { position: absolute; right: 7px; top: 50%; transform: translateY(-50%); border: none; background: transparent; color: var(--text-faint); cursor: pointer; font-size: 14px; display: none; }
+.search-results-bar { display: none; background: var(--accent-soft); border-bottom: 1px solid var(--border); padding: 8px 20px; font-size: 13.5px; color: var(--text-main); align-items: center; justify-content: space-between; gap: 12px; }
+.search-results-bar.visible { display: flex; }
+.topbar-controls { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+.seg-group { display: inline-flex; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); overflow: hidden; background: var(--bg-subtle); }
+.seg-btn { border: none; background: transparent; color: var(--text-muted); padding: 6px 7px; font-size: 11.8px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.seg-btn.active { background: var(--accent); color: #fff; }
+.progress-chip { display: flex; align-items: center; gap: 6px; padding: 4px 9px; border-radius: 999px; background: var(--bg-subtle); border: 1px solid var(--border); font-size: 12px; font-weight: 600; white-space: nowrap; }
+.progress-track { width: 46px; height: 7px; background: var(--border-strong); border-radius: 99px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), #0D9488); transition: width 0.25s ease; }
+
+.app-layout { display: flex; min-height: calc(100vh - var(--topbar-h)); }
+.sidebar { width: var(--sidebar-w); flex-shrink: 0; background: var(--bg-sidebar); border-right: 1px solid var(--border); position: sticky; top: var(--topbar-h); height: calc(100vh - var(--topbar-h)); overflow-y: auto; padding: 14px 10px 44px 10px; }
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 99px; }
+.nav-unit { margin-bottom: 8px; }
+.nav-unit-btn { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border: none; border-radius: var(--radius-sm); background: transparent; color: var(--text-main); font-size: 13px; font-weight: 700; text-align: left; cursor: pointer; }
+.nav-unit-btn:hover { background: var(--bg-subtle); }
+.nav-unit-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.nav-unit-title { flex: 1; display: flex; align-items: center; gap: 7px; line-height: 1.3; }
+.nav-chevron { font-size: 11px; color: var(--text-faint); transition: transform 0.2s; }
+.nav-unit.collapsed .nav-chevron { transform: rotate(-90deg); }
+.nav-unit.collapsed .nav-links { display: none; }
+.nav-links { list-style: none; padding: 2px 0 4px 12px; margin: 0 0 0 14px; border-left: 2px solid var(--border); }
+.nav-link { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 5px 9px; margin: 2px 0; border-radius: var(--radius-sm); color: var(--text-muted); font-size: 12.6px; line-height: 1.35; text-decoration: none; }
+.nav-link:hover { background: var(--bg-subtle); color: var(--text-main); text-decoration: none; }
+.nav-link.active { background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+.nav-done-mark { color: #10B981; font-weight: 800; font-size: 12px; opacity: 0; }
+.nav-link.mastered .nav-done-mark { opacity: 1; }
+.main-content { flex: 1; min-width: 0; padding: 24px 28px 80px 28px; }
+.content-inner { max-width: 960px; margin: 0 auto; }
+
+.hero-card { background: linear-gradient(135deg, #0F172A 0%, var(--accent) 62%, #0F766E 100%); color: #fff; border-radius: var(--radius-lg); padding: 26px 30px; margin-bottom: 24px; box-shadow: var(--shadow-lg); }
+.hero-card h1 { color: #fff; font-size: 24px; margin-bottom: 8px; letter-spacing: -0.3px; }
+.hero-sub { color: rgba(255,255,255,0.92); font-size: 14.5px; max-width: 850px; margin-bottom: 14px; }
+.hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.hero-pill { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.28); color: #fff; padding: 4px 11px; border-radius: 999px; font-size: 12.5px; font-weight: 600; }
+.unit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(175px, 1fr)); gap: 10px; }
+.unit-tile { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.24); border-radius: var(--radius-md); padding: 11px 13px; color: #fff; text-decoration: none; display: block; transition: transform 0.15s, background 0.15s; }
+.unit-tile:hover { transform: translateY(-2px); background: rgba(255,255,255,0.22); text-decoration: none; }
+.unit-tile-num { font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; opacity: 0.85; font-weight: 700; }
+.unit-tile-title { font-size: 13.8px; font-weight: 700; margin: 3px 0 0 0; }
+
+.topic-section { background: var(--bg-surface); border: 1px solid var(--border); border-top: 4px solid var(--accent); border-radius: var(--radius-md); padding: 22px 24px; margin-bottom: 24px; box-shadow: var(--shadow-sm); }
+.topic-section.search-dim { display: none; }
+.section-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 2px solid var(--border); }
+.section-title-group h3 { font-size: 19px; margin-bottom: 4px; }
+.section-en-sub { font-size: 13.5px; color: var(--text-faint); font-weight: 600; }
+.tier-row { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 7px; }
+.master-btn { flex-shrink: 0; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-muted); font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.master-btn:hover { border-color: #10B981; color: #10B981; }
+.master-btn.is-mastered { background: var(--ok-bg); color: var(--ok-text); border-color: var(--ok-border); }
+.subtopic { margin-bottom: 20px; }
+.subtopic:last-of-type { margin-bottom: 12px; }
+.subtopic h4 { font-size: 16px; color: var(--accent); margin: 0 0 10px 0; padding-bottom: 4px; border-bottom: 1px dashed var(--border); display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+
+.worked-example { background: var(--example-bg); border: 1px solid var(--border); border-left: 4px solid var(--example-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; }
+.worked-title { font-weight: 800; font-size: 14px; color: var(--example-border); margin-bottom: 6px; }
+.callout { border-radius: var(--radius-sm); padding: 13px 16px; margin: 14px 0; border-left: 4px solid var(--border-strong); font-size: 14.5px; }
+.callout-title { font-weight: 800; font-size: 13.5px; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+.deep-dive { background: var(--deep-bg); border-left-color: var(--deep-border); }
+.deep-dive .callout-title { color: var(--deep-border); }
+.examiner-tip { background: var(--tip-bg); border-left-color: var(--tip-border); }
+.examiner-tip .callout-title { color: var(--tip-border); }
+.common-mistake { background: var(--mistake-bg); border-left-color: var(--mistake-border); }
+.common-mistake .callout-title { color: var(--mistake-border); }
+
+.table-wrap { width: 100%; overflow-x: auto; margin: 14px 0; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+table.sprint-table, table.gp-table, table.phy-table { width: 100%; border-collapse: collapse; font-size: 13.8px; text-align: left; }
+table.sprint-table th, table.gp-table th, table.phy-table th { background: var(--bg-subtle); color: var(--text-main); font-weight: 700; padding: 9px 12px; border-bottom: 2px solid var(--border-strong); white-space: nowrap; }
+table.sprint-table td, table.gp-table td, table.phy-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.sprint-table tr:last-child td, table.gp-table tr:last-child td, table.phy-table tr:last-child td { border-bottom: none; }
+table.sprint-table tbody tr:hover, table.gp-table tbody tr:hover, table.phy-table tbody tr:hover { background: var(--bg-subtle); }
+
+.svg-figure { background: var(--svg-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px; margin: 16px 0; text-align: center; break-inside: avoid; }
+.svg-figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.svg-caption { margin-top: 8px; font-size: 13px; color: var(--text-faint); font-weight: 600; }
+
+/* Interactive Labs */
+.lab-box { background: var(--bg-subtle); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 18px; margin: 18px 0; break-inside: avoid; }
+.lab-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+.lab-title { font-size: 15.5px; font-weight: 800; color: var(--accent); display: flex; align-items: center; gap: 7px; }
+.lab-panel { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; }
+.lab-controls { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-bottom: 12px; align-items: center; }
+.lab-controls label { font-size: 13px; font-weight: 700; color: var(--text-muted); display: inline-flex; align-items: center; gap: 6px; }
+.lab-controls input[type="number"], .lab-controls input[type="text"], .lab-controls select { padding: 5px 8px; border-radius: 6px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-main); font-size: 13.2px; font-weight: 700; }
+.lab-controls input[type="number"] { min-width: 100px; width: 108px; text-align: center; }
+.tab-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.tab-btn { border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-muted); padding: 5px 10px; border-radius: 6px; font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.tab-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.lab-readout { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; font-size: 13.2px; font-weight: 600; }
+.readout-pill { background: var(--bg-page); border: 1px solid var(--border-strong); padding: 8px 11px; border-radius: 6px; width: 100%; line-height: 1.6; }
+
+/* Personal Error Clinic */
+.clinic-box { background: var(--bg-subtle); border: 1.5px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px; margin: 16px 0; }
+.clinic-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px; }
+.clinic-title { font-size: 16px; font-weight: 800; color: var(--accent); }
+.clinic-form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-bottom: 10px; }
+.clinic-field label { display: block; font-size: 12.5px; font-weight: 700; color: var(--text-muted); margin-bottom: 4px; }
+.clinic-field input, .clinic-field select, .clinic-field textarea { width: 100%; padding: 7px 10px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 13.5px; font-family: inherit; }
+.clinic-field textarea { min-height: 70px; resize: vertical; }
+.clinic-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin: 12px 0; padding-top: 12px; border-top: 1px dashed var(--border-strong); }
+.clinic-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.clinic-btn { padding: 6px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 12.8px; font-weight: 700; cursor: pointer; }
+.clinic-btn:hover { border-color: var(--accent); }
+.clinic-btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+.clinic-btn-primary:hover { background: var(--accent-hover); }
+.clinic-list { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
+.clinic-item { background: var(--bg-surface); border: 1px solid var(--border-strong); border-left: 4px solid #E11D48; border-radius: var(--radius-sm); padding: 12px 14px; }
+.clinic-item.solved { border-left-color: #16A34A; opacity: 0.78; }
+.clinic-item-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+.clinic-tag { font-size: 11.8px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
+.clinic-reason { font-size: 11.8px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: var(--err-bg); color: var(--err-text); }
+.clinic-item.solved .clinic-reason { background: var(--ok-bg); color: var(--ok-text); }
+.clinic-preview { width: 100%; min-height: 110px; margin-top: 10px; padding: 10px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-page); color: var(--text-main); font-family: var(--font-mono); font-size: 12.2px; display: none; }
+.clinic-preview.visible { display: block; }
+
+.quick-links-grid { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.quick-link-chip { display: inline-flex; align-items: center; gap: 5px; padding: 6px 11px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-page); color: var(--text-main); font-size: 12.8px; font-weight: 700; text-decoration: none; }
+.quick-link-chip:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+
+/* Hub Roadmap */
+.roadmap-panel { background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px 20px; margin: 18px 0 8px 0; box-shadow: var(--shadow-sm); }
+.roadmap-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 14px; }
+.roadmap-head h2 { font-size: 17px; margin: 0 0 4px 0; }
+.roadmap-badge { background: var(--accent-soft); color: var(--accent); padding: 4px 12px; border-radius: 999px; font-size: 12.5px; font-weight: 800; }
+.roadmap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
+.roadmap-card { display: flex; align-items: flex-start; gap: 10px; padding: 12px 13px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-page); cursor: pointer; font-size: 13px; line-height: 1.5; }
+.roadmap-card:hover { border-color: var(--accent); }
+.roadmap-card strong { display: block; font-size: 13.5px; color: var(--text-main); margin-bottom: 3px; }
+.roadmap-card span { color: var(--text-muted); font-size: 12.5px; }
+.roadmap-card input[type="checkbox"] { width: 17px; height: 17px; margin-top: 2px; accent-color: var(--accent); flex-shrink: 0; }
+.roadmap-card.done { border-color: var(--ok-border); background: var(--ok-bg); }
+.roadmap-card.done strong, .roadmap-card.done span { color: var(--ok-text); }
+
+/* Practice Questions & Concepts */
+.practice-block { margin-top: 18px; padding-top: 14px; border-top: 2px dashed var(--border-strong); }
+.practice-heading { font-size: 16px; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.exam-q { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 14px; break-inside: avoid; }
+.exam-q-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; font-size: 12.5px; }
+.q-tag { font-weight: 800; color: var(--accent); background: var(--accent-soft); padding: 2px 8px; border-radius: 5px; }
+.q-marks { font-weight: 700; color: var(--text-faint); }
+.q-stem-en { font-size: 14.8px; font-weight: 600; color: var(--text-main); margin-bottom: 6px; }
+.q-stem-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 12px; }
+.mcq-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin-bottom: 10px; }
+.mcq-opt { text-align: left; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 13.8px; cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.mcq-opt:hover { border-color: var(--accent); background: var(--bg-subtle); }
+.mcq-opt.correct { background: var(--ok-bg); border-color: var(--ok-border); color: var(--ok-text); font-weight: 700; }
+.mcq-opt.wrong { background: var(--err-bg); border-color: var(--err-border); color: var(--err-text); }
+.mcq-feedback { display: none; font-size: 13.5px; padding: 10px 12px; border-radius: var(--radius-sm); margin-top: 8px; }
+.mcq-feedback.visible { display: block; }
+.mcq-feedback.ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.mcq-feedback.err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+details.ms-details { margin-top: 10px; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 12px; }
+details.ms-details summary { cursor: pointer; font-weight: 700; font-size: 13.5px; color: var(--accent); user-select: none; }
+.ms-body { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 13.8px; }
+.ms-mark { display: inline-block; font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--core-text); background: var(--core-bg); padding: 1px 5px; border-radius: 4px; margin-right: 4px; }
+.ms-cn { color: var(--text-muted); margin-top: 4px; }
+
+.concept-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 14px; margin-bottom: 18px; }
+.concept-filter-group { display: flex; flex-wrap: wrap; gap: 6px; }
+.concept-actions { display: flex; align-items: center; gap: 10px; }
+.concept-count-pill { font-size: 12.5px; font-weight: 700; color: var(--text-muted); }
+.concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 14px; }
+.concept-card { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; gap: 8px; break-inside: avoid; }
+.concept-card:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
+.concept-card.concept-hidden { display: none !important; }
+.cq-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.cq-en { font-weight: 700; font-size: 14.5px; color: var(--text-main); line-height: 1.45; }
+.cq-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 2px; }
+.cq-answer { position: relative; margin-top: auto; background: var(--bg-surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius-sm); padding: 11px 13px; font-size: 13.8px; line-height: 1.6; }
+.kw { color: var(--accent); background: var(--accent-soft); padding: 0 4px; border-radius: 3px; font-weight: 700; }
+.cq-mask-hint { display: none; }
+.concept-card.masked .cq-answer { cursor: pointer; }
+.concept-card.masked .cq-answer-inner { filter: blur(7px); opacity: 0.22; user-select: none; pointer-events: none; transition: filter 0.2s, opacity 0.2s; }
+.concept-card.masked .cq-mask-hint { display: flex; align-items: center; justify-content: center; position: absolute; inset: 0; font-size: 13.5px; font-weight: 700; color: var(--accent); background: rgba(255,255,255,0.25); border-radius: var(--radius-sm); }
+[data-theme="dark"] .concept-card.masked .cq-mask-hint { background: rgba(15,23,42,0.35); }
+
+.chapter-pager { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 28px; padding: 16px 20px; background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); }
+.pager-btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: var(--radius-sm); background: var(--bg-subtle); border: 1px solid var(--border-strong); color: var(--text-main); font-size: 13.5px; font-weight: 700; text-decoration: none; }
+.pager-btn:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); text-decoration: none; }
+.pager-btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.pager-btn.primary:hover { background: var(--accent-hover); color: #fff; }
+
+.hub-block-title { font-size: 18px; font-weight: 800; margin: 24px 0 12px 0; padding-bottom: 6px; border-bottom: 2px solid var(--border-strong); display: flex; align-items: center; gap: 8px; }
+.hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 15px; }
+.hub-card { display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-surface); border: 1px solid var(--border-strong); border-top: 5px solid var(--card-color, var(--accent)); border-radius: var(--radius-md); padding: 16px 18px 14px 18px; color: var(--text-main); text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; box-shadow: var(--shadow-sm); }
+.hub-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--card-color, var(--accent)); text-decoration: none; }
+.hub-card-top { display: flex; align-items: center; justify-content: space-between; gap: 6px; margin-bottom: 8px; flex-wrap: wrap; }
+.hub-stat-row { display: flex; align-items: center; gap: 6px; }
+.hub-badge { font-size: 11.5px; font-weight: 800; color: #fff; background: var(--card-color, var(--accent)); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill { font-size: 11.8px; font-weight: 700; color: var(--text-muted); background: var(--bg-subtle); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill.done { background: var(--ok-bg); color: var(--ok-text); }
+.hub-clinic-pill { font-size: 11.8px; font-weight: 700; color: var(--text-muted); background: var(--bg-subtle); border: 1px solid var(--border); padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
+.hub-clinic-pill.has-err { background: var(--err-bg); color: var(--err-text); border-color: var(--err-border); }
+.hub-scope { font-size: 12px; font-weight: 700; color: var(--card-color, var(--accent)); background: var(--bg-subtle); padding: 3px 8px; border-radius: 5px; margin-bottom: 7px; display: inline-block; }
+.hub-title { font-size: 16px; font-weight: 800; margin-bottom: 3px; }
+.hub-en { font-size: 12.6px; color: var(--text-faint); font-weight: 600; margin-bottom: 8px; }
+.hub-sub { font-size: 12.8px; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; }
+.hub-foot { font-size: 13px; font-weight: 700; color: var(--card-color, var(--accent)); display: flex; align-items: center; justify-content: space-between; }
+
+.back-top-btn { position: fixed; right: 22px; bottom: 22px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); box-shadow: var(--shadow-md); cursor: pointer; display: none; align-items: center; justify-content: center; font-size: 17px; font-weight: 800; z-index: 80; }
+.back-top-btn.visible { display: flex; }
+
+@media (max-width: 1220px) {
+  .brand-title, .btn-label { display: none; }
+}
+@media (max-width: 980px) {
+  .menu-toggle { display: inline-flex; }
+  .sidebar { position: fixed; left: 0; top: var(--topbar-h); z-index: 95; transform: translateX(-100%); transition: transform 0.22s ease; box-shadow: var(--shadow-lg); }
+  .sidebar.open { transform: translateX(0); }
+  .main-content { padding: 18px 14px 64px 14px; }
+  .topic-section { padding: 18px 16px; }
+  .progress-chip { display: none; }
+  .search-wrap { min-width: 110px; }
+}
+@media (max-width: 640px) {
+  .topbar { padding: 0 10px; gap: 6px; }
+  .search-wrap { max-width: none; }
+  .concept-grid, .hub-grid, .clinic-form-grid { grid-template-columns: 1fr; }
+}
+@media print {
+  .topbar, .sidebar, .search-results-bar, .back-top-btn, .master-btn, .lab-controls button, .concept-toolbar, .cq-mask-hint, .chapter-pager, .clinic-form-grid, .clinic-actions { display: none !important; }
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  .main-content { padding: 0 !important; }
+  .content-inner { max-width: 100% !important; }
+  .topic-section, .exam-q, .callout, .worked-example, .svg-figure, .concept-card, .model-essay, .source-box, .clinic-item { box-shadow: none !important; break-inside: avoid; border-color: #CBD5E1 !important; }
+  details.ms-details, details.ms-details .ms-body, .mcq-feedback { display: block !important; }
+  .concept-card.masked .cq-answer-inner { filter: none !important; opacity: 1 !important; }
+}
+
+  </style>
+</head>
+<body data-chapter-code="F05">
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="展开目录">☰ 目录</button>
+      <a class="icon-btn" href="index.html" title="返回 6 科期末冲刺总控台"><span>🎯</span><span class="btn-label">总控台</span></a>
+      <div class="brand-pill">
+        <span class="brand-code">F05</span>
+        <span class="brand-title">Chinese (0509) · Comprehension, Analysis & Essays</span>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="search" id="searchInput" class="search-input" placeholder="搜公式、易错坑、模考题..." autocomplete="off" />
+      <button type="button" class="search-clear" id="searchClear" title="清空搜索">✕</button>
+    </div>
+
+    <div class="topbar-controls">
+      <div class="seg-group" role="group" aria-label="内容视图筛选">
+        <button type="button" class="seg-btn active" data-view-mode="all">All</button>
+        <button type="button" class="seg-btn" data-view-mode="summary">速记</button>
+        <button type="button" class="seg-btn" data-view-mode="practice">模考</button>
+        <button type="button" class="seg-btn" data-view-mode="clinic">错题</button>
+        <button type="button" class="seg-btn" data-view-mode="cards">闪卡</button>
+      </div>
+
+      <div class="progress-chip" title="本学科期末冲刺板块掌握进度">
+        <span id="progressText">0/0</span>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+
+      <button type="button" class="icon-btn" id="toggleAllMs" title="展开或收起全部解析"><span>📝</span><span class="btn-label">展开解析</span></button>
+      <button type="button" class="icon-btn" id="themeToggle" title="切换亮色/暗色主题"><span id="themeIcon">🌙</span><span class="btn-label">主题</span></button>
+      <button type="button" class="icon-btn" id="printBtn" title="打印或导出为 PDF"><span>🖨️</span><span class="btn-label">导出</span></button>
+    </div>
+  </header>
+
+  <div class="search-results-bar" id="searchBar">
+    <span id="searchSummary">找到 0 个匹配板块</span>
+    <button type="button" class="icon-btn" id="searchResetBtn">重置过滤</button>
+  </div>
+
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="本学科期末冲刺导航">
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #DC2626;"></span>F05 冲刺板块导航</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#sec-core1"><span>1. 现代文 R1–R4 转述精要与 9 分语言赏析四步闭环</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-core2"><span>2. Paper 2 双 2 选 1 四大文体避坑、8 大思辨弹药与 Band 1 范文精批</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-sme"><span>3. 现代文阅读与双 2 选 1 期末全真模拟卷（75 分 · 120 分钟）</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-clinic"><span>4. 个人语文阅读/作文错题上传批改诊所与模块精修入口</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#app-concepts"><span>5. 考前必背 20 张闪卡：转述心法、9 分赏析词库、思辨过渡与描写雅言</span><span class="nav-done-mark">✓</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #0D9488;"></span>全 6 科期末冲刺切换</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="F01_AddMaths_0606_Final_Sprint.html"><span>F01 · 附加数学 0606 期末考范围锁定冲刺</span></a></li>
+          <li><a class="nav-link" href="F02_Physics_0625_Final_Sprint.html"><span>F02 · 物理 0625 Ch 1–4 期末精炼与实验冲刺</span></a></li>
+          <li><a class="nav-link" href="F03_Chemistry_0620_Final_Sprint.html"><span>F03 · 化学 0620 Ch 1, 2, 4, 6 核心高频冲刺</span></a></li>
+          <li><a class="nav-link" href="F04_ESL_0510_Final_Sprint.html"><span>F04 · ESL 0510 听力阅读写作三线冲刺</span></a></li>
+          <li><a class="nav-link active" href="F05_Chinese_0509_Final_Sprint.html"><span>F05 · 中文第一语言 0509 现代文阅读与双作文冲刺</span></a></li>
+          <li><a class="nav-link" href="F06_GP_0457_Final_Sprint.html"><span>F06 · 全球视野 0457 Q1–Q4 书面笔试终极冲刺</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-inner">
+        <section class="hero-card" id="top">
+          <h1>F05 · 中文第一语言 0509 现代文阅读与双作文冲刺</h1>
+          <p class="hero-sub">
+            <strong>范围锁定：现代文阅读理解与 9 分赏析 + 作文双 2 选 1（不含文言文与指导写作）</strong> — 现代文 R1–R4 同义转述 · 9 分语言赏析四步闭环与修辞词库 · Paper 2 议论/讨论 (2选1) 与描写/记叙 (2选1) 范文与思辨弹药库。本页严格剔除非考范围章节，浓缩核心方法与高频失分红线，内置交互实验台、全真模考与个人错题诊疗台。
+          </p>
+          <div class="hero-badges">
+            <span class="hero-pill">🎯 期末考范围精准锁定</span>
+            <span class="hero-pill">⚡ 一页核心浓缩速记</span>
+            <a class="hero-pill" href="#sec-sme" style="text-decoration: none;">📝 直达限时全真模考 →</a>
+            <a class="hero-pill" href="#sec-clinic" style="text-decoration: none;">🩺 个人错题诊疗台 →</a>
+            <a class="hero-pill" href="#app-concepts" style="text-decoration: none; background: rgba(255,255,255,0.24);">🧠 遮罩自测闪卡 →</a>
+          </div>
+          <div class="unit-grid">
+            <a class="unit-tile" href="#sec-core1">
+              <div class="unit-tile-num">Section core1</div>
+              <div class="unit-tile-title">1. 现代文 R1–R4 转述精要与 9 分语言赏析四步闭环</div>
+            </a>
+            <a class="unit-tile" href="#sec-core2">
+              <div class="unit-tile-num">Section core2</div>
+              <div class="unit-tile-title">2. Paper 2 双 2 选 1 四大文体避坑、8 大思辨弹药与 Band 1 范文精批</div>
+            </a>
+            <a class="unit-tile" href="#sec-sme">
+              <div class="unit-tile-num">Section sme</div>
+              <div class="unit-tile-title">3. 现代文阅读与双 2 选 1 期末全真模拟卷（75 分 · 120 分钟）</div>
+            </a>
+            <a class="unit-tile" href="#sec-clinic">
+              <div class="unit-tile-num">Section clinic</div>
+              <div class="unit-tile-title">4. 个人语文阅读/作文错题上传批改诊所与模块精修入口</div>
+            </a>
+            <a class="unit-tile" href="#app-concepts">
+              <div class="unit-tile-num">速背闪卡</div>
+              <div class="unit-tile-title">5. 考前必背 20 张闪卡：转述心法、9 分赏析词库、思辨过渡与描写雅言</div>
+            </a>
+          </div>
+        </section>
+
+        <div id="emptySearchNotice" class="callout deep-dive" style="display: none;">
+          <div class="callout-title">🔍 未找到匹配内容</div>
+          <p style="margin-bottom: 0;">请尝试更换关键词，或点击右上角“重置过滤”恢复显示。</p>
+        </div>
+
+<!-- ==================== F05: IGCSE 中文第一语言 0509 期末范围锁定冲刺 ==================== -->
+<!-- 严格考纲范围：现代文 R1–R4 阅读与 9 分语言赏析 + Paper 2 双 2 选 1（议论/讨论 + 描写/记叙） -->
+
+<article class="topic-section sec-summary" id="sec-core1">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>1. 现代文 R1–R4 转述精要与 9 分语言赏析四步闭环</h3>
+      <div class="section-en-sub">Paper 1 Sec 1 · Modern Prose Comprehension (R1–R4 Paraphrasing) &amp; 9-Mark Writer's Effect Formula</div>
+      <div class="tier-row">
+        <span class="badge-core">R1–R4 现代文理解 · 禁整句照抄</span>
+        <span class="badge-ext">9 分语言赏析 · 四步闭环绝杀套话</span>
+        <span class="badge-c1">简体 / 繁体全卷严格统一</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-core1">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>一、R1–R4 四层级现代文理解核心解法与 R3“去原词”转述法则</h4>
+    <p>
+      Cambridge IGCSE 中文第一语言（<code>0509</code>）现代文阅读（Paper 1 Section 1）共考查 <strong>R1–R4 四个逐层递进的阅读能力</strong>。期末考拿稳前半部分理解分的关键，在于认清每道题对应的能力层级——特别是遇到题干明确要求<strong>“用自己的话解释 / 概括”</strong>的 R3 题目时，哪怕意思全对，只要照抄原文核心实词、成语或比喻喻体，阅卷官都会直接判为未完成转述而扣分。
+    </p>
+
+    <div class="table-wrap">
+      <table class="sprint-table">
+        <thead>
+          <tr>
+            <th>能力层级</th>
+            <th>考纲定位与典型问法</th>
+            <th>考场满分操作规范</th>
+            <th>高频丢分陷阱</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>R1 · 表层信息检索</strong><br><span class="badge-core">Explicit</span></td>
+            <td>询问时间、地点、具体原因、人物做法或列举几项事实（通常 1–3 分）。</td>
+            <td>以题干限定词（如“在出发前”“除……之外”）为锚点扫读原文，<strong>分点对应分值</strong>，几分踩几个互不交叉的客观事实。</td>
+            <td>只抄前半句，漏掉“最初”“唯一”“尽管”等限定词或并列第二条原因。</td>
+          </tr>
+          <tr>
+            <td><strong>R2 · 深层隐含推断</strong><br><span class="badge-core">Implicit</span></td>
+            <td>追问“为什么人物会有此反常举动”“言外之意是什么”“内心态度发生了何种变化”。</td>
+            <td>采用<strong>“表层行为依据 + 深层心理/动机/态度”双层答法</strong>。通过沉默、顿足、反语、环境冷暖对比拆出未明写的潜台词。</td>
+            <td>只复述表面动作（如“因为他转身关上门”），没有揭示背后的羞愧、抵触或释然。</td>
+          </tr>
+          <tr>
+            <td><strong>R3 · 语境概括转述</strong><br><span class="badge-ext">Own Words</span></td>
+            <td>要求<strong>“用自己的话解释画线句的含义”</strong>或“概括某段讲述的困境”（通常 2–4 分）。</td>
+            <td><strong>三步脱壳术</strong>：① 按分值切分独立意群；② 彻底丢弃比喻喻体与具体动作词根，升维为<strong>抽象心理、性质或状态概念词</strong>；③ 重组句式并核对是否遗漏原意。</td>
+            <td>同词根微调（“高兴”改“开心”、“快步走”改“快速行走”）或把整句原封不动抄进答题区。</td>
+          </tr>
+          <tr>
+            <td><strong>R4 · 结构与写作意图</strong><br><span class="badge-ext">Structure &amp; Intent</span></td>
+            <td>分析某段在全文中的结构作用、作者为何先写某事再写另一事、情感转折目的。</td>
+            <td>定位段落位置与功能：<strong>开篇悬念定调 / 中段过渡对比 / 抑扬反衬制造心理落差 / 结尾意象呼应升华主题</strong>，并点出对读者情绪的引导效果。</td>
+            <td>只答“承上启下”“点明中心”等万金油术语，未说明具体“承”了什么、“启”了什么。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="formula-card">
+      <div style="font-size:13px;font-weight:700;color:var(--text-muted);">R3“用自己的话”转述黄金心法（彻底戒除原词照抄）</div>
+      <div class="formula-main">① 切分意群对齐分值 → ② 抽抽象概念词替掉比喻/具象动作 → ③ 句式倒装重组与“不增不漏”核验</div>
+      <div style="font-size:13.5px;color:var(--text-muted);">铁律：原文写“冰冷的铁门”，答卷禁止出现“冰”“冷”“铁”“门”字眼，必须升维为“隔绝交流、令人倍感疏离与拒绝的屏障”。</div>
+    </div>
+
+    <div class="table-wrap">
+      <table class="sprint-table">
+        <thead>
+          <tr>
+            <th>原文高危片段（含比喻/动作细节）</th>
+            <th>严禁出现的原词根</th>
+            <th>低分“假转述”（0–1 分）</th>
+            <th>R3 抽象升维满分示范（满分）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>“他听完后把茶杯重重墩在桌上，茶水溅了半手背，却只字未吐。”（2 分）</td>
+            <td>茶杯、重重、墩、溅、手背、吐</td>
+            <td>他把杯子用力放在桌子上面，水洒到手上了，但是一句话也没有讲。（同级替换，未提炼情感）</td>
+            <td>① 他借激烈的肢体动作宣泄内心的愤怒与不满；② 同时强行克制情绪，拒绝与对方作进一步言语沟通。</td>
+          </tr>
+          <tr>
+            <td>“这座老宅就像一艘被潮汐遗忘在泥滩里的木船，日复一日地褪色倾斜。”（3 分）</td>
+            <td>老宅、潮汐、遗忘、泥滩、木船、褪色、倾斜</td>
+            <td>旧房子像一条被海水丢在泥巴里的船，每天颜色都在变浅而且歪斜了。（保留喻体，判抄袭）</td>
+            <td>① 该建筑因缺乏修缮而日渐破败衰朽；② 长期被现代社会发展所边缘化（无人问津）；③ 其衰落过程持续而不可逆转。</td>
+          </tr>
+          <tr>
+            <td>“哪怕口袋里只剩最后几枚硬币，父亲也要把鞋面擦得能照出人影再出门。”（2 分）</td>
+            <td>口袋、硬币、鞋面、擦、照出人影</td>
+            <td>就算兜里只有一点钱，爸爸也要把皮鞋擦得很亮很干净才走出去。（留存具体动作物象）</td>
+            <td>① 尽管家庭经济极度拮据（生活困窘）；② 父亲依然高度重视体面与尊严，在人前维持从容得体的形象。</td>
+          </tr>
+          <tr>
+            <td>“窗外的霓虹灯彻夜不知疲倦地闪烁，反而将屋内的寂静衬得像一口深井。”（2 分）</td>
+            <td>霓虹灯、闪烁、寂静、深井</td>
+            <td>外面的彩灯一整晚不停地亮，反倒把房间里的安静衬托得像深井一样。（照抄核心词）</td>
+            <td>① 外界都市夜生活持续喧嚣繁华；② 这种外部热闹与室内冷清形成强烈反差，凸显主人公此刻极度的孤独与封闭感。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>二、9 分语言赏析“四步满分闭环”与套话拦截模型</h4>
+    <p>
+      Paper 1 Section 1 的压轴 <strong>9 分语言赏析题</strong>（R4）是冲刺 A* 的最大分水岭。题干通常会圈定 2–3 个自然段，要求结合具体词句分析作者如何通过语言营造氛围、刻画心理或塑造场景。考生必须在答案中精选 <strong>3 组传神词眼（每组 2–8 字短引号截取）</strong>，每组严格走完以下<strong>四步闭环</strong>（约 75–95 字/组）：
+    </p>
+    <div class="formula-card">
+      <div style="font-size:13px;font-weight:700;color:var(--text-muted);">9 分语言赏析四步满分闭环（3 组词眼 × 3 分/组 = 9 分）</div>
+      <div class="formula-main">① 精准引词 / 指出核心手法 → ② 字面实义与画面还原 → ③ 语境深层情感 / 心理 / 氛围作用 → ④ 段落结构或主题呼应</div>
+      <div style="font-size:13.5px;color:var(--text-muted);">核心检验标准：若把你写的赏析套进另一篇毫无关系的文章里依然通顺，那就说明你写了被考官锁在 4–5 分的空洞套话！</div>
+    </div>
+
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 300" width="740" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="9 分语言赏析四步闭环与四类失分套话拦截图">
+        <rect x="0" y="0" width="740" height="300" rx="10" fill="var(--svg-bg)" />
+        <text x="370" y="24" text-anchor="middle" font-size="14" font-weight="800" fill="var(--svg-ink)">图 5.1 · 9 分语言赏析四步满分闭环与四类失分套话拦截图</text>
+
+        <!-- Step 1 -->
+        <rect x="20" y="40" width="435" height="48" rx="7" fill="#FEF2F2" stroke="#DC2626" stroke-width="1.6" />
+        <text x="34" y="59" font-size="12" font-weight="800" fill="#991B1B">Step 1 · 精准引词 (2–8 字短引) + 点名核心手法</text>
+        <text x="34" y="77" font-size="11" fill="#0F172A">如短引“啃噬”“钝刀”“铁青”，点名动词炼字 / 暗喻 / 通感（忌整句照抄）</text>
+        <line x1="455" y1="64" x2="475" y2="64" stroke="#DC2626" stroke-width="1.6" stroke-dasharray="4 3" />
+        <rect x="475" y="40" width="245" height="48" rx="7" fill="#FEE2E2" stroke="#EF4444" stroke-width="1.4" />
+        <text x="597.5" y="59" text-anchor="middle" font-size="11.5" font-weight="800" fill="#991B1B">拦截 ①：只贴标签 / 整句大抄</text>
+        <text x="597.5" y="77" text-anchor="middle" font-size="10.5" fill="#7F1D1D">无词眼分析 → 锁死 Band 4 (1–3/9)</text>
+
+        <!-- Arrow 1->2 -->
+        <line x1="237" y1="88" x2="237" y2="96" stroke="var(--svg-ink)" stroke-width="1.8" />
+        <polygon points="233,94 241,94 237,98" fill="var(--svg-ink)" />
+
+        <!-- Step 2 -->
+        <rect x="20" y="98" width="435" height="48" rx="7" fill="#FFFBEB" stroke="#D97706" stroke-width="1.6" />
+        <text x="34" y="117" font-size="12" font-weight="800" fill="#B45309">Step 2 · 字面实义与物理画面还原（质感 / 力度 / 温度 / 速度）</text>
+        <text x="34" y="135" font-size="11" fill="#0F172A">暂离语境追问：该词在物理世界里究竟是什么重量、声响、材质或疼痛感？</text>
+        <line x1="455" y1="122" x2="475" y2="122" stroke="#D97706" stroke-width="1.6" stroke-dasharray="4 3" />
+        <rect x="475" y="98" width="245" height="48" rx="7" fill="#FEF3C7" stroke="#D97706" stroke-width="1.4" />
+        <text x="597.5" y="117" text-anchor="middle" font-size="11.5" font-weight="800" fill="#92400E">拦截 ②：“生动形象、有画面感”</text>
+        <text x="597.5" y="135" text-anchor="middle" font-size="10.5" fill="#78350F">跳过字面质感 → 封顶 Band 3 (4–5/9)</text>
+
+        <!-- Arrow 2->3 -->
+        <line x1="237" y1="146" x2="237" y2="154" stroke="var(--svg-ink)" stroke-width="1.8" />
+        <polygon points="233,152 241,152 237,156" fill="var(--svg-ink)" />
+
+        <!-- Step 3 -->
+        <rect x="20" y="156" width="435" height="48" rx="7" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.6" />
+        <text x="34" y="175" font-size="12" font-weight="800" fill="#1D4ED8">Step 3 · 语境深层情感 / 心理潜流 / 环境氛围投射</text>
+        <text x="34" y="193" font-size="11" fill="#0F172A">把物理质感无缝嫁接到此时此地人物的克制苦闷、恐慌或场景压迫张力</text>
+        <line x1="455" y1="180" x2="475" y2="180" stroke="#2563EB" stroke-width="1.6" stroke-dasharray="4 3" />
+        <rect x="475" y="156" width="245" height="48" rx="7" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.4" />
+        <text x="597.5" y="175" text-anchor="middle" font-size="11.5" font-weight="800" fill="#1E40AF">拦截 ③：“表达真挚情感 / 突出中心”</text>
+        <text x="597.5" y="193" text-anchor="middle" font-size="10.5" fill="#1E3A8A">情绪贴牌空泛 → 拿不满 Band 2 (6–7/9)</text>
+
+        <!-- Arrow 3->4 -->
+        <line x1="237" y1="204" x2="237" y2="212" stroke="var(--svg-ink)" stroke-width="1.8" />
+        <polygon points="233,210 241,210 237,214" fill="var(--svg-ink)" />
+
+        <!-- Step 4 -->
+        <rect x="20" y="214" width="435" height="48" rx="7" fill="#F0FDF4" stroke="#16A34A" stroke-width="1.8" />
+        <text x="34" y="233" font-size="12" font-weight="800" fill="#166534">Step 4 · 段落结构呼应 / 节奏突转 / 动静冷暖反衬</text>
+        <text x="34" y="251" font-size="11" fill="#0F172A">点明该词如何打破前文平静、加速紧迫节奏，或与全文核心意象彼此呼应</text>
+        <line x1="455" y1="238" x2="475" y2="238" stroke="#16A34A" stroke-width="1.6" stroke-dasharray="4 3" />
+        <rect x="475" y="214" width="245" height="48" rx="7" fill="#16A34A" stroke="#15803D" stroke-width="1.6" />
+        <text x="597.5" y="233" text-anchor="middle" font-size="11.5" font-weight="800" fill="#FFFFFF">目标达成：Band 1 (8–9/9)</text>
+        <text x="597.5" y="251" text-anchor="middle" font-size="10.5" fill="#DCFCE7">四步走满 × 3 处词眼 = 顶格满分</text>
+
+        <!-- Footer -->
+        <rect x="20" y="272" width="700" height="22" rx="5" fill="#0F172A" />
+        <text x="370" y="287" text-anchor="middle" font-size="11" font-weight="700" fill="#F8FAFC">考场铁律：每组词眼写约 80 字，严禁出现“生动形象”“加深印象”“吸引读者”等内地应试套话</text>
+      </svg>
+      <div class="svg-caption">图 5.1 · 9 分语言赏析四步闭环与四类失分套话拦截图</div>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>三、9 分赏析修辞与句式作用术语库 &amp; 空洞套话 VS 9 分改写对照表</h4>
+    <div class="table-wrap">
+      <table class="sprint-table">
+        <thead>
+          <tr>
+            <th>手法 / 句式类别</th>
+            <th>考场识别信号</th>
+            <th>Step 2 物理机制追问方向</th>
+            <th>高阶语境作用术语库（可直接组合调用）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>动词炼字</strong></td>
+            <td>强力度、强动作轨迹的单字动词（如<code>攥、削、渗、砸、绷</code>）</td>
+            <td>动作的速度、压强、持续时间与物理接触感</td>
+            <td>将抽象情绪外化为具象肌肉张力；精准传递克制中的隐忍爆发感或缓慢侵蚀感。</td>
+          </tr>
+          <tr>
+            <td><strong>比喻 / 暗喻 / 拟物</strong></td>
+            <td>以硬物、锐器、荒原或动物喻人/心情（如<code>“铁块”“蚁群”</code>）</td>
+            <td>喻体的材质密度、温度、重量或失控特性</td>
+            <td>剥离客观温情，赋予心理痛苦以冰冷沉重的实体质感；令抽象压抑变得可触可感。</td>
+          </tr>
+          <tr>
+            <td><strong>通感（感官联觉）</strong></td>
+            <td>听觉变触觉、视觉带温度（如<code>“发苦的空气”“尖利的寒光”</code>）</td>
+            <td>把一种感官的刺激强度跨界转译给另一种感官</td>
+            <td>打破单一感官边界，实现全方位的氛围沉浸，凸显人物感官敏锐与精神紧绷。</td>
+          </tr>
+          <tr>
+            <td><strong>以动衬静 / 冷暖反衬</strong></td>
+            <td>宏大寂静里出现微小声响；寒夜中出现微弱一点光亮</td>
+            <td>微小动态与周边静态背景之间的极度体量悬殊</td>
+            <td>非但未打破宁静，反而利用反差倍增空间的空旷荒凉与人物孤立无援的心境。</td>
+          </tr>
+          <tr>
+            <td><strong>短句与顿挫节奏</strong></td>
+            <td>连续 2–5 字极短句、独立成段、省略号或破折号截断</td>
+            <td>呼吸频率被迫加快或戛然而止的停顿空白感</td>
+            <td>模拟人物心跳骤停、惊惶失措的生理节奏；在句末制造余震与无法言说的心理留白。</td>
+          </tr>
+          <tr>
+            <td><strong>叠词与反复</strong></td>
+            <td>AABB/AAB 式拟声/摹状词，或同一意象词隔句重现</td>
+            <td>声音的延绵回荡、机械重复或单调无尽头的质感</td>
+            <td>营造挥之不去的疲惫循环或绵密沉闷的压迫感，强化执念与无可逃遁的宿命基调。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table class="sprint-table">
+        <thead>
+          <tr>
+            <th>原文例句（划线词眼）</th>
+            <th>❌ 空洞套话写法（封顶 4–5/9 分）</th>
+            <th>✅ 9 分四步满分改写示范（直接对标 Band 1）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>“愧疚像一枚<u>生了锈的回形针</u>，在他的心口<u>缓慢地剐蹭</u>。”</td>
+            <td>作者运用比喻修辞，把愧疚比作生锈的回形针，生动形象地写出了他内心的愧疚之深，表达了难过的情感，加深了读者印象。</td>
+            <td>① 作者运用暗喻与动词炼字，短引<code>“生了锈的回形针”</code>与<code>“剐蹭”</code>；② 字面上，锈蚀金属并不一刀致命，而是表面粗糙滞涩、反复摩擦皮肤造成绵长灼痛；③ 在语境中，这精准外化了主人公因往事过失而日夜备受良心折磨、却又无法彻底痛快解脱的钝痛感；④ 与后文他独自沉默低头的细节呼应，将内疚刻画得入木三分。</td>
+          </tr>
+          <tr>
+            <td>“整座站台空荡得可怕，只有远处铁轨缝隙里<u>滴答、滴答</u>的融雪声，<u>敲打着</u>凌晨四点的寒风。”</td>
+            <td>这里运用了拟声词和拟人，写出了站台很安静、天气很冷，渲染了凄凉的氛围，让读者有身临其境的感觉。</td>
+            <td>① 作者运用拟声叠词与以动衬静手法，短引<code>“滴答、滴答”</code>与<code>“敲打”</code>；② 字面上，“滴答”频率极低而单调，每声之间隔着漫长停顿，如微弱鼓槌击打空旷空间；③ 在寒夜等车语境下，这极细微的水滴声反衬出站台宏大而荒凉的死寂，把等车者孤立无援、度秒如年的焦灼放大到极致；④ 在段落结构上承接前文的冷色调描写，进一步拉低全段的温度与孤寂感。</td>
+          </tr>
+          <tr>
+            <td>“门开了。<u>空房间。冷灶台。半碗发硬的残粥。</u>”</td>
+            <td>作者运用了短句和排比，写出了家里穷和破败，表现了人物回来后十分失望的心情，很有感染力。</td>
+            <td>① 作者连续采用四个极简名词性短句<code>“空房间。冷灶台。半碗发硬的残粥。”</code>；② 字面上，句子去掉全部修饰语与连接词，视觉焦点在三件冰冷静止的物件间生硬跳切，毫无温度与生气；③ 这种去情感化的冰冷罗列，恰恰模拟出主人公满怀期待推门归家后瞬间失语、血液仿佛凝固的愕然与绝望；④ 节奏上由前文的匆忙脚步骤然急停为死寂，形成极具冲击力的情感落差。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section sec-summary" id="sec-core2">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>2. Paper 2 双 2 选 1 四大文体避坑、8 大思辨弹药与 Band 1 范文精批</h3>
+      <div class="section-en-sub">Paper 2 Composition · Argumentative vs Discursive &amp; Descriptive vs Narrative (400–600 字 · 25 Marks Each)</div>
+      <div class="tier-row">
+        <span class="badge-core">Sec 1（2选1）：议论文 vs 讨论文</span>
+        <span class="badge-ext">Sec 2（2选1）：描写文 vs 记叙文</span>
+        <span class="badge-c1">每篇 25 分 = 12 内容结构 + 13 文笔准确</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-core2">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>一、Paper 2 四大文体“立意—结构—语言—红线”精讲</h4>
+    <p>
+      Paper 2 考试时间 120 分钟，包含 <strong>Section 1（2 选 1：议论文 / 讨论文）</strong>与 <strong>Section 2（2 选 1：描写文 / 记叙文）</strong>两篇大作文，每篇规定字数为 <strong>400–600 汉字</strong>（最稳妥安全靶区为 <strong>460–560 字</strong>），每篇满分 <strong>25 分</strong>（其中 <strong>12 分 Content &amp; Structure 内容与结构</strong> + <strong>13 分 Style &amp; Accuracy 文风与语言准确度</strong>）。考前最大风险不是没话写，而是<strong>体裁混串</strong>：把议论文写成两面摇摆、把讨论文写成单边痛批、把描写文写成流水账日记、把记叙文写成三十年编年史。
+    </p>
+
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 300" width="740" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Paper 2 四大文体立意结构语言红线四柱对比矩阵图">
+        <rect x="0" y="0" width="740" height="300" rx="10" fill="var(--svg-bg)" />
+        <text x="370" y="22" text-anchor="middle" font-size="13.5" font-weight="800" fill="var(--svg-ink)">图 5.2 · Paper 2 双 2 选 1 四大文体“立意—结构—语言—红线”四柱对比矩阵</text>
+
+        <!-- Row Labels Column -->
+        <rect x="16" y="36" width="76" height="36" rx="5" fill="#0F172A" />
+        <text x="54" y="58" text-anchor="middle" font-size="11.5" font-weight="800" fill="#FFFFFF">评估维度</text>
+
+        <rect x="16" y="76" width="76" height="44" rx="5" fill="var(--bg-subtle)" stroke="var(--border-strong)" />
+        <text x="54" y="102" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-ink)">核心立意</text>
+
+        <rect x="16" y="124" width="76" height="44" rx="5" fill="var(--bg-subtle)" stroke="var(--border-strong)" />
+        <text x="54" y="150" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-ink)">黄金结构</text>
+
+        <rect x="16" y="172" width="76" height="44" rx="5" fill="var(--bg-subtle)" stroke="var(--border-strong)" />
+        <text x="54" y="198" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-ink)">语言调性</text>
+
+        <rect x="16" y="220" width="76" height="44" rx="5" fill="#FFF1F2" stroke="#E11D48" />
+        <text x="54" y="246" text-anchor="middle" font-size="11.5" font-weight="800" fill="#9F1239">致命红线</text>
+
+        <!-- Col 1: Argumentative -->
+        <rect x="98" y="36" width="152" height="36" rx="5" fill="#DC2626" />
+        <text x="174" y="51" text-anchor="middle" font-size="11.5" font-weight="800" fill="#FFFFFF">Sec 1 · 议论文</text>
+        <text x="174" y="65" text-anchor="middle" font-size="10" fill="#FEE2E2">Argumentative</text>
+
+        <rect x="98" y="76" width="152" height="44" rx="5" fill="#FEF2F2" stroke="#FCA5A5" />
+        <text x="174" y="94" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0F172A">单边鲜明立论</text>
+        <text x="174" y="110" text-anchor="middle" font-size="10" fill="#475569">首尾立场一以贯之</text>
+
+        <rect x="98" y="124" width="152" height="44" rx="5" fill="var(--svg-bg)" stroke="#FCA5A5" />
+        <text x="174" y="142" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0F172A">立论 + 双 PEEL</text>
+        <text x="174" y="158" text-anchor="middle" font-size="10" fill="#475569">+ 真让步狠驳斥段</text>
+
+        <rect x="98" y="172" width="152" height="44" rx="5" fill="var(--svg-bg)" stroke="#FCA5A5" />
+        <text x="174" y="190" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0F172A">犀利严密 · 有张力</text>
+        <text x="174" y="206" text-anchor="middle" font-size="10" fill="#475569">设问对比因果链条强</text>
+
+        <rect x="98" y="220" width="152" height="44" rx="5" fill="#FEE2E2" stroke="#EF4444" />
+        <text x="174" y="238" text-anchor="middle" font-size="10.5" font-weight="800" fill="#991B1B">严禁变成墙头草</text>
+        <text x="174" y="254" text-anchor="middle" font-size="10" fill="#7F1D1D">忌只让不驳两面讨好</text>
+
+        <!-- Col 2: Discursive -->
+        <rect x="256" y="36" width="152" height="36" rx="5" fill="#2563EB" />
+        <text x="332" y="51" text-anchor="middle" font-size="11.5" font-weight="800" fill="#FFFFFF">Sec 1 · 讨论文</text>
+        <text x="332" y="65" text-anchor="middle" font-size="10" fill="#DBEAFE">Discursive</text>
+
+        <rect x="256" y="76" width="152" height="44" rx="5" fill="#EFF6FF" stroke="#93C5FD" />
+        <text x="332" y="94" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0F172A">双面均衡客观辩证</text>
+        <text x="332" y="110" text-anchor="middle" font-size="10" fill="#475569">厘清争议实质与前提</text>
+
+        <rect x="256" y="124" width="152" height="44" rx="5" fill="var(--svg-bg)" stroke="#93C5FD" />
+        <text x="332" y="142" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0F172A">破题 + 正反等重</text>
+        <text x="332" y="158" text-anchor="middle" font-size="10" fill="#475569">+ 决策阈值条件段</text>
+
+        <rect x="256" y="172" width="152" height="44" rx="5" fill="var(--svg-bg)" stroke="#93C5FD" />
+        <text x="332" y="190" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0F172A">克制审慎 · 学术雅</text>
+        <text x="332" y="206" text-anchor="middle" font-size="10" fill="#475569">诚然/反之/不可否认</text>
+
+        <rect x="256" y="220" width="152" height="44" rx="5" fill="#FEE2E2" stroke="#EF4444" />
+        <text x="332" y="238" text-anchor="middle" font-size="10.5" font-weight="800" fill="#991B1B">严禁写成一言堂</text>
+        <text x="332" y="254" text-anchor="middle" font-size="10" fill="#7F1D1D">忌 85% 篇幅一边倒</text>
+
+        <!-- Col 3: Descriptive -->
+        <rect x="414" y="36" width="152" height="36" rx="5" fill="#7C3AED" />
+        <text x="490" y="51" text-anchor="middle" font-size="11.5" font-weight="800" fill="#FFFFFF">Sec 2 · 描写文</text>
+        <text x="490" y="65" text-anchor="middle" font-size="10" fill="#EDE9FE">Descriptive</text>
+
+        <rect x="414" y="76" width="152" height="44" rx="5" fill="#F5F3FF" stroke="#C4B5FD" />
+        <text x="490" y="94" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0F172A">定格瞬间感官氛围</text>
+        <text x="490" y="110" text-anchor="middle" font-size="10" fill="#475569">压缩时长聚焦一刻钟</text>
+
+        <rect x="414" y="124" width="152" height="44" rx="5" fill="var(--svg-bg)" stroke="#C4B5FD" />
+        <text x="490" y="142" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0F172A">远中近三景别推移</text>
+        <text x="490" y="158" text-anchor="middle" font-size="10" fill="#475569">靠光线/声响自然换镜</text>
+
+        <rect x="414" y="172" width="152" height="44" rx="5" fill="var(--svg-bg)" stroke="#C4B5FD" />
+        <text x="490" y="190" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0F172A">五感通感 · 光影色</text>
+        <text x="490" y="206" text-anchor="middle" font-size="10" fill="#475569">精准动词代“很美”</text>
+
+        <rect x="414" y="220" width="152" height="44" rx="5" fill="#FEE2E2" stroke="#EF4444" />
+        <text x="490" y="238" text-anchor="middle" font-size="10.5" font-weight="800" fill="#991B1B">严禁流水账游记</text>
+        <text x="490" y="254" text-anchor="middle" font-size="10" fill="#7F1D1D">忌“起床坐车逛街回家”</text>
+
+        <!-- Col 4: Narrative -->
+        <rect x="572" y="36" width="152" height="36" rx="5" fill="#0D9488" />
+        <text x="648" y="51" text-anchor="middle" font-size="11.5" font-weight="800" fill="#FFFFFF">Sec 2 · 记叙文</text>
+        <text x="648" y="65" text-anchor="middle" font-size="10" fill="#CCFBF1">Narrative</text>
+
+        <rect x="572" y="76" width="152" height="44" rx="5" fill="#F0FDFA" stroke="#99F6E4" />
+        <text x="648" y="94" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0F172A">以小见大 · 内心蜕变</text>
+        <text x="648" y="110" text-anchor="middle" font-size="10" fill="#475569">聚焦单次冲突与和解</text>
+
+        <rect x="572" y="124" width="152" height="44" rx="5" fill="var(--svg-bg)" stroke="#99F6E4" />
+        <text x="648" y="142" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0F172A">伏笔 + 10 秒高潮</text>
+        <text x="648" y="158" text-anchor="middle" font-size="10" fill="#475569">+ 首尾核心物象呼应</text>
+
+        <rect x="572" y="172" width="152" height="44" rx="5" fill="var(--svg-bg)" stroke="#99F6E4" />
+        <text x="648" y="190" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0F172A">白描动作 · 少直抒</text>
+        <text x="648" y="206" text-anchor="middle" font-size="10" fill="#475569">神态细节与余韵留白</text>
+
+        <rect x="572" y="220" width="152" height="44" rx="5" fill="#FEE2E2" stroke="#EF4444" />
+        <text x="648" y="238" text-anchor="middle" font-size="10.5" font-weight="800" fill="#991B1B">严禁贪多写大跨度</text>
+        <text x="648" y="254" text-anchor="middle" font-size="10" fill="#7F1D1D">忌虎头蛇尾或结尾说教</text>
+
+        <!-- Footer -->
+        <rect x="16" y="272" width="708" height="22" rx="5" fill="#0F172A" />
+        <text x="370" y="287" text-anchor="middle" font-size="11" font-weight="700" fill="#F8FAFC">硬性指标：每篇 400–600 汉字（安全高分带 460–560 字） · 25 分 = 12 分 Content &amp; Structure + 13 分 Style &amp; Accuracy</text>
+      </svg>
+      <div class="svg-caption">图 5.2 · Paper 2 双 2 选 1 四大文体“立意—结构—语言—红线”四柱对比矩阵图</div>
+    </div>
+
+    <div class="callout common-mistake">
+      <div class="callout-title">⚠️ Style &amp; Accuracy 13 分四大考场防扣分底线（超过半数分数在此！）</div>
+      <p style="margin-bottom: 0;">
+        ① <strong>简繁全卷一致</strong>：选定简体则全卷绝不出现“這/說/體/學/國/傳”等繁体；② <strong>斩断欧化长定语与残缺句</strong>：严防“通过……使我……”“提高学习态度”“改善问题”；③ <strong>禁一逗到底与半角标点</strong>：每句用实心中文句号<code>。</code>收束，不随意写英文逗号或圆点<code>.</code>；④ <strong>语体与文风匹配</strong>：议论/讨论禁用口语闲谈（如“说实话我觉得”），描写/记叙以克制白描取代生硬说教与廉价网络热词。
+      </p>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>二、Sec 1 思辨写作 · 8 大高频母题论证弹药库</h4>
+    <div class="table-wrap">
+      <table class="sprint-table">
+        <thead>
+          <tr>
+            <th>高频思辨母题</th>
+            <th>核心矛盾张力</th>
+            <th>正反切入角度（议论/讨论通用）</th>
+            <th>高阶论证弹药与金句储备</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. AI 时代与人类创造力</strong></td>
+            <td>工具高效产出 vs 原创思考力退化</td>
+            <td>效率红利解放重复劳动 vs 算法重组旧数据引发思维惰性与审美趋同</td>
+            <td>AI 善于“概率拼接既有语料”，却缺乏“生命的痛感与主体选择”；若放弃底层写作训练，人类终将丧失判断算法输出优劣的标尺。</td>
+          </tr>
+          <tr>
+            <td><strong>2. 传统文化与现代效率</strong></td>
+            <td>速度迭代需求 vs 文化根脉温度</td>
+            <td>淘汰落后形式降本增效 vs 传统手艺/方言承载集体记忆与审美品格</td>
+            <td>“保护并非把老手艺封进玻璃柜，而是找到当代生活接口”；城市若只剩同质化玻璃幕墙，繁荣便失去了可辨识的精神坐标。</td>
+          </tr>
+          <tr>
+            <td><strong>3. 环境保护与经济发展</strong></td>
+            <td>短期增长指标 vs 代际生态底线</td>
+            <td>发展改善民生基建 vs 先污染后治理的不可逆生态复原成本</td>
+            <td>算账不能只算季度营收表，更要算流域修复与公共健康隐性账单；绿色转型看似短期承压，实则是未来产业竞争的入场券。</td>
+          </tr>
+          <tr>
+            <td><strong>4. 学习压力与分数排名</strong></td>
+            <td>筛选选拔效率 vs 自主探索热情</td>
+            <td>适度竞争提供反馈坐标 vs 唯分数化挤压好奇心与心理韧性</td>
+            <td>教育若把所有精力耗在“消除扣分”上，便易培养出精于避险、却怯于在未知领域试错的“精致答题机器”。</td>
+          </tr>
+          <tr>
+            <td><strong>5. 短视频与深度阅读</strong></td>
+            <td>碎片即时爽感 vs 慢速逻辑建构</td>
+            <td>降低知识获取门槛 vs 15 秒强刺激破坏持续专注力与复杂思辨耐心</td>
+            <td>算法投喂让人产生“已然懂了”的幻觉，但真正的思想体系唯有靠长文本的反复咀嚼、停顿与自我反驳才能建构。</td>
+          </tr>
+          <tr>
+            <td><strong>6. 群体社交与独处静思</strong></td>
+            <td>圈层归属需求 vs 独立人格边界</td>
+            <td>协作网络拓宽视野 vs 过度合群导致“从众盲从”与自我声音淹没</td>
+            <td>真正高质量的合群，恰恰建立在个体具备独处自洽的能力之上；没有独处时的自我审视，热闹往往只是逃避空虚的噪音。</td>
+          </tr>
+          <tr>
+            <td><strong>7. 规则边界与创新突破</strong></td>
+            <td>秩序公平保障 vs 墨守成规僵化</td>
+            <td>规则是防止弱者权益受损的底线 vs 教条化规则扼杀跨界微创新</td>
+            <td>好规则应当像河道堤岸，既框定不致泛滥的底线，又为活水奔流留足宽阔水域；破局的前提是先读懂旧规则为何而生。</td>
+          </tr>
+          <tr>
+            <td><strong>8. 消费主义与理性节俭</strong></td>
+            <td>消费拉动体验 vs 符号虚荣绑架</td>
+            <td>商业消费提升生活便利 vs 营销制造伪需求、透支未来自由时间</td>
+            <td>物品本应为人服务，若为了追逐“被他人羡慕的标签”而陷入无休止的加班偿付，人便从物的主人沦为物的奴仆。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>三、Paper 2 四大文体 Band 1 满分示范范文精批（均控制在 460–560 汉字黄金靶区）</h4>
+    <p>
+      下方精选四篇对应不同文体的全真 Band 1 范文，每篇均严格落在 460–560 汉字安全高分带内。其中 <mark class="hl-content">蓝色高亮代表内容与结构（Content &amp; Structure）得分点</mark>，<mark class="hl-lang">绿色高亮代表语言与修辞（Style &amp; Accuracy）加分点</mark>。
+    </p>
+
+    <!-- 范文 1：议论文 -->
+    <div class="model-essay">
+      <div class="essay-head">
+        <span>📝 范文一 · Sec 1 议论文（Argumentative）：《人工智能时代，青少年仍须坚持独立写作与深度思考》</span>
+        <span class="band-pill band-high">Band 1 · 24/25（12 C&amp;S + 12 Style）· 约 477 汉字</span>
+      </div>
+      <div class="essay-body">
+        <p>
+          随着生成式人工智能秒级成文的能力日益精进，“基础写作与慢速思辨已成多余训练”的论调悄然流传。然而，<mark class="hl-content">把工具的算力误作自我的智力，实属教育认知的误区</mark>。<mark class="hl-content">我认为，越是在算法代劳的时代，青少年越须牢牢守住独立写作与深度思考的阵地。</mark>
+        </p>
+        <p>
+          首先，写作从来不是单纯的“文字排版”，而是人类理顺思绪的认知引擎。<mark class="hl-lang">在落笔推敲主谓搭配、删去赘词、重构因果链条的过程中</mark>，模糊的感受才得以澄清为严密的逻辑。<mark class="hl-content">若绕过这一艰苦的“思维塑形”，把意图全盘外包给机器，大脑便如同长期依赖机械代步的双腿，看似省力高效，实则正在丧失独立站立与辨别是非的肌肉记忆。</mark>
+        </p>
+        <p>
+          其次，人工智能依托旧语料做概率拼接，<mark class="hl-lang">擅长制造圆滑工整的“正确废话”，却永远无法替我们体验生命的刺痛与犹豫</mark>。唯有亲手锤炼的文字，才能保留个体独有的温度、视角与骨气。<mark class="hl-content">若年轻一代满足于一键生成，社会终将充斥同质化、无魂魄的语言复制品。</mark>
+        </p>
+        <p>
+          <mark class="hl-content">诚然，人工智能能够高效检索资料、校对语法，确为得力助手。然而，这一观点悄悄偷换了一个关键前提：唯有自身具备写作判断力，才有能力分辨机器文本的真伪优劣；否则，人便不是在驾驭工具，而是在盲从代码。</mark>
+        </p>
+        <p>
+          总而言之，<mark class="hl-lang">机器能模仿辞藻的华丽，却替代不了心灵在推敲中的生长</mark>。<mark class="hl-content">坚持独立思考与亲手写作，正是人类在算法洪流中保留自我主权的最后防线。</mark>
+        </p>
+      </div>
+      <div class="callout examiner-tip" style="margin-top:10px;margin-bottom:0;">
+        <div class="callout-title">🔍 考官批注（为什么稳拿 Band 1？）</div>
+        <p style="margin-bottom:0;">首段末尾立场旗帜鲜明；第 2、3 段分别从“思维塑形机制”与“生命个体不可替代性”递进深挖；第 4 段上演标准“真让步（承认检索校对价值）→ 狠驳斥（击穿缺乏判断力就会沦为盲从）”；结尾铿锵有力，绝不骑墙。</p>
+      </div>
+    </div>
+
+    <!-- 范文 2：讨论文 -->
+    <div class="model-essay">
+      <div class="essay-head">
+        <span>⚖️ 范文二 · Sec 1 讨论文（Discursive）：《请讨论校园全面禁止智能手机带来的多维影响》</span>
+        <span class="band-pill band-high">Band 1 · 24/25（12 C&amp;S + 12 Style）· 约 483 汉字</span>
+      </div>
+      <div class="essay-body">
+        <p>
+          近年来，多所中学尝试在教学楼内全面禁用智能手机，引发了关于专注力保护与数字边界的持久争论。<mark class="hl-content">这一举措究竟是拯救青少年注意力的良方，还是脱离现实的懒政，尚需置于校园生态中冷静权衡。</mark>
+        </p>
+        <p>
+          支持禁令者指出，<mark class="hl-content">屏幕高频推送正不断切碎学生的专注时长</mark>。<mark class="hl-lang">课间走廊若不再充斥着低头刷屏的冷光</mark>，同伴间眼神交汇的当面交谈与操场上的奔跑才得以重新生长。此外，物理隔离既能缓解青少年因社交外貌攀比引发的心理焦虑，也能有效遏制课堂偷拍与作弊风险。
+        </p>
+        <p>
+          <mark class="hl-content">然而，质疑的声音同样具备现实分量。</mark>一方面，在突发状况或放学通勤途中，彻底切断通讯可能令家校联络陷入盲区。另一方面，纯粹依赖校规一刀切，易把学生置于真空保护罩中：<mark class="hl-lang">一旦他们离校面对毫无管束的网络洪流，反而因缺乏渐进的自律训练而更易沉溺</mark>。与此同时，部分跨学科探究课程亦须借助即时检索工具来完成课堂协作。
+        </p>
+        <p>
+          <mark class="hl-content">由是观之，决定禁机令利弊走向的核心阈值，并不在于规则严厉与否，而在于学校是否配套了分场景治理与数字素养教育。</mark>例如，课堂时段统一托管，而在特定拓展课或离校节点保留受控使用权限。
+        </p>
+        <p>
+          综上所述，校园禁用手机是一柄兼具秩序收益与适应代价的双刃剑。<mark class="hl-lang">唯有在适度留白与理性引导间寻得平衡</mark>，方能既护住当下静谧课堂，又培植学生未来独立面对数字世界的心智定力。
+        </p>
+      </div>
+      <div class="callout examiner-tip" style="margin-top:10px;margin-bottom:0;">
+        <div class="callout-title">🔍 考官批注（为什么稳拿 Band 1？）</div>
+        <p style="margin-bottom:0;">全文双面天平高度均衡：首段明确争议张力而不下绝对结论；第 2、3 段分别以等重篇幅剖析“专注/社交/心理”与“应急联络/自律真空/探究受限”；第 4 段点明决定利弊倾斜的“先决条件”（分层治理与数字教育），展现成熟思辨力。</p>
+      </div>
+    </div>
+
+    <!-- 范文 3：描写文 -->
+    <div class="model-essay">
+      <div class="essay-head">
+        <span>🎨 范文三 · Sec 2 描写文（Descriptive）：《暴雨来临前的老街茶铺》</span>
+        <span class="band-pill band-high">Band 1 · 24/25（12 C&amp;S + 12 Style）· 约 470 汉字</span>
+      </div>
+      <div class="essay-body">
+        <p>
+          <mark class="hl-content">午后四点，整条青石板老街仿佛被扣进一只闷热的倒扣瓷碗里。</mark><mark class="hl-lang">天际压来一层铁灰色的积雨云，边缘泛着沉郁的铅蓝，将原本斜照在飞檐上的白光一点点吞没。</mark>风还未真正落下来，巷口几棵老槐树却先一步绷紧了身子，千百片墨绿的叶子翻卷出灰白的背面，在低气压里发出沙沙的碎响。
+        </p>
+        <p>
+          <mark class="hl-content">顺着骤然凉下来的空气往巷深处望去，茶铺屋檐下那盏昏黄的钨丝灯正悄然亮起，在灰暗的天色里圈出一团温暖的微光。</mark>临街两张竹桌旁，几位摇着蒲扇的老茶客收敛了闲谈，<mark class="hl-lang">只有扇骨拍打裤腿的轻响与茶杯盖磕碰瓷沿的清脆叮当，反倒把街头即将落雨前的静谧衬得愈发凝重</mark>。街对面卖花阿婆急匆匆将一盆盆茉莉搬进廊下，<mark class="hl-lang">那股原本燥热的甜香混着潮湿的泥土腥气，湿漉漉地扑面而来</mark>。
+        </p>
+        <p>
+          <mark class="hl-content">视线最终停留在柜台内侧那把老紫砂壶上。</mark>壶嘴正吐出一缕笔直而温润的白汽，甫一触及门外涌入的冷风，便<mark class="hl-lang">打着旋儿散作细碎的雾气</mark>。茶铺老板伸出布满老茧的手指，不慌不忙地替茶客续满滚水。<mark class="hl-lang">沸水落入碗底时激起一圈圈琥珀色的涟漪，暖意顺着粗陶杯壁缓缓漫上掌心。</mark>
+        </p>
+        <p>
+          恰在此时，屋顶铁皮棚“啪”地炸开第一颗豆大的雨点，紧接着碎玉般的雨点连成一片沉浑的鼓声。<mark class="hl-content">老街被彻底裹进白茫茫的水帘之中，唯独檐下那圈橘黄的茶香与灯光，依然稳稳地亮在风雨深处。</mark>
+        </p>
+      </div>
+      <div class="callout examiner-tip" style="margin-top:10px;margin-bottom:0;">
+        <div class="callout-title">🔍 考官批注（为什么稳拿 Band 1？）</div>
+        <p style="margin-bottom:0;">全篇零流水账，时间精确压缩在暴雨前的一刻钟！由“天色风势全景”→“灯圈茶客与花香中景”→“紫砂壶水汽与粗陶温度特写”自然推进；视觉色阶（铁灰/铅蓝/昏黄/琥珀）、听觉（沙沙碎响/杯盖叮当/雨敲铁皮）、嗅觉（茉莉混土腥）、触觉（闷热/冷风/暖掌）五感交响极强。</p>
+      </div>
+    </div>
+
+    <!-- 范文 4：记叙文 -->
+    <div class="model-essay">
+      <div class="essay-head">
+        <span>📖 范文四 · Sec 2 记叙文（Narrative）：《那把缺齿的木梳》</span>
+        <span class="band-pill band-high">Band 1 · 24/25（12 C&amp;S + 12 Style）· 约 507 汉字</span>
+      </div>
+      <div class="essay-body">
+        <p>
+          <mark class="hl-content">外婆梳妆台最右格里，躺着一把边角磨得发亮、中间却缺了两根齿的桃木梳。</mark>过去我总嫌它寒酸，直到上个月模拟考失利的那晚，它才真正敲开我紧闭的心门。
+        </p>
+        <p>
+          那晚我正对着满纸红叉的数学卷子烦躁不已，外婆却端着一碗热银耳羹敲门进来，轻声问：“要不要先歇一会儿？”积压了一整天的挫败感瞬间找到了出口，我甚至没抬头，只冷硬地丢出一句：“别烦我，说了多少遍别在我做题时进屋！”<mark class="hl-lang">屋门轻轻合上时发出的那一声极轻的咔哒，像一根细针扎在我绷紧的神经上，可倔强还是压住了嘴边的道歉。</mark>
+        </p>
+        <p>
+          <mark class="hl-content">深夜十一点半，我起身去客厅倒水，意外看见厨房门缝里透出一道微光。</mark><mark class="hl-lang">推开半寸门扉，外婆正戴着老花镜坐在小马扎上，膝头摊着我白天甩在沙发上的校服外套。她左手捏着一枚松脱的暗扣，右手捏着细针在微弱的顶灯下反复对准线孔，试了三次才把线头穿过去。</mark>每拉紧一针，她都要<mark class="hl-lang">微微仰起脖子眨几下干涩的眼睛，发间几缕银丝垂下来，随着肩头的起伏轻轻颤动</mark>。<mark class="hl-content">桌角正放着那把缺齿的旧木梳——原是她怕夜间披散的白发挡住视线，顺手挽起发髻时留下的。</mark>
+        </p>
+        <p>
+          那一刻，我握着水杯的手指僵在半空，喉咙像堵了一团温热的棉花，一句话也挤不出来。我没有出声惊动她，只是悄悄走回厨房灶台前，把凉透的那碗银耳羹重新热上。
+        </p>
+        <p>
+          <mark class="hl-content">次日清晨，外婆在桌边发现那碗温热的汤，和静静摆在碗旁的一把崭新牛角梳——旁边还稳稳放回了她习惯顺手的那把旧木梳。</mark>
+        </p>
+      </div>
+      <div class="callout examiner-tip" style="margin-top:10px;margin-bottom:0;">
+        <div class="callout-title">🔍 考官批注（为什么稳拿 Band 1？）</div>
+        <p style="margin-bottom:0;">极典型的“以小见大 + 10 秒高潮慢镜头 + 物象回环”佳作！全篇绝不讲一句“我懂事了/亲情真伟大”的口号说教，高潮段将穿针三次、仰颈眨眼、银丝颤动定格成十秒特写；借“热汤＋新旧木梳并置”完成含蓄深沉的情感闭环。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="lab-box" data-lab-type="f05"></div>
+</article>
+
+<article class="topic-section sec-practice" id="sec-sme">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>3. 现代文阅读与双 2 选 1 期末全真模拟卷（75 分 · 120 分钟）</h3>
+      <div class="section-en-sub">Full Final Exam Mock (75 Marks · 120 Mins) · Original 950+ Character Prose + Dual Essays + 10 Diagnostics</div>
+      <div class="tier-row">
+        <span class="badge-core">Part A · 现代文阅读与 9 分赏析 (25 分 · 40 分钟)</span>
+        <span class="badge-ext">Part B · 双 2 选 1 作文 (50 分 · 80 分钟)</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-sme">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>一、Part A · 现代文阅读与 9 分语言赏析全真测试（共 25 分 · 建议 40 分钟）</h4>
+    <p>请仔细阅读下方原创现代文学散文《寒夜修琴铺》，完成后方的理解简答题（Q1–Q4）与 9 分语言赏析压轴题（Q5）。</p>
+
+    <div class="reading-passage">
+      <div class="reading-title">寒夜修琴铺（原创模拟阅读选段 · 约 930 汉字）</div>
+      <p><span class="para-tag">第 1 段</span>冬至刚过，城南拆迁区边缘的巷弄已经空了大半，连路灯也只剩隔三岔五亮着的几盏，唯独“松风琴行”那块漆皮剥落的木招牌还悬在积水之上。铺子窄得只能侧身通过，四壁挤满了等待大修的旧立式钢琴与落灰的谱架，空气里常年浮着一股松香木屑混杂潮气的老味道。店主程伯今年六十八岁，年轻时曾是交响乐团的首席调音师，二十年前妻子因病离世后，他便谢绝了大剧院的高薪返聘，守着这间月租廉价的小铺，专替街坊旧琴调律补弦，偶尔也修补孩子们摔裂的小提琴琴码。</p>
+      <p><span class="para-tag">第 2 段</span>这天夜里九点半，巷外忽然刮起一阵裹着碎雨的北风。程伯正打算拉下生锈的卷闸门，一位裹着黑羽绒服的年轻母亲却气喘吁吁地抱着一把琴身开裂的大提琴冲进门来。她额上的碎发被雨水贴在眉骨旁，说话时嗓音发颤，反复说明天一早女儿就要参加全市复赛，偏偏排练完下楼梯时脚底打滑撞裂了音柱与面板。“跑了三家大琴行，人家早就打烊了，说这种急活儿没有两天功夫根本动不了。”她把琴箱平放在工作台上，手指攥着提手久久没松开。</p>
+      <p><span class="para-tag">第 3 段</span>程伯没有立即答应，只摘下鼻梁上的老花镜，用衣角慢条斯理地擦了一遍镜片，又俯身把耳朵贴在琴箱面板上轻轻叩了三下。“木纹裂口虽长，所幸没伤到核心音梁。”他直起腰，抬头瞥了一眼墙上的挂钟，又看了一眼角落里那盆早已凉透的炭火，淡淡道：“你这琴急不得，胶水要吃透木缝至少得压四个钟头，今晚你就先回吧，明早六点来取。”年轻母亲愣在原地，嘴唇动了动想问工钱，程伯却早已背过身去掀开工具箱，只丢下一句：“外头风大，别耽误孩子明早精神。”</p>
+      <p><span class="para-tag">第 4 段</span>送走客人，狭小的铺子立刻沉进更深的寂静里。窗外的寒风像一把无形的钝刀，一遍遍刮过卷闸门铁皮，发出刺耳又绵长的尖啸。程伯却仿佛与这整座夜城隔了一层玻璃。他拧亮台灯，橘黄的聚光灯束直直劈进桌面的阴影里。紧接着，调漆、剔除旧胶、涂抹鱼鳔胶、上紧木工夹——他的手指因常年沾水而关节粗大，布满老茧的指腹此刻却像带着一双眼睛，在狭仄的琴腔内部极其稳当地游走摸索。时间在滴答的挂钟声里一寸寸拉长，冷雨斜劈在玻璃窗上，水蛇般蜿蜒爬满整扇窗棂，工作台上的暖光却稳得纹丝不动。</p>
+      <p><span class="para-tag">第 5 段</span>凌晨两点半，最后一道木工夹撤去，琴腔裂痕宛如愈合的旧伤，只在侧光下留下一线极细的暗纹。程伯吹掉木屑，拿起松香弓轻轻试拉了一下 G 弦。低沉、浑厚而清亮的余音像一束暖流，缓缓在冰冷的四壁间漾开，仿佛把窗外肆虐的风雨声悄悄推远了几分。他舒了一口气，坐回藤椅里端起早凉透的茶杯抿了一口，目光落在工作台角落那张已然泛黄的黑白合影上，嘴角这才浮起一丝极浅却无比安然的笑意。</p>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">Part A 主观实战题组（25 分 · 建议独立作答后对照下方 Mark Scheme）</div>
+      <ol style="margin-bottom: 0;">
+        <li><strong>Q1（R1 表层检索 · 3 分）：</strong>根据第 1–2 段，概括程伯经营的“松风琴行”所处的环境条件，以及年轻母亲为什么在深夜九点半仍执意赶来求助？（列出 3 点具体事实）</li>
+        <li><strong>Q2（R2 深层隐含义推断 · 4 分）：</strong>在第 3 段中，程伯起初“没有立即答应”而是仔细检查并看挂钟，随后却背过身让母亲先回家并嘱咐“别耽误孩子明早精神”。请分析这两处细节分别折射出他怎样的心理考量与性格特点。</li>
+        <li><strong>Q3（R3 语境概括转述 · 4 分）：</strong>请<strong>用自己的话</strong>解释第 4 段画线感官句的含义：“他拧亮台灯，橘黄的聚光灯束直直劈进桌面的阴影里……布满老茧的指腹此刻却像带着一双眼睛，在狭仄的琴腔内部极其稳当地游走摸索。”（严禁照抄“聚光灯”“劈进”“老茧”“眼睛”“游走”等原词）</li>
+        <li><strong>Q4（R4 结构与写作意图 · 5 分）：</strong>文章第 5 段结尾写程伯试拉琴弦后“端起早凉透的茶杯抿了一口，目光落在泛黄黑白合影上”，这一结尾在结构与情感表达上起到了什么作用？</li>
+        <li><strong>Q5（R4 语言赏析压轴题 · 9 分）：</strong>请细读<strong>第 4 段与第 5 段</strong>，精选 <strong>3–4 个富有表现力的词语或句子</strong>，深入分析作者如何通过语言技巧营造寒夜修琴的紧张氛围以及最终的温暖治愈感。</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>二、Part B · Paper 2 双 2 选 1 模拟命题（50 分 · 建议 80 分钟，各写 400–600 汉字）</h4>
+    <div class="worked-example">
+      <div class="worked-title">Section 1（2 选 1 · 25 分 · 约 40 分钟）与 Section 2（2 选 1 · 25 分 · 约 40 分钟）</div>
+      <ul style="margin-bottom: 0;">
+        <li><strong>【Sec 1 题 1 · 议论文 Argumentative】</strong>有人认为：“在高度讲究效率的现代都市里，耗费大量精力去维持冷门传统手工技艺已经过时。”你同意这一看法吗？请撰文鲜明论证你的立场。（400–600 汉字）</li>
+        <li><strong>【Sec 1 题 2 · 讨论文 Discursive】</strong>越来越多学校鼓励学生利用假期开展自主研学旅行以替代传统书面作业。请从不同角度讨论这一做法可能带来的得与失。（400–600 汉字）</li>
+        <li><strong>【Sec 2 题 3 · 描写文 Descriptive】</strong>请以<strong>《午夜十二点的便利店一角》</strong>或<strong>《暴雨突袭的古城渡口》</strong>为题，细描一段特定时刻的场景氛围与光影声色。（400–600 汉字，严禁流水账叙事）</li>
+        <li><strong>【Sec 2 题 4 · 记叙文 Narrative】</strong>请以<strong>“那张反复折起又展开的纸条”</strong>为核心线索，写一则情感克制、聚焦高潮细节的真实故事。（400–600 汉字）</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="practice-block">
+    <div class="practice-heading">🎯 考场避坑交互诊断 MCQ（10 题覆盖转述辨伪、9 分赏析排雷、审题防跑题与病句急救）</div>
+
+    <!-- MCQ 1 -->
+    <div class="exam-q" data-mcq-answer="C">
+      <div class="exam-q-head">
+        <span class="q-tag">诊断 Q1 · R3 转述辨伪</span>
+        <span class="q-marks">聚焦：彻底戒除同词根照抄</span>
+      </div>
+      <div class="q-stem-en">原文句：“那次公开批评像一盆冰水，瞬间浇熄了她积攒半个月的参选热情。”（2 分，要求用自己的话解释）下列哪项回答能拿满 2 分？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A">A. 当众批评就像一盆冷水，一下子把她半个月攒下的参选激情浇灭了。</button>
+        <button type="button" class="mcq-opt" data-opt="B">B. 公开场合的批评冰冷刺骨，让她半个月以来的参选热情彻底熄灭了。</button>
+        <button type="button" class="mcq-opt" data-opt="C">C. 当众受到的否定令她备感挫败与寒心，彻底打消了此前长期酝酿的竞选积极性。</button>
+        <button type="button" class="mcq-opt" data-opt="D">D. 老师不应该当众批评她，因为这会像冰水一样伤害她脆弱的自尊心。</button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！C 项完全剥离了“冰水/浇熄/积攒/热情”等原词与喻体，升维为抽象的心理状态（备感挫败寒心）与决策结果（打消长期酝酿的积极性）。" data-err="❌ 未中靶心！A/B 项均保留了“冷水/冰冷”“浇灭/熄灭”“热情”等同词根或喻体；D 项则加入了原文没有的道德评判，属于过度脑补。"></div>
+    </div>
+
+    <!-- MCQ 2 -->
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head">
+        <span class="q-tag">诊断 Q2 · R3 抽象升维</span>
+        <span class="q-marks">聚焦：剥离动作细节提炼本质</span>
+      </div>
+      <div class="q-stem-en">结合模拟卷《寒夜修琴铺》第 2 段：“她把琴箱平放在工作台上，手指攥着提手久久没松开。”用自己的话推断，这一动作体现了这位母亲怎样的心情？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A">A. 她把大提琴放上桌子后手还紧紧抓着提手没有放开，害怕琴盒滑落。</button>
+        <button type="button" class="mcq-opt" data-opt="B">B. 内心极度焦灼紧张且满怀恳切期盼，生怕老师傅也拒绝这桩急活。</button>
+        <button type="button" class="mcq-opt" data-opt="C">C. 她对陌生的老修琴铺十分警惕，不愿意把贵重乐器随便交给对方。</button>
+        <button type="button" class="mcq-opt" data-opt="D">D. 因为外面雨大路滑，她跑了三家琴行体力透支导致手部僵硬痉挛。</button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！R2/R3 考查“透过表层动作推断深层心理”。前面已交代跑了三家都关门、明早就要复赛，“久久没松开”折射的是焦虑与害怕再遭拒绝的不安。" data-err="❌ 选错啦！A 项只是机械复述动作（未写心理）；C/D 项曲解了语境因果（并非警惕或体力痉挛）。"></div>
+    </div>
+
+    <!-- MCQ 3 -->
+    <div class="exam-q" data-mcq-answer="D">
+      <div class="exam-q-head">
+        <span class="q-tag">诊断 Q3 · R4 结构与意图</span>
+        <span class="q-marks">聚焦：反衬手法功能</span>
+      </div>
+      <div class="q-stem-en">在《寒夜修琴铺》第 4 段中，作者先大段渲染窗外北风“像无形的钝刀刮过铁皮”和“冷雨蛇般爬满窗棂”，其最核心的写作意图是什么？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A">A. 单纯说明冬至当晚天气恶劣，暗示第二天清晨的复赛将会被迫取消。</button>
+        <button type="button" class="mcq-opt" data-opt="B">B. 批评城南拆迁区房屋老化隔音效果差，呼吁改善小商户经营条件。</button>
+        <button type="button" class="mcq-opt" data-opt="C">C. 凑足环境描写字数，顺便交代程伯工作时因为风声太大而心情烦躁。</button>
+        <button type="button" class="mcq-opt" data-opt="D">D. 以外部狂风冷雨的凛冽喧嚣，强烈反衬屋内暖光下的专注定力与宁静匠心。</button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！第 4 段随后写“工作台上的暖光却稳得纹丝不动”，典型的以冷衬暖、以动衬静反衬结构，突出程伯专注沉稳的匠心。" data-err="❌ 误判了结构功能！文学阅读切忌脱离人物去孤立解读环境（A/B），更不是心烦（C）。"></div>
+    </div>
+
+    <!-- MCQ 4 -->
+    <div class="exam-q" data-mcq-answer="A">
+      <div class="exam-q-head">
+        <span class="q-tag">诊断 Q4 · 9 分语言赏析排雷</span>
+        <span class="q-marks">聚焦：辨识 Band 1 vs Band 3 套话</span>
+      </div>
+      <div class="q-stem-en">赏析《寒夜修琴铺》第 4 段“窗外的寒风像一把无形的钝刀，一遍遍刮过卷闸门铁皮”，以下哪位考生的分析最能冲击 9 分满分的 Band 1 档位？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A">A. 作者用暗喻短引“无形的钝刀”与“刮过”：钝刀不似利刃瞬间割断，而是带着滞涩摩擦力反复锯磨硬物；在深夜语境里，这把寒冷尖利又绵延不绝的紧迫感具象化，并与屋内暖光的稳重形成强烈反差。</button>
+        <button type="button" class="mcq-opt" data-opt="B">B. 作者运用比喻的修辞手法，把窗外的寒风比作一把无形的钝刀，生动形象地写出了当晚风刮得很猛烈，突出了天气的寒冷，令读者有身临其境的感觉。</button>
+        <button type="button" class="mcq-opt" data-opt="C">C. 这句话运用拟人和比喻，写风一遍遍刮卷闸门，表达了程伯独自一人在黑夜里修琴非常孤单凄凉的思想感情，深化了文章中心。</button>
+        <button type="button" class="mcq-opt" data-opt="D">D. 作者引用“窗外的寒风像一把无形的钝刀，一遍遍刮过卷闸门铁皮”这个优美句子，说明门外不仅风大而且很吵，给程伯修琴造成了很大干扰。</button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！A 项精准短引词眼，拆出了“钝刀”滞涩反复磨擦的物理质感（Step 2），并衔接紧迫氛围与反差结构（Step 3–4），属标准 Band 1 回答！" data-err="❌ 踩进了套话/照抄陷阱！B 项是典型“生动形象/身临其境”Band 3 套话；C 项胡乱贴“孤单凄凉”错情绪；D 项整句抄录只做字面翻译。"></div>
+    </div>
+
+    <!-- MCQ 5 -->
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head">
+        <span class="q-tag">诊断 Q5 · 9 分赏析词眼选择</span>
+        <span class="q-marks">聚焦：避免整句抄录</span>
+      </div>
+      <div class="q-stem-en">在作答 9 分语言赏析时，下列哪一种“摘引原文方式”最符合剑桥官方评分标准（Mark Scheme）的要求？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A">A. 把整个自然段 80 多个字用双引号抄进答案，再统一在后面写一段总体感受。</button>
+        <button type="button" class="mcq-opt" data-opt="B">B. 精确截取 3 组 2–8 字的核心词眼（如“直直劈进”“纹丝不动”“漾开”），分别独立走完四步分析。</button>
+        <button type="button" class="mcq-opt" data-opt="C">C. 全程不用引号摘引任何原文词语，只凭印象复述这段话用到了哪些修辞技巧。</button>
+        <button type="button" class="mcq-opt" data-opt="D">D. 一口吃成胖子，一次性列出 12 个四字词语但不展开任何字面物理含义解释。</button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！考官最看重“少而精的精准词眼 + 深度四步拆解”。精选 3 组短引，每组写透约 80 字，稳稳锁住 8–9 分。" data-err="❌ 选错啦！A 项大段摘抄会被判缺乏聚焦；C 项无具体例证；D 项堆砌名词无深度分析，均无法进入 Band 1。"></div>
+    </div>
+
+    <!-- MCQ 6 -->
+    <div class="exam-q" data-mcq-answer="D">
+      <div class="exam-q-head">
+        <span class="q-tag">诊断 Q6 · Paper 2 Sec 1 审题红线</span>
+        <span class="q-marks">聚焦：议论文 vs 讨论文体裁区分</span>
+      </div>
+      <div class="q-stem-en">若考题问：“有人认为电子书必将完全取代纸质书，你同意这一说法吗？请写一篇议论文论证你的看法。”以下哪种结构安排会直接导致体裁跑偏而大幅扣分？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A">A. 首段末明确表明“纸质书不会被完全取代”的单边核心立场。</button>
+        <button type="button" class="mcq-opt" data-opt="B">B. 第 2、3 段分别从“深度阅读专注机制”与“文化审美触觉”展开因果论证。</button>
+        <button type="button" class="mcq-opt" data-opt="C">C. 第 4 段先承认电子书便携环保（真让步），再反驳“便携不能替代纸本的深度认知”。</button>
+        <button type="button" class="mcq-opt" data-opt="D">D. 前两段讲电子书多么好，后两段讲纸质书多么好，结尾总结“二者各有利弊，都值得支持”。</button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！“你同意吗”是典型 Argumentative 议论文指令，写成 D 项的“两边都夸、各有利弊”属于严重的“墙头草”体裁坍塌，Content &amp; Structure 会跌入中低档！" data-err="❌ 审题警报！A/B/C 均为议论文高分规范动作；D 项把议论文错写成了无立场的讨论文。"></div>
+    </div>
+
+    <!-- MCQ 7 -->
+    <div class="exam-q" data-mcq-answer="C">
+      <div class="exam-q-head">
+        <span class="q-tag">诊断 Q7 · Paper 2 Sec 2 体裁避坑</span>
+        <span class="q-marks">聚焦：描写文拒流水账</span>
+      </div>
+      <div class="q-stem-en">写 Sec 2 描写文《暴雨突袭的古城渡口》（400–600 字）时，以下哪种写法最容易获得 Band 1（11–12/12 C&amp;S）高分？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A">A. 写自己早起出门、坐地铁换大巴去古城、中午吃面、下午突然下雨最后买票回家的全过程。</button>
+        <button type="button" class="mcq-opt" data-opt="B">B. 全篇不断重复“好大的雨啊，水非常多，大家特别紧张，这个渡口真是太壮观了”。</button>
+        <button type="button" class="mcq-opt" data-opt="C">C. 将镜头锁定在雨降前后十五分钟，依次推移“江面压云全景 → 渡船缆绳与乘客中景 → 船夫雨衣水珠特写”。</button>
+        <button type="button" class="mcq-opt" data-opt="D">D. 虚构一位落水儿童被船夫勇救后获颁锦旗、感叹人间自有真情在的完整救人故事。</button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！C 项严格遵守“定格十五分钟 + 三景别推移 + 五感质感”，是顶级描写文写法。" data-err="❌ 体裁踩坑！A 项是时间流水账；B 项是空泛形容词堆砌；D 项把描写文写成了记叙文故事！"></div>
+    </div>
+
+    <!-- MCQ 8 -->
+    <div class="exam-q" data-mcq-answer="A">
+      <div class="exam-q-head">
+        <span class="q-tag">诊断 Q8 · 记叙文高潮策略</span>
+        <span class="q-marks">聚焦：10 秒高潮慢镜头</span>
+      </div>
+      <div class="q-stem-en">为什么 0509 高分记叙文特别强调要留出约 30% 篇幅精雕“10 秒高潮慢镜头”？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A">A. 500 字篇幅有限，把关键转折时刻放慢拆解为微动作、眼神与心理震荡，才能在有限字数里打出最强情绪共鸣。</button>
+        <button type="button" class="mcq-opt" data-opt="B">B. 因为如果只写一件事容易字数写不够 400 字，只好强行把 10 秒钟拖长凑字数。</button>
+        <button type="button" class="mcq-opt" data-opt="C">C. 为了方便在最后一段加上“经过这件事，我终于明白了人生道理”的说教总结。</button>
+        <button type="button" class="mcq-opt" data-opt="D">D. 慢镜头可以省略掉前文的铺垫冲突与核心物象，直接从中间写起。</button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！400–600 字容不下流水账长篇，必须用“窄切口 + 慢镜头特写”放大矛盾与情感转变的张力。" data-err="❌ 理解偏了！慢镜头不是无意义凑字（B）或为了说教（C），更不能砍掉前文铺垫（D）。"></div>
+    </div>
+
+    <!-- MCQ 9 -->
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head">
+        <span class="q-tag">诊断 Q9 · Style &amp; Accuracy 病句诊所</span>
+        <span class="q-marks">聚焦：句法完整性与动词搭配</span>
+      </div>
+      <div class="q-stem-en">以下四个议论文句子均取自双语考生的考场初稿，请问哪一句完全没有语病、搭配不当或直译腔问题？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A">A. 通过参与这次社区环保志愿服务，使我深刻改善了对垃圾分类的懒惰态度。</button>
+        <button type="button" class="mcq-opt" data-opt="B">B. 参与这次社区环保志愿服务后，我彻底扭转了此前敷衍对待垃圾分类的懈怠心理。</button>
+        <button type="button" class="mcq-opt" data-opt="C">C. 那个上周五在礼堂被校长点名表扬了的坚持每天早起晨读半小时的同学是我的挚友。</button>
+        <button type="button" class="mcq-opt" data-opt="D">D. 随着科技水平的不断提高，人们能否守住独立思考，关键在于能否坚持深度阅读决定了。</button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！B 项主谓宾完整，“扭转……心理”搭配地道自然，短分句节奏流畅。" data-err="❌ 有病句！A 项犯了“通过……使……”缺主语与“改善态度”搭配不当双错；C 项是长达 31 字的欧化超长定语；D 项是“关键在于……决定了”句式杂糅。"></div>
+    </div>
+
+    <!-- MCQ 10 -->
+    <div class="exam-q" data-mcq-answer="D">
+      <div class="exam-q-head">
+        <span class="q-tag">诊断 Q10 · 成语精准与简繁规范</span>
+        <span class="q-marks">聚焦：Style 13 分守门红线</span>
+      </div>
+      <div class="q-stem-en">检查以下考场作答片段，哪一项在“成语褒贬/本义”与“简繁体规范”上完全无误？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A">A. 面对突如其来的暴雨，社区志愿者首当其冲，第一时间冒雨奔赴低洼地带疏通排水口。</button>
+        <button type="button" class="mcq-opt" data-opt="B">B. 這篇议论文结构严密，作者用犀利的言辞剖析了当代青少年过度依赖短视频的弊端。</button>
+        <button type="button" class="mcq-opt" data-opt="C">C. 这部备受期待的新片情节拖沓、台词空洞，整体效果实在差强人意，令影迷大失所望。</button>
+        <button type="button" class="mcq-opt" data-opt="D">D. 尽管面临资金短缺与工期紧迫的双重考验，这支年轻的科研团队依然迎难而上，最终如期交付了成果。</button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！D 项用词规范、成语“迎难而上”贴合语境，且全句统一为规范简体中文。" data-err="❌ 踩雷了！A 项“首当其冲”指最先遭受冲击/灾难，不能作“带头冲锋”；B 项“這”为繁体与后文简体混写；C 项“差强人意”指勉强使人满意（微褒），不能当“令人极其失望”用！"></div>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>三、全真模拟卷官方评分标准（Mark Scheme）与满分示范答卷</h4>
+
+    <!-- MS 1 -->
+    <details class="ms-details">
+      <summary>📋 MS 1 · 展开 Part A Q1–Q2 官方采分点与示范答卷（R1 检索 + R2 隐含推断 · 7 分）</summary>
+      <div class="ms-body">
+        <p><strong>Q1（3 分 · R1 表层信息检索，每点 1 分，答满 3 点即可）：</strong></p>
+        <ul>
+          <li><span class="ms-mark">[1]</span> 琴行所处环境：位于拆迁区边缘几近空置的老巷，铺面窄小，室内堆满旧琴谱架且混杂木屑潮气（体现清冷简陋）。</li>
+          <li><span class="ms-mark">[1]</span> 求助急迫事由：年轻母亲的大提琴在排练下楼时意外跌撞导致音柱与面板开裂，且次日一早女儿即要参加市级复赛。</li>
+          <li><span class="ms-mark">[1]</span> 无奈退而求其次：此前跑了三家大型琴行均已打烊，且被告知急活至少需要两天功夫。</li>
+        </ul>
+        <p><strong>Q2（4 分 · R2 深层隐含义分析，每处 2 分，须涵盖行为依据与心理特质）：</strong></p>
+        <ul>
+          <li><span class="ms-mark">[2]</span> <strong>先看细节再看钟炭（严谨审慎的专业度）：</strong>并非冷漠拒客，而是必须先凭借老道经验确认核心音梁未损，同时精确测算胶水压合所需的四小时以及当时已晚、炭火已凉的客观条件，体现他对乐器修复一丝不苟的工匠原则（绝不敷衍应付）。</li>
+          <li><span class="ms-mark">[2]</span> <strong>背过身催促母女先归（外冷内热的善良与体谅）：</strong>他刻意避开对方追问工钱的尴尬时刻，用看似生硬的一句“外头风大，别耽误孩子明早精神”掩饰自己准备通宵赶工、暗中扶助后辈的温和善意，彰显不图回报的怜才之情。</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- MS 2 -->
+    <details class="ms-details">
+      <summary>📋 MS 2 · 展开 Part A Q3–Q4 官方采分点与满分示范（R3 转述 + R4 结构意图 · 9 分）</summary>
+      <div class="ms-body">
+        <p><strong>Q3（4 分 · R3 语境转述，禁止使用“聚光灯/劈进/老茧/眼睛/游走/狭仄”等原词）：</strong></p>
+        <ul>
+          <li><span class="ms-mark">[1]</span> 照明聚焦感：他在昏暗的工作环境里集中开启局部强光，划出专注工作的独立空间。</li>
+          <li><span class="ms-mark">[1]</span> 外观与实力反差：虽然他的双手因长期辛劳而显得粗糙厚实（不再灵巧美观）；</li>
+          <li><span class="ms-mark">[1]</span> 触觉敏锐度（“像带眼睛”）：但他在幽暗狭小的乐器内部作业时，单凭极度娴熟敏锐的触感便能精准识别位置；</li>
+          <li><span class="ms-mark">[1]</span> 作业状态：全程沉着稳定、有条不紊地进行精密修复。</li>
+        </ul>
+        <p><strong>Q4（5 分 · R4 结构与写作意图，结构 2 分 + 情感主题 3 分）：</strong></p>
+        <ul>
+          <li><span class="ms-mark">[2]</span> <strong>结构呼应与余韵留白：</strong>前文第 3 段已写“炭火凉透”，结尾写“凉透的茶杯”与前文呼应，侧面印证他已彻夜专注工作数小时；同时由第 4 段冰冷紧张的高压劳作悄然落回平静舒缓的收尾节奏。</li>
+          <li><span class="ms-mark">[3]</span> <strong>揭示精神支撑与主题升华：</strong>“泛黄黑白合影”暗中呼应第 1 段“二十年前离世的妻子”，揭示程伯之所以甘愿清贫守着旧琴铺、不计代价帮人抢修琴弦，不仅源于对音乐技艺的敬畏，更是在通过修复琴声延续与亡妻共同的记忆与温情，令结尾余味悠长、言有尽而意无穷。</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- MS 3 -->
+    <details class="ms-details">
+      <summary>📋 MS 3 · 展开 Part A Q5（9 分语言赏析）Band 1 评分标准与 9/9 满分示范答卷</summary>
+      <div class="ms-body">
+        <p><strong>官方判分标准：</strong>选中 3–4 组精准词眼；须兼顾“字面物理特征剖析 + 具体语境情绪/氛围效果 + 段落节奏或对比呼应”。仅贴修辞名号或套用“生动形象/加深印象”者封顶 4–5/9。</p>
+        <p><strong>9/9 满分示范答卷（精选 3 组词眼，严格走完四步闭环）：</strong></p>
+        <ol>
+          <li><strong>选词①（暗喻与动词）：</strong>作者短引<code>“直直劈进”</code>与<code>“纹丝不动”</code>。字面上，“劈”是一种由上而下、锋利而果断的切割动作，“纹丝不动”则表现出毫无摇晃的绝对稳固感。在寒夜狂风侵袭的语境下，这把台灯光束塑造成了一道劈开黑暗的屏障，极具张力地凸显出程伯一旦进入修复状态便屏蔽外界纷扰的专注与坚定；结构上与前文像“钝刀”般肆虐的寒风形成一静一动、一稳一乱的鲜明视觉对抗。</li>
+          <li><strong>选词②（比喻与通感）：</strong>作者短引<code>“水蛇般蜿蜒爬满”</code>。字面上，“水蛇”冰冷滑腻，扭曲爬行的速度慢却具有一步步逼近吞噬的侵入感。在语境中，冷雨紧贴窗棂扩张，把室外逐渐升级的寒意与彻夜难熬的孤寂氛围渲染得极具压迫感；这一持续外扩的冰冷意象，反倒进一步衬托出屋内微弱暖光中人与琴相守的艰难与可贵。</li>
+          <li><strong>选词③（通感与动词炼字）：</strong>作者在第 5 段短引<code>“像一束暖流”</code>与<code>“推远”</code>。字面上，“暖流”把原本属于听觉的琴音转化为了带有温度、缓缓流淌包裹身体的触觉，“推远”则赋予抽象声波以温和的物理排斥力。在修琴功成、彻夜辛劳终见曙光的语境里，这几字瞬间把第 4 段紧绷冰冷的压抑氛围融化开来，外化出程伯心头的松弛慰藉与音乐本身治愈寒夜的精神力量，完成全篇由冷骤暖的情感升华。</li>
+        </ol>
+      </div>
+    </details>
+
+    <!-- MS 4 -->
+    <details class="ms-details">
+      <summary>📋 MS 4 · 展开 Part B Sec 1（议论文/讨论文）官方 25 分双轨细则与立意示范</summary>
+      <div class="ms-body">
+        <p><strong>25 分评分双轨：Content &amp; Structure（12 分）+ Style &amp; Accuracy（13 分）。</strong>字数须落在 400–600 汉字，低于 350 字内容分与风格分均会受到严重惩罚。</p>
+        <ul>
+          <li><strong>题 1（议论文 · 传统手工技艺是否过时）：</strong><br>
+            <span class="ms-mark">[核心立论]</span> 绝未过时——手工技艺并非低效的代名词，而是工业标准化之外不可或缺的文化审美锚点。<br>
+            <span class="ms-mark">[双 PEEL+驳斥]</span> 分论点 1：手工器物承载不可复制的匠人温度与情感记忆；分论点 2：传统工艺的材质与结构智慧常是现代高端设计创新的源泉；让步驳斥：诚然手工成本高昂且难供大众日常快消（让步），然而将“大众日常供给效率”偷换为“文化存在价值”，恰是只算短期账而忽略精神遗产的短视（驳斥）。</li>
+          <li><strong>题 2（讨论文 · 假期研学旅行替代书面作业）：</strong><br>
+            <span class="ms-mark">[正方维度]</span> 打破纸面背诵局限，在真实地貌/博物馆/社区调研中培养团队协作与复杂问题解决力；<br>
+            <span class="ms-mark">[反方维度]</span> 研学开销易扩大家庭经济差异引发教育公平焦虑，且部分商业研学流于“打卡拍照”，缺乏扎实的知识巩固闭环；<br>
+            <span class="ms-mark">[阈值先决]</span> 关键在于学校提供低成本本地公共资源研学方案，并将书面复盘报告与实地探索结合而非二元对立。</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- MS 5 -->
+    <details class="ms-details">
+      <summary>📋 MS 5 · 展开 Part B Sec 2（描写文/记叙文）官方 25 分双轨细则与高潮定格示范</summary>
+      <div class="ms-body">
+        <p><strong>Band 1（C&amp;S 11–12 + Style 11–13）关键指标：</strong>描写文须见完整感官营造与镜头调度（绝不变成流水账）；记叙文须见完整结构、鲜明高潮切片与含蓄收尾（绝不结尾说教）。</p>
+        <ul>
+          <li><strong>题 3（描写文 · 《午夜十二点的便利店一角》三景别骨架）：</strong><br>
+            <span class="ms-mark">[全景]</span> 午夜冷蓝街道中，便利店透出的白炽灯像一座孤岛；自动门推开瞬间，冰柜低频嗡鸣与门口风铃轻响交错；<br>
+            <span class="ms-mark">[中景]</span> 靠窗长吧台上，熬夜加班的白领指节发白捏着热美式，刚下晚自习的学生揉着眉心吸吮关东煮热气；<br>
+            <span class="ms-mark">[特写]</span> 收银台玻璃上凝结的水雾、关东煮汤锅缓缓冒起的小气泡、微凉纸杯递过来时指尖相碰的一瞬暖意。</li>
+          <li><strong>题 4（记叙文 · 《那张反复折起又展开的纸条》10 秒高潮核心）：</strong><br>
+            <span class="ms-mark">[物象线索]</span> 一张因为犹豫该不该道歉（或道别）而被在口袋里折了又展、折痕已发毛起皱的便签纸；<br>
+            <span class="ms-mark">[10 秒慢镜]</span> 放学走廊只剩对方收拾书包的背影，你盯着那张纸条边缘起毛的纸纤维，指尖抠住折痕、深吸一口气迈出两步又硬生生刹住的心理拉扯，最终没有递出而是借着帮忙扶正滑落书本的动作，把纸条压在了最底下那本书的扉页里。</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- MS 6 -->
+    <details class="ms-details">
+      <summary>📋 MS 6 · 考前交卷前 5 分钟终极查错核对清单（抢回 3–4 分稳拿 A*）</summary>
+      <div class="ms-body">
+        <ol>
+          <li><strong>R3 转述查原词：</strong>回扫 Q3 答案，划掉一切直接沿用原文比喻词（如“钝刀/水蛇/眼睛”）或核心动词的地方，全部换成抽象心理与性质概念。</li>
+          <li><strong>9 分赏析查四步：</strong>确认 3 组词眼全部短引且没有出现“生动形象/表达了感情/加深印象”空洞废话。</li>
+          <li><strong>作文查体裁与字数：</strong>确认议论文没有写到最后变成“各有利弊”、讨论文双方篇幅大致对等、描写文没有跑成日记流水账；字数落在 <strong>460–560 字</strong>（以格纸行数列数速估）。</li>
+          <li><strong>简繁与标点扫雷：</strong>重点扫查<code>這/这、說/说、國/国、學/学、體/体、發/发、門/门、實/实</code>是否全篇纯简或纯繁，消灭句末空心圆点<code>.</code>与一逗到底。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+</article>
+
+<article class="topic-section sec-clinic" id="sec-clinic">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>4. 个人语文阅读/作文错题上传批改诊所与模块精修入口</h3>
+      <div class="section-en-sub">Personal Error Clinic (Offline Persistent Storage) &amp; Verified 0509 Module Deep Links</div>
+      <div class="tier-row">
+        <span class="badge-core">本地持久化 · 考前二刷清零</span>
+        <span class="badge-ext">一键导出发给 AI 逐句精批升格</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-clinic">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>一、语文专属错题诊断与 AI 精批上传指南</h4>
+    <p>
+      把平时周测或模考中被扣分的 <strong>R3 转述题、9 分赏析失分段落、或作文片段/病句</strong>录入下方个人诊疗台。所有记录均自动离线保存于浏览器本地。建议按以下<strong>五类中文 0509 高频错因</strong>准确标注，考前一天筛选同一错因集中复盘，或点击“📋 生成并复制 AI 精讲清单”直接粘贴给 AI 批改升格：
+    </p>
+    <ul>
+      <li><strong>① R3 原词照抄：</strong>把扣分的原句与自己的错误译文粘入“错题要点”，在“正解铁律”写下“禁用哪些原词根 + 对应的抽象心理/状态概念”。</li>
+      <li><strong>② 9 分赏析缺字面质感：</strong>粘入被评为“泛泛而谈（Band 3）”的句子，补全 Step 2 物理材质/力度/速度分析，告别“生动形象”。</li>
+      <li><strong>③ 双作文体裁串位或字数失控：</strong>记录审题关键词错判（如把议论写成讨论、把描写写成流水账）或超时未收尾的教训，写好字数分配铁律（如 70+125+125+120+70）。</li>
+      <li><strong>④ 病句搭配与简繁错别字：</strong>收集自己惯犯的欧化长句、成语误用（如首当其冲/差强人意）或简繁夹杂字，建立个人专属红黑字表。</li>
+    </ul>
+
+    <div class="callout deep-dive">
+      <div class="callout-title">🤖 附：发给 AI 精批的 0509 考纲专属提示词（复制到错题清单顶部一起发送）</div>
+      <p style="margin-bottom:0;">
+        “请按 Cambridge IGCSE First Language Chinese (0509) 官方评分标准帮我逐条诊断以下错题或作文：① 现代文 R3 转述是否完全剥离了原文核心实词与比喻；② 9 分赏析是否走完‘短引+字面质感+语境情感+结构节奏’四步且无空话；③ Paper 2 作文是否严守体裁（议论不骑墙/讨论不偏颇/描写不流水/记叙有慢镜头）及 400–600 汉字控制；④ 标出所有病句、搭配不当、简繁混写与低阶用词，给出直接达到 Band 1 的改写示范。”
+      </p>
+    </div>
+
+    <div class="clinic-box" data-clinic-subject="F05"></div>
+  </div>
+
+  <div class="subtopic">
+    <h4>二、0509 核心模块深度学习直达传送门（已过滤非考范围）</h4>
+    <p>若你在某个具体题型上仍需大量专项例题与阶梯训练，可直接点击下列已对齐期末范围的完整模块精修：</p>
+    <div class="quick-links-grid">
+      <a class="quick-link-chip" href="../Chinese_0509_Modules/C01_Blueprint_and_Comprehension.html">C01 现代文理解转述</a>
+      <a class="quick-link-chip" href="../Chinese_0509_Modules/C02_Language_Analysis_Writers_Effect.html">C02 9分语言赏析</a>
+      <a class="quick-link-chip" href="../Chinese_0509_Modules/C05_Argumentative_and_Discursive_Writing.html">C05 议论文 vs 讨论文</a>
+      <a class="quick-link-chip" href="../Chinese_0509_Modules/C06_Descriptive_and_Narrative_Writing.html">C06 描写文 vs 记叙文</a>
+      <a class="quick-link-chip" href="../Chinese_0509_Modules/C07_Chinese_Style_Lexis_and_Error_Clinic.html">C07 病句诊所与雅言升格</a>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section sec-cards" id="app-concepts">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>5. 考前必背 20 张闪卡：转述心法、9 分赏析词库、思辨过渡与描写雅言</h3>
+      <div class="section-en-sub">20 High-Yield Flashcards · Comprehension, Writer's Effect Lexis, Discursive Bridges &amp; Descriptive Upgrades</div>
+      <div class="tier-row">
+        <span class="badge-core">4 大模块 × 5 张核心考前速记卡</span>
+        <span class="badge-ext">点击“开启遮罩自测”考前盲测</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="app-concepts">○ 标记掌握</button>
+  </div>
+
+  <div class="concept-toolbar">
+    <div class="concept-filter-group" id="conceptFilterTabs">
+      <button type="button" class="tab-btn active" data-concept-part="all">全部 20 张</button>
+      <button type="button" class="tab-btn" data-concept-part="comp">现代文 R1–R4 (5)</button>
+      <button type="button" class="tab-btn" data-concept-part="eff">9 分赏析词库 (5)</button>
+      <button type="button" class="tab-btn" data-concept-part="arg">议论/讨论过渡 (5)</button>
+      <button type="button" class="tab-btn" data-concept-part="desc">描写雅言与病句 (5)</button>
+    </div>
+    <div class="concept-actions">
+      <span class="concept-count-pill" id="conceptCountPill">显示 20 / 20 题</span>
+      <button type="button" class="tab-btn" id="conceptQuizToggle">🙈 开启遮罩自测</button>
+    </div>
+  </div>
+
+  <div class="concept-grid" id="conceptGrid">
+    <!-- comp 1 -->
+    <div class="concept-card" data-part="comp">
+      <div class="cq-head"><span class="q-tag">现代文 R1–R4 · #01</span><span class="badge-core">R1 检索</span></div>
+      <div class="cq-en">R1 表层信息检索题（2–3 分）最容易漏分的两个操作细节是什么？</div>
+      <div class="cq-cn">如何防止看似简单的信息查找题丢掉 1 分？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">① <span class="kw">对齐题分分点作答</span>：3 分题必须找足 3 个互不交叉的独立事实要点；② <span class="kw">锁死限定条件</span>（如时间起止、特定对象、否定前缀“除……外”），绝不只抄半句导致条件残缺。</div>
+        <div class="cq-mask-hint">点击揭晓答案</div>
+      </div>
+    </div>
+
+    <!-- comp 2 -->
+    <div class="concept-card" data-part="comp">
+      <div class="cq-head"><span class="q-tag">现代文 R1–R4 · #02</span><span class="badge-core">R2 推断</span></div>
+      <div class="cq-en">作答 R2“深层隐含义/言外之意/人物心态转变”题的标准双层答案公式是什么？</div>
+      <div class="cq-cn">为什么只写动作或只喊一句“很难过”通常只给一半分？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">必须采用<span class="kw">“表层文本依据（动作/沉默/反语）＋ 深层潜台词（真实动机、矛盾心理或态度落差）”</span>双层架构。例如：他虽笑着道贺却攥紧衣角，表面大度（层1），实则掩饰失落与不甘（层2）。</div>
+        <div class="cq-mask-hint">点击揭晓答案</div>
+      </div>
+    </div>
+
+    <!-- comp 3 -->
+    <div class="concept-card" data-part="comp">
+      <div class="cq-head"><span class="q-tag">现代文 R1–R4 · #03</span><span class="badge-ext">R3 转述</span></div>
+      <div class="cq-en">遇到 R3“用自己的话解释”，为什么“高兴→开心”“擦鞋→清理鞋子”依然会被判未转述？</div>
+      <div class="cq-cn">什么是真正能拿满分的“脱离喻体 + 升维抽象概念”？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">同词根或同级具体物象替换仍属照抄！满分核心是<span class="kw">彻底丢弃原文比喻喻体与具体动作名词</span>，将其升维成<span class="kw">抽象心理状态、性质或社会处境</span>（如“擦得发亮”→“高度重视体面与尊严”）。</div>
+        <div class="cq-mask-hint">点击揭晓答案</div>
+      </div>
+    </div>
+
+    <!-- comp 4 -->
+    <div class="concept-card" data-part="comp">
+      <div class="cq-head"><span class="q-tag">现代文 R1–R4 · #04</span><span class="badge-ext">R3 句式重组</span></div>
+      <div class="cq-en">当原文长句极难找近义词时，哪两招句式变形能立刻实现“零照抄转述”？</div>
+      <div class="cq-cn">结构换位救场法</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">① <span class="kw">因果倒装</span>（把“因为 A 所以 B”转为“B 的局势正是源于 A 的长期积累”）；② <span class="kw">正话反说 / 双重否定</span>（把“毫无察觉”改写为“完全忽略 / 未能放在心上”），再核对不增不漏。</div>
+        <div class="cq-mask-hint">点击揭晓答案</div>
+      </div>
+    </div>
+
+    <!-- comp 5 -->
+    <div class="concept-card" data-part="comp">
+      <div class="cq-head"><span class="q-tag">现代文 R1–R4 · #05</span><span class="badge-core">R4 结构作用</span></div>
+      <div class="cq-en">分析某段或结尾在全篇“结构与作者意图（R4）”时，如何写出超越“承上启下”的高分答案？</div>
+      <div class="cq-cn">结构功能必须绑定具体文本内容</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">精准指明四类具体作用：<span class="kw">① 制造抑扬落差</span>（先赞/先冷后转暖）；<span class="kw">② 意象跨段闭环呼应</span>（如凉透炭火呼应凉茶照见耗时之久）；<span class="kw">③ 借物象留白暗指深沉记忆</span>；<span class="kw">④ 节奏由急促收缓留下余震</span>。</div>
+        <div class="cq-mask-hint">点击揭晓答案</div>
+      </div>
+    </div>
+
+    <!-- eff 1 -->
+    <div class="concept-card" data-part="eff">
+      <div class="cq-head"><span class="q-tag">9 分赏析词库 · #06</span><span class="badge-ext">四步公式</span></div>
+      <div class="cq-en">默写 Paper 1 Sec 1 压轴 9 分语言赏析的“四步满分闭环”与每组字数建议！</div>
+      <div class="cq-cn">缺哪一步最容易跌入 Band 3（4–5 分）？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner"><span class="kw">① 短引词眼 (2–8 字) + 点名核心手法 → ② 字面实义与物理画面还原（质感/力度/温度）→ ③ 语境情感/心理/氛围投射 → ④ 段落节奏或前后呼应</span>。精选 3 组，每组约 80 字。缺 Step 2 必跌入 Band 3 套话！</div>
+        <div class="cq-mask-hint">点击揭晓答案</div>
+      </div>
+    </div>
+
+    <!-- eff 2 -->
+    <div class="concept-card" data-part="eff">
+      <div class="cq-head"><span class="q-tag">9 分赏析词库 · #07</span><span class="badge-ext">物理力度词库</span></div>
+      <div class="cq-en">剖析“剐蹭、渗入、撕扯、悬着、绷紧”等动词时，Step 2 应调用哪些物理质感词库？</div>
+      <div class="cq-cn">替代“生动形象地写出动作”的高精度词汇</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">调用物理机制词：<span class="kw">滞涩摩擦感</span>（非一刀痛快斩断而是绵长拉锯）、<span class="kw">细密渗透感</span>（无声却不可逆地侵入肌理）、<span class="kw">临界拉伸张力</span>（濒临断裂却死死克制的紧绷与压迫）。</div>
+        <div class="cq-mask-hint">点击揭晓答案</div>
+      </div>
+    </div>
+
+    <!-- eff 3 -->
+    <div class="concept-card" data-part="eff">
+      <div class="cq-head"><span class="q-tag">9 分赏析词库 · #08</span><span class="badge-core">声色对比术语</span></div>
+      <div class="cq-en">遇“宏大寂静里出现水滴声/蝉鸣”或“深黑背景里有一点微光”，专业赏析术语叫什么？</div>
+      <div class="cq-cn">考场高频反衬句型模板</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">称为<span class="kw">“以动衬静”</span>或<span class="kw">“明暗体量反衬”</span>。作用句式：微弱的声响非但未打破宁静，反而因两者体量的极度悬殊，成倍放大了空间的空旷冷清与人物内心的孤立无援。</div>
+        <div class="cq-mask-hint">点击揭晓答案</div>
+      </div>
+    </div>
+
+    <!-- eff 4 -->
+    <div class="concept-card" data-part="eff">
+      <div class="cq-head"><span class="q-tag">9 分赏析词库 · #09</span><span class="badge-ext">通感联觉</span></div>
+      <div class="cq-en">什么是“通感（Synesthesia）”？在 9 分赏析中如何精准剖析“发苦的空气 / 暖流般的琴声”？</div>
+      <div class="cq-cn">跨越单一感官边界的表达机理</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">通感是将听觉/视觉/触觉/味觉跨界打通。<span class="kw">赏析要点</span>：点出“将无形声波转化为带温度和包裹感的流体（或把情绪转化为味觉滞苦）”，令抽象氛围瞬间具有<span class="kw">可触可感的生理沉浸感</span>。</div>
+        <div class="cq-mask-hint">点击揭晓答案</div>
+      </div>
+    </div>
+
+    <!-- eff 5 -->
+    <div class="concept-card" data-part="eff">
+      <div class="cq-head"><span class="q-tag">9 分赏析词库 · #10</span><span class="badge-core">节奏留白</span></div>
+      <div class="cq-en">碰到连续 2–4 字短句（如“空房间。冷灶台。”）或突然的独立段，Step 4 节奏效果怎么写？</div>
+      <div class="cq-cn">千万别答“句子简短好读”</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">剖析<span class="kw">“呼吸感与心理滞停”</span>：连续去修饰语的短句在视觉上形成生硬跳切，模拟人物目睹打击后<span class="kw">瞬间失语、心跳骤停的茫然感</span>，在句末制造极具震慑力的情绪留白。</div>
+        <div class="cq-mask-hint">点击揭晓答案</div>
+      </div>
+    </div>
+
+    <!-- arg 1 -->
+    <div class="concept-card" data-part="arg">
+      <div class="cq-head"><span class="q-tag">议论/讨论过渡 · #11</span><span class="badge-ext">让步驳斥</span></div>
+      <div class="cq-en">写 Sec 1 议论文第 4 段“真让步·狠驳斥”的满分衔接骨架是什么？</div>
+      <div class="cq-cn">避开“只让不驳”与“稻草人歪曲”</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner"><span class="kw">“诚然/不可否认……（承认对手在特定局部的合理性）；然而/殊不知，支持者往往偷换了一个核心前提（或忽略了……长远代价）：……”</span>——先承认小前提，再击穿其大逻辑盲区。</div>
+        <div class="cq-mask-hint">点击揭晓答案</div>
+      </div>
+    </div>
+
+    <!-- arg 2 -->
+    <div class="concept-card" data-part="arg">
+      <div class="cq-head"><span class="q-tag">议论/讨论过渡 · #12</span><span class="badge-core">讨论文天平</span></div>
+      <div class="cq-en">写 Sec 1 讨论文（Discursive）从正面维度切入反面质疑维度时，有哪些高雅客观的过渡词？</div>
+      <div class="cq-cn">禁止使用口语“但是话又说回来”</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">推荐使用：<span class="kw">“然而，任何制度红利往往伴随隐性成本；质疑的声音同样具备现实分量……”“反观另一视角，……亦是不容忽视的潜在隐忧。”</span>保持冷静中立的学者口吻。</div>
+        <div class="cq-mask-hint">点击揭晓答案</div>
+      </div>
+    </div>
+
+    <!-- arg 3 -->
+    <div class="concept-card" data-part="arg">
+      <div class="cq-head"><span class="q-tag">议论/讨论过渡 · #13</span><span class="badge-core">辩证阈值句</span></div>
+      <div class="cq-en">讨论文第 4 段如何写出不和稀泥的高分收束？（“决定利弊的先决条件”）</div>
+      <div class="cq-cn">超越“有利有弊要理性看待”的平庸结尾</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">万能辩证升华句：<span class="kw">“由是观之，决定该举措最终利弊走向的阈值，并不在于政策本身的好坏，而在于是否配套了……（监管制度 / 教育引导 / 公平兜底机制）。”</span></div>
+        <div class="cq-mask-hint">点击揭晓答案</div>
+      </div>
+    </div>
+
+    <!-- arg 4 -->
+    <div class="concept-card" data-part="arg">
+      <div class="cq-head"><span class="q-tag">议论/讨论过渡 · #14</span><span class="badge-ext">AI 与阅读母题</span></div>
+      <div class="cq-en">写“AI 生成文章 / 短视频冲击深度阅读”母题时，哪两句高阶思辨金句可直接引用化用？</div>
+      <div class="cq-cn">直击灵魂的思辨弹药</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">① <span class="kw">“把工具的算力误作自我的智力，把信息的即时投喂误作真正的认知成长。”</span><br>② <span class="kw">“只有自己具备写作成文与逻辑校验的标尺，才有资格驾驭算法而非被算法牵引。”</span></div>
+        <div class="cq-mask-hint">点击揭晓答案</div>
+      </div>
+    </div>
+
+    <!-- arg 5 -->
+    <div class="concept-card" data-part="arg">
+      <div class="cq-head"><span class="q-tag">议论/讨论过渡 · #15</span><span class="badge-core">PEEL 因果链</span></div>
+      <div class="cq-en">写议论文正文分论点时，为什么绝不能“观点句 + 一个例子 + 完事”？如何做到 PEEL 深度推演？</div>
+      <div class="cq-cn">避免“以例代议”的干瘪弊病</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">必须在观点与例子之间补上<span class="kw">“作用机理推演”</span>（即“为什么 A 会一步步导致 B”）：例如不仅说“依赖机器让人变懒”，还要拆解“省去构思删改的痛苦 → 失去澄清混沌思维的训练 → 长期沦为思考瘫痪”。</div>
+        <div class="cq-mask-hint">点击揭晓答案</div>
+      </div>
+    </div>
+
+    <!-- desc 1 -->
+    <div class="concept-card" data-part="desc">
+      <div class="cq-head"><span class="q-tag">描写雅言与病句 · #16</span><span class="badge-ext">三景别转镜</span></div>
+      <div class="cq-en">写描写文拒绝出现“接着我走到了……”的死板路标，如何靠“光线或声音”实现丝滑转镜？</div>
+      <div class="cq-cn">电影运镜式段间过渡范例</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">用感官牵引过渡：<span class="kw">“顺着斜刺入棚的那道暖光望去……”“恰有一阵夹带着茉莉花香的穿堂风拂来，把视线轻轻引向廊下……”</span>——让画面自然滑入下一景别。</div>
+        <div class="cq-mask-hint">点击揭晓答案</div>
+      </div>
+    </div>
+
+    <!-- desc 2 -->
+    <div class="concept-card" data-part="desc">
+      <div class="cq-head"><span class="q-tag">描写雅言与病句 · #17</span><span class="badge-ext">光影色阶库</span></div>
+      <div class="cq-en">把低幼词汇“天很黑、灯很亮、水很黄、叶很绿”一键升格为 Band 1 文学色阶与光质感！</div>
+      <div class="cq-cn">色彩 = 色相形容 + 光感材质</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">升格示范：<span class="kw">天色</span>→铅灰沉郁 / 未褪尽的靛青；<span class="kw">灯光</span>→昏黄钨丝暖光圈 / 清冽白炽孤灯；<span class="kw">茶水</span>→琥珀色透亮涟漪；<span class="kw">树叶</span>→油亮墨绿泛起灰白背面。</div>
+        <div class="cq-mask-hint">点击揭晓答案</div>
+      </div>
+    </div>
+
+    <!-- desc 3 -->
+    <div class="concept-card" data-part="desc">
+      <div class="cq-head"><span class="q-tag">描写雅言与病句 · #18</span><span class="badge-core">动作白描</span></div>
+      <div class="cq-en">记叙文中“不写感动流泪、不写愤怒生气”，怎么用白描微动作写出人物极度克制的情绪涌动？</div>
+      <div class="cq-cn">Show, Don't Tell 最高阶手法</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">改写生理细节与停顿：<span class="kw">激动忍泪</span>→“喉咙像堵了一团温热的棉花，话到嘴边只化作死死攥紧的水杯指节”；<span class="kw">忍怒离开</span>→“轻轻合上门的咔哒声”“把那半页稿纸反复对齐桌角”。</div>
+        <div class="cq-mask-hint">点击揭晓答案</div>
+      </div>
+    </div>
+
+    <!-- desc 4 -->
+    <div class="concept-card" data-part="desc">
+      <div class="cq-head"><span class="q-tag">描写雅言与病句 · #19</span><span class="badge-ext">高危成语排雷</span></div>
+      <div class="cq-en">考场作文四大“极易望文生义错用”的高频成语陷阱：首当其冲、差强人意、万人空巷、不以为然！</div>
+      <div class="cq-cn">用错一个成语直接拉低 Style 档位</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">① <span class="kw">首当其冲</span>=最先遭受打击/灾难（绝非带头冲锋）；② <span class="kw">差强人意</span>=大体尚能让人满意（微褒，非非常失望）；③ <span class="kw">万人空巷</span>=全城出门欢迎导致巷子空了（非冷清无人）；④ <span class="kw">不以为然</span>=认为不对（表否定，非不在乎“不以为意”）。</div>
+        <div class="cq-mask-hint">点击揭晓答案</div>
+      </div>
+    </div>
+
+    <!-- desc 5 -->
+    <div class="concept-card" data-part="desc">
+      <div class="cq-head"><span class="q-tag">描写雅言与病句 · #20</span><span class="badge-core">Style 13 分铁律</span></div>
+      <div class="cq-en">考前交卷自查 Style &amp; Accuracy（13 分）的最后三把扫雷剪刀是什么？</div>
+      <div class="cq-cn">绝不因低级笔误丢掉近半壁作文分</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">① <span class="kw">砍“通过…使…”</span>（补全主语）与<span class="kw">拆欧化长定语</span>（化为顺畅短流水句）；② <span class="kw">统一“的/地/得”与实心句号“。”</span>（消灭一逗到底）；③ <span class="kw">简繁全卷死守一致</span>（绝不在纯简体卷里露出一颗“這/說/體/學”）。</div>
+        <div class="cq-mask-hint">点击揭晓答案</div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+        <nav class="chapter-pager" aria-label="学科切换导航">
+          <div><a class="pager-btn" href="F04_ESL_0510_Final_Sprint.html">← F04 · ESL 0510 听力阅读写作三线冲刺</a></div>
+          <div><a class="pager-btn primary" href="index.html">🎯 返回 6 科期末冲刺总控台</a></div>
+          <div><a class="pager-btn" href="F06_GP_0457_Final_Sprint.html">F06 · 全球视野 0457 Q1–Q4 书面笔试终极冲刺 →</a></div>
+        </nav>
+      </div>
+    </main>
+  </div>
+
+  <button type="button" class="back-top-btn" id="backTopBtn" title="返回顶部">↑</button>
+
+  <script>
+(function () {
+  'use strict';
+
+  const THEME_KEY = 'igcse_final_sprint_theme';
+  const subCode = (document.body && document.body.getAttribute('data-chapter-code')) || 'HUB';
+  const STORAGE_PREFIX = 'igcse_final_sprint_' + subCode.toLowerCase() + '_';
+  const htmlEl = document.documentElement;
+  const bodyEl = document.body;
+
+  let currentViewMode = localStorage.getItem(STORAGE_PREFIX + 'viewMode') || 'all';
+  let activeConceptPart = 'all';
+  let quizMasked = localStorage.getItem(STORAGE_PREFIX + 'quizMasked') === '1';
+  let allMsExpanded = false;
+  let masteredIds = [];
+  let activeTimerId = null;
+  try {
+    masteredIds = JSON.parse(localStorage.getItem(STORAGE_PREFIX + 'mastered') || '[]');
+    if (!Array.isArray(masteredIds)) masteredIds = [];
+  } catch (e) {
+    masteredIds = [];
+  }
+
+  // ---------- 1. Theme ----------
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+  function applyTheme(theme) {
+    htmlEl.setAttribute('data-theme', theme);
+    if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem(THEME_KEY, theme);
+  }
+  applyTheme(localStorage.getItem(THEME_KEY) || 'light');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      applyTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  }
+
+  // ---------- 2. View Modes (All / Summary / Practice / Clinic / Cards) ----------
+  function applyViewMode(mode) {
+    currentViewMode = mode;
+    bodyEl.classList.remove('mode-summary', 'mode-practice', 'mode-clinic', 'mode-cards');
+    if (mode !== 'all') bodyEl.classList.add('mode-' + mode);
+    document.querySelectorAll('[data-view-mode]').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-view-mode') === mode);
+    });
+    localStorage.setItem(STORAGE_PREFIX + 'viewMode', mode);
+  }
+  document.querySelectorAll('[data-view-mode]').forEach(function (btn) {
+    btn.addEventListener('click', function () { applyViewMode(btn.getAttribute('data-view-mode')); });
+  });
+  applyViewMode(currentViewMode);
+
+  // ---------- 3. Sidebar ----------
+  const sidebar = document.getElementById('sidebar');
+  const menuToggle = document.getElementById('menuToggle');
+  if (menuToggle && sidebar) {
+    menuToggle.addEventListener('click', function () { sidebar.classList.toggle('open'); });
+    sidebar.querySelectorAll('.nav-link').forEach(function (lnk) {
+      lnk.addEventListener('click', function () {
+        if (window.innerWidth <= 980) sidebar.classList.remove('open');
+      });
+    });
+  }
+  document.querySelectorAll('.nav-unit-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const unit = btn.closest('.nav-unit');
+      if (unit) unit.classList.toggle('collapsed');
+    });
+  });
+
+  // ---------- 4. Mastery Progress ----------
+  const progressText = document.getElementById('progressText');
+  const progressFill = document.getElementById('progressFill');
+  const masterBtns = Array.from(document.querySelectorAll('.master-btn'));
+  const totalSections = masterBtns.length;
+  const validIds = new Set(masterBtns.map(function (b) { return b.getAttribute('data-section-id'); }));
+
+  function renderMastery() {
+    const doneList = masteredIds.filter(function (id) { return validIds.has(id); });
+    localStorage.setItem(STORAGE_PREFIX + 'total', String(totalSections));
+    if (progressText) progressText.textContent = doneList.length + '/' + totalSections;
+    if (progressFill && totalSections > 0) {
+      progressFill.style.width = Math.round((doneList.length / totalSections) * 100) + '%';
+    }
+    masterBtns.forEach(function (btn) {
+      const sid = btn.getAttribute('data-section-id');
+      const done = doneList.indexOf(sid) !== -1;
+      btn.classList.toggle('is-mastered', done);
+      btn.textContent = done ? '✓ 已掌握' : '○ 标记掌握';
+    });
+    document.querySelectorAll('.nav-link').forEach(function (lnk) {
+      const id = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('mastered', doneList.indexOf(id) !== -1);
+    });
+  }
+  masterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const sid = btn.getAttribute('data-section-id');
+      const idx = masteredIds.indexOf(sid);
+      if (idx === -1) masteredIds.push(sid);
+      else masteredIds.splice(idx, 1);
+      localStorage.setItem(STORAGE_PREFIX + 'mastered', JSON.stringify(masteredIds));
+      renderMastery();
+    });
+  });
+  if (totalSections > 0) renderMastery();
+
+  // ---------- 5. Toggle Details & Print ----------
+  const toggleAllMs = document.getElementById('toggleAllMs');
+  if (toggleAllMs) {
+    toggleAllMs.addEventListener('click', function () {
+      allMsExpanded = !allMsExpanded;
+      document.querySelectorAll('details.ms-details').forEach(function (det) { det.open = allMsExpanded; });
+      const lbl = toggleAllMs.querySelector('.btn-label');
+      if (lbl) lbl.textContent = allMsExpanded ? '收起解析' : '展开解析';
+      toggleAllMs.classList.toggle('active', allMsExpanded);
+    });
+  }
+  const printBtn = document.getElementById('printBtn');
+  if (printBtn) printBtn.addEventListener('click', function () { window.print(); });
+
+  // ---------- 6. Search ----------
+  const searchInput = document.getElementById('searchInput');
+  const searchClear = document.getElementById('searchClear');
+  const searchBar = document.getElementById('searchBar');
+  const searchSummary = document.getElementById('searchSummary');
+  const searchResetBtn = document.getElementById('searchResetBtn');
+  const emptySearchNotice = document.getElementById('emptySearchNotice');
+
+  function runSearch() {
+    if (!searchInput) return;
+    const raw = searchInput.value.trim().toLowerCase();
+    if (searchClear) searchClear.style.display = raw ? 'block' : 'none';
+    const sections = Array.from(document.querySelectorAll('.topic-section'));
+    if (!raw) {
+      sections.forEach(function (s) { s.classList.remove('search-dim'); });
+      if (searchBar) searchBar.classList.remove('visible');
+      if (emptySearchNotice) emptySearchNotice.style.display = 'none';
+      return;
+    }
+    let hits = 0;
+    sections.forEach(function (sec) {
+      const ok = sec.textContent.toLowerCase().indexOf(raw) !== -1;
+      sec.classList.toggle('search-dim', !ok);
+      if (ok) hits++;
+    });
+    if (searchBar) searchBar.classList.add('visible');
+    if (searchSummary) searchSummary.textContent = '关键词 “' + searchInput.value.trim() + '” 匹配 ' + hits + ' 个板块';
+    if (emptySearchNotice) emptySearchNotice.style.display = hits === 0 ? 'block' : 'none';
+  }
+  if (searchInput) searchInput.addEventListener('input', runSearch);
+  function resetSearch() { if (searchInput) searchInput.value = ''; runSearch(); }
+  if (searchClear) searchClear.addEventListener('click', resetSearch);
+  if (searchResetBtn) searchResetBtn.addEventListener('click', resetSearch);
+
+  // ---------- 7. Interactive MCQ ----------
+  document.querySelectorAll('.exam-q[data-mcq-answer]').forEach(function (qBox) {
+    const ans = qBox.getAttribute('data-mcq-answer');
+    const fb = qBox.querySelector('.mcq-feedback');
+    const opts = qBox.querySelectorAll('.mcq-opt');
+    opts.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const chosen = btn.getAttribute('data-opt');
+        opts.forEach(function (o) { o.classList.remove('correct', 'wrong'); });
+        if (chosen === ans) {
+          btn.classList.add('correct');
+          if (fb) { fb.textContent = fb.getAttribute('data-ok') || '✅ 回答正确！'; fb.className = 'mcq-feedback visible ok'; }
+        } else {
+          btn.classList.add('wrong');
+          opts.forEach(function (o) { if (o.getAttribute('data-opt') === ans) o.classList.add('correct'); });
+          if (fb) { fb.textContent = fb.getAttribute('data-err') || '❌ 未选对，请核对下方 Mark Scheme 解析。'; fb.className = 'mcq-feedback visible err'; }
+        }
+      });
+    });
+  });
+
+  // ---------- 8. Flashcards ----------
+  const conceptCountPill = document.getElementById('conceptCountPill');
+  const conceptQuizToggle = document.getElementById('conceptQuizToggle');
+
+  function filterConcepts() {
+    const cards = Array.from(document.querySelectorAll('#conceptGrid .concept-card'));
+    if (!cards.length) return;
+    let visible = 0;
+    cards.forEach(function (card) {
+      const part = card.getAttribute('data-part');
+      const show = activeConceptPart === 'all' || part === activeConceptPart;
+      card.classList.toggle('concept-hidden', !show);
+      if (show) visible++;
+    });
+    if (conceptCountPill) conceptCountPill.textContent = '显示 ' + visible + ' / ' + cards.length + ' 题';
+  }
+  document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      activeConceptPart = btn.getAttribute('data-concept-part');
+      document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      filterConcepts();
+    });
+  });
+  function applyQuizMask(masked) {
+    quizMasked = masked;
+    document.querySelectorAll('#conceptGrid .concept-card').forEach(function (c) { c.classList.toggle('masked', masked); });
+    if (conceptQuizToggle) {
+      conceptQuizToggle.textContent = masked ? '👁️ 显示全部答案' : '🙈 开启遮罩自测';
+      conceptQuizToggle.classList.toggle('active', masked);
+    }
+    localStorage.setItem(STORAGE_PREFIX + 'quizMasked', masked ? '1' : '0');
+  }
+  if (conceptQuizToggle) {
+    conceptQuizToggle.addEventListener('click', function () { applyQuizMask(!quizMasked); });
+  }
+  document.querySelectorAll('#conceptGrid .cq-answer').forEach(function (box) {
+    box.addEventListener('click', function () {
+      const card = box.closest('.concept-card');
+      if (card && card.classList.contains('masked')) card.classList.remove('masked');
+    });
+  });
+
+  function countWords(str) {
+    const cleaned = (str || '').trim();
+    return cleaned ? cleaned.split(/\s+/).filter(Boolean).length : 0;
+  }
+  function countChiChars(str) {
+    return (str || '').replace(/[\s\u3000]/g, '').length;
+  }
+  function setupTimer(btnStart, btnReset, clkEl, totalMinutes) {
+    let secLeft = totalMinutes * 60;
+    const fmt = function (s) {
+      const m = Math.floor(s / 60), r = s % 60;
+      return String(m).padStart(2, '0') + ':' + String(r).padStart(2, '0');
+    };
+    if (clkEl) clkEl.textContent = fmt(secLeft);
+    if (btnStart) {
+      btnStart.addEventListener('click', function () {
+        if (activeTimerId) {
+          clearInterval(activeTimerId);
+          activeTimerId = null;
+          btnStart.textContent = '▶ 继续计时';
+        } else {
+          btnStart.textContent = '⏸ 暂停计时';
+          activeTimerId = setInterval(function () {
+            if (secLeft > 0) secLeft--;
+            if (clkEl) clkEl.textContent = fmt(secLeft);
+            if (secLeft === 0) {
+              clearInterval(activeTimerId);
+              activeTimerId = null;
+              btnStart.textContent = '⏰ 时间到';
+            }
+          }, 1000);
+        }
+      });
+    }
+    if (btnReset) {
+      btnReset.addEventListener('click', function () {
+        if (activeTimerId) { clearInterval(activeTimerId); activeTimerId = null; }
+        secLeft = totalMinutes * 60;
+        if (clkEl) clkEl.textContent = fmt(secLeft);
+        if (btnStart) btnStart.textContent = '⏳ 开始计时';
+      });
+    }
+  }
+
+  // ---------- 9. Subject Interactive Labs (f01 - f06) ----------
+  function mountSprintLab(el) {
+    const t = el.getAttribute('data-lab-type');
+    if (!t) return;
+    const bindInputs = function (fn) {
+      el.querySelectorAll('input,select,textarea').forEach(function (inp) {
+        inp.addEventListener('input', fn);
+        inp.addEventListener('change', fn);
+      });
+      fn();
+    };
+
+    if (t === 'f01') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">📐 F01 交互冲刺台 · 9 章必背公式/Paper 1 易错检索 + 80 分模考估分器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>切换范围板块：<select id="f1Mod">' +
+        '<option value="ch1_2">Ch1–2 函数/反函数/二次最值与判别式</option>' +
+        '<option value="ch3_4">Ch3–4 多项式因式余数与绝对值不等式</option>' +
+        '<option value="ch5_6">Ch5–6 指数对数换底与直线/Linear Law</option>' +
+        '<option value="ch10_11">Ch10–11 排列组合/二项展开/AP-GP-S∞</option>' +
+        '<option value="ch12_14">Ch12+Ch14 基础求导法则 + 指数对数三角导数</option></select></label>' +
+        '<label>Ch1–6 (/20)：<input type="number" id="f1S1" value="17" min="0" max="20"></label>' +
+        '<label>Ch10 计数 (/20)：<input type="number" id="f1S2" value="16" min="0" max="20"></label>' +
+        '<label>Ch11 级数 (/20)：<input type="number" id="f1S3" value="17" min="0" max="20"></label>' +
+        '<label>Ch14 求导 (/20)：<input type="number" id="f1S4" value="16" min="0" max="20"></label>' +
+        '<button type="button" class="tab-btn active" id="f1Start">⏳ 120min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f1Reset">重置</button>' +
+        '<span class="timer-big" id="f1Clk">120:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f1Out"></div><div class="readout-pill" id="f1ScoreOut"></div></div></div>';
+      const notes = {
+        ch1_2: '<strong>Ch1–2 必检红线</strong>：① fg(x) 先代入里层 g(x) 再喂给 f；反函数成立条件是 <strong>1-to-1</strong>，且 Domain(f⁻¹)=Range(f)；② 判别式 b²−4ac > 0 相交两点，≤ 0 恒在 x 轴一侧时还需检查首项系数 a 符号；③ 二次不等式<strong>必须先因式分解找临界根画草图</strong>，严禁直接拆解两边开方！',
+        ch3_4: '<strong>Ch3–4 必检红线</strong>：① x−a 是因式 ⇔ f(a)=0；余数定理求得是 f(−b/a)；② 三次方程解先试 ±1, ±2 找一实根再长除/综合除法；③ |ax+b| < |cx+d| 在 P1 无计算器优先<strong>两边平方化二次不等式</strong>或画出 V 字折线求交点！',
+        ch5_6: '<strong>Ch5–6 必检红线</strong>：① logₐ(M)+logₐ(N)=logₐ(MN)，但 logₐ(M+N) 不能拆！② 解完对数方程<strong>必须回代验真数 > 0 与底数 > 0 且 ≠ 1</strong>；③ Linear Law 化成 Y = mX + c：先辨识纵轴 Y 与横轴 X，再用直线斜率 m 与截距 c 反推指数/幂函数参数！',
+        ch10_11: '<strong>Ch10–11 必检红线</strong>：① 排列看顺序 ⁿPᵣ，分组抽选不看顺序 ⁿCᵣ；“不相邻”用插空法，“至少”用总−反面；② 二项式 (a+b)ⁿ 通项 Tᵣ₊₁ = ⁿCᵣ aⁿ⁻ʳ bʳ（记住 r 比第几项小 1！）；③ S∞ = a/(1−r) <strong>必须验证 |r| < 1</strong>，且公式表虽给 Sₙ/S∞ 仍建议熟记秒杀！',
+        ch12_14: '<strong>Ch12+Ch14 求导链</strong>：① 先熟用基础求导 d/dx(xⁿ)=nxⁿ⁻¹、乘积 uv′+vu′、商法则 (vu′−uv′)/v² 与链式复合；② 再衔接 Ch14：d/dx(eᵃˣ⁺ᵇ)=aeᵃˣ⁺ᵇ，d/dx(ln(ax+b))=a/(ax+b)，d/dx(sin ax)=a cos ax，d/dx(cos ax)=−a sin ax（负号极易丢！），d/dx(tan ax)=a sec²ax（<strong>求导一律用弧度 rad</strong>）！'
+      };
+      bindInputs(function () {
+        el.querySelector('#f1Out').innerHTML = notes[el.querySelector('#f1Mod').value];
+        const v1 = Math.max(0, Math.min(20, Number(el.querySelector('#f1S1').value) || 0));
+        const v2 = Math.max(0, Math.min(20, Number(el.querySelector('#f1S2').value) || 0));
+        const v3 = Math.max(0, Math.min(20, Number(el.querySelector('#f1S3').value) || 0));
+        const v4 = Math.max(0, Math.min(20, Number(el.querySelector('#f1S4').value) || 0));
+        const tot = v1 + v2 + v3 + v4;
+        const pct = Math.round((tot / 80) * 100);
+        const band = pct >= 85 ? 'Grade A* 冲刺区间' : (pct >= 72 ? 'Grade A 稳健线' : (pct >= 58 ? 'Grade B/C 需优先回刷错题模块' : '基础漏洞明显，请先回到对应章补推导'));
+        el.querySelector('#f1ScoreOut').innerHTML = '<strong>期末模拟估分：' + tot + ' / 80（' + pct + '%）</strong> ｜ 预测表现：' + band + '。';
+      });
+      setupTimer(el.querySelector('#f1Start'), el.querySelector('#f1Reset'), el.querySelector('#f1Clk'), 120);
+    } else if (t === 'f02') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">⚙️ F02 物理 Ch 1–4 交互验算与期末估分计时台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>验算模型：<select id="f2Calc">' +
+        '<option value="density">Ch1 密度计算 ρ = m / V</option>' +
+        '<option value="accel">Ch2 匀变速加速度 a = (v − u) / t</option>' +
+        '<option value="impulse">Ch3 冲量与动量变化 FΔt = mΔv</option>' +
+        '<option value="moment">Ch4 力矩 M = F × d⊥</option></select></label>' +
+        '<label><span id="f2ALbl">质量 m (g/kg)</span>：<input type="number" id="f2A" value="250" step="any"></label>' +
+        '<label><span id="f2BLbl">体积 V (cm³/m³)</span>：<input type="number" id="f2B" value="50" step="any"></label>' +
+        '<label>Paper2 (/15)：<input type="number" id="f2_1" value="13" min="0" max="15"></label>' +
+        '<label>Paper4 (/35)：<input type="number" id="f2_2" value="30" min="0" max="35"></label>' +
+        '<label>Paper6 (/15)：<input type="number" id="f2_3" value="13" min="0" max="15"></label>' +
+        '<button type="button" class="tab-btn active" id="f2Start">⏳ 75min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f2Reset">重置</button>' +
+        '<span class="timer-big" id="f2Clk">75:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f2Out"></div><div class="readout-pill" id="f2ScoreOut"></div></div></div>';
+      const sel = el.querySelector('#f2Calc');
+      const aLbl = el.querySelector('#f2ALbl'), bLbl = el.querySelector('#f2BLbl');
+      const syncLabels = function () {
+        const m = sel.value;
+        if (m === 'density') { aLbl.textContent = '质量 m (g)'; bLbl.textContent = '体积 V (cm³)'; }
+        else if (m === 'accel') { aLbl.textContent = '速度增量 Δv (m/s)'; bLbl.textContent = '时间 t (s)'; }
+        else if (m === 'impulse') { aLbl.textContent = '合力 F (N)'; bLbl.textContent = '作用时间 Δt (s)'; }
+        else { aLbl.textContent = '力 F (N)'; bLbl.textContent = '垂直力臂 d⊥ (m)'; }
+      };
+      sel.addEventListener('change', syncLabels);
+      syncLabels();
+      bindInputs(function () {
+        const m = sel.value, a = Number(el.querySelector('#f2A').value) || 0, b = Number(el.querySelector('#f2B').value) || 0;
+        let resText = '';
+        if (m === 'density') {
+          const rho = b !== 0 ? (a / b) : 0;
+          resText = '<strong>ρ = m / V = ' + (b !== 0 ? rho.toFixed(3) : '∞（分母勿为0）') + ' g/cm³</strong>（×1000 = ' + (b !== 0 ? (rho * 1000).toFixed(1) : '—') + ' kg/m³）。<br><strong>避坑</strong>：与水 ρ=1.0 g/cm³ 比较，小于则漂浮，大于则下沉；结果保留 2–3 位有效数字！';
+        } else if (m === 'accel') {
+          const acc = b !== 0 ? (a / b) : 0;
+          resText = '<strong>a = Δv / t = ' + (b !== 0 ? acc.toFixed(3) : '∞') + ' m/s²</strong>。<br><strong>避坑</strong>：v-t 图斜率即加速度（斜率恒定为匀加速）；v-t 曲线下方面积即路程/位移！';
+        } else if (m === 'impulse') {
+          const imp = a * b;
+          resText = '<strong>Impulse = FΔt = ' + imp.toFixed(3) + ' N·s（或 kg·m/s）</strong>。<br><strong>Mark Scheme 踩分词</strong>：安全气囊/缓冲垫降低 F 的原因是 <code>increases time of collision (Δt)</code>，对同一 <code>Δp</code> 则 <code>F = Δp / Δt</code> 减小！';
+        } else {
+          const mom = a * b;
+          resText = '<strong>Moment = F × d⊥ = ' + mom.toFixed(3) + ' N·m</strong>。<br><strong>平衡双条件</strong>：① 合外力为 0；② 顺时针总力矩 = 逆时针总力矩（<code>ΣM_cw = ΣM_acw</code>），d⊥ 必须垂直于力的作用线！';
+        }
+        el.querySelector('#f2Out').innerHTML = resText;
+        const p2 = Math.max(0, Math.min(15, Number(el.querySelector('#f2_1').value) || 0));
+        const p4 = Math.max(0, Math.min(35, Number(el.querySelector('#f2_2').value) || 0));
+        const p6 = Math.max(0, Math.min(15, Number(el.querySelector('#f2_3').value) || 0));
+        const tot = p2 + p4 + p6, pct = Math.round((tot / 65) * 100);
+        el.querySelector('#f2ScoreOut').innerHTML = '<strong>Ch 1–4 模拟卷总分：' + tot + ' / 65（' + pct + '%）</strong> ｜ ' + (pct >= 80 ? '达到 A* 实力！注意保持 Paper 4 作图与 ATP 7 分设计完整性' : '建议先复盘失分集中模块（MCQ/结构简答/ATP 实验）');
+      });
+      setupTimer(el.querySelector('#f2Start'), el.querySelector('#f2Reset'), el.querySelector('#f2Clk'), 75);
+    } else if (t === 'f03') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">⚗️ F03 化学 Ch 1, 2, 4, 6 核心交互台 · 6 大电解产物与配平检查 + 65 分估分</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>选择 Ch6 电解/电池体系：<select id="f3Cell">' +
+        '<option value="pbbr2">1. 熔融溴化铅 Molten PbBr₂(l) · 碳电极</option>' +
+        '<option value="nacl_conc">2. 浓氯化钠溶液 Conc. NaCl(aq) · 碳电极</option>' +
+        '<option value="h2so4_dil">3. 稀硫酸 Dilute H₂SO₄(aq) · 碳/铂电极</option>' +
+        '<option value="cuso4_inert">4. 硫酸铜溶液 CuSO₄(aq) · 惰性碳/铂电极</option>' +
+        '<option value="cuso4_cu">5. 硫酸铜溶液 CuSO₄(aq) · 活性铜电极</option>' +
+        '<option value="fuel_cell">6. 氢氧燃料电池 H₂–O₂ Fuel Cell</option></select></label>' +
+        '<label>Paper2 (/15)：<input type="number" id="f3_1" value="13" min="0" max="15"></label>' +
+        '<label>Paper4 (/35)：<input type="number" id="f3_2" value="29" min="0" max="35"></label>' +
+        '<label>Paper6 (/15)：<input type="number" id="f3_3" value="13" min="0" max="15"></label>' +
+        '<button type="button" class="tab-btn active" id="f3Start">⏳ 75min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f3Reset">重置</button>' +
+        '<span class="timer-big" id="f3Clk">75:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f3Out"></div><div class="readout-pill" id="f3ScoreOut"></div></div></div>';
+      const cells = {
+        pbbr2: '<strong>熔融 PbBr₂(l)（必须加热至熔融才存在自由移动离子）</strong><br>• 阴极 (−) 还原：<code>Pb²⁺(l) + 2e⁻ → Pb(l)</code>（现象：银白色熔融金属珠）<br>• 阳极 (+) 氧化：<code>2Br⁻(l) → Br₂(g) + 2e⁻</code>（现象：红棕色气体 <strong>red-brown vapour</strong>）<br>⚠️ 高频坑：若题目写成室温固态 PbBr₂(s)，则完全不导电！',
+        nacl_conc: '<strong>浓 NaCl(aq) 氯碱电解（碳电极）</strong><br>• 阴极 (−)：H⁺ 排在 Na⁺ 后先得电子：<code>2H⁺(aq) + 2e⁻ → H₂(g)</code>（无色气泡，燃爆声）<br>• 阳极 (+)：高浓度 Cl⁻ 优先放电：<code>2Cl⁻(aq) → Cl₂(g) + 2e⁻</code>（黄绿色刺激气体，使湿润蓝色石蕊试纸先变红后褪色）<br>• 溶液变化：留下 Na⁺ 与 OH⁻，pH 升高呈碱性 NaOH(aq)！',
+        h2so4_dil: '<strong>稀 H₂SO₄(aq)（实质即电解水！）</strong><br>• 阴极 (−)：<code>2H⁺ + 2e⁻ → H₂(g)</code>（气体体积比 2 份）<br>• 阳极 (+)：SO₄²⁻ 从不放电，OH⁻ 氧化：<code>4OH⁻ → O₂(g) + 2H₂O + 4e⁻</code>（体积比 1 份，复燃带火星木条）<br>⚠️ 记住 H₂ : O₂ 体积比 = <strong>2 : 1</strong>！',
+        cuso4_inert: '<strong>CuSO₄(aq)（惰性石墨/铂电极）</strong><br>• 阴极 (−)：Cu²⁺ 较 H⁺ 更不活泼先还原：<code>Cu²⁺(aq) + 2e⁻ → Cu(s)</code>（红棕色固体覆盖电极）<br>• 阳极 (+)：<code>4OH⁻ → O₂(g) + 2H₂O + 4e⁻</code>（无色气泡）<br>• 溶液变化：Cu²⁺ 消耗且留下 H⁺+SO₄²⁻，<strong>蓝色变浅直至无色，pH 下降</strong>！',
+        cuso4_cu: '<strong>CuSO₄(aq)（活性铜电极 — 粗铜精炼/电镀铜）</strong><br>• 阴极 (−)：<code>Cu²⁺(aq) + 2e⁻ → Cu(s)</code>（阴极增重，纯铜析出）<br>• 阳极 (+)：铜阳极自身氧化溶解：<code>Cu(s) → Cu²⁺(aq) + 2e⁻</code>（阳极减重消耗）<br>• 溶液变化：Cu²⁺ 浓度不变，<strong>溶液始终保持蓝色且 pH 不变</strong>！',
+        fuel_cell: '<strong>氢氧燃料电池 H₂–O₂ Fuel Cell（2023+ 大纲必考！）</strong><br>• 总反应：<code>2H₂(g) + O₂(g) → 2H₂O(l)</code>（唯一产物只有水，零温室气体排放）<br>• 核心优势 vs 汽油内燃机：能量转换效率更高、污染小、无运动磨损；缺点：氢气储存/运输需高压低温且基础设施少（大多数氢气仍来自化石燃料裂解）。'
+      };
+      bindInputs(function () {
+        el.querySelector('#f3Out').innerHTML = cells[el.querySelector('#f3Cell').value];
+        const p2 = Math.max(0, Math.min(15, Number(el.querySelector('#f3_1').value) || 0));
+        const p4 = Math.max(0, Math.min(35, Number(el.querySelector('#f3_2').value) || 0));
+        const p6 = Math.max(0, Math.min(15, Number(el.querySelector('#f3_3').value) || 0));
+        const tot = p2 + p4 + p6, pct = Math.round((tot / 65) * 100);
+        el.querySelector('#f3ScoreOut').innerHTML = '<strong>Ch 1,2,4,6 模拟估分：' + tot + ' / 65（' + pct + '%）</strong> ｜ 提示：核对电化学半方程式电荷守恒与状态符号 (s)(l)(g)(aq)！';
+      });
+      setupTimer(el.querySelector('#f3Start'), el.querySelector('#f3Reset'), el.querySelector('#f3Clk'), 75);
+    } else if (t === 'f04') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🎧 F04 ESL 0510 写作词数红线仪 (120–160 词) + 听读写 100 分估分计时台</div></div>' +
+        '<div class="lab-panel write-box"><div class="lab-controls">' +
+        '<label>写作文体：<select id="f4Fmt">' +
+        '<option value="email">Ex 5 Informal Email（15m · 亲切自然）</option>' +
+        '<option value="article">Ex 6 Article（15m · 引人入胜）</option>' +
+        '<option value="review">Ex 6 Review（15m · 观点+推荐）</option>' +
+        '<option value="report">Ex 6 Formal Report（15m · 客观分段）</option></select></label>' +
+        '<span class="wc-meter wc-warn" id="f4Wc">当前词数：0 词 (目标 120–160 词)</span>' +
+        '</div><textarea class="write-textarea" id="f4Txt" placeholder="在此输入 Ex 5 / Ex 6 练习片段或完整作文，系统实时监测 120–160 词黄金靶区与文体 Checklist..."></textarea>' +
+        '<div class="lab-controls">' +
+        '<label>阅读 Ex1-4 (/30)：<input type="number" id="f4_1" value="26" min="0" max="30"></label>' +
+        '<label>写作 Ex5-6 (/30)：<input type="number" id="f4_2" value="25" min="0" max="30"></label>' +
+        '<label>听力 P2 (/40)：<input type="number" id="f4_3" value="35" min="0" max="40"></label>' +
+        '<button type="button" class="tab-btn active" id="f4Start">⏳ 120min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f4Reset">重置</button>' +
+        '<span class="timer-big" id="f4Clk">120:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f4Out"></div><div class="readout-pill" id="f4ScoreOut"></div></div></div>';
+      const fmtGuide = {
+        email: '<strong>Ex 5 Email checklist</strong>：① 3 个提示要点全部落地且各加 1–2 句细节扩展；② 用缩写（I\'m / can\'t）与自然过渡（By the way / Guessing what）；③ 禁用过分正式公文腔！',
+        article: '<strong>Ex 6 Article checklist</strong>：① 亮眼标题 + 设问 Hook 开篇；② 半正式/活泼但有逻辑的探讨；③ 结尾向读者发出行动号召或开放思考。',
+        review: '<strong>Ex 6 Review checklist</strong>：① 背景简述 + 平衡评价优缺点（绝不剧透核心结局！）；② 明确给出推荐人群与星级判断。',
+        report: '<strong>Ex 6 Report checklist</strong>：① 必备 To/From/Date/Subject 或清晰小标题（Introduction / Findings / Recommendations）；② 全篇禁缩写、少用第一人称情感词，多用被动语态与数据汇报口吻！'
+      };
+      const ta = el.querySelector('#f4Txt'), wc = el.querySelector('#f4Wc');
+      bindInputs(function () {
+        const w = countWords(ta.value);
+        wc.textContent = '当前词数：' + w + ' 词 (目标 120–160 词)';
+        wc.className = 'wc-meter ' + (w === 0 ? 'wc-warn' : (w >= 120 && w <= 160 ? 'wc-ok' : (w < 90 || w > 190 ? 'wc-err' : 'wc-warn')));
+        el.querySelector('#f4Out').innerHTML = fmtGuide[el.querySelector('#f4Fmt').value] + '<br><strong>字数反馈：</strong>' + (w === 0 ? '请在上方练习英文写作段落。' : (w < 120 ? '字数偏少，检查是否缺少扩展细节导致 Content 拿不满！' : (w > 160 ? '超出建议上限，注意精简避免冗长跑题或来不及检查语法！' : '词数精准落在 120–160 黄金区间！')));
+        const r = Math.max(0, Math.min(30, Number(el.querySelector('#f4_1').value) || 0));
+        const wr = Math.max(0, Math.min(30, Number(el.querySelector('#f4_2').value) || 0));
+        const li = Math.max(0, Math.min(40, Number(el.querySelector('#f4_3').value) || 0));
+        el.querySelector('#f4ScoreOut').innerHTML = '<strong>听读写三线总分：' + (r + wr + li) + ' / 100</strong> ｜ Reading ' + r + '/30 · Writing ' + wr + '/30 · Listening ' + li + '/40。';
+      });
+      setupTimer(el.querySelector('#f4Start'), el.querySelector('#f4Reset'), el.querySelector('#f4Clk'), 120);
+    } else if (t === 'f05') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🖋️ F05 语文 0509 双作文实测汉字计 (400–600 字) + 期末卷估分台</div></div>' +
+        '<div class="lab-panel write-box"><div class="lab-controls">' +
+        '<label>作文体裁（双 2 选 1）：<select id="f5Type">' +
+        '<option value="arg">Sec 1 议论文（鲜明立论 + 让步驳斥）</option>' +
+        '<option value="dis">Sec 1 讨论文（双面均衡辩证探讨）</option>' +
+        '<option value="desc">Sec 2 描写文（五感微雕定格画面）</option>' +
+        '<option value="narr">Sec 2 记叙文（10 秒高潮+物象回环）</option></select></label>' +
+        '<span class="wc-meter wc-warn" id="f5Wc">当前有效汉字：0 字 (目标 400–600 字)</span>' +
+        '</div><textarea class="write-textarea" id="f5Txt" placeholder="输入作文片段或成稿，实时检测 400–600 汉字区与体裁避雷提示..."></textarea>' +
+        '<div class="lab-controls">' +
+        '<label>现代文+9分赏析 (/25)：<input type="number" id="f5_1" value="21" min="0" max="25"></label>' +
+        '<label>作文 1 (/25)：<input type="number" id="f5_2" value="21" min="0" max="25"></label>' +
+        '<label>作文 2 (/25)：<input type="number" id="f5_3" value="21" min="0" max="25"></label>' +
+        '<button type="button" class="tab-btn active" id="f5Start">⏳ 120min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f5Reset">重置</button>' +
+        '<span class="timer-big" id="f5Clk">120:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f5Out"></div><div class="readout-pill" id="f5ScoreOut"></div></div></div>';
+      const guides = {
+        arg: '<strong>议论文红线</strong>：开头亮明单边立场；至少 2 个深剖分论点（切忌只堆事例不议理）；必写 1 段“诚然……然而……”让步驳斥；避免写着写着变成两边都支持的讨论文！',
+        dis: '<strong>讨论文红线</strong>：正反双面篇幅大致平衡，用语保持客观冷静（如“支持者认为……”“然而也有观察指出……”），结尾做辩证权衡而不强行喊口号！',
+        desc: '<strong>描写文红线</strong>：严禁流水账叙事！以空间或时间顺序移动镜头，调用视觉光影、听觉质感、嗅觉与触感温度刻画氛围与人物微神态。',
+        narr: '<strong>记叙文红线</strong>：聚焦单个高张力小事件，30% 篇幅精雕“高潮 10 秒慢动作与心理微变化”，用核心物象贯穿首尾回环收束！'
+      };
+      const ta = el.querySelector('#f5Txt'), wc = el.querySelector('#f5Wc');
+      bindInputs(function () {
+        const n = countChiChars(ta.value);
+        wc.textContent = '当前有效汉字：' + n + ' 字 (目标 400–600 字)';
+        wc.className = 'wc-meter ' + (n === 0 ? 'wc-warn' : (n >= 400 && n <= 600 ? 'wc-ok' : (n < 350 || n > 660 ? 'wc-err' : 'wc-warn')));
+        el.querySelector('#f5Out').innerHTML = guides[el.querySelector('#f5Type').value] + '<br><strong>字数反馈：</strong>' + (n === 0 ? '请贴入或试写现代文/作文段落（400–600 字最稳妥落在 460–560 字）。' : (n < 400 ? '偏短，低于 400 字内容结构分 (C&S) 易被压至中档！' : (n > 600 ? '略超 600 字建议红线，请压缩冗余铺垫防草率结尾或错字增多。' : '有效字数正处于 400–600 黄金得分带！')));
+        const s1 = Math.max(0, Math.min(25, Number(el.querySelector('#f5_1').value) || 0));
+        const s2 = Math.max(0, Math.min(25, Number(el.querySelector('#f5_2').value) || 0));
+        const s3 = Math.max(0, Math.min(25, Number(el.querySelector('#f5_3').value) || 0));
+        const tot = s1 + s2 + s3;
+        el.querySelector('#f5ScoreOut').innerHTML = '<strong>阅读+双作文模考估分：' + tot + ' / 75（' + Math.round((tot / 75) * 100) + '%）</strong> ｜ 阅读赏析 ' + s1 + '/25 · 作文1 ' + s2 + '/25 · 作文2 ' + s3 + '/25。';
+      });
+      setupTimer(el.querySelector('#f5Start'), el.querySelector('#f5Reset'), el.querySelector('#f5Clk'), 120);
+    } else if (t === 'f06') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🌍 F06 GP 0457 Component 1 (Q1–Q4) 答题骨架器与 70 分/85min 模考台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>切换题型骨架：<select id="f6Q">' +
+        '<option value="q1">Q1 (约14分) · 概念辨析 (Fact/Opinion/Value/Bias) + 趋势提炼</option>' +
+        '<option value="q2a">Q2A (8分) · RAVEN 来源可信度与权威/目的评估</option>' +
+        '<option value="q2b">Q2B (8分) · 如何设计研究检验某主张 (4大核心要素)</option>' +
+        '<option value="q3">Q3 (16分) · Level 4 双论证正面交锋六维对比框架</option>' +
+        '<option value="q4">Q4 (24分) · 政策决策大作文五维权衡与四段结构</option></select></label>' +
+        '<label>Q1 (/14)：<input type="number" id="f6_1" value="12" min="0" max="14"></label>' +
+        '<label>Q2 (/16)：<input type="number" id="f6_2" value="13" min="0" max="16"></label>' +
+        '<label>Q3 (/16)：<input type="number" id="f6_3" value="13" min="0" max="16"></label>' +
+        '<label>Q4 (/24)：<input type="number" id="f6_4" value="20" min="0" max="24"></label>' +
+        '<button type="button" class="tab-btn active" id="f6Start">⏳ 85min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f6Reset">重置</button>' +
+        '<span class="timer-big" id="f6Clk">85:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f6Out"></div><div class="readout-pill" id="f6ScoreOut"></div></div></div>';
+      const fw = {
+        q1: '<strong>Q1 满分公式</strong>：① Fact（可核查数据/历史事实）vs Opinion（个人看法）vs Prediction（未来预测）vs Value Judgement（道德/好坏评判“should/unfair”）；② 辨析理由必须紧扣原句引号并点明“能否被独立核实”。',
+        q2a: '<strong>Q2A 8 分模板</strong>：从来源<strong>双面</strong>评估：① Strength（如作者专业身份/同行评审/数据样本明确/承认局限性）；② Weakness（如既得利益 vested interest、情感煽动用词、无引文孤证、样本过小/过时）——切忌空背 RAVEN 字母不结合材料！',
+        q2b: '<strong>Q2B 研究设计四要素</strong>：① <strong>Who / Sample</strong>（谁是受试/样本量与随机分层代表性）；② <strong>Method / Instrument</strong>（对照实验、问卷防诱导提问或访谈设计）；③ <strong>Secondary Verification</strong>（比对官方统计/纵贯追踪）；④ <strong>Reliability / Bias Control</strong>（消除利益冲突与季节性偏差）。',
+        q3: '<strong>Q3 Level 4 铁律</strong>：<strong>绝不把 Source A 写一段再把 Source B 写一段！</strong>每段确立 1 个对比维度（① 实证与数据支撑度 → ② 因果推理严密性 vs 逻辑谬误 → ③ 视角平衡与偏见控制），用 <code>Whereas Source A..., Source B...</code> 正面交锋并最终裁决谁更具说服力！',
+        q4: '<strong>Q4 24 分四段闭环</strong>：① 段1 鲜明选边立论；② 段2 核心理由深度展开（引用材料+自身拓展视角）；③ 段3 <strong>对比另外 1–2 个备选方案为什么较弱</strong>（可行性/成本/长期与短期副作用）；④ 段4 让步防线（承认本方案潜在阻力并给出配套缓解措施）。'
+      };
+      bindInputs(function () {
+        el.querySelector('#f6Out').innerHTML = fw[el.querySelector('#f6Q').value];
+        const s1 = Math.max(0, Math.min(14, Number(el.querySelector('#f6_1').value) || 0));
+        const s2 = Math.max(0, Math.min(16, Number(el.querySelector('#f6_2').value) || 0));
+        const s3 = Math.max(0, Math.min(16, Number(el.querySelector('#f6_3').value) || 0));
+        const s4 = Math.max(0, Math.min(24, Number(el.querySelector('#f6_4').value) || 0));
+        const tot = s1 + s2 + s3 + s4, pct = Math.round((tot / 70) * 100);
+        el.querySelector('#f6ScoreOut').innerHTML = '<strong>Component 1 总分：' + tot + ' / 70（' + pct + '%）</strong> ｜ ' + (pct >= 80 ? '冲击 A* 顶尖区间！注意 Q3 正面比较与 Q4 备选方案对比论证' : '建议强化 Q3/Q4 分值最重的段落结构');
+      });
+      setupTimer(el.querySelector('#f6Start'), el.querySelector('#f6Reset'), el.querySelector('#f6Clk'), 85);
+    }
+  }
+  document.querySelectorAll('.lab-box[data-lab-type]').forEach(mountSprintLab);
+
+  // ---------- 10. Universal Personal Error Clinic ----------
+  function mountClinic(el) {
+    const code = el.getAttribute('data-clinic-subject') || subCode;
+    const key = 'igcse_final_sprint_clinic_' + code.toLowerCase();
+    let items = [];
+    try {
+      items = JSON.parse(localStorage.getItem(key) || '[]');
+      if (!Array.isArray(items)) items = [];
+    } catch (e) { items = []; }
+
+    el.innerHTML =
+      '<div class="clinic-head"><div class="clinic-title">🩺 ' + code + ' 个人错题诊疗台（离线持久化 · 支持考前筛查与一键发给 AI 精批）</div>' +
+      '<span class="hub-clinic-pill" id="clinicPendingPill">待攻克：0 题</span></div>' +
+      '<div class="clinic-form-grid">' +
+      '<div class="clinic-field"><label>章节 / 题号出处</label><input type="text" id="clinicTopic" placeholder="如：Ch6 Linear Law Q4 / P2 Q12 / 赏析第2题"></div>' +
+      '<div class="clinic-field"><label>失分归因标签</label><select id="clinicReason">' +
+      '<option value="概念与公式不清">概念与公式不清</option>' +
+      '<option value="审题漏条件/看错单位">审题漏条件/看错单位</option>' +
+      '<option value="计算/推导中途出错">计算/推导中途出错</option>' +
+      '<option value="缺 Mark Scheme 踩分词">缺 Mark Scheme 踩分词</option>' +
+      '<option value="时间不够/字数失控">时间不够/字数失控</option></select></div>' +
+      '</div>' +
+      '<div class="clinic-form-grid">' +
+      '<div class="clinic-field"><label>原题要点 / 错在哪一步</label><textarea id="clinicStem" placeholder="记下题目关键条件和你当时为什么做错..."></textarea></div>' +
+      '<div class="clinic-field"><label>正解与防再犯铁律（二刷时用）</label><textarea id="clinicFix" placeholder="记下正确解法步骤、关键得分词或自我提醒..."></textarea></div>' +
+      '</div>' +
+      '<div class="clinic-toolbar">' +
+      '<div class="clinic-actions">' +
+      '<button type="button" class="clinic-btn clinic-btn-primary" id="clinicAddBtn">➕ 收入本科目错题本</button>' +
+      '<select id="clinicFilter" aria-label="按错因过滤">' +
+      '<option value="ALL">显示全部未攻克错题</option>' +
+      '<option value="ALL_INC">显示全部（含已攻克）</option>' +
+      '<option value="概念与公式不清">只看：概念与公式不清</option>' +
+      '<option value="审题漏条件/看错单位">只看：审题漏条件/看错单位</option>' +
+      '<option value="计算/推导中途出错">只看：计算/推导中途出错</option>' +
+      '<option value="缺 Mark Scheme 踩分词">只看：缺 Mark Scheme 踩分词</option>' +
+      '<option value="时间不够/字数失控">只看：时间不够/字数失控</option></select>' +
+      '</div>' +
+      '<div class="clinic-actions">' +
+      '<button type="button" class="clinic-btn" id="clinicExportBtn">📋 生成并复制 AI 精讲清单</button>' +
+      '</div></div>' +
+      '<textarea class="clinic-preview" id="clinicExportBox" readonly></textarea>' +
+      '<div class="clinic-list" id="clinicList"></div>';
+
+    const topicEl = el.querySelector('#clinicTopic');
+    const reasonEl = el.querySelector('#clinicReason');
+    const stemEl = el.querySelector('#clinicStem');
+    const fixEl = el.querySelector('#clinicFix');
+    const addBtn = el.querySelector('#clinicAddBtn');
+    const filterEl = el.querySelector('#clinicFilter');
+    const exportBtn = el.querySelector('#clinicExportBtn');
+    const exportBox = el.querySelector('#clinicExportBox');
+    const pendingPill = el.querySelector('#clinicPendingPill');
+    const listEl = el.querySelector('#clinicList');
+
+    function save() {
+      localStorage.setItem(key, JSON.stringify(items));
+      const pending = items.filter(function (x) { return !x.solved; }).length;
+      localStorage.setItem('igcse_final_sprint_clinic_cnt_' + code.toLowerCase(), String(pending));
+      if (pendingPill) {
+        pendingPill.textContent = '待攻克：' + pending + ' 题（总计 ' + items.length + ' 题）';
+        pendingPill.classList.toggle('has-err', pending > 0);
+      }
+    }
+
+    function escapeHtml(s) {
+      return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    function renderList() {
+      save();
+      const f = filterEl.value;
+      const shown = items.filter(function (it) {
+        if (f === 'ALL') return !it.solved;
+        if (f === 'ALL_INC') return true;
+        return it.reason === f;
+      });
+      if (!shown.length) {
+        listEl.innerHTML = '<div style="padding:14px;text-align:center;color:var(--text-faint);background:var(--bg-surface);border:1px dashed var(--border-strong);border-radius:7px;font-size:13.5px;">当前筛选下暂无错题记录。做题遇到卡壳或把近期 Quiz 错题粘贴进来，考前即可按错因集中清零！</div>';
+        return;
+      }
+      listEl.innerHTML = shown.map(function (it) {
+        return '<div class="clinic-item' + (it.solved ? ' solved' : '') + '" data-cid="' + it.id + '">' +
+          '<div class="clinic-item-top">' +
+          '<div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">' +
+          '<span class="clinic-tag">' + escapeHtml(it.topic) + '</span>' +
+          '<span class="clinic-reason">' + escapeHtml(it.reason) + '</span>' +
+          '<span style="font-size:12px;color:var(--text-faint);">' + (it.solved ? '✓ 已攻克' : '● 待二刷') + '</span></div>' +
+          '<div class="clinic-actions">' +
+          '<button type="button" class="clinic-btn clinic-toggle-btn">' + (it.solved ? '↺ 重新标红' : '✓ 标为已攻克') + '</button>' +
+          '<button type="button" class="clinic-btn clinic-del-btn">删除</button>' +
+          '</div></div>' +
+          '<div style="font-size:13.5px;margin-bottom:4px;"><strong>错题要点：</strong>' + escapeHtml(it.stem) + '</div>' +
+          (it.fix ? '<div style="font-size:13.3px;color:var(--text-muted);"><strong>正解与防错铁律：</strong>' + escapeHtml(it.fix) + '</div>' : '') +
+          '</div>';
+      }).join('');
+    }
+
+    addBtn.addEventListener('click', function () {
+      const topic = topicEl.value.trim() || '未标注章节';
+      const stem = stemEl.value.trim();
+      if (!stem) { stemEl.focus(); return; }
+      items.unshift({
+        id: String(Date.now()) + '_' + Math.random().toString(36).slice(2, 6),
+        topic: topic,
+        reason: reasonEl.value,
+        stem: stem,
+        fix: fixEl.value.trim(),
+        solved: false
+      });
+      topicEl.value = '';
+      stemEl.value = '';
+      fixEl.value = '';
+      renderList();
+    });
+
+    listEl.addEventListener('click', function (ev) {
+      const card = ev.target.closest('.clinic-item');
+      if (!card) return;
+      const cid = card.getAttribute('data-cid');
+      const idx = items.findIndex(function (x) { return x.id === cid; });
+      if (idx === -1) return;
+      if (ev.target.closest('.clinic-toggle-btn')) {
+        items[idx].solved = !items[idx].solved;
+        renderList();
+      } else if (ev.target.closest('.clinic-del-btn')) {
+        items.splice(idx, 1);
+        renderList();
+      }
+    });
+
+    filterEl.addEventListener('change', renderList);
+    exportBtn.addEventListener('click', function () {
+      const pending = items.filter(function (x) { return !x.solved; });
+      const target = pending.length ? pending : items;
+      const lines = ['### ' + code + ' 待精讲错题清单（共 ' + target.length + ' 题）'];
+      target.forEach(function (it, i) {
+        lines.push((i + 1) + '. [' + it.topic + ' | ' + it.reason + '] ' + it.stem + (it.fix ? '（我的初版订正：' + it.fix + '）' : ''));
+      });
+      if (!target.length) lines.push('（当前暂无错题记录）');
+      const md = lines.join('\n');
+      exportBox.value = md;
+      exportBox.classList.add('visible');
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(md).catch(function () {});
+      }
+      exportBtn.textContent = '✓ 已生成（可全选复制给 AI）';
+      setTimeout(function () { exportBtn.textContent = '📋 生成并复制 AI 精讲清单'; }, 2200);
+    });
+
+    renderList();
+  }
+  document.querySelectorAll('.clinic-box[data-clinic-subject]').forEach(mountClinic);
+
+  // ---------- 11. ScrollSpy & Back Top ----------
+  const navLinksAll = Array.from(document.querySelectorAll('.sidebar .nav-link[href^="#"]'));
+  const observedSections = navLinksAll
+    .map(function (l) { return document.getElementById((l.getAttribute('href') || '').slice(1)); })
+    .filter(Boolean);
+
+  if ('IntersectionObserver' in window && observedSections.length) {
+    const io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navLinksAll.forEach(function (l) {
+            l.classList.toggle('active', l.getAttribute('href') === '#' + id);
+          });
+        }
+      });
+    }, { rootMargin: '-18% 0px -70% 0px' });
+    observedSections.forEach(function (sec) { io.observe(sec); });
+  }
+
+  const backTopBtn = document.getElementById('backTopBtn');
+  if (backTopBtn) {
+    window.addEventListener('scroll', function () {
+      backTopBtn.classList.toggle('visible', window.scrollY > 420);
+    });
+    backTopBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  applyQuizMask(quizMasked);
+  filterConcepts();
+})();
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,2466 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="--accent: #0284C7;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>F02 · Physics (0625) · Ch 1–4 Motion, Forces & Moments — IGCSE 期末范围锁定冲刺</title>
+  <style>
+/* ==========================================================================
+   Cambridge IGCSE 6-Subject Final Exam Sprint Suite Shared Stylesheet
+   ========================================================================== */
+
+:root {
+  --bg-page: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --bg-sidebar: #FFFFFF;
+  --bg-code: #EFF6FF;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-faint: #64748B;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+
+  --accent: #2563EB;
+  --accent-hover: #1D4ED8;
+  --accent-soft: #DBEAFE;
+
+  --core-bg: #E0F2FE;
+  --core-text: #075985;
+  --core-border: #BAE6FD;
+  --ext-bg: #FEF3C7;
+  --ext-text: #92400E;
+  --ext-border: #FDE68A;
+
+  --deep-bg: #EFF6FF;
+  --deep-border: #2563EB;
+  --tip-bg: #FFFBEB;
+  --tip-border: #D97706;
+  --mistake-bg: #FFF1F2;
+  --mistake-border: #E11D48;
+  --example-bg: #F0FDF4;
+  --example-border: #16A34A;
+  --formula-bg: #F8FAFC;
+  --formula-border: #2563EB;
+
+  --ok-bg: #DCFCE7;
+  --ok-text: #166534;
+  --ok-border: #86EFAC;
+  --err-bg: #FEE2E2;
+  --err-text: #991B1B;
+  --err-border: #FCA5A5;
+
+  --svg-bg: #FFFFFF;
+  --svg-grid: #E2E8F0;
+  --svg-ink: #0F172A;
+  --svg-muted: #64748B;
+  --svg-blue: #2563EB;
+  --svg-indigo: #4338CA;
+  --svg-teal: #0D9488;
+  --svg-amber: #D97706;
+  --svg-red: #DC2626;
+  --svg-green: #16A34A;
+  --svg-purple: #7C3AED;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.07);
+  --shadow-lg: 0 10px 26px rgba(15, 23, 42, 0.11);
+
+  --sidebar-w: 280px;
+  --topbar-h: 58px;
+  --radius-sm: 7px;
+  --radius-md: 11px;
+  --radius-lg: 16px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+  --font-serif: Georgia, "Times New Roman", "Songti SC", "Noto Serif SC", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+[data-theme="dark"] {
+  --bg-page: #0B1120;
+  --bg-surface: #111827;
+  --bg-subtle: #1E293B;
+  --bg-sidebar: #0F172A;
+  --bg-code: #1E293B;
+  --text-main: #F1F5F9;
+  --text-muted: #CBD5E1;
+  --text-faint: #94A3B8;
+  --border: #1E293B;
+  --border-strong: #334155;
+
+  --accent: #38BDF8 !important;
+  --accent-hover: #7DD3FC;
+  --accent-soft: rgba(56, 189, 248, 0.18);
+
+  --core-bg: rgba(56, 189, 248, 0.16);
+  --core-text: #BAE6FD;
+  --core-border: rgba(56, 189, 248, 0.36);
+  --ext-bg: rgba(245, 158, 11, 0.16);
+  --ext-text: #FDE68A;
+  --ext-border: rgba(245, 158, 11, 0.36);
+
+  --deep-bg: rgba(37, 99, 235, 0.14);
+  --deep-border: #60A5FA;
+  --tip-bg: rgba(217, 119, 6, 0.14);
+  --tip-border: #FBBF24;
+  --mistake-bg: rgba(225, 29, 72, 0.15);
+  --mistake-border: #FB7185;
+  --example-bg: rgba(22, 163, 74, 0.13);
+  --example-border: #4ADE80;
+  --formula-bg: #172033;
+  --formula-border: #38BDF8;
+
+  --ok-bg: rgba(22, 163, 74, 0.22);
+  --ok-text: #BBF7D0;
+  --ok-border: #22C55E;
+  --err-bg: rgba(220, 38, 38, 0.22);
+  --err-text: #FECACA;
+  --err-border: #EF4444;
+
+  --svg-bg: #0F172A;
+  --svg-grid: #334155;
+  --svg-ink: #F1F5F9;
+  --svg-muted: #94A3B8;
+  --svg-blue: #60A5FA;
+  --svg-indigo: #818CF8;
+  --svg-teal: #2DD4BF;
+  --svg-amber: #FBBF24;
+  --svg-red: #F87171;
+  --svg-green: #34D399;
+  --svg-purple: #A78BFA;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .seg-btn.active,
+[data-theme="dark"] .tab-btn.active,
+[data-theme="dark"] .icon-btn.active,
+[data-theme="dark"] .brand-code,
+[data-theme="dark"] .pager-btn.primary,
+[data-theme="dark"] .clinic-btn-primary { color: #0B1120; }
+[data-theme="dark"] .hub-foot { color: #38BDF8; }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--topbar-h) + 18px); }
+body { margin: 0; font-family: var(--font-sans); background: var(--bg-page); color: var(--text-main); line-height: 1.72; font-size: 15.5px; -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4 { margin: 0 0 0.55em 0; line-height: 1.32; font-weight: 700; color: var(--text-main); }
+p { margin: 0 0 0.9em 0; }
+ul, ol { margin: 0 0 1em 0; padding-left: 1.45em; }
+li { margin-bottom: 0.35em; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { font-family: var(--font-mono); font-size: 0.9em; background: var(--bg-code); color: var(--accent); padding: 2px 6px; border-radius: 4px; }
+
+/* View Mode Filters */
+body.mode-summary .topic-section:not(.sec-summary) { display: none !important; }
+body.mode-practice .topic-section:not(.sec-practice) { display: none !important; }
+body.mode-clinic .topic-section:not(.sec-clinic) { display: none !important; }
+body.mode-cards .topic-section:not(.sec-cards) { display: none !important; }
+
+/* Math & Formula Styling */
+.math { font-family: var(--font-serif); font-style: italic; font-weight: 600; }
+.frac { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; font-size: 0.88em; line-height: 1.15; margin: 0 3px; }
+.frac .num { border-bottom: 1.5px solid currentColor; padding: 0 4px 1px 4px; }
+.frac .den { padding: 1px 4px 0 4px; }
+.sqrt { display: inline-flex; align-items: center; font-family: var(--font-serif); }
+.sqrt-rad { border-top: 1.5px solid currentColor; padding: 0 3px; margin-left: 1px; }
+
+.badge-c1, .badge-cw, .badge-core, .badge-ext { display: inline-block; font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.badge-c1, .badge-core { background: var(--core-bg); color: var(--core-text); border: 1px solid var(--core-border); }
+.badge-cw, .badge-ext { background: var(--ext-bg); color: var(--ext-text); border: 1px solid var(--ext-border); }
+
+.formula-card { background: var(--formula-bg); border: 1.5px solid var(--border-strong); border-left: 5px solid var(--formula-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; font-size: 15px; }
+.formula-main { font-family: var(--font-serif); font-size: 16.5px; font-weight: 700; color: var(--accent); margin: 4px 0 6px 0; }
+
+.source-box, .reading-passage { background: var(--bg-page); border: 1px solid var(--border-strong); border-left: 5px solid var(--accent); border-radius: var(--radius-md); padding: 16px 20px; margin: 14px 0; font-family: var(--font-serif); font-size: 15px; line-height: 1.76; }
+.reading-title { font-family: var(--font-sans); font-size: 15.8px; font-weight: 800; color: var(--text-main); margin-bottom: 8px; }
+.para-tag { display: inline-block; font-family: var(--font-sans); font-size: 11.5px; font-weight: 800; background: var(--accent-soft); color: var(--accent); padding: 1px 7px; border-radius: 4px; margin-right: 6px; }
+
+.model-essay { background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 20px; margin: 14px 0; box-shadow: var(--shadow-sm); }
+.essay-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; padding-bottom: 10px; margin-bottom: 12px; border-bottom: 1px solid var(--border); font-size: 13px; font-weight: 700; }
+.band-pill { padding: 2px 10px; border-radius: 999px; font-size: 12px; font-weight: 800; }
+.band-high { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.band-mid { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+.essay-body { font-family: var(--font-serif); font-size: 15px; line-height: 1.76; }
+mark.hl-content { background: rgba(37, 99, 235, 0.16); color: inherit; padding: 1px 3px; border-radius: 3px; }
+mark.hl-lang { background: rgba(22, 163, 74, 0.18); color: inherit; padding: 1px 3px; border-radius: 3px; }
+mark.hl-err { background: rgba(220, 38, 38, 0.16); color: inherit; padding: 1px 3px; border-radius: 3px; text-decoration: wavy underline rgba(220, 38, 38, 0.6); }
+
+.write-box { display: flex; flex-direction: column; gap: 10px; }
+.write-textarea { width: 100%; min-height: 140px; padding: 12px 14px; border-radius: var(--radius-sm); border: 1.5px solid var(--border-strong); background: var(--bg-page); color: var(--text-main); font-family: var(--font-serif); font-size: 14.8px; line-height: 1.65; resize: vertical; }
+.write-textarea:focus { outline: none; border-color: var(--accent); }
+.wc-meter { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 800; }
+.wc-ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.wc-warn { background: var(--tip-bg); color: var(--tip-border); border: 1px solid var(--tip-border); }
+.wc-err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+.timer-big { font-family: var(--font-mono); font-size: 20px; font-weight: 800; color: var(--accent); background: var(--bg-page); border: 1.5px solid var(--border-strong); padding: 4px 10px; border-radius: var(--radius-sm); }
+
+/* Topbar */
+.topbar {
+  position: sticky; top: 0; z-index: 100; height: var(--topbar-h);
+  background: var(--bg-surface); border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm); display: flex; align-items: center;
+  justify-content: space-between; gap: 8px; padding: 0 14px;
+}
+.topbar-left { display: flex; align-items: center; gap: 7px; min-width: 0; flex-shrink: 1; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; gap: 5px; height: 34px; padding: 0 9px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--bg-surface); color: var(--text-main); font-size: 12.8px; font-weight: 600; cursor: pointer; white-space: nowrap; text-decoration: none; }
+.icon-btn:hover { background: var(--bg-subtle); border-color: var(--accent); text-decoration: none; }
+.icon-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.menu-toggle { display: none; }
+.brand-pill { display: flex; align-items: center; gap: 7px; font-weight: 700; font-size: 13.8px; white-space: nowrap; flex-shrink: 1; min-width: 0; }
+.brand-code { background: var(--accent); color: #fff; padding: 2px 8px; border-radius: 5px; font-size: 12px; letter-spacing: 0.4px; white-space: nowrap; flex-shrink: 0; }
+.brand-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 170px; }
+.search-wrap { position: relative; flex: 1 1 130px; min-width: 120px; max-width: 225px; }
+.search-input { width: 100%; height: 34px; padding: 0 28px 0 30px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--bg-subtle); color: var(--text-main); font-size: 13px; outline: none; }
+.search-input:focus { border-color: var(--accent); background: var(--bg-surface); }
+.search-input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.search-icon { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--text-faint); font-size: 12.5px; pointer-events: none; }
+.search-clear { position: absolute; right: 7px; top: 50%; transform: translateY(-50%); border: none; background: transparent; color: var(--text-faint); cursor: pointer; font-size: 14px; display: none; }
+.search-results-bar { display: none; background: var(--accent-soft); border-bottom: 1px solid var(--border); padding: 8px 20px; font-size: 13.5px; color: var(--text-main); align-items: center; justify-content: space-between; gap: 12px; }
+.search-results-bar.visible { display: flex; }
+.topbar-controls { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+.seg-group { display: inline-flex; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); overflow: hidden; background: var(--bg-subtle); }
+.seg-btn { border: none; background: transparent; color: var(--text-muted); padding: 6px 7px; font-size: 11.8px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.seg-btn.active { background: var(--accent); color: #fff; }
+.progress-chip { display: flex; align-items: center; gap: 6px; padding: 4px 9px; border-radius: 999px; background: var(--bg-subtle); border: 1px solid var(--border); font-size: 12px; font-weight: 600; white-space: nowrap; }
+.progress-track { width: 46px; height: 7px; background: var(--border-strong); border-radius: 99px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), #0D9488); transition: width 0.25s ease; }
+
+.app-layout { display: flex; min-height: calc(100vh - var(--topbar-h)); }
+.sidebar { width: var(--sidebar-w); flex-shrink: 0; background: var(--bg-sidebar); border-right: 1px solid var(--border); position: sticky; top: var(--topbar-h); height: calc(100vh - var(--topbar-h)); overflow-y: auto; padding: 14px 10px 44px 10px; }
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 99px; }
+.nav-unit { margin-bottom: 8px; }
+.nav-unit-btn { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border: none; border-radius: var(--radius-sm); background: transparent; color: var(--text-main); font-size: 13px; font-weight: 700; text-align: left; cursor: pointer; }
+.nav-unit-btn:hover { background: var(--bg-subtle); }
+.nav-unit-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.nav-unit-title { flex: 1; display: flex; align-items: center; gap: 7px; line-height: 1.3; }
+.nav-chevron { font-size: 11px; color: var(--text-faint); transition: transform 0.2s; }
+.nav-unit.collapsed .nav-chevron { transform: rotate(-90deg); }
+.nav-unit.collapsed .nav-links { display: none; }
+.nav-links { list-style: none; padding: 2px 0 4px 12px; margin: 0 0 0 14px; border-left: 2px solid var(--border); }
+.nav-link { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 5px 9px; margin: 2px 0; border-radius: var(--radius-sm); color: var(--text-muted); font-size: 12.6px; line-height: 1.35; text-decoration: none; }
+.nav-link:hover { background: var(--bg-subtle); color: var(--text-main); text-decoration: none; }
+.nav-link.active { background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+.nav-done-mark { color: #10B981; font-weight: 800; font-size: 12px; opacity: 0; }
+.nav-link.mastered .nav-done-mark { opacity: 1; }
+.main-content { flex: 1; min-width: 0; padding: 24px 28px 80px 28px; }
+.content-inner { max-width: 960px; margin: 0 auto; }
+
+.hero-card { background: linear-gradient(135deg, #0F172A 0%, var(--accent) 62%, #0F766E 100%); color: #fff; border-radius: var(--radius-lg); padding: 26px 30px; margin-bottom: 24px; box-shadow: var(--shadow-lg); }
+.hero-card h1 { color: #fff; font-size: 24px; margin-bottom: 8px; letter-spacing: -0.3px; }
+.hero-sub { color: rgba(255,255,255,0.92); font-size: 14.5px; max-width: 850px; margin-bottom: 14px; }
+.hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.hero-pill { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.28); color: #fff; padding: 4px 11px; border-radius: 999px; font-size: 12.5px; font-weight: 600; }
+.unit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(175px, 1fr)); gap: 10px; }
+.unit-tile { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.24); border-radius: var(--radius-md); padding: 11px 13px; color: #fff; text-decoration: none; display: block; transition: transform 0.15s, background 0.15s; }
+.unit-tile:hover { transform: translateY(-2px); background: rgba(255,255,255,0.22); text-decoration: none; }
+.unit-tile-num { font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; opacity: 0.85; font-weight: 700; }
+.unit-tile-title { font-size: 13.8px; font-weight: 700; margin: 3px 0 0 0; }
+
+.topic-section { background: var(--bg-surface); border: 1px solid var(--border); border-top: 4px solid var(--accent); border-radius: var(--radius-md); padding: 22px 24px; margin-bottom: 24px; box-shadow: var(--shadow-sm); }
+.topic-section.search-dim { display: none; }
+.section-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 2px solid var(--border); }
+.section-title-group h3 { font-size: 19px; margin-bottom: 4px; }
+.section-en-sub { font-size: 13.5px; color: var(--text-faint); font-weight: 600; }
+.tier-row { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 7px; }
+.master-btn { flex-shrink: 0; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-muted); font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.master-btn:hover { border-color: #10B981; color: #10B981; }
+.master-btn.is-mastered { background: var(--ok-bg); color: var(--ok-text); border-color: var(--ok-border); }
+.subtopic { margin-bottom: 20px; }
+.subtopic:last-of-type { margin-bottom: 12px; }
+.subtopic h4 { font-size: 16px; color: var(--accent); margin: 0 0 10px 0; padding-bottom: 4px; border-bottom: 1px dashed var(--border); display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+
+.worked-example { background: var(--example-bg); border: 1px solid var(--border); border-left: 4px solid var(--example-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; }
+.worked-title { font-weight: 800; font-size: 14px; color: var(--example-border); margin-bottom: 6px; }
+.callout { border-radius: var(--radius-sm); padding: 13px 16px; margin: 14px 0; border-left: 4px solid var(--border-strong); font-size: 14.5px; }
+.callout-title { font-weight: 800; font-size: 13.5px; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+.deep-dive { background: var(--deep-bg); border-left-color: var(--deep-border); }
+.deep-dive .callout-title { color: var(--deep-border); }
+.examiner-tip { background: var(--tip-bg); border-left-color: var(--tip-border); }
+.examiner-tip .callout-title { color: var(--tip-border); }
+.common-mistake { background: var(--mistake-bg); border-left-color: var(--mistake-border); }
+.common-mistake .callout-title { color: var(--mistake-border); }
+
+.table-wrap { width: 100%; overflow-x: auto; margin: 14px 0; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+table.sprint-table, table.gp-table, table.phy-table { width: 100%; border-collapse: collapse; font-size: 13.8px; text-align: left; }
+table.sprint-table th, table.gp-table th, table.phy-table th { background: var(--bg-subtle); color: var(--text-main); font-weight: 700; padding: 9px 12px; border-bottom: 2px solid var(--border-strong); white-space: nowrap; }
+table.sprint-table td, table.gp-table td, table.phy-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.sprint-table tr:last-child td, table.gp-table tr:last-child td, table.phy-table tr:last-child td { border-bottom: none; }
+table.sprint-table tbody tr:hover, table.gp-table tbody tr:hover, table.phy-table tbody tr:hover { background: var(--bg-subtle); }
+
+.svg-figure { background: var(--svg-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px; margin: 16px 0; text-align: center; break-inside: avoid; }
+.svg-figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.svg-caption { margin-top: 8px; font-size: 13px; color: var(--text-faint); font-weight: 600; }
+
+/* Interactive Labs */
+.lab-box { background: var(--bg-subtle); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 18px; margin: 18px 0; break-inside: avoid; }
+.lab-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+.lab-title { font-size: 15.5px; font-weight: 800; color: var(--accent); display: flex; align-items: center; gap: 7px; }
+.lab-panel { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; }
+.lab-controls { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-bottom: 12px; align-items: center; }
+.lab-controls label { font-size: 13px; font-weight: 700; color: var(--text-muted); display: inline-flex; align-items: center; gap: 6px; }
+.lab-controls input[type="number"], .lab-controls input[type="text"], .lab-controls select { padding: 5px 8px; border-radius: 6px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-main); font-size: 13.2px; font-weight: 700; }
+.lab-controls input[type="number"] { min-width: 100px; width: 108px; text-align: center; }
+.tab-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.tab-btn { border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-muted); padding: 5px 10px; border-radius: 6px; font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.tab-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.lab-readout { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; font-size: 13.2px; font-weight: 600; }
+.readout-pill { background: var(--bg-page); border: 1px solid var(--border-strong); padding: 8px 11px; border-radius: 6px; width: 100%; line-height: 1.6; }
+
+/* Personal Error Clinic */
+.clinic-box { background: var(--bg-subtle); border: 1.5px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px; margin: 16px 0; }
+.clinic-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px; }
+.clinic-title { font-size: 16px; font-weight: 800; color: var(--accent); }
+.clinic-form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-bottom: 10px; }
+.clinic-field label { display: block; font-size: 12.5px; font-weight: 700; color: var(--text-muted); margin-bottom: 4px; }
+.clinic-field input, .clinic-field select, .clinic-field textarea { width: 100%; padding: 7px 10px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 13.5px; font-family: inherit; }
+.clinic-field textarea { min-height: 70px; resize: vertical; }
+.clinic-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin: 12px 0; padding-top: 12px; border-top: 1px dashed var(--border-strong); }
+.clinic-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.clinic-btn { padding: 6px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 12.8px; font-weight: 700; cursor: pointer; }
+.clinic-btn:hover { border-color: var(--accent); }
+.clinic-btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+.clinic-btn-primary:hover { background: var(--accent-hover); }
+.clinic-list { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
+.clinic-item { background: var(--bg-surface); border: 1px solid var(--border-strong); border-left: 4px solid #E11D48; border-radius: var(--radius-sm); padding: 12px 14px; }
+.clinic-item.solved { border-left-color: #16A34A; opacity: 0.78; }
+.clinic-item-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+.clinic-tag { font-size: 11.8px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
+.clinic-reason { font-size: 11.8px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: var(--err-bg); color: var(--err-text); }
+.clinic-item.solved .clinic-reason { background: var(--ok-bg); color: var(--ok-text); }
+.clinic-preview { width: 100%; min-height: 110px; margin-top: 10px; padding: 10px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-page); color: var(--text-main); font-family: var(--font-mono); font-size: 12.2px; display: none; }
+.clinic-preview.visible { display: block; }
+
+.quick-links-grid { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.quick-link-chip { display: inline-flex; align-items: center; gap: 5px; padding: 6px 11px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-page); color: var(--text-main); font-size: 12.8px; font-weight: 700; text-decoration: none; }
+.quick-link-chip:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+
+/* Hub Roadmap */
+.roadmap-panel { background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px 20px; margin: 18px 0 8px 0; box-shadow: var(--shadow-sm); }
+.roadmap-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 14px; }
+.roadmap-head h2 { font-size: 17px; margin: 0 0 4px 0; }
+.roadmap-badge { background: var(--accent-soft); color: var(--accent); padding: 4px 12px; border-radius: 999px; font-size: 12.5px; font-weight: 800; }
+.roadmap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
+.roadmap-card { display: flex; align-items: flex-start; gap: 10px; padding: 12px 13px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-page); cursor: pointer; font-size: 13px; line-height: 1.5; }
+.roadmap-card:hover { border-color: var(--accent); }
+.roadmap-card strong { display: block; font-size: 13.5px; color: var(--text-main); margin-bottom: 3px; }
+.roadmap-card span { color: var(--text-muted); font-size: 12.5px; }
+.roadmap-card input[type="checkbox"] { width: 17px; height: 17px; margin-top: 2px; accent-color: var(--accent); flex-shrink: 0; }
+.roadmap-card.done { border-color: var(--ok-border); background: var(--ok-bg); }
+.roadmap-card.done strong, .roadmap-card.done span { color: var(--ok-text); }
+
+/* Practice Questions & Concepts */
+.practice-block { margin-top: 18px; padding-top: 14px; border-top: 2px dashed var(--border-strong); }
+.practice-heading { font-size: 16px; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.exam-q { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 14px; break-inside: avoid; }
+.exam-q-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; font-size: 12.5px; }
+.q-tag { font-weight: 800; color: var(--accent); background: var(--accent-soft); padding: 2px 8px; border-radius: 5px; }
+.q-marks { font-weight: 700; color: var(--text-faint); }
+.q-stem-en { font-size: 14.8px; font-weight: 600; color: var(--text-main); margin-bottom: 6px; }
+.q-stem-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 12px; }
+.mcq-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin-bottom: 10px; }
+.mcq-opt { text-align: left; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 13.8px; cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.mcq-opt:hover { border-color: var(--accent); background: var(--bg-subtle); }
+.mcq-opt.correct { background: var(--ok-bg); border-color: var(--ok-border); color: var(--ok-text); font-weight: 700; }
+.mcq-opt.wrong { background: var(--err-bg); border-color: var(--err-border); color: var(--err-text); }
+.mcq-feedback { display: none; font-size: 13.5px; padding: 10px 12px; border-radius: var(--radius-sm); margin-top: 8px; }
+.mcq-feedback.visible { display: block; }
+.mcq-feedback.ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.mcq-feedback.err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+details.ms-details { margin-top: 10px; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 12px; }
+details.ms-details summary { cursor: pointer; font-weight: 700; font-size: 13.5px; color: var(--accent); user-select: none; }
+.ms-body { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 13.8px; }
+.ms-mark { display: inline-block; font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--core-text); background: var(--core-bg); padding: 1px 5px; border-radius: 4px; margin-right: 4px; }
+.ms-cn { color: var(--text-muted); margin-top: 4px; }
+
+.concept-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 14px; margin-bottom: 18px; }
+.concept-filter-group { display: flex; flex-wrap: wrap; gap: 6px; }
+.concept-actions { display: flex; align-items: center; gap: 10px; }
+.concept-count-pill { font-size: 12.5px; font-weight: 700; color: var(--text-muted); }
+.concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 14px; }
+.concept-card { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; gap: 8px; break-inside: avoid; }
+.concept-card:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
+.concept-card.concept-hidden { display: none !important; }
+.cq-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.cq-en { font-weight: 700; font-size: 14.5px; color: var(--text-main); line-height: 1.45; }
+.cq-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 2px; }
+.cq-answer { position: relative; margin-top: auto; background: var(--bg-surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius-sm); padding: 11px 13px; font-size: 13.8px; line-height: 1.6; }
+.kw { color: var(--accent); background: var(--accent-soft); padding: 0 4px; border-radius: 3px; font-weight: 700; }
+.cq-mask-hint { display: none; }
+.concept-card.masked .cq-answer { cursor: pointer; }
+.concept-card.masked .cq-answer-inner { filter: blur(7px); opacity: 0.22; user-select: none; pointer-events: none; transition: filter 0.2s, opacity 0.2s; }
+.concept-card.masked .cq-mask-hint { display: flex; align-items: center; justify-content: center; position: absolute; inset: 0; font-size: 13.5px; font-weight: 700; color: var(--accent); background: rgba(255,255,255,0.25); border-radius: var(--radius-sm); }
+[data-theme="dark"] .concept-card.masked .cq-mask-hint { background: rgba(15,23,42,0.35); }
+
+.chapter-pager { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 28px; padding: 16px 20px; background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); }
+.pager-btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: var(--radius-sm); background: var(--bg-subtle); border: 1px solid var(--border-strong); color: var(--text-main); font-size: 13.5px; font-weight: 700; text-decoration: none; }
+.pager-btn:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); text-decoration: none; }
+.pager-btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.pager-btn.primary:hover { background: var(--accent-hover); color: #fff; }
+
+.hub-block-title { font-size: 18px; font-weight: 800; margin: 24px 0 12px 0; padding-bottom: 6px; border-bottom: 2px solid var(--border-strong); display: flex; align-items: center; gap: 8px; }
+.hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 15px; }
+.hub-card { display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-surface); border: 1px solid var(--border-strong); border-top: 5px solid var(--card-color, var(--accent)); border-radius: var(--radius-md); padding: 16px 18px 14px 18px; color: var(--text-main); text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; box-shadow: var(--shadow-sm); }
+.hub-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--card-color, var(--accent)); text-decoration: none; }
+.hub-card-top { display: flex; align-items: center; justify-content: space-between; gap: 6px; margin-bottom: 8px; flex-wrap: wrap; }
+.hub-stat-row { display: flex; align-items: center; gap: 6px; }
+.hub-badge { font-size: 11.5px; font-weight: 800; color: #fff; background: var(--card-color, var(--accent)); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill { font-size: 11.8px; font-weight: 700; color: var(--text-muted); background: var(--bg-subtle); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill.done { background: var(--ok-bg); color: var(--ok-text); }
+.hub-clinic-pill { font-size: 11.8px; font-weight: 700; color: var(--text-muted); background: var(--bg-subtle); border: 1px solid var(--border); padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
+.hub-clinic-pill.has-err { background: var(--err-bg); color: var(--err-text); border-color: var(--err-border); }
+.hub-scope { font-size: 12px; font-weight: 700; color: var(--card-color, var(--accent)); background: var(--bg-subtle); padding: 3px 8px; border-radius: 5px; margin-bottom: 7px; display: inline-block; }
+.hub-title { font-size: 16px; font-weight: 800; margin-bottom: 3px; }
+.hub-en { font-size: 12.6px; color: var(--text-faint); font-weight: 600; margin-bottom: 8px; }
+.hub-sub { font-size: 12.8px; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; }
+.hub-foot { font-size: 13px; font-weight: 700; color: var(--card-color, var(--accent)); display: flex; align-items: center; justify-content: space-between; }
+
+.back-top-btn { position: fixed; right: 22px; bottom: 22px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); box-shadow: var(--shadow-md); cursor: pointer; display: none; align-items: center; justify-content: center; font-size: 17px; font-weight: 800; z-index: 80; }
+.back-top-btn.visible { display: flex; }
+
+@media (max-width: 1220px) {
+  .brand-title, .btn-label { display: none; }
+}
+@media (max-width: 980px) {
+  .menu-toggle { display: inline-flex; }
+  .sidebar { position: fixed; left: 0; top: var(--topbar-h); z-index: 95; transform: translateX(-100%); transition: transform 0.22s ease; box-shadow: var(--shadow-lg); }
+  .sidebar.open { transform: translateX(0); }
+  .main-content { padding: 18px 14px 64px 14px; }
+  .topic-section { padding: 18px 16px; }
+  .progress-chip { display: none; }
+  .search-wrap { min-width: 110px; }
+}
+@media (max-width: 640px) {
+  .topbar { padding: 0 10px; gap: 6px; }
+  .search-wrap { max-width: none; }
+  .concept-grid, .hub-grid, .clinic-form-grid { grid-template-columns: 1fr; }
+}
+@media print {
+  .topbar, .sidebar, .search-results-bar, .back-top-btn, .master-btn, .lab-controls button, .concept-toolbar, .cq-mask-hint, .chapter-pager, .clinic-form-grid, .clinic-actions { display: none !important; }
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  .main-content { padding: 0 !important; }
+  .content-inner { max-width: 100% !important; }
+  .topic-section, .exam-q, .callout, .worked-example, .svg-figure, .concept-card, .model-essay, .source-box, .clinic-item { box-shadow: none !important; break-inside: avoid; border-color: #CBD5E1 !important; }
+  details.ms-details, details.ms-details .ms-body, .mcq-feedback { display: block !important; }
+  .concept-card.masked .cq-answer-inner { filter: none !important; opacity: 1 !important; }
+}
+
+  </style>
+</head>
+<body data-chapter-code="F02">
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="展开目录">☰ 目录</button>
+      <a class="icon-btn" href="index.html" title="返回 6 科期末冲刺总控台"><span>🎯</span><span class="btn-label">总控台</span></a>
+      <div class="brand-pill">
+        <span class="brand-code">F02</span>
+        <span class="brand-title">Physics (0625) · Ch 1–4 Motion, Forces & Moments</span>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="search" id="searchInput" class="search-input" placeholder="搜公式、易错坑、模考题..." autocomplete="off" />
+      <button type="button" class="search-clear" id="searchClear" title="清空搜索">✕</button>
+    </div>
+
+    <div class="topbar-controls">
+      <div class="seg-group" role="group" aria-label="内容视图筛选">
+        <button type="button" class="seg-btn active" data-view-mode="all">All</button>
+        <button type="button" class="seg-btn" data-view-mode="summary">速记</button>
+        <button type="button" class="seg-btn" data-view-mode="practice">模考</button>
+        <button type="button" class="seg-btn" data-view-mode="clinic">错题</button>
+        <button type="button" class="seg-btn" data-view-mode="cards">闪卡</button>
+      </div>
+
+      <div class="progress-chip" title="本学科期末冲刺板块掌握进度">
+        <span id="progressText">0/0</span>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+
+      <button type="button" class="icon-btn" id="toggleAllMs" title="展开或收起全部解析"><span>📝</span><span class="btn-label">展开解析</span></button>
+      <button type="button" class="icon-btn" id="themeToggle" title="切换亮色/暗色主题"><span id="themeIcon">🌙</span><span class="btn-label">主题</span></button>
+      <button type="button" class="icon-btn" id="printBtn" title="打印或导出为 PDF"><span>🖨️</span><span class="btn-label">导出</span></button>
+    </div>
+  </header>
+
+  <div class="search-results-bar" id="searchBar">
+    <span id="searchSummary">找到 0 个匹配板块</span>
+    <button type="button" class="icon-btn" id="searchResetBtn">重置过滤</button>
+  </div>
+
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="本学科期末冲刺导航">
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #0284C7;"></span>F02 冲刺板块导航</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#sec-core1"><span>Ch 1–2 · 测量精度、密度测定与运动图像双解精讲</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-core2"><span>Ch 3–4 · 力学与终端速度、动量冲量、力矩稳定性及 Paper 4/6 模板</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-sme"><span>65 分 Ch 1–4 期末全真综合卷 (75 分钟 · Paper 2 + 4 + 6)</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-clinic"><span>个人错题诊疗台与 Ch 1–4 章节精讲回查</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#app-concepts"><span>Ch 1–4 核心定义、公式与实验踩分词闪卡库 (20 张)</span><span class="nav-done-mark">✓</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #0D9488;"></span>全 6 科期末冲刺切换</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="F01_AddMaths_0606_Final_Sprint.html"><span>F01 · 附加数学 0606 期末考范围锁定冲刺</span></a></li>
+          <li><a class="nav-link active" href="F02_Physics_0625_Final_Sprint.html"><span>F02 · 物理 0625 Ch 1–4 期末精炼与实验冲刺</span></a></li>
+          <li><a class="nav-link" href="F03_Chemistry_0620_Final_Sprint.html"><span>F03 · 化学 0620 Ch 1, 2, 4, 6 核心高频冲刺</span></a></li>
+          <li><a class="nav-link" href="F04_ESL_0510_Final_Sprint.html"><span>F04 · ESL 0510 听力阅读写作三线冲刺</span></a></li>
+          <li><a class="nav-link" href="F05_Chinese_0509_Final_Sprint.html"><span>F05 · 中文第一语言 0509 现代文阅读与双作文冲刺</span></a></li>
+          <li><a class="nav-link" href="F06_GP_0457_Final_Sprint.html"><span>F06 · 全球视野 0457 Q1–Q4 书面笔试终极冲刺</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-inner">
+        <section class="hero-card" id="top">
+          <h1>F02 · 物理 0625 Ch 1–4 期末精炼与实验冲刺</h1>
+          <p class="hero-sub">
+            <strong>范围锁定：教材 Ch 1–4（测量与密度 · 运动学 · 力与动量 · 力矩与稳定性）</strong> — Ch 1 测量游标与单摆 · Ch 2 s-t/v-t 图像与匀变速 · Ch 3 牛顿定律/动量冲量/终端速度 · Ch 4 力矩平衡与重心 + Paper 2/4/6 套卷。本页严格剔除非考范围章节，浓缩核心方法与高频失分红线，内置交互实验台、全真模考与个人错题诊疗台。
+          </p>
+          <div class="hero-badges">
+            <span class="hero-pill">🎯 期末考范围精准锁定</span>
+            <span class="hero-pill">⚡ 一页核心浓缩速记</span>
+            <a class="hero-pill" href="#sec-sme" style="text-decoration: none;">📝 直达限时全真模考 →</a>
+            <a class="hero-pill" href="#sec-clinic" style="text-decoration: none;">🩺 个人错题诊疗台 →</a>
+            <a class="hero-pill" href="#app-concepts" style="text-decoration: none; background: rgba(255,255,255,0.24);">🧠 遮罩自测闪卡 →</a>
+          </div>
+          <div class="unit-grid">
+            <a class="unit-tile" href="#sec-core1">
+              <div class="unit-tile-num">Section core1</div>
+              <div class="unit-tile-title">Ch 1–2 · 测量精度、密度测定与运动图像双解精讲</div>
+            </a>
+            <a class="unit-tile" href="#sec-core2">
+              <div class="unit-tile-num">Section core2</div>
+              <div class="unit-tile-title">Ch 3–4 · 力学与终端速度、动量冲量、力矩稳定性及 Paper 4/6 模板</div>
+            </a>
+            <a class="unit-tile" href="#sec-sme">
+              <div class="unit-tile-num">Section sme</div>
+              <div class="unit-tile-title">65 分 Ch 1–4 期末全真综合卷 (75 分钟 · Paper 2 + 4 + 6)</div>
+            </a>
+            <a class="unit-tile" href="#sec-clinic">
+              <div class="unit-tile-num">Section clinic</div>
+              <div class="unit-tile-title">个人错题诊疗台与 Ch 1–4 章节精讲回查</div>
+            </a>
+            <a class="unit-tile" href="#app-concepts">
+              <div class="unit-tile-num">速背闪卡</div>
+              <div class="unit-tile-title">Ch 1–4 核心定义、公式与实验踩分词闪卡库 (20 张)</div>
+            </a>
+          </div>
+        </section>
+
+        <div id="emptySearchNotice" class="callout deep-dive" style="display: none;">
+          <div class="callout-title">🔍 未找到匹配内容</div>
+          <p style="margin-bottom: 0;">请尝试更换关键词，或点击右上角“重置过滤”恢复显示。</p>
+        </div>
+
+<!-- ==========================================================================
+     F02 · Physics (0625) · Ch 1–4 期末范围锁定冲刺
+     ========================================================================== -->
+
+<article class="topic-section sec-summary" id="sec-core1">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>Ch 1–2 · 测量精度、密度测定与运动图像双解精讲</h3>
+      <div class="section-en-sub">Ch 1 Making Measurements &amp; Ch 2 Describing Motion · Parallax, Pendulum, ρ = m / V, s–t vs v–t &amp; 2–3 s.f.</div>
+      <div class="tier-row">
+        <span class="badge-core">Core 必拿</span>
+        <span class="badge-ext">Extended 重点</span>
+        <span class="badge-core">Paper 2 / 4 / 6</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-core1">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>1.1 Ch 1 量具最小分度、防视差 (Parallax) 与测多求平均法</h4>
+    <div class="table-wrap">
+      <table class="phy-table">
+        <thead>
+          <tr>
+            <th>测量仪器 Instrument</th>
+            <th>最小分度 / 精度</th>
+            <th>考纲规范与读数防坑要点 (Paper 2 / Paper 6)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>米尺 Metre rule</strong></td>
+            <td><code>1 mm</code> (<code>0.1 cm</code>)</td>
+            <td>眼睛必须<strong>垂直正对刻度（eye perpendicular to scale）</strong>以消除视差（parallax error）；破损零点尺用末端减去始端读数：<code>l = l₂ − l₁</code>。</td>
+          </tr>
+          <tr>
+            <td><strong>量筒 Measuring cylinder</strong></td>
+            <td><code>1 cm³</code> 或 <code>2 cm³</code></td>
+            <td>必须置于<strong>水平桌面（flat horizontal surface）</strong>，视线与<strong>凹液面底部（bottom of meniscus）</strong>齐平（水银等凸液面读顶部）。</td>
+          </tr>
+          <tr>
+            <td><strong>滴定管 Burette</strong></td>
+            <td><code>0.1 cm³</code></td>
+            <td><strong>刻度自上而下增大！</strong>放出液体的体积为 <code>V = V_final − V_initial</code>（适合测定单滴平均体积）。</td>
+          </tr>
+          <tr>
+            <td><strong>螺旋测微器 Micrometer</strong></td>
+            <td><code>0.01 mm</code></td>
+            <td>先旋棘轮（ratchet）防夹变形；<strong>真实直径 = 表观读数 − 零点误差</strong>（若零点误差为负值 <code>−0.02 mm</code>，减去负数即要加回 <code>+0.02 mm</code>！）。</td>
+          </tr>
+          <tr>
+            <td><strong>秒表 Stopwatch</strong></td>
+            <td>示数 <code>0.01 s</code><br>有效约 <code>0.1 s</code></td>
+            <td>受<strong>人类反应时间（human reaction time ≈ 0.2 s）</strong>影响，不能单次只测 1 个极短过程，必须测多次重复或 <code>20</code> 个周期后取平均。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout deep-dive">
+      <div class="callout-title">🔬 Ch 1 两大高频提精度套路：测多求平均 &amp; 单摆 20 次周期实验</div>
+      <ul>
+        <li><strong>测多求平均法（Measuring Multiples）：</strong>当单个物体尺寸小于刻度尺最小分度（<code>1 mm</code>）时，直接测量误差极大。
+          <br>① <strong>纸张厚度：</strong>压紧 <code>N</code> 张（如 <code>200</code> 张排除空气隙），测总厚 <code>D</code>，单片厚 <code>d = D / N</code>；
+          <br>② <strong>细铜丝直径：</strong>紧密并排绕 <code>20–30</code> 圈在铅笔上，确保<strong>无间隙且不重叠（no gaps and no overlaps）</strong>，测总宽度 <code>W</code>，直径 <code>d = W / N</code>；
+          <br>③ <strong>小液滴体积：</strong>用滴定管数出 <code>50</code> 滴测总体积 <code>ΔV</code>，单滴体积 <code>V_drop = ΔV / 50</code>，将读取误差被 <code>N</code> 平摊，显著降低<strong>百分误差（percentage uncertainty）</strong>。</li>
+        <li><strong>单摆 20 次全振动周期 <code>T</code> 实验细节（Paper 6 必考！）：</strong>
+          <br>① <strong>全振动定义：</strong>从一端摆到另一端<strong>再回到原地同方向</strong>才算 1 个完整周期（<code>X → Y → X</code>），仅去程 <code>X → Y</code> 只是 <code>0.5 T</code>（极高发诱错项！）；
+          <br>② <strong>计时参考柱（Fiducial marker）：</strong>在<strong>最低点（平衡位置 lowest point）</strong>放置竖直标记针/柱作为计时起止基准，因摆球经过最低点时<strong>速度最大</strong>、瞬间通过标记最清晰，避免最高点停顿造成误判；
+          <br>③ <strong>操作控制：</strong>摆角保持较小（<code>&lt; 10°</code>）、绳长由悬点量至摆球球心；先让摆稳定摆动几圈后在过标记柱时按表数 <code>0, 1, 2 … 20</code>，算出 <code>T = t₂₀ / 20</code> 并重复 2–3 次取平均以减小<strong>反应时间与随机误差（random error）</strong>；
+          <br>④ <strong>周期规律：</strong>小角度下，周期 <code>T</code> 只取决于摆长 <code>l</code>，<strong>与摆球质量无关</strong>。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>1.2 Ch 1 规则/不规则物体密度测定与单位换算 (ρ = m / V)</h4>
+    <div class="formula-card">
+      <div class="formula-main">
+        <span class="math">ρ</span> = <span class="frac"><span class="num"><span class="math">m</span></span><span class="den"><span class="math">V</span></span></span>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        1 g/cm³ = 1000 kg/m³
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <span class="math">ρ</span><sub>水</sub> = 1.0 g/cm³ = 1000 kg/m³
+      </div>
+      <ul style="margin-bottom: 0;">
+        <li><strong>规则固体：</strong>天平测质量 <code>m</code>；米尺量几何尺寸算体积（长方体 <code>V = l × w × h</code>，圆柱 <code>V = π r² h</code>）。</li>
+        <li><strong>不规则下沉固体（排水法 Displacement Method）：</strong>① <strong>必须先干燥时用天平测质量 <code>m</code></strong>（若先排水沾水再称，测得 <code>m</code> 偏大导致 <code>ρ</code> 偏高！）；② 量筒加水读初体积 <code>V₁</code>；③ 用细线系住<strong>轻放斜滑入水至完全浸没（lower gently until completely submerged）</strong>以防溅水（splashing），轻晃去除附着气泡（air bubbles），读末体积 <code>V₂</code>，得 <code>V = V₂ − V₁</code>。</li>
+        <li><strong>不规则漂浮固体（如软木塞 Cork）：</strong>绑下沉重物（sinker）：先测<code>水 + 重物</code>体积 <code>V₁</code>，再测<code>水 + 重物 + 软木塞完全浸没</code>体积 <code>V₂</code>，木塞体积 <code>V = V₂ − V₁</code>（或用细针压至恰好全部没入水面）。</li>
+        <li><strong>液体密度（质量差法）：</strong>先称空烧杯质量 <code>m₁</code>，倒入用量筒量好体积 <code>V</code> 的液体后称总质量 <code>m₂</code>，液体质量 <code>m = m₂ − m₁</code>。</li>
+        <li><strong>浮沉与分层判定：</strong>密度是物质固有属性（同种均匀材料切开两半密度不变）；平均密度 <code>&lt;</code> 液体密度则<strong>漂浮（floats）</strong>，<code>&gt;</code> 液体密度则<strong>下沉（sinks）</strong>。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>1.3 Ch 2 标量 vs 矢量、加速度与 2–3 位有效数字红线</h4>
+    <ul>
+      <li><strong>标量 Scalar（只有大小 magnitude，无方向）：</strong>路程 distance、速率 speed、时间 time、质量 mass、体积 volume、密度 density、能量 energy。</li>
+      <li><strong>矢量 Vector（既有大小又有方向 direction）：</strong>位移 displacement、速度 velocity、加速度 acceleration、力 force、重力 weight、动量 momentum、冲量 impulse、力矩 moment。</li>
+      <li><strong>速率、速度与加速度：</strong>平均速率 <code>v_av = total distance / total time</code>（<strong>绝对不能用算术平均 <code>(v₁ + v₂)/2</code> 替代总路程除以总时间！</strong>）；加速度 <code>a = (v − u) / t</code>（单位 <code>m/s²</code>，负值表示减速 deceleration）。<strong>匀速圆周运动中速率不变，但方向不断改变，故速度改变、存在加速度。</strong></li>
+      <li><strong>2–3 位有效数字（2–3 s.f.）规范：</strong>计算中间过程多保留 1–2 位小数避免舍入误差累积；最终答数根据题干最窄已知数取 <strong>2 或 3 位有效数字</strong>（如 <code>g = 9.8 N/kg</code>，<code>1.5876 N → 1.59 N</code> 或 <code>1.6 N</code>；若题设精确到 <code>31.0 s</code>，不可随便写成 <code>1.5</code> 丢失末位有效零）。</li>
+    </ul>
+  </div>
+
+  <div class="subtopic">
+    <h4>1.4 Ch 2 单位换算与 s–t / v–t 图像双重斜率·面积对照表</h4>
+    <div class="table-wrap">
+      <table class="phy-table">
+        <thead>
+          <tr>
+            <th>对比维度 / 图像特征</th>
+            <th>Distance–Time 图 (<code>s–t</code>)</th>
+            <th>Speed–Time 图 (<code>v–t</code>)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>斜率 (Gradient)</strong></td>
+            <td><strong>速率 <code>v</code></strong>（<code>Δs / Δt</code>，越陡越快）</td>
+            <td><strong>加速度 <code>a</code></strong>（<code>Δv / Δt</code>，负斜率为减速）</td>
+          </tr>
+          <tr>
+            <td><strong>图线下方阴影面积 (Area)</strong></td>
+            <td><strong style="color: var(--err-text);">无物理意义！（严禁对 s–t 求面积）</strong></td>
+            <td><strong>路程 / 位移 <code>s</code></strong>（拆分矩形 / 梯形 / 三角形求和）</td>
+          </tr>
+          <tr>
+            <td><strong>水平直线 (Gradient = 0)</strong></td>
+            <td><strong>静止 Stationary</strong>（<code>v = 0</code>，位置不变）</td>
+            <td><strong>匀速直线运动 Constant speed</strong>（<code>a = 0</code>，非静止！）</td>
+          </tr>
+          <tr>
+            <td><strong>倾斜直线 (Constant slope)</strong></td>
+            <td><strong>匀速运动 Constant speed</strong></td>
+            <td><strong>匀加速 / 匀减速运动 Constant acceleration / deceleration</strong></td>
+          </tr>
+          <tr>
+            <td><strong>弯曲曲线（斜率变陡 / 变平）</strong></td>
+            <td>变陡 = 加速；变平 = 减速；瞬时速率用<strong>切线大三角形斜率</strong></td>
+            <td>变平 = 加速度减小（<code>decreasing acceleration</code>，如受空气阻力下落）</td>
+          </tr>
+          <tr>
+            <td><strong>自由落体特征 (g = 9.8 m/s²)</strong></td>
+            <td>真空中呈开口向上抛物线（斜率持续增大）</td>
+            <td>真空 = 斜率恒为 <code>9.8 m/s²</code> 的直线；有空气阻力 = 初斜率 <code>9.8 m/s²</code> 随后变平趋于终端速度</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table class="phy-table">
+        <thead>
+          <tr>
+            <th>高频单位换算项</th>
+            <th>正向换算公式</th>
+            <th>反向换算与考场提醒</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>密度：<code>g/cm³ ↔ kg/m³</code></td>
+            <td><code>× 1000</code>（例 <code>0.85 g/cm³ = 850 kg/m³</code>）</td>
+            <td><code>÷ 1000</code>（例 <code>2700 kg/m³ = 2.7 g/cm³</code>）</td>
+          </tr>
+          <tr>
+            <td>速率：<code>km/h ↔ m/s</code></td>
+            <td><code>÷ 3.6</code>（例 <code>72 km/h = 20 m/s</code>）</td>
+            <td><code>× 3.6</code>（例 <code>15 m/s = 54 km/h</code>）</td>
+          </tr>
+          <tr>
+            <td>力矩：<code>N·cm ↔ N·m</code></td>
+            <td><code>÷ 100</code>（例 <code>450 N·cm = 4.5 N·m</code>）</td>
+            <td>先将力臂 <code>cm → m (÷ 100)</code> 或 <code>mm → m (÷ 1000)</code>，求重力前先把 <code>g → kg (÷ 1000)</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 295" width="740" height="295" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SVG 图 2.1：s-t 图与 v-t 图斜率、面积、零直线及弯曲线双重物理意义对照图">
+        <!-- Left Panel: Distance-Time (s-t) -->
+        <rect x="10" y="10" width="352" height="275" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="186" y="30" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-ink)">s–t 图 (Distance–Time) · 斜率 = 速率 v</text>
+
+        <!-- Axes -->
+        <line x1="50" y1="216" x2="342" y2="216" stroke="var(--svg-ink)" stroke-width="1.8" />
+        <line x1="50" y1="50" x2="50" y2="216" stroke="var(--svg-ink)" stroke-width="1.8" />
+        <text x="44" y="56" text-anchor="end" font-size="10" font-weight="700" fill="var(--svg-muted)">s / m</text>
+        <text x="342" y="231" text-anchor="end" font-size="10" font-weight="700" fill="var(--svg-muted)">t / s</text>
+
+        <!-- Graph segments -->
+        <line x1="50" y1="216" x2="114" y2="152" stroke="var(--svg-blue)" stroke-width="2.8" />
+        <line x1="114" y1="152" x2="184" y2="152" stroke="var(--svg-teal)" stroke-width="2.8" />
+        <path d="M 184 152 Q 236 146 266 78" fill="none" stroke="var(--svg-amber)" stroke-width="2.8" />
+        <path d="M 266 78 Q 296 64 336 64" fill="none" stroke="var(--svg-red)" stroke-width="2.8" />
+
+        <!-- Tangent triangle on accelerating curve -->
+        <line x1="224" y1="142" x2="278" y2="70" stroke="var(--svg-indigo)" stroke-width="1.5" stroke-dasharray="4,2" />
+        <circle cx="251" cy="106" r="3.2" fill="var(--svg-indigo)" />
+
+        <!-- Segment dividers -->
+        <line x1="114" y1="152" x2="114" y2="216" stroke="var(--svg-muted)" stroke-width="1" stroke-dasharray="3,2" />
+        <line x1="184" y1="152" x2="184" y2="216" stroke="var(--svg-muted)" stroke-width="1" stroke-dasharray="3,2" />
+        <line x1="266" y1="78" x2="266" y2="216" stroke="var(--svg-muted)" stroke-width="1" stroke-dasharray="3,2" />
+
+        <!-- Labels -->
+        <text x="56" y="128" font-size="9.5" font-weight="800" fill="var(--svg-blue)">斜直线: 匀速</text>
+        <text x="149" y="144" text-anchor="middle" font-size="9.5" font-weight="800" fill="var(--svg-teal)">水平: 静止 (v=0)</text>
+        <text x="228" y="172" text-anchor="middle" font-size="9.5" font-weight="800" fill="var(--svg-amber)">变陡: 加速</text>
+        <text x="298" y="54" text-anchor="middle" font-size="9.5" font-weight="800" fill="var(--svg-red)">变平: 减速 (v→0)</text>
+        <text x="186" y="247" text-anchor="middle" font-size="9.5" font-weight="700" fill="var(--svg-indigo)">曲线瞬时速率 = 切线斜率 (Δs / Δt)</text>
+
+        <!-- Warning Pill -->
+        <rect x="24" y="257" width="324" height="21" rx="5" fill="rgba(220, 38, 38, 0.12)" stroke="var(--svg-red)" stroke-width="1" />
+        <text x="186" y="271" text-anchor="middle" font-size="9.5" font-weight="800" fill="var(--svg-red)">⚠️ 红线: s–t 图线下方“面积”无物理意义!</text>
+
+        <!-- Right Panel: Speed-Time (v-t) -->
+        <rect x="378" y="10" width="352" height="275" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="554" y="30" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-ink)">v–t 图 (Speed–Time) · 斜率 = a, 面积 = 路程 s</text>
+
+        <!-- Axes -->
+        <line x1="418" y1="216" x2="710" y2="216" stroke="var(--svg-ink)" stroke-width="1.8" />
+        <line x1="418" y1="50" x2="418" y2="216" stroke="var(--svg-ink)" stroke-width="1.8" />
+        <text x="424" y="56" text-anchor="start" font-size="10" font-weight="700" fill="var(--svg-muted)">v / (m/s)</text>
+        <text x="710" y="231" text-anchor="end" font-size="10" font-weight="700" fill="var(--svg-muted)">t / s</text>
+
+        <!-- Shaded Areas -->
+        <polygon points="418,216 488,100 488,216" fill="rgba(37, 99, 235, 0.16)" />
+        <rect x="488" y="100" width="102" height="116" fill="rgba(13, 148, 136, 0.16)" />
+        <polygon points="590,100 654,216 590,216" fill="rgba(220, 38, 38, 0.16)" />
+
+        <!-- Graph outline -->
+        <polyline points="418,216 488,100 590,100 654,216" fill="none" stroke="var(--svg-blue)" stroke-width="2.8" />
+        <!-- Decreasing acceleration curve -->
+        <path d="M 418 216 Q 468 142 696 138" fill="none" stroke="var(--svg-purple)" stroke-width="2.2" stroke-dasharray="5,3" />
+
+        <!-- Vertical dividers -->
+        <line x1="488" y1="100" x2="488" y2="216" stroke="var(--svg-muted)" stroke-width="1" stroke-dasharray="3,2" />
+        <line x1="590" y1="100" x2="590" y2="216" stroke="var(--svg-muted)" stroke-width="1" stroke-dasharray="3,2" />
+
+        <!-- Area Labels -->
+        <text x="466" y="190" text-anchor="middle" font-size="10" font-weight="800" fill="var(--svg-blue)">s₁</text>
+        <text x="539" y="182" text-anchor="middle" font-size="10" font-weight="800" fill="var(--svg-teal)">s₂</text>
+        <text x="610" y="190" text-anchor="middle" font-size="10" font-weight="800" fill="var(--svg-red)">s₃</text>
+
+        <!-- Curve Labels -->
+        <text x="424" y="72" font-size="9.5" font-weight="800" fill="var(--svg-blue)">斜直线: 匀加速 (a&gt;0)</text>
+        <text x="546" y="90" text-anchor="middle" font-size="9.5" font-weight="800" fill="var(--svg-teal)">水平: 匀速 (a=0)</text>
+        <text x="712" y="130" text-anchor="end" font-size="9.2" font-weight="800" fill="var(--svg-purple)">弯曲变平 = a 减小</text>
+        <text x="642" y="168" font-size="9.5" font-weight="800" fill="var(--svg-red)">负斜率: 匀减速</text>
+        <text x="554" y="247" text-anchor="middle" font-size="9.5" font-weight="700" fill="var(--svg-teal)">⚠️ 水平直线在 v–t 中代表匀速, 非静止!</text>
+
+        <!-- Summary Pill -->
+        <rect x="392" y="257" width="324" height="21" rx="5" fill="rgba(13, 148, 136, 0.12)" stroke="var(--svg-teal)" stroke-width="1" />
+        <text x="554" y="271" text-anchor="middle" font-size="9.5" font-weight="800" fill="var(--svg-teal)">总路程 s = s₁ + s₂ + s₃ (矩形 / 梯形 / 三角形面积)</text>
+      </svg>
+      <div class="svg-caption">SVG 图 2.1 · s–t 图 vs v–t 图“斜率 / 面积 / 零斜率直线 / 弯曲线”一图双解终极对照</div>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section sec-summary" id="sec-core2">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>Ch 3–4 · 力学与终端速度、动量冲量、力矩稳定性及 Paper 4/6 模板</h3>
+      <div class="section-en-sub">F = ma, W = mg, Terminal Velocity, Circular Force, Momentum &amp; Impulse, Moments, Stability &amp; ATP Templates</div>
+      <div class="tier-row">
+        <span class="badge-core">Core 必拿</span>
+        <span class="badge-ext">Extended 重点</span>
+        <span class="badge-ext">Paper 4 &amp; 6 模板</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-core2">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>2.1 Ch 3 牛顿定律 (F = ma)、重力区分 (W = mg)、向心力与矢量合成</h4>
+    <div class="formula-card">
+      <div class="formula-main">
+        <span class="math">F</span><sub>net</sub> = <span class="math">m</span><span class="math">a</span>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <span class="math">W</span> = <span class="math">m</span><span class="math">g</span> (<span class="math">g</span> = 9.8 N/kg)
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        Hooke 线性区: <span class="math">F</span> = <span class="math">k</span><span class="math">x</span>
+      </div>
+      <ul>
+        <li><strong>合力与牛顿第一/第二定律：</strong><code>F</code> 永远是<strong>净合力（resultant force）</strong>。若 <code>F_net = 0</code>，静止物体保持静止，运动物体保持<strong>匀速直线运动（constant velocity）</strong>；若 <code>F_net ≠ 0</code>，产生同方向的加速度 <code>a = F_net / m</code>。</li>
+        <li><strong>质量 Mass vs 重力 Weight：</strong>质量（<code>kg</code>）是物体所含物质的多少与<strong>惯性（inertia）</strong>量度，去月球也不变，用天平测；重力（<code>N</code>）是引力场施加给质量的竖直向下拉力，随 <code>g</code> 变化，用牛顿测力计（Newton meter）测。</li>
+        <li><strong>胡克定律衔接与摩擦力：</strong>弹性限度内弹簧弹力与<strong>伸长量（extension = 现长 − 原长）</strong>成正比；固体<strong>摩擦力（friction）</strong>阻碍接触面相对滑动并将机械能转化为内能（热）；流体<strong>阻力（drag / air resistance）</strong>随速度与迎风面积增大而剧增。</li>
+        <li><strong>圆周运动向心力定性（Ch 3 核心力学要求）：</strong>沿圆周运动时，即使速率 <code>v</code> 恒定，因<strong>运动方向不断改变 → 速度变化 → 存在向心加速度</strong>，必须由<strong>指向圆心的净合力（resultant force towards centre）</strong>提供。<strong>速率 <code>v</code> 增大、半径 <code>r</code> 减小或质量 <code>m</code> 增大</strong>均需更大的向心力；若绳突然断裂，物体沿<strong>切线方向（tangent）</strong>飞出。</li>
+        <li><strong>矢量合成：</strong>任意夹角按<strong>比例尺（scale drawing）</strong>画<strong>首尾相连三角形（tip-to-tail）</strong>或<strong>平行四边形对角线（parallelogram）</strong>；<code>90°</code> 正交力直接用 <code>R = √(Fₓ² + Fᵧ²)</code> 与 <code>tan θ = Fᵧ / Fₓ</code>（矢量答案必报大小与方向！）。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>2.2 Ch 3 终端速度三阶段、动量守恒与冲量 (p = mv, FΔt = Δp)</h4>
+    <div class="formula-card">
+      <div class="formula-main">
+        动量 <span class="math">p</span> = <span class="math">m</span><span class="math">v</span> (kg·m/s)
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        冲量 Impulse = <span class="math">F</span>Δ<span class="math">t</span> = Δ<span class="math">p</span> = <span class="math">m</span>(<span class="math">v</span> − <span class="math">u</span>) (N·s)
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <span class="math">m</span>₁<span class="math">u</span>₁ + <span class="math">m</span>₂<span class="math">u</span>₂ = <span class="math">m</span>₁<span class="math">v</span>₁ + <span class="math">m</span>₂<span class="math">v</span>₂
+      </div>
+      <ul style="margin-bottom: 0;">
+        <li><strong>动量守恒前提与正负号铁律：</strong>在<strong>无外合力（no external resultant force）</strong>的封闭系统中，碰撞前后总动量守恒。<strong>动量是矢量！遇到迎面相向碰撞或撞墙反弹，必须先设定正方向（如向右为 <code>+</code>），反方向速度代入负号！</strong></li>
+        <li><strong>冲量减伤机制（气囊 / 溃缩区 / 缓冲垫）：</strong><code>F = Δp / Δt</code>，合力等于<strong>动量变化率（rate of change of momentum）</strong>。对于同样的速度变化（即相同的 <code>Δp</code>），气囊延长了碰撞作用时间 <code>Δt</code>，从而大幅降低人体所受冲击力 <code>F</code>。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>2.3 Ch 4 力矩垂直距离、平衡双条件、重心测定与稳定性</h4>
+    <ul>
+      <li><strong>力矩定义：</strong><code>Moment = F × d⊥</code>（单位 <code>N·m</code> 或 <code>N·cm</code>）。<strong>核心红线：<code>d⊥</code> 是支点到力作用线（line of action）的垂直距离</strong>，遇斜拉力必须找垂线或乘 <code>sin θ</code>，绝不能直接用杆长！</li>
+      <li><strong>完全平衡两大充分必要条件：</strong>① <strong>合外力为零</strong>（<code>resultant force = 0</code>，向上总力 = 向下总力）；② <strong>合力矩为零</strong>（<code>ΣM_cw = ΣM_acw</code>，绕任意一点顺时针总力矩等于逆时针总力矩）。<em>解题技巧：双支点桥墩求支持力时，以支点 A 为 pivot 取力矩直接消去 <code>R_A</code> 算出 <code>R_B</code>！</em></li>
+      <li><strong>重心（Centre of gravity）：</strong>物体全部重力等效集中作用的那一点。<strong>Paper 6 悬垂线实验（Plumb-line method）：</strong>不规则纸板边缘打 2–3 个相距较远的孔 → 穿钉验证纸板可<strong>自由摆动（swings freely）</strong> → 同钉挂铅垂线静置后沿线作记号连线 → 换第 2 孔重复得两条线<strong>交点（intersection）</strong>即为重心（第 3 孔交叉验算）。</li>
+      <li><strong>稳定性（Stability）与倾倒规则：</strong>提高稳定性两法：① <strong>降低重心（lower centre of gravity）</strong>；② <strong>加宽底座（widen base）</strong>。物体倾斜时，只要过重心的竖直线仍在底座内部，重力产生<strong>恢复力矩（restoring moment）</strong>；一旦越出底座边缘，重力产生<strong>倾覆力矩（toppling moment）</strong>导致翻倒。</li>
+    </ul>
+
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 300" width="740" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SVG 图 2.2：终端速度三阶段受力平衡与杠杆平衡垂直力臂分解图">
+        <defs>
+          <marker id="f02-arr-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--svg-red)" />
+          </marker>
+          <marker id="f02-arr-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--svg-teal)" />
+          </marker>
+          <marker id="f02-arr-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--svg-blue)" />
+          </marker>
+        </defs>
+
+        <!-- Left Panel: Terminal Velocity 3 Stages -->
+        <rect x="10" y="10" width="352" height="280" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="186" y="30" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-ink)">Terminal Velocity 三阶段受力平衡与 v–t 曲线</text>
+
+        <!-- Top Mini v-t Plot -->
+        <line x1="48" y1="146" x2="342" y2="146" stroke="var(--svg-ink)" stroke-width="1.6" />
+        <line x1="48" y1="44" x2="48" y2="146" stroke="var(--svg-ink)" stroke-width="1.6" />
+        <text x="42" y="50" text-anchor="end" font-size="9.5" font-weight="700" fill="var(--svg-muted)">v</text>
+        <text x="342" y="158" text-anchor="end" font-size="9.5" font-weight="700" fill="var(--svg-muted)">t</text>
+
+        <!-- Terminal asymptote & Curve -->
+        <line x1="48" y1="60" x2="338" y2="60" stroke="var(--svg-muted)" stroke-width="1.2" stroke-dasharray="4,3" />
+        <text x="336" y="53" text-anchor="end" font-size="9.2" font-weight="700" fill="var(--svg-muted)">终端速度 v_T (斜率 = 0)</text>
+        <path d="M 48 146 C 72 86 126 62 220 60 L 336 60" fill="none" stroke="var(--svg-blue)" stroke-width="2.6" />
+
+        <!-- Stage Markers on curve -->
+        <circle cx="48" cy="146" r="4" fill="var(--svg-red)" />
+        <circle cx="96" cy="90" r="4" fill="var(--svg-amber)" />
+        <circle cx="268" cy="60" r="4" fill="var(--svg-teal)" />
+        <text x="58" y="140" font-size="9" font-weight="800" fill="var(--svg-red)">①</text>
+        <text x="106" y="95" font-size="9" font-weight="800" fill="var(--svg-amber)">②</text>
+        <text x="268" y="74" text-anchor="middle" font-size="9" font-weight="800" fill="var(--svg-teal)">③</text>
+
+        <!-- Divider -->
+        <line x1="22" y1="164" x2="350" y2="164" stroke="var(--svg-grid)" stroke-width="1" />
+
+        <!-- Stage 1 FBD (center x=72) -->
+        <text x="72" y="180" text-anchor="middle" font-size="9.5" font-weight="800" fill="var(--svg-red)">① 初落 R=0</text>
+        <circle cx="72" cy="218" r="9" fill="var(--svg-blue)" />
+        <line x1="72" y1="227" x2="72" y2="262" stroke="var(--svg-red)" stroke-width="2.6" marker-end="url(#f02-arr-red)" />
+        <text x="84" y="250" font-size="9" font-weight="800" fill="var(--svg-red)">W</text>
+        <text x="72" y="278" text-anchor="middle" font-size="9" font-weight="700" fill="var(--svg-ink)">F_net=W, a=g</text>
+
+        <!-- Stage 2 FBD (center x=186) -->
+        <text x="186" y="180" text-anchor="middle" font-size="9.5" font-weight="800" fill="var(--svg-amber)">② 加速 W&gt;R</text>
+        <line x1="186" y1="209" x2="186" y2="191" stroke="var(--svg-teal)" stroke-width="2.4" marker-end="url(#f02-arr-teal)" />
+        <text x="197" y="198" font-size="9" font-weight="800" fill="var(--svg-teal)">R</text>
+        <circle cx="186" cy="218" r="9" fill="var(--svg-blue)" />
+        <line x1="186" y1="227" x2="186" y2="262" stroke="var(--svg-red)" stroke-width="2.6" marker-end="url(#f02-arr-red)" />
+        <text x="197" y="250" font-size="9" font-weight="800" fill="var(--svg-red)">W</text>
+        <text x="186" y="278" text-anchor="middle" font-size="9" font-weight="700" fill="var(--svg-ink)">F_net↓ ⇒ a↓</text>
+
+        <!-- Stage 3 FBD (center x=300) -->
+        <text x="300" y="180" text-anchor="middle" font-size="9.5" font-weight="800" fill="var(--svg-teal)">③ 平衡 W=R</text>
+        <line x1="300" y1="209" x2="300" y2="184" stroke="var(--svg-teal)" stroke-width="2.6" marker-end="url(#f02-arr-teal)" />
+        <text x="311" y="194" font-size="9" font-weight="800" fill="var(--svg-teal)">R</text>
+        <circle cx="300" cy="218" r="9" fill="var(--svg-blue)" />
+        <line x1="300" y1="227" x2="300" y2="252" stroke="var(--svg-red)" stroke-width="2.6" marker-end="url(#f02-arr-red)" />
+        <text x="311" y="246" font-size="9" font-weight="800" fill="var(--svg-red)">W</text>
+        <text x="300" y="278" text-anchor="middle" font-size="9" font-weight="700" fill="var(--svg-teal)">F_net=0, a=0</text>
+
+        <!-- Right Panel: Perpendicular Distance & Lever Equilibrium -->
+        <rect x="378" y="10" width="352" height="280" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="554" y="30" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-ink)">力矩垂直力臂 d⊥ 与双条件杠杆平衡</text>
+
+        <!-- Top Sub-diagram: Pivot O, Rod OA, Slanted Force F, Drop d⊥ -->
+        <circle cx="418" cy="142" r="5" fill="var(--svg-ink)" />
+        <text x="404" y="156" font-size="9.5" font-weight="800" fill="var(--svg-ink)">支点 O</text>
+        <line x1="418" y1="142" x2="568" y2="142" stroke="var(--svg-muted)" stroke-width="5.5" stroke-linecap="round" />
+        <text x="492" y="158" text-anchor="middle" font-size="9" fill="var(--svg-muted)">杆长 L (非 d⊥!)</text>
+
+        <!-- Extended line of action -->
+        <line x1="586" y1="176" x2="522" y2="55" stroke="var(--svg-red)" stroke-width="1.4" stroke-dasharray="4,3" />
+        <!-- Force arrow F -->
+        <line x1="568" y1="142" x2="532" y2="74" stroke="var(--svg-red)" stroke-width="2.8" marker-end="url(#f02-arr-red)" />
+        <text x="562" y="92" font-size="10" font-weight="800" fill="var(--svg-red)">斜力 F</text>
+        <text x="588" y="170" font-size="8.8" fill="var(--svg-red)">作用线</text>
+
+        <!-- Perpendicular drop O -> P(535, 80) -->
+        <line x1="418" y1="142" x2="535" y2="80" stroke="var(--svg-teal)" stroke-width="2.3" />
+        <polyline points="528,84 532,91 539,87" fill="none" stroke="var(--svg-ink)" stroke-width="1.3" />
+        <text x="466" y="102" text-anchor="middle" font-size="10" font-weight="800" fill="var(--svg-teal)">垂直力臂 d⊥</text>
+
+        <!-- Formula Callout on top-right -->
+        <rect x="612" y="58" width="106" height="58" rx="6" fill="rgba(37, 99, 235, 0.08)" stroke="var(--svg-blue)" stroke-width="1.2" />
+        <text x="665" y="78" text-anchor="middle" font-size="10" font-weight="800" fill="var(--svg-blue)">M = F × d⊥</text>
+        <text x="665" y="94" text-anchor="middle" font-size="8.8" fill="var(--svg-ink)">d⊥ 必须垂直</text>
+        <text x="665" y="107" text-anchor="middle" font-size="8.8" fill="var(--svg-ink)">力的作用线</text>
+
+        <!-- Divider -->
+        <line x1="390" y1="184" x2="718" y2="184" stroke="var(--svg-grid)" stroke-width="1" />
+
+        <!-- Bottom Sub-diagram: Balanced Lever -->
+        <rect x="416" y="210" width="276" height="7" rx="2" fill="rgba(148, 163, 184, 0.45)" stroke="var(--svg-ink)" stroke-width="1.4" />
+        <polygon points="538,217 528,236 548,236" fill="var(--svg-teal)" />
+        <text x="538" y="248" text-anchor="middle" font-size="9" font-weight="800" fill="var(--svg-teal)">支点 (支撑力 R)</text>
+
+        <!-- Left Force F1 -->
+        <line x1="444" y1="217" x2="444" y2="248" stroke="var(--svg-blue)" stroke-width="2.5" marker-end="url(#f02-arr-blue)" />
+        <text x="434" y="239" text-anchor="end" font-size="9.5" font-weight="800" fill="var(--svg-blue)">F₁</text>
+        <text x="491" y="203" text-anchor="middle" font-size="9.2" font-weight="700" fill="var(--svg-blue)">d₁ (逆时针)</text>
+
+        <!-- Right Force F2 -->
+        <line x1="654" y1="217" x2="654" y2="244" stroke="var(--svg-red)" stroke-width="2.5" marker-end="url(#f02-arr-red)" />
+        <text x="664" y="239" text-anchor="start" font-size="9.5" font-weight="800" fill="var(--svg-red)">F₂</text>
+        <text x="596" y="203" text-anchor="middle" font-size="9.2" font-weight="700" fill="var(--svg-red)">d₂ (顺时针)</text>
+
+        <!-- Equilibrium Rule Pill -->
+        <rect x="392" y="257" width="324" height="22" rx="5" fill="rgba(13, 148, 136, 0.12)" stroke="var(--svg-teal)" stroke-width="1" />
+        <text x="554" y="272" text-anchor="middle" font-size="9.3" font-weight="800" fill="var(--svg-teal)">平衡双条件: ① R = F₁ + F₂ (合力=0)  ② F₁d₁ = F₂d₂ (ΣM_cw = ΣM_acw)</text>
+      </svg>
+      <div class="svg-caption">SVG 图 2.2 · Terminal Velocity 三阶段自由体受力平衡演进与力矩垂直力臂 (d⊥) 平衡模型</div>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>2.4 Paper 4 官方 Mark Scheme 高频原话句型库 (背准英文采分词)</h4>
+    <div class="table-wrap">
+      <table class="phy-table">
+        <thead>
+          <tr>
+            <th>高频考点</th>
+            <th>Cambridge 0625 官方 Mark Scheme 英文踩分原话句型</th>
+            <th>中文要点与失分警报</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. Terminal Velocity<br>(三阶段 · 3–4 分)</strong></td>
+            <td>
+              ① Initially speed is zero so <span class="kw">air resistance is zero</span>; resultant force equals <span class="kw">weight</span>.<br>
+              ② As speed increases, <span class="kw">air resistance increases</span>; <span class="kw">resultant downward force decreases</span> so <span class="kw">acceleration decreases</span>.<br>
+              ③ Eventually <span class="kw">air resistance equals weight</span>; <span class="kw">resultant force is zero</span> (acceleration = 0), falling at <span class="kw">constant (terminal) velocity</span>.
+            </td>
+            <td>⚠️ 切忌说“速度减小”！阶段②加速度减小但<strong>速度仍在增大</strong>！必提 <code>resultant force = 0</code>。</td>
+          </tr>
+          <tr>
+            <td><strong>2. Parachute Opens<br>(开伞减速 · 3 分)</strong></td>
+            <td>
+              Large surface area causes <span class="kw">air resistance to increase suddenly</span> and become <span class="kw">greater than weight</span> → <span class="kw">resultant force acts upwards</span> → skydiver <span class="kw">decelerates</span>. As speed falls, <span class="kw">air resistance decreases</span> until <span class="kw">air resistance = weight</span> again at a <span class="kw">lower terminal velocity</span>.
+            </td>
+            <td>⚠️ 开伞<strong>绝不会往上飞</strong>！向上合力只代表向上加速度（即向下运动在减速）。</td>
+          </tr>
+          <tr>
+            <td><strong>3. Airbag / Impulse<br>(缓冲减伤 · 3 分)</strong></td>
+            <td>
+              For the <span class="kw">same change in momentum (Δp)</span>, the airbag <span class="kw">increases the time of collision (Δt)</span>. By <code>F = Δp / Δt</code>, this <span class="kw">reduces the rate of change of momentum</span> and therefore <span class="kw">reduces the average force</span> on the passenger.
+            </td>
+            <td>⚠️ 只答“气囊比较软”拿 0 分！三大英文采分词缺一不可：<code>same Δp</code> + <code>increases Δt</code> + <code>reduces force</code>。</td>
+          </tr>
+          <tr>
+            <td><strong>4. Circular Motion<br>(圆周向心力 · 2–3 分)</strong></td>
+            <td>
+              Although speed is constant, the <span class="kw">direction of motion changes continuously</span>, so <span class="kw">velocity changes</span> (it is accelerating). This requires a <span class="kw">resultant force acting towards the centre</span> of the circle.
+            </td>
+            <td>⚠️ 必答“速度因方向改变而变化”，且说明力“指向圆心”，绝非离心推力！</td>
+          </tr>
+          <tr>
+            <td><strong>5. Equilibrium<br>(平衡双条件 · 2 分)</strong></td>
+            <td>
+              ① <span class="kw">Resultant force is zero</span> (no net force in any direction);<br>
+              ② <span class="kw">Resultant moment is zero</span> (<span class="kw">sum of clockwise moments = sum of anticlockwise moments</span>).
+            </td>
+            <td>⚠️ 只写一条只得 1 分，两条缺一不可！</td>
+          </tr>
+          <tr>
+            <td><strong>6. Stability &amp; Tilting<br>(稳定性与翻倒 · 2–3 分)</strong></td>
+            <td>
+              The object stays upright if the <span class="kw">vertical line through the centre of gravity remains inside the base</span>, producing a <span class="kw">restoring moment</span>. It topples once this line <span class="kw">falls outside the base</span> (creating a <span class="kw">toppling moment</span>). Improve stability by <span class="kw">lowering the C.G.</span> and <span class="kw">widening the base</span>.
+            </td>
+            <td>⚠️ 必须提到“过重心的竖直线（vertical line through C.G.）”与“底座（base）”相对位置。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>2.5 Paper 6 ATP (Ch 1–4) 三大高频实验与作图满分模板</h4>
+    <div class="table-wrap">
+      <table class="phy-table">
+        <thead>
+          <tr>
+            <th>ATP 高频实验</th>
+            <th>变量控制 &amp; 读数精度细节</th>
+            <th>常见误差来源与标准改进句式 (Error &amp; Improvement)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>单摆周期 <code>T</code></strong></td>
+            <td>• 摆角保持很小（<code>&lt; 10°</code>）<br>• 摆长从夹持点测至摆球<strong>球心</strong><br>• 测 <code>20</code> 次全振动总时间 <code>t₂₀</code> 算 <code>T = t₂₀ / 20</code></td>
+            <td>• <strong>计时点模糊 / 反应时间误差：</strong>在最低点竖立<strong>参考标记柱（fiducial marker）</strong>；测 <code>20</code> 次并重复多组取平均。<br>• <strong>铁架台晃动：</strong>底座加压重物或在桌沿夹紧。</td>
+          </tr>
+          <tr>
+            <td><strong>排水法测密度</strong></td>
+            <td>• 先干称质量 <code>m</code>，再排水测 <code>V = V₂ − V₁</code><br>• 量筒放水平桌面，眼平视<strong>凹液面底部</strong></td>
+            <td>• <strong>溅水 / 附着气泡使体积偏大：</strong>用细线系住倾斜<strong>轻滑入水（lower gently）</strong>并轻敲赶泡。<br>• <strong>体积差过小精度差：</strong>改用更细更小分度的量筒或放多个相同样品一起测。</td>
+          </tr>
+          <tr>
+            <td><strong>平衡尺求质量</strong></td>
+            <td>• 均匀米尺自身重心在 <code>50.0 cm</code><br>• 刀口（knife-edge）支点调至尺水平静止</td>
+            <td>• <strong>砝码遮挡刻度读数不准：</strong>量取砝码左右两边缘刻度 <code>x₁, x₂</code> 求中点 <code>(x₁ + x₂)/2</code>；或把挂绳细线直接对准刻度。<br>• <strong>微风晃动：</strong>关闭门窗或在支点处做小角度等幅摆动判断。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout examiner-tip">
+      <div class="callout-title">📏 Paper 6 作图与“大三角形求斜率 ≥ 50%”五条满分铁律</div>
+      <ol style="margin-bottom: 0;">
+        <li><strong>坐标轴与标度：</strong>写出完整物理量名称与单位（如 <code>T² / s²</code> 与 <code>l / cm</code>）；选择均匀合理刻度（每大格取 <code>1, 2, 5 × 10ⁿ</code>，严禁 <code>3, 7</code> 怪比例），数据点必须占据坐标纸<strong>至少 50% 以上（≥ half the grid）</strong>。</li>
+        <li><strong>描点符号：</strong>用尖锐铅笔标清晰的 <code>×</code> 或 <code>⊙</code>（落点偏差小于半小格）。</li>
+        <li><strong>最佳拟合线（Line of Best Fit）：</strong>用透明直尺画一根最能穿行于数据点中间的直线（两侧点数量与距离大致均衡）；遇到明显离群的<strong>异常点（anomalous point）</strong>圈出忽略，绝不拐弯强行连线！</li>
+        <li><strong>梯度大三角形（Gradient Triangle ≥ 50%）：</strong>在<strong>已画直线上</strong>选取相距较远的两点画直角虚线三角形，两直角边长度<strong>必须覆盖所画直线的 50% 以上（at least half of the plotted line）</strong>！严禁直接套用原表格里未落在线上的两点做差！</li>
+        <li><strong>正比判定（Directly Proportional?）：</strong>图像必须同时满足 <strong>① 直线（straight line）且 ② 通过原点 <code>(0, 0)</code>（passes through the origin）</strong>，才能判定两物理量成正比（否则仅称 linear；数值校验法看各组 <code>y / x</code> 在约 <code>10%</code> 实验误差内是否恒定）。</li>
+      </ol>
+    </div>
+
+    <div class="lab-box" data-lab-type="f02"></div>
+  </div>
+</article>
+
+<article class="topic-section sec-practice" id="sec-sme">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>65 分 Ch 1–4 期末全真综合卷 (75 分钟 · Paper 2 + 4 + 6)</h3>
+      <div class="section-en-sub">Part A: 15 Paper 2 MCQs (15 Marks) · Part B: 4 Paper 4 Structured Questions (35 Marks) · Part C: 2 Paper 6 ATP Tasks (15 Marks)</div>
+      <div class="tier-row">
+        <span class="badge-core">满分 65 分</span>
+        <span class="badge-ext">限时 75 分钟</span>
+        <span class="badge-core">g = 9.8 N/kg</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-sme">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>Part A · Paper 2 限时选择题 (15 题 × 1 分 = 15 分 · 建议 18 分钟)</h4>
+
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head"><span class="q-tag">Q01 · Ch1 零点偏移与绕线测微</span><span><span class="badge-core">Core</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">A student winds 25 turns of thin copper wire closely side-by-side around a pencil with no gaps and no overlaps. On a ruler, the left edge of the coils aligns with <code>2.4 cm</code> and the right edge aligns with <code>6.4 cm</code>. What is the diameter of one copper wire?</div>
+      <div class="q-stem-cn">紧密绕 <code>25</code> 圈铜丝无隙无重叠，左端对准 <code>2.4 cm</code>，右端对准 <code>6.4 cm</code>，求单根铜丝直径。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><code>0.16 mm</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><code>1.6 mm</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><code>2.56 mm</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><code>16 mm</code></span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！总宽度 = 6.4 − 2.4 = 4.0 cm = 40 mm，单根直径 = 40 ÷ 25 = 1.6 mm。" data-err="❌ 注意先用 6.4 − 2.4 = 4.0 cm = 40 mm 扣除起始刻度偏移，再除以 25 圈得 1.6 mm！"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="C">
+      <div class="exam-q-head"><span class="q-tag">Q02 · Ch1 螺旋测微器负零点误差</span><span><span class="badge-ext">Extended</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">A micrometer screw gauge has a zero error of <code>−0.03 mm</code>. When used to measure the thickness of a metal plate, the sleeve reads <code>3.5 mm</code> and the thimble scale aligns at division <code>24</code>. What is the true thickness of the plate?</div>
+      <div class="q-stem-cn">螺旋测微器零点误差为 <code>−0.03 mm</code>，主尺读数 <code>3.5 mm</code>、微分筒对准 <code>24</code> 格，真实厚度是多少？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><code>3.71 mm</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><code>3.74 mm</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><code>3.77 mm</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><code>3.97 mm</code></span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！表观读数 = 3.5 + 0.24 = 3.74 mm，减去负零点误差得 3.74 − (−0.03) = 3.77 mm！" data-err="❌ 负零点误差表示仪器归零时读数偏小 0.03 mm，所以真实值 = 3.74 − (−0.03) = 3.77 mm。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head"><span class="q-tag">Q03 · Ch1 液体密度差值与 kg/m³ 换算</span><span><span class="badge-core">Core</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">An empty measuring cylinder has a mass of <code>64 g</code>. When <code>40 cm³</code> of oil is poured into it, the total mass is <code>96 g</code>. What is the density of the oil in <code>kg/m³</code>?</div>
+      <div class="q-stem-cn">空量筒质量 <code>64 g</code>，倒入 <code>40 cm³</code> 油后总质量 <code>96 g</code>，求油的密度（<code>kg/m³</code>）。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><code>0.80 kg/m³</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><code>800 kg/m³</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><code>1600 kg/m³</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><code>2400 kg/m³</code></span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！油质量 = 96 − 64 = 32 g；ρ = 32 ÷ 40 = 0.80 g/cm³ = 800 kg/m³。" data-err="❌ 先用 96 − 64 = 32 g 求纯液体质量，算出 0.80 g/cm³ 后再乘以 1000 转为 800 kg/m³。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="D">
+      <div class="exam-q-head"><span class="q-tag">Q04 · Ch1 单摆半周期陷阱与摆球质量无关性</span><span><span class="badge-core">Core</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">A pendulum bob takes <code>0.75 s</code> to swing from its extreme left position X to its extreme right position Y. Which row gives the correct period <code>T</code> and the effect on <code>T</code> if the mass of the bob is doubled (length unchanged)?</div>
+      <div class="q-stem-cn">单摆从最左 X 摆到最右 Y 耗时 <code>0.75 s</code>，周期 <code>T</code> 是多少？若摆长不变、摆球质量加倍，<code>T</code> 如何变化？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><code>T = 0.75 s</code>; <code>T</code> doubles</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><code>T = 0.75 s</code>; <code>T</code> stays the same</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><code>T = 1.50 s</code>; <code>T</code> doubles</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><code>T = 1.50 s</code>; <code>T</code> stays the same</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！X → Y 只是半个周期，全周期 T = 2 × 0.75 = 1.50 s；小摆角周期与摆球质量无关。" data-err="❌ X 到 Y 只是单程（0.5 T），全周期必须往返返回原地，且单摆周期不受质量影响！"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head"><span class="q-tag">Q05 · Ch2/3 标量与矢量辨析</span><span><span class="badge-core">Core</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">Which list contains <strong>only</strong> vector quantities?</div>
+      <div class="q-stem-cn">下列哪一组物理量<strong>全部都是矢量</strong>？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>acceleration, speed, weight</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>displacement, momentum, moment of a force</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>mass, velocity, impulse</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>density, force, time</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！位移、动量、力矩均有方向，全为矢量；speed、mass、density、time 都是标量。" data-err="❌ 逐项排除标量：A 含 speed，C 含 mass，D 含 density 和 time，只有 B 全是矢量。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="A">
+      <div class="exam-q-head"><span class="q-tag">Q06 · Ch2 s–t 图像分段运动解读</span><span><span class="badge-core">Core</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">On a distance–time (<code>s–t</code>) graph: Section P is a straight line with a constant positive gradient, Section Q is horizontal at <code>s = 120 m</code>, and Section R curves with a decreasing gradient. What describes P, Q and R?</div>
+      <div class="q-stem-cn">在路程–时间（<code>s–t</code>）图中：P 段为正斜率直线，Q 段在 <code>120 m</code> 处水平，R 段斜率逐渐变小。三段运动分别是什么？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>P: constant speed | Q: stationary | R: decelerating</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>P: constant acceleration | Q: constant speed | R: accelerating</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>P: constant speed | Q: constant speed | R: decelerating</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>P: accelerating | Q: stationary | R: constant speed</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！s–t 图斜率就是速率：斜率恒定=匀速，斜率为 0=静止，斜率减小=减速！" data-err="❌ 别把 s–t 图当成 v–t 图！s–t 图水平线表示路程不变即静止，斜直线表示匀速。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="C">
+      <div class="exam-q-head"><span class="q-tag">Q07 · Ch2 v–t 图像面积求总路程</span><span><span class="badge-core">Core</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">A car starts from rest and accelerates uniformly to <code>18 m/s</code> in <code>6.0 s</code>. It travels at <code>18 m/s</code> for <code>10 s</code>, and then brakes uniformly to rest in <code>4.0 s</code>. What is the total distance travelled?</div>
+      <div class="q-stem-cn">汽车从静止用 <code>6.0 s</code> 匀加速至 <code>18 m/s</code>，匀速行驶 <code>10 s</code> 后再用 <code>4.0 s</code> 匀减速停下，求总路程。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><code>180 m</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><code>225 m</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><code>270 m</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><code>360 m</code></span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！v–t 图梯形面积 = 0.5 × (10 + 20) × 18 = 270 m（或 54 + 180 + 36 = 270 m）。" data-err="❌ 画出 v–t 梯形：上底 10 s、下底 6+10+4 = 20 s、高 18 m/s，面积 = 0.5 × (10 + 20) × 18 = 270 m。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="A">
+      <div class="exam-q-head"><span class="q-tag">Q08 · Ch2 全程平均速率常见陷阱</span><span><span class="badge-core">Core</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">A cyclist rides <code>300 m</code> uphill at <code>5.0 m/s</code> and returns <code>300 m</code> downhill along the same road at <code>15.0 m/s</code>. What is the average speed for the whole journey?</div>
+      <div class="q-stem-cn">骑行者上坡 <code>300 m</code> 速率为 <code>5.0 m/s</code>，下坡原路返回 <code>300 m</code> 速率为 <code>15.0 m/s</code>，全程平均速率是多少？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><code>7.5 m/s</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><code>10.0 m/s</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><code>11.3 m/s</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><code>12.0 m/s</code></span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！t₁ = 300/5 = 60 s，t₂ = 300/15 = 20 s；平均速率 = 总路程/总时间 = 600 ÷ 80 = 7.5 m/s！" data-err="❌ 严禁直接算 (5 + 15) ÷ 2 = 10.0！两段用时不同，必须先算总时间 60 + 20 = 80 s，再算 600 ÷ 80 = 7.5 m/s。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head"><span class="q-tag">Q09 · Ch3 含阻力合力与 F = ma</span><span><span class="badge-ext">Extended</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">A truck of mass <code>2500 kg</code> travels on a horizontal road. Its engine provides a forward driving force of <code>4200 N</code> and the total resistive force is <code>1200 N</code>. What is its acceleration?</div>
+      <div class="q-stem-cn">质量 <code>2500 kg</code> 卡车向前牵引力 <code>4200 N</code>，总阻力 <code>1200 N</code>，求其加速度。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><code>0.48 m/s²</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><code>1.2 m/s²</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><code>1.7 m/s²</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><code>2.2 m/s²</code></span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！先算净合力 F_net = 4200 − 1200 = 3000 N，故 a = 3000 ÷ 2500 = 1.2 m/s²。" data-err="❌ 公式 F = ma 中的 F 是合力！先用 4200 − 1200 = 3000 N 求出合力，再除以 2500 kg。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="A">
+      <div class="exam-q-head"><span class="q-tag">Q10 · Ch3 质量不变与重力变化 (g = 9.8 N/kg)</span><span><span class="badge-core">Core</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">A rock has a weight of <code>49 N</code> on Earth (<code>g = 9.8 N/kg</code>). It is brought to the Moon where <code>g = 1.6 N/kg</code>. What are its mass and weight on the Moon?</div>
+      <div class="q-stem-cn">某石块在地球（<code>g = 9.8 N/kg</code>）重力为 <code>49 N</code>，带到月球（<code>g = 1.6 N/kg</code>）后质量和重力各是多少？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>mass = <code>5.0 kg</code>, weight = <code>8.0 N</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>mass = <code>5.0 kg</code>, weight = <code>49 N</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>mass = <code>0.82 kg</code>, weight = <code>8.0 N</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>mass = <code>8.0 kg</code>, weight = <code>5.0 N</code></span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！地球上 m = 49 ÷ 9.8 = 5.0 kg（到月球质量不变）；月球重力 W = 5.0 × 1.6 = 8.0 N。" data-err="❌ 质量不随星球改变（m = 49 ÷ 9.8 = 5.0 kg），重力按月球场强计算 W = 5.0 × 1.6 = 8.0 N。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="D">
+      <div class="exam-q-head"><span class="q-tag">Q11 · Ch3 圆周向心力变化条件与断绳方向</span><span><span class="badge-ext">Extended</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">A ball on a string is whirled in a horizontal circle at constant speed. Which change requires a <strong>larger</strong> centripetal force, and in which direction does the ball initially move if the string breaks?</div>
+      <div class="q-stem-cn">细绳拉小球做匀速水平圆周运动。哪种改变需要<strong>更大</strong>向心力？绳断瞬间小球沿何方向飞出？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>Larger radius; radially outwards</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>Smaller radius; radially outwards</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>Larger radius; along the tangent</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>Smaller radius; along the tangent</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！半径 r 越小（转弯越急）所需向心力越大；向心力消失瞬间小球依惯性沿切线（tangent）飞出。" data-err="❌ 转急弯（smaller radius）需要更大向心力，且断绳后不会沿半径向外飞，而是沿瞬时速度方向即切线飞出！"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="D">
+      <div class="exam-q-head"><span class="q-tag">Q12 · Ch3 反弹冲量矢量正负号陷阱</span><span><span class="badge-ext">Extended</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">A <code>0.50 kg</code> ball hits a wall perpendicularly at <code>8.0 m/s</code> and rebounds along the same path at <code>6.0 m/s</code>. What is the magnitude of the impulse exerted on the ball by the wall?</div>
+      <div class="q-stem-cn"><code>0.50 kg</code> 小球以 <code>8.0 m/s</code> 垂直撞墙后以 <code>6.0 m/s</code> 原路反弹，墙对小球冲量大小是多少？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><code>1.0 N·s</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><code>3.0 N·s</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><code>4.0 N·s</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><code>7.0 N·s</code></span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！设初速度为 +8.0 m/s，则反弹速度为 −6.0 m/s，|Δp| = 0.50 × |−6.0 − 8.0| = 7.0 N·s！" data-err="❌ 掉进标量相减陷阱了！速度反向必带负号：Δv = −6.0 − 8.0 = −14.0 m/s，冲量大小 = 0.50 × 14.0 = 7.0 N·s。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="A">
+      <div class="exam-q-head"><span class="q-tag">Q13 · Ch4 力矩垂直距离陷阱</span><span><span class="badge-core">Core</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">A rod of length <code>1.2 m</code> is pivoted at end O. A force of <code>25 N</code> acts at the other end at an angle of <code>30°</code> to the rod (<code>sin 30° = 0.50</code>, <code>cos 30° = 0.87</code>). What is the moment of this force about O?</div>
+      <div class="q-stem-cn">长 <code>1.2 m</code> 轻杆绕端 O 转动，末端受 <code>25 N</code> 力与杆成 <code>30°</code> 夹角（<code>sin 30° = 0.50</code>），求力矩大小。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><code>15 N·m</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><code>21 N·m</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><code>26 N·m</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><code>30 N·m</code></span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！垂直距离 d⊥ = 1.2 × sin 30° = 0.60 m，故 Moment = 25 × 0.60 = 15 N·m！" data-err="❌ 1.2 m 是斜边杆长不是垂直距离！先求垂距 d⊥ = 1.2 × sin 30° = 0.60 m，再乘 25 N 得 15 N·m。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="C">
+      <div class="exam-q-head"><span class="q-tag">Q14 · Ch4 偏心支点平衡尺求自重</span><span><span class="badge-core">Core</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">A uniform metre rule (centre of gravity at the <code>50 cm</code> mark) balances horizontally when pivoted at the <code>40 cm</code> mark with a <code>3.0 N</code> weight suspended at the <code>10 cm</code> mark. What is the weight of the metre rule?</div>
+      <div class="q-stem-cn">均匀米尺（重心在 <code>50 cm</code>）支点置于 <code>40 cm</code> 处，在 <code>10 cm</code> 挂 <code>3.0 N</code> 重物后水平平衡，求米尺自身重力。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><code>2.25 N</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><code>3.0 N</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><code>9.0 N</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><code>12.0 N</code></span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！逆时针 3.0 × (40 − 10) = 90 N·cm；顺时针 W × (50 − 40) = 10 W；故 W = 9.0 N。" data-err="❌ 两个力臂都要量到支点 40 cm 处！分别是 40 − 10 = 30 cm 与 50 − 40 = 10 cm，解得 W = 9.0 N。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head"><span class="q-tag">Q15 · Ch4 高稳定性设计与恢复力矩</span><span><span class="badge-core">Core</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">Which design gives a racing car maximum stability against toppling when cornering, and why does a mildly tilted car return upright?</div>
+      <div class="q-stem-cn">赛车过弯防侧翻需要哪两项结构设计？轻微倾斜后能摆正的原因是什么？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>High C.G. + narrow base; weight creates a toppling moment</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>Low C.G. + wide base; vertical line through C.G. remains inside the base</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>Low C.G. + narrow base; resultant force acts downwards</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>High C.G. + wide base; line through C.G. falls outside the base</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！低重心 + 宽底座使倾斜时过重心的垂线仍留在底座内，产生恢复力矩。" data-err="❌ 提高稳定性需要 Low C.G. + Wide base；垂线仍在底座内才会产生恢复力矩使车辆回正。"></div>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>Part B · Paper 4 结构化大题 (4 题 = 35 分 · 建议 38 分钟)</h4>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">Q16 · Ch1 &amp; Ch2 排水法密度、单位换算与运动阻力解析</span><span><span class="badge-core">Core + Ext</span> <span class="q-marks">[8 marks]</span></span></div>
+      <div class="q-stem-en">
+        A small solid metal submarine model has a dry mass of <code>135 g</code>. It is gently lowered into a measuring cylinder containing water, causing the water level to rise from <code>42.0 cm³</code> to <code>57.0 cm³</code>.<br>
+        (a) Calculate the density of the metal model in <code>g/cm³</code> and in <code>kg/m³</code>. [3]<br>
+        (b) The model is then released from rest at the surface of a tall cylinder of thick oil and reaches terminal velocity after <code>2.5 s</code>. Describe the shape of its speed–time graph from <code>t = 0</code> to <code>t = 4.0 s</code> and state what the gradient represents. [2]<br>
+        (c) Explain, in terms of the vertical forces acting on the model, why its acceleration decreases to zero between <code>t = 0</code> and <code>t = 2.5 s</code>. [3]
+      </div>
+      <div class="q-stem-cn">干质量 <code>135 g</code> 模型排水体积由 <code>42.0</code> 升至 <code>57.0 cm³</code>：求双单位密度；随后在黏油中从静止下落 <code>2.5 s</code> 后达终端速度，描述 <code>0–4.0 s</code> 的 <code>v–t</code> 曲线并用受力解释加速度减至零的机理。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 8 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">M1</span> (a) <code>V = 57.0 − 42.0 = 15.0 cm³</code>; <code>ρ = 135 ÷ 15.0</code> <span class="ms-mark">A1</span> <strong><code>9.00 g/cm³</code></strong> (accept <code>9.0 g/cm³</code>); <span class="ms-mark">B1</span> <code>9.00 × 1000 = <strong>9000 kg/m³</strong></code>.</p>
+          <p><span class="ms-mark">B1</span> (b) From <code>0–2.5 s</code>: curve through origin with <span class="kw">decreasing positive gradient</span>; from <code>2.5–4.0 s</code>: <span class="kw">horizontal straight line</span> (constant speed). <span class="ms-mark">B1</span> Gradient represents <span class="kw">acceleration</span>.</p>
+          <p><span class="ms-mark">B1</span> (c) Downward weight is constant; as speed increases, <span class="kw">upward drag / resistive force increases</span>.<br>
+          <span class="ms-mark">B1</span> <span class="kw">Resultant downward force decreases</span>, so by <code>a = F / m</code>, <span class="kw">acceleration decreases</span>.<br>
+          <span class="ms-mark">B1</span> At <code>2.5 s</code>, upward drag (+ upthrust) <span class="kw">equals weight</span> so <span class="kw">resultant force = 0</span> and acceleration is zero.</p>
+          <p class="ms-cn">中文精析：排水法务必先减除初体积；第 (c) 问 3 分踩死“阻力随速率增大 → 向下合力减小 → 合力为零达终端速度”。</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">Q17 · Ch3 跳伞员动力学、F = ma、开伞减速与矢量合成</span><span><span class="badge-ext">Extended</span> <span class="q-marks">[9 marks]</span></span></div>
+      <div class="q-stem-en">
+        A skydiver of total mass <code>75 kg</code> jumps from a stationary balloon (<code>g = 9.8 N/kg</code>).<br>
+        (a) Calculate the weight of the skydiver and state their initial vertical acceleration at <code>t = 0</code>. [2]<br>
+        (b) At one instant while falling, the upward air resistance is <code>435 N</code>. Calculate the skydiver's downward acceleration at this instant. [3]<br>
+        (c) The skydiver later opens the parachute. Explain why the skydiver slows down and then reaches a new, lower terminal velocity. [3]<br>
+        (d) A horizontal crosswind exerts a force of <code>200 N</code> due East at an instant when the vertical resultant force is <code>150 N</code> downwards. Calculate the magnitude of the resultant force on the skydiver. [1]
+      </div>
+      <div class="q-stem-cn">跳伞员总质量 <code>75 kg</code>（<code>g = 9.8 N/kg</code>）：求重力与初始加速度；阻力 <code>435 N</code> 时加速度；开伞后先减速再达更小终端速度的原理；<code>200 N</code> 水平风力与 <code>150 N</code> 竖直合力合成大小。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 9 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">A1</span> (a) <code>W = m g = 75 × 9.8 = <strong>735 N</strong></code> (accept <code>740 N</code> to 2 s.f.); <span class="ms-mark">B1</span> initial acceleration = <strong><code>9.8 m/s²</code></strong>.</p>
+          <p><span class="ms-mark">M1</span> (b) <code>F_net = 735 − 435 = 300 N</code>; <span class="ms-mark">M1</span> <code>a = F_net / m = 300 ÷ 75</code> <span class="ms-mark">A1</span> <strong><code>4.0 m/s²</code></strong>.</p>
+          <p><span class="ms-mark">B1</span> (c) Opening parachute increases surface area so <span class="kw">air resistance increases suddenly and exceeds weight</span>;<br>
+          <span class="ms-mark">B1</span> <span class="kw">Resultant force acts upwards</span>, causing the skydiver to <span class="kw">decelerate</span> (speed decreases);<br>
+          <span class="ms-mark">B1</span> As speed falls, <span class="kw">air resistance decreases until it equals weight again</span> (resultant force = 0 at a lower terminal velocity).</p>
+          <p><span class="ms-mark">A1</span> (d) <code>R = √(200² + 150²) = √62 500 = <strong>250 N</strong></code>.</p>
+          <p class="ms-cn">中文精析：用 W = 735 N 做中间值精确得出 F_net = 300 N 与 a = 4.0 m/s²；开伞段务必指出 R &gt; W 形成向上合力产生减速。</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">Q18 · Ch3 动量守恒、碰撞冲量与安全气囊原理</span><span><span class="badge-ext">Extended</span> <span class="q-marks">[9 marks]</span></span></div>
+      <div class="q-stem-en">
+        In a crash test, car A of mass <code>1200 kg</code> moving right at <code>15 m/s</code> collides with a stationary van B of mass <code>1800 kg</code>. They lock together immediately after impact.<br>
+        (a) Calculate the momentum of car A before the collision, and find the common velocity of the locked vehicles immediately after impact. [3]<br>
+        (b) In a separate test, a <code>60 kg</code> crash dummy decelerates from <code>15 m/s</code> to <code>0 m/s</code> in <code>0.15 s</code> when hitting an airbag. Calculate the magnitude of the average force exerted by the airbag on the dummy. [3]<br>
+        (c) Explain, in terms of momentum and impulse, why the airbag reduces injury compared with hitting a rigid steering wheel. [3]
+      </div>
+      <div class="q-stem-cn"><code>1200 kg</code> 汽车以 <code>15 m/s</code> 撞击静止 <code>1800 kg</code> 厢式车并粘连：求碰前动量与碰后共速；<code>60 kg</code> 假人在 <code>0.15 s</code> 内被气囊停下求平均力；解释气囊减伤机理。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 9 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">A1</span> (a) <code>p = 1200 × 15 = <strong>18 000 kg·m/s</strong></code>; <span class="ms-mark">M1</span> <code>(1200 + 1800) v = 18 000 ⇒ 3000 v = 18 000</code> <span class="ms-mark">A1</span> <strong><code>6.0 m/s</code></strong> (to the right).</p>
+          <p><span class="ms-mark">M1</span> (b) <code>|Δp| = m |v − u| = 60 × 15 = 900 N·s</code>; <span class="ms-mark">M1</span> <code>F = Δp / Δt = 900 ÷ 0.15</code> <span class="ms-mark">A1</span> <strong><code>6000 N</code></strong>.</p>
+          <p><span class="ms-mark">B1</span> (c) Both stop from the same speed so there is the <span class="kw">same change in momentum (Δp)</span>;<br>
+          <span class="ms-mark">B1</span> Airbag <span class="kw">increases the time of collision (Δt)</span>;<br>
+          <span class="ms-mark">B1</span> This <span class="kw">reduces the rate of change of momentum</span> (<code>F = Δp / Δt</code>), so <span class="kw">reduces the average force</span> on the dummy.</p>
+          <p class="ms-cn">中文精析：动量守恒先写总动量再除以总质量 3000 kg；气囊解释严格套用 3 分踩分句式。</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">Q19 · Ch4 双支点梁平衡力矩与倾覆稳定性解释</span><span><span class="badge-core">Core</span> <span class="q-marks">[9 marks]</span></span></div>
+      <div class="q-stem-en">
+        A uniform plank AB of length <code>4.0 m</code> and weight <code>480 N</code> rests horizontally on two supports placed directly beneath ends A and B. A crate of weight <code>600 N</code> is placed <code>1.0 m</code> from end A.<br>
+        (a) State the <strong>two</strong> conditions required for the plank to be in equilibrium. [2]<br>
+        (b) By taking moments about support A, calculate the upward reaction force <code>R_B</code> exerted by support B. [3]<br>
+        (c) Calculate the upward reaction force <code>R_A</code> exerted by support A. [1]<br>
+        (d) A tall, narrow empty box and a low, wide empty box are placed on a tilting ramp. Explain why the tall, narrow box topples at a much smaller angle of tilt. [3]
+      </div>
+      <div class="q-stem-cn">长 <code>4.0 m</code> 重 <code>480 N</code> 均匀木板架于两端支点 A、B，在距 A 端 <code>1.0 m</code> 放 <code>600 N</code> 货箱：写出平衡双条件；对 A 取力矩求 <code>R_B</code> 与 <code>R_A</code>；解释窄高箱为何更易翻倒。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 9 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">B1</span> (a) <span class="kw">Resultant force is zero</span> (upward force = downward force); <span class="ms-mark">B1</span> <span class="kw">resultant moment is zero</span> (<span class="kw">sum of clockwise moments = sum of anticlockwise moments</span>).</p>
+          <p><span class="ms-mark">M1</span> (b) Clockwise moment about A = <code>(600 × 1.0) + (480 × 2.0) = 600 + 960 = 1560 N·m</code>;<br>
+          <span class="ms-mark">M1</span> Equating moments: <code>R_B × 4.0 = 1560</code> <span class="ms-mark">A1</span> <strong><code>R_B = 390 N</code></strong>.</p>
+          <p><span class="ms-mark">A1</span> (c) <code>R_A + 390 = 600 + 480 = 1080 N ⇒ <strong>R_A = 690 N</strong></code>.</p>
+          <p><span class="ms-mark">B1</span> (d) The tall, narrow box has a <span class="kw">higher centre of gravity</span> and a <span class="kw">narrower base</span>;<br>
+          <span class="ms-mark">B1</span> On tilting, the <span class="kw">vertical line through its centre of gravity falls outside its base</span> at a smaller angle;<br>
+          <span class="ms-mark">B1</span> Its weight then produces a <span class="kw">toppling moment</span> instead of a restoring moment.</p>
+          <p class="ms-cn">中文精析：均匀木板重心必在正中点（距 A 端 2.0 m）；可绕 B 验算 480×2.0 + 600×3.0 = 2760 = 690×4.0！</p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>Part C · Paper 6 ATP 实验与 7 分设计压轴题 (2 题 = 15 分 · 建议 19 分钟)</h4>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">Q20 · Paper 6 ATP 单摆周期数据计算、防误差与大三角形斜率</span><span><span class="badge-core">Paper 6 ATP</span> <span class="q-marks">[8 marks]</span></span></div>
+      <div class="q-stem-en">
+        A student investigates the period <code>T</code> of a simple pendulum of length <code>l</code>. For each length, the time <code>t₂₀</code> for 20 complete oscillations is measured:<br>
+        <code>l = 0.200 m → t₂₀ = 18.0 s, T = 0.90 s, T² = 0.81 s²</code><br>
+        <code>l = 0.400 m → t₂₀ = 25.4 s, T = 1.27 s, T² = 1.61 s²</code><br>
+        <code>l = 0.600 m → t₂₀ = 31.0 s, T = [ ? ] s, T² = [ ? ] s²</code><br>
+        <code>l = 0.800 m → t₂₀ = 35.9 s, T = 1.80 s, T² = 3.22 s²</code><br>
+        (a) Calculate the missing values of <code>T</code> and <code>T²</code> for <code>l = 0.600 m</code>, giving both answers to <strong>3 significant figures</strong>. [2]<br>
+        (b) State <strong>two</strong> precautions the student should take to measure <code>t₂₀</code> as accurately as possible. [2]<br>
+        (c) The student plots a best-fit straight line of <code>T²</code> (y-axis) against <code>l</code> (x-axis) passing through <code>(0, 0)</code> and <code>(0.80 m, 3.22 s²)</code>. Describe how to find the gradient using the graph and calculate its value. [3]<br>
+        (d) State whether <code>T²</code> is directly proportional to <code>l</code>, giving a reason from the graph. [1]
+      </div>
+      <div class="q-stem-cn">单摆测量 <code>t₂₀</code> 算 <code>T</code> 与 <code>T²</code>（填 <code>0.600 m</code> 组保留 3 位有效数字）；写出两项测时精度控制；说明大三角形求斜率步骤并算斜率；判定正比关系。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 8 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">A1</span> (a) <code>T = 31.0 ÷ 20 = <strong>1.55 s</strong></code>; <span class="ms-mark">A1</span> <code>T² = 1.55² = <strong>2.40 s²</strong></code> (must be 3 s.f., not <code>2.4</code>).</p>
+          <p><span class="ms-mark">B1</span> (b) Place a <span class="kw">fiducial marker at the lowest (equilibrium) position</span> and count oscillations as the bob passes it; <span class="ms-mark">B1</span> keep the <span class="kw">amplitude small (&lt; 10°)</span> / repeat <code>t₂₀</code> and calculate an average / release without pushing (any two valid points).</p>
+          <p><span class="ms-mark">B1</span> (c) Draw a large gradient triangle covering <span class="kw">at least 50% (half) of the plotted best-fit line</span> and read two vertices on the line; <span class="ms-mark">M1</span> <code>gradient = Δ(T²) / Δl = (3.22 − 0) ÷ (0.80 − 0)</code> <span class="ms-mark">A1</span> <strong><code>4.03 s²/m</code></strong> (accept <code>4.0 s²/m</code>).</p>
+          <p><span class="ms-mark">B1</span> (d) Yes, because the graph is a <span class="kw">straight line passing through the origin (0, 0)</span>.</p>
+          <p class="ms-cn">中文精析：2.40 末尾的 0 是有效数字不可省略！大三角形占线长 ≥ 50% 几乎每次 ATP 必扣/必给分。</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">Q21 · Paper 6 ATP 7 分实验设计大题 (Plan an Investigation)</span><span><span class="badge-ext">Paper 6 · 7 Marks</span> <span class="q-marks">[7 marks]</span></span></div>
+      <div class="q-stem-en">
+        Plan an experiment to investigate how the <strong>cross-sectional area</strong> of paper cones affects their <strong>terminal velocity</strong> when falling vertically through air.<br>
+        You are provided with paper cones of different base diameters, a metre rule, a stopwatch, paperclips and an electronic balance.<br>
+        In your plan, you should:<br>
+        • state the apparatus needed and how you would determine the terminal velocity;<br>
+        • state the key variables to keep constant;<br>
+        • describe your experimental procedure, including how to improve accuracy;<br>
+        • draw a suitable table of results with column headings and units, and explain how you would reach a conclusion. [7]
+      </div>
+      <div class="q-stem-cn"><strong>7 分 ATP 实验设计：</strong>设计实验探究不同横截面积纸锥在空气中下落的终端速度。写清器材、终端速度测量法、控制变量、步骤提精度、带单位表格与结论作图法。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 7 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">B1</span> <strong>Apparatus &amp; Area:</strong> Measure base diameter <code>d</code> of each cone with metre rule (use <code>A = π(d/2)²</code>) and measure cone mass on balance.</p>
+          <p><span class="ms-mark">B1</span> <strong>Control Variables:</strong> Keep the <span class="kw">total mass of every cone constant</span> (attach small paperclips to lighter cones until all have equal mass) and drop in <span class="kw">still air</span> (close windows/doors).</p>
+          <p><span class="ms-mark">B1</span> <strong>Measuring Terminal Velocity:</strong> Release cone above a fixed starting mark so it <span class="kw">reaches terminal velocity before timing starts</span>; use stopwatch to measure time <code>t</code> to fall a fixed vertical distance <code>h</code> (e.g. <code>1.50 m</code>, measured with metre rule); calculate <code>v_T = h / t</code>.</p>
+          <p><span class="ms-mark">B1</span> <strong>Repeat &amp; Range:</strong> Repeat timing at least <span class="kw">3 times</span> for each cone and find average <code>t_av</code>; test at least <span class="kw">5 different diameters / areas</span>.</p>
+          <p><span class="ms-mark">B1</span> <strong>Precaution:</strong> Keep eyes perpendicular to rule marks to avoid <span class="kw">parallax error</span> (or drop from sufficient height / verify constant speed by timing two equal halves).</p>
+          <p><span class="ms-mark">B1</span> <strong>Table Headings &amp; Units:</strong> Columns for <code>d / cm</code> (or <code>A / cm²</code>), <code>t₁ / s</code>, <code>t₂ / s</code>, <code>t_av / s</code>, and <code>v_T / (m/s)</code>.</p>
+          <p><span class="ms-mark">B1</span> <strong>Graph &amp; Conclusion:</strong> Plot a graph of <span class="kw"><code>v_T</code> against <code>A</code></span> (or compare values) to see how terminal velocity varies as cross-sectional area increases.</p>
+          <p class="ms-cn">中文精析：Paper 6 7 分设计题“五件套”：① 器材与自变量测量；② 必提等质量控制（加回形针调平 mass）；③ 先落一段后再计时确保已达终端速度；④ 至少 5 组 × 重复 3 次平均；⑤ 带单位表头 + <code>v_T vs A</code> 图像！</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section sec-clinic" id="sec-clinic">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>个人错题诊疗台与 Ch 1–4 章节精讲回查</h3>
+      <div class="section-en-sub">F02 Personal Physics Error Clinic · Structured Mistake Log &amp; Direct Chapter Deep-Dive Links</div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-clinic">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>3.1 物理 Ch 1–4 个人错题录入模板指南</h4>
+    <div class="callout deep-dive">
+      <div class="callout-title">🩺 物理高分订正三步录入法（录入后可一键导出给 AI 批改二刷）</div>
+      <ul style="margin-bottom: 0;">
+        <li><strong>① 章节 / 题号出处：</strong>标明题源与章节，例如 <code>Ch2 v-t面积 / P2 Q07</code>、<code>Ch3 终端速度 / P4 Q17(c)</code>、<code>Ch4 垂直力臂 / P2 Q13</code>。</li>
+        <li><strong>② 错在哪一步（归因必选准）：</strong>常见物理五大雷区——<code>混用 s-t 与 v-t 斜率面积</code> / <code>漏 g→kg 或 cm→m 单位换算</code> / <code>反弹速度忘记取负号</code> / <code>斜力没求垂直力臂 d⊥</code> / <code>简答题漏写 Mark Scheme 踩分词 (如 resultant force=0、increases Δt)</code>。</li>
+        <li><strong>③ 正解与防再犯铁律：</strong>写下考场动作指令（如“见气囊必写 <code>same Δp + increases Δt + reduces F</code>”），下次考前只筛选“未攻克”错题逐个清零！</li>
+      </ul>
+    </div>
+
+    <div class="clinic-box" data-clinic-subject="F02"></div>
+  </div>
+
+  <div class="subtopic">
+    <h4>3.2 回查对应章节全量精讲（Physics 0625 · Ch 1–4）</h4>
+    <div class="quick-links-grid">
+      <a class="quick-link-chip" href="../Physics_0625_Chapters/Ch01_Making_Measurements.html">Ch01 测量与密度</a>
+      <a class="quick-link-chip" href="../Physics_0625_Chapters/Ch02_Describing_Motion.html">Ch02 运动与图像</a>
+      <a class="quick-link-chip" href="../Physics_0625_Chapters/Ch03_Forces_and_Motion.html">Ch03 力、冲量与圆周</a>
+      <a class="quick-link-chip" href="../Physics_0625_Chapters/Ch04_Turning_Effects.html">Ch04 力矩与稳定性</a>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section sec-cards" id="app-concepts">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>Ch 1–4 核心定义、公式与实验踩分词闪卡库 (20 张)</h3>
+      <div class="section-en-sub">Bilingual Physics Definitions, Formulae &amp; Cambridge Mark Scheme Buzzwords (Hide / Unmask Quiz)</div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="app-concepts">○ 标记掌握</button>
+  </div>
+
+  <div class="concept-toolbar">
+    <div class="concept-filter-group" id="conceptFilterTabs">
+      <button type="button" class="tab-btn active" data-concept-part="all">全部 20 题</button>
+      <button type="button" class="tab-btn" data-concept-part="ch1">Ch1 测量与密度 (5题)</button>
+      <button type="button" class="tab-btn" data-concept-part="ch2">Ch2 运动与图像 (5题)</button>
+      <button type="button" class="tab-btn" data-concept-part="ch3">Ch3 力与动量冲量 (5题)</button>
+      <button type="button" class="tab-btn" data-concept-part="ch4">Ch4 力矩与稳定性 (5题)</button>
+    </div>
+    <div class="concept-actions">
+      <span class="concept-count-pill" id="conceptCountPill">显示 20 / 20 题</span>
+      <button type="button" class="icon-btn" id="conceptQuizToggle">🙈 开启遮罩自测</button>
+    </div>
+  </div>
+
+  <div class="concept-grid" id="conceptGrid">
+    <div class="concept-card" data-part="ch1">
+      <div class="cq-head"><span class="q-tag">F01 · Ch1 Parallax &amp; Meniscus</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">How do you avoid parallax error when reading a ruler and a measuring cylinder?</div>
+      <div class="cq-cn">如何避免米尺与量筒读数时的视差误差？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Place the eye <span class="kw">perpendicular to the scale</span> (at eye level). Put the cylinder on a <span class="kw">flat surface</span> and read at the <span class="kw">bottom of the meniscus</span>.</div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch1">
+      <div class="cq-head"><span class="q-tag">F02 · Ch1 Measuring Multiples</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Describe how to find the diameter of a thin wire accurately with a metre rule.</div>
+      <div class="cq-cn">简述用米尺测量细铜丝直径的绕线法步骤及注意事项。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Wind e.g. 25 turns <span class="kw">tightly side-by-side</span> on a pencil with <span class="kw">no gaps and no overlaps</span>; measure total width <code>W</code> and divide by <code>N</code> (<span class="kw">d = W / N</span>), reducing percentage uncertainty.</div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch1">
+      <div class="cq-head"><span class="q-tag">F03 · Ch1 Density &amp; Displacement</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">State the density formula, unit conversion to kg/m³, and two precautions for water displacement.</div>
+      <div class="cq-cn">写出密度公式、单位换算倍率及排水法两条关键操作防错。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner"><span class="kw">ρ = m / V</span>; <span class="kw">1 g/cm³ = 1000 kg/m³</span>. Measure <span class="kw">dry mass first</span> before wetting; lower gently on a thread to <span class="kw">avoid splashing</span> and tap to remove <span class="kw">air bubbles</span>.</div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch1">
+      <div class="cq-head"><span class="q-tag">F04 · Ch1 Simple Pendulum</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Why do we time 20 oscillations and place a fiducial marker at the lowest point?</div>
+      <div class="cq-cn">单摆实验为什么要测 20 次全振动并把标记柱放在最低点？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Timing 20 oscillations and averaging <span class="kw">reduces random error / human reaction time effect</span>. At the <span class="kw">lowest point</span>, the bob moves fastest so crossing the <span class="kw">fiducial marker</span> is sharpest.</div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch1">
+      <div class="cq-head"><span class="q-tag">F05 · Ch1 Micrometer Zero Error</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">What is the precision of a micrometer screw gauge, and how do you correct a negative zero error?</div>
+      <div class="cq-cn">螺旋测微器的精度是多少？遇到负零点误差如何修正？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Precision is <span class="kw">0.01 mm</span>. Use the formula <span class="kw">True = Reading − Zero error</span>; for a negative zero error (e.g. <code>−0.02 mm</code>), subtracting a negative means you <span class="kw">add</span> <code>0.02 mm</code>.</div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch2">
+      <div class="cq-head"><span class="q-tag">F06 · Ch2 Scalar vs Vector</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Distinguish between speed and velocity, and explain why uniform circular motion has acceleration.</div>
+      <div class="cq-cn">区分速率与速度，并解释为何匀速圆周运动仍有加速度。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Speed is a <span class="kw">scalar (magnitude only)</span>; velocity is a <span class="kw">vector (magnitude + direction)</span>. In circular motion, <span class="kw">direction changes continuously</span>, so velocity changes → it accelerates.</div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch2">
+      <div class="cq-head"><span class="q-tag">F07 · Ch2 Acceleration &amp; Average Speed</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Write the equations for acceleration and average speed, with SI units.</div>
+      <div class="cq-cn">写出加速度与平均速率的公式及标准国际单位。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner"><span class="kw">a = (v − u) / t</span> (unit: <code>m/s²</code>, negative means deceleration); <span class="kw">v_av = total distance / total time</span> (unit: <code>m/s</code>; never average two speeds directly).</div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch2">
+      <div class="cq-head"><span class="q-tag">F08 · Ch2 s–t Graph Rules</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">On a distance–time (s–t) graph, what do the gradient, horizontal line, and area represent?</div>
+      <div class="cq-cn">在 s–t 图中，斜率、水平直线与图下方面积分别代表什么？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Gradient = <span class="kw">speed</span>; horizontal line = <span class="kw">stationary (at rest)</span>; curve instantaneous speed = <span class="kw">tangent gradient</span>. The area under an s–t graph has <span class="kw">no physical meaning</span>.</div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch2">
+      <div class="cq-head"><span class="q-tag">F09 · Ch2 v–t Graph Rules</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">On a speed–time (v–t) graph, what do the gradient, horizontal line, and area under the line represent?</div>
+      <div class="cq-cn">在 v–t 图中，斜率、水平直线与阴影面积分别代表什么？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Gradient = <span class="kw">acceleration</span>; horizontal line = <span class="kw">constant speed (a = 0)</span>; <span class="kw">area under the graph = total distance travelled</span> (split into rectangles/triangles/trapezia).</div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch2">
+      <div class="cq-head"><span class="q-tag">F10 · Ch2 Free Fall Curves</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">Compare the v–t graph of an object falling in vacuum vs falling through air.</div>
+      <div class="cq-cn">对比物体在真空中下落与空气中下落的 v–t 图像差异。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">In vacuum: straight line with constant gradient <span class="kw">9.8 m/s²</span>. In air: starts with initial gradient <code>9.8 m/s²</code>, then <span class="kw">gradient decreases</span> and <span class="kw">flattens horizontally</span> at terminal velocity.</div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch3">
+      <div class="cq-head"><span class="q-tag">F11 · Ch3 Mass vs Weight</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Contrast mass and weight, and state the equation linking them on Earth.</div>
+      <div class="cq-cn">对比质量与重力的本质、单位及在地球上的换算公式。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Mass (<code>kg</code>) measures matter / inertia and is <span class="kw">constant everywhere</span>. Weight (<code>N</code>) is gravitational force acting on mass: <span class="kw">W = mg</span> (<code>g = 9.8 N/kg</code> on Earth).</div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch3">
+      <div class="cq-head"><span class="q-tag">F12 · Ch3 F = ma &amp; Balanced Forces</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">What happens to a moving object when the resultant force on it is zero, and what does F in F = ma mean?</div>
+      <div class="cq-cn">运动物体受合力为零时如何运动？F = ma 中的 F 指什么？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">When <span class="kw">resultant force = 0</span>, a moving object continues at <span class="kw">constant velocity (constant speed in a straight line)</span>. In <code>F = ma</code>, <code>F</code> is always the <span class="kw">resultant (net) force</span>.</div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch3">
+      <div class="cq-head"><span class="q-tag">F13 · Ch3 Terminal Velocity Script</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">State the 3-stage Mark Scheme explanation for how a falling object reaches terminal velocity.</div>
+      <div class="cq-cn">默写物体下落达到终端速度的三阶段官方踩分词句式。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">① Initially <code>v = 0</code>, <span class="kw">air resistance = 0</span>, <code>a = g</code>. ② As speed increases, <span class="kw">air resistance increases</span> → <span class="kw">resultant downward force decreases</span> → <span class="kw">acceleration decreases</span>. ③ When <span class="kw">air resistance = weight</span>, <span class="kw">resultant force = 0</span> → constant terminal velocity.</div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch3">
+      <div class="cq-head"><span class="q-tag">F14 · Ch3 Centripetal Force</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">In which direction does centripetal force act, and what 3 changes increase the required force?</div>
+      <div class="cq-cn">向心力指向何方？哪些变化会增大维持圆周运动所需的向心力？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Acts <span class="kw">towards the centre of the circle</span> (perpendicular to velocity). Force increases if <span class="kw">mass increases</span>, <span class="kw">speed increases</span>, or <span class="kw">radius decreases</span>. String snap → flies <span class="kw">along tangent</span>.</div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch3">
+      <div class="cq-head"><span class="q-tag">F15 · Ch3 Momentum &amp; Airbag</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">State the formula for impulse and explain why an airbag reduces injury in a car crash.</div>
+      <div class="cq-cn">写出冲量公式，并用动量/冲量踩分词解释安全气囊为什么减伤。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner"><span class="kw">Impulse = FΔt = m(v − u)</span>. For the <span class="kw">same change in momentum (Δp)</span>, the airbag <span class="kw">increases the collision time (Δt)</span>, which <span class="kw">reduces the rate of change of momentum / reduces average force</span>.</div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch4">
+      <div class="cq-head"><span class="q-tag">F16 · Ch4 Moment &amp; d⊥</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Define the moment of a force and explain the exact meaning of d in Moment = F × d.</div>
+      <div class="cq-cn">定义力矩，并指出公式 M = F × d 中距离 d 的精确物理含义。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Turning effect of a force (unit: <code>N·m</code>). <code>d⊥</code> is the <span class="kw">perpendicular distance from the pivot to the line of action of the force</span> (not the rod length for angled forces).</div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch4">
+      <div class="cq-head"><span class="q-tag">F17 · Ch4 Equilibrium Conditions</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">State the two necessary and sufficient conditions for an object to be in equilibrium.</div>
+      <div class="cq-cn">写出物体处于完全机械平衡的两大充分必要条件。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">① <span class="kw">No resultant force</span> (upward forces = downward forces);<br>② <span class="kw">No resultant moment</span> (<span class="kw">sum of clockwise moments = sum of anticlockwise moments</span> about any pivot).</div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch4">
+      <div class="cq-head"><span class="q-tag">F18 · Ch4 Double-Support Beam</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">How do you find both upward reaction forces R_A and R_B on a bridge beam resting on two supports?</div>
+      <div class="cq-cn">双支点桥面梁如何快速求出两个支点的向上支持力 R_A 与 R_B？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Take <span class="kw">moments about support A</span> (eliminating <code>R_A</code> because <code>d⊥ = 0</code>) to solve for <code>R_B</code>; then use <span class="kw">R_A + R_B = total downward weight</span> to get <code>R_A</code>.</div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch4">
+      <div class="cq-head"><span class="q-tag">F19 · Ch4 Centre of Gravity Lab</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Describe the plumb-line experiment to locate the centre of gravity of an irregular cardboard lamina.</div>
+      <div class="cq-cn">简述用悬垂线法测定不规则硬纸板重心的 Paper 6 实验步骤。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">Make 2–3 holes near edges; hang on a pin and check it <span class="kw">swings freely</span>; hang a <span class="kw">plumb line</span> from the same pin and mark the vertical line. Repeat from another hole; the <span class="kw">intersection</span> is the C.G.</div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch4">
+      <div class="cq-head"><span class="q-tag">F20 · Ch4 Stability &amp; Toppling</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">State the two ways to increase stability and explain the exact condition for toppling.</div>
+      <div class="cq-cn">提高物体稳定性的两个方法是什么？物体何时会倾倒？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">① <span class="kw">Lower the centre of gravity</span> and ② <span class="kw">widen the base</span>. It stays upright if the <span class="kw">vertical line through C.G. stays inside the base</span> (restoring moment), and topples once it <span class="kw">falls outside the base</span> (toppling moment).</div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+        <nav class="chapter-pager" aria-label="学科切换导航">
+          <div><a class="pager-btn" href="F01_AddMaths_0606_Final_Sprint.html">← F01 · 附加数学 0606 期末考范围锁定冲刺</a></div>
+          <div><a class="pager-btn primary" href="index.html">🎯 返回 6 科期末冲刺总控台</a></div>
+          <div><a class="pager-btn" href="F03_Chemistry_0620_Final_Sprint.html">F03 · 化学 0620 Ch 1, 2, 4, 6 核心高频冲刺 →</a></div>
+        </nav>
+      </div>
+    </main>
+  </div>
+
+  <button type="button" class="back-top-btn" id="backTopBtn" title="返回顶部">↑</button>
+
+  <script>
+(function () {
+  'use strict';
+
+  const THEME_KEY = 'igcse_final_sprint_theme';
+  const subCode = (document.body && document.body.getAttribute('data-chapter-code')) || 'HUB';
+  const STORAGE_PREFIX = 'igcse_final_sprint_' + subCode.toLowerCase() + '_';
+  const htmlEl = document.documentElement;
+  const bodyEl = document.body;
+
+  let currentViewMode = localStorage.getItem(STORAGE_PREFIX + 'viewMode') || 'all';
+  let activeConceptPart = 'all';
+  let quizMasked = localStorage.getItem(STORAGE_PREFIX + 'quizMasked') === '1';
+  let allMsExpanded = false;
+  let masteredIds = [];
+  let activeTimerId = null;
+  try {
+    masteredIds = JSON.parse(localStorage.getItem(STORAGE_PREFIX + 'mastered') || '[]');
+    if (!Array.isArray(masteredIds)) masteredIds = [];
+  } catch (e) {
+    masteredIds = [];
+  }
+
+  // ---------- 1. Theme ----------
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+  function applyTheme(theme) {
+    htmlEl.setAttribute('data-theme', theme);
+    if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem(THEME_KEY, theme);
+  }
+  applyTheme(localStorage.getItem(THEME_KEY) || 'light');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      applyTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  }
+
+  // ---------- 2. View Modes (All / Summary / Practice / Clinic / Cards) ----------
+  function applyViewMode(mode) {
+    currentViewMode = mode;
+    bodyEl.classList.remove('mode-summary', 'mode-practice', 'mode-clinic', 'mode-cards');
+    if (mode !== 'all') bodyEl.classList.add('mode-' + mode);
+    document.querySelectorAll('[data-view-mode]').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-view-mode') === mode);
+    });
+    localStorage.setItem(STORAGE_PREFIX + 'viewMode', mode);
+  }
+  document.querySelectorAll('[data-view-mode]').forEach(function (btn) {
+    btn.addEventListener('click', function () { applyViewMode(btn.getAttribute('data-view-mode')); });
+  });
+  applyViewMode(currentViewMode);
+
+  // ---------- 3. Sidebar ----------
+  const sidebar = document.getElementById('sidebar');
+  const menuToggle = document.getElementById('menuToggle');
+  if (menuToggle && sidebar) {
+    menuToggle.addEventListener('click', function () { sidebar.classList.toggle('open'); });
+    sidebar.querySelectorAll('.nav-link').forEach(function (lnk) {
+      lnk.addEventListener('click', function () {
+        if (window.innerWidth <= 980) sidebar.classList.remove('open');
+      });
+    });
+  }
+  document.querySelectorAll('.nav-unit-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const unit = btn.closest('.nav-unit');
+      if (unit) unit.classList.toggle('collapsed');
+    });
+  });
+
+  // ---------- 4. Mastery Progress ----------
+  const progressText = document.getElementById('progressText');
+  const progressFill = document.getElementById('progressFill');
+  const masterBtns = Array.from(document.querySelectorAll('.master-btn'));
+  const totalSections = masterBtns.length;
+  const validIds = new Set(masterBtns.map(function (b) { return b.getAttribute('data-section-id'); }));
+
+  function renderMastery() {
+    const doneList = masteredIds.filter(function (id) { return validIds.has(id); });
+    localStorage.setItem(STORAGE_PREFIX + 'total', String(totalSections));
+    if (progressText) progressText.textContent = doneList.length + '/' + totalSections;
+    if (progressFill && totalSections > 0) {
+      progressFill.style.width = Math.round((doneList.length / totalSections) * 100) + '%';
+    }
+    masterBtns.forEach(function (btn) {
+      const sid = btn.getAttribute('data-section-id');
+      const done = doneList.indexOf(sid) !== -1;
+      btn.classList.toggle('is-mastered', done);
+      btn.textContent = done ? '✓ 已掌握' : '○ 标记掌握';
+    });
+    document.querySelectorAll('.nav-link').forEach(function (lnk) {
+      const id = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('mastered', doneList.indexOf(id) !== -1);
+    });
+  }
+  masterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const sid = btn.getAttribute('data-section-id');
+      const idx = masteredIds.indexOf(sid);
+      if (idx === -1) masteredIds.push(sid);
+      else masteredIds.splice(idx, 1);
+      localStorage.setItem(STORAGE_PREFIX + 'mastered', JSON.stringify(masteredIds));
+      renderMastery();
+    });
+  });
+  if (totalSections > 0) renderMastery();
+
+  // ---------- 5. Toggle Details & Print ----------
+  const toggleAllMs = document.getElementById('toggleAllMs');
+  if (toggleAllMs) {
+    toggleAllMs.addEventListener('click', function () {
+      allMsExpanded = !allMsExpanded;
+      document.querySelectorAll('details.ms-details').forEach(function (det) { det.open = allMsExpanded; });
+      const lbl = toggleAllMs.querySelector('.btn-label');
+      if (lbl) lbl.textContent = allMsExpanded ? '收起解析' : '展开解析';
+      toggleAllMs.classList.toggle('active', allMsExpanded);
+    });
+  }
+  const printBtn = document.getElementById('printBtn');
+  if (printBtn) printBtn.addEventListener('click', function () { window.print(); });
+
+  // ---------- 6. Search ----------
+  const searchInput = document.getElementById('searchInput');
+  const searchClear = document.getElementById('searchClear');
+  const searchBar = document.getElementById('searchBar');
+  const searchSummary = document.getElementById('searchSummary');
+  const searchResetBtn = document.getElementById('searchResetBtn');
+  const emptySearchNotice = document.getElementById('emptySearchNotice');
+
+  function runSearch() {
+    if (!searchInput) return;
+    const raw = searchInput.value.trim().toLowerCase();
+    if (searchClear) searchClear.style.display = raw ? 'block' : 'none';
+    const sections = Array.from(document.querySelectorAll('.topic-section'));
+    if (!raw) {
+      sections.forEach(function (s) { s.classList.remove('search-dim'); });
+      if (searchBar) searchBar.classList.remove('visible');
+      if (emptySearchNotice) emptySearchNotice.style.display = 'none';
+      return;
+    }
+    let hits = 0;
+    sections.forEach(function (sec) {
+      const ok = sec.textContent.toLowerCase().indexOf(raw) !== -1;
+      sec.classList.toggle('search-dim', !ok);
+      if (ok) hits++;
+    });
+    if (searchBar) searchBar.classList.add('visible');
+    if (searchSummary) searchSummary.textContent = '关键词 “' + searchInput.value.trim() + '” 匹配 ' + hits + ' 个板块';
+    if (emptySearchNotice) emptySearchNotice.style.display = hits === 0 ? 'block' : 'none';
+  }
+  if (searchInput) searchInput.addEventListener('input', runSearch);
+  function resetSearch() { if (searchInput) searchInput.value = ''; runSearch(); }
+  if (searchClear) searchClear.addEventListener('click', resetSearch);
+  if (searchResetBtn) searchResetBtn.addEventListener('click', resetSearch);
+
+  // ---------- 7. Interactive MCQ ----------
+  document.querySelectorAll('.exam-q[data-mcq-answer]').forEach(function (qBox) {
+    const ans = qBox.getAttribute('data-mcq-answer');
+    const fb = qBox.querySelector('.mcq-feedback');
+    const opts = qBox.querySelectorAll('.mcq-opt');
+    opts.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const chosen = btn.getAttribute('data-opt');
+        opts.forEach(function (o) { o.classList.remove('correct', 'wrong'); });
+        if (chosen === ans) {
+          btn.classList.add('correct');
+          if (fb) { fb.textContent = fb.getAttribute('data-ok') || '✅ 回答正确！'; fb.className = 'mcq-feedback visible ok'; }
+        } else {
+          btn.classList.add('wrong');
+          opts.forEach(function (o) { if (o.getAttribute('data-opt') === ans) o.classList.add('correct'); });
+          if (fb) { fb.textContent = fb.getAttribute('data-err') || '❌ 未选对，请核对下方 Mark Scheme 解析。'; fb.className = 'mcq-feedback visible err'; }
+        }
+      });
+    });
+  });
+
+  // ---------- 8. Flashcards ----------
+  const conceptCountPill = document.getElementById('conceptCountPill');
+  const conceptQuizToggle = document.getElementById('conceptQuizToggle');
+
+  function filterConcepts() {
+    const cards = Array.from(document.querySelectorAll('#conceptGrid .concept-card'));
+    if (!cards.length) return;
+    let visible = 0;
+    cards.forEach(function (card) {
+      const part = card.getAttribute('data-part');
+      const show = activeConceptPart === 'all' || part === activeConceptPart;
+      card.classList.toggle('concept-hidden', !show);
+      if (show) visible++;
+    });
+    if (conceptCountPill) conceptCountPill.textContent = '显示 ' + visible + ' / ' + cards.length + ' 题';
+  }
+  document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      activeConceptPart = btn.getAttribute('data-concept-part');
+      document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      filterConcepts();
+    });
+  });
+  function applyQuizMask(masked) {
+    quizMasked = masked;
+    document.querySelectorAll('#conceptGrid .concept-card').forEach(function (c) { c.classList.toggle('masked', masked); });
+    if (conceptQuizToggle) {
+      conceptQuizToggle.textContent = masked ? '👁️ 显示全部答案' : '🙈 开启遮罩自测';
+      conceptQuizToggle.classList.toggle('active', masked);
+    }
+    localStorage.setItem(STORAGE_PREFIX + 'quizMasked', masked ? '1' : '0');
+  }
+  if (conceptQuizToggle) {
+    conceptQuizToggle.addEventListener('click', function () { applyQuizMask(!quizMasked); });
+  }
+  document.querySelectorAll('#conceptGrid .cq-answer').forEach(function (box) {
+    box.addEventListener('click', function () {
+      const card = box.closest('.concept-card');
+      if (card && card.classList.contains('masked')) card.classList.remove('masked');
+    });
+  });
+
+  function countWords(str) {
+    const cleaned = (str || '').trim();
+    return cleaned ? cleaned.split(/\s+/).filter(Boolean).length : 0;
+  }
+  function countChiChars(str) {
+    return (str || '').replace(/[\s\u3000]/g, '').length;
+  }
+  function setupTimer(btnStart, btnReset, clkEl, totalMinutes) {
+    let secLeft = totalMinutes * 60;
+    const fmt = function (s) {
+      const m = Math.floor(s / 60), r = s % 60;
+      return String(m).padStart(2, '0') + ':' + String(r).padStart(2, '0');
+    };
+    if (clkEl) clkEl.textContent = fmt(secLeft);
+    if (btnStart) {
+      btnStart.addEventListener('click', function () {
+        if (activeTimerId) {
+          clearInterval(activeTimerId);
+          activeTimerId = null;
+          btnStart.textContent = '▶ 继续计时';
+        } else {
+          btnStart.textContent = '⏸ 暂停计时';
+          activeTimerId = setInterval(function () {
+            if (secLeft > 0) secLeft--;
+            if (clkEl) clkEl.textContent = fmt(secLeft);
+            if (secLeft === 0) {
+              clearInterval(activeTimerId);
+              activeTimerId = null;
+              btnStart.textContent = '⏰ 时间到';
+            }
+          }, 1000);
+        }
+      });
+    }
+    if (btnReset) {
+      btnReset.addEventListener('click', function () {
+        if (activeTimerId) { clearInterval(activeTimerId); activeTimerId = null; }
+        secLeft = totalMinutes * 60;
+        if (clkEl) clkEl.textContent = fmt(secLeft);
+        if (btnStart) btnStart.textContent = '⏳ 开始计时';
+      });
+    }
+  }
+
+  // ---------- 9. Subject Interactive Labs (f01 - f06) ----------
+  function mountSprintLab(el) {
+    const t = el.getAttribute('data-lab-type');
+    if (!t) return;
+    const bindInputs = function (fn) {
+      el.querySelectorAll('input,select,textarea').forEach(function (inp) {
+        inp.addEventListener('input', fn);
+        inp.addEventListener('change', fn);
+      });
+      fn();
+    };
+
+    if (t === 'f01') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">📐 F01 交互冲刺台 · 9 章必背公式/Paper 1 易错检索 + 80 分模考估分器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>切换范围板块：<select id="f1Mod">' +
+        '<option value="ch1_2">Ch1–2 函数/反函数/二次最值与判别式</option>' +
+        '<option value="ch3_4">Ch3–4 多项式因式余数与绝对值不等式</option>' +
+        '<option value="ch5_6">Ch5–6 指数对数换底与直线/Linear Law</option>' +
+        '<option value="ch10_11">Ch10–11 排列组合/二项展开/AP-GP-S∞</option>' +
+        '<option value="ch12_14">Ch12+Ch14 基础求导法则 + 指数对数三角导数</option></select></label>' +
+        '<label>Ch1–6 (/20)：<input type="number" id="f1S1" value="17" min="0" max="20"></label>' +
+        '<label>Ch10 计数 (/20)：<input type="number" id="f1S2" value="16" min="0" max="20"></label>' +
+        '<label>Ch11 级数 (/20)：<input type="number" id="f1S3" value="17" min="0" max="20"></label>' +
+        '<label>Ch14 求导 (/20)：<input type="number" id="f1S4" value="16" min="0" max="20"></label>' +
+        '<button type="button" class="tab-btn active" id="f1Start">⏳ 120min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f1Reset">重置</button>' +
+        '<span class="timer-big" id="f1Clk">120:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f1Out"></div><div class="readout-pill" id="f1ScoreOut"></div></div></div>';
+      const notes = {
+        ch1_2: '<strong>Ch1–2 必检红线</strong>：① fg(x) 先代入里层 g(x) 再喂给 f；反函数成立条件是 <strong>1-to-1</strong>，且 Domain(f⁻¹)=Range(f)；② 判别式 b²−4ac > 0 相交两点，≤ 0 恒在 x 轴一侧时还需检查首项系数 a 符号；③ 二次不等式<strong>必须先因式分解找临界根画草图</strong>，严禁直接拆解两边开方！',
+        ch3_4: '<strong>Ch3–4 必检红线</strong>：① x−a 是因式 ⇔ f(a)=0；余数定理求得是 f(−b/a)；② 三次方程解先试 ±1, ±2 找一实根再长除/综合除法；③ |ax+b| < |cx+d| 在 P1 无计算器优先<strong>两边平方化二次不等式</strong>或画出 V 字折线求交点！',
+        ch5_6: '<strong>Ch5–6 必检红线</strong>：① logₐ(M)+logₐ(N)=logₐ(MN)，但 logₐ(M+N) 不能拆！② 解完对数方程<strong>必须回代验真数 > 0 与底数 > 0 且 ≠ 1</strong>；③ Linear Law 化成 Y = mX + c：先辨识纵轴 Y 与横轴 X，再用直线斜率 m 与截距 c 反推指数/幂函数参数！',
+        ch10_11: '<strong>Ch10–11 必检红线</strong>：① 排列看顺序 ⁿPᵣ，分组抽选不看顺序 ⁿCᵣ；“不相邻”用插空法，“至少”用总−反面；② 二项式 (a+b)ⁿ 通项 Tᵣ₊₁ = ⁿCᵣ aⁿ⁻ʳ bʳ（记住 r 比第几项小 1！）；③ S∞ = a/(1−r) <strong>必须验证 |r| < 1</strong>，且公式表虽给 Sₙ/S∞ 仍建议熟记秒杀！',
+        ch12_14: '<strong>Ch12+Ch14 求导链</strong>：① 先熟用基础求导 d/dx(xⁿ)=nxⁿ⁻¹、乘积 uv′+vu′、商法则 (vu′−uv′)/v² 与链式复合；② 再衔接 Ch14：d/dx(eᵃˣ⁺ᵇ)=aeᵃˣ⁺ᵇ，d/dx(ln(ax+b))=a/(ax+b)，d/dx(sin ax)=a cos ax，d/dx(cos ax)=−a sin ax（负号极易丢！），d/dx(tan ax)=a sec²ax（<strong>求导一律用弧度 rad</strong>）！'
+      };
+      bindInputs(function () {
+        el.querySelector('#f1Out').innerHTML = notes[el.querySelector('#f1Mod').value];
+        const v1 = Math.max(0, Math.min(20, Number(el.querySelector('#f1S1').value) || 0));
+        const v2 = Math.max(0, Math.min(20, Number(el.querySelector('#f1S2').value) || 0));
+        const v3 = Math.max(0, Math.min(20, Number(el.querySelector('#f1S3').value) || 0));
+        const v4 = Math.max(0, Math.min(20, Number(el.querySelector('#f1S4').value) || 0));
+        const tot = v1 + v2 + v3 + v4;
+        const pct = Math.round((tot / 80) * 100);
+        const band = pct >= 85 ? 'Grade A* 冲刺区间' : (pct >= 72 ? 'Grade A 稳健线' : (pct >= 58 ? 'Grade B/C 需优先回刷错题模块' : '基础漏洞明显，请先回到对应章补推导'));
+        el.querySelector('#f1ScoreOut').innerHTML = '<strong>期末模拟估分：' + tot + ' / 80（' + pct + '%）</strong> ｜ 预测表现：' + band + '。';
+      });
+      setupTimer(el.querySelector('#f1Start'), el.querySelector('#f1Reset'), el.querySelector('#f1Clk'), 120);
+    } else if (t === 'f02') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">⚙️ F02 物理 Ch 1–4 交互验算与期末估分计时台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>验算模型：<select id="f2Calc">' +
+        '<option value="density">Ch1 密度计算 ρ = m / V</option>' +
+        '<option value="accel">Ch2 匀变速加速度 a = (v − u) / t</option>' +
+        '<option value="impulse">Ch3 冲量与动量变化 FΔt = mΔv</option>' +
+        '<option value="moment">Ch4 力矩 M = F × d⊥</option></select></label>' +
+        '<label><span id="f2ALbl">质量 m (g/kg)</span>：<input type="number" id="f2A" value="250" step="any"></label>' +
+        '<label><span id="f2BLbl">体积 V (cm³/m³)</span>：<input type="number" id="f2B" value="50" step="any"></label>' +
+        '<label>Paper2 (/15)：<input type="number" id="f2_1" value="13" min="0" max="15"></label>' +
+        '<label>Paper4 (/35)：<input type="number" id="f2_2" value="30" min="0" max="35"></label>' +
+        '<label>Paper6 (/15)：<input type="number" id="f2_3" value="13" min="0" max="15"></label>' +
+        '<button type="button" class="tab-btn active" id="f2Start">⏳ 75min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f2Reset">重置</button>' +
+        '<span class="timer-big" id="f2Clk">75:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f2Out"></div><div class="readout-pill" id="f2ScoreOut"></div></div></div>';
+      const sel = el.querySelector('#f2Calc');
+      const aLbl = el.querySelector('#f2ALbl'), bLbl = el.querySelector('#f2BLbl');
+      const syncLabels = function () {
+        const m = sel.value;
+        if (m === 'density') { aLbl.textContent = '质量 m (g)'; bLbl.textContent = '体积 V (cm³)'; }
+        else if (m === 'accel') { aLbl.textContent = '速度增量 Δv (m/s)'; bLbl.textContent = '时间 t (s)'; }
+        else if (m === 'impulse') { aLbl.textContent = '合力 F (N)'; bLbl.textContent = '作用时间 Δt (s)'; }
+        else { aLbl.textContent = '力 F (N)'; bLbl.textContent = '垂直力臂 d⊥ (m)'; }
+      };
+      sel.addEventListener('change', syncLabels);
+      syncLabels();
+      bindInputs(function () {
+        const m = sel.value, a = Number(el.querySelector('#f2A').value) || 0, b = Number(el.querySelector('#f2B').value) || 0;
+        let resText = '';
+        if (m === 'density') {
+          const rho = b !== 0 ? (a / b) : 0;
+          resText = '<strong>ρ = m / V = ' + (b !== 0 ? rho.toFixed(3) : '∞（分母勿为0）') + ' g/cm³</strong>（×1000 = ' + (b !== 0 ? (rho * 1000).toFixed(1) : '—') + ' kg/m³）。<br><strong>避坑</strong>：与水 ρ=1.0 g/cm³ 比较，小于则漂浮，大于则下沉；结果保留 2–3 位有效数字！';
+        } else if (m === 'accel') {
+          const acc = b !== 0 ? (a / b) : 0;
+          resText = '<strong>a = Δv / t = ' + (b !== 0 ? acc.toFixed(3) : '∞') + ' m/s²</strong>。<br><strong>避坑</strong>：v-t 图斜率即加速度（斜率恒定为匀加速）；v-t 曲线下方面积即路程/位移！';
+        } else if (m === 'impulse') {
+          const imp = a * b;
+          resText = '<strong>Impulse = FΔt = ' + imp.toFixed(3) + ' N·s（或 kg·m/s）</strong>。<br><strong>Mark Scheme 踩分词</strong>：安全气囊/缓冲垫降低 F 的原因是 <code>increases time of collision (Δt)</code>，对同一 <code>Δp</code> 则 <code>F = Δp / Δt</code> 减小！';
+        } else {
+          const mom = a * b;
+          resText = '<strong>Moment = F × d⊥ = ' + mom.toFixed(3) + ' N·m</strong>。<br><strong>平衡双条件</strong>：① 合外力为 0；② 顺时针总力矩 = 逆时针总力矩（<code>ΣM_cw = ΣM_acw</code>），d⊥ 必须垂直于力的作用线！';
+        }
+        el.querySelector('#f2Out').innerHTML = resText;
+        const p2 = Math.max(0, Math.min(15, Number(el.querySelector('#f2_1').value) || 0));
+        const p4 = Math.max(0, Math.min(35, Number(el.querySelector('#f2_2').value) || 0));
+        const p6 = Math.max(0, Math.min(15, Number(el.querySelector('#f2_3').value) || 0));
+        const tot = p2 + p4 + p6, pct = Math.round((tot / 65) * 100);
+        el.querySelector('#f2ScoreOut').innerHTML = '<strong>Ch 1–4 模拟卷总分：' + tot + ' / 65（' + pct + '%）</strong> ｜ ' + (pct >= 80 ? '达到 A* 实力！注意保持 Paper 4 作图与 ATP 7 分设计完整性' : '建议先复盘失分集中模块（MCQ/结构简答/ATP 实验）');
+      });
+      setupTimer(el.querySelector('#f2Start'), el.querySelector('#f2Reset'), el.querySelector('#f2Clk'), 75);
+    } else if (t === 'f03') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">⚗️ F03 化学 Ch 1, 2, 4, 6 核心交互台 · 6 大电解产物与配平检查 + 65 分估分</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>选择 Ch6 电解/电池体系：<select id="f3Cell">' +
+        '<option value="pbbr2">1. 熔融溴化铅 Molten PbBr₂(l) · 碳电极</option>' +
+        '<option value="nacl_conc">2. 浓氯化钠溶液 Conc. NaCl(aq) · 碳电极</option>' +
+        '<option value="h2so4_dil">3. 稀硫酸 Dilute H₂SO₄(aq) · 碳/铂电极</option>' +
+        '<option value="cuso4_inert">4. 硫酸铜溶液 CuSO₄(aq) · 惰性碳/铂电极</option>' +
+        '<option value="cuso4_cu">5. 硫酸铜溶液 CuSO₄(aq) · 活性铜电极</option>' +
+        '<option value="fuel_cell">6. 氢氧燃料电池 H₂–O₂ Fuel Cell</option></select></label>' +
+        '<label>Paper2 (/15)：<input type="number" id="f3_1" value="13" min="0" max="15"></label>' +
+        '<label>Paper4 (/35)：<input type="number" id="f3_2" value="29" min="0" max="35"></label>' +
+        '<label>Paper6 (/15)：<input type="number" id="f3_3" value="13" min="0" max="15"></label>' +
+        '<button type="button" class="tab-btn active" id="f3Start">⏳ 75min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f3Reset">重置</button>' +
+        '<span class="timer-big" id="f3Clk">75:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f3Out"></div><div class="readout-pill" id="f3ScoreOut"></div></div></div>';
+      const cells = {
+        pbbr2: '<strong>熔融 PbBr₂(l)（必须加热至熔融才存在自由移动离子）</strong><br>• 阴极 (−) 还原：<code>Pb²⁺(l) + 2e⁻ → Pb(l)</code>（现象：银白色熔融金属珠）<br>• 阳极 (+) 氧化：<code>2Br⁻(l) → Br₂(g) + 2e⁻</code>（现象：红棕色气体 <strong>red-brown vapour</strong>）<br>⚠️ 高频坑：若题目写成室温固态 PbBr₂(s)，则完全不导电！',
+        nacl_conc: '<strong>浓 NaCl(aq) 氯碱电解（碳电极）</strong><br>• 阴极 (−)：H⁺ 排在 Na⁺ 后先得电子：<code>2H⁺(aq) + 2e⁻ → H₂(g)</code>（无色气泡，燃爆声）<br>• 阳极 (+)：高浓度 Cl⁻ 优先放电：<code>2Cl⁻(aq) → Cl₂(g) + 2e⁻</code>（黄绿色刺激气体，使湿润蓝色石蕊试纸先变红后褪色）<br>• 溶液变化：留下 Na⁺ 与 OH⁻，pH 升高呈碱性 NaOH(aq)！',
+        h2so4_dil: '<strong>稀 H₂SO₄(aq)（实质即电解水！）</strong><br>• 阴极 (−)：<code>2H⁺ + 2e⁻ → H₂(g)</code>（气体体积比 2 份）<br>• 阳极 (+)：SO₄²⁻ 从不放电，OH⁻ 氧化：<code>4OH⁻ → O₂(g) + 2H₂O + 4e⁻</code>（体积比 1 份，复燃带火星木条）<br>⚠️ 记住 H₂ : O₂ 体积比 = <strong>2 : 1</strong>！',
+        cuso4_inert: '<strong>CuSO₄(aq)（惰性石墨/铂电极）</strong><br>• 阴极 (−)：Cu²⁺ 较 H⁺ 更不活泼先还原：<code>Cu²⁺(aq) + 2e⁻ → Cu(s)</code>（红棕色固体覆盖电极）<br>• 阳极 (+)：<code>4OH⁻ → O₂(g) + 2H₂O + 4e⁻</code>（无色气泡）<br>• 溶液变化：Cu²⁺ 消耗且留下 H⁺+SO₄²⁻，<strong>蓝色变浅直至无色，pH 下降</strong>！',
+        cuso4_cu: '<strong>CuSO₄(aq)（活性铜电极 — 粗铜精炼/电镀铜）</strong><br>• 阴极 (−)：<code>Cu²⁺(aq) + 2e⁻ → Cu(s)</code>（阴极增重，纯铜析出）<br>• 阳极 (+)：铜阳极自身氧化溶解：<code>Cu(s) → Cu²⁺(aq) + 2e⁻</code>（阳极减重消耗）<br>• 溶液变化：Cu²⁺ 浓度不变，<strong>溶液始终保持蓝色且 pH 不变</strong>！',
+        fuel_cell: '<strong>氢氧燃料电池 H₂–O₂ Fuel Cell（2023+ 大纲必考！）</strong><br>• 总反应：<code>2H₂(g) + O₂(g) → 2H₂O(l)</code>（唯一产物只有水，零温室气体排放）<br>• 核心优势 vs 汽油内燃机：能量转换效率更高、污染小、无运动磨损；缺点：氢气储存/运输需高压低温且基础设施少（大多数氢气仍来自化石燃料裂解）。'
+      };
+      bindInputs(function () {
+        el.querySelector('#f3Out').innerHTML = cells[el.querySelector('#f3Cell').value];
+        const p2 = Math.max(0, Math.min(15, Number(el.querySelector('#f3_1').value) || 0));
+        const p4 = Math.max(0, Math.min(35, Number(el.querySelector('#f3_2').value) || 0));
+        const p6 = Math.max(0, Math.min(15, Number(el.querySelector('#f3_3').value) || 0));
+        const tot = p2 + p4 + p6, pct = Math.round((tot / 65) * 100);
+        el.querySelector('#f3ScoreOut').innerHTML = '<strong>Ch 1,2,4,6 模拟估分：' + tot + ' / 65（' + pct + '%）</strong> ｜ 提示：核对电化学半方程式电荷守恒与状态符号 (s)(l)(g)(aq)！';
+      });
+      setupTimer(el.querySelector('#f3Start'), el.querySelector('#f3Reset'), el.querySelector('#f3Clk'), 75);
+    } else if (t === 'f04') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🎧 F04 ESL 0510 写作词数红线仪 (120–160 词) + 听读写 100 分估分计时台</div></div>' +
+        '<div class="lab-panel write-box"><div class="lab-controls">' +
+        '<label>写作文体：<select id="f4Fmt">' +
+        '<option value="email">Ex 5 Informal Email（15m · 亲切自然）</option>' +
+        '<option value="article">Ex 6 Article（15m · 引人入胜）</option>' +
+        '<option value="review">Ex 6 Review（15m · 观点+推荐）</option>' +
+        '<option value="report">Ex 6 Formal Report（15m · 客观分段）</option></select></label>' +
+        '<span class="wc-meter wc-warn" id="f4Wc">当前词数：0 词 (目标 120–160 词)</span>' +
+        '</div><textarea class="write-textarea" id="f4Txt" placeholder="在此输入 Ex 5 / Ex 6 练习片段或完整作文，系统实时监测 120–160 词黄金靶区与文体 Checklist..."></textarea>' +
+        '<div class="lab-controls">' +
+        '<label>阅读 Ex1-4 (/30)：<input type="number" id="f4_1" value="26" min="0" max="30"></label>' +
+        '<label>写作 Ex5-6 (/30)：<input type="number" id="f4_2" value="25" min="0" max="30"></label>' +
+        '<label>听力 P2 (/40)：<input type="number" id="f4_3" value="35" min="0" max="40"></label>' +
+        '<button type="button" class="tab-btn active" id="f4Start">⏳ 120min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f4Reset">重置</button>' +
+        '<span class="timer-big" id="f4Clk">120:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f4Out"></div><div class="readout-pill" id="f4ScoreOut"></div></div></div>';
+      const fmtGuide = {
+        email: '<strong>Ex 5 Email checklist</strong>：① 3 个提示要点全部落地且各加 1–2 句细节扩展；② 用缩写（I\'m / can\'t）与自然过渡（By the way / Guessing what）；③ 禁用过分正式公文腔！',
+        article: '<strong>Ex 6 Article checklist</strong>：① 亮眼标题 + 设问 Hook 开篇；② 半正式/活泼但有逻辑的探讨；③ 结尾向读者发出行动号召或开放思考。',
+        review: '<strong>Ex 6 Review checklist</strong>：① 背景简述 + 平衡评价优缺点（绝不剧透核心结局！）；② 明确给出推荐人群与星级判断。',
+        report: '<strong>Ex 6 Report checklist</strong>：① 必备 To/From/Date/Subject 或清晰小标题（Introduction / Findings / Recommendations）；② 全篇禁缩写、少用第一人称情感词，多用被动语态与数据汇报口吻！'
+      };
+      const ta = el.querySelector('#f4Txt'), wc = el.querySelector('#f4Wc');
+      bindInputs(function () {
+        const w = countWords(ta.value);
+        wc.textContent = '当前词数：' + w + ' 词 (目标 120–160 词)';
+        wc.className = 'wc-meter ' + (w === 0 ? 'wc-warn' : (w >= 120 && w <= 160 ? 'wc-ok' : (w < 90 || w > 190 ? 'wc-err' : 'wc-warn')));
+        el.querySelector('#f4Out').innerHTML = fmtGuide[el.querySelector('#f4Fmt').value] + '<br><strong>字数反馈：</strong>' + (w === 0 ? '请在上方练习英文写作段落。' : (w < 120 ? '字数偏少，检查是否缺少扩展细节导致 Content 拿不满！' : (w > 160 ? '超出建议上限，注意精简避免冗长跑题或来不及检查语法！' : '词数精准落在 120–160 黄金区间！')));
+        const r = Math.max(0, Math.min(30, Number(el.querySelector('#f4_1').value) || 0));
+        const wr = Math.max(0, Math.min(30, Number(el.querySelector('#f4_2').value) || 0));
+        const li = Math.max(0, Math.min(40, Number(el.querySelector('#f4_3').value) || 0));
+        el.querySelector('#f4ScoreOut').innerHTML = '<strong>听读写三线总分：' + (r + wr + li) + ' / 100</strong> ｜ Reading ' + r + '/30 · Writing ' + wr + '/30 · Listening ' + li + '/40。';
+      });
+      setupTimer(el.querySelector('#f4Start'), el.querySelector('#f4Reset'), el.querySelector('#f4Clk'), 120);
+    } else if (t === 'f05') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🖋️ F05 语文 0509 双作文实测汉字计 (400–600 字) + 期末卷估分台</div></div>' +
+        '<div class="lab-panel write-box"><div class="lab-controls">' +
+        '<label>作文体裁（双 2 选 1）：<select id="f5Type">' +
+        '<option value="arg">Sec 1 议论文（鲜明立论 + 让步驳斥）</option>' +
+        '<option value="dis">Sec 1 讨论文（双面均衡辩证探讨）</option>' +
+        '<option value="desc">Sec 2 描写文（五感微雕定格画面）</option>' +
+        '<option value="narr">Sec 2 记叙文（10 秒高潮+物象回环）</option></select></label>' +
+        '<span class="wc-meter wc-warn" id="f5Wc">当前有效汉字：0 字 (目标 400–600 字)</span>' +
+        '</div><textarea class="write-textarea" id="f5Txt" placeholder="输入作文片段或成稿，实时检测 400–600 汉字区与体裁避雷提示..."></textarea>' +
+        '<div class="lab-controls">' +
+        '<label>现代文+9分赏析 (/25)：<input type="number" id="f5_1" value="21" min="0" max="25"></label>' +
+        '<label>作文 1 (/25)：<input type="number" id="f5_2" value="21" min="0" max="25"></label>' +
+        '<label>作文 2 (/25)：<input type="number" id="f5_3" value="21" min="0" max="25"></label>' +
+        '<button type="button" class="tab-btn active" id="f5Start">⏳ 120min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f5Reset">重置</button>' +
+        '<span class="timer-big" id="f5Clk">120:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f5Out"></div><div class="readout-pill" id="f5ScoreOut"></div></div></div>';
+      const guides = {
+        arg: '<strong>议论文红线</strong>：开头亮明单边立场；至少 2 个深剖分论点（切忌只堆事例不议理）；必写 1 段“诚然……然而……”让步驳斥；避免写着写着变成两边都支持的讨论文！',
+        dis: '<strong>讨论文红线</strong>：正反双面篇幅大致平衡，用语保持客观冷静（如“支持者认为……”“然而也有观察指出……”），结尾做辩证权衡而不强行喊口号！',
+        desc: '<strong>描写文红线</strong>：严禁流水账叙事！以空间或时间顺序移动镜头，调用视觉光影、听觉质感、嗅觉与触感温度刻画氛围与人物微神态。',
+        narr: '<strong>记叙文红线</strong>：聚焦单个高张力小事件，30% 篇幅精雕“高潮 10 秒慢动作与心理微变化”，用核心物象贯穿首尾回环收束！'
+      };
+      const ta = el.querySelector('#f5Txt'), wc = el.querySelector('#f5Wc');
+      bindInputs(function () {
+        const n = countChiChars(ta.value);
+        wc.textContent = '当前有效汉字：' + n + ' 字 (目标 400–600 字)';
+        wc.className = 'wc-meter ' + (n === 0 ? 'wc-warn' : (n >= 400 && n <= 600 ? 'wc-ok' : (n < 350 || n > 660 ? 'wc-err' : 'wc-warn')));
+        el.querySelector('#f5Out').innerHTML = guides[el.querySelector('#f5Type').value] + '<br><strong>字数反馈：</strong>' + (n === 0 ? '请贴入或试写现代文/作文段落（400–600 字最稳妥落在 460–560 字）。' : (n < 400 ? '偏短，低于 400 字内容结构分 (C&S) 易被压至中档！' : (n > 600 ? '略超 600 字建议红线，请压缩冗余铺垫防草率结尾或错字增多。' : '有效字数正处于 400–600 黄金得分带！')));
+        const s1 = Math.max(0, Math.min(25, Number(el.querySelector('#f5_1').value) || 0));
+        const s2 = Math.max(0, Math.min(25, Number(el.querySelector('#f5_2').value) || 0));
+        const s3 = Math.max(0, Math.min(25, Number(el.querySelector('#f5_3').value) || 0));
+        const tot = s1 + s2 + s3;
+        el.querySelector('#f5ScoreOut').innerHTML = '<strong>阅读+双作文模考估分：' + tot + ' / 75（' + Math.round((tot / 75) * 100) + '%）</strong> ｜ 阅读赏析 ' + s1 + '/25 · 作文1 ' + s2 + '/25 · 作文2 ' + s3 + '/25。';
+      });
+      setupTimer(el.querySelector('#f5Start'), el.querySelector('#f5Reset'), el.querySelector('#f5Clk'), 120);
+    } else if (t === 'f06') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🌍 F06 GP 0457 Component 1 (Q1–Q4) 答题骨架器与 70 分/85min 模考台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>切换题型骨架：<select id="f6Q">' +
+        '<option value="q1">Q1 (约14分) · 概念辨析 (Fact/Opinion/Value/Bias) + 趋势提炼</option>' +
+        '<option value="q2a">Q2A (8分) · RAVEN 来源可信度与权威/目的评估</option>' +
+        '<option value="q2b">Q2B (8分) · 如何设计研究检验某主张 (4大核心要素)</option>' +
+        '<option value="q3">Q3 (16分) · Level 4 双论证正面交锋六维对比框架</option>' +
+        '<option value="q4">Q4 (24分) · 政策决策大作文五维权衡与四段结构</option></select></label>' +
+        '<label>Q1 (/14)：<input type="number" id="f6_1" value="12" min="0" max="14"></label>' +
+        '<label>Q2 (/16)：<input type="number" id="f6_2" value="13" min="0" max="16"></label>' +
+        '<label>Q3 (/16)：<input type="number" id="f6_3" value="13" min="0" max="16"></label>' +
+        '<label>Q4 (/24)：<input type="number" id="f6_4" value="20" min="0" max="24"></label>' +
+        '<button type="button" class="tab-btn active" id="f6Start">⏳ 85min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f6Reset">重置</button>' +
+        '<span class="timer-big" id="f6Clk">85:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f6Out"></div><div class="readout-pill" id="f6ScoreOut"></div></div></div>';
+      const fw = {
+        q1: '<strong>Q1 满分公式</strong>：① Fact（可核查数据/历史事实）vs Opinion（个人看法）vs Prediction（未来预测）vs Value Judgement（道德/好坏评判“should/unfair”）；② 辨析理由必须紧扣原句引号并点明“能否被独立核实”。',
+        q2a: '<strong>Q2A 8 分模板</strong>：从来源<strong>双面</strong>评估：① Strength（如作者专业身份/同行评审/数据样本明确/承认局限性）；② Weakness（如既得利益 vested interest、情感煽动用词、无引文孤证、样本过小/过时）——切忌空背 RAVEN 字母不结合材料！',
+        q2b: '<strong>Q2B 研究设计四要素</strong>：① <strong>Who / Sample</strong>（谁是受试/样本量与随机分层代表性）；② <strong>Method / Instrument</strong>（对照实验、问卷防诱导提问或访谈设计）；③ <strong>Secondary Verification</strong>（比对官方统计/纵贯追踪）；④ <strong>Reliability / Bias Control</strong>（消除利益冲突与季节性偏差）。',
+        q3: '<strong>Q3 Level 4 铁律</strong>：<strong>绝不把 Source A 写一段再把 Source B 写一段！</strong>每段确立 1 个对比维度（① 实证与数据支撑度 → ② 因果推理严密性 vs 逻辑谬误 → ③ 视角平衡与偏见控制），用 <code>Whereas Source A..., Source B...</code> 正面交锋并最终裁决谁更具说服力！',
+        q4: '<strong>Q4 24 分四段闭环</strong>：① 段1 鲜明选边立论；② 段2 核心理由深度展开（引用材料+自身拓展视角）；③ 段3 <strong>对比另外 1–2 个备选方案为什么较弱</strong>（可行性/成本/长期与短期副作用）；④ 段4 让步防线（承认本方案潜在阻力并给出配套缓解措施）。'
+      };
+      bindInputs(function () {
+        el.querySelector('#f6Out').innerHTML = fw[el.querySelector('#f6Q').value];
+        const s1 = Math.max(0, Math.min(14, Number(el.querySelector('#f6_1').value) || 0));
+        const s2 = Math.max(0, Math.min(16, Number(el.querySelector('#f6_2').value) || 0));
+        const s3 = Math.max(0, Math.min(16, Number(el.querySelector('#f6_3').value) || 0));
+        const s4 = Math.max(0, Math.min(24, Number(el.querySelector('#f6_4').value) || 0));
+        const tot = s1 + s2 + s3 + s4, pct = Math.round((tot / 70) * 100);
+        el.querySelector('#f6ScoreOut').innerHTML = '<strong>Component 1 总分：' + tot + ' / 70（' + pct + '%）</strong> ｜ ' + (pct >= 80 ? '冲击 A* 顶尖区间！注意 Q3 正面比较与 Q4 备选方案对比论证' : '建议强化 Q3/Q4 分值最重的段落结构');
+      });
+      setupTimer(el.querySelector('#f6Start'), el.querySelector('#f6Reset'), el.querySelector('#f6Clk'), 85);
+    }
+  }
+  document.querySelectorAll('.lab-box[data-lab-type]').forEach(mountSprintLab);
+
+  // ---------- 10. Universal Personal Error Clinic ----------
+  function mountClinic(el) {
+    const code = el.getAttribute('data-clinic-subject') || subCode;
+    const key = 'igcse_final_sprint_clinic_' + code.toLowerCase();
+    let items = [];
+    try {
+      items = JSON.parse(localStorage.getItem(key) || '[]');
+      if (!Array.isArray(items)) items = [];
+    } catch (e) { items = []; }
+
+    el.innerHTML =
+      '<div class="clinic-head"><div class="clinic-title">🩺 ' + code + ' 个人错题诊疗台（离线持久化 · 支持考前筛查与一键发给 AI 精批）</div>' +
+      '<span class="hub-clinic-pill" id="clinicPendingPill">待攻克：0 题</span></div>' +
+      '<div class="clinic-form-grid">' +
+      '<div class="clinic-field"><label>章节 / 题号出处</label><input type="text" id="clinicTopic" placeholder="如：Ch6 Linear Law Q4 / P2 Q12 / 赏析第2题"></div>' +
+      '<div class="clinic-field"><label>失分归因标签</label><select id="clinicReason">' +
+      '<option value="概念与公式不清">概念与公式不清</option>' +
+      '<option value="审题漏条件/看错单位">审题漏条件/看错单位</option>' +
+      '<option value="计算/推导中途出错">计算/推导中途出错</option>' +
+      '<option value="缺 Mark Scheme 踩分词">缺 Mark Scheme 踩分词</option>' +
+      '<option value="时间不够/字数失控">时间不够/字数失控</option></select></div>' +
+      '</div>' +
+      '<div class="clinic-form-grid">' +
+      '<div class="clinic-field"><label>原题要点 / 错在哪一步</label><textarea id="clinicStem" placeholder="记下题目关键条件和你当时为什么做错..."></textarea></div>' +
+      '<div class="clinic-field"><label>正解与防再犯铁律（二刷时用）</label><textarea id="clinicFix" placeholder="记下正确解法步骤、关键得分词或自我提醒..."></textarea></div>' +
+      '</div>' +
+      '<div class="clinic-toolbar">' +
+      '<div class="clinic-actions">' +
+      '<button type="button" class="clinic-btn clinic-btn-primary" id="clinicAddBtn">➕ 收入本科目错题本</button>' +
+      '<select id="clinicFilter" aria-label="按错因过滤">' +
+      '<option value="ALL">显示全部未攻克错题</option>' +
+      '<option value="ALL_INC">显示全部（含已攻克）</option>' +
+      '<option value="概念与公式不清">只看：概念与公式不清</option>' +
+      '<option value="审题漏条件/看错单位">只看：审题漏条件/看错单位</option>' +
+      '<option value="计算/推导中途出错">只看：计算/推导中途出错</option>' +
+      '<option value="缺 Mark Scheme 踩分词">只看：缺 Mark Scheme 踩分词</option>' +
+      '<option value="时间不够/字数失控">只看：时间不够/字数失控</option></select>' +
+      '</div>' +
+      '<div class="clinic-actions">' +
+      '<button type="button" class="clinic-btn" id="clinicExportBtn">📋 生成并复制 AI 精讲清单</button>' +
+      '</div></div>' +
+      '<textarea class="clinic-preview" id="clinicExportBox" readonly></textarea>' +
+      '<div class="clinic-list" id="clinicList"></div>';
+
+    const topicEl = el.querySelector('#clinicTopic');
+    const reasonEl = el.querySelector('#clinicReason');
+    const stemEl = el.querySelector('#clinicStem');
+    const fixEl = el.querySelector('#clinicFix');
+    const addBtn = el.querySelector('#clinicAddBtn');
+    const filterEl = el.querySelector('#clinicFilter');
+    const exportBtn = el.querySelector('#clinicExportBtn');
+    const exportBox = el.querySelector('#clinicExportBox');
+    const pendingPill = el.querySelector('#clinicPendingPill');
+    const listEl = el.querySelector('#clinicList');
+
+    function save() {
+      localStorage.setItem(key, JSON.stringify(items));
+      const pending = items.filter(function (x) { return !x.solved; }).length;
+      localStorage.setItem('igcse_final_sprint_clinic_cnt_' + code.toLowerCase(), String(pending));
+      if (pendingPill) {
+        pendingPill.textContent = '待攻克：' + pending + ' 题（总计 ' + items.length + ' 题）';
+        pendingPill.classList.toggle('has-err', pending > 0);
+      }
+    }
+
+    function escapeHtml(s) {
+      return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    function renderList() {
+      save();
+      const f = filterEl.value;
+      const shown = items.filter(function (it) {
+        if (f === 'ALL') return !it.solved;
+        if (f === 'ALL_INC') return true;
+        return it.reason === f;
+      });
+      if (!shown.length) {
+        listEl.innerHTML = '<div style="padding:14px;text-align:center;color:var(--text-faint);background:var(--bg-surface);border:1px dashed var(--border-strong);border-radius:7px;font-size:13.5px;">当前筛选下暂无错题记录。做题遇到卡壳或把近期 Quiz 错题粘贴进来，考前即可按错因集中清零！</div>';
+        return;
+      }
+      listEl.innerHTML = shown.map(function (it) {
+        return '<div class="clinic-item' + (it.solved ? ' solved' : '') + '" data-cid="' + it.id + '">' +
+          '<div class="clinic-item-top">' +
+          '<div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">' +
+          '<span class="clinic-tag">' + escapeHtml(it.topic) + '</span>' +
+          '<span class="clinic-reason">' + escapeHtml(it.reason) + '</span>' +
+          '<span style="font-size:12px;color:var(--text-faint);">' + (it.solved ? '✓ 已攻克' : '● 待二刷') + '</span></div>' +
+          '<div class="clinic-actions">' +
+          '<button type="button" class="clinic-btn clinic-toggle-btn">' + (it.solved ? '↺ 重新标红' : '✓ 标为已攻克') + '</button>' +
+          '<button type="button" class="clinic-btn clinic-del-btn">删除</button>' +
+          '</div></div>' +
+          '<div style="font-size:13.5px;margin-bottom:4px;"><strong>错题要点：</strong>' + escapeHtml(it.stem) + '</div>' +
+          (it.fix ? '<div style="font-size:13.3px;color:var(--text-muted);"><strong>正解与防错铁律：</strong>' + escapeHtml(it.fix) + '</div>' : '') +
+          '</div>';
+      }).join('');
+    }
+
+    addBtn.addEventListener('click', function () {
+      const topic = topicEl.value.trim() || '未标注章节';
+      const stem = stemEl.value.trim();
+      if (!stem) { stemEl.focus(); return; }
+      items.unshift({
+        id: String(Date.now()) + '_' + Math.random().toString(36).slice(2, 6),
+        topic: topic,
+        reason: reasonEl.value,
+        stem: stem,
+        fix: fixEl.value.trim(),
+        solved: false
+      });
+      topicEl.value = '';
+      stemEl.value = '';
+      fixEl.value = '';
+      renderList();
+    });
+
+    listEl.addEventListener('click', function (ev) {
+      const card = ev.target.closest('.clinic-item');
+      if (!card) return;
+      const cid = card.getAttribute('data-cid');
+      const idx = items.findIndex(function (x) { return x.id === cid; });
+      if (idx === -1) return;
+      if (ev.target.closest('.clinic-toggle-btn')) {
+        items[idx].solved = !items[idx].solved;
+        renderList();
+      } else if (ev.target.closest('.clinic-del-btn')) {
+        items.splice(idx, 1);
+        renderList();
+      }
+    });
+
+    filterEl.addEventListener('change', renderList);
+    exportBtn.addEventListener('click', function () {
+      const pending = items.filter(function (x) { return !x.solved; });
+      const target = pending.length ? pending : items;
+      const lines = ['### ' + code + ' 待精讲错题清单（共 ' + target.length + ' 题）'];
+      target.forEach(function (it, i) {
+        lines.push((i + 1) + '. [' + it.topic + ' | ' + it.reason + '] ' + it.stem + (it.fix ? '（我的初版订正：' + it.fix + '）' : ''));
+      });
+      if (!target.length) lines.push('（当前暂无错题记录）');
+      const md = lines.join('\n');
+      exportBox.value = md;
+      exportBox.classList.add('visible');
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(md).catch(function () {});
+      }
+      exportBtn.textContent = '✓ 已生成（可全选复制给 AI）';
+      setTimeout(function () { exportBtn.textContent = '📋 生成并复制 AI 精讲清单'; }, 2200);
+    });
+
+    renderList();
+  }
+  document.querySelectorAll('.clinic-box[data-clinic-subject]').forEach(mountClinic);
+
+  // ---------- 11. ScrollSpy & Back Top ----------
+  const navLinksAll = Array.from(document.querySelectorAll('.sidebar .nav-link[href^="#"]'));
+  const observedSections = navLinksAll
+    .map(function (l) { return document.getElementById((l.getAttribute('href') || '').slice(1)); })
+    .filter(Boolean);
+
+  if ('IntersectionObserver' in window && observedSections.length) {
+    const io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navLinksAll.forEach(function (l) {
+            l.classList.toggle('active', l.getAttribute('href') === '#' + id);
+          });
+        }
+      });
+    }, { rootMargin: '-18% 0px -70% 0px' });
+    observedSections.forEach(function (sec) { io.observe(sec); });
+  }
+
+  const backTopBtn = document.getElementById('backTopBtn');
+  if (backTopBtn) {
+    window.addEventListener('scroll', function () {
+      backTopBtn.classList.toggle('visible', window.scrollY > 420);
+    });
+    backTopBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  applyQuizMask(quizMasked);
+  filterConcepts();
+})();
+
+  </script>
+</body>
+</html>

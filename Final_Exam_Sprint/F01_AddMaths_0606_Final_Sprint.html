@@ -1,0 +1,2488 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="--accent: #2563EB;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>F01 · Add Maths (0606) · Ch 1–6, 10, 11 & 14 — IGCSE 期末范围锁定冲刺</title>
+  <style>
+/* ==========================================================================
+   Cambridge IGCSE 6-Subject Final Exam Sprint Suite Shared Stylesheet
+   ========================================================================== */
+
+:root {
+  --bg-page: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --bg-sidebar: #FFFFFF;
+  --bg-code: #EFF6FF;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-faint: #64748B;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+
+  --accent: #2563EB;
+  --accent-hover: #1D4ED8;
+  --accent-soft: #DBEAFE;
+
+  --core-bg: #E0F2FE;
+  --core-text: #075985;
+  --core-border: #BAE6FD;
+  --ext-bg: #FEF3C7;
+  --ext-text: #92400E;
+  --ext-border: #FDE68A;
+
+  --deep-bg: #EFF6FF;
+  --deep-border: #2563EB;
+  --tip-bg: #FFFBEB;
+  --tip-border: #D97706;
+  --mistake-bg: #FFF1F2;
+  --mistake-border: #E11D48;
+  --example-bg: #F0FDF4;
+  --example-border: #16A34A;
+  --formula-bg: #F8FAFC;
+  --formula-border: #2563EB;
+
+  --ok-bg: #DCFCE7;
+  --ok-text: #166534;
+  --ok-border: #86EFAC;
+  --err-bg: #FEE2E2;
+  --err-text: #991B1B;
+  --err-border: #FCA5A5;
+
+  --svg-bg: #FFFFFF;
+  --svg-grid: #E2E8F0;
+  --svg-ink: #0F172A;
+  --svg-muted: #64748B;
+  --svg-blue: #2563EB;
+  --svg-indigo: #4338CA;
+  --svg-teal: #0D9488;
+  --svg-amber: #D97706;
+  --svg-red: #DC2626;
+  --svg-green: #16A34A;
+  --svg-purple: #7C3AED;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.07);
+  --shadow-lg: 0 10px 26px rgba(15, 23, 42, 0.11);
+
+  --sidebar-w: 280px;
+  --topbar-h: 58px;
+  --radius-sm: 7px;
+  --radius-md: 11px;
+  --radius-lg: 16px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+  --font-serif: Georgia, "Times New Roman", "Songti SC", "Noto Serif SC", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+[data-theme="dark"] {
+  --bg-page: #0B1120;
+  --bg-surface: #111827;
+  --bg-subtle: #1E293B;
+  --bg-sidebar: #0F172A;
+  --bg-code: #1E293B;
+  --text-main: #F1F5F9;
+  --text-muted: #CBD5E1;
+  --text-faint: #94A3B8;
+  --border: #1E293B;
+  --border-strong: #334155;
+
+  --accent: #38BDF8 !important;
+  --accent-hover: #7DD3FC;
+  --accent-soft: rgba(56, 189, 248, 0.18);
+
+  --core-bg: rgba(56, 189, 248, 0.16);
+  --core-text: #BAE6FD;
+  --core-border: rgba(56, 189, 248, 0.36);
+  --ext-bg: rgba(245, 158, 11, 0.16);
+  --ext-text: #FDE68A;
+  --ext-border: rgba(245, 158, 11, 0.36);
+
+  --deep-bg: rgba(37, 99, 235, 0.14);
+  --deep-border: #60A5FA;
+  --tip-bg: rgba(217, 119, 6, 0.14);
+  --tip-border: #FBBF24;
+  --mistake-bg: rgba(225, 29, 72, 0.15);
+  --mistake-border: #FB7185;
+  --example-bg: rgba(22, 163, 74, 0.13);
+  --example-border: #4ADE80;
+  --formula-bg: #172033;
+  --formula-border: #38BDF8;
+
+  --ok-bg: rgba(22, 163, 74, 0.22);
+  --ok-text: #BBF7D0;
+  --ok-border: #22C55E;
+  --err-bg: rgba(220, 38, 38, 0.22);
+  --err-text: #FECACA;
+  --err-border: #EF4444;
+
+  --svg-bg: #0F172A;
+  --svg-grid: #334155;
+  --svg-ink: #F1F5F9;
+  --svg-muted: #94A3B8;
+  --svg-blue: #60A5FA;
+  --svg-indigo: #818CF8;
+  --svg-teal: #2DD4BF;
+  --svg-amber: #FBBF24;
+  --svg-red: #F87171;
+  --svg-green: #34D399;
+  --svg-purple: #A78BFA;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .seg-btn.active,
+[data-theme="dark"] .tab-btn.active,
+[data-theme="dark"] .icon-btn.active,
+[data-theme="dark"] .brand-code,
+[data-theme="dark"] .pager-btn.primary,
+[data-theme="dark"] .clinic-btn-primary { color: #0B1120; }
+[data-theme="dark"] .hub-foot { color: #38BDF8; }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--topbar-h) + 18px); }
+body { margin: 0; font-family: var(--font-sans); background: var(--bg-page); color: var(--text-main); line-height: 1.72; font-size: 15.5px; -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4 { margin: 0 0 0.55em 0; line-height: 1.32; font-weight: 700; color: var(--text-main); }
+p { margin: 0 0 0.9em 0; }
+ul, ol { margin: 0 0 1em 0; padding-left: 1.45em; }
+li { margin-bottom: 0.35em; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { font-family: var(--font-mono); font-size: 0.9em; background: var(--bg-code); color: var(--accent); padding: 2px 6px; border-radius: 4px; }
+
+/* View Mode Filters */
+body.mode-summary .topic-section:not(.sec-summary) { display: none !important; }
+body.mode-practice .topic-section:not(.sec-practice) { display: none !important; }
+body.mode-clinic .topic-section:not(.sec-clinic) { display: none !important; }
+body.mode-cards .topic-section:not(.sec-cards) { display: none !important; }
+
+/* Math & Formula Styling */
+.math { font-family: var(--font-serif); font-style: italic; font-weight: 600; }
+.frac { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; font-size: 0.88em; line-height: 1.15; margin: 0 3px; }
+.frac .num { border-bottom: 1.5px solid currentColor; padding: 0 4px 1px 4px; }
+.frac .den { padding: 1px 4px 0 4px; }
+.sqrt { display: inline-flex; align-items: center; font-family: var(--font-serif); }
+.sqrt-rad { border-top: 1.5px solid currentColor; padding: 0 3px; margin-left: 1px; }
+
+.badge-c1, .badge-cw, .badge-core, .badge-ext { display: inline-block; font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.badge-c1, .badge-core { background: var(--core-bg); color: var(--core-text); border: 1px solid var(--core-border); }
+.badge-cw, .badge-ext { background: var(--ext-bg); color: var(--ext-text); border: 1px solid var(--ext-border); }
+
+.formula-card { background: var(--formula-bg); border: 1.5px solid var(--border-strong); border-left: 5px solid var(--formula-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; font-size: 15px; }
+.formula-main { font-family: var(--font-serif); font-size: 16.5px; font-weight: 700; color: var(--accent); margin: 4px 0 6px 0; }
+
+.source-box, .reading-passage { background: var(--bg-page); border: 1px solid var(--border-strong); border-left: 5px solid var(--accent); border-radius: var(--radius-md); padding: 16px 20px; margin: 14px 0; font-family: var(--font-serif); font-size: 15px; line-height: 1.76; }
+.reading-title { font-family: var(--font-sans); font-size: 15.8px; font-weight: 800; color: var(--text-main); margin-bottom: 8px; }
+.para-tag { display: inline-block; font-family: var(--font-sans); font-size: 11.5px; font-weight: 800; background: var(--accent-soft); color: var(--accent); padding: 1px 7px; border-radius: 4px; margin-right: 6px; }
+
+.model-essay { background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 20px; margin: 14px 0; box-shadow: var(--shadow-sm); }
+.essay-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; padding-bottom: 10px; margin-bottom: 12px; border-bottom: 1px solid var(--border); font-size: 13px; font-weight: 700; }
+.band-pill { padding: 2px 10px; border-radius: 999px; font-size: 12px; font-weight: 800; }
+.band-high { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.band-mid { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+.essay-body { font-family: var(--font-serif); font-size: 15px; line-height: 1.76; }
+mark.hl-content { background: rgba(37, 99, 235, 0.16); color: inherit; padding: 1px 3px; border-radius: 3px; }
+mark.hl-lang { background: rgba(22, 163, 74, 0.18); color: inherit; padding: 1px 3px; border-radius: 3px; }
+mark.hl-err { background: rgba(220, 38, 38, 0.16); color: inherit; padding: 1px 3px; border-radius: 3px; text-decoration: wavy underline rgba(220, 38, 38, 0.6); }
+
+.write-box { display: flex; flex-direction: column; gap: 10px; }
+.write-textarea { width: 100%; min-height: 140px; padding: 12px 14px; border-radius: var(--radius-sm); border: 1.5px solid var(--border-strong); background: var(--bg-page); color: var(--text-main); font-family: var(--font-serif); font-size: 14.8px; line-height: 1.65; resize: vertical; }
+.write-textarea:focus { outline: none; border-color: var(--accent); }
+.wc-meter { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 800; }
+.wc-ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.wc-warn { background: var(--tip-bg); color: var(--tip-border); border: 1px solid var(--tip-border); }
+.wc-err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+.timer-big { font-family: var(--font-mono); font-size: 20px; font-weight: 800; color: var(--accent); background: var(--bg-page); border: 1.5px solid var(--border-strong); padding: 4px 10px; border-radius: var(--radius-sm); }
+
+/* Topbar */
+.topbar {
+  position: sticky; top: 0; z-index: 100; height: var(--topbar-h);
+  background: var(--bg-surface); border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm); display: flex; align-items: center;
+  justify-content: space-between; gap: 8px; padding: 0 14px;
+}
+.topbar-left { display: flex; align-items: center; gap: 7px; min-width: 0; flex-shrink: 1; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; gap: 5px; height: 34px; padding: 0 9px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--bg-surface); color: var(--text-main); font-size: 12.8px; font-weight: 600; cursor: pointer; white-space: nowrap; text-decoration: none; }
+.icon-btn:hover { background: var(--bg-subtle); border-color: var(--accent); text-decoration: none; }
+.icon-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.menu-toggle { display: none; }
+.brand-pill { display: flex; align-items: center; gap: 7px; font-weight: 700; font-size: 13.8px; white-space: nowrap; flex-shrink: 1; min-width: 0; }
+.brand-code { background: var(--accent); color: #fff; padding: 2px 8px; border-radius: 5px; font-size: 12px; letter-spacing: 0.4px; white-space: nowrap; flex-shrink: 0; }
+.brand-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 170px; }
+.search-wrap { position: relative; flex: 1 1 130px; min-width: 120px; max-width: 225px; }
+.search-input { width: 100%; height: 34px; padding: 0 28px 0 30px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--bg-subtle); color: var(--text-main); font-size: 13px; outline: none; }
+.search-input:focus { border-color: var(--accent); background: var(--bg-surface); }
+.search-input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.search-icon { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--text-faint); font-size: 12.5px; pointer-events: none; }
+.search-clear { position: absolute; right: 7px; top: 50%; transform: translateY(-50%); border: none; background: transparent; color: var(--text-faint); cursor: pointer; font-size: 14px; display: none; }
+.search-results-bar { display: none; background: var(--accent-soft); border-bottom: 1px solid var(--border); padding: 8px 20px; font-size: 13.5px; color: var(--text-main); align-items: center; justify-content: space-between; gap: 12px; }
+.search-results-bar.visible { display: flex; }
+.topbar-controls { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+.seg-group { display: inline-flex; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); overflow: hidden; background: var(--bg-subtle); }
+.seg-btn { border: none; background: transparent; color: var(--text-muted); padding: 6px 7px; font-size: 11.8px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.seg-btn.active { background: var(--accent); color: #fff; }
+.progress-chip { display: flex; align-items: center; gap: 6px; padding: 4px 9px; border-radius: 999px; background: var(--bg-subtle); border: 1px solid var(--border); font-size: 12px; font-weight: 600; white-space: nowrap; }
+.progress-track { width: 46px; height: 7px; background: var(--border-strong); border-radius: 99px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), #0D9488); transition: width 0.25s ease; }
+
+.app-layout { display: flex; min-height: calc(100vh - var(--topbar-h)); }
+.sidebar { width: var(--sidebar-w); flex-shrink: 0; background: var(--bg-sidebar); border-right: 1px solid var(--border); position: sticky; top: var(--topbar-h); height: calc(100vh - var(--topbar-h)); overflow-y: auto; padding: 14px 10px 44px 10px; }
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 99px; }
+.nav-unit { margin-bottom: 8px; }
+.nav-unit-btn { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border: none; border-radius: var(--radius-sm); background: transparent; color: var(--text-main); font-size: 13px; font-weight: 700; text-align: left; cursor: pointer; }
+.nav-unit-btn:hover { background: var(--bg-subtle); }
+.nav-unit-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.nav-unit-title { flex: 1; display: flex; align-items: center; gap: 7px; line-height: 1.3; }
+.nav-chevron { font-size: 11px; color: var(--text-faint); transition: transform 0.2s; }
+.nav-unit.collapsed .nav-chevron { transform: rotate(-90deg); }
+.nav-unit.collapsed .nav-links { display: none; }
+.nav-links { list-style: none; padding: 2px 0 4px 12px; margin: 0 0 0 14px; border-left: 2px solid var(--border); }
+.nav-link { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 5px 9px; margin: 2px 0; border-radius: var(--radius-sm); color: var(--text-muted); font-size: 12.6px; line-height: 1.35; text-decoration: none; }
+.nav-link:hover { background: var(--bg-subtle); color: var(--text-main); text-decoration: none; }
+.nav-link.active { background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+.nav-done-mark { color: #10B981; font-weight: 800; font-size: 12px; opacity: 0; }
+.nav-link.mastered .nav-done-mark { opacity: 1; }
+.main-content { flex: 1; min-width: 0; padding: 24px 28px 80px 28px; }
+.content-inner { max-width: 960px; margin: 0 auto; }
+
+.hero-card { background: linear-gradient(135deg, #0F172A 0%, var(--accent) 62%, #0F766E 100%); color: #fff; border-radius: var(--radius-lg); padding: 26px 30px; margin-bottom: 24px; box-shadow: var(--shadow-lg); }
+.hero-card h1 { color: #fff; font-size: 24px; margin-bottom: 8px; letter-spacing: -0.3px; }
+.hero-sub { color: rgba(255,255,255,0.92); font-size: 14.5px; max-width: 850px; margin-bottom: 14px; }
+.hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.hero-pill { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.28); color: #fff; padding: 4px 11px; border-radius: 999px; font-size: 12.5px; font-weight: 600; }
+.unit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(175px, 1fr)); gap: 10px; }
+.unit-tile { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.24); border-radius: var(--radius-md); padding: 11px 13px; color: #fff; text-decoration: none; display: block; transition: transform 0.15s, background 0.15s; }
+.unit-tile:hover { transform: translateY(-2px); background: rgba(255,255,255,0.22); text-decoration: none; }
+.unit-tile-num { font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; opacity: 0.85; font-weight: 700; }
+.unit-tile-title { font-size: 13.8px; font-weight: 700; margin: 3px 0 0 0; }
+
+.topic-section { background: var(--bg-surface); border: 1px solid var(--border); border-top: 4px solid var(--accent); border-radius: var(--radius-md); padding: 22px 24px; margin-bottom: 24px; box-shadow: var(--shadow-sm); }
+.topic-section.search-dim { display: none; }
+.section-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 2px solid var(--border); }
+.section-title-group h3 { font-size: 19px; margin-bottom: 4px; }
+.section-en-sub { font-size: 13.5px; color: var(--text-faint); font-weight: 600; }
+.tier-row { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 7px; }
+.master-btn { flex-shrink: 0; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-muted); font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.master-btn:hover { border-color: #10B981; color: #10B981; }
+.master-btn.is-mastered { background: var(--ok-bg); color: var(--ok-text); border-color: var(--ok-border); }
+.subtopic { margin-bottom: 20px; }
+.subtopic:last-of-type { margin-bottom: 12px; }
+.subtopic h4 { font-size: 16px; color: var(--accent); margin: 0 0 10px 0; padding-bottom: 4px; border-bottom: 1px dashed var(--border); display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+
+.worked-example { background: var(--example-bg); border: 1px solid var(--border); border-left: 4px solid var(--example-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; }
+.worked-title { font-weight: 800; font-size: 14px; color: var(--example-border); margin-bottom: 6px; }
+.callout { border-radius: var(--radius-sm); padding: 13px 16px; margin: 14px 0; border-left: 4px solid var(--border-strong); font-size: 14.5px; }
+.callout-title { font-weight: 800; font-size: 13.5px; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+.deep-dive { background: var(--deep-bg); border-left-color: var(--deep-border); }
+.deep-dive .callout-title { color: var(--deep-border); }
+.examiner-tip { background: var(--tip-bg); border-left-color: var(--tip-border); }
+.examiner-tip .callout-title { color: var(--tip-border); }
+.common-mistake { background: var(--mistake-bg); border-left-color: var(--mistake-border); }
+.common-mistake .callout-title { color: var(--mistake-border); }
+
+.table-wrap { width: 100%; overflow-x: auto; margin: 14px 0; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+table.sprint-table, table.gp-table, table.phy-table { width: 100%; border-collapse: collapse; font-size: 13.8px; text-align: left; }
+table.sprint-table th, table.gp-table th, table.phy-table th { background: var(--bg-subtle); color: var(--text-main); font-weight: 700; padding: 9px 12px; border-bottom: 2px solid var(--border-strong); white-space: nowrap; }
+table.sprint-table td, table.gp-table td, table.phy-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.sprint-table tr:last-child td, table.gp-table tr:last-child td, table.phy-table tr:last-child td { border-bottom: none; }
+table.sprint-table tbody tr:hover, table.gp-table tbody tr:hover, table.phy-table tbody tr:hover { background: var(--bg-subtle); }
+
+.svg-figure { background: var(--svg-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px; margin: 16px 0; text-align: center; break-inside: avoid; }
+.svg-figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.svg-caption { margin-top: 8px; font-size: 13px; color: var(--text-faint); font-weight: 600; }
+
+/* Interactive Labs */
+.lab-box { background: var(--bg-subtle); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 18px; margin: 18px 0; break-inside: avoid; }
+.lab-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+.lab-title { font-size: 15.5px; font-weight: 800; color: var(--accent); display: flex; align-items: center; gap: 7px; }
+.lab-panel { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; }
+.lab-controls { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-bottom: 12px; align-items: center; }
+.lab-controls label { font-size: 13px; font-weight: 700; color: var(--text-muted); display: inline-flex; align-items: center; gap: 6px; }
+.lab-controls input[type="number"], .lab-controls input[type="text"], .lab-controls select { padding: 5px 8px; border-radius: 6px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-main); font-size: 13.2px; font-weight: 700; }
+.lab-controls input[type="number"] { min-width: 100px; width: 108px; text-align: center; }
+.tab-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.tab-btn { border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-muted); padding: 5px 10px; border-radius: 6px; font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.tab-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.lab-readout { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; font-size: 13.2px; font-weight: 600; }
+.readout-pill { background: var(--bg-page); border: 1px solid var(--border-strong); padding: 8px 11px; border-radius: 6px; width: 100%; line-height: 1.6; }
+
+/* Personal Error Clinic */
+.clinic-box { background: var(--bg-subtle); border: 1.5px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px; margin: 16px 0; }
+.clinic-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px; }
+.clinic-title { font-size: 16px; font-weight: 800; color: var(--accent); }
+.clinic-form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-bottom: 10px; }
+.clinic-field label { display: block; font-size: 12.5px; font-weight: 700; color: var(--text-muted); margin-bottom: 4px; }
+.clinic-field input, .clinic-field select, .clinic-field textarea { width: 100%; padding: 7px 10px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 13.5px; font-family: inherit; }
+.clinic-field textarea { min-height: 70px; resize: vertical; }
+.clinic-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin: 12px 0; padding-top: 12px; border-top: 1px dashed var(--border-strong); }
+.clinic-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.clinic-btn { padding: 6px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 12.8px; font-weight: 700; cursor: pointer; }
+.clinic-btn:hover { border-color: var(--accent); }
+.clinic-btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+.clinic-btn-primary:hover { background: var(--accent-hover); }
+.clinic-list { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
+.clinic-item { background: var(--bg-surface); border: 1px solid var(--border-strong); border-left: 4px solid #E11D48; border-radius: var(--radius-sm); padding: 12px 14px; }
+.clinic-item.solved { border-left-color: #16A34A; opacity: 0.78; }
+.clinic-item-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+.clinic-tag { font-size: 11.8px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
+.clinic-reason { font-size: 11.8px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: var(--err-bg); color: var(--err-text); }
+.clinic-item.solved .clinic-reason { background: var(--ok-bg); color: var(--ok-text); }
+.clinic-preview { width: 100%; min-height: 110px; margin-top: 10px; padding: 10px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-page); color: var(--text-main); font-family: var(--font-mono); font-size: 12.2px; display: none; }
+.clinic-preview.visible { display: block; }
+
+.quick-links-grid { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.quick-link-chip { display: inline-flex; align-items: center; gap: 5px; padding: 6px 11px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-page); color: var(--text-main); font-size: 12.8px; font-weight: 700; text-decoration: none; }
+.quick-link-chip:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+
+/* Hub Roadmap */
+.roadmap-panel { background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px 20px; margin: 18px 0 8px 0; box-shadow: var(--shadow-sm); }
+.roadmap-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 14px; }
+.roadmap-head h2 { font-size: 17px; margin: 0 0 4px 0; }
+.roadmap-badge { background: var(--accent-soft); color: var(--accent); padding: 4px 12px; border-radius: 999px; font-size: 12.5px; font-weight: 800; }
+.roadmap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
+.roadmap-card { display: flex; align-items: flex-start; gap: 10px; padding: 12px 13px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-page); cursor: pointer; font-size: 13px; line-height: 1.5; }
+.roadmap-card:hover { border-color: var(--accent); }
+.roadmap-card strong { display: block; font-size: 13.5px; color: var(--text-main); margin-bottom: 3px; }
+.roadmap-card span { color: var(--text-muted); font-size: 12.5px; }
+.roadmap-card input[type="checkbox"] { width: 17px; height: 17px; margin-top: 2px; accent-color: var(--accent); flex-shrink: 0; }
+.roadmap-card.done { border-color: var(--ok-border); background: var(--ok-bg); }
+.roadmap-card.done strong, .roadmap-card.done span { color: var(--ok-text); }
+
+/* Practice Questions & Concepts */
+.practice-block { margin-top: 18px; padding-top: 14px; border-top: 2px dashed var(--border-strong); }
+.practice-heading { font-size: 16px; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.exam-q { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 14px; break-inside: avoid; }
+.exam-q-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; font-size: 12.5px; }
+.q-tag { font-weight: 800; color: var(--accent); background: var(--accent-soft); padding: 2px 8px; border-radius: 5px; }
+.q-marks { font-weight: 700; color: var(--text-faint); }
+.q-stem-en { font-size: 14.8px; font-weight: 600; color: var(--text-main); margin-bottom: 6px; }
+.q-stem-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 12px; }
+.mcq-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin-bottom: 10px; }
+.mcq-opt { text-align: left; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 13.8px; cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.mcq-opt:hover { border-color: var(--accent); background: var(--bg-subtle); }
+.mcq-opt.correct { background: var(--ok-bg); border-color: var(--ok-border); color: var(--ok-text); font-weight: 700; }
+.mcq-opt.wrong { background: var(--err-bg); border-color: var(--err-border); color: var(--err-text); }
+.mcq-feedback { display: none; font-size: 13.5px; padding: 10px 12px; border-radius: var(--radius-sm); margin-top: 8px; }
+.mcq-feedback.visible { display: block; }
+.mcq-feedback.ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.mcq-feedback.err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+details.ms-details { margin-top: 10px; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 12px; }
+details.ms-details summary { cursor: pointer; font-weight: 700; font-size: 13.5px; color: var(--accent); user-select: none; }
+.ms-body { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 13.8px; }
+.ms-mark { display: inline-block; font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--core-text); background: var(--core-bg); padding: 1px 5px; border-radius: 4px; margin-right: 4px; }
+.ms-cn { color: var(--text-muted); margin-top: 4px; }
+
+.concept-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 14px; margin-bottom: 18px; }
+.concept-filter-group { display: flex; flex-wrap: wrap; gap: 6px; }
+.concept-actions { display: flex; align-items: center; gap: 10px; }
+.concept-count-pill { font-size: 12.5px; font-weight: 700; color: var(--text-muted); }
+.concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 14px; }
+.concept-card { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; gap: 8px; break-inside: avoid; }
+.concept-card:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
+.concept-card.concept-hidden { display: none !important; }
+.cq-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.cq-en { font-weight: 700; font-size: 14.5px; color: var(--text-main); line-height: 1.45; }
+.cq-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 2px; }
+.cq-answer { position: relative; margin-top: auto; background: var(--bg-surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius-sm); padding: 11px 13px; font-size: 13.8px; line-height: 1.6; }
+.kw { color: var(--accent); background: var(--accent-soft); padding: 0 4px; border-radius: 3px; font-weight: 700; }
+.cq-mask-hint { display: none; }
+.concept-card.masked .cq-answer { cursor: pointer; }
+.concept-card.masked .cq-answer-inner { filter: blur(7px); opacity: 0.22; user-select: none; pointer-events: none; transition: filter 0.2s, opacity 0.2s; }
+.concept-card.masked .cq-mask-hint { display: flex; align-items: center; justify-content: center; position: absolute; inset: 0; font-size: 13.5px; font-weight: 700; color: var(--accent); background: rgba(255,255,255,0.25); border-radius: var(--radius-sm); }
+[data-theme="dark"] .concept-card.masked .cq-mask-hint { background: rgba(15,23,42,0.35); }
+
+.chapter-pager { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 28px; padding: 16px 20px; background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); }
+.pager-btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: var(--radius-sm); background: var(--bg-subtle); border: 1px solid var(--border-strong); color: var(--text-main); font-size: 13.5px; font-weight: 700; text-decoration: none; }
+.pager-btn:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); text-decoration: none; }
+.pager-btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.pager-btn.primary:hover { background: var(--accent-hover); color: #fff; }
+
+.hub-block-title { font-size: 18px; font-weight: 800; margin: 24px 0 12px 0; padding-bottom: 6px; border-bottom: 2px solid var(--border-strong); display: flex; align-items: center; gap: 8px; }
+.hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 15px; }
+.hub-card { display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-surface); border: 1px solid var(--border-strong); border-top: 5px solid var(--card-color, var(--accent)); border-radius: var(--radius-md); padding: 16px 18px 14px 18px; color: var(--text-main); text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; box-shadow: var(--shadow-sm); }
+.hub-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--card-color, var(--accent)); text-decoration: none; }
+.hub-card-top { display: flex; align-items: center; justify-content: space-between; gap: 6px; margin-bottom: 8px; flex-wrap: wrap; }
+.hub-stat-row { display: flex; align-items: center; gap: 6px; }
+.hub-badge { font-size: 11.5px; font-weight: 800; color: #fff; background: var(--card-color, var(--accent)); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill { font-size: 11.8px; font-weight: 700; color: var(--text-muted); background: var(--bg-subtle); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill.done { background: var(--ok-bg); color: var(--ok-text); }
+.hub-clinic-pill { font-size: 11.8px; font-weight: 700; color: var(--text-muted); background: var(--bg-subtle); border: 1px solid var(--border); padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
+.hub-clinic-pill.has-err { background: var(--err-bg); color: var(--err-text); border-color: var(--err-border); }
+.hub-scope { font-size: 12px; font-weight: 700; color: var(--card-color, var(--accent)); background: var(--bg-subtle); padding: 3px 8px; border-radius: 5px; margin-bottom: 7px; display: inline-block; }
+.hub-title { font-size: 16px; font-weight: 800; margin-bottom: 3px; }
+.hub-en { font-size: 12.6px; color: var(--text-faint); font-weight: 600; margin-bottom: 8px; }
+.hub-sub { font-size: 12.8px; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; }
+.hub-foot { font-size: 13px; font-weight: 700; color: var(--card-color, var(--accent)); display: flex; align-items: center; justify-content: space-between; }
+
+.back-top-btn { position: fixed; right: 22px; bottom: 22px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); box-shadow: var(--shadow-md); cursor: pointer; display: none; align-items: center; justify-content: center; font-size: 17px; font-weight: 800; z-index: 80; }
+.back-top-btn.visible { display: flex; }
+
+@media (max-width: 1220px) {
+  .brand-title, .btn-label { display: none; }
+}
+@media (max-width: 980px) {
+  .menu-toggle { display: inline-flex; }
+  .sidebar { position: fixed; left: 0; top: var(--topbar-h); z-index: 95; transform: translateX(-100%); transition: transform 0.22s ease; box-shadow: var(--shadow-lg); }
+  .sidebar.open { transform: translateX(0); }
+  .main-content { padding: 18px 14px 64px 14px; }
+  .topic-section { padding: 18px 16px; }
+  .progress-chip { display: none; }
+  .search-wrap { min-width: 110px; }
+}
+@media (max-width: 640px) {
+  .topbar { padding: 0 10px; gap: 6px; }
+  .search-wrap { max-width: none; }
+  .concept-grid, .hub-grid, .clinic-form-grid { grid-template-columns: 1fr; }
+}
+@media print {
+  .topbar, .sidebar, .search-results-bar, .back-top-btn, .master-btn, .lab-controls button, .concept-toolbar, .cq-mask-hint, .chapter-pager, .clinic-form-grid, .clinic-actions { display: none !important; }
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  .main-content { padding: 0 !important; }
+  .content-inner { max-width: 100% !important; }
+  .topic-section, .exam-q, .callout, .worked-example, .svg-figure, .concept-card, .model-essay, .source-box, .clinic-item { box-shadow: none !important; break-inside: avoid; border-color: #CBD5E1 !important; }
+  details.ms-details, details.ms-details .ms-body, .mcq-feedback { display: block !important; }
+  .concept-card.masked .cq-answer-inner { filter: none !important; opacity: 1 !important; }
+}
+
+  </style>
+</head>
+<body data-chapter-code="F01">
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="展开目录">☰ 目录</button>
+      <a class="icon-btn" href="index.html" title="返回 6 科期末冲刺总控台"><span>🎯</span><span class="btn-label">总控台</span></a>
+      <div class="brand-pill">
+        <span class="brand-code">F01</span>
+        <span class="brand-title">Add Maths (0606) · Ch 1–6, 10, 11 & 14</span>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="search" id="searchInput" class="search-input" placeholder="搜公式、易错坑、模考题..." autocomplete="off" />
+      <button type="button" class="search-clear" id="searchClear" title="清空搜索">✕</button>
+    </div>
+
+    <div class="topbar-controls">
+      <div class="seg-group" role="group" aria-label="内容视图筛选">
+        <button type="button" class="seg-btn active" data-view-mode="all">All</button>
+        <button type="button" class="seg-btn" data-view-mode="summary">速记</button>
+        <button type="button" class="seg-btn" data-view-mode="practice">模考</button>
+        <button type="button" class="seg-btn" data-view-mode="clinic">错题</button>
+        <button type="button" class="seg-btn" data-view-mode="cards">闪卡</button>
+      </div>
+
+      <div class="progress-chip" title="本学科期末冲刺板块掌握进度">
+        <span id="progressText">0/0</span>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+
+      <button type="button" class="icon-btn" id="toggleAllMs" title="展开或收起全部解析"><span>📝</span><span class="btn-label">展开解析</span></button>
+      <button type="button" class="icon-btn" id="themeToggle" title="切换亮色/暗色主题"><span id="themeIcon">🌙</span><span class="btn-label">主题</span></button>
+      <button type="button" class="icon-btn" id="printBtn" title="打印或导出为 PDF"><span>🖨️</span><span class="btn-label">导出</span></button>
+    </div>
+  </header>
+
+  <div class="search-results-bar" id="searchBar">
+    <span id="searchSummary">找到 0 个匹配板块</span>
+    <button type="button" class="icon-btn" id="searchResetBtn">重置过滤</button>
+  </div>
+
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="本学科期末冲刺导航">
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #2563EB;"></span>F01 冲刺板块导航</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#sec-core1"><span>核心板块一 · Ch 1–6 代数、函数、指对与 Linear Law（含 P1 无计算器专项）</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-core2"><span>核心板块二 · Ch 10 计数、Ch 11 级数与 Ch 12+14 微积分求导全链</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-sme"><span>全真模考 · 80 分范围锁定期末模拟卷（Paper 1 无计算器风味为主）</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-clinic"><span>错题诊疗台 · F01 个人错题本与 10 章直达入口</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#app-concepts"><span>终极闪卡 · 20 张高密度速背公式与踩分词卡组</span><span class="nav-done-mark">✓</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #0D9488;"></span>全 6 科期末冲刺切换</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link active" href="F01_AddMaths_0606_Final_Sprint.html"><span>F01 · 附加数学 0606 期末考范围锁定冲刺</span></a></li>
+          <li><a class="nav-link" href="F02_Physics_0625_Final_Sprint.html"><span>F02 · 物理 0625 Ch 1–4 期末精炼与实验冲刺</span></a></li>
+          <li><a class="nav-link" href="F03_Chemistry_0620_Final_Sprint.html"><span>F03 · 化学 0620 Ch 1, 2, 4, 6 核心高频冲刺</span></a></li>
+          <li><a class="nav-link" href="F04_ESL_0510_Final_Sprint.html"><span>F04 · ESL 0510 听力阅读写作三线冲刺</span></a></li>
+          <li><a class="nav-link" href="F05_Chinese_0509_Final_Sprint.html"><span>F05 · 中文第一语言 0509 现代文阅读与双作文冲刺</span></a></li>
+          <li><a class="nav-link" href="F06_GP_0457_Final_Sprint.html"><span>F06 · 全球视野 0457 Q1–Q4 书面笔试终极冲刺</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-inner">
+        <section class="hero-card" id="top">
+          <h1>F01 · 附加数学 0606 期末考范围锁定冲刺</h1>
+          <p class="hero-sub">
+            <strong>范围锁定：教材 Ch 1–6 + Ch 10, 11, 14（含 Ch 12 基础求导衔接）</strong> — Ch 1–6 函数/二次/多项式/绝不/指对/线性化 · Ch 10 排列组合 · Ch 11 二项式/数列 · Ch 14 进阶求导 + Paper 1 无计算器专项与 80 分模拟卷。本页严格剔除非考范围章节，浓缩核心方法与高频失分红线，内置交互实验台、全真模考与个人错题诊疗台。
+          </p>
+          <div class="hero-badges">
+            <span class="hero-pill">🎯 期末考范围精准锁定</span>
+            <span class="hero-pill">⚡ 一页核心浓缩速记</span>
+            <a class="hero-pill" href="#sec-sme" style="text-decoration: none;">📝 直达限时全真模考 →</a>
+            <a class="hero-pill" href="#sec-clinic" style="text-decoration: none;">🩺 个人错题诊疗台 →</a>
+            <a class="hero-pill" href="#app-concepts" style="text-decoration: none; background: rgba(255,255,255,0.24);">🧠 遮罩自测闪卡 →</a>
+          </div>
+          <div class="unit-grid">
+            <a class="unit-tile" href="#sec-core1">
+              <div class="unit-tile-num">Section core1</div>
+              <div class="unit-tile-title">核心板块一 · Ch 1–6 代数、函数、指对与 Linear Law（含 P1 无计算器专项）</div>
+            </a>
+            <a class="unit-tile" href="#sec-core2">
+              <div class="unit-tile-num">Section core2</div>
+              <div class="unit-tile-title">核心板块二 · Ch 10 计数、Ch 11 级数与 Ch 12+14 微积分求导全链</div>
+            </a>
+            <a class="unit-tile" href="#sec-sme">
+              <div class="unit-tile-num">Section sme</div>
+              <div class="unit-tile-title">全真模考 · 80 分范围锁定期末模拟卷（Paper 1 无计算器风味为主）</div>
+            </a>
+            <a class="unit-tile" href="#sec-clinic">
+              <div class="unit-tile-num">Section clinic</div>
+              <div class="unit-tile-title">错题诊疗台 · F01 个人错题本与 10 章直达入口</div>
+            </a>
+            <a class="unit-tile" href="#app-concepts">
+              <div class="unit-tile-num">速背闪卡</div>
+              <div class="unit-tile-title">终极闪卡 · 20 张高密度速背公式与踩分词卡组</div>
+            </a>
+          </div>
+        </section>
+
+        <div id="emptySearchNotice" class="callout deep-dive" style="display: none;">
+          <div class="callout-title">🔍 未找到匹配内容</div>
+          <p style="margin-bottom: 0;">请尝试更换关键词，或点击右上角“重置过滤”恢复显示。</p>
+        </div>
+
+<!-- ==================== F01: ADDITIONAL MATHEMATICS 0606 FINAL SPRINT ==================== -->
+
+<!-- ==================== ARTICLE 1: CORE 1 (CH 1-6 + PAPER 1 + FORMULA AUDIT) ==================== -->
+<article class="topic-section sec-summary" id="sec-core1">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>核心板块一 · Ch 1–6 代数、函数、指对与 Linear Law（含 P1 无计算器专项）</h3>
+      <div class="section-en-sub">Functions, Quadratics, Polynomials, Modulus Inequalities, Logs &amp; Linear Law + Official Formula Sheet Audit</div>
+      <div class="tier-row">
+        <span class="badge-core">锁定章节：Ch 1 · 2 · 3 · 4 · 5 · 6</span>
+        <span class="badge-ext">Paper 1 (2025+) 无计算器必杀技能</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-core1">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>1.1 考前必核：剑桥 0606 (2025+) 官方公式表 vs 必须瞬间默写清单</h4>
+    <p>自 2025 考纲起，剑桥 IGCSE Additional Mathematics (0606) 考卷第 2 页新增了 <strong>List of Formulas</strong>，但覆盖极窄。期末考最致命的失分原因，就是误以为“考卷会给求导/对数/直线公式”！下表按本次<strong>锁定考纲</strong>严格对照：</p>
+    <div class="table-wrap">
+      <table class="sprint-table">
+        <thead>
+          <tr>
+            <th>知识板块</th>
+            <th>考卷 Formula Sheet 会提供（直接抄用）</th>
+            <th>考卷不提供 · 必须条件反射默写（Must Memorize）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Ch 1–2 函数与二次</strong></td>
+            <td>求根公式：<span class="math">x = <span class="frac"><span class="num">−b ± <span class="sqrt">√<span class="sqrt-rad">b² − 4ac</span></span></span><span class="den">2a</span></span></span></td>
+            <td>判别式 3 态（&gt;0 两交、=0 相切、&lt;0 无交）；配方法 <span class="math">a(x+p)² + q</span>；反函数 <strong>1-to-1</strong> 条件与 <span class="math">Dom(f⁻¹) = Range(f)</span></td>
+          </tr>
+          <tr>
+            <td><strong>Ch 3–4 多项式与绝不</strong></td>
+            <td><em>无任何公式提供</em></td>
+            <td>余数定理 <span class="math">R = f(−b/a)</span>；因式定理 <span class="math">f(a) = 0</span>；<span class="math">|A| &lt; |B| ⇔ (A−B)(A+B) &lt; 0</span>；<span class="math">|A| = L</span> 必验 <span class="math">L ≥ 0</span></td>
+          </tr>
+          <tr>
+            <td><strong>Ch 5 指数与对数</strong></td>
+            <td><em>无任何公式提供</em></td>
+            <td>和差幂三律：<span class="math">logₐ(MN) = logₐM + logₐN</span> 等；换底公式 <span class="math">logₐ b = <span class="frac"><span class="num">ln b</span><span class="den">ln a</span></span></span>；<span class="math">a⁰=1, logₐ 1=0, logₐ a=1</span>；真数 &gt; 0 验根</td>
+          </tr>
+          <tr>
+            <td><strong>Ch 6 直线与 Linear Law</strong></td>
+            <td><em>无任何直线公式（考卷给的圆/锥/球仅用于他章或建模）</em></td>
+            <td>斜率 <span class="math">m = (y₂−y₁)/(x₂−x₁)</span>；垂直 <span class="math">m₁m₂ = −1</span>；共线须写 <strong>share a common point</strong>；鞋带面积 <span class="math">½|Σxᵢyᵢ₊₁ − Σyᵢxᵢ₊₁|</span>；Linear Law <span class="math">Y = mX + c</span></td>
+          </tr>
+          <tr>
+            <td><strong>Ch 10 排列与组合</strong></td>
+            <td>仅给 <span class="math">ⁿCᵣ = <span class="frac"><span class="num">n!</span><span class="den">(n−r)!r!</span></span></span>（在二项式条目下）</td>
+            <td>排列 <span class="math">ⁿPᵣ = <span class="frac"><span class="num">n!</span><span class="den">(n−r)!</span></span></span>；相邻捆绑（外×内）；不相邻插空；含同元 <span class="math"><span class="frac"><span class="num">n!</span><span class="den">p!q!</span></span></span>；补集 <span class="math">Total − 反面</span></td>
+          </tr>
+          <tr>
+            <td><strong>Ch 11 二项式与数列</strong></td>
+            <td>二项展开通式；AP 的 <span class="math">uₙ, Sₙ</span>；GP 的 <span class="math">uₙ, Sₙ, S∞</span></td>
+            <td>收敛条件 <strong>|r| &lt; 1</strong>（考题常单考求 <span class="math">k</span> 范围）；通用递推 <strong>uₙ = Sₙ − Sₙ₋₁</strong>；二项常数项令 <span class="math">x</span> 指数 = 0；系数不含 <span class="math">xᵏ</span></td>
+          </tr>
+          <tr>
+            <td><strong>Ch 12+14 微分学</strong></td>
+            <td><em>零求导公式！</em>（仅给锥/球体表公式 <span class="math">V = ⅓Ah, πrl, 4πr², ⁴⁄₃πr³</span> 供建模题使用）</td>
+            <td>幂/链/乘/商四大法则；切法线斜率 <span class="math">−1/m</span>；<span class="math">d/dx(eᵃˣ⁺ᵇ)=aeᵃˣ⁺ᵇ</span>；<span class="math">d/dx(ln(ax+b))=a/(ax+b)</span>；<span class="math">d/dx(sin/cos/tan ax)</span> 及 <strong>rad</strong> 制；关联变化率链</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout examiner-tip">
+      <div class="callout-title">📌 注意本套冲刺严格剔除范围</div>
+      <p style="margin-bottom: 0;">Ch 7 圆方程、Ch 8 弧度扇形、Ch 9 三角方程与恒等式证明、Ch 13 向量、Ch 15 积分、Ch 16 运动学 <strong>均不作为本次期末考正题主角</strong>；仅在 Ch 14 三角函数求导中调用“弧度制 (rad) 与 Paper 1 特殊角精确值”。公式表中的锥/球/棱锥体积公式，若出现在 Ch 12/14 最值建模或关联变化率中可直接使用。</p>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>1.2 Paper 1 无计算器（2025+）四大核心硬功夫</h4>
+    <p>Paper 1（80 分 · 2 小时）<strong>严禁使用计算器</strong>，所有最终答案必须保留最简根式、精确分数、<span class="math">π</span>、<span class="math">e</span> 或 <span class="math">ln</span> 表达式。考前务必把下面四项手算练到零失误：</p>
+    <div class="formula-card">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;">
+        <div>
+          <strong>① 根式化简与分母有理化 (Surds)</strong><br>
+          • 拆最大完全平方数：<span class="math"><span class="sqrt">√<span class="sqrt-rad">48</span></span> = <span class="sqrt">√<span class="sqrt-rad">16×3</span></span> = 4<span class="sqrt">√<span class="sqrt-rad">3</span></span></span>；<span class="math"><span class="sqrt">√<span class="sqrt-rad">72</span></span> = 6<span class="sqrt">√<span class="sqrt-rad">2</span></span></span>；<span class="math"><span class="sqrt">√<span class="sqrt-rad">160</span></span> = 4<span class="sqrt">√<span class="sqrt-rad">10</span></span></span>。<br>
+          • 共轭有理化：<span class="math"><span class="frac"><span class="num">6</span><span class="den"><span class="sqrt">√<span class="sqrt-rad">5</span></span> − <span class="sqrt">√<span class="sqrt-rad">2</span></span></span></span> = <span class="frac"><span class="num">6(<span class="sqrt">√<span class="sqrt-rad">5</span></span> + <span class="sqrt">√<span class="sqrt-rad">2</span></span>)</span><span class="den">5 − 2</span></span> = 2(<span class="sqrt">√<span class="sqrt-rad">5</span></span> + <span class="sqrt">√<span class="sqrt-rad">2</span></span>)</span>。
+        </div>
+        <div>
+          <strong>② 特殊角三角值（弧度 rad 必背）</strong><br>
+          • <span class="math">0</span>：<span class="math">sin=0, cos=1, tan=0</span>；<span class="math"><span class="frac"><span class="num">π</span><span class="den">2</span></span></span>：<span class="math">sin=1, cos=0</span>。<br>
+          • <span class="math"><span class="frac"><span class="num">π</span><span class="den">6</span></span> (30°)</span>：<span class="math">sin=<span class="frac"><span class="num">1</span><span class="den">2</span></span>, cos=<span class="frac"><span class="num"><span class="sqrt">√<span class="sqrt-rad">3</span></span></span><span class="den">2</span></span>, tan=<span class="frac"><span class="num">1</span><span class="den"><span class="sqrt">√<span class="sqrt-rad">3</span></span></span></span></span>。<br>
+          • <span class="math"><span class="frac"><span class="num">π</span><span class="den">4</span></span> (45°)</span>：<span class="math">sin=cos=<span class="frac"><span class="num"><span class="sqrt">√<span class="sqrt-rad">2</span></span></span><span class="den">2</span></span>, tan=1, sec²=2</span>。<br>
+          • <span class="math"><span class="frac"><span class="num">π</span><span class="den">3</span></span> (60°)</span>：<span class="math">sin=<span class="frac"><span class="num"><span class="sqrt">√<span class="sqrt-rad">3</span></span></span><span class="den">2</span></span>, cos=<span class="frac"><span class="num">1</span><span class="den">2</span></span>, tan=<span class="sqrt">√<span class="sqrt-rad">3</span></span>, sec²=4</span>。
+        </div>
+        <div>
+          <strong>③ 有理数试根 (Rational Root Trial)</strong><br>
+          • 对 <span class="math">aₙxⁿ + ··· + a₀ = 0</span>，候选有理根 <span class="math">±<span class="frac"><span class="num">p</span><span class="den">q</span></span></span> 满足 <span class="math">p | a₀</span> 且 <span class="math">q | aₙ</span>。<br>
+          • 考场顺序：先试 <strong>±1, ±2, ±3</strong>，再试分数 <strong>±½, ±⅓, ±⅔</strong>。找到一个根即长除降为二次！
+        </div>
+        <div>
+          <strong>④ 指数、对数与组合数心算</strong><br>
+          • 分数负幂：<span class="math">8<sup>−2/3</sup> = (<span class="frac"><span class="num">1</span><span class="den">∛8</span></span>)² = <span class="frac"><span class="num">1</span><span class="den">4</span></span></span>；<span class="math">27<sup>4/3</sup> = 3⁴ = 81</span>。<br>
+          • 对数恒等：<span class="math">e<sup>2 ln 3</sup> = e<sup>ln 9</sup> = 9</span>；<span class="math">log₂(<span class="frac"><span class="num">1</span><span class="den">16</span></span>) = −4</span>；<span class="math">log₄ 8 = <span class="frac"><span class="num">3</span><span class="den">2</span></span></span>。<br>
+          • 组合数对称：<span class="math">¹⁰C₈ = ¹⁰C₂ = <span class="frac"><span class="num">10×9</span><span class="den">2</span></span> = 45</span>。
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>1.3 Ch 1–6 高频母题解法模板精炼（含 Linear Law 与绝对值不等式）</h4>
+
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 310" width="740" height="310" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ch 1 到 Ch 6 代数与函数六大题型决策路由图">
+        <defs>
+          <marker id="f1-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--svg-blue)" />
+          </marker>
+        </defs>
+        <text x="370" y="24" text-anchor="middle" font-size="14" font-weight="800" fill="var(--svg-ink)">图 1.1 · Ch 1–6 代数与函数六大题型决策路由图</text>
+
+        <!-- Row 1: Box 1 -->
+        <rect x="16" y="42" width="224" height="114" rx="8" fill="rgba(37,99,235,0.06)" stroke="var(--svg-blue)" stroke-width="1.6" />
+        <rect x="16" y="42" width="224" height="27" rx="8" fill="var(--svg-blue)" />
+        <text x="128" y="60" text-anchor="middle" font-size="12" font-weight="800" fill="#FFFFFF">Ch 1 复合与反函数</text>
+        <text x="128" y="88" text-anchor="middle" font-size="11.2" font-weight="700" fill="var(--svg-ink)">fg(x): 先代入里层 g(x)</text>
+        <text x="128" y="112" text-anchor="middle" font-size="11.2" font-weight="700" fill="var(--svg-ink)">f⁻¹ 存在条件: 1-to-1</text>
+        <text x="128" y="136" text-anchor="middle" font-size="11.2" font-weight="700" fill="var(--svg-red)">Dom(f⁻¹) = Range(f)</text>
+
+        <!-- Arrow 1 -> 2 -->
+        <line x1="241" y1="99" x2="255" y2="99" stroke="var(--svg-blue)" stroke-width="1.8" marker-end="url(#f1-arr)" />
+
+        <!-- Row 1: Box 2 -->
+        <rect x="258" y="42" width="224" height="114" rx="8" fill="rgba(13,148,136,0.06)" stroke="var(--svg-teal)" stroke-width="1.6" />
+        <rect x="258" y="42" width="224" height="27" rx="8" fill="var(--svg-teal)" />
+        <text x="370" y="60" text-anchor="middle" font-size="12" font-weight="800" fill="#FFFFFF">Ch 2 二次与判别式</text>
+        <text x="370" y="88" text-anchor="middle" font-size="11.2" font-weight="700" fill="var(--svg-ink)">配方 a(x+p)² + q 定最值</text>
+        <text x="370" y="112" text-anchor="middle" font-size="11.2" font-weight="700" fill="var(--svg-ink)">两交 Δ&gt;0 | 相切 Δ=0 | 离 Δ&lt;0</text>
+        <text x="370" y="136" text-anchor="middle" font-size="11.2" font-weight="700" fill="var(--svg-red)">不等式: 分解画图读区间</text>
+
+        <!-- Arrow 2 -> 3 -->
+        <line x1="483" y1="99" x2="497" y2="99" stroke="var(--svg-blue)" stroke-width="1.8" marker-end="url(#f1-arr)" />
+
+        <!-- Row 1: Box 3 -->
+        <rect x="500" y="42" width="224" height="114" rx="8" fill="rgba(67,56,202,0.06)" stroke="var(--svg-indigo)" stroke-width="1.6" />
+        <rect x="500" y="42" width="224" height="27" rx="8" fill="var(--svg-indigo)" />
+        <text x="612" y="60" text-anchor="middle" font-size="12" font-weight="800" fill="#FFFFFF">Ch 3 因式与余数定理</text>
+        <text x="612" y="88" text-anchor="middle" font-size="11.2" font-weight="700" fill="var(--svg-ink)">除式 ax−b ⇒ 余数 f(b/a)</text>
+        <text x="612" y="112" text-anchor="middle" font-size="11.2" font-weight="700" fill="var(--svg-ink)">三次试根 ±1, ±2 找首根</text>
+        <text x="612" y="136" text-anchor="middle" font-size="11.2" font-weight="700" fill="var(--svg-red)">降为二次后必再验 Δ</text>
+
+        <!-- Bridge Arrow 3 -> 4 -->
+        <path d="M 612 156 L 612 169 L 128 169 L 128 180" fill="none" stroke="var(--svg-blue)" stroke-width="1.6" stroke-dasharray="4,3" marker-end="url(#f1-arr)" />
+
+        <!-- Row 2: Box 4 -->
+        <rect x="16" y="182" width="224" height="114" rx="8" fill="rgba(124,58,237,0.06)" stroke="var(--svg-purple)" stroke-width="1.6" />
+        <rect x="16" y="182" width="224" height="27" rx="8" fill="var(--svg-purple)" />
+        <text x="128" y="200" text-anchor="middle" font-size="12" font-weight="800" fill="#FFFFFF">Ch 4 绝对值与三次图</text>
+        <text x="128" y="228" text-anchor="middle" font-size="11.2" font-weight="700" fill="var(--svg-ink)">|A|&lt;|B| ⇒ (A−B)(A+B)&lt;0</text>
+        <text x="128" y="252" text-anchor="middle" font-size="11.2" font-weight="700" fill="var(--svg-ink)">|A|=L 拆双枝须验 L ≥ 0</text>
+        <text x="128" y="276" text-anchor="middle" font-size="11.2" font-weight="700" fill="var(--svg-red)">隐含二次 u=2ˣ 舍负根</text>
+
+        <!-- Arrow 4 -> 5 -->
+        <line x1="241" y1="239" x2="255" y2="239" stroke="var(--svg-blue)" stroke-width="1.8" marker-end="url(#f1-arr)" />
+
+        <!-- Row 2: Box 5 -->
+        <rect x="258" y="182" width="224" height="114" rx="8" fill="rgba(217,119,6,0.06)" stroke="var(--svg-amber)" stroke-width="1.6" />
+        <rect x="258" y="182" width="224" height="27" rx="8" fill="var(--svg-amber)" />
+        <text x="370" y="200" text-anchor="middle" font-size="12" font-weight="800" fill="#FFFFFF">Ch 5 指数与对数方程</text>
+        <text x="370" y="228" text-anchor="middle" font-size="11.2" font-weight="700" fill="var(--svg-ink)">aˣ=b 取 log | 换底 ln b/ln a</text>
+        <text x="370" y="252" text-anchor="middle" font-size="11.2" font-weight="700" fill="var(--svg-ink)">合并单侧 log 再去对数</text>
+        <text x="370" y="276" text-anchor="middle" font-size="11.2" font-weight="700" fill="var(--svg-red)">必验真数&gt;0 且底数≠1</text>
+
+        <!-- Arrow 5 -> 6 -->
+        <line x1="483" y1="239" x2="497" y2="239" stroke="var(--svg-blue)" stroke-width="1.8" marker-end="url(#f1-arr)" />
+
+        <!-- Row 2: Box 6 -->
+        <rect x="500" y="182" width="224" height="114" rx="8" fill="rgba(220,38,38,0.06)" stroke="var(--svg-red)" stroke-width="1.6" />
+        <rect x="500" y="182" width="224" height="27" rx="8" fill="var(--svg-red)" />
+        <text x="612" y="200" text-anchor="middle" font-size="12" font-weight="800" fill="#FFFFFF">Ch 6 Linear Law 线性化</text>
+        <text x="612" y="228" text-anchor="middle" font-size="11.2" font-weight="700" fill="var(--svg-ink)">先配成 Y = mX + c 识别轴</text>
+        <text x="612" y="252" text-anchor="middle" font-size="11.2" font-weight="700" fill="var(--svg-ink)">直线算 m, c 再反解参数</text>
+        <text x="612" y="276" text-anchor="middle" font-size="11.2" font-weight="700" fill="var(--svg-red)">留意坐标原点未必是 (0,0)</text>
+      </svg>
+      <div class="svg-caption">图 1.1 · Ch 1–6 代数、函数、指对与直线线性化考场决策路由图</div>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">🔥 高频母题模板 A · Ch 1–2：反函数定义域与配方法/判别式联动</div>
+      <p>
+        <strong>1. 分式反函数求域值：</strong>已知 <span class="math">f(x) = <span class="frac"><span class="num">2x + 1</span><span class="den">x − 3</span></span> (x &gt; 3)</span>。先做长除分离常数：<span class="math">f(x) = 2 + <span class="frac"><span class="num">7</span><span class="den">x − 3</span></span></span>。因 <span class="math">x &gt; 3 ⇒ <span class="frac"><span class="num">7</span><span class="den">x − 3</span></span> &gt; 0</span>，故 <span class="math">Range(f): y &gt; 2</span>。反解 <span class="math">y(x−3)=2x+1 ⇒ x(y−2)=3y+1</span>，得 <strong><span class="math">f⁻¹(x) = <span class="frac"><span class="num">3x + 1</span><span class="den">x − 2</span></span> (x &gt; 2)</span></strong>（切忌只写 <span class="math">x ≠ 2</span>！）。<br>
+        <strong>2. 抛物线恒成立与直线不相交：</strong>若“直线 <span class="math">y = 2x + k</span> 与曲线 <span class="math">y = x² − 4x + 7</span> 无交点”，联立得 <span class="math">x² − 6x + (7 − k) = 0</span>，令 <span class="math">Δ = 36 − 4(7 − k) &lt; 0 ⇒ 8 + 4k &lt; 0 ⇒ <strong>k &lt; −2</strong></span>。若问“二次式 <span class="math">px² + 4x + p</span> 恒正”，除 <span class="math">Δ &lt; 0</span>（得 <span class="math">p &lt; −2</span> 或 <span class="math">p &gt; 2</span>）外，<strong>必须附加首项系数 <span class="math">p &gt; 0</span></strong>，最终仅保留 <strong><span class="math">p &gt; 2</span></strong>！
+      </p>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">🔥 高频母题模板 B · Ch 3–4：三次因式分解与 |ax + b| &lt; |cx + d| 平方降维</div>
+      <p>
+        <strong>1. 含参三次多项式：</strong>已知 <span class="math">P(x) = 2x³ + ax² − 11x + b</span> 有因式 <span class="math">(x − 2)</span>，且除以 <span class="math">(x + 1)</span> 余 <span class="math">6</span>。由 <span class="math">P(2)=0</span> 得 <span class="math">4a+b=6</span>，由 <span class="math">P(−1)=6</span> 得 <span class="math">a+b=−3</span>，联立解得 <span class="math">a=3, b=−6</span>。长除或比系数得 <span class="math">P(x) = (x−2)(2x²+7x+3) = <strong>(x−2)(2x+1)(x+3)</strong></span>（注：若二次因式不可再分，记得用 <span class="math">b²−4ac &lt; 0</span> 说明无实根）。<br>
+        <strong>2. 双绝对值不等式 P1 无计算器秒杀法：</strong>解 <span class="math">|2x − 5| &lt; |x + 4|</span>。因两侧非负直接平方并用平方差：<br>
+        <span class="math">(2x−5)² − (x+4)² &lt; 0 ⇒ [(2x−5)−(x+4)][(2x−5)+(x+4)] &lt; 0 ⇒ (x−9)(3x−1) &lt; 0</span>。<br>
+        临界根 <span class="math"><span class="frac"><span class="num">1</span><span class="den">3</span></span></span> 与 <span class="math">9</span>，二次开口向上取中间，直接写 <strong><span class="math"><span class="frac"><span class="num">1</span><span class="den">3</span></span> &lt; x &lt; 9</span></strong>！<br>
+        <em>⚠️ 对比单侧绝对值：</em>解 <span class="math">|x − 4| = 2x − 5</span> 得出 <span class="math">x = 1, 3</span> 后，必须代入右边 <span class="math">2x − 5</span> 检验：当 <span class="math">x=1</span> 时右边为 <span class="math">−3 &lt; 0</span> 舍去，仅 <span class="math">x = 3</span> 有效！
+      </p>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">🔥 高频母题模板 C · Ch 5–6：对数验根、鞋带面积与 Linear Law 正反互推</div>
+      <p>
+        <strong>1. 对数合并与增根淘汰：</strong>解 <span class="math">log₃(x − 1) + log₃(x − 3) = 1</span> ⇒ <span class="math">log₃[(x−1)(x−3)] = log₃ 3</span> ⇒ <span class="math">x² − 4x + 3 = 3 ⇒ x(x−4)=0 ⇒ x=0</span> 或 <span class="math">4</span>。检验定义域 <span class="math">x−3 &gt; 0</span>，<strong>舍去 <span class="math">x = 0</span></strong>，唯一解 <strong><span class="math">x = 4</span></strong>。<br>
+        <strong>2. Linear Law 逆推标准流程（从直线上两点推原方程参数）：</strong><br>
+        已知直线方程轴为纵轴 <span class="math">Y = lg y</span>、横轴 <span class="math">X = x</span>，过两点 <span class="math">(1, 3)</span> 与 <span class="math">(3, 7)</span>，原关系为 <span class="math">y = A · bˣ</span>。<br>
+        • <strong>Step 1（原式线性化）：</strong>两边取 <span class="math">lg</span> 得 <span class="math">lg y = (lg b) x + lg A</span>，识别 <span class="math">m = lg b</span>，<span class="math">c = lg A</span>。<br>
+        • <strong>Step 2（直线算斜率截距）：</strong><span class="math">m = <span class="frac"><span class="num">7 − 3</span><span class="den">3 − 1</span></span> = 2</span>；代入 <span class="math">(1, 3)</span> 得 <span class="math">3 = 2(1) + c ⇒ c = 1</span>。<br>
+        • <strong>Step 3（还原指数/对数反解）：</strong><span class="math">lg b = 2 ⇒ <strong>b = 100</strong></span>；<span class="math">lg A = 1 ⇒ <strong>A = 10</strong></span>。<br>
+        <strong>四大常见 Linear Law 变形对照：</strong><br>
+        ① <span class="math">y = axⁿ ⇒ lg y = n lg x + lg a</span>（<span class="math">Y=lg y, X=lg x</span>）；
+        ② <span class="math">y = Abˣ ⇒ ln y = (ln b)x + ln A</span>（<span class="math">Y=ln y, X=x</span>）；<br>
+        ③ <span class="math">y = ax² + bx ⇒ <span class="frac"><span class="num">y</span><span class="den">x</span></span> = ax + b</span>（<span class="math">Y=y/x, X=x</span>）；
+        ④ <span class="math">xy = ax + b ⇒ y = a + b(<span class="frac"><span class="num">1</span><span class="den">x</span></span>)</span>（<span class="math">Y=y, X=1/x</span> 或 <span class="math">Y=xy, X=x</span>）。
+      </p>
+    </div>
+
+    <div class="callout common-mistake">
+      <div class="callout-title">🚨 Ch 1–6 考场高频“0 分红线”提醒</div>
+      <ul style="margin-bottom: 0;">
+        <li><strong>绝不把 <span class="math">logₐ(M + N)</span> 拆成 <span class="math">logₐ M + logₐ N</span></strong>，也不把 <span class="math">lg A / lg B</span> 写成 <span class="math">lg(A − B)</span>！</li>
+        <li><strong>直线截距看清横坐标起点：</strong>若考卷坐标图横轴从 <span class="math">X = 1</span> 或 <span class="math">X = 2</span> 开始画，纵轴与直线交点<strong>不是截距 <span class="math">c</span></strong>！必须代入 <span class="math">Y − Y₁ = m(X − X₁)</span> 计算 <span class="math">X = 0</span> 时的 <span class="math">c</span>！</li>
+        <li><strong>多边形鞋带面积 (Shoelace)：</strong>按顺时针或逆时针顺序排好顶点（最后一列再写回起点），<span class="math">Area = ½|向右下乘积和 − 向左下乘积和|</span>，别漏绝对值与 <strong>½</strong>！</li>
+      </ul>
+    </div>
+  </div>
+</article>
+
+<!-- ==================== ARTICLE 2: CORE 2 (CH 10, 11 & CH 12+14 CALCULUS + LAB) ==================== -->
+<article class="topic-section sec-summary" id="sec-core2">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>核心板块二 · Ch 10 计数、Ch 11 级数与 Ch 12+14 微积分求导全链</h3>
+      <div class="section-en-sub">Permutations &amp; Combinations, Binomial/AP/GP Series, Ch 12 Calculus Foundation Bridge &amp; Ch 14 Exp/Log/Trig Derivatives</div>
+      <div class="tier-row">
+        <span class="badge-core">锁定章节：Ch 10 · Ch 11 · Ch 14（内置 Ch 12 衔接）</span>
+        <span class="badge-ext">内含 F01 交互冲刺台与 120min 计时</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-core2">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>2.1 Ch 10 排列组合：捆绑、插空、数字首位与“正难则反”模板</h4>
+    <p>解题第一步永远先问：<strong>“调换两个选出对象的位置，算不算新方案？”</strong> 算 ⇒ 排列（<span class="math">ⁿPᵣ</span>）；不算 ⇒ 组合（<span class="math">ⁿCᵣ</span>）。若既有“选”又有“排”，铁律是 <strong>先选（C）后排（P）</strong>！</p>
+    <div class="table-wrap">
+      <table class="sprint-table">
+        <thead>
+          <tr>
+            <th>高频约束题型</th>
+            <th>核心解法模型</th>
+            <th>经典母题示范（Paper 1 手算）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>相邻捆绑 (Together)</strong></td>
+            <td>把必相邻的 <span class="math">k</span> 个元素绑成 1 个大整体，算出 <strong>外部全排列 × 内部排列</strong></td>
+            <td>4 男 3 女排成一排，3 名女生必须站在一起：把女生绑成 1 块，共 5 块全排 <span class="math">5!</span>，内部女生互换 <span class="math">3!</span> ⇒ <span class="math">120 × 6 = <strong>720</strong></span>。</td>
+          </tr>
+          <tr>
+            <td><strong>不相邻插空 (Separated)</strong></td>
+            <td><strong>先排无约束元素</strong>形成 <span class="math">m + 1</span> 个空位（含两端），再把需隔开的元素用 <strong>ⁿPᵣ</strong> 插入空位</td>
+            <td>4 男 3 女排成一排，任意两名女生不相邻：先排 4 男 (<span class="math">4!=24</span>)，产生 5 个空位 <code>_ B _ B _ B _ B _</code>，3 女插空 <span class="math">⁵P₃ = 60</span> ⇒ <span class="math">24 × 60 = <strong>1440</strong></span>。</td>
+          </tr>
+          <tr>
+            <td><strong>含 0 奇数/偶数位限制</strong></td>
+            <td><strong>先定个位（奇偶）再定首位（非 0）</strong>；若 0 可作个位，必须拆分“末尾是 0”与“末尾非 0”两类！</td>
+            <td>用 0,1,2,3,4,5 组无重复四位偶数：① 末位为 0：<span class="math">5×4×3×1 = 60</span>；② 末位为 2 或 4 (2 选)：首位非 0 且非末位有 4 选，中间 <span class="math">4×3</span> ⇒ <span class="math">4×4×3×2 = 96</span>；共 <strong>156</strong>。</td>
+          </tr>
+          <tr>
+            <td><strong>至少/至多 &amp; 排斥组队</strong></td>
+            <td><strong>正难则反（补集法）</strong>：<span class="math">Total − 不合题意的少数情况</span>（需仔细核对边界）</td>
+            <td>从 5 男 4 女选 4 人至少 1 男 1 女：总选法 <span class="math">⁹C₄=126</span>，减去全男 <span class="math">⁵C₄=5</span> 与全女 <span class="math">⁴C₄=1</span> ⇒ <strong>120</strong>。</td>
+          </tr>
+          <tr>
+            <td><strong>含重复字母排列</strong></td>
+            <td>先按全部不同作 <span class="math">n!</span>，再除以各重复字母个数的阶乘 <span class="math">p! q! ···</span></td>
+            <td>单词 <code>STATISTICS</code>（10 字母：3S, 3T, 2I）：总数 <span class="math"><span class="frac"><span class="num">10!</span><span class="den">3! 3! 2!</span></span></span>。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>2.2 Ch 11 二项式定理与 AP / GP / S∞ 核心通关技</h4>
+    <div class="formula-card">
+      <div class="formula-main">
+        二项展开第 <span class="math">r + 1</span> 项：<span class="math">Tᵣ₊₁ = ⁿCᵣ · aⁿ⁻ʳ · bʳ</span> &nbsp;&nbsp;|&nbsp;&nbsp;
+        数列第 <span class="math">n</span> 项通用式：<span class="math">uₙ = Sₙ − Sₙ₋₁</span>（<span class="math">u₁ = S₁</span>）
+      </div>
+      <ul style="margin-bottom: 0; font-size: 14px;">
+        <li><strong>二项式三大失分坑：</strong>① <span class="math">b</span> 为负号或分式时（如 <span class="math">−<span class="frac"><span class="num">2</span><span class="den">x²</span></span></span>），<strong>必须连负号一起加括号求 <span class="math">r</span> 次方</strong>；② 求 <strong>Term independent of x</strong>（常数项）令 <span class="math">x</span> 的合成指数 = 0，写出具体数值；③ 求 <strong>Coefficient of xᵏ</strong> 只答数字，不要把 <span class="math">xᵏ</span> 带进最终答案！④ 两括号相乘如 <span class="math">(1+3x)(2−x/2)⁶</span> 求 <span class="math">x²</span> 系数，先把右括号展开到 <span class="math">x²</span> 项，再做<strong>交叉配对相乘相加</strong>。</li>
+        <li><strong>AP 与 GP 高频考点：</strong>公式表已给出 <span class="math">uₙ, Sₙ, S∞</span>，但考题专卡：① 给定 <span class="math">Sₙ = 3n² + 2n</span>，直接用 <span class="math">u₁ = S₁ = 5</span> 与 <span class="math">uₙ = Sₙ − Sₙ₋₁</span>；② 证明或利用 <strong>AP 某几项同时成 GP</strong>，列等比中项 <span class="math">(u_mid)² = u_prev × u_next</span> 并排除 <span class="math">d = 0</span>；③ <strong>无穷等比级数 <span class="math">S∞ = <span class="frac"><span class="num">a</span><span class="den">1 − r</span></span></span> 必须检验或解出 <span class="math">|r| &lt; 1</span></strong>（即 <span class="math">−1 &lt; r &lt; 1</span>）！</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>2.3 Ch 12 基础求导衔接速记 → Ch 14 复合指数/对数/三角求导</h4>
+    <p>为确保你直接攻克 Ch 14 综合求导时<strong>零断层</strong>，下设 Ch 12 必备基础桥接 + Ch 14 三大函数导数与综合应用：</p>
+    <div class="formula-card">
+      <div class="formula-main">
+        【Ch 12 衔接基石】
+        幂法则：<span class="math">(axⁿ)′ = anxⁿ⁻¹</span> &nbsp;|&nbsp;
+        链式：<span class="math"><span class="frac"><span class="num">dy</span><span class="den">dx</span></span> = <span class="frac"><span class="num">dy</span><span class="den">du</span></span> · <span class="frac"><span class="num">du</span><span class="den">dx</span></span></span> &nbsp;|&nbsp;
+        乘积：<span class="math">(uv)′ = uv′ + vu′</span> &nbsp;|&nbsp;
+        商法则：<span class="math">(<span class="frac"><span class="num">u</span><span class="den">v</span></span>)′ = <span class="frac"><span class="num">vu′ − uv′</span><span class="den">v²</span></span></span>
+      </div>
+      <div style="font-size: 14px; color: var(--text-muted); margin-top: 6px;">
+        <strong>Ch 12 衔接必会 4 步：</strong>① 见分式/根号先拆成 <span class="math">axⁿ</span> 再求导（如 <span class="math"><span class="frac"><span class="num">3x² − 2<span class="sqrt">√<span class="sqrt-rad">x</span></span></span><span class="den">x</span></span> = 3x − 2x<sup>−1/2</sup></span>）；② 切线斜率 <span class="math">m_T = <span class="frac"><span class="num">dy</span><span class="den">dx</span></span></span>，法线斜率 <span class="math">m_N = −<span class="frac"><span class="num">1</span><span class="den">m_T</span></span></span>；③ 驻点令 <span class="math"><span class="frac"><span class="num">dy</span><span class="den">dx</span></span> = 0</span>，用 <span class="math"><span class="frac"><span class="num">d²y</span><span class="den">dx²</span></span> &gt; 0</span>（极小）或 <span class="math">&lt; 0</span>（极大）判定，若 <span class="math">= 0</span> 则改查左右一阶导符号；④ 微小增量 <span class="math">δy ≈ (<span class="frac"><span class="num">dy</span><span class="den">dx</span></span>) δx</span>，关联变化率 <span class="math"><span class="frac"><span class="num">dy</span><span class="den">dt</span></span> = <span class="frac"><span class="num">dy</span><span class="den">dx</span></span> · <span class="frac"><span class="num">dx</span><span class="den">dt</span></span></span>。
+      </div>
+      <hr style="border:none;border-top:1px dashed var(--border-strong);margin:10px 0;" />
+      <div class="formula-main" style="color: var(--svg-purple);">
+        【Ch 14 进阶求导】
+        <span class="math">(e<sup>ax+b</sup>)′ = ae<sup>ax+b</sup></span> &nbsp;|&nbsp;
+        <span class="math">[ln(ax+b)]′ = <span class="frac"><span class="num">a</span><span class="den">ax+b</span></span></span> &nbsp;|&nbsp;
+        <span class="math">(sin ax)′ = a cos ax</span> &nbsp;|&nbsp;
+        <span class="math">(cos ax)′ = −a sin ax</span> &nbsp;|&nbsp;
+        <span class="math">(tan ax)′ = a sec² ax</span>
+      </div>
+      <div style="font-size: 14px; color: var(--text-muted); margin-top: 6px;">
+        <strong>⚠️ 弧度红线：</strong>上述所有三角求导公式<strong>仅在 <span class="math">x</span> 为弧度（rad）时成立</strong>！遇到 <span class="math">sec² ax</span> 需要数值化时记住 <span class="math">sec θ = <span class="frac"><span class="num">1</span><span class="den">cos θ</span></span></span>。
+      </div>
+    </div>
+
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 300" width="740" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="计数决策树与Ch12至Ch14复合求导速查图谱">
+        <text x="370" y="22" text-anchor="middle" font-size="14" font-weight="800" fill="var(--svg-ink)">图 1.2 · Ch 10–11 计数决策树与 Ch 12+14 求导复合图谱</text>
+
+        <!-- Left Panel: Counting & Series -->
+        <rect x="14" y="36" width="348" height="250" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="188" y="55" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-indigo)">Ch 10–11 计数与级数决策树</text>
+
+        <rect x="34" y="65" width="308" height="30" rx="6" fill="rgba(67,56,202,0.1)" stroke="var(--svg-indigo)" stroke-width="1.3" />
+        <text x="188" y="84" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-ink)">换位置算新方案吗？（看顺序 vs 不看顺序）</text>
+
+        <rect x="24" y="106" width="156" height="92" rx="6" fill="rgba(220,38,38,0.06)" stroke="var(--svg-red)" stroke-width="1.3" />
+        <text x="102" y="124" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-red)">有顺序 → 排列 ⁿPᵣ</text>
+        <text x="102" y="144" text-anchor="middle" font-size="10.8" font-weight="600" fill="var(--svg-ink)">相邻: 捆绑 (外部 × 内部)</text>
+        <text x="102" y="164" text-anchor="middle" font-size="10.8" font-weight="600" fill="var(--svg-ink)">隔开: 先排余项再插空</text>
+        <text x="102" y="184" text-anchor="middle" font-size="10.8" font-weight="600" fill="var(--svg-ink)">重复元素: n! / (p!q!)</text>
+
+        <rect x="192" y="106" width="156" height="92" rx="6" fill="rgba(13,148,136,0.06)" stroke="var(--svg-teal)" stroke-width="1.3" />
+        <text x="270" y="124" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-teal)">无顺序 → 组合 ⁿCᵣ</text>
+        <text x="270" y="144" text-anchor="middle" font-size="10.8" font-weight="600" fill="var(--svg-ink)">至少/至多: 总数 − 反面</text>
+        <text x="270" y="164" text-anchor="middle" font-size="10.8" font-weight="600" fill="var(--svg-ink)">先选 C 后排 P 勿混淆</text>
+        <text x="270" y="184" text-anchor="middle" font-size="10.8" font-weight="600" fill="var(--svg-ink)">通项 Tᵣ₊₁=ⁿCᵣ aⁿ⁻ʳ bʳ</text>
+
+        <rect x="24" y="208" width="324" height="66" rx="6" fill="rgba(217,119,6,0.08)" stroke="var(--svg-amber)" stroke-width="1.3" />
+        <text x="186" y="226" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-amber)">Ch 11 AP / GP / S∞ 三大防坑</text>
+        <text x="186" y="246" text-anchor="middle" font-size="10.8" font-weight="600" fill="var(--svg-ink)">S∞ = a/(1−r) 必先检查 |r| &lt; 1</text>
+        <text x="186" y="264" text-anchor="middle" font-size="10.8" font-weight="600" fill="var(--svg-ink)">已知 Sₙ 求通项: uₙ = Sₙ − Sₙ₋₁ (u₁ = S₁)</text>
+
+        <!-- Right Panel: Ch 12+14 Calculus -->
+        <rect x="378" y="36" width="348" height="250" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="552" y="55" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--svg-purple)">Ch 12+14 复合求导链式总图</text>
+
+        <rect x="394" y="65" width="316" height="48" rx="6" fill="rgba(37,99,235,0.08)" stroke="var(--svg-blue)" stroke-width="1.3" />
+        <text x="552" y="84" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-blue)">① 求导前化简铁律（降维提速）</text>
+        <text x="552" y="103" text-anchor="middle" font-size="10.8" font-weight="600" fill="var(--svg-ink)">分式根号转 xⁿ | ln(AB/C) 先用对数律拆成加减</text>
+
+        <rect x="394" y="122" width="316" height="82" rx="6" fill="rgba(124,58,237,0.08)" stroke="var(--svg-purple)" stroke-width="1.3" />
+        <text x="552" y="140" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-purple)">② Ch 14 核心导数（考卷全不给！）</text>
+        <text x="552" y="159" text-anchor="middle" font-size="10.8" font-weight="600" fill="var(--svg-ink)">(eᵃˣ⁺ᵇ)′=aeᵃˣ⁺ᵇ  |  [ln(ax+b)]′=a/(ax+b)</text>
+        <text x="552" y="177" text-anchor="middle" font-size="10.8" font-weight="600" fill="var(--svg-ink)">(sin ax)′=a cos ax | (cos ax)′=−a sin ax</text>
+        <text x="552" y="195" text-anchor="middle" font-size="10.8" font-weight="700" fill="var(--svg-red)">(tan ax)′=a sec² ax（求导一律用弧度 rad！）</text>
+
+        <rect x="394" y="213" width="316" height="61" rx="6" fill="rgba(22,163,74,0.08)" stroke="var(--svg-green)" stroke-width="1.3" />
+        <text x="552" y="231" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-green)">③ 乘商复合、驻点与变化率应用</text>
+        <text x="552" y="249" text-anchor="middle" font-size="10.8" font-weight="600" fill="var(--svg-ink)">(uv)′=uv′+vu′ | 驻点 dy/dx=0 (因 eᵃˣ&gt;0 舍去)</text>
+        <text x="552" y="266" text-anchor="middle" font-size="10.8" font-weight="600" fill="var(--svg-ink)">变化率 dy/dt=(dy/dx)·(dx/dt) | d²y/dx² 判极值</text>
+      </svg>
+      <div class="svg-caption">图 1.2 · Ch 10–11 计数级数决策树（左）与 Ch 12+14 复合求导链总图（右）</div>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">🔥 高频母题模板 D · Ch 14 指数驻点、对数“先拆后导”与三角切线（Paper 1）</div>
+      <p>
+        <strong>1. 指数乘积求驻点与极值：</strong>已知 <span class="math">y = x² e<sup>−3x</sup></span>。<br>
+        • 乘积法则：<span class="math"><span class="frac"><span class="num">dy</span><span class="den">dx</span></span> = 2x e<sup>−3x</sup> + x²(−3e<sup>−3x</sup>) = x e<sup>−3x</sup>(2 − 3x)</span>。<br>
+        • 令 <span class="math"><span class="frac"><span class="num">dy</span><span class="den">dx</span></span> = 0</span>：因恒有 <strong><span class="math">e<sup>−3x</sup> &gt; 0</span></strong>，得驻点 <span class="math">x = 0</span> 与 <span class="math">x = <span class="frac"><span class="num">2</span><span class="den">3</span></span></span>（绝不遗漏 <span class="math">x = 0</span>，也别写 <span class="math">e<sup>−3x</sup>=0</span> 无解！）。<br>
+        <strong>2. 对数先拆后导神技：</strong>求 <span class="math">y = ln(<span class="frac"><span class="num">(x + 1)²</span><span class="den"><span class="sqrt">√<span class="sqrt-rad">2x − 1</span></span></span></span>)</span> 的导数。<br>
+        • 先用 Ch 5 对数律拆分：<span class="math">y = 2 ln(x + 1) − <span class="frac"><span class="num">1</span><span class="den">2</span></span> ln(2x − 1)</span>。<br>
+        • 逐项秒求导：<span class="math"><span class="frac"><span class="num">dy</span><span class="den">dx</span></span> = <span class="frac"><span class="num">2</span><span class="den">x + 1</span></span> − <span class="frac"><span class="num">1</span><span class="den">2</span></span> · <span class="frac"><span class="num">2</span><span class="den">2x − 1</span></span> = <span class="frac"><span class="num">2</span><span class="den">x + 1</span></span> − <span class="frac"><span class="num">1</span><span class="den">2x − 1</span></span> = <strong><span class="frac"><span class="num">3x − 3</span><span class="den">(x + 1)(2x − 1)</span></span></strong></span>！<br>
+        <strong>3. 三角切线精确值：</strong>求 <span class="math">y = sin 2x</span> 在 <span class="math">x = <span class="frac"><span class="num">π</span><span class="den">6</span></span></span> 处的切线方程。<br>
+        • 切点纵坐标 <span class="math">y = sin(<span class="frac"><span class="num">π</span><span class="den">3</span></span>) = <span class="frac"><span class="num"><span class="sqrt">√<span class="sqrt-rad">3</span></span></span><span class="den">2</span></span></span>；导数 <span class="math"><span class="frac"><span class="num">dy</span><span class="den">dx</span></span> = 2 cos 2x ⇒ m = 2 cos(<span class="frac"><span class="num">π</span><span class="den">3</span></span>) = 2(<span class="frac"><span class="num">1</span><span class="den">2</span></span>) = 1</span>。<br>
+        • 切线：<span class="math">y − <span class="frac"><span class="num"><span class="sqrt">√<span class="sqrt-rad">3</span></span></span><span class="den">2</span></span> = x − <span class="frac"><span class="num">π</span><span class="den">6</span></span></span>。
+      </p>
+    </div>
+
+    <div class="lab-box" data-lab-type="f01"></div>
+  </div>
+</article>
+
+<!-- ==================== ARTICLE 3: 80-MARK SCOPE-LOCKED MOCK EXAM ==================== -->
+<article class="topic-section sec-practice" id="sec-sme">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>全真模考 · 80 分范围锁定期末模拟卷（Paper 1 无计算器风味为主）</h3>
+      <div class="section-en-sub">80-Mark Scope-Locked Mock Paper: 10 Interactive Diagnostic MCQs (20m) + 6 Structured Paper Questions (60m) | Suggested Time: 120 min</div>
+      <div class="tier-row">
+        <span class="badge-core">总分 80 分 · 建议用时 120 分钟</span>
+        <span class="badge-ext">无计算器作答 · 含 M1/A1/B1 官方踩分与 0 分错误预警</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-sme">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>Part A · 核心概念与速算自测（10 题 × 2 分 = 20 分 · Paper 1 禁用计算器）</h4>
+
+    <!-- Q1 -->
+    <div class="exam-q" data-mcq-answer="A">
+      <div class="exam-q-head">
+        <span class="q-tag">Q1 · Ch 1 函数与反函数</span>
+        <span class="q-marks">[2 marks]</span>
+      </div>
+      <div class="q-stem-en">The functions f and g are defined by f(x) = 3 − (x − 2)² for x ≥ 2, and g(x) = 2x + 1. State the domain of f⁻¹ and find fg(1).</div>
+      <div class="q-stem-cn">已知 f(x) = 3 − (x − 2)²（x ≥ 2），g(x) = 2x + 1。求反函数 f⁻¹ 的定义域以及复合函数值 fg(1)。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><strong>A.</strong> Domain of f⁻¹: x ≤ 3, fg(1) = 2</button>
+        <button type="button" class="mcq-opt" data-opt="B"><strong>B.</strong> Domain of f⁻¹: x ≥ 2, fg(1) = 2</button>
+        <button type="button" class="mcq-opt" data-opt="C"><strong>C.</strong> Domain of f⁻¹: x ≤ 3, fg(1) = 5</button>
+        <button type="button" class="mcq-opt" data-opt="D"><strong>D.</strong> Domain of f⁻¹: x ≥ 3, fg(1) = −2</button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！当 x ≥ 2 时 (x−2)² ≥ 0，故 Range(f) 为 y ≤ 3 即 Domain(f⁻¹) 为 x ≤ 3；g(1)=3，f(3)=3−1=2。" data-err="❌ 注意两点：① Domain(f⁻¹) = Range(f)，不是照抄 f 的定义域 x ≥ 2；② fg(1) 是先算里层 g(1)=3 再代入 f(3)=2。"></div>
+      <details class="ms-details">
+        <summary>查看 Mark Scheme 过程分拆解</summary>
+        <div class="ms-body">
+          <span class="ms-mark">B1</span>由顶点 (2, 3) 开口向下，x ≥ 2 时 Range(f) ≤ 3，故 Domain(f⁻¹): x ≤ 3。<br>
+          <span class="ms-mark">B1</span>g(1) = 2(1)+1 = 3 ⇒ fg(1) = f(3) = 3 − (3−2)² = 2。<br>
+          <div class="ms-cn"><strong>常见 0 分误区：</strong>错把 f 的定义域 x ≥ 2 直接写成 f⁻¹ 的定义域，或算反成 gf(1) = g(2) = 5。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- Q2 -->
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head">
+        <span class="q-tag">Q2 · Ch 2 判别式与相切</span>
+        <span class="q-marks">[2 marks]</span>
+      </div>
+      <div class="q-stem-en">The straight line y = kx − 1 is a tangent to the curve y = x² + 3x + 8. Find the possible values of k.</div>
+      <div class="q-stem-cn">直线 y = kx − 1 与曲线 y = x² + 3x + 8 相切，求常数 k 的所有可能值。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><strong>A.</strong> k = −9 or k = 3</button>
+        <button type="button" class="mcq-opt" data-opt="B"><strong>B.</strong> k = −3 or k = 9</button>
+        <button type="button" class="mcq-opt" data-opt="C"><strong>C.</strong> k = 9 only</button>
+        <button type="button" class="mcq-opt" data-opt="D"><strong>D.</strong> −3 &lt; k &lt; 9</button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！联立得 x² + (3−k)x + 9 = 0，相切即 Δ = (3−k)² − 36 = 0 ⇒ 3−k = ±6 ⇒ k = −3 或 k = 9。" data-err="❌ 相切条件是 Δ = 0（相等实根），且开方 ±6 必须写出正负两个解！"></div>
+      <details class="ms-details">
+        <summary>查看 Mark Scheme 过程分拆解</summary>
+        <div class="ms-body">
+          <span class="ms-mark">M1</span>消去 y 得 x² + (3 − k)x + 9 = 0，置 b² − 4ac = 0 ⇒ (3 − k)² − 36 = 0。<br>
+          <span class="ms-mark">A1</span>3 − k = ±6 ⇒ k = −3 或 k = 9。<br>
+          <div class="ms-cn"><strong>常见丢分点：</strong>展开 (3−k)² 时算错符号或漏掉负根，导致丢掉一半 A1 分。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- Q3 -->
+    <div class="exam-q" data-mcq-answer="A">
+      <div class="exam-q-head">
+        <span class="q-tag">Q3 · Ch 3 因式与余数定理</span>
+        <span class="q-marks">[2 marks]</span>
+      </div>
+      <div class="q-stem-en">The polynomial f(x) = 4x³ + px² − 5x + 3 has (x − 1) as a factor. Find the remainder when f(x) is divided by (2x − 1).</div>
+      <div class="q-stem-cn">多项式 f(x) = 4x³ + px² − 5x + 3 有因式 (x − 1)，求 f(x) 除以 (2x − 1) 所得的余数。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><strong>A.</strong> 1/2</button>
+        <button type="button" class="mcq-opt" data-opt="B"><strong>B.</strong> −1/2</button>
+        <button type="button" class="mcq-opt" data-opt="C"><strong>C.</strong> 9/2</button>
+        <button type="button" class="mcq-opt" data-opt="D"><strong>D.</strong> 3/2</button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！由 f(1)=0 得 4+p−5+3=0 ⇒ p=−2；除以 (2x−1) 的余数为 f(1/2) = 4(1/8) − 2(1/4) − 5/2 + 3 = 1/2。" data-err="❌ 检查两步：① f(1)=0 ⇒ p=−2；② 令 2x−1=0 得 x=+1/2，切勿代入 x=−1/2 或 x=1！"></div>
+      <details class="ms-details">
+        <summary>查看 Mark Scheme 过程分拆解</summary>
+        <div class="ms-body">
+          <span class="ms-mark">M1</span>f(1) = 4 + p − 5 + 3 = 0 ⇒ p = −2。<br>
+          <span class="ms-mark">A1</span>余数 = f(1/2) = 4(1/8) − 2(1/4) − 5(1/2) + 3 = 1/2 − 1/2 − 5/2 + 3 = 1/2。
+        </div>
+      </details>
+    </div>
+
+    <!-- Q4 -->
+    <div class="exam-q" data-mcq-answer="C">
+      <div class="exam-q-head">
+        <span class="q-tag">Q4 · Ch 4 绝对值不等式</span>
+        <span class="q-marks">[2 marks]</span>
+      </div>
+      <div class="q-stem-en">Solve the inequality |3x − 1| &lt; |x + 5|.</div>
+      <div class="q-stem-cn">求解绝对值不等式 |3x − 1| &lt; |x + 5|。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><strong>A.</strong> x &lt; −1 or x &gt; 3</button>
+        <button type="button" class="mcq-opt" data-opt="B"><strong>B.</strong> −3 &lt; x &lt; 1</button>
+        <button type="button" class="mcq-opt" data-opt="C"><strong>C.</strong> −1 &lt; x &lt; 3</button>
+        <button type="button" class="mcq-opt" data-opt="D"><strong>D.</strong> −1 &lt; x &lt; 1/3</button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！平方差分解得 [(3x−1)−(x+5)][(3x−1)+(x+5)] = (2x−6)(4x+4) &lt; 0，开口向上取两根之间：−1 &lt; x &lt; 3。" data-err="❌ 两边平方得 8(x−3)(x+1) &lt; 0；开口向上的二次式小于 0 取中间区间 (−1, 3)，可代 x=0 验证 1 &lt; 5！"></div>
+      <details class="ms-details">
+        <summary>查看 Mark Scheme 过程分拆解</summary>
+        <div class="ms-body">
+          <span class="ms-mark">M1</span>(3x−1)² − (x+5)² &lt; 0 ⇒ (2x−6)(4x+4) &lt; 0（或展开 8x²−16x−24 &lt; 0）。<br>
+          <span class="ms-mark">A1</span>临界值 x = −1 与 3 ⇒ −1 &lt; x &lt; 3。
+        </div>
+      </details>
+    </div>
+
+    <!-- Q5 -->
+    <div class="exam-q" data-mcq-answer="A">
+      <div class="exam-q-head">
+        <span class="q-tag">Q5 · Ch 5 对数方程与定义域检验</span>
+        <span class="q-marks">[2 marks]</span>
+      </div>
+      <div class="q-stem-en">Solve log₃(x + 2) + log₃(x − 4) = 3.</div>
+      <div class="q-stem-cn">无计算器求解对数方程 log₃(x + 2) + log₃(x − 4) = 3。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><strong>A.</strong> x = 7</button>
+        <button type="button" class="mcq-opt" data-opt="B"><strong>B.</strong> x = 7 or x = −5</button>
+        <button type="button" class="mcq-opt" data-opt="C"><strong>C.</strong> x = 5</button>
+        <button type="button" class="mcq-opt" data-opt="D"><strong>D.</strong> x = 1 + 2√3</button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！合并得 (x+2)(x−4)=3³=27 ⇒ x²−2x−35=0 ⇒ x=7 或 −5；因真数 x−4 &gt; 0 必须舍去 −5，唯一解 x = 7！" data-err="❌ 若选 B 则犯了 0606 头号大坑：没有回代检查真数 x−4 &gt; 0！x=−5 使 log₃(−9) 无意义，必须明确舍去！"></div>
+      <details class="ms-details">
+        <summary>查看 Mark Scheme 过程分拆解</summary>
+        <div class="ms-body">
+          <span class="ms-mark">M1</span>log₃[(x+2)(x−4)] = 3 ⇒ (x+2)(x−4) = 27 ⇒ x² − 2x − 35 = 0。<br>
+          <span class="ms-mark">A1</span>解出 x = 7, −5，并明确写出 reject x = −5 (真数须 &gt; 0)，得 x = 7。
+        </div>
+      </details>
+    </div>
+
+    <!-- Q6 -->
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head">
+        <span class="q-tag">Q6 · Ch 6 Linear Law 逆推参数</span>
+        <span class="q-marks">[2 marks]</span>
+      </div>
+      <div class="q-stem-en">Variables x and y are related by y = A bˣ. The straight line graph of ln y against x passes through (0, ln 5) and (2, ln 45). Find A and b (b &gt; 0).</div>
+      <div class="q-stem-cn">已知 y = A bˣ，ln y 对 x 的直线图过 (0, ln 5) 与 (2, ln 45)，求正数 A 与 b。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><strong>A.</strong> A = 5, b = 9</button>
+        <button type="button" class="mcq-opt" data-opt="B"><strong>B.</strong> A = 5, b = 3</button>
+        <button type="button" class="mcq-opt" data-opt="C"><strong>C.</strong> A = ln 5, b = 3</button>
+        <button type="button" class="mcq-opt" data-opt="D"><strong>D.</strong> A = 3, b = 5</button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！ln y = (ln b)x + ln A ⇒ c = ln A = ln 5 ⇒ A = 5；m = (ln 45 − ln 5)/2 = (ln 9)/2 = ln 3 ⇒ b = 3。" data-err="❌ 注意两步：① 截距 c = ln A = ln 5 故 A = 5；② 斜率 m = (ln 45 − ln 5)/(2 − 0) = ½ ln 9 = ln 3，故 b = 3（不是 9）！"></div>
+      <details class="ms-details">
+        <summary>查看 Mark Scheme 过程分拆解</summary>
+        <div class="ms-body">
+          <span class="ms-mark">B1</span>截距 ln A = ln 5 ⇒ A = 5。<br>
+          <span class="ms-mark">B1</span>斜率 ln b = (ln 45 − ln 5)/2 = ½ ln(45/5) = ½ ln 9 = ln 3 ⇒ b = 3。
+        </div>
+      </details>
+    </div>
+
+    <!-- Q7 -->
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head">
+        <span class="q-tag">Q7 · Ch 10 约束排列</span>
+        <span class="q-marks">[2 marks]</span>
+      </div>
+      <div class="q-stem-en">Find the number of different 5-letter arrangements of the word MATHS in which the letters A and M are NOT next to each other.</div>
+      <div class="q-stem-cn">将单词 MATHS 的 5 个字母全排列，要求字母 A 与 M 不相邻，共有多少种不同排法？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><strong>A.</strong> 48</button>
+        <button type="button" class="mcq-opt" data-opt="B"><strong>B.</strong> 72</button>
+        <button type="button" class="mcq-opt" data-opt="C"><strong>C.</strong> 96</button>
+        <button type="button" class="mcq-opt" data-opt="D"><strong>D.</strong> 60</button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！补集法：5! − 4!×2! = 120 − 48 = 72；或插空法：3! × ⁴P₂ = 6 × 12 = 72！" data-err="❌ 用捆绑法算相邻时别漏 A 与 M 内部互换 2!（4!×2! = 48），再用总排列 5! = 120 减去 48 得 72。"></div>
+      <details class="ms-details">
+        <summary>查看 Mark Scheme 过程分拆解</summary>
+        <div class="ms-body">
+          <span class="ms-mark">M1</span>总排法 5! = 120，A 与 M 相邻捆绑 4! × 2! = 48（或 3! × ⁴P₂）。<br>
+          <span class="ms-mark">A1</span>120 − 48 = 72。
+        </div>
+      </details>
+    </div>
+
+    <!-- Q8 -->
+    <div class="exam-q" data-mcq-answer="C">
+      <div class="exam-q-head">
+        <span class="q-tag">Q8 · Ch 11 二项式展开系数</span>
+        <span class="q-marks">[2 marks]</span>
+      </div>
+      <div class="q-stem-en">Find the coefficient of x² in the expansion of (2 − x)(1 + 3x)⁵.</div>
+      <div class="q-stem-cn">求 (2 − x)(1 + 3x)⁵ 展开式中 x² 项的系数。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><strong>A.</strong> 180</button>
+        <button type="button" class="mcq-opt" data-opt="B"><strong>B.</strong> 195</button>
+        <button type="button" class="mcq-opt" data-opt="C"><strong>C.</strong> 165</button>
+        <button type="button" class="mcq-opt" data-opt="D"><strong>D.</strong> 45</button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！(1+3x)⁵ = 1 + 15x + 90x² + ···；x² 系数 = 2(90) + (−1)(15) = 180 − 15 = 165！" data-err="❌ 别忘 (3x)² = 9x²！展开至 x² 得 1 + ⁵C₁(3x) + ⁵C₂(9x²) = 1 + 15x + 90x²，再与 (2 − x) 交叉相乘：2(90) − 15 = 165。"></div>
+      <details class="ms-details">
+        <summary>查看 Mark Scheme 过程分拆解</summary>
+        <div class="ms-body">
+          <span class="ms-mark">M1</span>(1+3x)⁵ 展开前 3 项为 1 + 15x + 90x²。<br>
+          <span class="ms-mark">A1</span>2 × 90 + (−1) × 15 = 165。
+        </div>
+      </details>
+    </div>
+
+    <!-- Q9 -->
+    <div class="exam-q" data-mcq-answer="D">
+      <div class="exam-q-head">
+        <span class="q-tag">Q9 · Ch 11 无穷等比级数</span>
+        <span class="q-marks">[2 marks]</span>
+      </div>
+      <div class="q-stem-en">A geometric progression has first term 8 and second term 8(2k − 1). Given that the sum to infinity exists and equals 16, find the value of k.</div>
+      <div class="q-stem-cn">某等比数列首项为 8，第二项为 8(2k − 1)。已知该数列无穷项之和 S∞ 存在且等于 16，求 k 的值。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><strong>A.</strong> 1/4</button>
+        <button type="button" class="mcq-opt" data-opt="B"><strong>B.</strong> 1/2</button>
+        <button type="button" class="mcq-opt" data-opt="C"><strong>C.</strong> 5/4</button>
+        <button type="button" class="mcq-opt" data-opt="D"><strong>D.</strong> 3/4</button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！公比 r = 2k−1，由 8/(1−r) = 16 得 r = 1/2（满足 |r| &lt; 1），故 2k − 1 = 1/2 ⇒ k = 3/4！" data-err="❌ 先用 S∞ = a/(1−r) = 16 算出公比 r = 1/2，再解 2k − 1 = 1/2 得 k = 3/4。"></div>
+      <details class="ms-details">
+        <summary>查看 Mark Scheme 过程分拆解</summary>
+        <div class="ms-body">
+          <span class="ms-mark">M1</span>r = 2k − 1，且 8 / (1 − r) = 16 ⇒ 1 − r = 1/2 ⇒ r = 1/2（|r| &lt; 1 成立）。<br>
+          <span class="ms-mark">A1</span>2k − 1 = 1/2 ⇒ k = 3/4。
+        </div>
+      </details>
+    </div>
+
+    <!-- Q10 -->
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head">
+        <span class="q-tag">Q10 · Ch 14 对数与三角求导（rad）</span>
+        <span class="q-marks">[2 marks]</span>
+      </div>
+      <div class="q-stem-en">Given y = ln(x²) + 2 cos(3x) where x &gt; 0 is in radians, find the exact value of dy/dx when x = π/6.</div>
+      <div class="q-stem-cn">已知 y = ln(x²) + 2 cos(3x)（x &gt; 0 为弧度），求当 x = π/6 时 dy/dx 的精确值。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><strong>A.</strong> 12/π + 6</button>
+        <button type="button" class="mcq-opt" data-opt="B"><strong>B.</strong> 12/π − 6</button>
+        <button type="button" class="mcq-opt" data-opt="C"><strong>C.</strong> 12/π − 2</button>
+        <button type="button" class="mcq-opt" data-opt="D"><strong>D.</strong> 6/π − 6</button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！先化简 ln(x²) = 2 ln x，求导得 dy/dx = 2/x − 6 sin(3x)；代入 x = π/6 得 12/π − 6 sin(π/2) = 12/π − 6。" data-err="❌ 两处高危点：① (cos 3x)′ = −3 sin 3x（负号与系数 3 不可丢）；② ln(x²) = 2 ln x 的导数是 2/x，代入 π/6 得 12/π。"></div>
+      <details class="ms-details">
+        <summary>查看 Mark Scheme 过程分拆解</summary>
+        <div class="ms-body">
+          <span class="ms-mark">M1</span>dy/dx = 2/x − 6 sin(3x)。<br>
+          <span class="ms-mark">A1</span>代入 x = π/6：2/(π/6) − 6 sin(π/2) = 12/π − 6。
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>Part B · 过程分拆解解答大题（6 道大题共 60 分 · Paper 1 精确表达）</h4>
+
+    <!-- Q11 -->
+    <div class="exam-q">
+      <div class="exam-q-head">
+        <span class="q-tag">Q11 · Ch 1 + Ch 2 函数、配方法与判别式综合</span>
+        <span class="q-marks">[9 marks]</span>
+      </div>
+      <div class="q-stem-en">
+        The function f is defined by f(x) = 2x² − 12x + 23 for x ≥ k.<br>
+        (a) Express f(x) in the form a(x − b)² + c, where a, b and c are constants. [3]<br>
+        (b) State the least value of k for which f⁻¹ exists, and for this value of k, find an expression for f⁻¹(x) and state its domain. [3]<br>
+        (c) Find the set of values of m for which the line y = mx + 5 intersects the curve y = 2x² − 12x + 23 at two distinct points. [3]
+      </div>
+      <div class="q-stem-cn">
+        已知函数 f(x) = 2x² − 12x + 23（x ≥ k）。(a) 配成 a(x−b)²+c；(b) 写出使 f⁻¹ 存在的最小 k，求 f⁻¹(x) 及其定义域；(c) 求直线 y = mx + 5 与该曲线有两个不同交点时 m 的取值范围。
+      </div>
+      <details class="ms-details">
+        <summary>展开官方踩分标准 (Mark Scheme) 与 0 分预警</summary>
+        <div class="ms-body">
+          <p>
+            <strong>(a)</strong> <span class="ms-mark">B1</span> <span class="math">a = 2</span>；<span class="ms-mark">B1</span> <span class="math">b = 3</span>；<span class="ms-mark">B1</span> <span class="math">c = 5</span>：<br>
+            <span class="math">2(x² − 6x) + 23 = 2[(x − 3)² − 9] + 23 = <strong>2(x − 3)² + 5</strong></span>。<br>
+            <strong>(b)</strong> <span class="ms-mark">B1</span> 最小 <span class="math">k = 3</span>（对称轴 <span class="math">x = 3</span> 处保证 1-to-1）。<br>
+            <span class="ms-mark">M1</span> 令 <span class="math">y = 2(x−3)² + 5 ⇒ x − 3 = ±<span class="sqrt">√<span class="sqrt-rad"><span class="frac"><span class="num">y − 5</span><span class="den">2</span></span></span></span></span>；因 <span class="math">x ≥ 3</span> 取正号，得 <span class="ms-mark">A1</span> <strong><span class="math">f⁻¹(x) = 3 + <span class="sqrt">√<span class="sqrt-rad"><span class="frac"><span class="num">x − 5</span><span class="den">2</span></span></span></span></span></strong>，定义域 <strong><span class="math">x ≥ 5</span></strong>。<br>
+            <strong>(c)</strong> <span class="ms-mark">M1</span> 联立 <span class="math">2x² − 12x + 23 = mx + 5 ⇒ 2x² − (12 + m)x + 18 = 0</span>。<br>
+            <span class="ms-mark">M1</span> 两不同交点 <span class="math">Δ &gt; 0 ⇒ (12 + m)² − 4(2)(18) &gt; 0 ⇒ m² + 24m &gt; 0 ⇒ m(m + 24) &gt; 0</span>。<br>
+            <span class="ms-mark">A1</span> <strong><span class="math">m &lt; −24</span> or <span class="math">m &gt; 0</span></strong>。
+          </p>
+          <div class="ms-cn"><strong>常见 0 分错误示范：</strong>(b) 反解时忘记写 <span class="math">x ≥ 5</span> 或误留 ± 号；(c) 把 <span class="math">m(m+24) &gt; 0</span> 错误写成 <span class="math">m &gt; 0, m &gt; −24</span> 而没有画抛物线取两翼！</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- Q12 -->
+    <div class="exam-q">
+      <div class="exam-q-head">
+        <span class="q-tag">Q12 · Ch 3 + Ch 4 三次因式分解、代换方程与图像不等式</span>
+        <span class="q-marks">[10 marks]</span>
+      </div>
+      <div class="q-stem-en">
+        Let P(x) = x³ − 4x² + x + 6.<br>
+        (a) Show that (x + 1) is a factor of P(x), and hence factorise P(x) completely. [4]<br>
+        (b) Using your result from (a) and the substitution x = 2y, solve 8y³ − 16y² + 2y + 6 = 0. [3]<br>
+        (c) State the coordinates of the intercepts of y = |P(x)| with the axes, and find the set of values of x for which P(x) ≤ 0. [3]
+      </div>
+      <div class="q-stem-cn">
+        已知 P(x) = x³ − 4x² + x + 6。(a) 证明 (x+1) 是因式并彻底因式分解 P(x)；(b) 利用 (a) 及代换 x = 2y 解方程 8y³ − 16y² + 2y + 6 = 0；(c) 写出 y = |P(x)| 与坐标轴的交点坐标，并解 P(x) ≤ 0。
+      </div>
+      <details class="ms-details">
+        <summary>展开官方踩分标准 (Mark Scheme) 与 0 分预警</summary>
+        <div class="ms-body">
+          <p>
+            <strong>(a)</strong> <span class="ms-mark">M1</span> 写明 <span class="math">P(−1) = (−1)³ − 4(−1)² + (−1) + 6 = −1 − 4 − 1 + 6 = 0</span>（不可只写答案 0，须有代入过程！）。<br>
+            <span class="ms-mark">M1</span> 长除/比系数得 <span class="math">(x + 1)(x² − 5x + 6)</span>；<span class="ms-mark">A1A1</span> 彻底分解为 <strong><span class="math">(x + 1)(x − 2)(x − 3)</span></strong>。<br>
+            <strong>(b)</strong> <span class="ms-mark">M1</span> 识别 <span class="math">(2y)³ − 4(2y)² + (2y) + 6 = P(2y) = 0</span>。<br>
+            <span class="ms-mark">M1</span> 得 <span class="math">2y = −1, 2, 3</span>；<span class="ms-mark">A1</span> 解为 <strong><span class="math">y = −<span class="frac"><span class="num">1</span><span class="den">2</span></span>, 1, <span class="frac"><span class="num">3</span><span class="den">2</span></span></span></strong>。<br>
+            <strong>(c)</strong> <span class="ms-mark">B1</span> 与坐标轴交点：<span class="math">x</span> 轴交点 <strong>(−1, 0), (2, 0), (3, 0)</strong>；<span class="math">y</span> 轴交点 <strong>(0, 6)</strong>。<br>
+            <span class="ms-mark">M1</span> 画出正首项三次草图（穿过 −1, 2, 3，从左下至右上）；<span class="ms-mark">A1</span> 得 <span class="math">P(x) ≤ 0</span> 解集为 <strong><span class="math">x ≤ −1</span> or <span class="math">2 ≤ x ≤ 3</span></strong>。
+          </p>
+          <div class="ms-cn"><strong>常见 0 分错误示范：</strong>(b) 未利用 (a) 而直接重算或弄反乘除以 2（错写成 <span class="math">−2, 4, 6</span>）；(c) 漏掉无界端 <span class="math">x ≤ −1</span>！</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- Q13 -->
+    <div class="exam-q">
+      <div class="exam-q-head">
+        <span class="q-tag">Q13 · Ch 5 + Ch 6 Linear Law 与对数定义域综合</span>
+        <span class="q-marks">[10 marks]</span>
+      </div>
+      <div class="q-stem-en">
+        Variables x and y (x &gt; 0, y &gt; 0) are connected by y = a xⁿ, where a and n are constants.<br>
+        (a) Express this equation in linear form using base-10 logarithms (lg), clearly stating the expressions for Y, X, gradient and vertical intercept. [2]<br>
+        (b) The straight-line graph of lg y against lg x passes through the points (1, 0) and (3, −4). Find the exact values of a and n. [4]<br>
+        (c) Hence find the exact value of y when x = 5, and the value of x when y = 25. [4]
+      </div>
+      <div class="q-stem-cn">
+        正变量 x, y 满足 y = a xⁿ。(a) 用常用对数 lg 化成线性形式并指明坐标轴、斜率与截距；(b) 已知 lg y 对 lg x 的直线过点 (1, 0) 与 (3, −4)，求 a 与 n；(c) 求 x = 5 时的 y 值，以及 y = 25 时的 x 值。
+      </div>
+      <details class="ms-details">
+        <summary>展开官方踩分标准 (Mark Scheme) 与 0 分预警</summary>
+        <div class="ms-body">
+          <p>
+            <strong>(a)</strong> <span class="ms-mark">M1</span> <span class="math">lg y = n lg x + lg a</span>；<span class="ms-mark">A1</span> <span class="math">Y = lg y, X = lg x</span>，斜率 <span class="math">m = n</span>，截距 <span class="math">c = lg a</span>。<br>
+            <strong>(b)</strong> <span class="ms-mark">M1</span> 斜率 <span class="math">n = <span class="frac"><span class="num">−4 − 0</span><span class="den">3 − 1</span></span> = <strong>−2</strong></span>（<span class="ms-mark">A1</span>）。<br>
+            <span class="ms-mark">M1</span> 代入 (1, 0)：<span class="math">0 = (−2)(1) + lg a ⇒ lg a = 2 ⇒ <strong>a = 10² = 100</strong></span>（<span class="ms-mark">A1</span>）。<br>
+            <strong>(c)</strong> 当 <span class="math">x = 5</span>：<span class="ms-mark">M1</span> <span class="math">y = 100 × 5<sup>−2</sup> = <span class="frac"><span class="num">100</span><span class="den">25</span></span> = <strong>4</strong></span>（<span class="ms-mark">A1</span>）。<br>
+            当 <span class="math">y = 25</span>：<span class="ms-mark">M1</span> <span class="math">25 = <span class="frac"><span class="num">100</span><span class="den">x²</span></span> ⇒ x² = 4</span>；因 <span class="math">x &gt; 0</span>（<span class="math">lg x</span> 有意义），<span class="ms-mark">A1</span> 唯一解 <strong><span class="math">x = 2</span></strong>（若未舍去 −2 扣 A1！）。
+          </p>
+          <div class="ms-cn"><strong>常见 0 分错误示范：</strong>把直线过的点 (1, 0) 直接当成截距 <span class="math">lg a = 0 ⇒ a = 1</span>，忘记直线是 <span class="math">X = 1</span> 而非 <span class="math">X = 0</span>！</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- Q14 -->
+    <div class="exam-q">
+      <div class="exam-q-head">
+        <span class="q-tag">Q14 · Ch 10 排列组合全场景大题</span>
+        <span class="q-marks">[10 marks]</span>
+      </div>
+      <div class="q-stem-en">
+        (a) A committee of 6 students is to be chosen from 5 boys and 6 girls. Find the number of different committees that can be formed if:<br>
+        &nbsp;&nbsp;(i) there must be at least 4 girls on the committee, [3]<br>
+        &nbsp;&nbsp;(ii) two particular boys, Adam and Ben, refuse to serve together on the committee (no other restrictions). [3]<br>
+        (b) Four boys and three girls stand in a single line for a photograph. Find the number of arrangements if:<br>
+        &nbsp;&nbsp;(i) no two girls stand next to each other, [2]<br>
+        &nbsp;&nbsp;(ii) the 4 boys stand together, the 3 girls stand together, and a boy is at the front of the line. [2]
+      </div>
+      <div class="q-stem-cn">
+        (a) 从 5 男 6 女中选 6 人委员会：(i) 至少 4 名女生；(ii) 某两位男生 Adam 与 Ben 拒绝同时入选。(b) 4 男 3 女排成一排照相：(i) 任意两女生不相邻；(ii) 4 男生在一起且 3 女生在一起，且排头必须是男生。
+      </div>
+      <details class="ms-details">
+        <summary>展开官方踩分标准 (Mark Scheme) 与 0 分预警</summary>
+        <div class="ms-body">
+          <p>
+            <strong>(a)(i)</strong> <span class="ms-mark">M1</span> 分三类：(4女2男) + (5女1男) + (6女0男) = <span class="math">⁶C₄×⁵C₂ + ⁶C₅×⁵C₁ + ⁶C₆×⁵C₀</span>。<br>
+            <span class="ms-mark">M1</span> <span class="math">15×10 + 6×5 + 1×1</span> = <span class="ms-mark">A1</span> <strong>181</strong>。<br>
+            <strong>(a)(ii)</strong> <span class="ms-mark">M1</span> 补集法：全部选法 <span class="math">¹¹C₆ = 462</span>，两人同时入选 <span class="math">⁹C₄ = 126</span>。<br>
+            <span class="ms-mark">M1</span> <span class="math">462 − 126</span> = <span class="ms-mark">A1</span> <strong>336</strong>。<br>
+            <strong>(b)(i)</strong> <span class="ms-mark">M1</span> 插空法：先排 4 男 <span class="math">4!</span>，5 个空位插 3 女 <span class="math">⁵P₃</span>；<span class="ms-mark">A1</span> <span class="math">24 × 60 = <strong>1440</strong></span>。<br>
+            <strong>(b)(ii)</strong> <span class="ms-mark">M1</span> 块序固定为 [4男][3女]，内部互排 <span class="math">4! × 3!</span>；<span class="ms-mark">A1</span> <span class="math">24 × 6 = <strong>144</strong></span>。
+          </p>
+          <div class="ms-cn"><strong>常见 0 分错误示范：</strong>(a)(i) 错写成“先选 4 女 <span class="math">⁶C₄</span> 再从剩下 7 人任选 2 人 <span class="math">⁷C₂</span>”，导致 5 女、6 女方案严重重复计数！</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- Q15 -->
+    <div class="exam-q">
+      <div class="exam-q-head">
+        <span class="q-tag">Q15 · Ch 11 二项式与 AP/GP/S∞ 联立</span>
+        <span class="q-marks">[10 marks]</span>
+      </div>
+      <div class="q-stem-en">
+        (a) Find the first three terms in ascending powers of x in the expansion of (2 − x/2)⁶, simplifying each coefficient. Hence find the coefficient of x² in (1 + 3x)(2 − x/2)⁶. [5]<br>
+        (b) An arithmetic progression has first term a and common difference d ≠ 0. The 1st, 5th and 7th terms of this arithmetic progression form the first three terms of a geometric progression.<br>
+        &nbsp;&nbsp;(i) Show that the common ratio r of the geometric progression is 1/2. [3]<br>
+        &nbsp;&nbsp;(ii) Given that a = 24, find the sum to infinity of the geometric progression. [2]
+      </div>
+      <div class="q-stem-cn">
+        (a) 按 x 升幂展开 (2 − x/2)⁶ 前三项并求 (1 + 3x)(2 − x/2)⁶ 中 x² 的系数；(b) 等差数列首项 a、公差 d ≠ 0，其第 1、5、7 项恰好构成等比数列前三项：(i) 证明等比公比 r = 1/2；(ii) 若 a = 24，求该等比数列的 S∞。
+      </div>
+      <details class="ms-details">
+        <summary>展开官方踩分标准 (Mark Scheme) 与 0 分预警</summary>
+        <div class="ms-body">
+          <p>
+            <strong>(a)</strong> <span class="ms-mark">M1</span> <span class="math">2⁶ + ⁶C₁(2⁵)(−<span class="frac"><span class="num">x</span><span class="den">2</span></span>) + ⁶C₂(2⁴)(−<span class="frac"><span class="num">x</span><span class="den">2</span></span>)²</span>。<br>
+            <span class="ms-mark">A2</span> 化简为 <strong><span class="math">64 − 96x + 60x²</span></strong>（对 2 项得 A1）。<br>
+            <span class="ms-mark">M1</span> <span class="math">x²</span> 系数 = <span class="math">1(60) + 3(−96)</span> = <span class="ms-mark">A1</span> <strong>−228</strong>。<br>
+            <strong>(b)(i)</strong> <span class="ms-mark">B1</span> 写出 <span class="math">u₁ = a, u₅ = a + 4d, u₇ = a + 6d</span>。<br>
+            <span class="ms-mark">M1</span> 等比关系 <span class="math">(a + 4d)² = a(a + 6d) ⇒ a² + 8ad + 16d² = a² + 6ad ⇒ 2ad = −16d² ⇒ a = −8d</span>（<span class="math">d ≠ 0</span>）。<br>
+            <span class="ms-mark">A1</span> 公比 <span class="math">r = <span class="frac"><span class="num">a + 4d</span><span class="den">a</span></span> = <span class="frac"><span class="num">−4d</span><span class="den">−8d</span></span> = <strong><span class="frac"><span class="num">1</span><span class="den">2</span></span></strong></span>。<br>
+            <strong>(b)(ii)</strong> <span class="ms-mark">M1</span> 因 <span class="math">|r| = ½ &lt; 1</span>，<span class="math">S∞ = <span class="frac"><span class="num">24</span><span class="den">1 − ½</span></span></span> = <span class="ms-mark">A1</span> <strong>48</strong>。
+          </p>
+          <div class="ms-cn"><strong>常见 0 分错误示范：</strong>(a) 忘记把负号放进 <span class="math">(−x/2)</span> 导致中间项变正号；(b)(i) 未交代 <span class="math">d ≠ 0</span> 便强行约分 <span class="math">d</span>，或在最终系数里多写了 <span class="math">x²</span>！</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- Q16 -->
+    <div class="exam-q">
+      <div class="exam-q-head">
+        <span class="q-tag">Q16 · Ch 12+14 指数对数三角综合求导、驻点与变化率</span>
+        <span class="q-marks">[11 marks]</span>
+      </div>
+      <div class="q-stem-en">
+        (a) Given y = ln(<span class="frac"><span class="num">e²ˣ</span><span class="den">3x − 1</span></span>) for x &gt; 1/3, show that dy/dx = <span class="frac"><span class="num">6x − 5</span><span class="den">3x − 1</span></span>. [3]<br>
+        (b) Find the exact coordinates of the stationary point of the curve y = eˣ sin x for 0 &lt; x &lt; π, and determine its nature. [5]<br>
+        (c) A variable x increases at a constant rate of 0.4 units per second. Find the exact rate of change of P = 5 e<sup>2x − 4</sup> at the instant when x = 2. [3]
+      </div>
+      <div class="q-stem-cn">
+        (a) 已知 y = ln(e²ˣ / (3x − 1))（x &gt; 1/3），证明 dy/dx = (6x − 5)/(3x − 1)；(b) 求曲线 y = eˣ sin x（0 &lt; x &lt; π）驻点的精确坐标并判定极大/极小性质；(c) 已知 dx/dt = 0.4，求 x = 2 瞬间 P = 5 e^(2x−4) 的变化率 dP/dt。
+      </div>
+      <details class="ms-details">
+        <summary>展开官方踩分标准 (Mark Scheme) 与 0 分预警</summary>
+        <div class="ms-body">
+          <p>
+            <strong>(a)</strong> <span class="ms-mark">M1</span> 对数先拆：<span class="math">y = ln(e²ˣ) − ln(3x − 1) = 2x − ln(3x − 1)</span>。<br>
+            <span class="ms-mark">M1</span> 求导：<span class="math"><span class="frac"><span class="num">dy</span><span class="den">dx</span></span> = 2 − <span class="frac"><span class="num">3</span><span class="den">3x − 1</span></span></span>；<span class="ms-mark">A1</span> 通分得 <strong><span class="math"><span class="frac"><span class="num">6x − 5</span><span class="den">3x − 1</span></span></span></strong>。<br>
+            <strong>(b)</strong> <span class="ms-mark">M1</span> 乘积法则：<span class="math"><span class="frac"><span class="num">dy</span><span class="den">dx</span></span> = eˣ sin x + eˣ cos x = eˣ(sin x + cos x)</span>。<br>
+            <span class="ms-mark">M1</span> 令 <span class="math"><span class="frac"><span class="num">dy</span><span class="den">dx</span></span> = 0</span>，因 <span class="math">eˣ &gt; 0</span> 得 <span class="math">tan x = −1 ⇒ <strong>x = <span class="frac"><span class="num">3π</span><span class="den">4</span></span></strong></span>（<span class="ms-mark">A1</span> 纵坐标 <span class="math">y = <span class="frac"><span class="num"><span class="sqrt">√<span class="sqrt-rad">2</span></span></span><span class="den">2</span></span> e<sup>3π/4</sup></span>）。<br>
+            <span class="ms-mark">M1</span> 二阶导：<span class="math"><span class="frac"><span class="num">d²y</span><span class="den">dx²</span></span> = eˣ(sin x + cos x) + eˣ(cos x − sin x) = 2eˣ cos x</span>；代入 <span class="math">x = 3π/4</span> 得 <span class="math">−<span class="sqrt">√<span class="sqrt-rad">2</span></span> e<sup>3π/4</sup> &lt; 0</span> ⇒ <span class="ms-mark">A1</span> <strong>Maximum point（极大值点）</strong>。<br>
+            <strong>(c)</strong> <span class="ms-mark">M1</span> <span class="math"><span class="frac"><span class="num">dP</span><span class="den">dx</span></span> = 10 e<sup>2x − 4</sup></span>；在 <span class="math">x = 2</span> 时 <span class="math"><span class="frac"><span class="num">dP</span><span class="den">dx</span></span> = 10 e⁰ = 10</span>。<br>
+            <span class="ms-mark">M1</span> <span class="math"><span class="frac"><span class="num">dP</span><span class="den">dt</span></span> = <span class="frac"><span class="num">dP</span><span class="den">dx</span></span> · <span class="frac"><span class="num">dx</span><span class="den">dt</span></span> = 10 × 0.4</span> = <span class="ms-mark">A1</span> <strong>4 units/s</strong>。
+          </p>
+          <div class="ms-cn"><strong>常见 0 分错误示范：</strong>(b) 解 <span class="math">tan x = −1</span> 写成角度 <span class="math">135°</span>（微积分必须使用弧度制 <span class="math">3π/4</span>！）；(c) 忘记指数内层系数 2 导致算成 <span class="math">5 × 0.4 = 2</span>。</div>
+        </div>
+      </details>
+    </div>
+  </div>
+</article>
+
+<!-- ==================== ARTICLE 4: ERROR CLINIC + CHAPTER LINKS ==================== -->
+<article class="topic-section sec-clinic" id="sec-clinic">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>错题诊疗台 · F01 个人错题本与 10 章直达入口</h3>
+      <div class="section-en-sub">Offline Error Clinic (Auto-Saved in Browser) &amp; Direct Links to Full Add Maths 0606 Chapter Guides</div>
+      <div class="tier-row">
+        <span class="badge-core">离线本地持久保存 · 一键导出发给 AI 精批</span>
+        <span class="badge-ext">仅保留本次期末考范围内 10 个核心章节</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-clinic">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>4.1 数学错题发给 AI 精讲的标准格式示范</h4>
+    <p>记录数学错题时，只抄答案没有用；把<strong>“原题关键条件 + 你卡死/写错的那一步 + 归因标签”</strong>填进下方诊疗台，考前点击“生成并复制 AI 精讲清单”，即可直接丢给 AI 逐题排雷：</p>
+    <div class="callout deep-dive">
+      <div class="callout-title">📋 错题记录高分范例（复制格式参考）</div>
+      <p style="margin-bottom: 0;">
+        • <strong>章节/出处：</strong>Ch5 对数方程 P1 Q5<br>
+        • <strong>错因标签：</strong>审题漏条件/看错单位（或 概念与公式不清）<br>
+        • <strong>原题要点 / 错在哪一步：</strong>解 log₃(x+2)+log₃(x−4)=3 得到 x=7 和 x=−5，直接把两个解都填上去了，没检查真数大于 0。<br>
+        • <strong>正解与防错铁律：</strong>所有对数方程解出答案后，第一步先回代原式验证“每个真数 &gt; 0 且底数 &gt; 0, ≠ 1”，本题 x=−5 导致真数为 −9 必须写 reject！
+      </p>
+    </div>
+
+    <div class="clinic-box" data-clinic-subject="F01"></div>
+  </div>
+
+  <div class="subtopic">
+    <h4>4.2 锁定范围原章节深度学习直达（Ch 1–6, 10, 11, 12, 14）</h4>
+    <p>冲刺中发现某章推导断层（例如忘记鞋带公式推导、想再刷 10 道 Ch 14 三角/指数求导变式），点击下方对应章节直达完整讲义与交互实验台：</p>
+    <div class="quick-links-grid">
+      <a class="quick-link-chip" href="../AddMaths_0606_Chapters/Ch01_Functions.html">Ch01 函数</a>
+      <a class="quick-link-chip" href="../AddMaths_0606_Chapters/Ch02_Simultaneous_Quadratics.html">Ch02 二次与联立</a>
+      <a class="quick-link-chip" href="../AddMaths_0606_Chapters/Ch03_Factors_Polynomials.html">Ch03 多项式</a>
+      <a class="quick-link-chip" href="../AddMaths_0606_Chapters/Ch04_Equations_Inequalities_Graphs.html">Ch04 绝对值与不等式</a>
+      <a class="quick-link-chip" href="../AddMaths_0606_Chapters/Ch05_Logarithmic_Exponential.html">Ch05 指数对数</a>
+      <a class="quick-link-chip" href="../AddMaths_0606_Chapters/Ch06_Straight_Line_Graphs.html">Ch06 直线与 Linear Law</a>
+      <a class="quick-link-chip" href="../AddMaths_0606_Chapters/Ch10_Permutations_Combinations.html">Ch10 排列组合</a>
+      <a class="quick-link-chip" href="../AddMaths_0606_Chapters/Ch11_Series.html">Ch11 二项式与数列</a>
+      <a class="quick-link-chip" href="../AddMaths_0606_Chapters/Ch12_Differentiation_1.html">Ch12 求导1基础衔接</a>
+      <a class="quick-link-chip" href="../AddMaths_0606_Chapters/Ch14_Differentiation_2.html">Ch14 求导2进阶</a>
+    </div>
+  </div>
+</article>
+
+<!-- ==================== ARTICLE 5: 20 HIGH-DENSITY FORMULA & MARK-SCHEME FLASHCARDS ==================== -->
+<article class="topic-section sec-cards" id="app-concepts">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>终极闪卡 · 20 张高密度速背公式与踩分词卡组</h3>
+      <div class="section-en-sub">Filterable Formula &amp; Mark-Scheme Flashcards (Algebra · Logs/Linear Law · Counting/Series · Calculus)</div>
+      <div class="tier-row">
+        <span class="badge-core">4 大知识模块分类筛选</span>
+        <span class="badge-ext">支持“开启遮罩自测”考前闭卷默写</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="app-concepts">○ 标记掌握</button>
+  </div>
+
+  <div class="concept-toolbar">
+    <div class="concept-filter-group" id="conceptFilterTabs">
+      <button type="button" class="tab-btn active" data-concept-part="all">全部 (20)</button>
+      <button type="button" class="tab-btn" data-concept-part="alg">Ch1–4 函数代数绝不 (5)</button>
+      <button type="button" class="tab-btn" data-concept-part="lin">Ch5–6 指对与 Linear Law (5)</button>
+      <button type="button" class="tab-btn" data-concept-part="cnt">Ch10–11 计数与级数 (5)</button>
+      <button type="button" class="tab-btn" data-concept-part="cal">Ch12+14 求导与变化率 (5)</button>
+    </div>
+    <div class="concept-actions">
+      <span class="concept-count-pill" id="conceptCountPill">显示 20 / 20 题</span>
+      <button type="button" class="tab-btn" id="conceptQuizToggle">🙈 开启遮罩自测</button>
+    </div>
+  </div>
+
+  <div class="concept-grid" id="conceptGrid">
+    <!-- ALG 1-5 -->
+    <div class="concept-card" data-part="alg">
+      <div class="cq-head"><span class="q-tag">F01-01 · Ch 1</span><span class="badge-core">函数与反函数</span></div>
+      <div class="cq-en">State the condition for f⁻¹ to exist, and the relationship between domains/ranges and graphs of f and f⁻¹.</div>
+      <div class="cq-cn">反函数 f⁻¹ 存在的充要条件？原函数与反函数的定义域/值域及图像对称关系？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">
+          <span class="kw">1-to-1（一对一映射）</span>（水平线测试最多 1 交点）。<br>
+          <span class="kw">Domain(f⁻¹) = Range(f)</span> 且 <span class="kw">Range(f⁻¹) = Domain(f)</span>；图像关于直线 <span class="kw">y = x</span> 对称；二次函数求反函数开根号时须由原定义域定 <strong>+ / −</strong>。
+        </div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="alg">
+      <div class="cq-head"><span class="q-tag">F01-02 · Ch 2</span><span class="badge-core">判别式与恒成立</span></div>
+      <div class="cq-en">What conditions guarantee that ax² + bx + c &gt; 0 for ALL real x?</div>
+      <div class="cq-cn">保证二次表达式 ax² + bx + c 对一切实数 x 恒大于 0 必须同时满足哪两个条件？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">
+          ① 开口向上：<span class="kw">a &gt; 0</span>；② 与 x 轴无交点：<span class="kw">b² − 4ac &lt; 0</span>。<br>
+          <strong>考场警报：</strong>只算 b² − 4ac &lt; 0 往往得出两段（如 p &lt; −2 或 p &gt; 2），忘了检验 a &gt; 0 会多出错误负区间！
+        </div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="alg">
+      <div class="cq-head"><span class="q-tag">F01-03 · Ch 3</span><span class="badge-core">余数与因式定理</span></div>
+      <div class="cq-en">State the Remainder Theorem for dividing polynomial f(x) by (ax − b) and how to prove a cubic has only 1 real root.</div>
+      <div class="cq-cn">多项式 f(x) 除以 (ax − b) 的余数是什么？如何证明三次方程仅有 1 个实根？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">
+          余数 = <span class="kw">f(b/a)</span>（特别地除以 x + a 余 f(−a)）。<br>
+          先由 <span class="kw">f(k) = 0</span> 找到一个线性因式分解成 <span class="kw">(x − k)(ax² + bx + c)</span>，再计算二次因式的 <span class="kw">b² − 4ac &lt; 0</span> 证明无其他实根！
+        </div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="alg">
+      <div class="cq-head"><span class="q-tag">F01-04 · Ch 4</span><span class="badge-core">绝对值方程与不等式</span></div>
+      <div class="cq-en">Best Paper 1 strategy for |ax + b| &lt; |cx + d| vs |ax + b| = cx + d?</div>
+      <div class="cq-cn">Paper 1 解双绝对值不等式 |ax+b| &lt; |cx+d| 与单绝对值方程 |ax+b| = cx+d 的各自铁律？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">
+          • <span class="kw">|A| &lt; |B|</span>：两边平方用平方差化成 <span class="kw">(A − B)(A + B) &lt; 0</span>，找两根画开口向上抛物线读区间。<br>
+          • <span class="kw">|A| = cx + d</span>：拆两枝解完后<strong>必须回代验右边 cx + d ≥ 0</strong>，负值增根舍去！
+        </div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="alg">
+      <div class="cq-head"><span class="q-tag">F01-05 · Ch 4/P1</span><span class="badge-core">根式与换元</span></div>
+      <div class="cq-en">Checklist for disguised quadratics (e.g. 2²ˣ − 5·2ˣ + 4 = 0) &amp; Paper 1 surds simplification.</div>
+      <div class="cq-cn">隐含二次换元方程（如 2²ˣ − 5·2ˣ + 4 = 0）与 Paper 1 根式化简必检步骤？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">
+          • 设 <span class="kw">u = aˣ</span>（须记 <span class="kw">u &gt; 0</span>，负根直接舍去！）或 <span class="kw">u = x<sup>1/3</sup></span>。<br>
+          • 根式化简：<span class="kw">√48 = 4√3</span>；分母含 <span class="math">p − √q</span> 必乘共轭 <span class="kw">p + √q</span> 有理化，禁止写小数。
+        </div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <!-- LIN 6-10 -->
+    <div class="concept-card" data-part="lin">
+      <div class="cq-head"><span class="q-tag">F01-06 · Ch 5</span><span class="badge-ext">对数律与换底公式</span></div>
+      <div class="cq-en">State the 3 Laws of Logarithms, the Change of Base formula, and two forbidden algebraic splits.</div>
+      <div class="cq-cn">默写对数三大运算律、换底公式以及“绝不能拆”的两类错误变形。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">
+          <span class="kw">logₐ(MN) = logₐM + logₐN</span>；<span class="kw">logₐ(M/N) = logₐM − logₐN</span>；<span class="kw">logₐ(Mᵏ) = k logₐM</span>。<br>
+          换底：<span class="kw">logₐ b = logc b / logc a</span>（推论 <span class="kw">logₐ b = 1 / logb a</span>）。<br>
+          🚫 严禁拆 <span class="math">logₐ(M + N)</span>，严禁把 <span class="math">logₐM / logₐN</span> 写成 <span class="math">logₐ(M − N)</span>！
+        </div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="lin">
+      <div class="cq-head"><span class="q-tag">F01-07 · Ch 5</span><span class="badge-ext">对数验根与指数互逆</span></div>
+      <div class="cq-en">Domain restrictions of y = logₐ x and key identities linking eˣ and ln x.</div>
+      <div class="cq-cn">对数 y = logₐ x 的双定义域限制是什么？eˣ 与 ln x 的秒杀消元恒等式？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">
+          真数 <span class="kw">x &gt; 0</span> 且底数 <span class="kw">a &gt; 0, a ≠ 1</span>（解方程必回代舍去不合条件根！）。<br>
+          互逆恒等式：<span class="kw">e<sup>ln A</sup> = A</span>（故 <span class="math">e<sup>2 ln 3</sup> = 9</span>）、<span class="kw">ln(eˣ) = x</span>、<span class="kw">ln 1 = 0</span>、<span class="kw">ln e = 1</span>。
+        </div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="lin">
+      <div class="cq-head"><span class="q-tag">F01-08 · Ch 6</span><span class="badge-ext">垂直与三点共线</span></div>
+      <div class="cq-en">How do you prove A, B, C are collinear for full marks, and how do you handle vertical/horizontal perpendiculars?</div>
+      <div class="cq-cn">证明三点 A, B, C 共线拿满分的必要句式？水平/铅垂线如何写垂线方程？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">
+          算出 <span class="kw">m_AB = m_BC</span> 后，<strong>必须补写“and they share a common point B”</strong> 才能拿结论 <span class="ms-mark">A1</span>！<br>
+          若已知线斜率为 0（<span class="math">y = c</span>），垂线直接为 <span class="kw">x = h</span>，勿强算 −1/0。一般垂直 <span class="kw">m₁ m₂ = −1</span>。
+        </div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="lin">
+      <div class="cq-head"><span class="q-tag">F01-09 · Ch 6</span><span class="badge-ext">鞋带面积公式</span></div>
+      <div class="cq-en">Write the Shoelace Formula for the area of a polygon with vertices (x₁,y₁), (x₂,y₂), ..., (xₙ,yₙ).</div>
+      <div class="cq-cn">写出已知多边形按序顶点坐标时的鞋带面积公式及两大操作要点。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">
+          <span class="kw">Area = ½ | (x₁y₂ + x₂y₃ + ··· + xₙy₁) − (y₁x₂ + y₂x₃ + ··· + yₙx₁) |</span>。<br>
+          要点：① 顶点必须按<strong>顺/逆时针环绕排序</strong>，不可交叉；② 末尾列必须写回起点 <span class="kw">(x₁, y₁)</span> 闭合且加绝对值与 <strong>½</strong>！
+        </div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="lin">
+      <div class="cq-head"><span class="q-tag">F01-10 · Ch 6</span><span class="badge-ext">Linear Law 线性化</span></div>
+      <div class="cq-en">How do you extract constants from a Linear Law graph of Y = mX + c when the horizontal axis doesn't start at 0?</div>
+      <div class="cq-cn">当 Linear Law 直线图的横轴起点不是 0 时，如何精准求出截距 c 与原方程参数？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">
+          ① 严禁直接把图最左端读数当截距 c！先用两明确格点算斜率 <span class="kw">m = (Y₂−Y₁)/(X₂−X₁)</span>；<br>
+          ② 用点斜式 <span class="kw">c = Y₁ − mX₁</span> 算出真正的纵截距 <span class="math">c</span>；<br>
+          ③ 对比原方程取对数/除 x 后的标准式（如 <span class="math">lg y = n lg x + lg a</span>），反求 <span class="kw">a = 10ᶜ</span>！
+        </div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <!-- CNT 11-15 -->
+    <div class="concept-card" data-part="cnt">
+      <div class="cq-head"><span class="q-tag">F01-11 · Ch 10</span><span class="badge-core">nPr vs nCr 与心算</span></div>
+      <div class="cq-en">Distinguish ⁿPᵣ from ⁿCᵣ and show the Paper 1 non-calculator shortcut for ⁹C₃ and ¹⁰C₈.</div>
+      <div class="cq-cn">如何区分 ⁿPᵣ 与 ⁿCᵣ？无计算器如何快速约分计算 ⁹C₃ 与 ¹⁰C₈？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">
+          • 有职务/排座位/组密码（顺序有关）用 <span class="kw">ⁿPᵣ</span>；抽委员会/选牌（顺序无关）用 <span class="kw">ⁿCᵣ</span>。<br>
+          • 手算对称性 <span class="kw">ⁿCᵣ = ⁿCₙ₋ᵣ</span>：<span class="math">⁹C₃ = (9×8×7)/(3×2×1) = 3×4×7 = <strong>84</strong></span>；<span class="math">¹⁰C₈ = ¹⁰C₂ = (10×9)/2 = <strong>45</strong></span>。
+        </div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="cnt">
+      <div class="cq-head"><span class="q-tag">F01-12 · Ch 10</span><span class="badge-core">捆绑、插空与含 0 数字</span></div>
+      <div class="cq-en">Summarise the exact procedures for "together", "separated", and "even numbers with digit 0".</div>
+      <div class="cq-cn">总结“相邻捆绑”、“不相邻插空”与“含 0 组成偶数”的标准化操作流程。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">
+          • <strong>捆绑：</strong>看成 1 团，<span class="kw">外排 × 团内排</span>；<br>
+          • <strong>插空：</strong>先排无关项（m!），再往 <span class="kw">m + 1</span> 个空位插 <span class="kw">ᵐ⁺¹Pₖ</span>；<br>
+          • <strong>含 0 偶数：</strong>必须拆两案：<span class="kw">末位 = 0</span>（无首位限制）+ <span class="kw">末位 ∈ {2,4,6,8}</span>（首位扣去 0 与末位）！
+        </div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="cnt">
+      <div class="cq-head"><span class="q-tag">F01-13 · Ch 10</span><span class="badge-core">至少/至多补集法</span></div>
+      <div class="cq-en">Why must "at least k" NOT be solved by picking k first and choosing the rest freely? Give the safe method.</div>
+      <div class="cq-cn">为什么“至少选 k 个”严禁“先选 k 个再从剩下任选”？写出正确防重漏法。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">
+          “先选 k 再任选”会导致同一种组合因选入顺序不同而<strong>重复计数</strong>！<br>
+          正解只有两种：<span class="kw">① 按严格人数互斥分类相加</span>；<span class="kw">② 补集正难则反：Total − 反面情况</span>（如“至少 1 男 1 女” = <span class="math">Total − 全男 − 全女</span>）。
+        </div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="cnt">
+      <div class="cq-head"><span class="q-tag">F01-14 · Ch 11</span><span class="badge-core">二项式通项与系数</span></div>
+      <div class="cq-en">Write the general term Tᵣ₊₁ of (a + b)ⁿ and the exam trap when asked for "coefficient of xᵏ".</div>
+      <div class="cq-cn">默写 (a+b)ⁿ 通项公式 Tᵣ₊₁，以及题目问“coefficient of xᵏ”时的常见陷阱。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">
+          <span class="kw">Tᵣ₊₁ = ⁿCᵣ · aⁿ⁻ʳ · bʳ</span>（务必把 b 的负号/分母一起包进括号求 r 次方！）。<br>
+          常数项令 x 总指数 = 0；问 <span class="kw">coefficient of xᵏ</span> <strong>只能填数字（不能写 xᵏ）</strong>；两括号乘积注意交叉相乘项之和！
+        </div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="cnt">
+      <div class="cq-head"><span class="q-tag">F01-15 · Ch 11</span><span class="badge-core">S∞ 收敛与 uₙ = Sₙ − Sₙ₋₁</span></div>
+      <div class="cq-en">Condition for S∞ of a GP to exist, and how to find uₙ when given an algebraic formula for Sₙ.</div>
+      <div class="cq-cn">等比级数 S∞ 存在的充要条件是什么？已知前 n 项和公式 Sₙ 如何求通项 uₙ？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">
+          • 收敛条件：<span class="kw">|r| &lt; 1</span>（即 <span class="kw">−1 &lt; r &lt; 1</span>，注意考卷公式表写了，但做题必须主动检验！）；<br>
+          • 通项转换：<span class="kw">u₁ = S₁</span>，且对 <span class="math">n ≥ 2</span> 有 <span class="kw">uₙ = Sₙ − Sₙ₋₁</span>（验证 <span class="math">n = 1</span> 是否兼容同一公式）。
+        </div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <!-- CAL 16-20 -->
+    <div class="concept-card" data-part="cal">
+      <div class="cq-head"><span class="q-tag">F01-16 · Ch 12</span><span class="badge-ext">基础求导三大法则</span></div>
+      <div class="cq-en">Write Chain, Product, and Quotient rules, plus the mandatory step before differentiating fractions with roots.</div>
+      <div class="cq-cn">默写链式、乘积与商法则；以及分母含根号单项式求导前的必做步骤。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">
+          链式：<span class="kw">(f(g(x)))′ = f′(g(x))·g′(x)</span>；乘积：<span class="kw">(uv)′ = uv′ + vu′</span>；商法则：<span class="kw">(u/v)′ = (vu′ − uv′)/v²</span>（分子先写 <span class="math">v·u′</span> 不可颠倒！）。<br>
+          单项式分母先拆成 <span class="kw">axⁿ</span> 加减再求导；带根号乘积化简提<strong>最小（最负）次数因式</strong>！
+        </div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="cal">
+      <div class="cq-head"><span class="q-tag">F01-17 · Ch 12</span><span class="badge-ext">切法线、驻点与增量</span></div>
+      <div class="cq-en">How do you classify stationary points using d²y/dx² (including when d²y/dx² = 0), and write the small increment formula?</div>
+      <div class="cq-cn">如何用二阶导判断驻点极值（含 d²y/dx² = 0 情况）？微小增量近似公式是什么？</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">
+          • 令 <span class="kw">dy/dx = 0</span> 求驻点：<span class="kw">d²y/dx² &gt; 0 ⇒ Minimum</span>；<span class="kw">d²y/dx² &lt; 0 ⇒ Maximum</span>；若 <strong>= 0</strong> 则检查驻点左右 <span class="kw">dy/dx 符号变化</span>（+→− 极大，−→+ 极小，不变为拐点）。<br>
+          • 微小增量：<span class="kw">δy ≈ (dy/dx) · δx</span>；法线斜率 <span class="kw">−1 / m_tangent</span>。
+        </div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="cal">
+      <div class="cq-head"><span class="q-tag">F01-18 · Ch 14</span><span class="badge-ext">指数函数 eˣ 求导</span></div>
+      <div class="cq-en">State d/dx(e<sup>ax+b</sup>) and d/dx(e<sup>f(x)</sup>), plus the key property used to solve stationary points.</div>
+      <div class="cq-cn">写出 e^(ax+b) 与 e^(f(x)) 的导数公式，以及解含 eˣ 驻点方程的核心性质。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">
+          <span class="kw">d/dx(e<sup>ax+b</sup>) = a e<sup>ax+b</sup></span>；<span class="kw">d/dx(e<sup>f(x)</sup>) = f′(x) e<sup>f(x)</sup></span>（绝不减指数！）。<br>
+          解驻点利用 <span class="kw">e<sup>f(x)</sup> &gt; 0 恒成立</span>（无零点），直接舍去 <span class="math">e<sup>f(x)</sup></span> 因子，仅解其余多项式或三角部分 = 0！
+        </div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="cal">
+      <div class="cq-head"><span class="q-tag">F01-19 · Ch 14</span><span class="badge-ext">对数“先拆后导”</span></div>
+      <div class="cq-en">State d/dx[ln(ax + b)] and the Pre-Expansion rule for differentiating ln[Aⁿ · B / √C].</div>
+      <div class="cq-cn">写出 ln(ax+b) 求导公式，以及遇到复杂分式/幂次对数时的黄金提速步骤。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">
+          <span class="kw">d/dx[ln(ax + b)] = <span class="frac"><span class="num">a</span><span class="den">ax + b</span></span></span>（注意 <span class="math">[ln(kx)]′ = 1/x</span> 常数 k 自动约掉！）。<br>
+          <strong>先拆后导：</strong>先用对数律改写为 <span class="kw">n ln A + ln B − ½ ln C</span> 再逐项求导，10 秒出分式，零计算错误！
+        </div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="cal">
+      <div class="cq-head"><span class="q-tag">F01-20 · Ch 14</span><span class="badge-ext">三角求导与变化率</span></div>
+      <div class="cq-en">State the derivatives of sin(ax+b), cos(ax+b), tan(ax+b), the angle unit rule, and the connected rates formula.</div>
+      <div class="cq-cn">默写 sin/cos/tan(ax+b) 三大导数、角度单位铁律以及关联变化率链式公式。</div>
+      <div class="cq-answer">
+        <div class="cq-answer-inner">
+          <span class="kw">(sin(ax+b))′ = a cos(ax+b)</span>；<br>
+          <span class="kw">(cos(ax+b))′ = −a sin(ax+b)</span>（负号极易漏！）；<br>
+          <span class="kw">(tan(ax+b))′ = a sec²(ax+b)</span>。<br>
+          <strong>铁律：</strong>角度一律用 <span class="kw">弧度 rad</span>；关联变化率 <span class="kw">dy/dt = (dy/dx) · (dx/dt)</span>。
+        </div>
+        <div class="cq-mask-hint">👆 点击翻开速记答案</div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+        <nav class="chapter-pager" aria-label="学科切换导航">
+          <div><span style="color:var(--text-faint);font-size:13px;">已是第一科</span></div>
+          <div><a class="pager-btn primary" href="index.html">🎯 返回 6 科期末冲刺总控台</a></div>
+          <div><a class="pager-btn" href="F02_Physics_0625_Final_Sprint.html">F02 · 物理 0625 Ch 1–4 期末精炼与实验冲刺 →</a></div>
+        </nav>
+      </div>
+    </main>
+  </div>
+
+  <button type="button" class="back-top-btn" id="backTopBtn" title="返回顶部">↑</button>
+
+  <script>
+(function () {
+  'use strict';
+
+  const THEME_KEY = 'igcse_final_sprint_theme';
+  const subCode = (document.body && document.body.getAttribute('data-chapter-code')) || 'HUB';
+  const STORAGE_PREFIX = 'igcse_final_sprint_' + subCode.toLowerCase() + '_';
+  const htmlEl = document.documentElement;
+  const bodyEl = document.body;
+
+  let currentViewMode = localStorage.getItem(STORAGE_PREFIX + 'viewMode') || 'all';
+  let activeConceptPart = 'all';
+  let quizMasked = localStorage.getItem(STORAGE_PREFIX + 'quizMasked') === '1';
+  let allMsExpanded = false;
+  let masteredIds = [];
+  let activeTimerId = null;
+  try {
+    masteredIds = JSON.parse(localStorage.getItem(STORAGE_PREFIX + 'mastered') || '[]');
+    if (!Array.isArray(masteredIds)) masteredIds = [];
+  } catch (e) {
+    masteredIds = [];
+  }
+
+  // ---------- 1. Theme ----------
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+  function applyTheme(theme) {
+    htmlEl.setAttribute('data-theme', theme);
+    if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem(THEME_KEY, theme);
+  }
+  applyTheme(localStorage.getItem(THEME_KEY) || 'light');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      applyTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  }
+
+  // ---------- 2. View Modes (All / Summary / Practice / Clinic / Cards) ----------
+  function applyViewMode(mode) {
+    currentViewMode = mode;
+    bodyEl.classList.remove('mode-summary', 'mode-practice', 'mode-clinic', 'mode-cards');
+    if (mode !== 'all') bodyEl.classList.add('mode-' + mode);
+    document.querySelectorAll('[data-view-mode]').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-view-mode') === mode);
+    });
+    localStorage.setItem(STORAGE_PREFIX + 'viewMode', mode);
+  }
+  document.querySelectorAll('[data-view-mode]').forEach(function (btn) {
+    btn.addEventListener('click', function () { applyViewMode(btn.getAttribute('data-view-mode')); });
+  });
+  applyViewMode(currentViewMode);
+
+  // ---------- 3. Sidebar ----------
+  const sidebar = document.getElementById('sidebar');
+  const menuToggle = document.getElementById('menuToggle');
+  if (menuToggle && sidebar) {
+    menuToggle.addEventListener('click', function () { sidebar.classList.toggle('open'); });
+    sidebar.querySelectorAll('.nav-link').forEach(function (lnk) {
+      lnk.addEventListener('click', function () {
+        if (window.innerWidth <= 980) sidebar.classList.remove('open');
+      });
+    });
+  }
+  document.querySelectorAll('.nav-unit-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const unit = btn.closest('.nav-unit');
+      if (unit) unit.classList.toggle('collapsed');
+    });
+  });
+
+  // ---------- 4. Mastery Progress ----------
+  const progressText = document.getElementById('progressText');
+  const progressFill = document.getElementById('progressFill');
+  const masterBtns = Array.from(document.querySelectorAll('.master-btn'));
+  const totalSections = masterBtns.length;
+  const validIds = new Set(masterBtns.map(function (b) { return b.getAttribute('data-section-id'); }));
+
+  function renderMastery() {
+    const doneList = masteredIds.filter(function (id) { return validIds.has(id); });
+    localStorage.setItem(STORAGE_PREFIX + 'total', String(totalSections));
+    if (progressText) progressText.textContent = doneList.length + '/' + totalSections;
+    if (progressFill && totalSections > 0) {
+      progressFill.style.width = Math.round((doneList.length / totalSections) * 100) + '%';
+    }
+    masterBtns.forEach(function (btn) {
+      const sid = btn.getAttribute('data-section-id');
+      const done = doneList.indexOf(sid) !== -1;
+      btn.classList.toggle('is-mastered', done);
+      btn.textContent = done ? '✓ 已掌握' : '○ 标记掌握';
+    });
+    document.querySelectorAll('.nav-link').forEach(function (lnk) {
+      const id = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('mastered', doneList.indexOf(id) !== -1);
+    });
+  }
+  masterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const sid = btn.getAttribute('data-section-id');
+      const idx = masteredIds.indexOf(sid);
+      if (idx === -1) masteredIds.push(sid);
+      else masteredIds.splice(idx, 1);
+      localStorage.setItem(STORAGE_PREFIX + 'mastered', JSON.stringify(masteredIds));
+      renderMastery();
+    });
+  });
+  if (totalSections > 0) renderMastery();
+
+  // ---------- 5. Toggle Details & Print ----------
+  const toggleAllMs = document.getElementById('toggleAllMs');
+  if (toggleAllMs) {
+    toggleAllMs.addEventListener('click', function () {
+      allMsExpanded = !allMsExpanded;
+      document.querySelectorAll('details.ms-details').forEach(function (det) { det.open = allMsExpanded; });
+      const lbl = toggleAllMs.querySelector('.btn-label');
+      if (lbl) lbl.textContent = allMsExpanded ? '收起解析' : '展开解析';
+      toggleAllMs.classList.toggle('active', allMsExpanded);
+    });
+  }
+  const printBtn = document.getElementById('printBtn');
+  if (printBtn) printBtn.addEventListener('click', function () { window.print(); });
+
+  // ---------- 6. Search ----------
+  const searchInput = document.getElementById('searchInput');
+  const searchClear = document.getElementById('searchClear');
+  const searchBar = document.getElementById('searchBar');
+  const searchSummary = document.getElementById('searchSummary');
+  const searchResetBtn = document.getElementById('searchResetBtn');
+  const emptySearchNotice = document.getElementById('emptySearchNotice');
+
+  function runSearch() {
+    if (!searchInput) return;
+    const raw = searchInput.value.trim().toLowerCase();
+    if (searchClear) searchClear.style.display = raw ? 'block' : 'none';
+    const sections = Array.from(document.querySelectorAll('.topic-section'));
+    if (!raw) {
+      sections.forEach(function (s) { s.classList.remove('search-dim'); });
+      if (searchBar) searchBar.classList.remove('visible');
+      if (emptySearchNotice) emptySearchNotice.style.display = 'none';
+      return;
+    }
+    let hits = 0;
+    sections.forEach(function (sec) {
+      const ok = sec.textContent.toLowerCase().indexOf(raw) !== -1;
+      sec.classList.toggle('search-dim', !ok);
+      if (ok) hits++;
+    });
+    if (searchBar) searchBar.classList.add('visible');
+    if (searchSummary) searchSummary.textContent = '关键词 “' + searchInput.value.trim() + '” 匹配 ' + hits + ' 个板块';
+    if (emptySearchNotice) emptySearchNotice.style.display = hits === 0 ? 'block' : 'none';
+  }
+  if (searchInput) searchInput.addEventListener('input', runSearch);
+  function resetSearch() { if (searchInput) searchInput.value = ''; runSearch(); }
+  if (searchClear) searchClear.addEventListener('click', resetSearch);
+  if (searchResetBtn) searchResetBtn.addEventListener('click', resetSearch);
+
+  // ---------- 7. Interactive MCQ ----------
+  document.querySelectorAll('.exam-q[data-mcq-answer]').forEach(function (qBox) {
+    const ans = qBox.getAttribute('data-mcq-answer');
+    const fb = qBox.querySelector('.mcq-feedback');
+    const opts = qBox.querySelectorAll('.mcq-opt');
+    opts.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const chosen = btn.getAttribute('data-opt');
+        opts.forEach(function (o) { o.classList.remove('correct', 'wrong'); });
+        if (chosen === ans) {
+          btn.classList.add('correct');
+          if (fb) { fb.textContent = fb.getAttribute('data-ok') || '✅ 回答正确！'; fb.className = 'mcq-feedback visible ok'; }
+        } else {
+          btn.classList.add('wrong');
+          opts.forEach(function (o) { if (o.getAttribute('data-opt') === ans) o.classList.add('correct'); });
+          if (fb) { fb.textContent = fb.getAttribute('data-err') || '❌ 未选对，请核对下方 Mark Scheme 解析。'; fb.className = 'mcq-feedback visible err'; }
+        }
+      });
+    });
+  });
+
+  // ---------- 8. Flashcards ----------
+  const conceptCountPill = document.getElementById('conceptCountPill');
+  const conceptQuizToggle = document.getElementById('conceptQuizToggle');
+
+  function filterConcepts() {
+    const cards = Array.from(document.querySelectorAll('#conceptGrid .concept-card'));
+    if (!cards.length) return;
+    let visible = 0;
+    cards.forEach(function (card) {
+      const part = card.getAttribute('data-part');
+      const show = activeConceptPart === 'all' || part === activeConceptPart;
+      card.classList.toggle('concept-hidden', !show);
+      if (show) visible++;
+    });
+    if (conceptCountPill) conceptCountPill.textContent = '显示 ' + visible + ' / ' + cards.length + ' 题';
+  }
+  document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      activeConceptPart = btn.getAttribute('data-concept-part');
+      document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      filterConcepts();
+    });
+  });
+  function applyQuizMask(masked) {
+    quizMasked = masked;
+    document.querySelectorAll('#conceptGrid .concept-card').forEach(function (c) { c.classList.toggle('masked', masked); });
+    if (conceptQuizToggle) {
+      conceptQuizToggle.textContent = masked ? '👁️ 显示全部答案' : '🙈 开启遮罩自测';
+      conceptQuizToggle.classList.toggle('active', masked);
+    }
+    localStorage.setItem(STORAGE_PREFIX + 'quizMasked', masked ? '1' : '0');
+  }
+  if (conceptQuizToggle) {
+    conceptQuizToggle.addEventListener('click', function () { applyQuizMask(!quizMasked); });
+  }
+  document.querySelectorAll('#conceptGrid .cq-answer').forEach(function (box) {
+    box.addEventListener('click', function () {
+      const card = box.closest('.concept-card');
+      if (card && card.classList.contains('masked')) card.classList.remove('masked');
+    });
+  });
+
+  function countWords(str) {
+    const cleaned = (str || '').trim();
+    return cleaned ? cleaned.split(/\s+/).filter(Boolean).length : 0;
+  }
+  function countChiChars(str) {
+    return (str || '').replace(/[\s\u3000]/g, '').length;
+  }
+  function setupTimer(btnStart, btnReset, clkEl, totalMinutes) {
+    let secLeft = totalMinutes * 60;
+    const fmt = function (s) {
+      const m = Math.floor(s / 60), r = s % 60;
+      return String(m).padStart(2, '0') + ':' + String(r).padStart(2, '0');
+    };
+    if (clkEl) clkEl.textContent = fmt(secLeft);
+    if (btnStart) {
+      btnStart.addEventListener('click', function () {
+        if (activeTimerId) {
+          clearInterval(activeTimerId);
+          activeTimerId = null;
+          btnStart.textContent = '▶ 继续计时';
+        } else {
+          btnStart.textContent = '⏸ 暂停计时';
+          activeTimerId = setInterval(function () {
+            if (secLeft > 0) secLeft--;
+            if (clkEl) clkEl.textContent = fmt(secLeft);
+            if (secLeft === 0) {
+              clearInterval(activeTimerId);
+              activeTimerId = null;
+              btnStart.textContent = '⏰ 时间到';
+            }
+          }, 1000);
+        }
+      });
+    }
+    if (btnReset) {
+      btnReset.addEventListener('click', function () {
+        if (activeTimerId) { clearInterval(activeTimerId); activeTimerId = null; }
+        secLeft = totalMinutes * 60;
+        if (clkEl) clkEl.textContent = fmt(secLeft);
+        if (btnStart) btnStart.textContent = '⏳ 开始计时';
+      });
+    }
+  }
+
+  // ---------- 9. Subject Interactive Labs (f01 - f06) ----------
+  function mountSprintLab(el) {
+    const t = el.getAttribute('data-lab-type');
+    if (!t) return;
+    const bindInputs = function (fn) {
+      el.querySelectorAll('input,select,textarea').forEach(function (inp) {
+        inp.addEventListener('input', fn);
+        inp.addEventListener('change', fn);
+      });
+      fn();
+    };
+
+    if (t === 'f01') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">📐 F01 交互冲刺台 · 9 章必背公式/Paper 1 易错检索 + 80 分模考估分器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>切换范围板块：<select id="f1Mod">' +
+        '<option value="ch1_2">Ch1–2 函数/反函数/二次最值与判别式</option>' +
+        '<option value="ch3_4">Ch3–4 多项式因式余数与绝对值不等式</option>' +
+        '<option value="ch5_6">Ch5–6 指数对数换底与直线/Linear Law</option>' +
+        '<option value="ch10_11">Ch10–11 排列组合/二项展开/AP-GP-S∞</option>' +
+        '<option value="ch12_14">Ch12+Ch14 基础求导法则 + 指数对数三角导数</option></select></label>' +
+        '<label>Ch1–6 (/20)：<input type="number" id="f1S1" value="17" min="0" max="20"></label>' +
+        '<label>Ch10 计数 (/20)：<input type="number" id="f1S2" value="16" min="0" max="20"></label>' +
+        '<label>Ch11 级数 (/20)：<input type="number" id="f1S3" value="17" min="0" max="20"></label>' +
+        '<label>Ch14 求导 (/20)：<input type="number" id="f1S4" value="16" min="0" max="20"></label>' +
+        '<button type="button" class="tab-btn active" id="f1Start">⏳ 120min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f1Reset">重置</button>' +
+        '<span class="timer-big" id="f1Clk">120:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f1Out"></div><div class="readout-pill" id="f1ScoreOut"></div></div></div>';
+      const notes = {
+        ch1_2: '<strong>Ch1–2 必检红线</strong>：① fg(x) 先代入里层 g(x) 再喂给 f；反函数成立条件是 <strong>1-to-1</strong>，且 Domain(f⁻¹)=Range(f)；② 判别式 b²−4ac > 0 相交两点，≤ 0 恒在 x 轴一侧时还需检查首项系数 a 符号；③ 二次不等式<strong>必须先因式分解找临界根画草图</strong>，严禁直接拆解两边开方！',
+        ch3_4: '<strong>Ch3–4 必检红线</strong>：① x−a 是因式 ⇔ f(a)=0；余数定理求得是 f(−b/a)；② 三次方程解先试 ±1, ±2 找一实根再长除/综合除法；③ |ax+b| < |cx+d| 在 P1 无计算器优先<strong>两边平方化二次不等式</strong>或画出 V 字折线求交点！',
+        ch5_6: '<strong>Ch5–6 必检红线</strong>：① logₐ(M)+logₐ(N)=logₐ(MN)，但 logₐ(M+N) 不能拆！② 解完对数方程<strong>必须回代验真数 > 0 与底数 > 0 且 ≠ 1</strong>；③ Linear Law 化成 Y = mX + c：先辨识纵轴 Y 与横轴 X，再用直线斜率 m 与截距 c 反推指数/幂函数参数！',
+        ch10_11: '<strong>Ch10–11 必检红线</strong>：① 排列看顺序 ⁿPᵣ，分组抽选不看顺序 ⁿCᵣ；“不相邻”用插空法，“至少”用总−反面；② 二项式 (a+b)ⁿ 通项 Tᵣ₊₁ = ⁿCᵣ aⁿ⁻ʳ bʳ（记住 r 比第几项小 1！）；③ S∞ = a/(1−r) <strong>必须验证 |r| < 1</strong>，且公式表虽给 Sₙ/S∞ 仍建议熟记秒杀！',
+        ch12_14: '<strong>Ch12+Ch14 求导链</strong>：① 先熟用基础求导 d/dx(xⁿ)=nxⁿ⁻¹、乘积 uv′+vu′、商法则 (vu′−uv′)/v² 与链式复合；② 再衔接 Ch14：d/dx(eᵃˣ⁺ᵇ)=aeᵃˣ⁺ᵇ，d/dx(ln(ax+b))=a/(ax+b)，d/dx(sin ax)=a cos ax，d/dx(cos ax)=−a sin ax（负号极易丢！），d/dx(tan ax)=a sec²ax（<strong>求导一律用弧度 rad</strong>）！'
+      };
+      bindInputs(function () {
+        el.querySelector('#f1Out').innerHTML = notes[el.querySelector('#f1Mod').value];
+        const v1 = Math.max(0, Math.min(20, Number(el.querySelector('#f1S1').value) || 0));
+        const v2 = Math.max(0, Math.min(20, Number(el.querySelector('#f1S2').value) || 0));
+        const v3 = Math.max(0, Math.min(20, Number(el.querySelector('#f1S3').value) || 0));
+        const v4 = Math.max(0, Math.min(20, Number(el.querySelector('#f1S4').value) || 0));
+        const tot = v1 + v2 + v3 + v4;
+        const pct = Math.round((tot / 80) * 100);
+        const band = pct >= 85 ? 'Grade A* 冲刺区间' : (pct >= 72 ? 'Grade A 稳健线' : (pct >= 58 ? 'Grade B/C 需优先回刷错题模块' : '基础漏洞明显，请先回到对应章补推导'));
+        el.querySelector('#f1ScoreOut').innerHTML = '<strong>期末模拟估分：' + tot + ' / 80（' + pct + '%）</strong> ｜ 预测表现：' + band + '。';
+      });
+      setupTimer(el.querySelector('#f1Start'), el.querySelector('#f1Reset'), el.querySelector('#f1Clk'), 120);
+    } else if (t === 'f02') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">⚙️ F02 物理 Ch 1–4 交互验算与期末估分计时台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>验算模型：<select id="f2Calc">' +
+        '<option value="density">Ch1 密度计算 ρ = m / V</option>' +
+        '<option value="accel">Ch2 匀变速加速度 a = (v − u) / t</option>' +
+        '<option value="impulse">Ch3 冲量与动量变化 FΔt = mΔv</option>' +
+        '<option value="moment">Ch4 力矩 M = F × d⊥</option></select></label>' +
+        '<label><span id="f2ALbl">质量 m (g/kg)</span>：<input type="number" id="f2A" value="250" step="any"></label>' +
+        '<label><span id="f2BLbl">体积 V (cm³/m³)</span>：<input type="number" id="f2B" value="50" step="any"></label>' +
+        '<label>Paper2 (/15)：<input type="number" id="f2_1" value="13" min="0" max="15"></label>' +
+        '<label>Paper4 (/35)：<input type="number" id="f2_2" value="30" min="0" max="35"></label>' +
+        '<label>Paper6 (/15)：<input type="number" id="f2_3" value="13" min="0" max="15"></label>' +
+        '<button type="button" class="tab-btn active" id="f2Start">⏳ 75min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f2Reset">重置</button>' +
+        '<span class="timer-big" id="f2Clk">75:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f2Out"></div><div class="readout-pill" id="f2ScoreOut"></div></div></div>';
+      const sel = el.querySelector('#f2Calc');
+      const aLbl = el.querySelector('#f2ALbl'), bLbl = el.querySelector('#f2BLbl');
+      const syncLabels = function () {
+        const m = sel.value;
+        if (m === 'density') { aLbl.textContent = '质量 m (g)'; bLbl.textContent = '体积 V (cm³)'; }
+        else if (m === 'accel') { aLbl.textContent = '速度增量 Δv (m/s)'; bLbl.textContent = '时间 t (s)'; }
+        else if (m === 'impulse') { aLbl.textContent = '合力 F (N)'; bLbl.textContent = '作用时间 Δt (s)'; }
+        else { aLbl.textContent = '力 F (N)'; bLbl.textContent = '垂直力臂 d⊥ (m)'; }
+      };
+      sel.addEventListener('change', syncLabels);
+      syncLabels();
+      bindInputs(function () {
+        const m = sel.value, a = Number(el.querySelector('#f2A').value) || 0, b = Number(el.querySelector('#f2B').value) || 0;
+        let resText = '';
+        if (m === 'density') {
+          const rho = b !== 0 ? (a / b) : 0;
+          resText = '<strong>ρ = m / V = ' + (b !== 0 ? rho.toFixed(3) : '∞（分母勿为0）') + ' g/cm³</strong>（×1000 = ' + (b !== 0 ? (rho * 1000).toFixed(1) : '—') + ' kg/m³）。<br><strong>避坑</strong>：与水 ρ=1.0 g/cm³ 比较，小于则漂浮，大于则下沉；结果保留 2–3 位有效数字！';
+        } else if (m === 'accel') {
+          const acc = b !== 0 ? (a / b) : 0;
+          resText = '<strong>a = Δv / t = ' + (b !== 0 ? acc.toFixed(3) : '∞') + ' m/s²</strong>。<br><strong>避坑</strong>：v-t 图斜率即加速度（斜率恒定为匀加速）；v-t 曲线下方面积即路程/位移！';
+        } else if (m === 'impulse') {
+          const imp = a * b;
+          resText = '<strong>Impulse = FΔt = ' + imp.toFixed(3) + ' N·s（或 kg·m/s）</strong>。<br><strong>Mark Scheme 踩分词</strong>：安全气囊/缓冲垫降低 F 的原因是 <code>increases time of collision (Δt)</code>，对同一 <code>Δp</code> 则 <code>F = Δp / Δt</code> 减小！';
+        } else {
+          const mom = a * b;
+          resText = '<strong>Moment = F × d⊥ = ' + mom.toFixed(3) + ' N·m</strong>。<br><strong>平衡双条件</strong>：① 合外力为 0；② 顺时针总力矩 = 逆时针总力矩（<code>ΣM_cw = ΣM_acw</code>），d⊥ 必须垂直于力的作用线！';
+        }
+        el.querySelector('#f2Out').innerHTML = resText;
+        const p2 = Math.max(0, Math.min(15, Number(el.querySelector('#f2_1').value) || 0));
+        const p4 = Math.max(0, Math.min(35, Number(el.querySelector('#f2_2').value) || 0));
+        const p6 = Math.max(0, Math.min(15, Number(el.querySelector('#f2_3').value) || 0));
+        const tot = p2 + p4 + p6, pct = Math.round((tot / 65) * 100);
+        el.querySelector('#f2ScoreOut').innerHTML = '<strong>Ch 1–4 模拟卷总分：' + tot + ' / 65（' + pct + '%）</strong> ｜ ' + (pct >= 80 ? '达到 A* 实力！注意保持 Paper 4 作图与 ATP 7 分设计完整性' : '建议先复盘失分集中模块（MCQ/结构简答/ATP 实验）');
+      });
+      setupTimer(el.querySelector('#f2Start'), el.querySelector('#f2Reset'), el.querySelector('#f2Clk'), 75);
+    } else if (t === 'f03') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">⚗️ F03 化学 Ch 1, 2, 4, 6 核心交互台 · 6 大电解产物与配平检查 + 65 分估分</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>选择 Ch6 电解/电池体系：<select id="f3Cell">' +
+        '<option value="pbbr2">1. 熔融溴化铅 Molten PbBr₂(l) · 碳电极</option>' +
+        '<option value="nacl_conc">2. 浓氯化钠溶液 Conc. NaCl(aq) · 碳电极</option>' +
+        '<option value="h2so4_dil">3. 稀硫酸 Dilute H₂SO₄(aq) · 碳/铂电极</option>' +
+        '<option value="cuso4_inert">4. 硫酸铜溶液 CuSO₄(aq) · 惰性碳/铂电极</option>' +
+        '<option value="cuso4_cu">5. 硫酸铜溶液 CuSO₄(aq) · 活性铜电极</option>' +
+        '<option value="fuel_cell">6. 氢氧燃料电池 H₂–O₂ Fuel Cell</option></select></label>' +
+        '<label>Paper2 (/15)：<input type="number" id="f3_1" value="13" min="0" max="15"></label>' +
+        '<label>Paper4 (/35)：<input type="number" id="f3_2" value="29" min="0" max="35"></label>' +
+        '<label>Paper6 (/15)：<input type="number" id="f3_3" value="13" min="0" max="15"></label>' +
+        '<button type="button" class="tab-btn active" id="f3Start">⏳ 75min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f3Reset">重置</button>' +
+        '<span class="timer-big" id="f3Clk">75:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f3Out"></div><div class="readout-pill" id="f3ScoreOut"></div></div></div>';
+      const cells = {
+        pbbr2: '<strong>熔融 PbBr₂(l)（必须加热至熔融才存在自由移动离子）</strong><br>• 阴极 (−) 还原：<code>Pb²⁺(l) + 2e⁻ → Pb(l)</code>（现象：银白色熔融金属珠）<br>• 阳极 (+) 氧化：<code>2Br⁻(l) → Br₂(g) + 2e⁻</code>（现象：红棕色气体 <strong>red-brown vapour</strong>）<br>⚠️ 高频坑：若题目写成室温固态 PbBr₂(s)，则完全不导电！',
+        nacl_conc: '<strong>浓 NaCl(aq) 氯碱电解（碳电极）</strong><br>• 阴极 (−)：H⁺ 排在 Na⁺ 后先得电子：<code>2H⁺(aq) + 2e⁻ → H₂(g)</code>（无色气泡，燃爆声）<br>• 阳极 (+)：高浓度 Cl⁻ 优先放电：<code>2Cl⁻(aq) → Cl₂(g) + 2e⁻</code>（黄绿色刺激气体，使湿润蓝色石蕊试纸先变红后褪色）<br>• 溶液变化：留下 Na⁺ 与 OH⁻，pH 升高呈碱性 NaOH(aq)！',
+        h2so4_dil: '<strong>稀 H₂SO₄(aq)（实质即电解水！）</strong><br>• 阴极 (−)：<code>2H⁺ + 2e⁻ → H₂(g)</code>（气体体积比 2 份）<br>• 阳极 (+)：SO₄²⁻ 从不放电，OH⁻ 氧化：<code>4OH⁻ → O₂(g) + 2H₂O + 4e⁻</code>（体积比 1 份，复燃带火星木条）<br>⚠️ 记住 H₂ : O₂ 体积比 = <strong>2 : 1</strong>！',
+        cuso4_inert: '<strong>CuSO₄(aq)（惰性石墨/铂电极）</strong><br>• 阴极 (−)：Cu²⁺ 较 H⁺ 更不活泼先还原：<code>Cu²⁺(aq) + 2e⁻ → Cu(s)</code>（红棕色固体覆盖电极）<br>• 阳极 (+)：<code>4OH⁻ → O₂(g) + 2H₂O + 4e⁻</code>（无色气泡）<br>• 溶液变化：Cu²⁺ 消耗且留下 H⁺+SO₄²⁻，<strong>蓝色变浅直至无色，pH 下降</strong>！',
+        cuso4_cu: '<strong>CuSO₄(aq)（活性铜电极 — 粗铜精炼/电镀铜）</strong><br>• 阴极 (−)：<code>Cu²⁺(aq) + 2e⁻ → Cu(s)</code>（阴极增重，纯铜析出）<br>• 阳极 (+)：铜阳极自身氧化溶解：<code>Cu(s) → Cu²⁺(aq) + 2e⁻</code>（阳极减重消耗）<br>• 溶液变化：Cu²⁺ 浓度不变，<strong>溶液始终保持蓝色且 pH 不变</strong>！',
+        fuel_cell: '<strong>氢氧燃料电池 H₂–O₂ Fuel Cell（2023+ 大纲必考！）</strong><br>• 总反应：<code>2H₂(g) + O₂(g) → 2H₂O(l)</code>（唯一产物只有水，零温室气体排放）<br>• 核心优势 vs 汽油内燃机：能量转换效率更高、污染小、无运动磨损；缺点：氢气储存/运输需高压低温且基础设施少（大多数氢气仍来自化石燃料裂解）。'
+      };
+      bindInputs(function () {
+        el.querySelector('#f3Out').innerHTML = cells[el.querySelector('#f3Cell').value];
+        const p2 = Math.max(0, Math.min(15, Number(el.querySelector('#f3_1').value) || 0));
+        const p4 = Math.max(0, Math.min(35, Number(el.querySelector('#f3_2').value) || 0));
+        const p6 = Math.max(0, Math.min(15, Number(el.querySelector('#f3_3').value) || 0));
+        const tot = p2 + p4 + p6, pct = Math.round((tot / 65) * 100);
+        el.querySelector('#f3ScoreOut').innerHTML = '<strong>Ch 1,2,4,6 模拟估分：' + tot + ' / 65（' + pct + '%）</strong> ｜ 提示：核对电化学半方程式电荷守恒与状态符号 (s)(l)(g)(aq)！';
+      });
+      setupTimer(el.querySelector('#f3Start'), el.querySelector('#f3Reset'), el.querySelector('#f3Clk'), 75);
+    } else if (t === 'f04') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🎧 F04 ESL 0510 写作词数红线仪 (120–160 词) + 听读写 100 分估分计时台</div></div>' +
+        '<div class="lab-panel write-box"><div class="lab-controls">' +
+        '<label>写作文体：<select id="f4Fmt">' +
+        '<option value="email">Ex 5 Informal Email（15m · 亲切自然）</option>' +
+        '<option value="article">Ex 6 Article（15m · 引人入胜）</option>' +
+        '<option value="review">Ex 6 Review（15m · 观点+推荐）</option>' +
+        '<option value="report">Ex 6 Formal Report（15m · 客观分段）</option></select></label>' +
+        '<span class="wc-meter wc-warn" id="f4Wc">当前词数：0 词 (目标 120–160 词)</span>' +
+        '</div><textarea class="write-textarea" id="f4Txt" placeholder="在此输入 Ex 5 / Ex 6 练习片段或完整作文，系统实时监测 120–160 词黄金靶区与文体 Checklist..."></textarea>' +
+        '<div class="lab-controls">' +
+        '<label>阅读 Ex1-4 (/30)：<input type="number" id="f4_1" value="26" min="0" max="30"></label>' +
+        '<label>写作 Ex5-6 (/30)：<input type="number" id="f4_2" value="25" min="0" max="30"></label>' +
+        '<label>听力 P2 (/40)：<input type="number" id="f4_3" value="35" min="0" max="40"></label>' +
+        '<button type="button" class="tab-btn active" id="f4Start">⏳ 120min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f4Reset">重置</button>' +
+        '<span class="timer-big" id="f4Clk">120:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f4Out"></div><div class="readout-pill" id="f4ScoreOut"></div></div></div>';
+      const fmtGuide = {
+        email: '<strong>Ex 5 Email checklist</strong>：① 3 个提示要点全部落地且各加 1–2 句细节扩展；② 用缩写（I\'m / can\'t）与自然过渡（By the way / Guessing what）；③ 禁用过分正式公文腔！',
+        article: '<strong>Ex 6 Article checklist</strong>：① 亮眼标题 + 设问 Hook 开篇；② 半正式/活泼但有逻辑的探讨；③ 结尾向读者发出行动号召或开放思考。',
+        review: '<strong>Ex 6 Review checklist</strong>：① 背景简述 + 平衡评价优缺点（绝不剧透核心结局！）；② 明确给出推荐人群与星级判断。',
+        report: '<strong>Ex 6 Report checklist</strong>：① 必备 To/From/Date/Subject 或清晰小标题（Introduction / Findings / Recommendations）；② 全篇禁缩写、少用第一人称情感词，多用被动语态与数据汇报口吻！'
+      };
+      const ta = el.querySelector('#f4Txt'), wc = el.querySelector('#f4Wc');
+      bindInputs(function () {
+        const w = countWords(ta.value);
+        wc.textContent = '当前词数：' + w + ' 词 (目标 120–160 词)';
+        wc.className = 'wc-meter ' + (w === 0 ? 'wc-warn' : (w >= 120 && w <= 160 ? 'wc-ok' : (w < 90 || w > 190 ? 'wc-err' : 'wc-warn')));
+        el.querySelector('#f4Out').innerHTML = fmtGuide[el.querySelector('#f4Fmt').value] + '<br><strong>字数反馈：</strong>' + (w === 0 ? '请在上方练习英文写作段落。' : (w < 120 ? '字数偏少，检查是否缺少扩展细节导致 Content 拿不满！' : (w > 160 ? '超出建议上限，注意精简避免冗长跑题或来不及检查语法！' : '词数精准落在 120–160 黄金区间！')));
+        const r = Math.max(0, Math.min(30, Number(el.querySelector('#f4_1').value) || 0));
+        const wr = Math.max(0, Math.min(30, Number(el.querySelector('#f4_2').value) || 0));
+        const li = Math.max(0, Math.min(40, Number(el.querySelector('#f4_3').value) || 0));
+        el.querySelector('#f4ScoreOut').innerHTML = '<strong>听读写三线总分：' + (r + wr + li) + ' / 100</strong> ｜ Reading ' + r + '/30 · Writing ' + wr + '/30 · Listening ' + li + '/40。';
+      });
+      setupTimer(el.querySelector('#f4Start'), el.querySelector('#f4Reset'), el.querySelector('#f4Clk'), 120);
+    } else if (t === 'f05') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🖋️ F05 语文 0509 双作文实测汉字计 (400–600 字) + 期末卷估分台</div></div>' +
+        '<div class="lab-panel write-box"><div class="lab-controls">' +
+        '<label>作文体裁（双 2 选 1）：<select id="f5Type">' +
+        '<option value="arg">Sec 1 议论文（鲜明立论 + 让步驳斥）</option>' +
+        '<option value="dis">Sec 1 讨论文（双面均衡辩证探讨）</option>' +
+        '<option value="desc">Sec 2 描写文（五感微雕定格画面）</option>' +
+        '<option value="narr">Sec 2 记叙文（10 秒高潮+物象回环）</option></select></label>' +
+        '<span class="wc-meter wc-warn" id="f5Wc">当前有效汉字：0 字 (目标 400–600 字)</span>' +
+        '</div><textarea class="write-textarea" id="f5Txt" placeholder="输入作文片段或成稿，实时检测 400–600 汉字区与体裁避雷提示..."></textarea>' +
+        '<div class="lab-controls">' +
+        '<label>现代文+9分赏析 (/25)：<input type="number" id="f5_1" value="21" min="0" max="25"></label>' +
+        '<label>作文 1 (/25)：<input type="number" id="f5_2" value="21" min="0" max="25"></label>' +
+        '<label>作文 2 (/25)：<input type="number" id="f5_3" value="21" min="0" max="25"></label>' +
+        '<button type="button" class="tab-btn active" id="f5Start">⏳ 120min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f5Reset">重置</button>' +
+        '<span class="timer-big" id="f5Clk">120:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f5Out"></div><div class="readout-pill" id="f5ScoreOut"></div></div></div>';
+      const guides = {
+        arg: '<strong>议论文红线</strong>：开头亮明单边立场；至少 2 个深剖分论点（切忌只堆事例不议理）；必写 1 段“诚然……然而……”让步驳斥；避免写着写着变成两边都支持的讨论文！',
+        dis: '<strong>讨论文红线</strong>：正反双面篇幅大致平衡，用语保持客观冷静（如“支持者认为……”“然而也有观察指出……”），结尾做辩证权衡而不强行喊口号！',
+        desc: '<strong>描写文红线</strong>：严禁流水账叙事！以空间或时间顺序移动镜头，调用视觉光影、听觉质感、嗅觉与触感温度刻画氛围与人物微神态。',
+        narr: '<strong>记叙文红线</strong>：聚焦单个高张力小事件，30% 篇幅精雕“高潮 10 秒慢动作与心理微变化”，用核心物象贯穿首尾回环收束！'
+      };
+      const ta = el.querySelector('#f5Txt'), wc = el.querySelector('#f5Wc');
+      bindInputs(function () {
+        const n = countChiChars(ta.value);
+        wc.textContent = '当前有效汉字：' + n + ' 字 (目标 400–600 字)';
+        wc.className = 'wc-meter ' + (n === 0 ? 'wc-warn' : (n >= 400 && n <= 600 ? 'wc-ok' : (n < 350 || n > 660 ? 'wc-err' : 'wc-warn')));
+        el.querySelector('#f5Out').innerHTML = guides[el.querySelector('#f5Type').value] + '<br><strong>字数反馈：</strong>' + (n === 0 ? '请贴入或试写现代文/作文段落（400–600 字最稳妥落在 460–560 字）。' : (n < 400 ? '偏短，低于 400 字内容结构分 (C&S) 易被压至中档！' : (n > 600 ? '略超 600 字建议红线，请压缩冗余铺垫防草率结尾或错字增多。' : '有效字数正处于 400–600 黄金得分带！')));
+        const s1 = Math.max(0, Math.min(25, Number(el.querySelector('#f5_1').value) || 0));
+        const s2 = Math.max(0, Math.min(25, Number(el.querySelector('#f5_2').value) || 0));
+        const s3 = Math.max(0, Math.min(25, Number(el.querySelector('#f5_3').value) || 0));
+        const tot = s1 + s2 + s3;
+        el.querySelector('#f5ScoreOut').innerHTML = '<strong>阅读+双作文模考估分：' + tot + ' / 75（' + Math.round((tot / 75) * 100) + '%）</strong> ｜ 阅读赏析 ' + s1 + '/25 · 作文1 ' + s2 + '/25 · 作文2 ' + s3 + '/25。';
+      });
+      setupTimer(el.querySelector('#f5Start'), el.querySelector('#f5Reset'), el.querySelector('#f5Clk'), 120);
+    } else if (t === 'f06') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🌍 F06 GP 0457 Component 1 (Q1–Q4) 答题骨架器与 70 分/85min 模考台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>切换题型骨架：<select id="f6Q">' +
+        '<option value="q1">Q1 (约14分) · 概念辨析 (Fact/Opinion/Value/Bias) + 趋势提炼</option>' +
+        '<option value="q2a">Q2A (8分) · RAVEN 来源可信度与权威/目的评估</option>' +
+        '<option value="q2b">Q2B (8分) · 如何设计研究检验某主张 (4大核心要素)</option>' +
+        '<option value="q3">Q3 (16分) · Level 4 双论证正面交锋六维对比框架</option>' +
+        '<option value="q4">Q4 (24分) · 政策决策大作文五维权衡与四段结构</option></select></label>' +
+        '<label>Q1 (/14)：<input type="number" id="f6_1" value="12" min="0" max="14"></label>' +
+        '<label>Q2 (/16)：<input type="number" id="f6_2" value="13" min="0" max="16"></label>' +
+        '<label>Q3 (/16)：<input type="number" id="f6_3" value="13" min="0" max="16"></label>' +
+        '<label>Q4 (/24)：<input type="number" id="f6_4" value="20" min="0" max="24"></label>' +
+        '<button type="button" class="tab-btn active" id="f6Start">⏳ 85min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f6Reset">重置</button>' +
+        '<span class="timer-big" id="f6Clk">85:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f6Out"></div><div class="readout-pill" id="f6ScoreOut"></div></div></div>';
+      const fw = {
+        q1: '<strong>Q1 满分公式</strong>：① Fact（可核查数据/历史事实）vs Opinion（个人看法）vs Prediction（未来预测）vs Value Judgement（道德/好坏评判“should/unfair”）；② 辨析理由必须紧扣原句引号并点明“能否被独立核实”。',
+        q2a: '<strong>Q2A 8 分模板</strong>：从来源<strong>双面</strong>评估：① Strength（如作者专业身份/同行评审/数据样本明确/承认局限性）；② Weakness（如既得利益 vested interest、情感煽动用词、无引文孤证、样本过小/过时）——切忌空背 RAVEN 字母不结合材料！',
+        q2b: '<strong>Q2B 研究设计四要素</strong>：① <strong>Who / Sample</strong>（谁是受试/样本量与随机分层代表性）；② <strong>Method / Instrument</strong>（对照实验、问卷防诱导提问或访谈设计）；③ <strong>Secondary Verification</strong>（比对官方统计/纵贯追踪）；④ <strong>Reliability / Bias Control</strong>（消除利益冲突与季节性偏差）。',
+        q3: '<strong>Q3 Level 4 铁律</strong>：<strong>绝不把 Source A 写一段再把 Source B 写一段！</strong>每段确立 1 个对比维度（① 实证与数据支撑度 → ② 因果推理严密性 vs 逻辑谬误 → ③ 视角平衡与偏见控制），用 <code>Whereas Source A..., Source B...</code> 正面交锋并最终裁决谁更具说服力！',
+        q4: '<strong>Q4 24 分四段闭环</strong>：① 段1 鲜明选边立论；② 段2 核心理由深度展开（引用材料+自身拓展视角）；③ 段3 <strong>对比另外 1–2 个备选方案为什么较弱</strong>（可行性/成本/长期与短期副作用）；④ 段4 让步防线（承认本方案潜在阻力并给出配套缓解措施）。'
+      };
+      bindInputs(function () {
+        el.querySelector('#f6Out').innerHTML = fw[el.querySelector('#f6Q').value];
+        const s1 = Math.max(0, Math.min(14, Number(el.querySelector('#f6_1').value) || 0));
+        const s2 = Math.max(0, Math.min(16, Number(el.querySelector('#f6_2').value) || 0));
+        const s3 = Math.max(0, Math.min(16, Number(el.querySelector('#f6_3').value) || 0));
+        const s4 = Math.max(0, Math.min(24, Number(el.querySelector('#f6_4').value) || 0));
+        const tot = s1 + s2 + s3 + s4, pct = Math.round((tot / 70) * 100);
+        el.querySelector('#f6ScoreOut').innerHTML = '<strong>Component 1 总分：' + tot + ' / 70（' + pct + '%）</strong> ｜ ' + (pct >= 80 ? '冲击 A* 顶尖区间！注意 Q3 正面比较与 Q4 备选方案对比论证' : '建议强化 Q3/Q4 分值最重的段落结构');
+      });
+      setupTimer(el.querySelector('#f6Start'), el.querySelector('#f6Reset'), el.querySelector('#f6Clk'), 85);
+    }
+  }
+  document.querySelectorAll('.lab-box[data-lab-type]').forEach(mountSprintLab);
+
+  // ---------- 10. Universal Personal Error Clinic ----------
+  function mountClinic(el) {
+    const code = el.getAttribute('data-clinic-subject') || subCode;
+    const key = 'igcse_final_sprint_clinic_' + code.toLowerCase();
+    let items = [];
+    try {
+      items = JSON.parse(localStorage.getItem(key) || '[]');
+      if (!Array.isArray(items)) items = [];
+    } catch (e) { items = []; }
+
+    el.innerHTML =
+      '<div class="clinic-head"><div class="clinic-title">🩺 ' + code + ' 个人错题诊疗台（离线持久化 · 支持考前筛查与一键发给 AI 精批）</div>' +
+      '<span class="hub-clinic-pill" id="clinicPendingPill">待攻克：0 题</span></div>' +
+      '<div class="clinic-form-grid">' +
+      '<div class="clinic-field"><label>章节 / 题号出处</label><input type="text" id="clinicTopic" placeholder="如：Ch6 Linear Law Q4 / P2 Q12 / 赏析第2题"></div>' +
+      '<div class="clinic-field"><label>失分归因标签</label><select id="clinicReason">' +
+      '<option value="概念与公式不清">概念与公式不清</option>' +
+      '<option value="审题漏条件/看错单位">审题漏条件/看错单位</option>' +
+      '<option value="计算/推导中途出错">计算/推导中途出错</option>' +
+      '<option value="缺 Mark Scheme 踩分词">缺 Mark Scheme 踩分词</option>' +
+      '<option value="时间不够/字数失控">时间不够/字数失控</option></select></div>' +
+      '</div>' +
+      '<div class="clinic-form-grid">' +
+      '<div class="clinic-field"><label>原题要点 / 错在哪一步</label><textarea id="clinicStem" placeholder="记下题目关键条件和你当时为什么做错..."></textarea></div>' +
+      '<div class="clinic-field"><label>正解与防再犯铁律（二刷时用）</label><textarea id="clinicFix" placeholder="记下正确解法步骤、关键得分词或自我提醒..."></textarea></div>' +
+      '</div>' +
+      '<div class="clinic-toolbar">' +
+      '<div class="clinic-actions">' +
+      '<button type="button" class="clinic-btn clinic-btn-primary" id="clinicAddBtn">➕ 收入本科目错题本</button>' +
+      '<select id="clinicFilter" aria-label="按错因过滤">' +
+      '<option value="ALL">显示全部未攻克错题</option>' +
+      '<option value="ALL_INC">显示全部（含已攻克）</option>' +
+      '<option value="概念与公式不清">只看：概念与公式不清</option>' +
+      '<option value="审题漏条件/看错单位">只看：审题漏条件/看错单位</option>' +
+      '<option value="计算/推导中途出错">只看：计算/推导中途出错</option>' +
+      '<option value="缺 Mark Scheme 踩分词">只看：缺 Mark Scheme 踩分词</option>' +
+      '<option value="时间不够/字数失控">只看：时间不够/字数失控</option></select>' +
+      '</div>' +
+      '<div class="clinic-actions">' +
+      '<button type="button" class="clinic-btn" id="clinicExportBtn">📋 生成并复制 AI 精讲清单</button>' +
+      '</div></div>' +
+      '<textarea class="clinic-preview" id="clinicExportBox" readonly></textarea>' +
+      '<div class="clinic-list" id="clinicList"></div>';
+
+    const topicEl = el.querySelector('#clinicTopic');
+    const reasonEl = el.querySelector('#clinicReason');
+    const stemEl = el.querySelector('#clinicStem');
+    const fixEl = el.querySelector('#clinicFix');
+    const addBtn = el.querySelector('#clinicAddBtn');
+    const filterEl = el.querySelector('#clinicFilter');
+    const exportBtn = el.querySelector('#clinicExportBtn');
+    const exportBox = el.querySelector('#clinicExportBox');
+    const pendingPill = el.querySelector('#clinicPendingPill');
+    const listEl = el.querySelector('#clinicList');
+
+    function save() {
+      localStorage.setItem(key, JSON.stringify(items));
+      const pending = items.filter(function (x) { return !x.solved; }).length;
+      localStorage.setItem('igcse_final_sprint_clinic_cnt_' + code.toLowerCase(), String(pending));
+      if (pendingPill) {
+        pendingPill.textContent = '待攻克：' + pending + ' 题（总计 ' + items.length + ' 题）';
+        pendingPill.classList.toggle('has-err', pending > 0);
+      }
+    }
+
+    function escapeHtml(s) {
+      return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    function renderList() {
+      save();
+      const f = filterEl.value;
+      const shown = items.filter(function (it) {
+        if (f === 'ALL') return !it.solved;
+        if (f === 'ALL_INC') return true;
+        return it.reason === f;
+      });
+      if (!shown.length) {
+        listEl.innerHTML = '<div style="padding:14px;text-align:center;color:var(--text-faint);background:var(--bg-surface);border:1px dashed var(--border-strong);border-radius:7px;font-size:13.5px;">当前筛选下暂无错题记录。做题遇到卡壳或把近期 Quiz 错题粘贴进来，考前即可按错因集中清零！</div>';
+        return;
+      }
+      listEl.innerHTML = shown.map(function (it) {
+        return '<div class="clinic-item' + (it.solved ? ' solved' : '') + '" data-cid="' + it.id + '">' +
+          '<div class="clinic-item-top">' +
+          '<div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">' +
+          '<span class="clinic-tag">' + escapeHtml(it.topic) + '</span>' +
+          '<span class="clinic-reason">' + escapeHtml(it.reason) + '</span>' +
+          '<span style="font-size:12px;color:var(--text-faint);">' + (it.solved ? '✓ 已攻克' : '● 待二刷') + '</span></div>' +
+          '<div class="clinic-actions">' +
+          '<button type="button" class="clinic-btn clinic-toggle-btn">' + (it.solved ? '↺ 重新标红' : '✓ 标为已攻克') + '</button>' +
+          '<button type="button" class="clinic-btn clinic-del-btn">删除</button>' +
+          '</div></div>' +
+          '<div style="font-size:13.5px;margin-bottom:4px;"><strong>错题要点：</strong>' + escapeHtml(it.stem) + '</div>' +
+          (it.fix ? '<div style="font-size:13.3px;color:var(--text-muted);"><strong>正解与防错铁律：</strong>' + escapeHtml(it.fix) + '</div>' : '') +
+          '</div>';
+      }).join('');
+    }
+
+    addBtn.addEventListener('click', function () {
+      const topic = topicEl.value.trim() || '未标注章节';
+      const stem = stemEl.value.trim();
+      if (!stem) { stemEl.focus(); return; }
+      items.unshift({
+        id: String(Date.now()) + '_' + Math.random().toString(36).slice(2, 6),
+        topic: topic,
+        reason: reasonEl.value,
+        stem: stem,
+        fix: fixEl.value.trim(),
+        solved: false
+      });
+      topicEl.value = '';
+      stemEl.value = '';
+      fixEl.value = '';
+      renderList();
+    });
+
+    listEl.addEventListener('click', function (ev) {
+      const card = ev.target.closest('.clinic-item');
+      if (!card) return;
+      const cid = card.getAttribute('data-cid');
+      const idx = items.findIndex(function (x) { return x.id === cid; });
+      if (idx === -1) return;
+      if (ev.target.closest('.clinic-toggle-btn')) {
+        items[idx].solved = !items[idx].solved;
+        renderList();
+      } else if (ev.target.closest('.clinic-del-btn')) {
+        items.splice(idx, 1);
+        renderList();
+      }
+    });
+
+    filterEl.addEventListener('change', renderList);
+    exportBtn.addEventListener('click', function () {
+      const pending = items.filter(function (x) { return !x.solved; });
+      const target = pending.length ? pending : items;
+      const lines = ['### ' + code + ' 待精讲错题清单（共 ' + target.length + ' 题）'];
+      target.forEach(function (it, i) {
+        lines.push((i + 1) + '. [' + it.topic + ' | ' + it.reason + '] ' + it.stem + (it.fix ? '（我的初版订正：' + it.fix + '）' : ''));
+      });
+      if (!target.length) lines.push('（当前暂无错题记录）');
+      const md = lines.join('\n');
+      exportBox.value = md;
+      exportBox.classList.add('visible');
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(md).catch(function () {});
+      }
+      exportBtn.textContent = '✓ 已生成（可全选复制给 AI）';
+      setTimeout(function () { exportBtn.textContent = '📋 生成并复制 AI 精讲清单'; }, 2200);
+    });
+
+    renderList();
+  }
+  document.querySelectorAll('.clinic-box[data-clinic-subject]').forEach(mountClinic);
+
+  // ---------- 11. ScrollSpy & Back Top ----------
+  const navLinksAll = Array.from(document.querySelectorAll('.sidebar .nav-link[href^="#"]'));
+  const observedSections = navLinksAll
+    .map(function (l) { return document.getElementById((l.getAttribute('href') || '').slice(1)); })
+    .filter(Boolean);
+
+  if ('IntersectionObserver' in window && observedSections.length) {
+    const io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navLinksAll.forEach(function (l) {
+            l.classList.toggle('active', l.getAttribute('href') === '#' + id);
+          });
+        }
+      });
+    }, { rootMargin: '-18% 0px -70% 0px' });
+    observedSections.forEach(function (sec) { io.observe(sec); });
+  }
+
+  const backTopBtn = document.getElementById('backTopBtn');
+  if (backTopBtn) {
+    window.addEventListener('scroll', function () {
+      backTopBtn.classList.toggle('visible', window.scrollY > 420);
+    });
+    backTopBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  applyQuizMask(quizMasked);
+  filterConcepts();
+})();
+
+  </script>
+</body>
+</html>

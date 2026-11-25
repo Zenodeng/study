@@ -1,0 +1,2367 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="--accent: #0D9488;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>F03 · Chemistry (0620) · Ch 1, 2, 4 & 6 Sprint — IGCSE 期末范围锁定冲刺</title>
+  <style>
+/* ==========================================================================
+   Cambridge IGCSE 6-Subject Final Exam Sprint Suite Shared Stylesheet
+   ========================================================================== */
+
+:root {
+  --bg-page: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --bg-sidebar: #FFFFFF;
+  --bg-code: #EFF6FF;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-faint: #64748B;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+
+  --accent: #2563EB;
+  --accent-hover: #1D4ED8;
+  --accent-soft: #DBEAFE;
+
+  --core-bg: #E0F2FE;
+  --core-text: #075985;
+  --core-border: #BAE6FD;
+  --ext-bg: #FEF3C7;
+  --ext-text: #92400E;
+  --ext-border: #FDE68A;
+
+  --deep-bg: #EFF6FF;
+  --deep-border: #2563EB;
+  --tip-bg: #FFFBEB;
+  --tip-border: #D97706;
+  --mistake-bg: #FFF1F2;
+  --mistake-border: #E11D48;
+  --example-bg: #F0FDF4;
+  --example-border: #16A34A;
+  --formula-bg: #F8FAFC;
+  --formula-border: #2563EB;
+
+  --ok-bg: #DCFCE7;
+  --ok-text: #166534;
+  --ok-border: #86EFAC;
+  --err-bg: #FEE2E2;
+  --err-text: #991B1B;
+  --err-border: #FCA5A5;
+
+  --svg-bg: #FFFFFF;
+  --svg-grid: #E2E8F0;
+  --svg-ink: #0F172A;
+  --svg-muted: #64748B;
+  --svg-blue: #2563EB;
+  --svg-indigo: #4338CA;
+  --svg-teal: #0D9488;
+  --svg-amber: #D97706;
+  --svg-red: #DC2626;
+  --svg-green: #16A34A;
+  --svg-purple: #7C3AED;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.07);
+  --shadow-lg: 0 10px 26px rgba(15, 23, 42, 0.11);
+
+  --sidebar-w: 280px;
+  --topbar-h: 58px;
+  --radius-sm: 7px;
+  --radius-md: 11px;
+  --radius-lg: 16px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+  --font-serif: Georgia, "Times New Roman", "Songti SC", "Noto Serif SC", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+[data-theme="dark"] {
+  --bg-page: #0B1120;
+  --bg-surface: #111827;
+  --bg-subtle: #1E293B;
+  --bg-sidebar: #0F172A;
+  --bg-code: #1E293B;
+  --text-main: #F1F5F9;
+  --text-muted: #CBD5E1;
+  --text-faint: #94A3B8;
+  --border: #1E293B;
+  --border-strong: #334155;
+
+  --accent: #38BDF8 !important;
+  --accent-hover: #7DD3FC;
+  --accent-soft: rgba(56, 189, 248, 0.18);
+
+  --core-bg: rgba(56, 189, 248, 0.16);
+  --core-text: #BAE6FD;
+  --core-border: rgba(56, 189, 248, 0.36);
+  --ext-bg: rgba(245, 158, 11, 0.16);
+  --ext-text: #FDE68A;
+  --ext-border: rgba(245, 158, 11, 0.36);
+
+  --deep-bg: rgba(37, 99, 235, 0.14);
+  --deep-border: #60A5FA;
+  --tip-bg: rgba(217, 119, 6, 0.14);
+  --tip-border: #FBBF24;
+  --mistake-bg: rgba(225, 29, 72, 0.15);
+  --mistake-border: #FB7185;
+  --example-bg: rgba(22, 163, 74, 0.13);
+  --example-border: #4ADE80;
+  --formula-bg: #172033;
+  --formula-border: #38BDF8;
+
+  --ok-bg: rgba(22, 163, 74, 0.22);
+  --ok-text: #BBF7D0;
+  --ok-border: #22C55E;
+  --err-bg: rgba(220, 38, 38, 0.22);
+  --err-text: #FECACA;
+  --err-border: #EF4444;
+
+  --svg-bg: #0F172A;
+  --svg-grid: #334155;
+  --svg-ink: #F1F5F9;
+  --svg-muted: #94A3B8;
+  --svg-blue: #60A5FA;
+  --svg-indigo: #818CF8;
+  --svg-teal: #2DD4BF;
+  --svg-amber: #FBBF24;
+  --svg-red: #F87171;
+  --svg-green: #34D399;
+  --svg-purple: #A78BFA;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .seg-btn.active,
+[data-theme="dark"] .tab-btn.active,
+[data-theme="dark"] .icon-btn.active,
+[data-theme="dark"] .brand-code,
+[data-theme="dark"] .pager-btn.primary,
+[data-theme="dark"] .clinic-btn-primary { color: #0B1120; }
+[data-theme="dark"] .hub-foot { color: #38BDF8; }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--topbar-h) + 18px); }
+body { margin: 0; font-family: var(--font-sans); background: var(--bg-page); color: var(--text-main); line-height: 1.72; font-size: 15.5px; -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4 { margin: 0 0 0.55em 0; line-height: 1.32; font-weight: 700; color: var(--text-main); }
+p { margin: 0 0 0.9em 0; }
+ul, ol { margin: 0 0 1em 0; padding-left: 1.45em; }
+li { margin-bottom: 0.35em; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { font-family: var(--font-mono); font-size: 0.9em; background: var(--bg-code); color: var(--accent); padding: 2px 6px; border-radius: 4px; }
+
+/* View Mode Filters */
+body.mode-summary .topic-section:not(.sec-summary) { display: none !important; }
+body.mode-practice .topic-section:not(.sec-practice) { display: none !important; }
+body.mode-clinic .topic-section:not(.sec-clinic) { display: none !important; }
+body.mode-cards .topic-section:not(.sec-cards) { display: none !important; }
+
+/* Math & Formula Styling */
+.math { font-family: var(--font-serif); font-style: italic; font-weight: 600; }
+.frac { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; font-size: 0.88em; line-height: 1.15; margin: 0 3px; }
+.frac .num { border-bottom: 1.5px solid currentColor; padding: 0 4px 1px 4px; }
+.frac .den { padding: 1px 4px 0 4px; }
+.sqrt { display: inline-flex; align-items: center; font-family: var(--font-serif); }
+.sqrt-rad { border-top: 1.5px solid currentColor; padding: 0 3px; margin-left: 1px; }
+
+.badge-c1, .badge-cw, .badge-core, .badge-ext { display: inline-block; font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.badge-c1, .badge-core { background: var(--core-bg); color: var(--core-text); border: 1px solid var(--core-border); }
+.badge-cw, .badge-ext { background: var(--ext-bg); color: var(--ext-text); border: 1px solid var(--ext-border); }
+
+.formula-card { background: var(--formula-bg); border: 1.5px solid var(--border-strong); border-left: 5px solid var(--formula-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; font-size: 15px; }
+.formula-main { font-family: var(--font-serif); font-size: 16.5px; font-weight: 700; color: var(--accent); margin: 4px 0 6px 0; }
+
+.source-box, .reading-passage { background: var(--bg-page); border: 1px solid var(--border-strong); border-left: 5px solid var(--accent); border-radius: var(--radius-md); padding: 16px 20px; margin: 14px 0; font-family: var(--font-serif); font-size: 15px; line-height: 1.76; }
+.reading-title { font-family: var(--font-sans); font-size: 15.8px; font-weight: 800; color: var(--text-main); margin-bottom: 8px; }
+.para-tag { display: inline-block; font-family: var(--font-sans); font-size: 11.5px; font-weight: 800; background: var(--accent-soft); color: var(--accent); padding: 1px 7px; border-radius: 4px; margin-right: 6px; }
+
+.model-essay { background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 20px; margin: 14px 0; box-shadow: var(--shadow-sm); }
+.essay-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; padding-bottom: 10px; margin-bottom: 12px; border-bottom: 1px solid var(--border); font-size: 13px; font-weight: 700; }
+.band-pill { padding: 2px 10px; border-radius: 999px; font-size: 12px; font-weight: 800; }
+.band-high { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.band-mid { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+.essay-body { font-family: var(--font-serif); font-size: 15px; line-height: 1.76; }
+mark.hl-content { background: rgba(37, 99, 235, 0.16); color: inherit; padding: 1px 3px; border-radius: 3px; }
+mark.hl-lang { background: rgba(22, 163, 74, 0.18); color: inherit; padding: 1px 3px; border-radius: 3px; }
+mark.hl-err { background: rgba(220, 38, 38, 0.16); color: inherit; padding: 1px 3px; border-radius: 3px; text-decoration: wavy underline rgba(220, 38, 38, 0.6); }
+
+.write-box { display: flex; flex-direction: column; gap: 10px; }
+.write-textarea { width: 100%; min-height: 140px; padding: 12px 14px; border-radius: var(--radius-sm); border: 1.5px solid var(--border-strong); background: var(--bg-page); color: var(--text-main); font-family: var(--font-serif); font-size: 14.8px; line-height: 1.65; resize: vertical; }
+.write-textarea:focus { outline: none; border-color: var(--accent); }
+.wc-meter { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 800; }
+.wc-ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.wc-warn { background: var(--tip-bg); color: var(--tip-border); border: 1px solid var(--tip-border); }
+.wc-err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+.timer-big { font-family: var(--font-mono); font-size: 20px; font-weight: 800; color: var(--accent); background: var(--bg-page); border: 1.5px solid var(--border-strong); padding: 4px 10px; border-radius: var(--radius-sm); }
+
+/* Topbar */
+.topbar {
+  position: sticky; top: 0; z-index: 100; height: var(--topbar-h);
+  background: var(--bg-surface); border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm); display: flex; align-items: center;
+  justify-content: space-between; gap: 8px; padding: 0 14px;
+}
+.topbar-left { display: flex; align-items: center; gap: 7px; min-width: 0; flex-shrink: 1; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; gap: 5px; height: 34px; padding: 0 9px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--bg-surface); color: var(--text-main); font-size: 12.8px; font-weight: 600; cursor: pointer; white-space: nowrap; text-decoration: none; }
+.icon-btn:hover { background: var(--bg-subtle); border-color: var(--accent); text-decoration: none; }
+.icon-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.menu-toggle { display: none; }
+.brand-pill { display: flex; align-items: center; gap: 7px; font-weight: 700; font-size: 13.8px; white-space: nowrap; flex-shrink: 1; min-width: 0; }
+.brand-code { background: var(--accent); color: #fff; padding: 2px 8px; border-radius: 5px; font-size: 12px; letter-spacing: 0.4px; white-space: nowrap; flex-shrink: 0; }
+.brand-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 170px; }
+.search-wrap { position: relative; flex: 1 1 130px; min-width: 120px; max-width: 225px; }
+.search-input { width: 100%; height: 34px; padding: 0 28px 0 30px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--bg-subtle); color: var(--text-main); font-size: 13px; outline: none; }
+.search-input:focus { border-color: var(--accent); background: var(--bg-surface); }
+.search-input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.search-icon { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--text-faint); font-size: 12.5px; pointer-events: none; }
+.search-clear { position: absolute; right: 7px; top: 50%; transform: translateY(-50%); border: none; background: transparent; color: var(--text-faint); cursor: pointer; font-size: 14px; display: none; }
+.search-results-bar { display: none; background: var(--accent-soft); border-bottom: 1px solid var(--border); padding: 8px 20px; font-size: 13.5px; color: var(--text-main); align-items: center; justify-content: space-between; gap: 12px; }
+.search-results-bar.visible { display: flex; }
+.topbar-controls { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+.seg-group { display: inline-flex; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); overflow: hidden; background: var(--bg-subtle); }
+.seg-btn { border: none; background: transparent; color: var(--text-muted); padding: 6px 7px; font-size: 11.8px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.seg-btn.active { background: var(--accent); color: #fff; }
+.progress-chip { display: flex; align-items: center; gap: 6px; padding: 4px 9px; border-radius: 999px; background: var(--bg-subtle); border: 1px solid var(--border); font-size: 12px; font-weight: 600; white-space: nowrap; }
+.progress-track { width: 46px; height: 7px; background: var(--border-strong); border-radius: 99px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), #0D9488); transition: width 0.25s ease; }
+
+.app-layout { display: flex; min-height: calc(100vh - var(--topbar-h)); }
+.sidebar { width: var(--sidebar-w); flex-shrink: 0; background: var(--bg-sidebar); border-right: 1px solid var(--border); position: sticky; top: var(--topbar-h); height: calc(100vh - var(--topbar-h)); overflow-y: auto; padding: 14px 10px 44px 10px; }
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 99px; }
+.nav-unit { margin-bottom: 8px; }
+.nav-unit-btn { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border: none; border-radius: var(--radius-sm); background: transparent; color: var(--text-main); font-size: 13px; font-weight: 700; text-align: left; cursor: pointer; }
+.nav-unit-btn:hover { background: var(--bg-subtle); }
+.nav-unit-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.nav-unit-title { flex: 1; display: flex; align-items: center; gap: 7px; line-height: 1.3; }
+.nav-chevron { font-size: 11px; color: var(--text-faint); transition: transform 0.2s; }
+.nav-unit.collapsed .nav-chevron { transform: rotate(-90deg); }
+.nav-unit.collapsed .nav-links { display: none; }
+.nav-links { list-style: none; padding: 2px 0 4px 12px; margin: 0 0 0 14px; border-left: 2px solid var(--border); }
+.nav-link { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 5px 9px; margin: 2px 0; border-radius: var(--radius-sm); color: var(--text-muted); font-size: 12.6px; line-height: 1.35; text-decoration: none; }
+.nav-link:hover { background: var(--bg-subtle); color: var(--text-main); text-decoration: none; }
+.nav-link.active { background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+.nav-done-mark { color: #10B981; font-weight: 800; font-size: 12px; opacity: 0; }
+.nav-link.mastered .nav-done-mark { opacity: 1; }
+.main-content { flex: 1; min-width: 0; padding: 24px 28px 80px 28px; }
+.content-inner { max-width: 960px; margin: 0 auto; }
+
+.hero-card { background: linear-gradient(135deg, #0F172A 0%, var(--accent) 62%, #0F766E 100%); color: #fff; border-radius: var(--radius-lg); padding: 26px 30px; margin-bottom: 24px; box-shadow: var(--shadow-lg); }
+.hero-card h1 { color: #fff; font-size: 24px; margin-bottom: 8px; letter-spacing: -0.3px; }
+.hero-sub { color: rgba(255,255,255,0.92); font-size: 14.5px; max-width: 850px; margin-bottom: 14px; }
+.hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.hero-pill { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.28); color: #fff; padding: 4px 11px; border-radius: 999px; font-size: 12.5px; font-weight: 600; }
+.unit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(175px, 1fr)); gap: 10px; }
+.unit-tile { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.24); border-radius: var(--radius-md); padding: 11px 13px; color: #fff; text-decoration: none; display: block; transition: transform 0.15s, background 0.15s; }
+.unit-tile:hover { transform: translateY(-2px); background: rgba(255,255,255,0.22); text-decoration: none; }
+.unit-tile-num { font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; opacity: 0.85; font-weight: 700; }
+.unit-tile-title { font-size: 13.8px; font-weight: 700; margin: 3px 0 0 0; }
+
+.topic-section { background: var(--bg-surface); border: 1px solid var(--border); border-top: 4px solid var(--accent); border-radius: var(--radius-md); padding: 22px 24px; margin-bottom: 24px; box-shadow: var(--shadow-sm); }
+.topic-section.search-dim { display: none; }
+.section-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 2px solid var(--border); }
+.section-title-group h3 { font-size: 19px; margin-bottom: 4px; }
+.section-en-sub { font-size: 13.5px; color: var(--text-faint); font-weight: 600; }
+.tier-row { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 7px; }
+.master-btn { flex-shrink: 0; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-muted); font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.master-btn:hover { border-color: #10B981; color: #10B981; }
+.master-btn.is-mastered { background: var(--ok-bg); color: var(--ok-text); border-color: var(--ok-border); }
+.subtopic { margin-bottom: 20px; }
+.subtopic:last-of-type { margin-bottom: 12px; }
+.subtopic h4 { font-size: 16px; color: var(--accent); margin: 0 0 10px 0; padding-bottom: 4px; border-bottom: 1px dashed var(--border); display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+
+.worked-example { background: var(--example-bg); border: 1px solid var(--border); border-left: 4px solid var(--example-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; }
+.worked-title { font-weight: 800; font-size: 14px; color: var(--example-border); margin-bottom: 6px; }
+.callout { border-radius: var(--radius-sm); padding: 13px 16px; margin: 14px 0; border-left: 4px solid var(--border-strong); font-size: 14.5px; }
+.callout-title { font-weight: 800; font-size: 13.5px; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+.deep-dive { background: var(--deep-bg); border-left-color: var(--deep-border); }
+.deep-dive .callout-title { color: var(--deep-border); }
+.examiner-tip { background: var(--tip-bg); border-left-color: var(--tip-border); }
+.examiner-tip .callout-title { color: var(--tip-border); }
+.common-mistake { background: var(--mistake-bg); border-left-color: var(--mistake-border); }
+.common-mistake .callout-title { color: var(--mistake-border); }
+
+.table-wrap { width: 100%; overflow-x: auto; margin: 14px 0; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+table.sprint-table, table.gp-table, table.phy-table { width: 100%; border-collapse: collapse; font-size: 13.8px; text-align: left; }
+table.sprint-table th, table.gp-table th, table.phy-table th { background: var(--bg-subtle); color: var(--text-main); font-weight: 700; padding: 9px 12px; border-bottom: 2px solid var(--border-strong); white-space: nowrap; }
+table.sprint-table td, table.gp-table td, table.phy-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.sprint-table tr:last-child td, table.gp-table tr:last-child td, table.phy-table tr:last-child td { border-bottom: none; }
+table.sprint-table tbody tr:hover, table.gp-table tbody tr:hover, table.phy-table tbody tr:hover { background: var(--bg-subtle); }
+
+.svg-figure { background: var(--svg-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px; margin: 16px 0; text-align: center; break-inside: avoid; }
+.svg-figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.svg-caption { margin-top: 8px; font-size: 13px; color: var(--text-faint); font-weight: 600; }
+
+/* Interactive Labs */
+.lab-box { background: var(--bg-subtle); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 18px; margin: 18px 0; break-inside: avoid; }
+.lab-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+.lab-title { font-size: 15.5px; font-weight: 800; color: var(--accent); display: flex; align-items: center; gap: 7px; }
+.lab-panel { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; }
+.lab-controls { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-bottom: 12px; align-items: center; }
+.lab-controls label { font-size: 13px; font-weight: 700; color: var(--text-muted); display: inline-flex; align-items: center; gap: 6px; }
+.lab-controls input[type="number"], .lab-controls input[type="text"], .lab-controls select { padding: 5px 8px; border-radius: 6px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-main); font-size: 13.2px; font-weight: 700; }
+.lab-controls input[type="number"] { min-width: 100px; width: 108px; text-align: center; }
+.tab-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.tab-btn { border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-muted); padding: 5px 10px; border-radius: 6px; font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.tab-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.lab-readout { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; font-size: 13.2px; font-weight: 600; }
+.readout-pill { background: var(--bg-page); border: 1px solid var(--border-strong); padding: 8px 11px; border-radius: 6px; width: 100%; line-height: 1.6; }
+
+/* Personal Error Clinic */
+.clinic-box { background: var(--bg-subtle); border: 1.5px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px; margin: 16px 0; }
+.clinic-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px; }
+.clinic-title { font-size: 16px; font-weight: 800; color: var(--accent); }
+.clinic-form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-bottom: 10px; }
+.clinic-field label { display: block; font-size: 12.5px; font-weight: 700; color: var(--text-muted); margin-bottom: 4px; }
+.clinic-field input, .clinic-field select, .clinic-field textarea { width: 100%; padding: 7px 10px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 13.5px; font-family: inherit; }
+.clinic-field textarea { min-height: 70px; resize: vertical; }
+.clinic-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin: 12px 0; padding-top: 12px; border-top: 1px dashed var(--border-strong); }
+.clinic-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.clinic-btn { padding: 6px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 12.8px; font-weight: 700; cursor: pointer; }
+.clinic-btn:hover { border-color: var(--accent); }
+.clinic-btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+.clinic-btn-primary:hover { background: var(--accent-hover); }
+.clinic-list { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
+.clinic-item { background: var(--bg-surface); border: 1px solid var(--border-strong); border-left: 4px solid #E11D48; border-radius: var(--radius-sm); padding: 12px 14px; }
+.clinic-item.solved { border-left-color: #16A34A; opacity: 0.78; }
+.clinic-item-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+.clinic-tag { font-size: 11.8px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
+.clinic-reason { font-size: 11.8px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: var(--err-bg); color: var(--err-text); }
+.clinic-item.solved .clinic-reason { background: var(--ok-bg); color: var(--ok-text); }
+.clinic-preview { width: 100%; min-height: 110px; margin-top: 10px; padding: 10px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-page); color: var(--text-main); font-family: var(--font-mono); font-size: 12.2px; display: none; }
+.clinic-preview.visible { display: block; }
+
+.quick-links-grid { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.quick-link-chip { display: inline-flex; align-items: center; gap: 5px; padding: 6px 11px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-page); color: var(--text-main); font-size: 12.8px; font-weight: 700; text-decoration: none; }
+.quick-link-chip:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+
+/* Hub Roadmap */
+.roadmap-panel { background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px 20px; margin: 18px 0 8px 0; box-shadow: var(--shadow-sm); }
+.roadmap-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 14px; }
+.roadmap-head h2 { font-size: 17px; margin: 0 0 4px 0; }
+.roadmap-badge { background: var(--accent-soft); color: var(--accent); padding: 4px 12px; border-radius: 999px; font-size: 12.5px; font-weight: 800; }
+.roadmap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
+.roadmap-card { display: flex; align-items: flex-start; gap: 10px; padding: 12px 13px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-page); cursor: pointer; font-size: 13px; line-height: 1.5; }
+.roadmap-card:hover { border-color: var(--accent); }
+.roadmap-card strong { display: block; font-size: 13.5px; color: var(--text-main); margin-bottom: 3px; }
+.roadmap-card span { color: var(--text-muted); font-size: 12.5px; }
+.roadmap-card input[type="checkbox"] { width: 17px; height: 17px; margin-top: 2px; accent-color: var(--accent); flex-shrink: 0; }
+.roadmap-card.done { border-color: var(--ok-border); background: var(--ok-bg); }
+.roadmap-card.done strong, .roadmap-card.done span { color: var(--ok-text); }
+
+/* Practice Questions & Concepts */
+.practice-block { margin-top: 18px; padding-top: 14px; border-top: 2px dashed var(--border-strong); }
+.practice-heading { font-size: 16px; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.exam-q { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 14px; break-inside: avoid; }
+.exam-q-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; font-size: 12.5px; }
+.q-tag { font-weight: 800; color: var(--accent); background: var(--accent-soft); padding: 2px 8px; border-radius: 5px; }
+.q-marks { font-weight: 700; color: var(--text-faint); }
+.q-stem-en { font-size: 14.8px; font-weight: 600; color: var(--text-main); margin-bottom: 6px; }
+.q-stem-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 12px; }
+.mcq-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin-bottom: 10px; }
+.mcq-opt { text-align: left; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 13.8px; cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.mcq-opt:hover { border-color: var(--accent); background: var(--bg-subtle); }
+.mcq-opt.correct { background: var(--ok-bg); border-color: var(--ok-border); color: var(--ok-text); font-weight: 700; }
+.mcq-opt.wrong { background: var(--err-bg); border-color: var(--err-border); color: var(--err-text); }
+.mcq-feedback { display: none; font-size: 13.5px; padding: 10px 12px; border-radius: var(--radius-sm); margin-top: 8px; }
+.mcq-feedback.visible { display: block; }
+.mcq-feedback.ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.mcq-feedback.err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+details.ms-details { margin-top: 10px; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 12px; }
+details.ms-details summary { cursor: pointer; font-weight: 700; font-size: 13.5px; color: var(--accent); user-select: none; }
+.ms-body { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 13.8px; }
+.ms-mark { display: inline-block; font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--core-text); background: var(--core-bg); padding: 1px 5px; border-radius: 4px; margin-right: 4px; }
+.ms-cn { color: var(--text-muted); margin-top: 4px; }
+
+.concept-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 14px; margin-bottom: 18px; }
+.concept-filter-group { display: flex; flex-wrap: wrap; gap: 6px; }
+.concept-actions { display: flex; align-items: center; gap: 10px; }
+.concept-count-pill { font-size: 12.5px; font-weight: 700; color: var(--text-muted); }
+.concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 14px; }
+.concept-card { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; gap: 8px; break-inside: avoid; }
+.concept-card:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
+.concept-card.concept-hidden { display: none !important; }
+.cq-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.cq-en { font-weight: 700; font-size: 14.5px; color: var(--text-main); line-height: 1.45; }
+.cq-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 2px; }
+.cq-answer { position: relative; margin-top: auto; background: var(--bg-surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius-sm); padding: 11px 13px; font-size: 13.8px; line-height: 1.6; }
+.kw { color: var(--accent); background: var(--accent-soft); padding: 0 4px; border-radius: 3px; font-weight: 700; }
+.cq-mask-hint { display: none; }
+.concept-card.masked .cq-answer { cursor: pointer; }
+.concept-card.masked .cq-answer-inner { filter: blur(7px); opacity: 0.22; user-select: none; pointer-events: none; transition: filter 0.2s, opacity 0.2s; }
+.concept-card.masked .cq-mask-hint { display: flex; align-items: center; justify-content: center; position: absolute; inset: 0; font-size: 13.5px; font-weight: 700; color: var(--accent); background: rgba(255,255,255,0.25); border-radius: var(--radius-sm); }
+[data-theme="dark"] .concept-card.masked .cq-mask-hint { background: rgba(15,23,42,0.35); }
+
+.chapter-pager { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 28px; padding: 16px 20px; background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); }
+.pager-btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: var(--radius-sm); background: var(--bg-subtle); border: 1px solid var(--border-strong); color: var(--text-main); font-size: 13.5px; font-weight: 700; text-decoration: none; }
+.pager-btn:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); text-decoration: none; }
+.pager-btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.pager-btn.primary:hover { background: var(--accent-hover); color: #fff; }
+
+.hub-block-title { font-size: 18px; font-weight: 800; margin: 24px 0 12px 0; padding-bottom: 6px; border-bottom: 2px solid var(--border-strong); display: flex; align-items: center; gap: 8px; }
+.hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 15px; }
+.hub-card { display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-surface); border: 1px solid var(--border-strong); border-top: 5px solid var(--card-color, var(--accent)); border-radius: var(--radius-md); padding: 16px 18px 14px 18px; color: var(--text-main); text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; box-shadow: var(--shadow-sm); }
+.hub-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--card-color, var(--accent)); text-decoration: none; }
+.hub-card-top { display: flex; align-items: center; justify-content: space-between; gap: 6px; margin-bottom: 8px; flex-wrap: wrap; }
+.hub-stat-row { display: flex; align-items: center; gap: 6px; }
+.hub-badge { font-size: 11.5px; font-weight: 800; color: #fff; background: var(--card-color, var(--accent)); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill { font-size: 11.8px; font-weight: 700; color: var(--text-muted); background: var(--bg-subtle); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill.done { background: var(--ok-bg); color: var(--ok-text); }
+.hub-clinic-pill { font-size: 11.8px; font-weight: 700; color: var(--text-muted); background: var(--bg-subtle); border: 1px solid var(--border); padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
+.hub-clinic-pill.has-err { background: var(--err-bg); color: var(--err-text); border-color: var(--err-border); }
+.hub-scope { font-size: 12px; font-weight: 700; color: var(--card-color, var(--accent)); background: var(--bg-subtle); padding: 3px 8px; border-radius: 5px; margin-bottom: 7px; display: inline-block; }
+.hub-title { font-size: 16px; font-weight: 800; margin-bottom: 3px; }
+.hub-en { font-size: 12.6px; color: var(--text-faint); font-weight: 600; margin-bottom: 8px; }
+.hub-sub { font-size: 12.8px; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; }
+.hub-foot { font-size: 13px; font-weight: 700; color: var(--card-color, var(--accent)); display: flex; align-items: center; justify-content: space-between; }
+
+.back-top-btn { position: fixed; right: 22px; bottom: 22px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); box-shadow: var(--shadow-md); cursor: pointer; display: none; align-items: center; justify-content: center; font-size: 17px; font-weight: 800; z-index: 80; }
+.back-top-btn.visible { display: flex; }
+
+@media (max-width: 1220px) {
+  .brand-title, .btn-label { display: none; }
+}
+@media (max-width: 980px) {
+  .menu-toggle { display: inline-flex; }
+  .sidebar { position: fixed; left: 0; top: var(--topbar-h); z-index: 95; transform: translateX(-100%); transition: transform 0.22s ease; box-shadow: var(--shadow-lg); }
+  .sidebar.open { transform: translateX(0); }
+  .main-content { padding: 18px 14px 64px 14px; }
+  .topic-section { padding: 18px 16px; }
+  .progress-chip { display: none; }
+  .search-wrap { min-width: 110px; }
+}
+@media (max-width: 640px) {
+  .topbar { padding: 0 10px; gap: 6px; }
+  .search-wrap { max-width: none; }
+  .concept-grid, .hub-grid, .clinic-form-grid { grid-template-columns: 1fr; }
+}
+@media print {
+  .topbar, .sidebar, .search-results-bar, .back-top-btn, .master-btn, .lab-controls button, .concept-toolbar, .cq-mask-hint, .chapter-pager, .clinic-form-grid, .clinic-actions { display: none !important; }
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  .main-content { padding: 0 !important; }
+  .content-inner { max-width: 100% !important; }
+  .topic-section, .exam-q, .callout, .worked-example, .svg-figure, .concept-card, .model-essay, .source-box, .clinic-item { box-shadow: none !important; break-inside: avoid; border-color: #CBD5E1 !important; }
+  details.ms-details, details.ms-details .ms-body, .mcq-feedback { display: block !important; }
+  .concept-card.masked .cq-answer-inner { filter: none !important; opacity: 1 !important; }
+}
+
+  </style>
+</head>
+<body data-chapter-code="F03">
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="展开目录">☰ 目录</button>
+      <a class="icon-btn" href="index.html" title="返回 6 科期末冲刺总控台"><span>🎯</span><span class="btn-label">总控台</span></a>
+      <div class="brand-pill">
+        <span class="brand-code">F03</span>
+        <span class="brand-title">Chemistry (0620) · Ch 1, 2, 4 & 6 Sprint</span>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="search" id="searchInput" class="search-input" placeholder="搜公式、易错坑、模考题..." autocomplete="off" />
+      <button type="button" class="search-clear" id="searchClear" title="清空搜索">✕</button>
+    </div>
+
+    <div class="topbar-controls">
+      <div class="seg-group" role="group" aria-label="内容视图筛选">
+        <button type="button" class="seg-btn active" data-view-mode="all">All</button>
+        <button type="button" class="seg-btn" data-view-mode="summary">速记</button>
+        <button type="button" class="seg-btn" data-view-mode="practice">模考</button>
+        <button type="button" class="seg-btn" data-view-mode="clinic">错题</button>
+        <button type="button" class="seg-btn" data-view-mode="cards">闪卡</button>
+      </div>
+
+      <div class="progress-chip" title="本学科期末冲刺板块掌握进度">
+        <span id="progressText">0/0</span>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+
+      <button type="button" class="icon-btn" id="toggleAllMs" title="展开或收起全部解析"><span>📝</span><span class="btn-label">展开解析</span></button>
+      <button type="button" class="icon-btn" id="themeToggle" title="切换亮色/暗色主题"><span id="themeIcon">🌙</span><span class="btn-label">主题</span></button>
+      <button type="button" class="icon-btn" id="printBtn" title="打印或导出为 PDF"><span>🖨️</span><span class="btn-label">导出</span></button>
+    </div>
+  </header>
+
+  <div class="search-results-bar" id="searchBar">
+    <span id="searchSummary">找到 0 个匹配板块</span>
+    <button type="button" class="icon-btn" id="searchResetBtn">重置过滤</button>
+  </div>
+
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="本学科期末冲刺导航">
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #0D9488;"></span>F03 冲刺板块导航</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#sec-core1"><span>核心板块一 · Ch 1 物态扩散 + Ch 2 原子同位素 + Ch 4 化学式配平与离子方程</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-core2"><span>核心板块二 · Ch 6 电化学终极通关（电解矩阵、电镀与氢氧燃料电池）</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-sme"><span>全真综合模考 · 65 分 Ch 1, 2, 4, 6 期末冲刺卷（75 分钟）</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-clinic"><span>个人错题诊疗台 · F03 化学 0620 考前归因清零</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#app-concepts"><span>核心概念、离子式、半方程式与实验现象闪卡库 (20 张)</span><span class="nav-done-mark">✓</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #0D9488;"></span>全 6 科期末冲刺切换</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="F01_AddMaths_0606_Final_Sprint.html"><span>F01 · 附加数学 0606 期末考范围锁定冲刺</span></a></li>
+          <li><a class="nav-link" href="F02_Physics_0625_Final_Sprint.html"><span>F02 · 物理 0625 Ch 1–4 期末精炼与实验冲刺</span></a></li>
+          <li><a class="nav-link active" href="F03_Chemistry_0620_Final_Sprint.html"><span>F03 · 化学 0620 Ch 1, 2, 4, 6 核心高频冲刺</span></a></li>
+          <li><a class="nav-link" href="F04_ESL_0510_Final_Sprint.html"><span>F04 · ESL 0510 听力阅读写作三线冲刺</span></a></li>
+          <li><a class="nav-link" href="F05_Chinese_0509_Final_Sprint.html"><span>F05 · 中文第一语言 0509 现代文阅读与双作文冲刺</span></a></li>
+          <li><a class="nav-link" href="F06_GP_0457_Final_Sprint.html"><span>F06 · 全球视野 0457 Q1–Q4 书面笔试终极冲刺</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-inner">
+        <section class="hero-card" id="top">
+          <h1>F03 · 化学 0620 Ch 1, 2, 4, 6 核心高频冲刺</h1>
+          <p class="hero-sub">
+            <strong>范围锁定：教材 Ch 1（物态）· Ch 2（原子）· Ch 4（化学式/方程）· Ch 6（电化学）</strong> — Ch 1 加热冷却曲线与扩散 · Ch 2 质子核素与同位素 Ar · Ch 4 化合价配平与净离子方程 · Ch 6 熔融/水溶液电解半方程与燃料电池。本页严格剔除非考范围章节，浓缩核心方法与高频失分红线，内置交互实验台、全真模考与个人错题诊疗台。
+          </p>
+          <div class="hero-badges">
+            <span class="hero-pill">🎯 期末考范围精准锁定</span>
+            <span class="hero-pill">⚡ 一页核心浓缩速记</span>
+            <a class="hero-pill" href="#sec-sme" style="text-decoration: none;">📝 直达限时全真模考 →</a>
+            <a class="hero-pill" href="#sec-clinic" style="text-decoration: none;">🩺 个人错题诊疗台 →</a>
+            <a class="hero-pill" href="#app-concepts" style="text-decoration: none; background: rgba(255,255,255,0.24);">🧠 遮罩自测闪卡 →</a>
+          </div>
+          <div class="unit-grid">
+            <a class="unit-tile" href="#sec-core1">
+              <div class="unit-tile-num">Section core1</div>
+              <div class="unit-tile-title">核心板块一 · Ch 1 物态扩散 + Ch 2 原子同位素 + Ch 4 化学式配平与离子方程</div>
+            </a>
+            <a class="unit-tile" href="#sec-core2">
+              <div class="unit-tile-num">Section core2</div>
+              <div class="unit-tile-title">核心板块二 · Ch 6 电化学终极通关（电解矩阵、电镀与氢氧燃料电池）</div>
+            </a>
+            <a class="unit-tile" href="#sec-sme">
+              <div class="unit-tile-num">Section sme</div>
+              <div class="unit-tile-title">全真综合模考 · 65 分 Ch 1, 2, 4, 6 期末冲刺卷（75 分钟）</div>
+            </a>
+            <a class="unit-tile" href="#sec-clinic">
+              <div class="unit-tile-num">Section clinic</div>
+              <div class="unit-tile-title">个人错题诊疗台 · F03 化学 0620 考前归因清零</div>
+            </a>
+            <a class="unit-tile" href="#app-concepts">
+              <div class="unit-tile-num">速背闪卡</div>
+              <div class="unit-tile-title">核心概念、离子式、半方程式与实验现象闪卡库 (20 张)</div>
+            </a>
+          </div>
+        </section>
+
+        <div id="emptySearchNotice" class="callout deep-dive" style="display: none;">
+          <div class="callout-title">🔍 未找到匹配内容</div>
+          <p style="margin-bottom: 0;">请尝试更换关键词，或点击右上角“重置过滤”恢复显示。</p>
+        </div>
+
+<!-- ==========================================================================
+     F03 · Chemistry 0620 Final Exam Sprint (Strictly Locked: Ch 1, 2, 4, 6)
+     ========================================================================== -->
+
+<article class="topic-section sec-summary" id="sec-core1">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>核心板块一 · Ch 1 物态扩散 + Ch 2 原子同位素 + Ch 4 化学式配平与离子方程</h3>
+      <div class="section-en-sub">Kinetic Particle Theory, Diffusion &amp; Mᵣ, Atomic Structure &amp; Isotopes, Valency Cross-Over, Balancing &amp; Net Ionic Equations</div>
+      <div class="tier-row">
+        <span class="badge-core">Core + Extended 范围精准锁定</span>
+        <span class="badge-ext">绝不含化学键 / 摩尔滴定 / 速率 / 有机</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-core1">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>1. Ch 1 物质三态、加热/冷却曲线平台机理、温压影响与扩散 (States of Matter) <span class="badge-core">Core</span> <span class="badge-ext">Extended</span></h4>
+    <div class="table-wrap">
+      <table class="sprint-table">
+        <thead>
+          <tr>
+            <th>维度 Criteria</th>
+            <th>固体 Solid</th>
+            <th>液体 Liquid</th>
+            <th>气体 Gas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>排布 Arrangement</strong></td>
+            <td>规则晶格排列（<strong>regular arrangement / lattice</strong>）</td>
+            <td>无规则密排（<strong>irregular / random arrangement</strong>）</td>
+            <td>完全无序随机分布（<strong>completely random</strong>）</td>
+          </tr>
+          <tr>
+            <td><strong>间距 Separation</strong></td>
+            <td>紧密接触（<strong>closely packed / touching</strong>）</td>
+            <td>彼此接触（<strong>closely packed</strong>），微弱活动空隙</td>
+            <td>相距极远（<strong>far apart</strong>），大量自由空间</td>
+          </tr>
+          <tr>
+            <td><strong>运动 Movement</strong></td>
+            <td>仅在<strong>固定位置附近振动（vibrate about fixed positions）</strong></td>
+            <td>彼此滑移滚动（<strong>move / slide past each other</strong>）</td>
+            <td>各向<strong>高速随机运动（move rapidly and randomly）</strong></td>
+          </tr>
+          <tr>
+            <td><strong>作用力 Forces</strong></td>
+            <td>极强（very strong attraction）</td>
+            <td>较强（weaker than solid, stronger than gas）</td>
+            <td>极弱／几乎可忽略（negligible forces）</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout deep-dive">
+      <div class="callout-title">🔬 必考高频机理：曲线平台段温度不变 · 温压改变气体体积 · 扩散与 Mᵣ 反比律</div>
+      <ul style="margin-bottom: 0;">
+        <li><strong>加热曲线平台（Melting &amp; Boiling Plateaus）：</strong>斜坡升温段吸收热能转化为粒子<strong>平均动能（average kinetic energy）</strong>，温度上升；进入水平平台段（固液共存熔化／液气共存沸腾）时，供给的热能<strong>全部用于克服粒子间相互吸引作用力（overcome forces of attraction between particles）</strong>，平均动能不变，故<strong>温度保持恒定</strong>。</li>
+        <li><strong>冷却曲线平台（Condensing &amp; Freezing Plateaus）：</strong>虽然向外散热，但粒子聚拢形成更强作用力时<strong>释放潜热（energy released as forces/bonds form）</strong>，恰好抵消环境散失的热量，温度维持不变直至物态转变完成。<strong>纯度检验：</strong>纯净物呈<strong>单一锐利水平平台</strong>；含杂质会<strong>降低熔点、升高沸点</strong>，并在一段温度区间内熔沸。</li>
+        <li><strong>蒸发 vs 沸腾（Evaporation vs Boiling）：</strong>蒸发在<strong>低于沸点的任意温度、仅在液体表面</strong>发生（高动能表层粒子逃逸致剩余液体降温）；沸腾只在<strong>固定沸点、液体内部和表面同时</strong>剧烈进行。</li>
+        <li><strong>温压对气体体积的微观解释（Kinetic Particle Theory）：</strong>
+          <br>① <strong>定压升温（T ↑ → V ↑）：</strong>粒子动能增大、运动更快，<strong>更频繁且更有力地撞击容器壁（collide harder and more frequently）</strong>，推动容器膨胀使体积增大；
+          <br>② <strong>定温加压（P ↑ → V ↓）：</strong>气体粒子间存在大量空隙，增大外压将粒子<strong>压得更紧密（forced closer together）</strong>，体积缩小、单位面积碰撞频率增加。</li>
+        <li><strong>扩散（Diffusion）与相对分子质量 Mᵣ：</strong>粒子因无规则运动从高浓度向低浓度净移动至均匀混合。同温下各气体平均动能相同，<strong>Mᵣ 越小（分子越轻）→ 运动越快 → 扩散速率越快</strong>。经典浓氨水 + 浓盐酸玻璃管实验：<code>NH₃(g) + HCl(g) → NH₄Cl(s)</code>，因 <code>Mᵣ(NH₃) = 17 &lt; Mᵣ(HCl) = 36.5</code>，<code>NH₃</code> 走得更远，<strong>白色氯化铵烟环明显偏靠 HCl 一端形成</strong>（若整管加热，双方皆加速，白烟<strong>出现时间缩短</strong>但相对位置仍在 HCl 端）。</li>
+      </ul>
+    </div>
+
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 300" width="740" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="图3.1 加热曲线平台微观机理图与NH3和HCl扩散相遇位置对比图">
+        <defs>
+          <marker id="f03-arr-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--svg-blue)" />
+          </marker>
+          <marker id="f03-arr-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--svg-red)" />
+          </marker>
+          <marker id="f03-arr-k" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--svg-ink)" />
+          </marker>
+        </defs>
+
+        <!-- Left Panel: Heating Curve & Plateau Mechanism -->
+        <rect x="12" y="10" width="350" height="280" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="187" y="30" text-anchor="middle" font-size="11.8" font-weight="800" fill="var(--svg-ink)">加热曲线平台期微观机理 (Heating Curve)</text>
+
+        <!-- Axes -->
+        <line x1="56" y1="216" x2="56" y2="48" stroke="var(--svg-ink)" stroke-width="1.6" marker-end="url(#f03-arr-k)" />
+        <line x1="56" y1="216" x2="342" y2="216" stroke="var(--svg-ink)" stroke-width="1.6" marker-end="url(#f03-arr-k)" />
+        <text x="34" y="56" text-anchor="middle" font-size="9.5" font-weight="700" fill="var(--svg-ink)">Temp</text>
+        <text x="328" y="230" text-anchor="middle" font-size="9.5" font-weight="700" fill="var(--svg-ink)">Time</text>
+
+        <!-- m.p. and b.p. reference dashes -->
+        <line x1="56" y1="168" x2="104" y2="168" stroke="var(--svg-muted)" stroke-width="1" stroke-dasharray="3,3" />
+        <text x="35" y="171" text-anchor="middle" font-size="9" font-weight="700" fill="var(--svg-blue)">m.p.</text>
+        <line x1="56" y1="106" x2="218" y2="106" stroke="var(--svg-muted)" stroke-width="1" stroke-dasharray="3,3" />
+        <text x="35" y="109" text-anchor="middle" font-size="9" font-weight="700" fill="var(--svg-red)">b.p.</text>
+
+        <!-- Curve -->
+        <polyline points="62,206 104,168 172,168 218,106 292,106 334,62" fill="none" stroke="var(--svg-teal)" stroke-width="2.6" />
+        <circle cx="104" cy="168" r="3.5" fill="var(--svg-blue)" />
+        <circle cx="172" cy="168" r="3.5" fill="var(--svg-blue)" />
+        <circle cx="218" cy="106" r="3.5" fill="var(--svg-red)" />
+        <circle cx="292" cy="106" r="3.5" fill="var(--svg-red)" />
+
+        <!-- Segment Labels -->
+        <text x="86" y="196" text-anchor="middle" font-size="9" font-weight="700" fill="var(--svg-ink)">S</text>
+        <text x="138" y="159" text-anchor="middle" font-size="9.2" font-weight="800" fill="var(--svg-blue)">熔化平台 (S+L)</text>
+        <text x="138" y="182" text-anchor="middle" font-size="8.6" fill="var(--svg-muted)">热能破除晶格引力</text>
+        <text x="202" y="142" text-anchor="middle" font-size="9" font-weight="700" fill="var(--svg-ink)">L</text>
+        <text x="255" y="97" text-anchor="middle" font-size="9.2" font-weight="800" fill="var(--svg-red)">沸腾平台 (L+G)</text>
+        <text x="255" y="120" text-anchor="middle" font-size="8.6" fill="var(--svg-muted)">热能克服分子间引力</text>
+        <text x="319" y="88" text-anchor="middle" font-size="9" font-weight="700" fill="var(--svg-ink)">G</text>
+
+        <!-- Bottom Mechanism Box -->
+        <rect x="24" y="238" width="326" height="44" rx="6" fill="rgba(13,148,136,0.09)" stroke="var(--svg-teal)" stroke-width="1.2" />
+        <text x="187" y="256" text-anchor="middle" font-size="9.2" font-weight="800" fill="var(--svg-ink)">平台段平均动能不变 → 温度恒定；冷却放热同理维持平台</text>
+        <text x="187" y="272" text-anchor="middle" font-size="8.8" fill="var(--svg-muted)">纯净物呈水平锐利平台 ｜ 混入杂质：熔点降、沸点升且变倾斜</text>
+
+        <!-- Right Panel: NH3 vs HCl Diffusion Tube -->
+        <rect x="378" y="10" width="350" height="280" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="553" y="30" text-anchor="middle" font-size="11.8" font-weight="800" fill="var(--svg-ink)">NH₃ 与 HCl 扩散相遇位置对比 (Mᵣ 反比律)</text>
+
+        <!-- Cotton Wool Labels -->
+        <text x="434" y="64" text-anchor="middle" font-size="10" font-weight="800" fill="var(--svg-blue)">浓氨水 NH₃(g)</text>
+        <text x="434" y="79" text-anchor="middle" font-size="9" font-weight="700" fill="var(--svg-blue)">Mᵣ = 17 (更轻)</text>
+
+        <text x="672" y="64" text-anchor="middle" font-size="10" font-weight="800" fill="var(--svg-red)">浓盐酸 HCl(g)</text>
+        <text x="672" y="79" text-anchor="middle" font-size="9" font-weight="700" fill="var(--svg-red)">Mᵣ = 36.5 (更重)</text>
+
+        <!-- Glass Tube -->
+        <rect x="412" y="92" width="282" height="44" rx="4" fill="rgba(148,163,184,0.08)" stroke="var(--svg-ink)" stroke-width="1.8" />
+        <!-- Left & Right Cotton Wool -->
+        <rect x="415" y="95" width="20" height="38" rx="2" fill="rgba(37,99,235,0.24)" stroke="var(--svg-blue)" stroke-width="1.2" />
+        <rect x="671" y="95" width="20" height="38" rx="2" fill="rgba(220,38,38,0.24)" stroke="var(--svg-red)" stroke-width="1.2" />
+
+        <!-- Diffusion Arrows -->
+        <line x1="440" y1="114" x2="594" y2="114" stroke="var(--svg-blue)" stroke-width="2.3" marker-end="url(#f03-arr-b)" />
+        <text x="515" y="107" text-anchor="middle" font-size="8.8" font-weight="700" fill="var(--svg-blue)">扩散更快 · 行程更长</text>
+
+        <line x1="666" y1="114" x2="612" y2="114" stroke="var(--svg-red)" stroke-width="2.3" marker-end="url(#f03-arr-r)" />
+        <text x="639" y="107" text-anchor="middle" font-size="8.4" font-weight="700" fill="var(--svg-red)">较慢</text>
+
+        <!-- White NH4Cl Smoke Ring -->
+        <rect x="598" y="94" width="9" height="40" rx="2" fill="rgba(255,255,255,0.85)" stroke="var(--svg-teal)" stroke-width="1.8" stroke-dasharray="3,2" />
+        <line x1="602" y1="136" x2="602" y2="156" stroke="var(--svg-teal)" stroke-width="1.5" />
+        <text x="580" y="169" text-anchor="middle" font-size="9.8" font-weight="800" fill="var(--svg-teal)">NH₄Cl(s) 白色烟环</text>
+        <text x="580" y="184" text-anchor="middle" font-size="9" font-weight="700" fill="var(--svg-red)">明显偏靠 HCl 一端生成！</text>
+
+        <!-- Bottom Quantitative Rules Box -->
+        <rect x="394" y="196" width="318" height="86" rx="6" fill="rgba(37,99,235,0.07)" stroke="var(--svg-grid)" stroke-width="1.2" />
+        <text x="553" y="215" text-anchor="middle" font-size="9.8" font-weight="800" fill="var(--svg-ink)">化学方程式：NH₃(g) + HCl(g) → NH₄Cl(s)</text>
+        <text x="553" y="233" text-anchor="middle" font-size="9" fill="var(--svg-ink)">核心结论：同温下，Mᵣ 越小 → 分子平均速率越大 → 扩散越快</text>
+        <text x="553" y="250" text-anchor="middle" font-size="8.9" fill="var(--svg-muted)">Mᵣ(NH₃)=17 &lt; Mᵣ(HCl)=36.5 → 相同时间内 NH₃ 扩散距离远超 HCl</text>
+        <text x="553" y="268" text-anchor="middle" font-size="8.9" font-weight="700" fill="var(--svg-amber)">升温实验：两气体同时变快 → 白烟出现时间缩短，相对位置仍在 HCl 端</text>
+      </svg>
+      <div class="svg-caption">图 3.1 · 加热曲线平台期粒子克服引力机理（左）与 NH₃ / HCl 玻璃管扩散 Mᵣ 定量对比（右）</div>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>2. Ch 2 原子结构、1–20 号电子排布与同位素加权 Aᵣ (Atomic Structure &amp; Isotopes) <span class="badge-core">Core</span> <span class="badge-ext">Extended</span></h4>
+    <div class="table-wrap">
+      <table class="sprint-table">
+        <thead>
+          <tr>
+            <th>粒子 Particle</th>
+            <th>相对电荷 Relative Charge</th>
+            <th>相对质量 Relative Mass</th>
+            <th>位置 Location</th>
+            <th>核心决定规律 Key Rules</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>质子 Proton (p)</strong></td>
+            <td><code>+1</code></td>
+            <td><code>1</code></td>
+            <td>原子核（Nucleus）</td>
+            <td><strong>Proton number (Z)</strong> = 质子数 = 原子序数，<strong>唯一决定元素种类</strong></td>
+          </tr>
+          <tr>
+            <td><strong>中子 Neutron (n)</strong></td>
+            <td><code>0</code></td>
+            <td><code>1</code></td>
+            <td>原子核（Nucleus）</td>
+            <td><strong>Nucleon number (A)</strong> = 质子数 + 中子数（故 <code>中子数 = A − Z</code>）</td>
+          </tr>
+          <tr>
+            <td><strong>电子 Electron (e⁻)</strong></td>
+            <td><code>−1</code></td>
+            <td><code>1/1840</code>（可忽略）</td>
+            <td>核外电子壳层（Shells）</td>
+            <td>电中性原子 <code>e⁻ = p</code>；成离子时<strong>只改变 e⁻，p 与 n 绝不变</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="formula-card">
+      <div class="formula-main">
+        前 20 号电子壳层规则：2, 8, 8, 2 &nbsp;｜&nbsp; 加权 Aᵣ = <span class="frac"><span class="num">Σ (同位素质量数 × 百分丰度 %)</span><span class="den">100</span></span>
+      </div>
+      <ul style="margin-bottom: 0;">
+        <li><strong>1–20 号核外排布与周期表铁律：</strong>第 1 层至第 3 层上限依次为 <code>2, 8, 8</code>（如 <code>₁₇Cl: 2,8,7</code>；<code>₁₉K: 2,8,8,1</code>；<code>₂₀Ca: 2,8,8,2</code>）。<strong>已占电子层数 = 周期序数 (Period)</strong>；<strong>最外层电子数 = 主族序数 (Group)</strong>（特例：氦 <code>₂He</code> 排布为 <code>2</code>，第一层满壳层，属第 <strong>VIII / 0 族</strong>惰性气体！）。</li>
+        <li><strong>同族元素化学性质相似原因：</strong>同族原子具有<strong>相同数目的最外层电子（same number of outer-shell electrons）</strong>，因此化学反应中得失电子趋势一致。</li>
+        <li><strong>同位素（Isotopes）考纲标准定义：</strong><strong>Atoms of the same element that have the same number of protons (atomic number) but different numbers of neutrons (nucleon numbers).</strong></li>
+        <li><strong>同位素性质对比：</strong>① <strong>化学性质完全相同</strong>（因为质子数相同 → 电子排布与<strong>最外层电子数完全相同</strong>）；② <strong>物理性质微异</strong>（密度、扩散速率、熔沸点因原子质量不同而略有差异）。例：氯由 <code>75% ³⁵Cl</code> 和 <code>25% ³⁷Cl</code> 组成 → <code>Aᵣ(Cl) = (35×75 + 37×25) ÷ 100 = <strong>35.5</strong></code>（检验：数值必在最轻与最重同位素之间且偏向高丰度端）。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>3. Ch 4 化合价交叉推式、配平状态符号与净离子方程式 (Formulae &amp; Equations) <span class="badge-core">Core</span> <span class="badge-ext">Extended</span></h4>
+    <div class="table-wrap">
+      <table class="sprint-table">
+        <thead>
+          <tr>
+            <th>常见离子电荷</th>
+            <th>必背金属 / 非金属阳离子</th>
+            <th>必背简单阴离子</th>
+            <th>高频必背多原子离子团 Polyatomic Ions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1+ / 1−</strong></td>
+            <td><code>H⁺</code>, <code>Na⁺</code>, <code>K⁺</code>, <strong><code>Ag⁺</code></strong></td>
+            <td><code>Cl⁻</code>, <code>Br⁻</code>, <code>I⁻</code></td>
+            <td>铵根 <strong><code>NH₄⁺</code></strong> (+1) ｜ 氢氧根 <strong><code>OH⁻</code></strong> (−1) ｜ 硝酸根 <strong><code>NO₃⁻</code></strong> (−1)</td>
+          </tr>
+          <tr>
+            <td><strong>2+ / 2−</strong></td>
+            <td><code>Mg²⁺</code>, <code>Ca²⁺</code>, <strong><code>Zn²⁺</code></strong>, <strong><code>Cu²⁺</code></strong>, <strong><code>Fe²⁺</code></strong>, <code>Pb²⁺</code></td>
+            <td><code>O²⁻</code>, <code>S²⁻</code></td>
+            <td>碳酸根 <strong><code>CO₃²⁻</code></strong> (−2) ｜ 硫酸根 <strong><code>SO₄²⁻</code></strong> (−2)</td>
+          </tr>
+          <tr>
+            <td><strong>3+ / 3−</strong></td>
+            <td><code>Al³⁺</code>, <strong><code>Fe³⁺</code></strong></td>
+            <td><code>N³⁻</code></td>
+            <td>磷酸根 <code>PO₄³⁻</code> (−3)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout examiner-tip">
+      <div class="callout-title">🎯 交叉推式三铁律 · 质量守恒配平 · 净离子方程式四步去旁观离子法</div>
+      <ol style="margin-bottom: 0;">
+        <li><strong>十字交叉与括号铁律：</strong>电荷总和必须为 <code>0</code>；交叉后的下标能约分必约分（<code>Mg²⁺ + O²⁻ → MgO</code>）；<strong>仅当多原子离子团个数 ≥ 2 时加括号</strong>（如 <code>Fe₂(SO₄)₃</code>, <code>(NH₄)₂CO₃</code>, <code>Zn(NO₃)₂</code>；单个不加括号如 <code>NH₄Cl</code>, <code>CuSO₄</code>）。过渡金属罗马数字表示阳离子正电荷（如 Iron(II) = <code>Fe²⁺</code>, Iron(III) = <code>Fe³⁺</code>）。</li>
+        <li><strong>配平与状态符号红线：</strong>遵循质量守恒，<strong>只能调整化学式前的化学计量数，绝对禁止改动化学式角标！</strong>牢记七大双原子单质 <code>H₂, N₂, O₂, F₂, Cl₂, Br₂, I₂</code>。四大状态符号：<code>(s)</code> 固体/沉淀、<code>(l)</code> 纯液体/熔融盐、<code>(g)</code> 气体、<code>(aq)</code> 水溶液。</li>
+        <li><strong>Ionic Equations（净离子方程式）四步剔除旁观离子（Spectator ions）法：</strong>
+          <br>① 写出完整配平符号方程式并标明状态符号；
+          <br>② <strong>仅将 <code>(aq)</code> 强电解质（可溶盐、酸、可溶碱）拆成离子</strong>——<strong><code>(s)</code> 沉淀/金属、<code>(l)</code> 水、<code>(g)</code> 气体及 <code>Cl₂(aq)</code> 等共价分子绝不拆！</strong>
+          <br>③ 消去反应前后完全相同的<strong>旁观离子（spectator ions）</strong>（常见：<code>Na⁺</code>, <code>K⁺</code>, <code>NO₃⁻</code>）；
+          <br>④ 核查两端原子数目守恒与<strong>总净电荷相等</strong>。
+        </li>
+      </ol>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">📘 四类高频净离子方程式秒杀模版</div>
+      <p style="margin-bottom: 0;">
+        • <strong>强酸碱中和：</strong><code>HCl(aq) + NaOH(aq) → NaCl(aq) + H₂O(l)</code> → 消去 <code>Na⁺, Cl⁻</code> ⇒ <strong><code>H⁺(aq) + OH⁻(aq) → H₂O(l)</code></strong><br>
+        • <strong>沉淀反应：</strong><code>AgNO₃(aq) + NaCl(aq) → AgCl(s) + NaNO₃(aq)</code> → 消去 <code>Na⁺, NO₃⁻</code> ⇒ <strong><code>Ag⁺(aq) + Cl⁻(aq) → AgCl(s)</code></strong><br>
+        • <strong>金属置换：</strong><code>Zn(s) + CuSO₄(aq) → ZnSO₄(aq) + Cu(s)</code> → 消去 <code>SO₄²⁻</code> ⇒ <strong><code>Zn(s) + Cu²⁺(aq) → Zn²⁺(aq) + Cu(s)</code></strong>（电荷均 +2）<br>
+        • <strong>酸与可溶碳酸盐：</strong><code>Na₂CO₃(aq) + 2HCl(aq) → 2NaCl(aq) + H₂O(l) + CO₂(g)</code> → 消去 <code>2Na⁺, 2Cl⁻</code> ⇒ <strong><code>CO₃²⁻(aq) + 2H⁺(aq) → H₂O(l) + CO₂(g)</code></strong>
+      </p>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section sec-summary" id="sec-core2">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>核心板块二 · Ch 6 电化学终极通关（电解矩阵、电镀与氢氧燃料电池）</h3>
+      <div class="section-en-sub">Conductors vs Electrolytes, PANIC &amp; OIL RIG, Selective Discharge, 6 Mandatory Electrolyses, Electroplating &amp; Fuel Cells</div>
+      <div class="tier-row">
+        <span class="badge-core">Core + Extended 必考</span>
+        <span class="badge-ext">2023+ 新考纲重点：H₂–O₂ Fuel Cell</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-core2">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>1. 导电本质对比、PANIC 铁律与竞争放电序列 <span class="badge-core">Core</span> <span class="badge-ext">Extended</span></h4>
+    <ul>
+      <li><strong>导电载流子本质区分（极其高频陷阱）：</strong>
+        <br>① <strong>金属导线 &amp; 石墨棒（Metals &amp; Graphite）：</strong>依靠<strong>自由移动的离域电子（mobile / delocalised electrons）</strong>导电，仅产热不分解；
+        <br>② <strong>电解质（熔融盐 molten / 水溶液 aqueous）：</strong>依靠<strong>自由移动的正负离子（mobile ions）</strong>定向迁移并在电极放电分解；
+        <br>③ <strong>固态离子晶体（如 <code>NaCl(s)</code>, <code>PbBr₂(s)</code>）：</strong>离子被锁定在晶格中<strong>不能移动（ions cannot move）</strong>，因此完全不导电。
+      </li>
+      <li><strong>电极命名与氧化还原铁律：</strong>
+        <br>• <strong><code>PANIC</code>：</strong><strong>P</strong>ositive <strong>A</strong>node（接电源正极 +） ｜ <strong>N</strong>egative <strong>I</strong>s <strong>C</strong>athode（接电源负极 −）。
+        <br>• <strong><code>OIL RIG</code>：</strong><strong>O</strong>xidation <strong>I</strong>s <strong>L</strong>oss of electrons（发生在<strong>阳极 Anode</strong>）；<strong>R</strong>eduction <strong>I</strong>s <strong>G</strong>ain of electrons（发生在<strong>阴极 Cathode</strong>）。
+      </li>
+      <li><strong>水溶液优先放电规则（惰性电极 Inert carbon/Pt）：</strong>水微弱提供 <code>H⁺(aq)</code> 与 <code>OH⁻(aq)</code>：
+        <br>• <strong>阴极 (−) 阳离子竞争：</strong>金属活动性强于氢（<code>K⁺, Na⁺, Ca²⁺, Mg²⁺, Al³⁺, Zn²⁺, Fe²⁺</code>）→ <strong><code>H⁺</code> 优先得电子放出 <code>H₂(g)</code></strong>；弱于氢（<code>Cu²⁺, Ag⁺</code>）→ <strong>金属离子优先析出金属单质</strong>。
+        <br>• <strong>阳极 (+) 阴离子竞争：</strong><strong>浓卤化物</strong>（浓 <code>Cl⁻, Br⁻, I⁻</code>）→ 优先失电子生成卤素单质（<code>Cl₂, Br₂, I₂</code>）；<strong>极稀卤化物或含氧酸根</strong>（<code>SO₄²⁻, NO₃⁻, CO₃²⁻</code> 永不放电）→ <strong><code>OH⁻</code> 优先失电子放出 <code>O₂(g)</code></strong>（<code>4OH⁻ → O₂ + 2H₂O + 4e⁻</code>）。
+        <br>• <strong>活性金属阳极例外：</strong>若使用铜电极（而非惰性碳/铂），阳极铜本身优先氧化溶解：<code>Cu(s) → Cu²⁺(aq) + 2e⁻</code>。
+      </li>
+    </ul>
+
+    <div class="callout common-mistake">
+      <div class="callout-title">🚨 绝对 0 分红线：电子绝不在电解液内穿行 · 半方程式必验原子与电荷双守恒</div>
+      <p style="margin-bottom: 0;">
+        1. 回答导电原理时，绝不能写“electrons move through the electrolyte”——正确描述为：<strong>electrons move through the external wires/electrodes, while ions move through the molten/aqueous electrolyte</strong>。<br>
+        2. 写离子半方程式（Ionic half-equations）务必同时检查<strong>原子数平衡</strong>与<strong>左右总电荷相等</strong>（推荐把 <code>+ ne⁻</code> 写在左端表示阴极得电子，把 <code>+ ne⁻</code> 写在右端表示阳极失电子，例如 <code>4OH⁻ → O₂ + 2H₂O + 4e⁻</code> 左侧总电荷 −4，右侧总电荷 0 + 0 − 4 = −4）。
+      </p>
+    </div>
+
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 310" width="740" height="310" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="图3.2 电解池PANIC与OIL RIG电子离子双流向全景图">
+        <defs>
+          <marker id="f03-e-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--svg-red)" />
+          </marker>
+          <marker id="f03-e-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--svg-blue)" />
+          </marker>
+        </defs>
+
+        <!-- Outer Frame -->
+        <rect x="8" y="8" width="724" height="294" rx="8" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+
+        <!-- d.c. Power Supply -->
+        <rect x="280" y="18" width="180" height="34" rx="6" fill="rgba(148,163,184,0.14)" stroke="var(--svg-ink)" stroke-width="1.8" />
+        <text x="370" y="39" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-ink)">直流电源 d.c.  +  |  −</text>
+
+        <!-- External Wires & Electron Flow -->
+        <polyline points="280,35 196,35 196,104" fill="none" stroke="var(--svg-red)" stroke-width="2.4" />
+        <line x1="196" y1="88" x2="196" y2="54" stroke="var(--svg-red)" stroke-width="2.2" marker-end="url(#f03-e-red)" />
+        <text x="116" y="54" text-anchor="middle" font-size="9.5" font-weight="800" fill="var(--svg-red)">外电路：e⁻ 流回正极 ↑</text>
+        <text x="116" y="69" text-anchor="middle" font-size="8.6" fill="var(--svg-muted)">（导线内部电子导电）</text>
+
+        <polyline points="460,35 544,35 544,104" fill="none" stroke="var(--svg-blue)" stroke-width="2.4" />
+        <line x1="544" y1="54" x2="544" y2="90" stroke="var(--svg-blue)" stroke-width="2.2" marker-end="url(#f03-e-blue)" />
+        <text x="624" y="54" text-anchor="middle" font-size="9.5" font-weight="800" fill="var(--svg-blue)">外电路：e⁻ 流入阴极 ↓</text>
+        <text x="624" y="69" text-anchor="middle" font-size="8.6" fill="var(--svg-muted)">（电源负极泵出电子）</text>
+
+        <!-- Electrolyte Tank -->
+        <rect x="162" y="114" width="416" height="136" rx="5" fill="rgba(2,132,199,0.08)" stroke="var(--svg-ink)" stroke-width="2" />
+        <line x1="162" y1="128" x2="578" y2="128" stroke="var(--svg-blue)" stroke-width="1.2" stroke-dasharray="4,3" />
+
+        <!-- Anode (+) and Cathode (-) Bars -->
+        <rect x="184" y="102" width="24" height="106" rx="3" fill="#475569" stroke="var(--svg-ink)" stroke-width="1.4" />
+        <rect x="532" y="102" width="24" height="106" rx="3" fill="#475569" stroke="var(--svg-ink)" stroke-width="1.4" />
+        <text x="172" y="223" text-anchor="start" font-size="8.8" font-weight="800" fill="var(--svg-red)">阳极 Anode (+)</text>
+        <text x="568" y="223" text-anchor="end" font-size="8.8" font-weight="800" fill="var(--svg-blue)">阴极 Cathode (−)</text>
+
+        <!-- Internal Ion Migration -->
+        <circle cx="370" cy="158" r="14" fill="rgba(220,38,38,0.16)" stroke="var(--svg-red)" stroke-width="1.6" />
+        <text x="370" y="162" text-anchor="middle" font-size="10" font-weight="800" fill="var(--svg-red)">X⁻</text>
+        <line x1="350" y1="158" x2="220" y2="158" stroke="var(--svg-red)" stroke-width="2" marker-end="url(#f03-e-red)" />
+        <text x="286" y="149" text-anchor="middle" font-size="9.2" font-weight="700" fill="var(--svg-red)">阴离子 Anions (−) 移向阳极</text>
+
+        <circle cx="370" cy="198" r="14" fill="rgba(37,99,235,0.16)" stroke="var(--svg-blue)" stroke-width="1.6" />
+        <text x="370" y="202" text-anchor="middle" font-size="10" font-weight="800" fill="var(--svg-blue)">M⁺</text>
+        <line x1="390" y1="198" x2="520" y2="198" stroke="var(--svg-blue)" stroke-width="2" marker-end="url(#f03-e-blue)" />
+        <text x="454" y="189" text-anchor="middle" font-size="9.2" font-weight="700" fill="var(--svg-blue)">阳离子 Cations (+) 移向阴极</text>
+
+        <text x="370" y="240" text-anchor="middle" font-size="9.2" font-weight="700" fill="var(--svg-teal)">熔融态或水溶液电解质 (Electrolyte：自由移动离子)</text>
+
+        <!-- Left Box: PANIC + OIL -->
+        <rect x="16" y="114" width="134" height="136" rx="6" fill="rgba(220,38,38,0.06)" stroke="var(--svg-red)" stroke-width="1.3" />
+        <text x="83" y="133" text-anchor="middle" font-size="10.2" font-weight="800" fill="var(--svg-red)">PA: Positive Anode</text>
+        <text x="83" y="151" text-anchor="middle" font-size="9.5" font-weight="800" fill="var(--svg-ink)">OIL 氧化失电子</text>
+        <text x="83" y="168" text-anchor="middle" font-size="8.6" fill="var(--svg-muted)">Oxidation Is Loss</text>
+        <text x="83" y="191" text-anchor="middle" font-size="9" font-weight="700" fill="var(--svg-ink)">2Br⁻ → Br₂ + 2e⁻</text>
+        <text x="83" y="209" text-anchor="middle" font-size="8.7" font-weight="700" fill="var(--svg-ink)">4OH⁻ → O₂+2H₂O+4e⁻</text>
+        <text x="83" y="227" text-anchor="middle" font-size="9" font-weight="700" fill="var(--svg-ink)">Cu → Cu²⁺ + 2e⁻</text>
+
+        <!-- Right Box: NIC + RIG -->
+        <rect x="590" y="114" width="134" height="136" rx="6" fill="rgba(37,99,235,0.06)" stroke="var(--svg-blue)" stroke-width="1.3" />
+        <text x="657" y="133" text-anchor="middle" font-size="9.4" font-weight="800" fill="var(--svg-blue)">NIC: Negative Cathode</text>
+        <text x="657" y="151" text-anchor="middle" font-size="9.5" font-weight="800" fill="var(--svg-ink)">RIG 还原得电子</text>
+        <text x="657" y="168" text-anchor="middle" font-size="8.6" fill="var(--svg-muted)">Reduction Is Gain</text>
+        <text x="657" y="191" text-anchor="middle" font-size="9" font-weight="700" fill="var(--svg-ink)">Pb²⁺ + 2e⁻ → Pb</text>
+        <text x="657" y="209" text-anchor="middle" font-size="9" font-weight="700" fill="var(--svg-ink)">2H⁺ + 2e⁻ → H₂</text>
+        <text x="657" y="227" text-anchor="middle" font-size="9" font-weight="700" fill="var(--svg-ink)">Cu²⁺ + 2e⁻ → Cu</text>
+
+        <!-- Bottom Golden Rule Banner -->
+        <rect x="16" y="260" width="708" height="32" rx="6" fill="rgba(217,119,6,0.12)" stroke="var(--svg-amber)" stroke-width="1.2" />
+        <text x="370" y="280" text-anchor="middle" font-size="9.8" font-weight="800" fill="var(--svg-amber)">导电闭环铁律：外电路靠自由电子 e⁻ 移动导电 ｜ 电解质内部只靠自由移动离子导电，绝无电子穿行液体！</text>
+      </svg>
+      <div class="svg-caption">图 3.2 · 电解池 PANIC 极性与 OIL RIG 氧化还原半反应及电子/离子双流向全景</div>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>2. 六大必考电解体系对照矩阵、电镀三要素与氢氧燃料电池 <span class="badge-core">Core</span> <span class="badge-ext">Extended</span></h4>
+    <div class="table-wrap">
+      <table class="sprint-table">
+        <thead>
+          <tr>
+            <th>电解体系与电极</th>
+            <th>阴极 Cathode (−) 产物、现象与半方程</th>
+            <th>阳极 Anode (+) 产物、现象与半方程</th>
+            <th>溶液 pH 与颜色变化</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. 熔融 PbBr₂(l)</strong><br>惰性石墨电极（加热）</td>
+            <td><strong>银灰色熔融铅珠 Pb(l)</strong><br><code>Pb²⁺(l) + 2e⁻ → Pb(l)</code></td>
+            <td><strong>红棕色溴蒸气 Br₂(g)</strong> (red-brown vapour)<br><code>2Br⁻(l) → Br₂(g) + 2e⁻</code></td>
+            <td>无水；固态 PbBr₂(s) 不导电，熔融后分解为 Pb + Br₂</td>
+          </tr>
+          <tr>
+            <td><strong>2. 浓 NaCl(aq)</strong><br>Brine · 惰性碳极</td>
+            <td><strong>无色气泡 H₂(g)</strong>（燃爆声 squeaky pop）<br><code>2H⁺(aq) + 2e⁻ → H₂(g)</code></td>
+            <td><strong>黄绿色氯气 Cl₂(g)</strong>（湿蓝石蕊先红后褪白）<br><code>2Cl⁻(aq) → Cl₂(g) + 2e⁻</code></td>
+            <td>剩 Na⁺ 与 OH⁻ → 强碱 <code>NaOH(aq)</code>，<strong>pH 升高</strong>（通用指示剂变紫蓝）</td>
+          </tr>
+          <tr>
+            <td><strong>3. 极稀 NaCl(aq)</strong><br>惰性碳/铂电极</td>
+            <td><strong>无色气泡 H₂(g)</strong>（体积 <strong>2 份</strong>）<br><code>2H⁺(aq) + 2e⁻ → H₂(g)</code></td>
+            <td><strong>无色气泡 O₂(g)</strong>（体积 <strong>1 份</strong>，复燃木条）<br><code>4OH⁻(aq) → O₂(g) + 2H₂O(l) + 4e⁻</code></td>
+            <td>实质电解水，NaCl 浓度微增，溶液仍中性（pH ≈ 7）</td>
+          </tr>
+          <tr>
+            <td><strong>4. 稀 H₂SO₄(aq)</strong><br>惰性铂/碳电极</td>
+            <td><strong>无色气泡 H₂(g)</strong>（体积比 <strong>2</strong>）<br><code>2H⁺(aq) + 2e⁻ → H₂(g)</code></td>
+            <td><strong>无色气泡 O₂(g)</strong>（SO₄²⁻ 不放电，体积比 <strong>1</strong>）<br><code>4OH⁻(aq) → O₂(g) + 2H₂O(l) + 4e⁻</code></td>
+            <td>实质电解水（<code>2H₂O → 2H₂ + O₂</code>）；硫酸略变浓，pH 保持强酸性</td>
+          </tr>
+          <tr>
+            <td><strong>5. CuSO₄(aq)</strong><br>惰性碳/铂电极</td>
+            <td><strong>粉红/红棕色固体铜 Cu(s)</strong> (pink-brown solid)<br><code>Cu²⁺(aq) + 2e⁻ → Cu(s)</code></td>
+            <td><strong>无色气泡 O₂(g)</strong> (effervescence)<br><code>4OH⁻(aq) → O₂(g) + 2H₂O(l) + 4e⁻</code></td>
+            <td>Cu²⁺ 耗尽 → <strong>蓝色变浅褪至无色</strong>；剩 H⁺+SO₄²⁻ → <strong>pH 降低</strong></td>
+          </tr>
+          <tr>
+            <td><strong>6. CuSO₄(aq)</strong><br>活性铜电极 (Active Cu)</td>
+            <td><strong>粉红棕色铜附着，阴极质量增加</strong><br><code>Cu²⁺(aq) + 2e⁻ → Cu(s)</code></td>
+            <td><strong>无气体！铜阳极溶解变细，质量减轻</strong><br><code>Cu(s) → Cu²⁺(aq) + 2e⁻</code></td>
+            <td>阳极补入 = 阴极析出 → <strong>蓝色深浅不变，pH 不变</strong>（精炼纯铜）</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <ul>
+      <li><strong>电镀（Electroplating）：</strong>两大目的：<strong>防腐蚀/防锈（prevent corrosion / rusting）</strong>与<strong>提升外观光泽（improve appearance）</strong>。三大配置口诀“<strong>物阴、镀阳、含离子液</strong>”：① <strong>阴极 (−)</strong> = 待镀物体（如铁钥匙/钢勺）；② <strong>阳极 (+)</strong> = 纯镀层金属（如纯银棒/纯铜片）；③ <strong>电解液</strong> = 含镀层金属离子的可溶性盐溶液（镀银用 <code>AgNO₃(aq)</code>，镀铜用 <code>CuSO₄(aq)</code>）。</li>
+      <li><strong>2023+ 新考纲必考 · 氢氧燃料电池（Hydrogen–oxygen fuel cell）：</strong>持续通入 <code>H₂</code> 与 <code>O₂</code>，直接将<strong>化学能转化为电能（chemical → electrical energy）</strong>。总反应：<strong><code>2H₂(g) + O₂(g) → 2H₂O(l)</code></strong>（Extended 酸性膜半反应：负极室 <code>2H₂ → 4H⁺ + 4e⁻</code>；正极室 <code>O₂ + 4H⁺ + 4e⁻ → 2H₂O</code>）。
+        <br>• <strong>优势（vs 汽油机）：</strong><strong>唯一化学产物是纯水</strong>，运行时零 <code>CO₂</code> 温室气体及 <code>CO / NOₓ</code> 有毒排放；能量转换效率高于内燃机；持续通气即可连续供电无需长时间充电。
+        <br>• <strong>缺点：</strong>氢气密度极低且易燃易爆，<strong>需高压沉重钢瓶或极低温储运</strong>；目前多数氢气仍从<strong>化石燃料</strong>制取（上游仍排 <code>CO₂</code>）；<strong>加氢站基础设施稀缺且成本高</strong>。
+      </li>
+    </ul>
+
+    <div class="lab-box" data-lab-type="f03"></div>
+  </div>
+</article>
+
+<article class="topic-section sec-practice" id="sec-sme">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>全真综合模考 · 65 分 Ch 1, 2, 4, 6 期末冲刺卷（75 分钟）</h3>
+      <div class="section-en-sub">Paper 2 MCQs (15 Marks) + Paper 4 Structured (35 Marks) + Paper 6 Experimental Analysis &amp; Design (15 Marks)</div>
+      <div class="tier-row">
+        <span class="badge-core">15 题即时批改 MCQ</span>
+        <span class="badge-ext">6 题剑桥 Mark Scheme 详批</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-sme">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>Section A · Paper 2 高频选择真题（15 题 × 1 分 = 15 分，建议 18 分钟）</h4>
+
+    <div class="exam-q" data-mcq-answer="C">
+      <div class="exam-q-head"><span class="q-tag">Q01 · Ch 1 三态粒子特征</span><span><span class="badge-core">Core</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">Which row correctly describes the arrangement and movement of particles in a liquid at room temperature?</div>
+      <div class="q-stem-cn">下列哪一行正确描述了室温下液体粒子的排布与运动状态？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>Regular arrangement | Vibrate about fixed positions</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>Regular arrangement | Slide past each other</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>Irregular arrangement | Slide past each other</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>Irregular arrangement | Move rapidly and randomly far apart</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！液体粒子虽紧密接触但排布无规则（irregular），且能彼此滑移（slide past each other）。" data-err="❌ 固体才是 regular + vibrate；气体才是 far apart + rapidly and randomly；液体为 irregular + slide past each other。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head"><span class="q-tag">Q02 · Ch 1 加热曲线平台机理</span><span><span class="badge-core">Core</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">Pure solid wax is heated steadily until it melts completely. Why does the temperature stay constant while the wax is melting?</div>
+      <div class="q-stem-cn">纯固态蜡受热熔化期间温度保持恒定不变的原因是什么？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>The wax stops absorbing heat energy from the surroundings.</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>The heat energy absorbed is used to overcome forces of attraction between particles.</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>The average kinetic energy of the wax particles increases rapidly.</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>Heat energy is released as new bonds form between particles.</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！熔化吸热平台期，能量全用于克服粒子间吸引作用力，粒子平均动能与温度不变。" data-err="❌ 熔化需要吸收热能去克服（overcome）粒子间作用力；冷却凝固时才是形成作用力放热。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="A">
+      <div class="exam-q-head"><span class="q-tag">Q03 · Ch 1 气体温压变化理论</span><span><span class="badge-core">Core</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">A fixed mass of gas is held inside a syringe with a movable piston. The temperature is kept constant while the piston is pushed in to increase the pressure. What happens to the gas particles?</div>
+      <div class="q-stem-cn">在恒温下推入注射器活塞增大气体压强，气体粒子会发生什么变化？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>They are pushed closer together and hit the walls more frequently, with unchanged average speed.</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>They move much faster because their kinetic energy increases.</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>The individual particles themselves shrink in size.</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>They move further apart and collide less frequently with the walls.</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！恒温意味着粒子平均动能和平均速率不变；加压仅缩小粒子间距，使单位时间内碰撞器壁更频繁。" data-err="❌ 注意前提是恒温（temperature kept constant），所以平均速率不变，且粒子自身大小永不缩小！"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="D">
+      <div class="exam-q-head"><span class="q-tag">Q04 · Ch 1 扩散速率与 Mᵣ 比较</span><span><span class="badge-ext">Extended</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">At the same temperature and pressure, which gas diffuses at the <strong>fastest</strong> rate? (Aᵣ: H = 1, C = 12, N = 14, O = 16, S = 32, Cl = 35.5)</div>
+      <div class="q-stem-cn">同温同压下，下列哪种气体的扩散速率<strong>最快</strong>？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>CO₂</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>SO₂</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>HCl</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>CH₄</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！计算 Mᵣ：CH₄ = 16，HCl = 36.5，CO₂ = 44，SO₂ = 64。Mᵣ 最小者扩散最快！" data-err="❌ 扩散速率与相对分子质量 Mᵣ 成反比：算出各选项 Mᵣ 后选最小者（CH₄ = 16）。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head"><span class="q-tag">Q05 · Ch 2 亚原子粒子性质</span><span><span class="badge-core">Core</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">Which row gives the correct relative mass and relative charge of an electron and a neutron?</div>
+      <div class="q-stem-cn">下列哪一行给出了电子与中子正确的相对质量与相对电荷？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>Electron: mass 1, charge −1 | Neutron: mass 1, charge 0</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>Electron: mass 1/1840, charge −1 | Neutron: mass 1, charge 0</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>Electron: mass 1/1840, charge +1 | Neutron: mass 0, charge 0</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>Electron: mass 1/1840, charge −1 | Neutron: mass 1, charge +1</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！电子相对质量约为 1/1840、带 −1 电荷；中子相对质量为 1、电中性（0）。" data-err="❌ 质子才是 +1，中子电荷为 0 且相对质量为 1，电子相对质量为 1/1840。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="C">
+      <div class="exam-q-head"><span class="q-tag">Q06 · Ch 2 离子微粒计数与周期表定位</span><span><span class="badge-core">Core</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">An ion Y²⁻ has the electronic configuration <code>2,8,8</code> and contains <code>18 neutrons</code>. What are the nucleon number of Y and the Group number of element Y?</div>
+      <div class="q-stem-cn">已知阴离子 Y²⁻ 电子排布为 <code>2,8,8</code> 且含 18 个中子。元素 Y 的核子数（质量数）与所属族序数各是多少？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>Nucleon number: 36 | Group VIII</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>Nucleon number: 36 | Group VI</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>Nucleon number: 34 | Group VI</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>Nucleon number: 32 | Group IV</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！Y²⁻ 共 18 个电子，说明得到 2 个电子前中性原子有 16 个电子和 16 个质子（排布 2,8,6 → 第 VI 族）；核子数 = 16 + 18 = 34。" data-err="❌ 易错陷阱！2,8,8 是得到 2 个电子后的离子排布，不能直接拿 18 当质子数！中性原子质子数 = 18 − 2 = 16（2,8,6）。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="A">
+      <div class="exam-q-head"><span class="q-tag">Q07 · Ch 2 同位素化学性质相同机理</span><span><span class="badge-ext">Extended</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">Why do isotopes of the same element, such as ¹²₆C and ¹⁴₆C, have identical chemical properties?</div>
+      <div class="q-stem-cn">为什么同种元素的同位素（如 ¹²₆C 和 ¹⁴₆C）具有完全相同的化学性质？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>They have the same number of electrons in their outer shell.</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>They have the same number of neutrons in their nucleus.</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>They have the same relative atomic mass and density.</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>They have different nucleon numbers.</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！化学反应只取决于核外最外层电子数，同位素质子数相同因而最外层电子数完全相同！" data-err="❌ 同位素中子数和质量不同（所以物理性质微异），化学性质相同是因为最外层电子数相同。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head"><span class="q-tag">Q08 · Ch 2 同位素加权 Aᵣ 推算</span><span><span class="badge-ext">Extended</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">Naturally occurring boron consists of <code>20.0%</code> ¹⁰B and <code>80.0%</code> ¹¹B. What is the relative atomic mass (Aᵣ) of boron?</div>
+      <div class="q-stem-cn">自然界硼元素含 20.0% 的 ¹⁰B 和 80.0% 的 ¹¹B，求硼的相对原子质量 Aᵣ。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>10.2</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>10.8</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>10.5</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>21.0</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！Aᵣ = (10 × 20.0 + 11 × 80.0) ÷ 100 = (200 + 880) ÷ 100 = 10.8（偏向丰度更高的 ¹¹B）。" data-err="❌ 别取简单平均 10.5！必须按百分丰度加权：(10×20 + 11×80) ÷ 100 = 10.8。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="D">
+      <div class="exam-q-head"><span class="q-tag">Q09 · Ch 4 化合价交叉与原子团括号</span><span><span class="badge-core">Core</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">What is the correct chemical formula for <strong>iron(III) sulfate</strong> and <strong>ammonium carbonate</strong>?</div>
+      <div class="q-stem-cn">硫酸铁（iron(III) sulfate）与碳酸铵（ammonium carbonate）的正确化学式组合是哪一项？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>FeSO₄ and NH₄CO₃</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>Fe₃(SO₄)₂ and NH₄(CO₃)₂</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>Fe₂SO₄₃ and (NH₄)₂(CO₃)</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>Fe₂(SO₄)₃ and (NH₄)₂CO₃</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！Fe³⁺ 与 SO₄²⁻ 交叉得 Fe₂(SO₄)₃；NH₄⁺ 与 CO₃²⁻ 交叉得 (NH₄)₂CO₃（1 个 CO₃²⁻ 不加括号）。" data-err="❌ 核对电荷：Fe³⁺(+3)配SO₄²⁻(−2)需2个Fe³⁺和3个SO₄²⁻；NH₄⁺(+1)配CO₃²⁻(−2)需2个NH₄⁺。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="C">
+      <div class="exam-q-head"><span class="q-tag">Q10 · Ch 4 方程式配平与状态符号</span><span><span class="badge-core">Core</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">Which balanced symbol equation, including state symbols, correctly represents the reaction between calcium carbonate and dilute hydrochloric acid?</div>
+      <div class="q-stem-cn">下列哪一项正确写出了碳酸钙与稀盐酸反应的配平符号方程式及状态符号？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><code>CaCO₃(aq) + HCl(aq) → CaCl(aq) + H₂O(l) + CO₂(g)</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><code>CaCO₃(s) + 2HCl(l) → CaCl₂(s) + H₂O(g) + CO₂(g)</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><code>CaCO₃(s) + 2HCl(aq) → CaCl₂(aq) + H₂O(l) + CO₂(g)</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><code>CaCO₃(s) + 2HCl(aq) → CaCl₂(aq) + H₂CO₃(g)</code></span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！CaCO₃ 难溶为 (s)，稀酸和可溶盐 CaCl₂ 为 (aq)，水为 (l)，二氧化碳为 (g)，且系数 2 满足守恒。" data-err="❌ CaCO₃ 不溶于水是 (s)，稀盐酸和生成的 CaCl₂ 是水溶液 (aq)，Ca²⁺ 需 2 个 Cl⁻ 组成 CaCl₂。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="A">
+      <div class="exam-q-head"><span class="q-tag">Q11 · Ch 4 净离子方程式辨析</span><span><span class="badge-ext">Extended</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">Aqueous barium chloride reacts with aqueous sodium sulfate to form a white precipitate of barium sulfate:<br><code>BaCl₂(aq) + Na₂SO₄(aq) → BaSO₄(s) + 2NaCl(aq)</code><br>What is the net ionic equation for this reaction?</div>
+      <div class="q-stem-cn">氯化钡溶液与硫酸钠溶液反应生成硫酸钡白色沉淀，其正确的净离子方程式是哪一项？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span><code>Ba²⁺(aq) + SO₄²⁻(aq) → BaSO₄(s)</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><code>2Na⁺(aq) + 2Cl⁻(aq) → 2NaCl(aq)</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span><code>Ba²⁺(aq) + SO₄²⁻(aq) → Ba²⁺(s) + SO₄²⁻(s)</code></span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span><code>BaCl₂(aq) + SO₄²⁻(aq) → BaSO₄(s) + 2Cl⁻(aq)</code></span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！Na⁺(aq) 与 Cl⁻(aq) 为旁观离子被消去，沉淀 BaSO₄(s) 绝不拆开。" data-err="❌ Na⁺ 和 Cl⁻ 在两边均以 (aq) 存在是旁观离子应消去；固体沉淀 BaSO₄(s) 不可拆写！"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head"><span class="q-tag">Q12 · Ch 6 导体与电解质微观机制</span><span><span class="badge-core">Core</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">When molten lead(II) bromide is electrolysed using carbon electrodes, which particles carry the electric charge through the carbon electrodes and through the molten lead(II) bromide?</div>
+      <div class="q-stem-cn">用碳电极电解熔融溴化铅时，分别是什么微观粒子在碳电极与熔融溴化铅中承载电荷？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>Carbon electrodes: ions | Molten PbBr₂: electrons</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>Carbon electrodes: electrons | Molten PbBr₂: ions</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>Carbon electrodes: electrons | Molten PbBr₂: electrons and ions</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>Carbon electrodes: atoms | Molten PbBr₂: molecules</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！石墨/碳电极与金属导线靠自由电子导电；熔融盐内部只能靠自由移动离子导电，绝无电子穿行。" data-err="❌ 牢记红线：熔融溴化铅中不存在自由电子，仅由移动的 Pb²⁺ 与 Br⁻ 离子携带电荷！"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="C">
+      <div class="exam-q-head"><span class="q-tag">Q13 · Ch 6 浓稀卤化物优先放电对比</span><span><span class="badge-ext">Extended</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">Which pair of products is formed at the anode when (1) concentrated aqueous sodium chloride and (2) very dilute aqueous sodium chloride are electrolysed using inert platinum electrodes?</div>
+      <div class="q-stem-cn">用惰性铂电极分别电解 (1) 浓氯化钠溶液 和 (2) 极稀氯化钠溶液时，阳极分别生成什么产物？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>(1) Oxygen | (2) Chlorine</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>(1) Hydrogen | (2) Oxygen</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>(1) Chlorine | (2) Oxygen</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>(1) Chlorine | (2) Hydrogen</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！浓溶液中大量 Cl⁻ 在阳极优先放电生成 Cl₂；极稀溶液中 Cl⁻ 极少，改由 OH⁻ 在阳极放电放出 O₂。" data-err="❌ 阳极吸引阴离子：浓时 Cl⁻ 放 Cl₂，极稀时 OH⁻ 放 O₂；氢气是在阴极生成的！"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="D">
+      <div class="exam-q-head"><span class="q-tag">Q14 · Ch 6 活性铜电极电解 CuSO₄(aq)</span><span><span class="badge-ext">Extended</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">Aqueous copper(II) sulfate is electrolysed using pure <strong>copper electrodes</strong>. Which statement is correct?</div>
+      <div class="q-stem-cn">使用纯铜电极电解硫酸铜溶液时，下列说法哪项正确？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>Oxygen gas is produced at the anode and the blue colour fades.</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>The mass of the anode increases and the mass of the cathode decreases.</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>The pH of the solution decreases significantly as sulfuric acid forms.</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>The anode dissolves (Cu → Cu²⁺ + 2e⁻) and the blue colour stays constant.</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！活性铜阳极自身氧化溶解，恰好补充阴极析出消耗的 Cu²⁺，故溶液蓝色与 pH 均保持不变！" data-err="❌ A 和 C 属于惰性碳/铂电极的现象；使用铜电极时阳极溶解减重、阴极增重、蓝色不变。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="A">
+      <div class="exam-q-head"><span class="q-tag">Q15 · Ch 6 氢氧燃料电池 (2023+ 必考)</span><span><span class="badge-core">Core</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">Which statement is a <strong>disadvantage</strong> of using hydrogen–oxygen fuel cells in cars compared with petrol engines?</div>
+      <div class="q-stem-cn">与汽油内燃机汽车相比，下列哪一项属于氢氧燃料电池汽车的<strong>缺点</strong>？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>Hydrogen gas is difficult to store and transport safely at high pressure and has few refuelling stations.</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>The fuel cell emits large amounts of carbon dioxide and oxides of nitrogen from its exhaust pipe.</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>The overall chemical reaction in the fuel cell produces carbon monoxide.</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>The fuel cell wastes more chemical energy as heat than an internal combustion engine.</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！氢气需高压或低温储运且易燃易爆、加氢基础设施少，是推广核心瓶颈；运行时只排水，不排 CO₂/CO/NOₓ。" data-err="❌ 燃料电池运行时只产生水（无 CO₂/CO/NOₓ 尾气），且能量转换效率更高；缺点在于氢气储运难与加氢站少。"></div>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>Section B · Paper 4 结构化大题（4 题，共 35 分，建议 40 分钟）</h4>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">Q16 · Ch 1 加热曲线平台与 NH₃/HCl 扩散综合</span><span><span class="badge-core">Core</span> <span class="badge-ext">Extended</span> <span class="q-marks">[8 marks]</span></span></div>
+      <div class="q-stem-en">
+        (a) A sample of pure solid stearic acid (melting point 69 °C) is heated steadily from 40 °C to 90 °C. Explain, in terms of particles and energy, why the temperature stays constant at 69 °C for several minutes during melting. [2]<br>
+        (b) A sealed balloon filled with helium gas is moved from a cold room (10 °C) into a warm room (35 °C) at constant atmospheric pressure. Use the kinetic particle theory to explain why the volume of the balloon increases. [2]<br>
+        (c) <span class="badge-ext">Extended</span> Cotton wool soaked in concentrated ammonia solution (releasing NH₃) and cotton wool soaked in concentrated hydrochloric acid (releasing HCl) are placed at opposite ends of a 1.0 m horizontal glass tube at 20 °C.<br>
+        (i) Write a balanced symbol equation, with state symbols, for the formation of the white solid ring. [2]<br>
+        (ii) State which end of the tube the white ring forms nearer to, and explain your answer using relative molecular masses (Aᵣ: H = 1, N = 14, Cl = 35.5). [2]
+      </div>
+      <div class="q-stem-cn">(a) 解释纯硬脂酸熔化平台期温度不变机理；(b) 粒子理论解释升温气球膨胀；(c) NH₃ 与 HCl 玻璃管扩散反应状态方程式及白烟位置定量解释。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 8 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">B1</span> (a) Heat energy absorbed is used to <strong>overcome the forces of attraction between particles</strong> (break the solid lattice); <span class="ms-mark">B1</span> therefore the <strong>average kinetic energy</strong> of the particles does not increase, so temperature stays constant.</p>
+          <p><span class="ms-mark">B1</span> (b) At higher temperature, helium atoms gain <strong>kinetic energy and move faster</strong>; <span class="ms-mark">B1</span> they collide with the inner walls of the balloon <strong>more frequently and harder (with greater force)</strong>, pushing the walls outward so volume increases.</p>
+          <p><span class="ms-mark">B1</span> (c)(i) Formulae: <code>NH₃ + HCl → NH₄Cl</code>; <span class="ms-mark">B1</span> state symbols: <strong><code>NH₃(g) + HCl(g) → NH₄Cl(s)</code></strong>.</p>
+          <p><span class="ms-mark">B1</span> (ii) Nearer to the <strong>hydrochloric acid (HCl) end</strong>, because <code>Mᵣ(NH₃) = 17</code> and <code>Mᵣ(HCl) = 36.5</code>; <span class="ms-mark">B1</span> NH₃ has a <strong>lower Mᵣ / lighter molecules</strong> so it diffuses <strong>faster</strong> and travels further in the same time.</p>
+          <p class="ms-cn">中文精析：(a) 必须明确写到“energy used to overcome forces of attraction”及“average kinetic energy unchanged”；(c)(ii) 务必算出 Mᵣ 数值 17 vs 36.5。</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">Q17 · Ch 2 原子/离子微粒数、同位素与 Aᵣ 加权计算</span><span><span class="badge-core">Core</span> <span class="badge-ext">Extended</span> <span class="q-marks">[9 marks]</span></span></div>
+      <div class="q-stem-en">
+        (a) Complete the table for the following three particles: [4]<br>
+        • Particle <strong>P</strong>: neutral atom ²⁷₁₃Al<br>
+        • Particle <strong>Q</strong>: sulfide ion ³²₁₆S²⁻<br>
+        • Particle <strong>R</strong>: potassium ion ³⁹₁₉K⁺<br>
+        For each particle, state: (i) number of protons, (ii) number of neutrons, (iii) number of electrons, and (iv) electronic configuration.<br>
+        (b) Magnesium has three stable isotopes: ²⁴₁₂Mg, ²⁵₁₂Mg and ²⁶₁₂Mg.<br>
+        (i) Define the term <em>isotopes</em>. [2]<br>
+        (ii) <span class="badge-ext">Extended</span> Explain why all three isotopes of magnesium have identical chemical properties. [1]<br>
+        (c) <span class="badge-ext">Extended</span> Naturally occurring gallium consists of <code>60.0%</code> ⁶⁹Ga and <code>40.0%</code> ⁷¹Ga. Calculate the relative atomic mass (Aᵣ) of gallium to 1 decimal place. [2]
+      </div>
+      <div class="q-stem-cn">(a) 写出 Al 原子、S²⁻ 离子与 K⁺ 离子的质子数、中子数、电子数及电子排布；(b) 同位素定义及化学性质完全相同原因；(c) 镓同位素加权平均 Aᵣ 计算。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 9 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">B1</span> (a) <strong>P (²⁷₁₃Al)</strong>: 13p, 14n, 13e⁻, config <code>2,8,3</code>;<br>
+          <span class="ms-mark">B1</span> <strong>Q (³²₁₆S²⁻)</strong>: 16p, 16n, 18e⁻, config <code>2,8,8</code>;<br>
+          <span class="ms-mark">B1</span> <strong>R (³⁹₁₉K⁺)</strong>: 19p, 20n, 18e⁻, config <code>2,8,8</code>;<br>
+          <span class="ms-mark">B1</span> (全表所有电子排布与质子/中子数全部精确无误给满 4 分；错 1 处扣 1 分)。</p>
+          <p><span class="ms-mark">B1</span> (b)(i) Atoms of the <strong>same element</strong> with the <strong>same number of protons</strong>; <span class="ms-mark">B1</span> but <strong>different numbers of neutrons</strong> (or different nucleon numbers).<br>
+          <span class="ms-mark">B1</span> (ii) They all have the <strong>same number of outer-shell electrons</strong> (2,8,2 — 2 outer electrons).</p>
+          <p><span class="ms-mark">M1</span> (c) <code>Aᵣ = (69 × 60.0 + 71 × 40.0) ÷ 100 = (4140 + 2840) ÷ 100</code>; <span class="ms-mark">A1</span> <code>= 6980 ÷ 100 = <strong>69.8</strong></code>.</p>
+          <p class="ms-cn">中文精析：注意 S²⁻ 与 K⁺ 虽然电子数都是 18（等电子体，排布皆为 2,8,8），但质子数分别为 16 和 19 绝不相同！</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">Q18 · Ch 4 化合价化学式、配平与净离子方程式</span><span><span class="badge-core">Core</span> <span class="badge-ext">Extended</span> <span class="q-marks">[8 marks]</span></span></div>
+      <div class="q-stem-en">
+        (a) Deduce the chemical formula for each of the following compounds: [3]<br>
+        (i) copper(II) nitrate &nbsp;&nbsp; (ii) zinc hydroxide &nbsp;&nbsp; (iii) iron(III) oxide<br>
+        (b) Write a balanced symbol equation, including state symbols, for the reaction of aqueous sodium hydroxide with dilute sulfuric acid to form aqueous sodium sulfate and water. [2]<br>
+        (c) <span class="badge-ext">Extended</span> Deduce the net ionic equation (with state symbols) for each reaction below, and name the spectator ions in (i): [3]<br>
+        (i) <code>CuSO₄(aq) + 2NaOH(aq) → Cu(OH)₂(s) + Na₂SO₄(aq)</code><br>
+        (ii) <code>Mg(s) + 2HCl(aq) → MgCl₂(aq) + H₂(g)</code>
+      </div>
+      <div class="q-stem-cn">(a) 写硝酸铜、氢氧化锌、氧化铁(III)化学式；(b) 写氢氧化钠溶液与稀硫酸中和的含状态配平方程式；(c) 推导两道反应的净离子方程式并指出 (i) 中的旁观离子。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 8 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">B1</span> (a)(i) <code>Cu(NO₃)₂</code> &nbsp; <span class="ms-mark">B1</span> (ii) <code>Zn(OH)₂</code> &nbsp; <span class="ms-mark">B1</span> (iii) <code>Fe₂O₃</code></p>
+          <p><span class="ms-mark">B1</span> (b) Correct formulae &amp; balancing: <code>2NaOH + H₂SO₄ → Na₂SO₄ + 2H₂O</code>; <span class="ms-mark">B1</span> state symbols: <strong><code>2NaOH(aq) + H₂SO₄(aq) → Na₂SO₄(aq) + 2H₂O(l)</code></strong>.</p>
+          <p><span class="ms-mark">B1</span> (c)(i) Net ionic: <strong><code>Cu²⁺(aq) + 2OH⁻(aq) → Cu(OH)₂(s)</code></strong>; <span class="ms-mark">B1</span> spectator ions: <strong><code>Na⁺</code> and <code>SO₄²⁻</code></strong> (sodium ions and sulfate ions).<br>
+          <span class="ms-mark">B1</span> (ii) Net ionic: <strong><code>Mg(s) + 2H⁺(aq) → Mg²⁺(aq) + H₂(g)</code></strong> (note Mg(s) and H₂(g) are not split; Cl⁻ is cancelled).</p>
+          <p class="ms-cn">中文精析：写 `Zn(OH)₂` 别忘加括号（否则写成 `ZnOH₂` 直接丢分）；写 `Mg(s) + 2H⁺(aq) → Mg²⁺(aq) + H₂(g)` 时检查两边净电荷均为 `+2`。</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">Q19 · Ch 6 熔融电解、电镀三要素与氢氧燃料电池</span><span><span class="badge-core">Core</span> <span class="badge-ext">Extended</span> <span class="q-marks">[10 marks]</span></span></div>
+      <div class="q-stem-en">
+        (a) Lead(II) bromide, PbBr₂, is heated until molten and electrolysed using inert graphite electrodes.<br>
+        (i) Explain why solid PbBr₂ does not conduct electricity whereas molten PbBr₂ does. [2]<br>
+        (ii) <span class="badge-ext">Extended</span> Write the ionic half-equations for the reactions at the cathode and at the anode. [2]<br>
+        (b) A student wishes to electroplate a nickel trophy with a thin layer of <strong>silver</strong>.<br>
+        (i) Name the material used as the cathode, the anode, and a suitable aqueous electrolyte. [2]<br>
+        (ii) State <strong>one</strong> purpose of electroplating metal objects. [1]<br>
+        (c) Hydrogen–oxygen fuel cells are used in zero-emission buses.<br>
+        (i) Write the balanced symbol equation for the overall reaction in a hydrogen–oxygen fuel cell. [1]<br>
+        (ii) State <strong>one</strong> advantage and <strong>one</strong> disadvantage of using a hydrogen–oxygen fuel cell compared with a petrol engine. [2]
+      </div>
+      <div class="q-stem-cn">(a) 熔融溴化铅导电差异与阴阳两极半方程式；(b) 镀银装置三要素与目的；(c) 氢氧燃料电池总方程式及优缺点各一。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 10 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">B1</span> (a)(i) In solid PbBr₂, ions are held in fixed positions in a lattice and <strong>cannot move</strong>; <span class="ms-mark">B1</span> when molten, the <strong>ions are free to move / mobile</strong>.<br>
+          <span class="ms-mark">B1</span> (ii) Cathode: <strong><code>Pb²⁺ + 2e⁻ → Pb</code></strong>; <span class="ms-mark">B1</span> Anode: <strong><code>2Br⁻ → Br₂ + 2e⁻</code></strong>.</p>
+          <p><span class="ms-mark">B1</span> (b)(i) Cathode (−): nickel trophy; Anode (+): pure silver; <span class="ms-mark">B1</span> Electrolyte: aqueous silver nitrate, <code>AgNO₃(aq)</code> (any soluble silver salt; all 3 correct = 2 marks, 2 correct = 1 mark).<br>
+          <span class="ms-mark">B1</span> (ii) To <strong>improve appearance</strong> (look shiny) OR <strong>prevent corrosion / rusting</strong>.</p>
+          <p><span class="ms-mark">B1</span> (c)(i) <strong><code>2H₂ + O₂ → 2H₂O</code></strong> (accept state symbols).<br>
+          <span class="ms-mark">B1</span> (ii) Advantage: <strong>only produces water</strong> / no carbon dioxide (greenhouse gas) or toxic exhaust gases emitted / higher efficiency;<br>
+          <span class="ms-mark">B1</span> Disadvantage: hydrogen is <strong>difficult / expensive to store and transport</strong> (high-pressure tanks, flammable) / most hydrogen is made from fossil fuels / few refuelling stations.</p>
+          <p class="ms-cn">中文精析：电镀银的电解质必须是<strong>可溶性银盐</strong>（首选 <code>AgNO₃(aq)</code>，千万不能写难溶的 <code>AgCl</code>！）。</p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>Section C · Paper 6 实验设计与现象分析（2 题，共 15 分，建议 17 分钟）</h4>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">Q20 · Paper 6 电解现象、气体检验与电极对比</span><span><span class="badge-core">Core</span> <span class="badge-ext">ATP</span> <span class="q-marks">[8 marks]</span></span></div>
+      <div class="q-stem-en">
+        A student sets up an apparatus to electrolyse <strong>concentrated aqueous sodium chloride</strong> using two graphite electrodes.<br>
+        (a) State <strong>two</strong> properties of graphite that make it suitable for use as electrodes in this experiment. [2]<br>
+        (b) Describe the observations at the cathode and at the anode during the electrolysis, and give a positive chemical test for the anode gas. [3]<br>
+        (c) Universal indicator is added to the solution remaining after electrolysis. State the colour observed and explain why. [2]<br>
+        (d) In a second experiment, aqueous copper(II) sulfate is electrolysed using inert platinum electrodes. Describe the appearance of the cathode after 10 minutes. [1]
+      </div>
+      <div class="q-stem-cn">(a) 选用石墨作电极的两大性质；(b) 电解浓食盐水两极现象及阳极气体检验；(c) 剩余液滴加通用指示剂颜色与原因；(d) 铂极电解硫酸铜阴极表面现象。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 8 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">B1</span> (a) Graphite <strong>conducts electricity</strong> (has delocalised electrons); <span class="ms-mark">B1</span> graphite is <strong>inert / unreactive</strong> (does not react with chlorine or the electrolyte).</p>
+          <p><span class="ms-mark">B1</span> (b) Cathode (−): <strong>effervescence / colourless gas bubbles</strong> (H₂); Anode (+): <strong>effervescence of pale yellow-green gas</strong> (Cl₂);<br>
+          <span class="ms-mark">B1</span> Test for anode gas: hold <strong>damp blue litmus paper</strong> in the gas; <span class="ms-mark">B1</span> it turns red and then <strong>bleaches (turns white)</strong>.</p>
+          <p><span class="ms-mark">B1</span> (c) Colour: <strong>blue / purple</strong>;<br>
+          <span class="ms-mark">B1</span> Explanation: H⁺ and Cl⁻ are removed, leaving <strong>OH⁻ ions / alkaline sodium hydroxide (NaOH(aq))</strong> in solution.</p>
+          <p><span class="ms-mark">B1</span> (d) Coated with a <strong>pink-brown solid / reddish-brown layer</strong> (of copper).</p>
+          <p class="ms-cn">中文精析：Paper 6 现象题必背英文得分词：冒泡必须写 <strong>effervescence</strong> 或 bubbles of gas；铜镀层写 <strong>pink-brown solid</strong>；氯气试纸务必写 <strong>damp</strong> litmus paper <strong>bleaches</strong>！</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">Q21 · Paper 6 冷却曲线纯度鉴定与扩散对照实验设计</span><span><span class="badge-core">Core</span> <span class="badge-ext">ATP</span> <span class="q-marks">[7 marks]</span></span></div>
+      <div class="q-stem-en">
+        (a) A student cools a molten sample of compound Z from 100 °C to 20 °C, recording its temperature every 30 seconds. The graph shows that the temperature drops steadily, remains flat at 54 °C for 3 minutes, and then drops again.<br>
+        (i) State the melting point of compound Z and explain what the flat horizontal section indicates about its purity. [2]<br>
+        (ii) Describe how the cooling curve would look differently if a small amount of soluble impurity were mixed into Z. [1]<br>
+        (b) Plan an investigation to find out how <strong>temperature</strong> affects the <strong>rate of diffusion</strong> of potassium manganate(VII) crystals in water. You are provided with water baths at different temperatures, beakers, water, potassium manganate(VII) crystals, a thermometer, and a stopwatch. [4]
+      </div>
+      <div class="q-stem-cn">(a) 从冷却曲线读出熔点、判断纯度并预测混入杂质后的曲线变化；(b) Paper 6 独立实验设计：探究温度对高锰酸钾在水中扩散速率的影响。</div>
+      <details class="ms-details">
+        <summary>查看评分细则 (Mark Scheme · 7 Marks)</summary>
+        <div class="ms-body">
+          <p><span class="ms-mark">B1</span> (a)(i) Melting point = <strong>54 °C</strong>; <span class="ms-mark">B1</span> the sharp horizontal plateau shows that compound Z is <strong>pure</strong>.<br>
+          <span class="ms-mark">B1</span> (ii) Freezing/melting would occur at a <strong>lower temperature</strong> (below 54 °C) and over a <strong>sloped temperature range</strong> rather than a sharp horizontal line.</p>
+          <p><span class="ms-mark">B1</span> (b) <strong>Controlled variables</strong>: Place the <strong>same volume of distilled water</strong> into identical beakers and use the <strong>same mass / size of potassium manganate(VII) crystal</strong> in each beaker;<br>
+          <span class="ms-mark">B1</span> <strong>Independent variable</strong>: Maintain each beaker in a water bath at a different <strong>known constant temperature</strong> (e.g. 20 °C, 40 °C, 60 °C), checked with a thermometer;<br>
+          <span class="ms-mark">B1</span> <strong>Dependent variable</strong>: Carefully drop one crystal into the bottom (without stirring!) and start the stopwatch; measure the <strong>time taken for the purple colour to spread uniformly</strong> throughout the water;<br>
+          <span class="ms-mark">B1</span> <strong>Conclusion</strong>: The shorter the time taken, the faster the rate of diffusion (at higher temperature, particles have higher kinetic energy and diffuse faster).</p>
+          <p class="ms-cn">中文精析：Paper 6 实验设计 4 分拿满必含四要素：① 控制变量（同体积水、同质量/大小晶体、不搅拌）；② 自变量梯度（至少 3 个可控恒定温度）；③ 可测量因变量（用秒表测紫色均匀铺满烧杯的时间）；④ 结论判据（时间越短速率越快）。</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section sec-clinic" id="sec-clinic">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>个人错题诊疗台 · F03 化学 0620 考前归因清零</h3>
+      <div class="section-en-sub">Error Clinic Logging, High-Frequency Trap Tagging &amp; Chapter Deep-Dive Links</div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-clinic">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <p>把日常练习、School Mock 或本页 65 分模考中卡壳的题目按归因标签录入下方离线错题本。F03 化学冲刺最建议重点标红排查以下四大高频失分类型：<strong>① 漏掉水溶液 <code>H⁺ / OH⁻</code> 竞争或浓稀 <code>Cl⁻</code> 反转</strong>；<strong>② 半方程式电荷未平或误写电子穿过液体</strong>；<strong>③ 多原子团少括号或离子形成误改质子数</strong>；<strong>④ Paper 6 漏写 <code>effervescence</code> / <code>damp</code> / <code>pink-brown solid</code> 等采分词</strong>。录入后可点击“生成并复制 AI 精讲清单”做考前最后清零！</p>
+
+    <div class="clinic-box" data-clinic-subject="F03"></div>
+
+    <div class="quick-links-grid">
+      <a class="quick-link-chip" href="../Chemistry_0620_Chapters/Ch01_States_of_Matter.html">Ch01 物态变化与扩散</a>
+      <a class="quick-link-chip" href="../Chemistry_0620_Chapters/Ch02_Atomic_Structure.html">Ch02 原子结构与同位素</a>
+      <a class="quick-link-chip" href="../Chemistry_0620_Chapters/Ch04_Formulae_and_Equations.html">Ch04 化学式、配平与离子方程</a>
+      <a class="quick-link-chip" href="../Chemistry_0620_Chapters/Ch06_Electrochemistry.html">Ch06 电化学与燃料电池</a>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section sec-cards" id="app-concepts">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>核心概念、离子式、半方程式与实验现象闪卡库 (20 张)</h3>
+      <div class="section-en-sub">Active Recall Flashcards for Ch 1, 2, 4 &amp; 6 — Click to Unmask Mark Scheme Keywords</div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="app-concepts">○ 标记掌握</button>
+  </div>
+
+  <div class="concept-toolbar">
+    <div class="concept-filter-group" id="conceptFilterTabs">
+      <button type="button" class="tab-btn active" data-concept-part="all">全部 20 题</button>
+      <button type="button" class="tab-btn" data-concept-part="ch1">Ch1 物态扩散 (5)</button>
+      <button type="button" class="tab-btn" data-concept-part="ch2">Ch2 原子同位素 (5)</button>
+      <button type="button" class="tab-btn" data-concept-part="ch4">Ch4 化学式方程 (5)</button>
+      <button type="button" class="tab-btn" data-concept-part="ch6">Ch6 电化学燃料电池 (5)</button>
+    </div>
+    <div class="concept-actions">
+      <span class="concept-count-pill" id="conceptCountPill">显示 20 / 20 题</span>
+      <button type="button" class="icon-btn" id="conceptQuizToggle">🙈 开启遮罩自测</button>
+    </div>
+  </div>
+
+  <div class="concept-grid" id="conceptGrid">
+    <div class="concept-card" data-part="ch1">
+      <div class="cq-head"><span class="q-tag">F03-01 · Ch 1 三态特征</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">State the arrangement, separation and motion of particles in a solid, liquid and gas.</div>
+      <div class="cq-cn">默写固、液、气三态粒子的排布、间距与运动英文踩分词。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+        <div class="cq-answer-inner"><span class="kw">Solid</span>: regular lattice, touching, vibrate about fixed positions. <span class="kw">Liquid</span>: irregular, touching, slide past each other. <span class="kw">Gas</span>: random, far apart, move rapidly and randomly.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch1">
+      <div class="cq-head"><span class="q-tag">F03-02 · Ch 1 加热平台期</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Why does temperature stay constant during melting and boiling on a heating curve?</div>
+      <div class="cq-cn">加热曲线熔沸平台期为什么温度不变？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+        <div class="cq-answer-inner">Supplied heat energy is used to <span class="kw">overcome forces of attraction</span> between particles, so <span class="kw">average kinetic energy</span> (and temperature) remains constant.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch1">
+      <div class="cq-head"><span class="q-tag">F03-03 · Ch 1 冷却与纯度</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Why does temperature stay constant during freezing, and how does an impurity affect m.p. and b.p.?</div>
+      <div class="cq-cn">凝固平台为何温度不变？杂质如何影响纯物质的熔沸点？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+        <div class="cq-answer-inner"><span class="kw">Energy is released as forces/bonds form</span>, balancing heat loss. Impurities <span class="kw">lower the m.p.</span>, <span class="kw">raise the b.p.</span>, and cause melting/boiling over a temperature range.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch1">
+      <div class="cq-head"><span class="q-tag">F03-04 · Ch 1 气体温压理论</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Explain using kinetic particle theory why heating a gas at constant pressure increases its volume.</div>
+      <div class="cq-cn">定压升温下为什么气体体积膨胀？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+        <div class="cq-answer-inner">Gas particles gain <span class="kw">kinetic energy</span>, move <span class="kw">faster</span>, and collide with container walls <span class="kw">harder and more frequently</span>, pushing walls out so volume increases.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch1">
+      <div class="cq-head"><span class="q-tag">F03-05 · Ch 1 NH₃/HCl 扩散</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">In the NH₃ + HCl tube experiment, write the equation and state where the white ring forms and why.</div>
+      <div class="cq-cn">写出 NH₃ 与 HCl 管内反应方程式、白烟位置及定量原因。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+        <div class="cq-answer-inner"><span class="kw">NH₃(g) + HCl(g) → NH₄Cl(s)</span>. White ring forms <span class="kw">closer to the HCl end</span> because NH₃ (Mᵣ = 17) has a lower Mᵣ than HCl (Mᵣ = 36.5) and <span class="kw">diffuses faster</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch2">
+      <div class="cq-head"><span class="q-tag">F03-06 · Ch 2 亚原子粒子</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">State the relative mass and relative charge of a proton, neutron and electron.</div>
+      <div class="cq-cn">质子、中子、电子的相对质量与相对电荷各是多少？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+        <div class="cq-answer-inner"><span class="kw">Proton</span>: mass 1, charge +1. <span class="kw">Neutron</span>: mass 1, charge 0. <span class="kw">Electron</span>: mass 1/1840 (negligible), charge −1.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch2">
+      <div class="cq-head"><span class="q-tag">F03-07 · Ch 2 核素与离子微粒数</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">How do you find protons, neutrons and electrons in ³⁵₁₇Cl⁻, and what never changes when an ion forms?</div>
+      <div class="cq-cn">如何计算 ³⁵₁₇Cl⁻ 的质子/中子/电子数？成离子时什么绝对不变？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+        <div class="cq-answer-inner">17 protons, 35 − 17 = 18 neutrons, 17 + 1 = 18 electrons (<span class="kw">2,8,8</span>). Forming an ion only changes outer electrons; <span class="kw">protons and neutrons never change</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch2">
+      <div class="cq-head"><span class="q-tag">F03-08 · Ch 2 电子排布与周期表</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Give the configuration of ₂₀Ca and state how shells and outer electrons link to Period, Group and chemical properties.</div>
+      <div class="cq-cn">写出 20 号钙的电子排布，及壳层/最外层电子与周期表、化学性质的关联。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+        <div class="cq-answer-inner">Ca: <span class="kw">2,8,8,2</span> (4 shells → Period 4; 2 outer e⁻ → Group II). Elements in the same Group have <span class="kw">similar chemical properties</span> because they have the <span class="kw">same number of outer-shell electrons</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch2">
+      <div class="cq-head"><span class="q-tag">F03-09 · Ch 2 同位素严格定义</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Define isotopes and explain why isotopes of the same element have identical chemical properties.</div>
+      <div class="cq-cn">写出同位素考纲定义，并解释为何同一元素不同同位素化学性质完全相同。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+        <div class="cq-answer-inner"><span class="kw">Atoms of the same element with the same number of protons but different numbers of neutrons</span>. Chemical properties are identical because they have the <span class="kw">same number of outer-shell electrons</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch2">
+      <div class="cq-head"><span class="q-tag">F03-10 · Ch 2 加权平均 Aᵣ</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">Write the weighted average Aᵣ formula and verify for 75% ³⁵Cl and 25% ³⁷Cl.</div>
+      <div class="cq-cn">写出加权平均相对原子质量 Aᵣ 公式并验算氯的 Aᵣ = 35.5。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+        <div class="cq-answer-inner"><span class="kw">Aᵣ = Σ(mass number × % abundance) ÷ 100</span>. For Cl: (35 × 75 + 37 × 25) ÷ 100 = 3550 ÷ 100 = <span class="kw">35.5</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch4">
+      <div class="cq-head"><span class="q-tag">F03-11 · Ch 4 必背原子团电荷</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Give the exact formulae and charges of ammonium, hydroxide, nitrate, carbonate and sulfate ions.</div>
+      <div class="cq-cn">默写铵根、氢氧根、硝酸根、碳酸根与硫酸根的离子式与电荷。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+        <div class="cq-answer-inner"><span class="kw">NH₄⁺</span> (+1), <span class="kw">OH⁻</span> (−1), <span class="kw">NO₃⁻</span> (−1), <span class="kw">CO₃²⁻</span> (−2), <span class="kw">SO₄²⁻</span> (−2).</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch4">
+      <div class="cq-head"><span class="q-tag">F03-12 · Ch 4 过渡金属推式</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Write the formulae of iron(II) hydroxide, iron(III) sulfate, copper(II) carbonate, zinc nitrate and silver chloride.</div>
+      <div class="cq-cn">写出氢氧化亚铁、硫酸铁(III)、碳酸铜、硝酸锌与氯化银化学式。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+        <div class="cq-answer-inner"><span class="kw">Fe(OH)₂</span>, <span class="kw">Fe₂(SO₄)₃</span>, <span class="kw">CuCO₃</span>, <span class="kw">Zn(NO₃)₂</span>, <span class="kw">AgCl</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch4">
+      <div class="cq-head"><span class="q-tag">F03-13 · Ch 4 配平与状态符号</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">What is the golden rule of balancing symbol equations, and what do (s), (l), (g) and (aq) mean?</div>
+      <div class="cq-cn">化学方程式配平铁律是什么？四大状态符号分别代表什么？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+        <div class="cq-answer-inner">Only adjust <span class="kw">coefficients in front</span>; <span class="kw">never change subscripts</span>. <span class="kw">(s)</span> solid, <span class="kw">(l)</span> pure liquid/molten, <span class="kw">(g)</span> gas, <span class="kw">(aq)</span> aqueous solution.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch4">
+      <div class="cq-head"><span class="q-tag">F03-14 · Ch 4 净离子方程式四步</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">State the 4 steps to derive a net ionic equation and list which species must NOT be split into ions.</div>
+      <div class="cq-cn">简述推导净离子方程式的四步法及哪些物质绝不能拆开写。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+        <div class="cq-answer-inner">1. Full balanced equation + states; 2. Split <span class="kw">only (aq) strong electrolytes</span>; 3. Cancel <span class="kw">spectator ions</span>; 4. Check atoms &amp; net charge. Never split <span class="kw">(s), (l), (g)</span> or covalent molecules like Cl₂(aq).</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch4">
+      <div class="cq-head"><span class="q-tag">F03-15 · Ch 4 经典离子方程</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">Write the net ionic equations for (1) acid-alkali neutralisation and (2) acid + aqueous carbonate.</div>
+      <div class="cq-cn">默写强酸碱中和与酸加可溶碳酸盐的净离子方程式。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+        <div class="cq-answer-inner">(1) <span class="kw">H⁺(aq) + OH⁻(aq) → H₂O(l)</span><br>(2) <span class="kw">CO₃²⁻(aq) + 2H⁺(aq) → H₂O(l) + CO₂(g)</span></div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch6">
+      <div class="cq-head"><span class="q-tag">F03-16 · Ch 6 PANIC 与导电红线</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">What do PANIC and OIL RIG stand for, and how do wires vs electrolytes conduct electricity?</div>
+      <div class="cq-cn">解释 PANIC、OIL RIG 口诀，并对比导线与电解液导电粒子的差异。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+        <div class="cq-answer-inner"><span class="kw">PANIC</span>: Positive Anode, Negative Is Cathode. <span class="kw">OIL RIG</span>: Oxidation Is Loss (Anode), Reduction Is Gain (Cathode). Wires conduct via <span class="kw">electrons</span>; electrolytes conduct via <span class="kw">mobile ions</span> (never electrons in liquid).</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch6">
+      <div class="cq-head"><span class="q-tag">F03-17 · Ch 6 熔融 PbBr₂(l) 电解</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">Write the cathode &amp; anode half-equations and observations for molten PbBr₂(l) using carbon electrodes.</div>
+      <div class="cq-cn">写出熔融溴化铅电解的两极半方程式与英文采分现象词。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+        <div class="cq-answer-inner">Cathode (−): <span class="kw">Pb²⁺ + 2e⁻ → Pb</span> (silvery grey molten lead).<br>Anode (+): <span class="kw">2Br⁻ → Br₂ + 2e⁻</span> (<span class="kw">red-brown vapour</span>).</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch6">
+      <div class="cq-head"><span class="q-tag">F03-18 · Ch 6 浓食盐水 vs 稀硫酸</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">Compare the anode half-equations of conc. NaCl(aq) and dilute H₂SO₄(aq), and state the gas volume ratio in H₂SO₄(aq).</div>
+      <div class="cq-cn">对比浓 NaCl(aq) 与稀 H₂SO₄(aq) 的阳极半方程式及稀硫酸两极气体体积比。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+        <div class="cq-answer-inner">Conc. NaCl(aq) anode: <span class="kw">2Cl⁻ → Cl₂ + 2e⁻</span> (solution becomes alkaline NaOH).<br>Dil. H₂SO₄(aq) anode: <span class="kw">4OH⁻ → O₂ + 2H₂O + 4e⁻</span>; cathode H₂ : anode O₂ = <span class="kw">2 : 1</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch6">
+      <div class="cq-head"><span class="q-tag">F03-19 · Ch 6 CuSO₄ 电极与电镀</span><span class="badge-ext">Extended</span></div>
+      <div class="cq-en">Contrast CuSO₄(aq) electrolysis with carbon vs copper electrodes, and state the 3 components for electroplating.</div>
+      <div class="cq-cn">对比碳极与铜极电解 CuSO₄(aq) 的溶液颜色/pH 变化，及电镀三要素。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+        <div class="cq-answer-inner">Carbon: <span class="kw">pink-brown solid</span> at cathode, O₂ at anode, <span class="kw">blue fades &amp; pH drops</span>. Active Cu: anode dissolves (<span class="kw">Cu → Cu²⁺ + 2e⁻</span>), <span class="kw">blue &amp; pH stay constant</span>. Electroplating: object = cathode, plating metal = anode, electrolyte = aqueous ions of plating metal.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="ch6">
+      <div class="cq-head"><span class="q-tag">F03-20 · Ch 6 氢氧燃料电池 (2023+)</span><span class="badge-core">Core</span></div>
+      <div class="cq-en">Write the overall equation of a hydrogen–oxygen fuel cell and state 2 advantages and 2 disadvantages vs petrol engines.</div>
+      <div class="cq-cn">写出氢氧燃料电池总方程式，及相比汽油发动机的 2 条优势与 2 条缺点。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击揭晓答案</div>
+        <div class="cq-answer-inner"><span class="kw">2H₂(g) + O₂(g) → 2H₂O(l)</span>.<br>Pros: <span class="kw">only produces water</span> (no CO₂/NOₓ/CO), higher efficiency.<br>Cons: H₂ is <span class="kw">hard to store/transport</span> (high-pressure, flammable), made mostly from fossil fuels, few refuelling stations.</div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+        <nav class="chapter-pager" aria-label="学科切换导航">
+          <div><a class="pager-btn" href="F02_Physics_0625_Final_Sprint.html">← F02 · 物理 0625 Ch 1–4 期末精炼与实验冲刺</a></div>
+          <div><a class="pager-btn primary" href="index.html">🎯 返回 6 科期末冲刺总控台</a></div>
+          <div><a class="pager-btn" href="F04_ESL_0510_Final_Sprint.html">F04 · ESL 0510 听力阅读写作三线冲刺 →</a></div>
+        </nav>
+      </div>
+    </main>
+  </div>
+
+  <button type="button" class="back-top-btn" id="backTopBtn" title="返回顶部">↑</button>
+
+  <script>
+(function () {
+  'use strict';
+
+  const THEME_KEY = 'igcse_final_sprint_theme';
+  const subCode = (document.body && document.body.getAttribute('data-chapter-code')) || 'HUB';
+  const STORAGE_PREFIX = 'igcse_final_sprint_' + subCode.toLowerCase() + '_';
+  const htmlEl = document.documentElement;
+  const bodyEl = document.body;
+
+  let currentViewMode = localStorage.getItem(STORAGE_PREFIX + 'viewMode') || 'all';
+  let activeConceptPart = 'all';
+  let quizMasked = localStorage.getItem(STORAGE_PREFIX + 'quizMasked') === '1';
+  let allMsExpanded = false;
+  let masteredIds = [];
+  let activeTimerId = null;
+  try {
+    masteredIds = JSON.parse(localStorage.getItem(STORAGE_PREFIX + 'mastered') || '[]');
+    if (!Array.isArray(masteredIds)) masteredIds = [];
+  } catch (e) {
+    masteredIds = [];
+  }
+
+  // ---------- 1. Theme ----------
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+  function applyTheme(theme) {
+    htmlEl.setAttribute('data-theme', theme);
+    if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem(THEME_KEY, theme);
+  }
+  applyTheme(localStorage.getItem(THEME_KEY) || 'light');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      applyTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  }
+
+  // ---------- 2. View Modes (All / Summary / Practice / Clinic / Cards) ----------
+  function applyViewMode(mode) {
+    currentViewMode = mode;
+    bodyEl.classList.remove('mode-summary', 'mode-practice', 'mode-clinic', 'mode-cards');
+    if (mode !== 'all') bodyEl.classList.add('mode-' + mode);
+    document.querySelectorAll('[data-view-mode]').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-view-mode') === mode);
+    });
+    localStorage.setItem(STORAGE_PREFIX + 'viewMode', mode);
+  }
+  document.querySelectorAll('[data-view-mode]').forEach(function (btn) {
+    btn.addEventListener('click', function () { applyViewMode(btn.getAttribute('data-view-mode')); });
+  });
+  applyViewMode(currentViewMode);
+
+  // ---------- 3. Sidebar ----------
+  const sidebar = document.getElementById('sidebar');
+  const menuToggle = document.getElementById('menuToggle');
+  if (menuToggle && sidebar) {
+    menuToggle.addEventListener('click', function () { sidebar.classList.toggle('open'); });
+    sidebar.querySelectorAll('.nav-link').forEach(function (lnk) {
+      lnk.addEventListener('click', function () {
+        if (window.innerWidth <= 980) sidebar.classList.remove('open');
+      });
+    });
+  }
+  document.querySelectorAll('.nav-unit-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const unit = btn.closest('.nav-unit');
+      if (unit) unit.classList.toggle('collapsed');
+    });
+  });
+
+  // ---------- 4. Mastery Progress ----------
+  const progressText = document.getElementById('progressText');
+  const progressFill = document.getElementById('progressFill');
+  const masterBtns = Array.from(document.querySelectorAll('.master-btn'));
+  const totalSections = masterBtns.length;
+  const validIds = new Set(masterBtns.map(function (b) { return b.getAttribute('data-section-id'); }));
+
+  function renderMastery() {
+    const doneList = masteredIds.filter(function (id) { return validIds.has(id); });
+    localStorage.setItem(STORAGE_PREFIX + 'total', String(totalSections));
+    if (progressText) progressText.textContent = doneList.length + '/' + totalSections;
+    if (progressFill && totalSections > 0) {
+      progressFill.style.width = Math.round((doneList.length / totalSections) * 100) + '%';
+    }
+    masterBtns.forEach(function (btn) {
+      const sid = btn.getAttribute('data-section-id');
+      const done = doneList.indexOf(sid) !== -1;
+      btn.classList.toggle('is-mastered', done);
+      btn.textContent = done ? '✓ 已掌握' : '○ 标记掌握';
+    });
+    document.querySelectorAll('.nav-link').forEach(function (lnk) {
+      const id = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('mastered', doneList.indexOf(id) !== -1);
+    });
+  }
+  masterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const sid = btn.getAttribute('data-section-id');
+      const idx = masteredIds.indexOf(sid);
+      if (idx === -1) masteredIds.push(sid);
+      else masteredIds.splice(idx, 1);
+      localStorage.setItem(STORAGE_PREFIX + 'mastered', JSON.stringify(masteredIds));
+      renderMastery();
+    });
+  });
+  if (totalSections > 0) renderMastery();
+
+  // ---------- 5. Toggle Details & Print ----------
+  const toggleAllMs = document.getElementById('toggleAllMs');
+  if (toggleAllMs) {
+    toggleAllMs.addEventListener('click', function () {
+      allMsExpanded = !allMsExpanded;
+      document.querySelectorAll('details.ms-details').forEach(function (det) { det.open = allMsExpanded; });
+      const lbl = toggleAllMs.querySelector('.btn-label');
+      if (lbl) lbl.textContent = allMsExpanded ? '收起解析' : '展开解析';
+      toggleAllMs.classList.toggle('active', allMsExpanded);
+    });
+  }
+  const printBtn = document.getElementById('printBtn');
+  if (printBtn) printBtn.addEventListener('click', function () { window.print(); });
+
+  // ---------- 6. Search ----------
+  const searchInput = document.getElementById('searchInput');
+  const searchClear = document.getElementById('searchClear');
+  const searchBar = document.getElementById('searchBar');
+  const searchSummary = document.getElementById('searchSummary');
+  const searchResetBtn = document.getElementById('searchResetBtn');
+  const emptySearchNotice = document.getElementById('emptySearchNotice');
+
+  function runSearch() {
+    if (!searchInput) return;
+    const raw = searchInput.value.trim().toLowerCase();
+    if (searchClear) searchClear.style.display = raw ? 'block' : 'none';
+    const sections = Array.from(document.querySelectorAll('.topic-section'));
+    if (!raw) {
+      sections.forEach(function (s) { s.classList.remove('search-dim'); });
+      if (searchBar) searchBar.classList.remove('visible');
+      if (emptySearchNotice) emptySearchNotice.style.display = 'none';
+      return;
+    }
+    let hits = 0;
+    sections.forEach(function (sec) {
+      const ok = sec.textContent.toLowerCase().indexOf(raw) !== -1;
+      sec.classList.toggle('search-dim', !ok);
+      if (ok) hits++;
+    });
+    if (searchBar) searchBar.classList.add('visible');
+    if (searchSummary) searchSummary.textContent = '关键词 “' + searchInput.value.trim() + '” 匹配 ' + hits + ' 个板块';
+    if (emptySearchNotice) emptySearchNotice.style.display = hits === 0 ? 'block' : 'none';
+  }
+  if (searchInput) searchInput.addEventListener('input', runSearch);
+  function resetSearch() { if (searchInput) searchInput.value = ''; runSearch(); }
+  if (searchClear) searchClear.addEventListener('click', resetSearch);
+  if (searchResetBtn) searchResetBtn.addEventListener('click', resetSearch);
+
+  // ---------- 7. Interactive MCQ ----------
+  document.querySelectorAll('.exam-q[data-mcq-answer]').forEach(function (qBox) {
+    const ans = qBox.getAttribute('data-mcq-answer');
+    const fb = qBox.querySelector('.mcq-feedback');
+    const opts = qBox.querySelectorAll('.mcq-opt');
+    opts.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const chosen = btn.getAttribute('data-opt');
+        opts.forEach(function (o) { o.classList.remove('correct', 'wrong'); });
+        if (chosen === ans) {
+          btn.classList.add('correct');
+          if (fb) { fb.textContent = fb.getAttribute('data-ok') || '✅ 回答正确！'; fb.className = 'mcq-feedback visible ok'; }
+        } else {
+          btn.classList.add('wrong');
+          opts.forEach(function (o) { if (o.getAttribute('data-opt') === ans) o.classList.add('correct'); });
+          if (fb) { fb.textContent = fb.getAttribute('data-err') || '❌ 未选对，请核对下方 Mark Scheme 解析。'; fb.className = 'mcq-feedback visible err'; }
+        }
+      });
+    });
+  });
+
+  // ---------- 8. Flashcards ----------
+  const conceptCountPill = document.getElementById('conceptCountPill');
+  const conceptQuizToggle = document.getElementById('conceptQuizToggle');
+
+  function filterConcepts() {
+    const cards = Array.from(document.querySelectorAll('#conceptGrid .concept-card'));
+    if (!cards.length) return;
+    let visible = 0;
+    cards.forEach(function (card) {
+      const part = card.getAttribute('data-part');
+      const show = activeConceptPart === 'all' || part === activeConceptPart;
+      card.classList.toggle('concept-hidden', !show);
+      if (show) visible++;
+    });
+    if (conceptCountPill) conceptCountPill.textContent = '显示 ' + visible + ' / ' + cards.length + ' 题';
+  }
+  document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      activeConceptPart = btn.getAttribute('data-concept-part');
+      document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      filterConcepts();
+    });
+  });
+  function applyQuizMask(masked) {
+    quizMasked = masked;
+    document.querySelectorAll('#conceptGrid .concept-card').forEach(function (c) { c.classList.toggle('masked', masked); });
+    if (conceptQuizToggle) {
+      conceptQuizToggle.textContent = masked ? '👁️ 显示全部答案' : '🙈 开启遮罩自测';
+      conceptQuizToggle.classList.toggle('active', masked);
+    }
+    localStorage.setItem(STORAGE_PREFIX + 'quizMasked', masked ? '1' : '0');
+  }
+  if (conceptQuizToggle) {
+    conceptQuizToggle.addEventListener('click', function () { applyQuizMask(!quizMasked); });
+  }
+  document.querySelectorAll('#conceptGrid .cq-answer').forEach(function (box) {
+    box.addEventListener('click', function () {
+      const card = box.closest('.concept-card');
+      if (card && card.classList.contains('masked')) card.classList.remove('masked');
+    });
+  });
+
+  function countWords(str) {
+    const cleaned = (str || '').trim();
+    return cleaned ? cleaned.split(/\s+/).filter(Boolean).length : 0;
+  }
+  function countChiChars(str) {
+    return (str || '').replace(/[\s\u3000]/g, '').length;
+  }
+  function setupTimer(btnStart, btnReset, clkEl, totalMinutes) {
+    let secLeft = totalMinutes * 60;
+    const fmt = function (s) {
+      const m = Math.floor(s / 60), r = s % 60;
+      return String(m).padStart(2, '0') + ':' + String(r).padStart(2, '0');
+    };
+    if (clkEl) clkEl.textContent = fmt(secLeft);
+    if (btnStart) {
+      btnStart.addEventListener('click', function () {
+        if (activeTimerId) {
+          clearInterval(activeTimerId);
+          activeTimerId = null;
+          btnStart.textContent = '▶ 继续计时';
+        } else {
+          btnStart.textContent = '⏸ 暂停计时';
+          activeTimerId = setInterval(function () {
+            if (secLeft > 0) secLeft--;
+            if (clkEl) clkEl.textContent = fmt(secLeft);
+            if (secLeft === 0) {
+              clearInterval(activeTimerId);
+              activeTimerId = null;
+              btnStart.textContent = '⏰ 时间到';
+            }
+          }, 1000);
+        }
+      });
+    }
+    if (btnReset) {
+      btnReset.addEventListener('click', function () {
+        if (activeTimerId) { clearInterval(activeTimerId); activeTimerId = null; }
+        secLeft = totalMinutes * 60;
+        if (clkEl) clkEl.textContent = fmt(secLeft);
+        if (btnStart) btnStart.textContent = '⏳ 开始计时';
+      });
+    }
+  }
+
+  // ---------- 9. Subject Interactive Labs (f01 - f06) ----------
+  function mountSprintLab(el) {
+    const t = el.getAttribute('data-lab-type');
+    if (!t) return;
+    const bindInputs = function (fn) {
+      el.querySelectorAll('input,select,textarea').forEach(function (inp) {
+        inp.addEventListener('input', fn);
+        inp.addEventListener('change', fn);
+      });
+      fn();
+    };
+
+    if (t === 'f01') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">📐 F01 交互冲刺台 · 9 章必背公式/Paper 1 易错检索 + 80 分模考估分器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>切换范围板块：<select id="f1Mod">' +
+        '<option value="ch1_2">Ch1–2 函数/反函数/二次最值与判别式</option>' +
+        '<option value="ch3_4">Ch3–4 多项式因式余数与绝对值不等式</option>' +
+        '<option value="ch5_6">Ch5–6 指数对数换底与直线/Linear Law</option>' +
+        '<option value="ch10_11">Ch10–11 排列组合/二项展开/AP-GP-S∞</option>' +
+        '<option value="ch12_14">Ch12+Ch14 基础求导法则 + 指数对数三角导数</option></select></label>' +
+        '<label>Ch1–6 (/20)：<input type="number" id="f1S1" value="17" min="0" max="20"></label>' +
+        '<label>Ch10 计数 (/20)：<input type="number" id="f1S2" value="16" min="0" max="20"></label>' +
+        '<label>Ch11 级数 (/20)：<input type="number" id="f1S3" value="17" min="0" max="20"></label>' +
+        '<label>Ch14 求导 (/20)：<input type="number" id="f1S4" value="16" min="0" max="20"></label>' +
+        '<button type="button" class="tab-btn active" id="f1Start">⏳ 120min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f1Reset">重置</button>' +
+        '<span class="timer-big" id="f1Clk">120:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f1Out"></div><div class="readout-pill" id="f1ScoreOut"></div></div></div>';
+      const notes = {
+        ch1_2: '<strong>Ch1–2 必检红线</strong>：① fg(x) 先代入里层 g(x) 再喂给 f；反函数成立条件是 <strong>1-to-1</strong>，且 Domain(f⁻¹)=Range(f)；② 判别式 b²−4ac > 0 相交两点，≤ 0 恒在 x 轴一侧时还需检查首项系数 a 符号；③ 二次不等式<strong>必须先因式分解找临界根画草图</strong>，严禁直接拆解两边开方！',
+        ch3_4: '<strong>Ch3–4 必检红线</strong>：① x−a 是因式 ⇔ f(a)=0；余数定理求得是 f(−b/a)；② 三次方程解先试 ±1, ±2 找一实根再长除/综合除法；③ |ax+b| < |cx+d| 在 P1 无计算器优先<strong>两边平方化二次不等式</strong>或画出 V 字折线求交点！',
+        ch5_6: '<strong>Ch5–6 必检红线</strong>：① logₐ(M)+logₐ(N)=logₐ(MN)，但 logₐ(M+N) 不能拆！② 解完对数方程<strong>必须回代验真数 > 0 与底数 > 0 且 ≠ 1</strong>；③ Linear Law 化成 Y = mX + c：先辨识纵轴 Y 与横轴 X，再用直线斜率 m 与截距 c 反推指数/幂函数参数！',
+        ch10_11: '<strong>Ch10–11 必检红线</strong>：① 排列看顺序 ⁿPᵣ，分组抽选不看顺序 ⁿCᵣ；“不相邻”用插空法，“至少”用总−反面；② 二项式 (a+b)ⁿ 通项 Tᵣ₊₁ = ⁿCᵣ aⁿ⁻ʳ bʳ（记住 r 比第几项小 1！）；③ S∞ = a/(1−r) <strong>必须验证 |r| < 1</strong>，且公式表虽给 Sₙ/S∞ 仍建议熟记秒杀！',
+        ch12_14: '<strong>Ch12+Ch14 求导链</strong>：① 先熟用基础求导 d/dx(xⁿ)=nxⁿ⁻¹、乘积 uv′+vu′、商法则 (vu′−uv′)/v² 与链式复合；② 再衔接 Ch14：d/dx(eᵃˣ⁺ᵇ)=aeᵃˣ⁺ᵇ，d/dx(ln(ax+b))=a/(ax+b)，d/dx(sin ax)=a cos ax，d/dx(cos ax)=−a sin ax（负号极易丢！），d/dx(tan ax)=a sec²ax（<strong>求导一律用弧度 rad</strong>）！'
+      };
+      bindInputs(function () {
+        el.querySelector('#f1Out').innerHTML = notes[el.querySelector('#f1Mod').value];
+        const v1 = Math.max(0, Math.min(20, Number(el.querySelector('#f1S1').value) || 0));
+        const v2 = Math.max(0, Math.min(20, Number(el.querySelector('#f1S2').value) || 0));
+        const v3 = Math.max(0, Math.min(20, Number(el.querySelector('#f1S3').value) || 0));
+        const v4 = Math.max(0, Math.min(20, Number(el.querySelector('#f1S4').value) || 0));
+        const tot = v1 + v2 + v3 + v4;
+        const pct = Math.round((tot / 80) * 100);
+        const band = pct >= 85 ? 'Grade A* 冲刺区间' : (pct >= 72 ? 'Grade A 稳健线' : (pct >= 58 ? 'Grade B/C 需优先回刷错题模块' : '基础漏洞明显，请先回到对应章补推导'));
+        el.querySelector('#f1ScoreOut').innerHTML = '<strong>期末模拟估分：' + tot + ' / 80（' + pct + '%）</strong> ｜ 预测表现：' + band + '。';
+      });
+      setupTimer(el.querySelector('#f1Start'), el.querySelector('#f1Reset'), el.querySelector('#f1Clk'), 120);
+    } else if (t === 'f02') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">⚙️ F02 物理 Ch 1–4 交互验算与期末估分计时台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>验算模型：<select id="f2Calc">' +
+        '<option value="density">Ch1 密度计算 ρ = m / V</option>' +
+        '<option value="accel">Ch2 匀变速加速度 a = (v − u) / t</option>' +
+        '<option value="impulse">Ch3 冲量与动量变化 FΔt = mΔv</option>' +
+        '<option value="moment">Ch4 力矩 M = F × d⊥</option></select></label>' +
+        '<label><span id="f2ALbl">质量 m (g/kg)</span>：<input type="number" id="f2A" value="250" step="any"></label>' +
+        '<label><span id="f2BLbl">体积 V (cm³/m³)</span>：<input type="number" id="f2B" value="50" step="any"></label>' +
+        '<label>Paper2 (/15)：<input type="number" id="f2_1" value="13" min="0" max="15"></label>' +
+        '<label>Paper4 (/35)：<input type="number" id="f2_2" value="30" min="0" max="35"></label>' +
+        '<label>Paper6 (/15)：<input type="number" id="f2_3" value="13" min="0" max="15"></label>' +
+        '<button type="button" class="tab-btn active" id="f2Start">⏳ 75min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f2Reset">重置</button>' +
+        '<span class="timer-big" id="f2Clk">75:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f2Out"></div><div class="readout-pill" id="f2ScoreOut"></div></div></div>';
+      const sel = el.querySelector('#f2Calc');
+      const aLbl = el.querySelector('#f2ALbl'), bLbl = el.querySelector('#f2BLbl');
+      const syncLabels = function () {
+        const m = sel.value;
+        if (m === 'density') { aLbl.textContent = '质量 m (g)'; bLbl.textContent = '体积 V (cm³)'; }
+        else if (m === 'accel') { aLbl.textContent = '速度增量 Δv (m/s)'; bLbl.textContent = '时间 t (s)'; }
+        else if (m === 'impulse') { aLbl.textContent = '合力 F (N)'; bLbl.textContent = '作用时间 Δt (s)'; }
+        else { aLbl.textContent = '力 F (N)'; bLbl.textContent = '垂直力臂 d⊥ (m)'; }
+      };
+      sel.addEventListener('change', syncLabels);
+      syncLabels();
+      bindInputs(function () {
+        const m = sel.value, a = Number(el.querySelector('#f2A').value) || 0, b = Number(el.querySelector('#f2B').value) || 0;
+        let resText = '';
+        if (m === 'density') {
+          const rho = b !== 0 ? (a / b) : 0;
+          resText = '<strong>ρ = m / V = ' + (b !== 0 ? rho.toFixed(3) : '∞（分母勿为0）') + ' g/cm³</strong>（×1000 = ' + (b !== 0 ? (rho * 1000).toFixed(1) : '—') + ' kg/m³）。<br><strong>避坑</strong>：与水 ρ=1.0 g/cm³ 比较，小于则漂浮，大于则下沉；结果保留 2–3 位有效数字！';
+        } else if (m === 'accel') {
+          const acc = b !== 0 ? (a / b) : 0;
+          resText = '<strong>a = Δv / t = ' + (b !== 0 ? acc.toFixed(3) : '∞') + ' m/s²</strong>。<br><strong>避坑</strong>：v-t 图斜率即加速度（斜率恒定为匀加速）；v-t 曲线下方面积即路程/位移！';
+        } else if (m === 'impulse') {
+          const imp = a * b;
+          resText = '<strong>Impulse = FΔt = ' + imp.toFixed(3) + ' N·s（或 kg·m/s）</strong>。<br><strong>Mark Scheme 踩分词</strong>：安全气囊/缓冲垫降低 F 的原因是 <code>increases time of collision (Δt)</code>，对同一 <code>Δp</code> 则 <code>F = Δp / Δt</code> 减小！';
+        } else {
+          const mom = a * b;
+          resText = '<strong>Moment = F × d⊥ = ' + mom.toFixed(3) + ' N·m</strong>。<br><strong>平衡双条件</strong>：① 合外力为 0；② 顺时针总力矩 = 逆时针总力矩（<code>ΣM_cw = ΣM_acw</code>），d⊥ 必须垂直于力的作用线！';
+        }
+        el.querySelector('#f2Out').innerHTML = resText;
+        const p2 = Math.max(0, Math.min(15, Number(el.querySelector('#f2_1').value) || 0));
+        const p4 = Math.max(0, Math.min(35, Number(el.querySelector('#f2_2').value) || 0));
+        const p6 = Math.max(0, Math.min(15, Number(el.querySelector('#f2_3').value) || 0));
+        const tot = p2 + p4 + p6, pct = Math.round((tot / 65) * 100);
+        el.querySelector('#f2ScoreOut').innerHTML = '<strong>Ch 1–4 模拟卷总分：' + tot + ' / 65（' + pct + '%）</strong> ｜ ' + (pct >= 80 ? '达到 A* 实力！注意保持 Paper 4 作图与 ATP 7 分设计完整性' : '建议先复盘失分集中模块（MCQ/结构简答/ATP 实验）');
+      });
+      setupTimer(el.querySelector('#f2Start'), el.querySelector('#f2Reset'), el.querySelector('#f2Clk'), 75);
+    } else if (t === 'f03') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">⚗️ F03 化学 Ch 1, 2, 4, 6 核心交互台 · 6 大电解产物与配平检查 + 65 分估分</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>选择 Ch6 电解/电池体系：<select id="f3Cell">' +
+        '<option value="pbbr2">1. 熔融溴化铅 Molten PbBr₂(l) · 碳电极</option>' +
+        '<option value="nacl_conc">2. 浓氯化钠溶液 Conc. NaCl(aq) · 碳电极</option>' +
+        '<option value="h2so4_dil">3. 稀硫酸 Dilute H₂SO₄(aq) · 碳/铂电极</option>' +
+        '<option value="cuso4_inert">4. 硫酸铜溶液 CuSO₄(aq) · 惰性碳/铂电极</option>' +
+        '<option value="cuso4_cu">5. 硫酸铜溶液 CuSO₄(aq) · 活性铜电极</option>' +
+        '<option value="fuel_cell">6. 氢氧燃料电池 H₂–O₂ Fuel Cell</option></select></label>' +
+        '<label>Paper2 (/15)：<input type="number" id="f3_1" value="13" min="0" max="15"></label>' +
+        '<label>Paper4 (/35)：<input type="number" id="f3_2" value="29" min="0" max="35"></label>' +
+        '<label>Paper6 (/15)：<input type="number" id="f3_3" value="13" min="0" max="15"></label>' +
+        '<button type="button" class="tab-btn active" id="f3Start">⏳ 75min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f3Reset">重置</button>' +
+        '<span class="timer-big" id="f3Clk">75:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f3Out"></div><div class="readout-pill" id="f3ScoreOut"></div></div></div>';
+      const cells = {
+        pbbr2: '<strong>熔融 PbBr₂(l)（必须加热至熔融才存在自由移动离子）</strong><br>• 阴极 (−) 还原：<code>Pb²⁺(l) + 2e⁻ → Pb(l)</code>（现象：银白色熔融金属珠）<br>• 阳极 (+) 氧化：<code>2Br⁻(l) → Br₂(g) + 2e⁻</code>（现象：红棕色气体 <strong>red-brown vapour</strong>）<br>⚠️ 高频坑：若题目写成室温固态 PbBr₂(s)，则完全不导电！',
+        nacl_conc: '<strong>浓 NaCl(aq) 氯碱电解（碳电极）</strong><br>• 阴极 (−)：H⁺ 排在 Na⁺ 后先得电子：<code>2H⁺(aq) + 2e⁻ → H₂(g)</code>（无色气泡，燃爆声）<br>• 阳极 (+)：高浓度 Cl⁻ 优先放电：<code>2Cl⁻(aq) → Cl₂(g) + 2e⁻</code>（黄绿色刺激气体，使湿润蓝色石蕊试纸先变红后褪色）<br>• 溶液变化：留下 Na⁺ 与 OH⁻，pH 升高呈碱性 NaOH(aq)！',
+        h2so4_dil: '<strong>稀 H₂SO₄(aq)（实质即电解水！）</strong><br>• 阴极 (−)：<code>2H⁺ + 2e⁻ → H₂(g)</code>（气体体积比 2 份）<br>• 阳极 (+)：SO₄²⁻ 从不放电，OH⁻ 氧化：<code>4OH⁻ → O₂(g) + 2H₂O + 4e⁻</code>（体积比 1 份，复燃带火星木条）<br>⚠️ 记住 H₂ : O₂ 体积比 = <strong>2 : 1</strong>！',
+        cuso4_inert: '<strong>CuSO₄(aq)（惰性石墨/铂电极）</strong><br>• 阴极 (−)：Cu²⁺ 较 H⁺ 更不活泼先还原：<code>Cu²⁺(aq) + 2e⁻ → Cu(s)</code>（红棕色固体覆盖电极）<br>• 阳极 (+)：<code>4OH⁻ → O₂(g) + 2H₂O + 4e⁻</code>（无色气泡）<br>• 溶液变化：Cu²⁺ 消耗且留下 H⁺+SO₄²⁻，<strong>蓝色变浅直至无色，pH 下降</strong>！',
+        cuso4_cu: '<strong>CuSO₄(aq)（活性铜电极 — 粗铜精炼/电镀铜）</strong><br>• 阴极 (−)：<code>Cu²⁺(aq) + 2e⁻ → Cu(s)</code>（阴极增重，纯铜析出）<br>• 阳极 (+)：铜阳极自身氧化溶解：<code>Cu(s) → Cu²⁺(aq) + 2e⁻</code>（阳极减重消耗）<br>• 溶液变化：Cu²⁺ 浓度不变，<strong>溶液始终保持蓝色且 pH 不变</strong>！',
+        fuel_cell: '<strong>氢氧燃料电池 H₂–O₂ Fuel Cell（2023+ 大纲必考！）</strong><br>• 总反应：<code>2H₂(g) + O₂(g) → 2H₂O(l)</code>（唯一产物只有水，零温室气体排放）<br>• 核心优势 vs 汽油内燃机：能量转换效率更高、污染小、无运动磨损；缺点：氢气储存/运输需高压低温且基础设施少（大多数氢气仍来自化石燃料裂解）。'
+      };
+      bindInputs(function () {
+        el.querySelector('#f3Out').innerHTML = cells[el.querySelector('#f3Cell').value];
+        const p2 = Math.max(0, Math.min(15, Number(el.querySelector('#f3_1').value) || 0));
+        const p4 = Math.max(0, Math.min(35, Number(el.querySelector('#f3_2').value) || 0));
+        const p6 = Math.max(0, Math.min(15, Number(el.querySelector('#f3_3').value) || 0));
+        const tot = p2 + p4 + p6, pct = Math.round((tot / 65) * 100);
+        el.querySelector('#f3ScoreOut').innerHTML = '<strong>Ch 1,2,4,6 模拟估分：' + tot + ' / 65（' + pct + '%）</strong> ｜ 提示：核对电化学半方程式电荷守恒与状态符号 (s)(l)(g)(aq)！';
+      });
+      setupTimer(el.querySelector('#f3Start'), el.querySelector('#f3Reset'), el.querySelector('#f3Clk'), 75);
+    } else if (t === 'f04') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🎧 F04 ESL 0510 写作词数红线仪 (120–160 词) + 听读写 100 分估分计时台</div></div>' +
+        '<div class="lab-panel write-box"><div class="lab-controls">' +
+        '<label>写作文体：<select id="f4Fmt">' +
+        '<option value="email">Ex 5 Informal Email（15m · 亲切自然）</option>' +
+        '<option value="article">Ex 6 Article（15m · 引人入胜）</option>' +
+        '<option value="review">Ex 6 Review（15m · 观点+推荐）</option>' +
+        '<option value="report">Ex 6 Formal Report（15m · 客观分段）</option></select></label>' +
+        '<span class="wc-meter wc-warn" id="f4Wc">当前词数：0 词 (目标 120–160 词)</span>' +
+        '</div><textarea class="write-textarea" id="f4Txt" placeholder="在此输入 Ex 5 / Ex 6 练习片段或完整作文，系统实时监测 120–160 词黄金靶区与文体 Checklist..."></textarea>' +
+        '<div class="lab-controls">' +
+        '<label>阅读 Ex1-4 (/30)：<input type="number" id="f4_1" value="26" min="0" max="30"></label>' +
+        '<label>写作 Ex5-6 (/30)：<input type="number" id="f4_2" value="25" min="0" max="30"></label>' +
+        '<label>听力 P2 (/40)：<input type="number" id="f4_3" value="35" min="0" max="40"></label>' +
+        '<button type="button" class="tab-btn active" id="f4Start">⏳ 120min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f4Reset">重置</button>' +
+        '<span class="timer-big" id="f4Clk">120:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f4Out"></div><div class="readout-pill" id="f4ScoreOut"></div></div></div>';
+      const fmtGuide = {
+        email: '<strong>Ex 5 Email checklist</strong>：① 3 个提示要点全部落地且各加 1–2 句细节扩展；② 用缩写（I\'m / can\'t）与自然过渡（By the way / Guessing what）；③ 禁用过分正式公文腔！',
+        article: '<strong>Ex 6 Article checklist</strong>：① 亮眼标题 + 设问 Hook 开篇；② 半正式/活泼但有逻辑的探讨；③ 结尾向读者发出行动号召或开放思考。',
+        review: '<strong>Ex 6 Review checklist</strong>：① 背景简述 + 平衡评价优缺点（绝不剧透核心结局！）；② 明确给出推荐人群与星级判断。',
+        report: '<strong>Ex 6 Report checklist</strong>：① 必备 To/From/Date/Subject 或清晰小标题（Introduction / Findings / Recommendations）；② 全篇禁缩写、少用第一人称情感词，多用被动语态与数据汇报口吻！'
+      };
+      const ta = el.querySelector('#f4Txt'), wc = el.querySelector('#f4Wc');
+      bindInputs(function () {
+        const w = countWords(ta.value);
+        wc.textContent = '当前词数：' + w + ' 词 (目标 120–160 词)';
+        wc.className = 'wc-meter ' + (w === 0 ? 'wc-warn' : (w >= 120 && w <= 160 ? 'wc-ok' : (w < 90 || w > 190 ? 'wc-err' : 'wc-warn')));
+        el.querySelector('#f4Out').innerHTML = fmtGuide[el.querySelector('#f4Fmt').value] + '<br><strong>字数反馈：</strong>' + (w === 0 ? '请在上方练习英文写作段落。' : (w < 120 ? '字数偏少，检查是否缺少扩展细节导致 Content 拿不满！' : (w > 160 ? '超出建议上限，注意精简避免冗长跑题或来不及检查语法！' : '词数精准落在 120–160 黄金区间！')));
+        const r = Math.max(0, Math.min(30, Number(el.querySelector('#f4_1').value) || 0));
+        const wr = Math.max(0, Math.min(30, Number(el.querySelector('#f4_2').value) || 0));
+        const li = Math.max(0, Math.min(40, Number(el.querySelector('#f4_3').value) || 0));
+        el.querySelector('#f4ScoreOut').innerHTML = '<strong>听读写三线总分：' + (r + wr + li) + ' / 100</strong> ｜ Reading ' + r + '/30 · Writing ' + wr + '/30 · Listening ' + li + '/40。';
+      });
+      setupTimer(el.querySelector('#f4Start'), el.querySelector('#f4Reset'), el.querySelector('#f4Clk'), 120);
+    } else if (t === 'f05') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🖋️ F05 语文 0509 双作文实测汉字计 (400–600 字) + 期末卷估分台</div></div>' +
+        '<div class="lab-panel write-box"><div class="lab-controls">' +
+        '<label>作文体裁（双 2 选 1）：<select id="f5Type">' +
+        '<option value="arg">Sec 1 议论文（鲜明立论 + 让步驳斥）</option>' +
+        '<option value="dis">Sec 1 讨论文（双面均衡辩证探讨）</option>' +
+        '<option value="desc">Sec 2 描写文（五感微雕定格画面）</option>' +
+        '<option value="narr">Sec 2 记叙文（10 秒高潮+物象回环）</option></select></label>' +
+        '<span class="wc-meter wc-warn" id="f5Wc">当前有效汉字：0 字 (目标 400–600 字)</span>' +
+        '</div><textarea class="write-textarea" id="f5Txt" placeholder="输入作文片段或成稿，实时检测 400–600 汉字区与体裁避雷提示..."></textarea>' +
+        '<div class="lab-controls">' +
+        '<label>现代文+9分赏析 (/25)：<input type="number" id="f5_1" value="21" min="0" max="25"></label>' +
+        '<label>作文 1 (/25)：<input type="number" id="f5_2" value="21" min="0" max="25"></label>' +
+        '<label>作文 2 (/25)：<input type="number" id="f5_3" value="21" min="0" max="25"></label>' +
+        '<button type="button" class="tab-btn active" id="f5Start">⏳ 120min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f5Reset">重置</button>' +
+        '<span class="timer-big" id="f5Clk">120:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f5Out"></div><div class="readout-pill" id="f5ScoreOut"></div></div></div>';
+      const guides = {
+        arg: '<strong>议论文红线</strong>：开头亮明单边立场；至少 2 个深剖分论点（切忌只堆事例不议理）；必写 1 段“诚然……然而……”让步驳斥；避免写着写着变成两边都支持的讨论文！',
+        dis: '<strong>讨论文红线</strong>：正反双面篇幅大致平衡，用语保持客观冷静（如“支持者认为……”“然而也有观察指出……”），结尾做辩证权衡而不强行喊口号！',
+        desc: '<strong>描写文红线</strong>：严禁流水账叙事！以空间或时间顺序移动镜头，调用视觉光影、听觉质感、嗅觉与触感温度刻画氛围与人物微神态。',
+        narr: '<strong>记叙文红线</strong>：聚焦单个高张力小事件，30% 篇幅精雕“高潮 10 秒慢动作与心理微变化”，用核心物象贯穿首尾回环收束！'
+      };
+      const ta = el.querySelector('#f5Txt'), wc = el.querySelector('#f5Wc');
+      bindInputs(function () {
+        const n = countChiChars(ta.value);
+        wc.textContent = '当前有效汉字：' + n + ' 字 (目标 400–600 字)';
+        wc.className = 'wc-meter ' + (n === 0 ? 'wc-warn' : (n >= 400 && n <= 600 ? 'wc-ok' : (n < 350 || n > 660 ? 'wc-err' : 'wc-warn')));
+        el.querySelector('#f5Out').innerHTML = guides[el.querySelector('#f5Type').value] + '<br><strong>字数反馈：</strong>' + (n === 0 ? '请贴入或试写现代文/作文段落（400–600 字最稳妥落在 460–560 字）。' : (n < 400 ? '偏短，低于 400 字内容结构分 (C&S) 易被压至中档！' : (n > 600 ? '略超 600 字建议红线，请压缩冗余铺垫防草率结尾或错字增多。' : '有效字数正处于 400–600 黄金得分带！')));
+        const s1 = Math.max(0, Math.min(25, Number(el.querySelector('#f5_1').value) || 0));
+        const s2 = Math.max(0, Math.min(25, Number(el.querySelector('#f5_2').value) || 0));
+        const s3 = Math.max(0, Math.min(25, Number(el.querySelector('#f5_3').value) || 0));
+        const tot = s1 + s2 + s3;
+        el.querySelector('#f5ScoreOut').innerHTML = '<strong>阅读+双作文模考估分：' + tot + ' / 75（' + Math.round((tot / 75) * 100) + '%）</strong> ｜ 阅读赏析 ' + s1 + '/25 · 作文1 ' + s2 + '/25 · 作文2 ' + s3 + '/25。';
+      });
+      setupTimer(el.querySelector('#f5Start'), el.querySelector('#f5Reset'), el.querySelector('#f5Clk'), 120);
+    } else if (t === 'f06') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🌍 F06 GP 0457 Component 1 (Q1–Q4) 答题骨架器与 70 分/85min 模考台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>切换题型骨架：<select id="f6Q">' +
+        '<option value="q1">Q1 (约14分) · 概念辨析 (Fact/Opinion/Value/Bias) + 趋势提炼</option>' +
+        '<option value="q2a">Q2A (8分) · RAVEN 来源可信度与权威/目的评估</option>' +
+        '<option value="q2b">Q2B (8分) · 如何设计研究检验某主张 (4大核心要素)</option>' +
+        '<option value="q3">Q3 (16分) · Level 4 双论证正面交锋六维对比框架</option>' +
+        '<option value="q4">Q4 (24分) · 政策决策大作文五维权衡与四段结构</option></select></label>' +
+        '<label>Q1 (/14)：<input type="number" id="f6_1" value="12" min="0" max="14"></label>' +
+        '<label>Q2 (/16)：<input type="number" id="f6_2" value="13" min="0" max="16"></label>' +
+        '<label>Q3 (/16)：<input type="number" id="f6_3" value="13" min="0" max="16"></label>' +
+        '<label>Q4 (/24)：<input type="number" id="f6_4" value="20" min="0" max="24"></label>' +
+        '<button type="button" class="tab-btn active" id="f6Start">⏳ 85min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f6Reset">重置</button>' +
+        '<span class="timer-big" id="f6Clk">85:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f6Out"></div><div class="readout-pill" id="f6ScoreOut"></div></div></div>';
+      const fw = {
+        q1: '<strong>Q1 满分公式</strong>：① Fact（可核查数据/历史事实）vs Opinion（个人看法）vs Prediction（未来预测）vs Value Judgement（道德/好坏评判“should/unfair”）；② 辨析理由必须紧扣原句引号并点明“能否被独立核实”。',
+        q2a: '<strong>Q2A 8 分模板</strong>：从来源<strong>双面</strong>评估：① Strength（如作者专业身份/同行评审/数据样本明确/承认局限性）；② Weakness（如既得利益 vested interest、情感煽动用词、无引文孤证、样本过小/过时）——切忌空背 RAVEN 字母不结合材料！',
+        q2b: '<strong>Q2B 研究设计四要素</strong>：① <strong>Who / Sample</strong>（谁是受试/样本量与随机分层代表性）；② <strong>Method / Instrument</strong>（对照实验、问卷防诱导提问或访谈设计）；③ <strong>Secondary Verification</strong>（比对官方统计/纵贯追踪）；④ <strong>Reliability / Bias Control</strong>（消除利益冲突与季节性偏差）。',
+        q3: '<strong>Q3 Level 4 铁律</strong>：<strong>绝不把 Source A 写一段再把 Source B 写一段！</strong>每段确立 1 个对比维度（① 实证与数据支撑度 → ② 因果推理严密性 vs 逻辑谬误 → ③ 视角平衡与偏见控制），用 <code>Whereas Source A..., Source B...</code> 正面交锋并最终裁决谁更具说服力！',
+        q4: '<strong>Q4 24 分四段闭环</strong>：① 段1 鲜明选边立论；② 段2 核心理由深度展开（引用材料+自身拓展视角）；③ 段3 <strong>对比另外 1–2 个备选方案为什么较弱</strong>（可行性/成本/长期与短期副作用）；④ 段4 让步防线（承认本方案潜在阻力并给出配套缓解措施）。'
+      };
+      bindInputs(function () {
+        el.querySelector('#f6Out').innerHTML = fw[el.querySelector('#f6Q').value];
+        const s1 = Math.max(0, Math.min(14, Number(el.querySelector('#f6_1').value) || 0));
+        const s2 = Math.max(0, Math.min(16, Number(el.querySelector('#f6_2').value) || 0));
+        const s3 = Math.max(0, Math.min(16, Number(el.querySelector('#f6_3').value) || 0));
+        const s4 = Math.max(0, Math.min(24, Number(el.querySelector('#f6_4').value) || 0));
+        const tot = s1 + s2 + s3 + s4, pct = Math.round((tot / 70) * 100);
+        el.querySelector('#f6ScoreOut').innerHTML = '<strong>Component 1 总分：' + tot + ' / 70（' + pct + '%）</strong> ｜ ' + (pct >= 80 ? '冲击 A* 顶尖区间！注意 Q3 正面比较与 Q4 备选方案对比论证' : '建议强化 Q3/Q4 分值最重的段落结构');
+      });
+      setupTimer(el.querySelector('#f6Start'), el.querySelector('#f6Reset'), el.querySelector('#f6Clk'), 85);
+    }
+  }
+  document.querySelectorAll('.lab-box[data-lab-type]').forEach(mountSprintLab);
+
+  // ---------- 10. Universal Personal Error Clinic ----------
+  function mountClinic(el) {
+    const code = el.getAttribute('data-clinic-subject') || subCode;
+    const key = 'igcse_final_sprint_clinic_' + code.toLowerCase();
+    let items = [];
+    try {
+      items = JSON.parse(localStorage.getItem(key) || '[]');
+      if (!Array.isArray(items)) items = [];
+    } catch (e) { items = []; }
+
+    el.innerHTML =
+      '<div class="clinic-head"><div class="clinic-title">🩺 ' + code + ' 个人错题诊疗台（离线持久化 · 支持考前筛查与一键发给 AI 精批）</div>' +
+      '<span class="hub-clinic-pill" id="clinicPendingPill">待攻克：0 题</span></div>' +
+      '<div class="clinic-form-grid">' +
+      '<div class="clinic-field"><label>章节 / 题号出处</label><input type="text" id="clinicTopic" placeholder="如：Ch6 Linear Law Q4 / P2 Q12 / 赏析第2题"></div>' +
+      '<div class="clinic-field"><label>失分归因标签</label><select id="clinicReason">' +
+      '<option value="概念与公式不清">概念与公式不清</option>' +
+      '<option value="审题漏条件/看错单位">审题漏条件/看错单位</option>' +
+      '<option value="计算/推导中途出错">计算/推导中途出错</option>' +
+      '<option value="缺 Mark Scheme 踩分词">缺 Mark Scheme 踩分词</option>' +
+      '<option value="时间不够/字数失控">时间不够/字数失控</option></select></div>' +
+      '</div>' +
+      '<div class="clinic-form-grid">' +
+      '<div class="clinic-field"><label>原题要点 / 错在哪一步</label><textarea id="clinicStem" placeholder="记下题目关键条件和你当时为什么做错..."></textarea></div>' +
+      '<div class="clinic-field"><label>正解与防再犯铁律（二刷时用）</label><textarea id="clinicFix" placeholder="记下正确解法步骤、关键得分词或自我提醒..."></textarea></div>' +
+      '</div>' +
+      '<div class="clinic-toolbar">' +
+      '<div class="clinic-actions">' +
+      '<button type="button" class="clinic-btn clinic-btn-primary" id="clinicAddBtn">➕ 收入本科目错题本</button>' +
+      '<select id="clinicFilter" aria-label="按错因过滤">' +
+      '<option value="ALL">显示全部未攻克错题</option>' +
+      '<option value="ALL_INC">显示全部（含已攻克）</option>' +
+      '<option value="概念与公式不清">只看：概念与公式不清</option>' +
+      '<option value="审题漏条件/看错单位">只看：审题漏条件/看错单位</option>' +
+      '<option value="计算/推导中途出错">只看：计算/推导中途出错</option>' +
+      '<option value="缺 Mark Scheme 踩分词">只看：缺 Mark Scheme 踩分词</option>' +
+      '<option value="时间不够/字数失控">只看：时间不够/字数失控</option></select>' +
+      '</div>' +
+      '<div class="clinic-actions">' +
+      '<button type="button" class="clinic-btn" id="clinicExportBtn">📋 生成并复制 AI 精讲清单</button>' +
+      '</div></div>' +
+      '<textarea class="clinic-preview" id="clinicExportBox" readonly></textarea>' +
+      '<div class="clinic-list" id="clinicList"></div>';
+
+    const topicEl = el.querySelector('#clinicTopic');
+    const reasonEl = el.querySelector('#clinicReason');
+    const stemEl = el.querySelector('#clinicStem');
+    const fixEl = el.querySelector('#clinicFix');
+    const addBtn = el.querySelector('#clinicAddBtn');
+    const filterEl = el.querySelector('#clinicFilter');
+    const exportBtn = el.querySelector('#clinicExportBtn');
+    const exportBox = el.querySelector('#clinicExportBox');
+    const pendingPill = el.querySelector('#clinicPendingPill');
+    const listEl = el.querySelector('#clinicList');
+
+    function save() {
+      localStorage.setItem(key, JSON.stringify(items));
+      const pending = items.filter(function (x) { return !x.solved; }).length;
+      localStorage.setItem('igcse_final_sprint_clinic_cnt_' + code.toLowerCase(), String(pending));
+      if (pendingPill) {
+        pendingPill.textContent = '待攻克：' + pending + ' 题（总计 ' + items.length + ' 题）';
+        pendingPill.classList.toggle('has-err', pending > 0);
+      }
+    }
+
+    function escapeHtml(s) {
+      return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    function renderList() {
+      save();
+      const f = filterEl.value;
+      const shown = items.filter(function (it) {
+        if (f === 'ALL') return !it.solved;
+        if (f === 'ALL_INC') return true;
+        return it.reason === f;
+      });
+      if (!shown.length) {
+        listEl.innerHTML = '<div style="padding:14px;text-align:center;color:var(--text-faint);background:var(--bg-surface);border:1px dashed var(--border-strong);border-radius:7px;font-size:13.5px;">当前筛选下暂无错题记录。做题遇到卡壳或把近期 Quiz 错题粘贴进来，考前即可按错因集中清零！</div>';
+        return;
+      }
+      listEl.innerHTML = shown.map(function (it) {
+        return '<div class="clinic-item' + (it.solved ? ' solved' : '') + '" data-cid="' + it.id + '">' +
+          '<div class="clinic-item-top">' +
+          '<div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">' +
+          '<span class="clinic-tag">' + escapeHtml(it.topic) + '</span>' +
+          '<span class="clinic-reason">' + escapeHtml(it.reason) + '</span>' +
+          '<span style="font-size:12px;color:var(--text-faint);">' + (it.solved ? '✓ 已攻克' : '● 待二刷') + '</span></div>' +
+          '<div class="clinic-actions">' +
+          '<button type="button" class="clinic-btn clinic-toggle-btn">' + (it.solved ? '↺ 重新标红' : '✓ 标为已攻克') + '</button>' +
+          '<button type="button" class="clinic-btn clinic-del-btn">删除</button>' +
+          '</div></div>' +
+          '<div style="font-size:13.5px;margin-bottom:4px;"><strong>错题要点：</strong>' + escapeHtml(it.stem) + '</div>' +
+          (it.fix ? '<div style="font-size:13.3px;color:var(--text-muted);"><strong>正解与防错铁律：</strong>' + escapeHtml(it.fix) + '</div>' : '') +
+          '</div>';
+      }).join('');
+    }
+
+    addBtn.addEventListener('click', function () {
+      const topic = topicEl.value.trim() || '未标注章节';
+      const stem = stemEl.value.trim();
+      if (!stem) { stemEl.focus(); return; }
+      items.unshift({
+        id: String(Date.now()) + '_' + Math.random().toString(36).slice(2, 6),
+        topic: topic,
+        reason: reasonEl.value,
+        stem: stem,
+        fix: fixEl.value.trim(),
+        solved: false
+      });
+      topicEl.value = '';
+      stemEl.value = '';
+      fixEl.value = '';
+      renderList();
+    });
+
+    listEl.addEventListener('click', function (ev) {
+      const card = ev.target.closest('.clinic-item');
+      if (!card) return;
+      const cid = card.getAttribute('data-cid');
+      const idx = items.findIndex(function (x) { return x.id === cid; });
+      if (idx === -1) return;
+      if (ev.target.closest('.clinic-toggle-btn')) {
+        items[idx].solved = !items[idx].solved;
+        renderList();
+      } else if (ev.target.closest('.clinic-del-btn')) {
+        items.splice(idx, 1);
+        renderList();
+      }
+    });
+
+    filterEl.addEventListener('change', renderList);
+    exportBtn.addEventListener('click', function () {
+      const pending = items.filter(function (x) { return !x.solved; });
+      const target = pending.length ? pending : items;
+      const lines = ['### ' + code + ' 待精讲错题清单（共 ' + target.length + ' 题）'];
+      target.forEach(function (it, i) {
+        lines.push((i + 1) + '. [' + it.topic + ' | ' + it.reason + '] ' + it.stem + (it.fix ? '（我的初版订正：' + it.fix + '）' : ''));
+      });
+      if (!target.length) lines.push('（当前暂无错题记录）');
+      const md = lines.join('\n');
+      exportBox.value = md;
+      exportBox.classList.add('visible');
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(md).catch(function () {});
+      }
+      exportBtn.textContent = '✓ 已生成（可全选复制给 AI）';
+      setTimeout(function () { exportBtn.textContent = '📋 生成并复制 AI 精讲清单'; }, 2200);
+    });
+
+    renderList();
+  }
+  document.querySelectorAll('.clinic-box[data-clinic-subject]').forEach(mountClinic);
+
+  // ---------- 11. ScrollSpy & Back Top ----------
+  const navLinksAll = Array.from(document.querySelectorAll('.sidebar .nav-link[href^="#"]'));
+  const observedSections = navLinksAll
+    .map(function (l) { return document.getElementById((l.getAttribute('href') || '').slice(1)); })
+    .filter(Boolean);
+
+  if ('IntersectionObserver' in window && observedSections.length) {
+    const io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navLinksAll.forEach(function (l) {
+            l.classList.toggle('active', l.getAttribute('href') === '#' + id);
+          });
+        }
+      });
+    }, { rootMargin: '-18% 0px -70% 0px' });
+    observedSections.forEach(function (sec) { io.observe(sec); });
+  }
+
+  const backTopBtn = document.getElementById('backTopBtn');
+  if (backTopBtn) {
+    window.addEventListener('scroll', function () {
+      backTopBtn.classList.toggle('visible', window.scrollY > 420);
+    });
+    backTopBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  applyQuizMask(quizMasked);
+  filterConcepts();
+})();
+
+  </script>
+</body>
+</html>

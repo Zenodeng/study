@@ -1,0 +1,2458 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="--accent: #D97706;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>F06 · Global Perspectives (0457) · Component 1 Q1–Q4 — IGCSE 期末范围锁定冲刺</title>
+  <style>
+/* ==========================================================================
+   Cambridge IGCSE 6-Subject Final Exam Sprint Suite Shared Stylesheet
+   ========================================================================== */
+
+:root {
+  --bg-page: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --bg-sidebar: #FFFFFF;
+  --bg-code: #EFF6FF;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-faint: #64748B;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+
+  --accent: #2563EB;
+  --accent-hover: #1D4ED8;
+  --accent-soft: #DBEAFE;
+
+  --core-bg: #E0F2FE;
+  --core-text: #075985;
+  --core-border: #BAE6FD;
+  --ext-bg: #FEF3C7;
+  --ext-text: #92400E;
+  --ext-border: #FDE68A;
+
+  --deep-bg: #EFF6FF;
+  --deep-border: #2563EB;
+  --tip-bg: #FFFBEB;
+  --tip-border: #D97706;
+  --mistake-bg: #FFF1F2;
+  --mistake-border: #E11D48;
+  --example-bg: #F0FDF4;
+  --example-border: #16A34A;
+  --formula-bg: #F8FAFC;
+  --formula-border: #2563EB;
+
+  --ok-bg: #DCFCE7;
+  --ok-text: #166534;
+  --ok-border: #86EFAC;
+  --err-bg: #FEE2E2;
+  --err-text: #991B1B;
+  --err-border: #FCA5A5;
+
+  --svg-bg: #FFFFFF;
+  --svg-grid: #E2E8F0;
+  --svg-ink: #0F172A;
+  --svg-muted: #64748B;
+  --svg-blue: #2563EB;
+  --svg-indigo: #4338CA;
+  --svg-teal: #0D9488;
+  --svg-amber: #D97706;
+  --svg-red: #DC2626;
+  --svg-green: #16A34A;
+  --svg-purple: #7C3AED;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.07);
+  --shadow-lg: 0 10px 26px rgba(15, 23, 42, 0.11);
+
+  --sidebar-w: 280px;
+  --topbar-h: 58px;
+  --radius-sm: 7px;
+  --radius-md: 11px;
+  --radius-lg: 16px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+  --font-serif: Georgia, "Times New Roman", "Songti SC", "Noto Serif SC", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+[data-theme="dark"] {
+  --bg-page: #0B1120;
+  --bg-surface: #111827;
+  --bg-subtle: #1E293B;
+  --bg-sidebar: #0F172A;
+  --bg-code: #1E293B;
+  --text-main: #F1F5F9;
+  --text-muted: #CBD5E1;
+  --text-faint: #94A3B8;
+  --border: #1E293B;
+  --border-strong: #334155;
+
+  --accent: #38BDF8 !important;
+  --accent-hover: #7DD3FC;
+  --accent-soft: rgba(56, 189, 248, 0.18);
+
+  --core-bg: rgba(56, 189, 248, 0.16);
+  --core-text: #BAE6FD;
+  --core-border: rgba(56, 189, 248, 0.36);
+  --ext-bg: rgba(245, 158, 11, 0.16);
+  --ext-text: #FDE68A;
+  --ext-border: rgba(245, 158, 11, 0.36);
+
+  --deep-bg: rgba(37, 99, 235, 0.14);
+  --deep-border: #60A5FA;
+  --tip-bg: rgba(217, 119, 6, 0.14);
+  --tip-border: #FBBF24;
+  --mistake-bg: rgba(225, 29, 72, 0.15);
+  --mistake-border: #FB7185;
+  --example-bg: rgba(22, 163, 74, 0.13);
+  --example-border: #4ADE80;
+  --formula-bg: #172033;
+  --formula-border: #38BDF8;
+
+  --ok-bg: rgba(22, 163, 74, 0.22);
+  --ok-text: #BBF7D0;
+  --ok-border: #22C55E;
+  --err-bg: rgba(220, 38, 38, 0.22);
+  --err-text: #FECACA;
+  --err-border: #EF4444;
+
+  --svg-bg: #0F172A;
+  --svg-grid: #334155;
+  --svg-ink: #F1F5F9;
+  --svg-muted: #94A3B8;
+  --svg-blue: #60A5FA;
+  --svg-indigo: #818CF8;
+  --svg-teal: #2DD4BF;
+  --svg-amber: #FBBF24;
+  --svg-red: #F87171;
+  --svg-green: #34D399;
+  --svg-purple: #A78BFA;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .seg-btn.active,
+[data-theme="dark"] .tab-btn.active,
+[data-theme="dark"] .icon-btn.active,
+[data-theme="dark"] .brand-code,
+[data-theme="dark"] .pager-btn.primary,
+[data-theme="dark"] .clinic-btn-primary { color: #0B1120; }
+[data-theme="dark"] .hub-foot { color: #38BDF8; }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--topbar-h) + 18px); }
+body { margin: 0; font-family: var(--font-sans); background: var(--bg-page); color: var(--text-main); line-height: 1.72; font-size: 15.5px; -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4 { margin: 0 0 0.55em 0; line-height: 1.32; font-weight: 700; color: var(--text-main); }
+p { margin: 0 0 0.9em 0; }
+ul, ol { margin: 0 0 1em 0; padding-left: 1.45em; }
+li { margin-bottom: 0.35em; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { font-family: var(--font-mono); font-size: 0.9em; background: var(--bg-code); color: var(--accent); padding: 2px 6px; border-radius: 4px; }
+
+/* View Mode Filters */
+body.mode-summary .topic-section:not(.sec-summary) { display: none !important; }
+body.mode-practice .topic-section:not(.sec-practice) { display: none !important; }
+body.mode-clinic .topic-section:not(.sec-clinic) { display: none !important; }
+body.mode-cards .topic-section:not(.sec-cards) { display: none !important; }
+
+/* Math & Formula Styling */
+.math { font-family: var(--font-serif); font-style: italic; font-weight: 600; }
+.frac { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; font-size: 0.88em; line-height: 1.15; margin: 0 3px; }
+.frac .num { border-bottom: 1.5px solid currentColor; padding: 0 4px 1px 4px; }
+.frac .den { padding: 1px 4px 0 4px; }
+.sqrt { display: inline-flex; align-items: center; font-family: var(--font-serif); }
+.sqrt-rad { border-top: 1.5px solid currentColor; padding: 0 3px; margin-left: 1px; }
+
+.badge-c1, .badge-cw, .badge-core, .badge-ext { display: inline-block; font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.badge-c1, .badge-core { background: var(--core-bg); color: var(--core-text); border: 1px solid var(--core-border); }
+.badge-cw, .badge-ext { background: var(--ext-bg); color: var(--ext-text); border: 1px solid var(--ext-border); }
+
+.formula-card { background: var(--formula-bg); border: 1.5px solid var(--border-strong); border-left: 5px solid var(--formula-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; font-size: 15px; }
+.formula-main { font-family: var(--font-serif); font-size: 16.5px; font-weight: 700; color: var(--accent); margin: 4px 0 6px 0; }
+
+.source-box, .reading-passage { background: var(--bg-page); border: 1px solid var(--border-strong); border-left: 5px solid var(--accent); border-radius: var(--radius-md); padding: 16px 20px; margin: 14px 0; font-family: var(--font-serif); font-size: 15px; line-height: 1.76; }
+.reading-title { font-family: var(--font-sans); font-size: 15.8px; font-weight: 800; color: var(--text-main); margin-bottom: 8px; }
+.para-tag { display: inline-block; font-family: var(--font-sans); font-size: 11.5px; font-weight: 800; background: var(--accent-soft); color: var(--accent); padding: 1px 7px; border-radius: 4px; margin-right: 6px; }
+
+.model-essay { background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 20px; margin: 14px 0; box-shadow: var(--shadow-sm); }
+.essay-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; padding-bottom: 10px; margin-bottom: 12px; border-bottom: 1px solid var(--border); font-size: 13px; font-weight: 700; }
+.band-pill { padding: 2px 10px; border-radius: 999px; font-size: 12px; font-weight: 800; }
+.band-high { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.band-mid { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+.essay-body { font-family: var(--font-serif); font-size: 15px; line-height: 1.76; }
+mark.hl-content { background: rgba(37, 99, 235, 0.16); color: inherit; padding: 1px 3px; border-radius: 3px; }
+mark.hl-lang { background: rgba(22, 163, 74, 0.18); color: inherit; padding: 1px 3px; border-radius: 3px; }
+mark.hl-err { background: rgba(220, 38, 38, 0.16); color: inherit; padding: 1px 3px; border-radius: 3px; text-decoration: wavy underline rgba(220, 38, 38, 0.6); }
+
+.write-box { display: flex; flex-direction: column; gap: 10px; }
+.write-textarea { width: 100%; min-height: 140px; padding: 12px 14px; border-radius: var(--radius-sm); border: 1.5px solid var(--border-strong); background: var(--bg-page); color: var(--text-main); font-family: var(--font-serif); font-size: 14.8px; line-height: 1.65; resize: vertical; }
+.write-textarea:focus { outline: none; border-color: var(--accent); }
+.wc-meter { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 800; }
+.wc-ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.wc-warn { background: var(--tip-bg); color: var(--tip-border); border: 1px solid var(--tip-border); }
+.wc-err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+.timer-big { font-family: var(--font-mono); font-size: 20px; font-weight: 800; color: var(--accent); background: var(--bg-page); border: 1.5px solid var(--border-strong); padding: 4px 10px; border-radius: var(--radius-sm); }
+
+/* Topbar */
+.topbar {
+  position: sticky; top: 0; z-index: 100; height: var(--topbar-h);
+  background: var(--bg-surface); border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm); display: flex; align-items: center;
+  justify-content: space-between; gap: 8px; padding: 0 14px;
+}
+.topbar-left { display: flex; align-items: center; gap: 7px; min-width: 0; flex-shrink: 1; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; gap: 5px; height: 34px; padding: 0 9px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--bg-surface); color: var(--text-main); font-size: 12.8px; font-weight: 600; cursor: pointer; white-space: nowrap; text-decoration: none; }
+.icon-btn:hover { background: var(--bg-subtle); border-color: var(--accent); text-decoration: none; }
+.icon-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.menu-toggle { display: none; }
+.brand-pill { display: flex; align-items: center; gap: 7px; font-weight: 700; font-size: 13.8px; white-space: nowrap; flex-shrink: 1; min-width: 0; }
+.brand-code { background: var(--accent); color: #fff; padding: 2px 8px; border-radius: 5px; font-size: 12px; letter-spacing: 0.4px; white-space: nowrap; flex-shrink: 0; }
+.brand-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 170px; }
+.search-wrap { position: relative; flex: 1 1 130px; min-width: 120px; max-width: 225px; }
+.search-input { width: 100%; height: 34px; padding: 0 28px 0 30px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--bg-subtle); color: var(--text-main); font-size: 13px; outline: none; }
+.search-input:focus { border-color: var(--accent); background: var(--bg-surface); }
+.search-input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.search-icon { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--text-faint); font-size: 12.5px; pointer-events: none; }
+.search-clear { position: absolute; right: 7px; top: 50%; transform: translateY(-50%); border: none; background: transparent; color: var(--text-faint); cursor: pointer; font-size: 14px; display: none; }
+.search-results-bar { display: none; background: var(--accent-soft); border-bottom: 1px solid var(--border); padding: 8px 20px; font-size: 13.5px; color: var(--text-main); align-items: center; justify-content: space-between; gap: 12px; }
+.search-results-bar.visible { display: flex; }
+.topbar-controls { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+.seg-group { display: inline-flex; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); overflow: hidden; background: var(--bg-subtle); }
+.seg-btn { border: none; background: transparent; color: var(--text-muted); padding: 6px 7px; font-size: 11.8px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.seg-btn.active { background: var(--accent); color: #fff; }
+.progress-chip { display: flex; align-items: center; gap: 6px; padding: 4px 9px; border-radius: 999px; background: var(--bg-subtle); border: 1px solid var(--border); font-size: 12px; font-weight: 600; white-space: nowrap; }
+.progress-track { width: 46px; height: 7px; background: var(--border-strong); border-radius: 99px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), #0D9488); transition: width 0.25s ease; }
+
+.app-layout { display: flex; min-height: calc(100vh - var(--topbar-h)); }
+.sidebar { width: var(--sidebar-w); flex-shrink: 0; background: var(--bg-sidebar); border-right: 1px solid var(--border); position: sticky; top: var(--topbar-h); height: calc(100vh - var(--topbar-h)); overflow-y: auto; padding: 14px 10px 44px 10px; }
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 99px; }
+.nav-unit { margin-bottom: 8px; }
+.nav-unit-btn { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border: none; border-radius: var(--radius-sm); background: transparent; color: var(--text-main); font-size: 13px; font-weight: 700; text-align: left; cursor: pointer; }
+.nav-unit-btn:hover { background: var(--bg-subtle); }
+.nav-unit-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.nav-unit-title { flex: 1; display: flex; align-items: center; gap: 7px; line-height: 1.3; }
+.nav-chevron { font-size: 11px; color: var(--text-faint); transition: transform 0.2s; }
+.nav-unit.collapsed .nav-chevron { transform: rotate(-90deg); }
+.nav-unit.collapsed .nav-links { display: none; }
+.nav-links { list-style: none; padding: 2px 0 4px 12px; margin: 0 0 0 14px; border-left: 2px solid var(--border); }
+.nav-link { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 5px 9px; margin: 2px 0; border-radius: var(--radius-sm); color: var(--text-muted); font-size: 12.6px; line-height: 1.35; text-decoration: none; }
+.nav-link:hover { background: var(--bg-subtle); color: var(--text-main); text-decoration: none; }
+.nav-link.active { background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+.nav-done-mark { color: #10B981; font-weight: 800; font-size: 12px; opacity: 0; }
+.nav-link.mastered .nav-done-mark { opacity: 1; }
+.main-content { flex: 1; min-width: 0; padding: 24px 28px 80px 28px; }
+.content-inner { max-width: 960px; margin: 0 auto; }
+
+.hero-card { background: linear-gradient(135deg, #0F172A 0%, var(--accent) 62%, #0F766E 100%); color: #fff; border-radius: var(--radius-lg); padding: 26px 30px; margin-bottom: 24px; box-shadow: var(--shadow-lg); }
+.hero-card h1 { color: #fff; font-size: 24px; margin-bottom: 8px; letter-spacing: -0.3px; }
+.hero-sub { color: rgba(255,255,255,0.92); font-size: 14.5px; max-width: 850px; margin-bottom: 14px; }
+.hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.hero-pill { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.28); color: #fff; padding: 4px 11px; border-radius: 999px; font-size: 12.5px; font-weight: 600; }
+.unit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(175px, 1fr)); gap: 10px; }
+.unit-tile { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.24); border-radius: var(--radius-md); padding: 11px 13px; color: #fff; text-decoration: none; display: block; transition: transform 0.15s, background 0.15s; }
+.unit-tile:hover { transform: translateY(-2px); background: rgba(255,255,255,0.22); text-decoration: none; }
+.unit-tile-num { font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; opacity: 0.85; font-weight: 700; }
+.unit-tile-title { font-size: 13.8px; font-weight: 700; margin: 3px 0 0 0; }
+
+.topic-section { background: var(--bg-surface); border: 1px solid var(--border); border-top: 4px solid var(--accent); border-radius: var(--radius-md); padding: 22px 24px; margin-bottom: 24px; box-shadow: var(--shadow-sm); }
+.topic-section.search-dim { display: none; }
+.section-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 2px solid var(--border); }
+.section-title-group h3 { font-size: 19px; margin-bottom: 4px; }
+.section-en-sub { font-size: 13.5px; color: var(--text-faint); font-weight: 600; }
+.tier-row { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 7px; }
+.master-btn { flex-shrink: 0; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-muted); font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.master-btn:hover { border-color: #10B981; color: #10B981; }
+.master-btn.is-mastered { background: var(--ok-bg); color: var(--ok-text); border-color: var(--ok-border); }
+.subtopic { margin-bottom: 20px; }
+.subtopic:last-of-type { margin-bottom: 12px; }
+.subtopic h4 { font-size: 16px; color: var(--accent); margin: 0 0 10px 0; padding-bottom: 4px; border-bottom: 1px dashed var(--border); display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+
+.worked-example { background: var(--example-bg); border: 1px solid var(--border); border-left: 4px solid var(--example-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; }
+.worked-title { font-weight: 800; font-size: 14px; color: var(--example-border); margin-bottom: 6px; }
+.callout { border-radius: var(--radius-sm); padding: 13px 16px; margin: 14px 0; border-left: 4px solid var(--border-strong); font-size: 14.5px; }
+.callout-title { font-weight: 800; font-size: 13.5px; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+.deep-dive { background: var(--deep-bg); border-left-color: var(--deep-border); }
+.deep-dive .callout-title { color: var(--deep-border); }
+.examiner-tip { background: var(--tip-bg); border-left-color: var(--tip-border); }
+.examiner-tip .callout-title { color: var(--tip-border); }
+.common-mistake { background: var(--mistake-bg); border-left-color: var(--mistake-border); }
+.common-mistake .callout-title { color: var(--mistake-border); }
+
+.table-wrap { width: 100%; overflow-x: auto; margin: 14px 0; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+table.sprint-table, table.gp-table, table.phy-table { width: 100%; border-collapse: collapse; font-size: 13.8px; text-align: left; }
+table.sprint-table th, table.gp-table th, table.phy-table th { background: var(--bg-subtle); color: var(--text-main); font-weight: 700; padding: 9px 12px; border-bottom: 2px solid var(--border-strong); white-space: nowrap; }
+table.sprint-table td, table.gp-table td, table.phy-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.sprint-table tr:last-child td, table.gp-table tr:last-child td, table.phy-table tr:last-child td { border-bottom: none; }
+table.sprint-table tbody tr:hover, table.gp-table tbody tr:hover, table.phy-table tbody tr:hover { background: var(--bg-subtle); }
+
+.svg-figure { background: var(--svg-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px; margin: 16px 0; text-align: center; break-inside: avoid; }
+.svg-figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.svg-caption { margin-top: 8px; font-size: 13px; color: var(--text-faint); font-weight: 600; }
+
+/* Interactive Labs */
+.lab-box { background: var(--bg-subtle); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 18px; margin: 18px 0; break-inside: avoid; }
+.lab-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+.lab-title { font-size: 15.5px; font-weight: 800; color: var(--accent); display: flex; align-items: center; gap: 7px; }
+.lab-panel { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; }
+.lab-controls { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-bottom: 12px; align-items: center; }
+.lab-controls label { font-size: 13px; font-weight: 700; color: var(--text-muted); display: inline-flex; align-items: center; gap: 6px; }
+.lab-controls input[type="number"], .lab-controls input[type="text"], .lab-controls select { padding: 5px 8px; border-radius: 6px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-main); font-size: 13.2px; font-weight: 700; }
+.lab-controls input[type="number"] { min-width: 100px; width: 108px; text-align: center; }
+.tab-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.tab-btn { border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-muted); padding: 5px 10px; border-radius: 6px; font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.tab-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.lab-readout { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; font-size: 13.2px; font-weight: 600; }
+.readout-pill { background: var(--bg-page); border: 1px solid var(--border-strong); padding: 8px 11px; border-radius: 6px; width: 100%; line-height: 1.6; }
+
+/* Personal Error Clinic */
+.clinic-box { background: var(--bg-subtle); border: 1.5px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px; margin: 16px 0; }
+.clinic-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px; }
+.clinic-title { font-size: 16px; font-weight: 800; color: var(--accent); }
+.clinic-form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-bottom: 10px; }
+.clinic-field label { display: block; font-size: 12.5px; font-weight: 700; color: var(--text-muted); margin-bottom: 4px; }
+.clinic-field input, .clinic-field select, .clinic-field textarea { width: 100%; padding: 7px 10px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 13.5px; font-family: inherit; }
+.clinic-field textarea { min-height: 70px; resize: vertical; }
+.clinic-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin: 12px 0; padding-top: 12px; border-top: 1px dashed var(--border-strong); }
+.clinic-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.clinic-btn { padding: 6px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 12.8px; font-weight: 700; cursor: pointer; }
+.clinic-btn:hover { border-color: var(--accent); }
+.clinic-btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+.clinic-btn-primary:hover { background: var(--accent-hover); }
+.clinic-list { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
+.clinic-item { background: var(--bg-surface); border: 1px solid var(--border-strong); border-left: 4px solid #E11D48; border-radius: var(--radius-sm); padding: 12px 14px; }
+.clinic-item.solved { border-left-color: #16A34A; opacity: 0.78; }
+.clinic-item-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+.clinic-tag { font-size: 11.8px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
+.clinic-reason { font-size: 11.8px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: var(--err-bg); color: var(--err-text); }
+.clinic-item.solved .clinic-reason { background: var(--ok-bg); color: var(--ok-text); }
+.clinic-preview { width: 100%; min-height: 110px; margin-top: 10px; padding: 10px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-page); color: var(--text-main); font-family: var(--font-mono); font-size: 12.2px; display: none; }
+.clinic-preview.visible { display: block; }
+
+.quick-links-grid { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.quick-link-chip { display: inline-flex; align-items: center; gap: 5px; padding: 6px 11px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-page); color: var(--text-main); font-size: 12.8px; font-weight: 700; text-decoration: none; }
+.quick-link-chip:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+
+/* Hub Roadmap */
+.roadmap-panel { background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px 20px; margin: 18px 0 8px 0; box-shadow: var(--shadow-sm); }
+.roadmap-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 14px; }
+.roadmap-head h2 { font-size: 17px; margin: 0 0 4px 0; }
+.roadmap-badge { background: var(--accent-soft); color: var(--accent); padding: 4px 12px; border-radius: 999px; font-size: 12.5px; font-weight: 800; }
+.roadmap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
+.roadmap-card { display: flex; align-items: flex-start; gap: 10px; padding: 12px 13px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-page); cursor: pointer; font-size: 13px; line-height: 1.5; }
+.roadmap-card:hover { border-color: var(--accent); }
+.roadmap-card strong { display: block; font-size: 13.5px; color: var(--text-main); margin-bottom: 3px; }
+.roadmap-card span { color: var(--text-muted); font-size: 12.5px; }
+.roadmap-card input[type="checkbox"] { width: 17px; height: 17px; margin-top: 2px; accent-color: var(--accent); flex-shrink: 0; }
+.roadmap-card.done { border-color: var(--ok-border); background: var(--ok-bg); }
+.roadmap-card.done strong, .roadmap-card.done span { color: var(--ok-text); }
+
+/* Practice Questions & Concepts */
+.practice-block { margin-top: 18px; padding-top: 14px; border-top: 2px dashed var(--border-strong); }
+.practice-heading { font-size: 16px; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.exam-q { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 14px; break-inside: avoid; }
+.exam-q-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; font-size: 12.5px; }
+.q-tag { font-weight: 800; color: var(--accent); background: var(--accent-soft); padding: 2px 8px; border-radius: 5px; }
+.q-marks { font-weight: 700; color: var(--text-faint); }
+.q-stem-en { font-size: 14.8px; font-weight: 600; color: var(--text-main); margin-bottom: 6px; }
+.q-stem-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 12px; }
+.mcq-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin-bottom: 10px; }
+.mcq-opt { text-align: left; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 13.8px; cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.mcq-opt:hover { border-color: var(--accent); background: var(--bg-subtle); }
+.mcq-opt.correct { background: var(--ok-bg); border-color: var(--ok-border); color: var(--ok-text); font-weight: 700; }
+.mcq-opt.wrong { background: var(--err-bg); border-color: var(--err-border); color: var(--err-text); }
+.mcq-feedback { display: none; font-size: 13.5px; padding: 10px 12px; border-radius: var(--radius-sm); margin-top: 8px; }
+.mcq-feedback.visible { display: block; }
+.mcq-feedback.ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.mcq-feedback.err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+details.ms-details { margin-top: 10px; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 12px; }
+details.ms-details summary { cursor: pointer; font-weight: 700; font-size: 13.5px; color: var(--accent); user-select: none; }
+.ms-body { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 13.8px; }
+.ms-mark { display: inline-block; font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--core-text); background: var(--core-bg); padding: 1px 5px; border-radius: 4px; margin-right: 4px; }
+.ms-cn { color: var(--text-muted); margin-top: 4px; }
+
+.concept-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 14px; margin-bottom: 18px; }
+.concept-filter-group { display: flex; flex-wrap: wrap; gap: 6px; }
+.concept-actions { display: flex; align-items: center; gap: 10px; }
+.concept-count-pill { font-size: 12.5px; font-weight: 700; color: var(--text-muted); }
+.concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 14px; }
+.concept-card { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; gap: 8px; break-inside: avoid; }
+.concept-card:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
+.concept-card.concept-hidden { display: none !important; }
+.cq-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.cq-en { font-weight: 700; font-size: 14.5px; color: var(--text-main); line-height: 1.45; }
+.cq-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 2px; }
+.cq-answer { position: relative; margin-top: auto; background: var(--bg-surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius-sm); padding: 11px 13px; font-size: 13.8px; line-height: 1.6; }
+.kw { color: var(--accent); background: var(--accent-soft); padding: 0 4px; border-radius: 3px; font-weight: 700; }
+.cq-mask-hint { display: none; }
+.concept-card.masked .cq-answer { cursor: pointer; }
+.concept-card.masked .cq-answer-inner { filter: blur(7px); opacity: 0.22; user-select: none; pointer-events: none; transition: filter 0.2s, opacity 0.2s; }
+.concept-card.masked .cq-mask-hint { display: flex; align-items: center; justify-content: center; position: absolute; inset: 0; font-size: 13.5px; font-weight: 700; color: var(--accent); background: rgba(255,255,255,0.25); border-radius: var(--radius-sm); }
+[data-theme="dark"] .concept-card.masked .cq-mask-hint { background: rgba(15,23,42,0.35); }
+
+.chapter-pager { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 28px; padding: 16px 20px; background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); }
+.pager-btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: var(--radius-sm); background: var(--bg-subtle); border: 1px solid var(--border-strong); color: var(--text-main); font-size: 13.5px; font-weight: 700; text-decoration: none; }
+.pager-btn:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); text-decoration: none; }
+.pager-btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.pager-btn.primary:hover { background: var(--accent-hover); color: #fff; }
+
+.hub-block-title { font-size: 18px; font-weight: 800; margin: 24px 0 12px 0; padding-bottom: 6px; border-bottom: 2px solid var(--border-strong); display: flex; align-items: center; gap: 8px; }
+.hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 15px; }
+.hub-card { display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-surface); border: 1px solid var(--border-strong); border-top: 5px solid var(--card-color, var(--accent)); border-radius: var(--radius-md); padding: 16px 18px 14px 18px; color: var(--text-main); text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; box-shadow: var(--shadow-sm); }
+.hub-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--card-color, var(--accent)); text-decoration: none; }
+.hub-card-top { display: flex; align-items: center; justify-content: space-between; gap: 6px; margin-bottom: 8px; flex-wrap: wrap; }
+.hub-stat-row { display: flex; align-items: center; gap: 6px; }
+.hub-badge { font-size: 11.5px; font-weight: 800; color: #fff; background: var(--card-color, var(--accent)); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill { font-size: 11.8px; font-weight: 700; color: var(--text-muted); background: var(--bg-subtle); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill.done { background: var(--ok-bg); color: var(--ok-text); }
+.hub-clinic-pill { font-size: 11.8px; font-weight: 700; color: var(--text-muted); background: var(--bg-subtle); border: 1px solid var(--border); padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
+.hub-clinic-pill.has-err { background: var(--err-bg); color: var(--err-text); border-color: var(--err-border); }
+.hub-scope { font-size: 12px; font-weight: 700; color: var(--card-color, var(--accent)); background: var(--bg-subtle); padding: 3px 8px; border-radius: 5px; margin-bottom: 7px; display: inline-block; }
+.hub-title { font-size: 16px; font-weight: 800; margin-bottom: 3px; }
+.hub-en { font-size: 12.6px; color: var(--text-faint); font-weight: 600; margin-bottom: 8px; }
+.hub-sub { font-size: 12.8px; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; }
+.hub-foot { font-size: 13px; font-weight: 700; color: var(--card-color, var(--accent)); display: flex; align-items: center; justify-content: space-between; }
+
+.back-top-btn { position: fixed; right: 22px; bottom: 22px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); box-shadow: var(--shadow-md); cursor: pointer; display: none; align-items: center; justify-content: center; font-size: 17px; font-weight: 800; z-index: 80; }
+.back-top-btn.visible { display: flex; }
+
+@media (max-width: 1220px) {
+  .brand-title, .btn-label { display: none; }
+}
+@media (max-width: 980px) {
+  .menu-toggle { display: inline-flex; }
+  .sidebar { position: fixed; left: 0; top: var(--topbar-h); z-index: 95; transform: translateX(-100%); transition: transform 0.22s ease; box-shadow: var(--shadow-lg); }
+  .sidebar.open { transform: translateX(0); }
+  .main-content { padding: 18px 14px 64px 14px; }
+  .topic-section { padding: 18px 16px; }
+  .progress-chip { display: none; }
+  .search-wrap { min-width: 110px; }
+}
+@media (max-width: 640px) {
+  .topbar { padding: 0 10px; gap: 6px; }
+  .search-wrap { max-width: none; }
+  .concept-grid, .hub-grid, .clinic-form-grid { grid-template-columns: 1fr; }
+}
+@media print {
+  .topbar, .sidebar, .search-results-bar, .back-top-btn, .master-btn, .lab-controls button, .concept-toolbar, .cq-mask-hint, .chapter-pager, .clinic-form-grid, .clinic-actions { display: none !important; }
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  .main-content { padding: 0 !important; }
+  .content-inner { max-width: 100% !important; }
+  .topic-section, .exam-q, .callout, .worked-example, .svg-figure, .concept-card, .model-essay, .source-box, .clinic-item { box-shadow: none !important; break-inside: avoid; border-color: #CBD5E1 !important; }
+  details.ms-details, details.ms-details .ms-body, .mcq-feedback { display: block !important; }
+  .concept-card.masked .cq-answer-inner { filter: none !important; opacity: 1 !important; }
+}
+
+  </style>
+</head>
+<body data-chapter-code="F06">
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="展开目录">☰ 目录</button>
+      <a class="icon-btn" href="index.html" title="返回 6 科期末冲刺总控台"><span>🎯</span><span class="btn-label">总控台</span></a>
+      <div class="brand-pill">
+        <span class="brand-code">F06</span>
+        <span class="brand-title">Global Perspectives (0457) · Component 1 Q1–Q4</span>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="search" id="searchInput" class="search-input" placeholder="搜公式、易错坑、模考题..." autocomplete="off" />
+      <button type="button" class="search-clear" id="searchClear" title="清空搜索">✕</button>
+    </div>
+
+    <div class="topbar-controls">
+      <div class="seg-group" role="group" aria-label="内容视图筛选">
+        <button type="button" class="seg-btn active" data-view-mode="all">All</button>
+        <button type="button" class="seg-btn" data-view-mode="summary">速记</button>
+        <button type="button" class="seg-btn" data-view-mode="practice">模考</button>
+        <button type="button" class="seg-btn" data-view-mode="clinic">错题</button>
+        <button type="button" class="seg-btn" data-view-mode="cards">闪卡</button>
+      </div>
+
+      <div class="progress-chip" title="本学科期末冲刺板块掌握进度">
+        <span id="progressText">0/0</span>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+
+      <button type="button" class="icon-btn" id="toggleAllMs" title="展开或收起全部解析"><span>📝</span><span class="btn-label">展开解析</span></button>
+      <button type="button" class="icon-btn" id="themeToggle" title="切换亮色/暗色主题"><span id="themeIcon">🌙</span><span class="btn-label">主题</span></button>
+      <button type="button" class="icon-btn" id="printBtn" title="打印或导出为 PDF"><span>🖨️</span><span class="btn-label">导出</span></button>
+    </div>
+  </header>
+
+  <div class="search-results-bar" id="searchBar">
+    <span id="searchSummary">找到 0 个匹配板块</span>
+    <button type="button" class="icon-btn" id="searchResetBtn">重置过滤</button>
+  </div>
+
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="本学科期末冲刺导航">
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #D97706;"></span>F06 冲刺板块导航</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#sec-core1"><span>1. Q1 批判性概念辨析与 Q2 (RAVEN + 研究四要素) 满分核心</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-core2"><span>2. Q3 六维交锋 · Q4 政策决策与 15 议题视角库</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-sme"><span>3. Component 1 全真 70 分模拟卷 (Q1–Q4 · 85 分钟) 与评分标准</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-clinic"><span>4. 个人 GP 笔试答题自诊与 AI 精批诊疗台</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#app-concepts"><span>5. GP 0457 核心批判术语、句型与谬误速背闪卡 (20 张)</span><span class="nav-done-mark">✓</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #0D9488;"></span>全 6 科期末冲刺切换</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="F01_AddMaths_0606_Final_Sprint.html"><span>F01 · 附加数学 0606 期末考范围锁定冲刺</span></a></li>
+          <li><a class="nav-link" href="F02_Physics_0625_Final_Sprint.html"><span>F02 · 物理 0625 Ch 1–4 期末精炼与实验冲刺</span></a></li>
+          <li><a class="nav-link" href="F03_Chemistry_0620_Final_Sprint.html"><span>F03 · 化学 0620 Ch 1, 2, 4, 6 核心高频冲刺</span></a></li>
+          <li><a class="nav-link" href="F04_ESL_0510_Final_Sprint.html"><span>F04 · ESL 0510 听力阅读写作三线冲刺</span></a></li>
+          <li><a class="nav-link" href="F05_Chinese_0509_Final_Sprint.html"><span>F05 · 中文第一语言 0509 现代文阅读与双作文冲刺</span></a></li>
+          <li><a class="nav-link active" href="F06_GP_0457_Final_Sprint.html"><span>F06 · 全球视野 0457 Q1–Q4 书面笔试终极冲刺</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-inner">
+        <section class="hero-card" id="top">
+          <h1>F06 · 全球视野 0457 Q1–Q4 书面笔试终极冲刺</h1>
+          <p class="hero-sub">
+            <strong>范围锁定：Component 1 Written Exam Q1–Q4（全 70 分，不含 IR / Team Project）</strong> — Q1 概念与趋势 · Q2A RAVEN 与 Q2B 研究四要素 · Q3 六维双源对比 Level 4 · Q4 五维政策决策 + 15 议题视角库与 70 分模考。本页严格剔除非考范围章节，浓缩核心方法与高频失分红线，内置交互实验台、全真模考与个人错题诊疗台。
+          </p>
+          <div class="hero-badges">
+            <span class="hero-pill">🎯 期末考范围精准锁定</span>
+            <span class="hero-pill">⚡ 一页核心浓缩速记</span>
+            <a class="hero-pill" href="#sec-sme" style="text-decoration: none;">📝 直达限时全真模考 →</a>
+            <a class="hero-pill" href="#sec-clinic" style="text-decoration: none;">🩺 个人错题诊疗台 →</a>
+            <a class="hero-pill" href="#app-concepts" style="text-decoration: none; background: rgba(255,255,255,0.24);">🧠 遮罩自测闪卡 →</a>
+          </div>
+          <div class="unit-grid">
+            <a class="unit-tile" href="#sec-core1">
+              <div class="unit-tile-num">Section core1</div>
+              <div class="unit-tile-title">1. Q1 批判性概念辨析与 Q2 (RAVEN + 研究四要素) 满分核心</div>
+            </a>
+            <a class="unit-tile" href="#sec-core2">
+              <div class="unit-tile-num">Section core2</div>
+              <div class="unit-tile-title">2. Q3 六维交锋 · Q4 政策决策与 15 议题视角库</div>
+            </a>
+            <a class="unit-tile" href="#sec-sme">
+              <div class="unit-tile-num">Section sme</div>
+              <div class="unit-tile-title">3. Component 1 全真 70 分模拟卷 (Q1–Q4 · 85 分钟) 与评分标准</div>
+            </a>
+            <a class="unit-tile" href="#sec-clinic">
+              <div class="unit-tile-num">Section clinic</div>
+              <div class="unit-tile-title">4. 个人 GP 笔试答题自诊与 AI 精批诊疗台</div>
+            </a>
+            <a class="unit-tile" href="#app-concepts">
+              <div class="unit-tile-num">速背闪卡</div>
+              <div class="unit-tile-title">5. GP 0457 核心批判术语、句型与谬误速背闪卡 (20 张)</div>
+            </a>
+          </div>
+        </section>
+
+        <div id="emptySearchNotice" class="callout deep-dive" style="display: none;">
+          <div class="callout-title">🔍 未找到匹配内容</div>
+          <p style="margin-bottom: 0;">请尝试更换关键词，或点击右上角“重置过滤”恢复显示。</p>
+        </div>
+
+<!-- ==========================================================================
+     F06 · Global Perspectives (0457) Component 1 Written Exam Q1–Q4 Final Sprint
+     ========================================================================== -->
+<article class="topic-section sec-summary" id="sec-core1">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>1. Q1 批判性概念辨析与 Q2 (RAVEN + 研究四要素) 满分核心</h3>
+      <div class="section-en-sub">Component 1 Overview (70m / 85 min) · Q1 Statement Categories &amp; Trends · Q2A RAVEN Dual Balance · Q2B 4-Pillar Testing</div>
+      <div class="tier-row">
+        <span class="badge-core">Q1 (~14 分) + Q2 (16 分) = 30/70 分</span>
+        <span class="badge-ext">考场第 38 分钟必须收官 · 严禁恋战</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-core1">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>一、Component 1 笔试全景与 85 分钟配时硬门控 (严格剔除非笔试模块)</h4>
+    <p>
+      本冲刺页面严格锁定 Cambridge IGCSE Global Perspectives (<code>0457</code>) <strong>Component 1 Written Examination（1 小时 25 分钟 = 85 分钟 · 卷面 70 分）</strong>，全部围绕随卷配发的 3–4 份材料（Source Booklet）考查 <code>Q1–Q4</code> 四道必答题，不涉及个人报告（IR）或团队项目（TP）作业要求。由于 <strong>Q3 与 Q4 合占全卷 40 / 70 分（57%）</strong>，考场时间分配必须执行硬性止损线：
+    </p>
+    <div class="table-wrap">
+      <table class="gp-table">
+        <thead>
+          <tr>
+            <th>题型板块</th>
+            <th>分值 / 占比</th>
+            <th>建议用时</th>
+            <th>累计时间门控</th>
+            <th>核心踩分动作与防丢分红线</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>通读 Source Booklet</strong></td>
+            <td>前期铺垫</td>
+            <td><strong>7 min</strong></td>
+            <td>00:00 – 00:07</td>
+            <td>先扫 Q1–Q4 题干靶点；在每份材料旁圈出<strong>发布年份、作者头衔、赞助/利益方、样本数与极端情绪词</strong>。</td>
+          </tr>
+          <tr>
+            <td><strong>Q1 概念与趋势</strong></td>
+            <td><strong>14 marks (20%)</strong></td>
+            <td><strong>13 min</strong></td>
+            <td>00:07 – 00:20</td>
+            <td>精简作答，禁止写长篇废话；判别概念时<strong>必须先抄原句引号，再写能否被客观独立核查</strong>。</td>
+          </tr>
+          <tr>
+            <td><strong>Q2A + Q2B 来源与检验</strong></td>
+            <td><strong>16 marks (23%)</strong><br>（各占 8 分）</td>
+            <td><strong>18 min</strong><br>（9m + 9m）</td>
+            <td>00:20 – 00:38</td>
+            <td>Q2A 必须写齐 <strong>Strengths + Weaknesses</strong>；Q2B 必须踩实 <strong>抽样 + 一手工具 + 二手核验 + 变量控制与局限</strong>。<strong>第 38 分钟硬切入 Q3！</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Q3 双论证对比</strong></td>
+            <td><strong>16 marks (23%)</strong></td>
+            <td><strong>20 min</strong></td>
+            <td>00:38 – 00:58</td>
+            <td>禁止“先写完 A 再写 B”！按 <strong>六维交锋框架</strong>逐项同段对比，评价论证机制强弱而非个人立场站队。</td>
+          </tr>
+          <tr>
+            <td><strong>Q4 政策决策大作文</strong></td>
+            <td><strong>24 marks (34%)</strong></td>
+            <td><strong>22 min</strong></td>
+            <td>00:58 – 01:20</td>
+            <td>三选一必须<strong>五维权衡并逐一对比淘汰另两项备选方案</strong>，末尾坦承首选短板并给出缓释方案。</td>
+          </tr>
+          <tr>
+            <td><strong>终场核查</strong></td>
+            <td>兜底止损</td>
+            <td><strong>5 min</strong></td>
+            <td>01:20 – 01:25</td>
+            <td>查 Q1 是否漏引原句、Q3 是否给出明确强弱裁决、Q4 是否写齐全部 3 个备选方案。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>二、Q1 (约 14 分)：六大批判性陈述精确辨析与图表趋势因果链</h4>
+    <p>
+      Q1 常失分不是因为看不懂英文，而是<strong>“判错类别”</strong>或<strong>“只写标签不写可核查理由”</strong>。请把下表作为考场唯一判定尺：
+    </p>
+    <div class="table-wrap">
+      <table class="gp-table">
+        <thead>
+          <tr>
+            <th>批判性概念</th>
+            <th>核心定义与文本信号词</th>
+            <th>能否被客观独立核查？ (Verification Rule)</th>
+            <th>考场满分作答公式（缺一不可）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Fact</strong><br>客观事实</td>
+            <td>已发生或现存的可观测状况；含具体年份、地点、测量百分比、法定条款。</td>
+            <td><strong>可以核查（Verifiable）</strong>：可通过官方统计、实验观测或历史记录独立证明真伪。</td>
+            <td>引用原句 + 点明可借助官方记录/独立观测验证（<em>can be verified objectively through official records / data</em>）。</td>
+          </tr>
+          <tr>
+            <td><strong>Opinion</strong><br>个人观点</td>
+            <td>作者基于个人感受、偏好或经验作出的主观解读（常含 <em>I believe, seems, effective, inadequate</em>）。</td>
+            <td><strong>不可直接证实为真（Unverifiable as fact）</strong>：不同人可持有合理分歧，属于个人解读。</td>
+            <td>引用原句 + 指出这是个人主观诠释，缺乏普遍客观标尺验证（<em>a personal view open to disagreement</em>）。</td>
+          </tr>
+          <tr>
+            <td><strong>Prediction</strong><br>未来预测</td>
+            <td>针对尚未发生之事作出的推断（信号词：<em>will, is likely to, projected to, by 2040</em>）。</td>
+            <td><strong>当下不可核查（Cannot be verified yet）</strong>：因为事件尚未发生，即使附有模型数字也仍属预测。</td>
+            <td>引用原句 + 指出事件指向未来（<em>refers to a future outcome that has not yet occurred</em>），现阶段无法证实。</td>
+          </tr>
+          <tr>
+            <td><strong>Value Judgement</strong><br>价值判断</td>
+            <td>基于道德、伦理或社会优先序作出的“好坏/应然”评判（信号词：<em>should, ought to, unfair, immoral, right</em>）。</td>
+            <td><strong>不可被实证验证对错（Not empirically verifiable）</strong>：取决于不同文化或群体的价值观立场。</td>
+            <td>引用原句 + 指出包含应然/道德评判词，反映伦理优先序而非实证事实（<em>based on moral beliefs rather than objective proof</em>）。</td>
+          </tr>
+          <tr>
+            <td><strong>Bias</strong><br>主观偏见</td>
+            <td>刻意只呈现单边有利证据、忽略反例，或使用强烈情绪煽动词（<em>disaster, betrayal, miracle</em>）引导受众。</td>
+            <td>表现为<strong>选择性失衡（Selective / one-sided presentation）</strong>：可通过比对缺失的反方数据揭露。</td>
+            <td>指出具体偏颇措辞或刻意遗漏（omission），说明其如何扭曲读者判断以迎合特定立场。</td>
+          </tr>
+          <tr>
+            <td><strong>Vested Interest</strong><br>既得利益</td>
+            <td>作者或资助机构与结论存在直接经济收益、声誉保全、岗位或政治选票挂钩（常见于脚注/作者身份栏）。</td>
+            <td><strong>客观利益关联可核实</strong>：作者头衔/公司业务/资助方直接显示其从某一政策中获益。</td>
+            <td>直接点名身份与利益绑定（<em>profits financially / gains contracts or votes if this policy is adopted</em>），质疑其中立动机。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout examiner-tip">
+      <div class="callout-title">📊 Q1 图表趋势提炼与“Local → Global 因果链”高分模板</div>
+      <p style="margin-bottom: 6px;">
+        <strong>1. 图表/数据趋势题（2–4 分）三步秒答：</strong>① <strong>宏观总趋势</strong>（如持续上升/差距扩大）；② <strong>成对精确数字</strong>（必须带上单位与年份，如从 2015 年的 24% 升至 2025 年的 41%，而高收入区仅 11%）；③ <strong>异常值或范围限制</strong>（如有国家持平或仅统计城市地区）。
+      </p>
+      <p style="margin-bottom: 0;">
+        <strong>2. 因果推理大题（4 分）：</strong>避免孤立罗列要点，必须用因果连词（<code>which in turn forces... / exacerbating... / creating a cycle where...</code>）把材料中的<strong>个人/地方困境（Local）</strong>串联到<strong>国家财政与全球宏观后果（National / Global）</strong>。
+      </p>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>三、Q2A (8 分)：RAVEN 来源评估双面模型（必须兼写 Strengths + Weaknesses）</h4>
+    <p>
+      Q2A 常问：<em>“How well does the evidence in Source 3 support the argument that...?”</em> 或 <em>“Evaluate the strengths and weaknesses of Source 3.”</em> 阅卷红线是<strong>双面平衡（Balanced Evaluation）</strong>——只骂商业来源有偏见，或只夸学者绝对可信，最高封顶 <strong>Level 2 (3–4/8 分)</strong>。审题时立即对 Source 3 逐一扫描 <code>RAVEN</code> 五尺，并强制在每条下找出至少 1 个正面价值与 1 个致命局限：
+    </p>
+
+    <div class="table-wrap">
+      <table class="gp-table">
+        <thead>
+          <tr>
+            <th>RAVEN 维度</th>
+            <th>Strengths 抓手（为什么部分可信？）</th>
+            <th>Weaknesses 抓手（受限于何种漏洞/偏见？）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>R · Reputation</strong><br>机构与出版声誉</td>
+            <td>发表于知名国际组织（WHO/OECD）、同行评审期刊或主流公共审计机构，经历多轮专家核审。</td>
+            <td>企业白皮书、倡议博客、商业新闻稿或未注明出版/同行评审流程的自媒体帖子，缺乏外部纠错门槛。</td>
+          </tr>
+          <tr>
+            <td><strong>A · Ability to see</strong><br>观测途径与样本范围</td>
+            <td>作者处于一线现场（如社区工程师、多年调研员），或汇报了具体试点项目、最新年份数据。</td>
+            <td>样本量过小（如仅 1 个小镇或 12 所精选学校）、<strong>挑拣样本（cherry-picking）</strong>、仅靠二手转述或过时旧数据。</td>
+          </tr>
+          <tr>
+            <td><strong>V · Vested Interest</strong><br>既得利益与资助背景</td>
+            <td>明确披露独立科研基金资助，或主动公开原始研究局限与潜在不利费用（透明度加分）。</td>
+            <td>作者所在公司直接售卖文中推销的技术/服务、政客争取选票，或脚注暗藏高额长期维护/续费合同。</td>
+          </tr>
+          <tr>
+            <td><strong>E · Expertise</strong><br>专业资历与对口度</td>
+            <td>拥有相关领域博士学位、多年执业资历或政府专职研究头衔，技术原理或统计口径可信。</td>
+            <td>跨界评论（如营销总监大谈公共教育评估）、头衔与议题不对口，或仅以普通目击者身份做宏观经济推论。</td>
+          </tr>
+          <tr>
+            <td><strong>N · Neutrality</strong><br>中立度、措辞与指标效度</td>
+            <td>措辞克制理性、承认替代解释或列明前提条件，未将局部现象无限放大。</td>
+            <td>使用绝对化或情绪词（<em>only cure / catastrophic / moral failure</em>）、偷换替代指标（如用“测试完成率”冒充“最终统考成绩”）。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>四、Q2B (8 分)：<code>How could you test this claim?</code> 研究检验四大踩分维度</h4>
+    <p>
+      Q2B 要求针对某项具体主张设计实证检验方案。不要空喊“我会查资料和问人”，<strong>Level 4 (7–8/8 分)</strong> 必须按顺序写满以下 <strong>四大踩分维度</strong>，且每维写清<strong>具体操作对象、测量指标与防偏差机制</strong>：
+    </p>
+    <ul>
+      <li><strong>1. Sampling（分层随机抽样与样本量代表性）：</strong>按核心混杂因素（城乡区域、家庭收入、基础条件）<strong>分层随机抽样（stratified random sampling）</strong>，写明具体且足够的样本规模（如 20 个匹配社区 / 300 户不同收入家庭），并设置<strong>匹配对照组（matched control group）</strong>，彻底杜绝 Source 3 式的“挑拣富裕样本”。</li>
+      <li><strong>2. Primary Method（一手研究工具组合 — 三角验证）：</strong>采用 <strong>混合研究法（methodological triangulation）</strong>：① 定量对照实验或纵向追踪（测实施前 <strong>baseline pre-test</strong> 与实施后 1 年的客观指标变化）；② 匿名标准化问卷（避免诱导性提问 <em>non-leading questions</em>，采用李克特量表测量真实成本与使用率）；③ 对多方利益相关者（居民、基层操作员、独立监督员）做半结构访谈，解释量化数据背后的因果机制。</li>
+      <li><strong>3. Secondary Cross-check（二手官方与纵贯交叉核验）：</strong>将一手结果与独立政府统计局、市政水务/医疗账目、WHO/UNESCO 公开数据库及 <strong>3–5 年纵贯追踪数据（longitudinal data）</strong>交叉比对，验证短期试点红利是否随时间衰减，区分<strong>相关性（correlation）与真实因果（causation）</strong>。</li>
+      <li><strong>4. Reliability Control &amp; Limitations（信效度控制与局限自省）：</strong>明确如何控制<strong>混杂变量（confounding variables）</strong>（如气候年份差异、外部补贴变动）并由无商业利益关联的第三方资助研究；最后<strong>主动点出 1–2 项本方案仍难消除的研究局限</strong>（如受访者为保留免费补贴而产生<strong>社会期许偏误 social desirability bias</strong>、长期追踪的样本流失率 attrition、或霍桑效应），并简述匿名核验补救法。</li>
+    </ul>
+
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 300" width="740" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Q1 四类陈述判断树与 Q2B 研究检验四柱决策图">
+        <rect x="8" y="8" width="724" height="284" rx="10" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="370" y="30" text-anchor="middle" font-size="13.5" font-weight="800" fill="var(--svg-ink)">图 6.1 · Q1 四类核心陈述判定树 &amp; Q2B 研究检验四柱决策图</text>
+        <text x="370" y="47" text-anchor="middle" font-size="10.4" fill="var(--svg-muted)">Q1 必引原句 + 核查判定 | Q2A RAVEN 双面权衡 | Q2B 四维实证闭环</text>
+
+        <!-- Left Half: Q1 Decision Tree -->
+        <rect x="20" y="60" width="340" height="184" rx="8" fill="rgba(217, 119, 6, 0.06)" stroke="var(--svg-amber)" stroke-width="1.5" />
+        <text x="190" y="79" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-amber)">Q1 (14分) 四类批判陈述快判决策树</text>
+
+        <rect x="30" y="89" width="320" height="34" rx="5" fill="rgba(22, 163, 74, 0.12)" stroke="var(--svg-green)" stroke-width="1.2" />
+        <text x="40" y="105" font-size="9.8" font-weight="800" fill="var(--svg-green)">Fact 事实</text>
+        <text x="150" y="105" font-size="9.4" fill="var(--svg-ink)">过去/现存数据 · 附数字/日期</text>
+        <text x="40" y="118" font-size="9.0" fill="var(--svg-muted)">核查：可被官方统计或独立观测客观验证 (Verifiable)</text>
+
+        <rect x="30" y="127" width="320" height="34" rx="5" fill="rgba(37, 99, 235, 0.11)" stroke="var(--svg-blue)" stroke-width="1.2" />
+        <text x="40" y="143" font-size="9.8" font-weight="800" fill="var(--svg-blue)">Prediction 预测</text>
+        <text x="150" y="143" font-size="9.4" fill="var(--svg-ink)">will / projected / by 2040</text>
+        <text x="40" y="156" font-size="9.0" fill="var(--svg-muted)">核查：指向尚未发生之未来，当下无法证实为真</text>
+
+        <rect x="30" y="165" width="320" height="34" rx="5" fill="rgba(124, 58, 237, 0.11)" stroke="var(--svg-purple)" stroke-width="1.2" />
+        <text x="40" y="181" font-size="9.8" font-weight="800" fill="var(--svg-purple)">Opinion 观点</text>
+        <text x="150" y="181" font-size="9.4" fill="var(--svg-ink)">主观推断 · 缺唯一客观共识</text>
+        <text x="40" y="194" font-size="9.0" fill="var(--svg-muted)">核查：属个人解读视角，可被反例或替代观点反驳</text>
+
+        <rect x="30" y="203" width="320" height="34" rx="5" fill="rgba(220, 38, 38, 0.11)" stroke="var(--svg-red)" stroke-width="1.2" />
+        <text x="40" y="219" font-size="9.5" font-weight="800" fill="var(--svg-red)">Value Judgement</text>
+        <text x="150" y="219" font-size="9.4" fill="var(--svg-ink)">should / unfair / moral duty</text>
+        <text x="40" y="232" font-size="9.0" fill="var(--svg-muted)">核查：道德/价值尺度评判，不可用实证数据判对错</text>
+
+        <!-- Right Half: Q2B Four Pillars -->
+        <rect x="380" y="60" width="340" height="184" rx="8" fill="rgba(13, 148, 136, 0.06)" stroke="var(--svg-teal)" stroke-width="1.5" />
+        <text x="550" y="79" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-teal)">Q2B (8分) Test the Claim 四柱实证设计</text>
+
+        <rect x="390" y="89" width="320" height="34" rx="5" fill="var(--svg-bg)" stroke="var(--svg-teal)" stroke-width="1.2" />
+        <text x="400" y="105" font-size="9.8" font-weight="800" fill="var(--svg-teal)">1. Sampling 抽样</text>
+        <text x="520" y="105" font-size="9.4" fill="var(--svg-ink)">分层随机 + 匹配对照组</text>
+        <text x="400" y="118" font-size="9.0" fill="var(--svg-muted)">明确样本量 (如 200 户/20 社区)，严防挑拣富裕样本</text>
+
+        <rect x="390" y="127" width="320" height="34" rx="5" fill="var(--svg-bg)" stroke="var(--svg-teal)" stroke-width="1.2" />
+        <text x="400" y="143" font-size="9.8" font-weight="800" fill="var(--svg-teal)">2. Primary 一手</text>
+        <text x="520" y="143" font-size="9.4" fill="var(--svg-ink)">三角验证混合方法</text>
+        <text x="400" y="156" font-size="9.0" fill="var(--svg-muted)">前后测对照实验 + 防诱导匿名问卷 + 多方半结构访谈</text>
+
+        <rect x="390" y="165" width="320" height="34" rx="5" fill="var(--svg-bg)" stroke="var(--svg-teal)" stroke-width="1.2" />
+        <text x="400" y="181" font-size="9.8" font-weight="800" fill="var(--svg-teal)">3. Secondary 二手</text>
+        <text x="520" y="181" font-size="9.4" fill="var(--svg-ink)">官方数据与纵贯交叉核对</text>
+        <text x="400" y="194" font-size="9.0" fill="var(--svg-muted)">比对 WHO/政府审计与 3–5 年纵贯数据，防相关替因果</text>
+
+        <rect x="390" y="203" width="320" height="34" rx="5" fill="var(--svg-bg)" stroke="var(--svg-teal)" stroke-width="1.2" />
+        <text x="400" y="219" font-size="9.8" font-weight="800" fill="var(--svg-teal)">4. Control 控偏</text>
+        <text x="520" y="219" font-size="9.4" fill="var(--svg-ink)">变量隔离 + 局限自省</text>
+        <text x="400" y="232" font-size="9.0" fill="var(--svg-muted)">剔除利益冲突与气候/基线混杂，反思社会期许偏差</text>
+
+        <!-- Bottom RAVEN Bar -->
+        <rect x="20" y="254" width="700" height="30" rx="6" fill="rgba(37, 99, 235, 0.1)" stroke="var(--svg-blue)" stroke-width="1.3" />
+        <text x="370" y="273" text-anchor="middle" font-size="9.8" font-weight="700" fill="var(--svg-ink)">Q2A RAVEN 双面铁律：Reputation · Ability · Vested interest · Expertise · Neutrality — 每条必写 Strengths + Weaknesses</text>
+      </svg>
+      <div class="svg-caption">图 6.1 · Q1 陈述核查判定树、Q2A RAVEN 双面平衡法则与 Q2B 研究设计四柱模型</div>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section sec-summary" id="sec-core2">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>2. Q3 六维交锋 · Q4 政策决策与 15 议题视角库</h3>
+      <div class="section-en-sub">Q3 Level 4 Point-by-Point Clash · Q4 24-Mark 5-Dimension Decision Essay · 15 Global Topics 3-Lens Matrix + Interactive Lab</div>
+      <div class="tier-row">
+        <span class="badge-core">Q3 (16 分) + Q4 (24 分) = 40/70 分核心主战场</span>
+        <span class="badge-ext">附 Level 2 vs Level 4 红笔批改对照 &amp; 15 议题视角库</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-core2">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>一、Q3 (16 分) 论证实力正面对比 Level 4：戒除“A 一段、B 一段”的六维交锋模板</h4>
+    <p>
+      Q3 提问固定为：<em>“Which argument is more convincing, Person A’s or Person B’s?”</em>。全卷最高频的丢分灾区就是<strong>“先总结 A 优缺点，再另起一段总结 B 优缺点”</strong>——这种分块写法哪怕双方各自写了 5 条分析，也会因为缺乏持续同维比较被考官封顶在 <strong>Level 2 (5–8/16 分)</strong>。要拿 <strong>Level 4 (13–16/16 分)</strong>，必须充当“论证机制裁判”，在同一段落内用 <code>Whereas / Conversely / Unlike</code> 把两人放到下表<strong>六维天平</strong>上逐一正面对撞：
+    </p>
+    <div class="table-wrap">
+      <table class="gp-table">
+        <thead>
+          <tr>
+            <th>交锋维度 (D1–D6)</th>
+            <th>强论证高分特征 (More Convincing)</th>
+            <th>弱论证漏洞特征 (Less Convincing)</th>
+            <th>Level 4 同维交锋英文句型骨架</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>D1 · Evidence</strong><br>实证支撑度</td>
+            <td>引用独立大型审计、多年纵贯统计、可核查官方样本数据。</td>
+            <td>全篇依赖个人情感轶事（<em>one anecdote</em>）、“人尽皆知”无出处数字。</td>
+            <td><code>Whereas Writer A substantiates her claim with a 5-year audit across 42 cities, Writer B relies solely on an isolated anecdote and unverified generalisations.</code></td>
+          </tr>
+          <tr>
+            <td><strong>D2 · Reasoning</strong><br>因果与逻辑谬误</td>
+            <td>因果机制严密、每步解释清楚“如何导致结果”。</td>
+            <td>存在滑坡谬误、非黑即白（false dilemma）、相关当因果或<strong>隐含未证实假设（unstated assumption）</strong>。</td>
+            <td><code>Writer A establishes a clear causal mechanism linking..., whereas Writer B rests on the unstated assumption that...</code></td>
+          </tr>
+          <tr>
+            <td><strong>D3 · Balance</strong><br>视角平衡与偏见</td>
+            <td>主动承认自身主张的短期局限并给出反驳或缓释方案（concession）。</td>
+            <td>单边一刀切，完全回避执行代价与不利反证。</td>
+            <td><code>Crucially, Writer A demonstrates balanced reasoning by conceding..., in stark contrast to Writer B’s one-sided dismissal of...</code></td>
+          </tr>
+          <tr>
+            <td><strong>D4 · Tone</strong><br>语调与情绪煽动</td>
+            <td>冷静克制、学术客观，依靠事实而非情绪施压。</td>
+            <td>充斥恐吓、道德绑架或极端标签词（<em>catastrophic, betrayal, medieval</em>）。</td>
+            <td><code>Writer A maintains an objective, measured tone appropriate to policy debate, unlike Writer B’s alarmist rhetoric such as “...”.</code></td>
+          </tr>
+          <tr>
+            <td><strong>D5 · Reliability</strong><br>来源权威与立场</td>
+            <td>独立研究机构或跨界无盈利关联学者，头衔与议题高度匹配。</td>
+            <td>存在明显商业顾问/选票利益冲突（vested interest），样本刻意挑拣。</td>
+            <td><code>Writer A’s independent institutional role enhances credibility, whereas Writer B’s former industry affiliation introduces potential vested interest.</code></td>
+          </tr>
+          <tr>
+            <td><strong>D6 · Conclusion</strong><br>局部 vs 过度外推</td>
+            <td>结论设有适用前提与边界条件（qualifying language）。</td>
+            <td>将特例无限外推为普遍规律（<em>always / every city / overnight</em>）。</td>
+            <td><code>While Writer A draws a nuanced, context-bound conclusion, Writer B commits empirical overgeneralisation by claiming...</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>二、红笔实战对照：为什么这篇 Q3 只能拿 6/16 (Level 2)，而另一篇拿到 15/16 (Level 4)？</h4>
+    <div class="model-essay">
+      <div class="essay-head">
+        <span>❌ 低分反面示范：块状分述 + 个人立场站队（仅对比表层“谁有数字”）</span>
+        <span class="band-pill band-mid">Level 2 · 6 / 16 Marks</span>
+      </div>
+      <div class="essay-body">
+        <p style="margin-bottom: 6px;">
+          <mark class="hl-err">In Source 4, Professor Al-Mansoor argues for fixing water pipes and tiered pricing. She says pipes lose a lot of water and gives a World Bank report about 42 cities. She also cares about poor people getting free basic water. However, digging up streets takes a long time and causes traffic.</mark>
+        </p>
+        <p style="margin-bottom: 0;">
+          <mark class="hl-err">On the other hand, Councillor Thorne wants desalination plants. He talks about a hospital shutting down and says desalination guarantees water forever. He sounds angry and cares about factories. Overall, I agree with Professor Al-Mansoor because saving water is better for the environment and cheaper for citizens.</mark>
+        </p>
+      </div>
+      <div class="callout common-mistake" style="margin: 10px 0 0 0;">
+        <div class="callout-title">🔴 考官红笔诊断（三大致命伤锁死 Level 2）</div>
+        <p style="margin-bottom: 0;">① <strong>块状分述无对比</strong>：第一段只写 A，第二段只写 B，从未在同一标准下交锋；② <strong>内容复述替分析</strong>：只概括两人说了什么（<em>says / wants</em>），未拆解逻辑漏洞或隐含假设；③ <strong>个人站队代替论证审计</strong>：末尾写 <em>“I agree... because saving water is better”</em>，偏离“比较谁的论证更有说服力”。</p>
+      </div>
+    </div>
+
+    <div class="model-essay">
+      <div class="essay-head">
+        <span>✅ 满分正面示范：逐维正面交锋 + 揭露隐含假设 + 客观裁决</span>
+        <span class="band-pill band-high">Level 4 · 15 / 16 Marks</span>
+      </div>
+      <div class="essay-body">
+        <p style="margin-bottom: 0;">
+          Overall, Professor Al-Mansoor’s argument is significantly more convincing than Councillor Thorne’s because it is anchored in independent comparative evidence, balanced by explicit concessions, and free from emotive overstatement.
+          First, <mark class="hl-lang">regarding evidential authority</mark>, <mark class="hl-content">Al-Mansoor cites a 2024 World Bank/ADB five-year audit across 42 municipalities showing leak repairs cut losses by 28% at one-third the lifecycle cost of desalination</mark>; <mark class="hl-lang">by contrast</mark>, <mark class="hl-content">Thorne offers zero verifiable financial or hydrological data, relying instead on a single emotive hospital-shutoff anecdote and the sweeping claim that desalination makes conservation “obsolete”.</mark>
+          Second, <mark class="hl-lang">in terms of balance and logical rigour</mark>, <mark class="hl-content">Al-Mansoor strengthens her credibility by conceding street-digging disruption and proposing lifeline allowances for low-income households, whereas Thorne’s argument rests on the unstated assumption that fossil-fuel power costs and marine brine pollution carry negligible long-term risk.</mark>
+          Finally, <mark class="hl-lang">while Thorne’s alarmist rhetoric (“criminal negligence”, “third-world thirst”) and former consultancy ties indicate promotional bias</mark>, <mark class="hl-content">Al-Mansoor maintains a measured, context-specific conclusion</mark>, making her case far stronger even though her repair timeline is slower.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>三、Q4 (24 分) 压轴政策决策大作文：五维权衡矩阵与 4 段式高分架构</h4>
+    <p>
+      Q4 要求从题干提供的 <strong>3 个备选行动方案</strong>中推荐 1 项并论证为何最佳（单题占 <strong>24/70 分 = 34.3%</strong>）。死穴是“全篇只赞美首选方案、对另两项一笔带过”，这会被卡死在 <strong>Level 2 (7–12/24 分)</strong>。必须用下表 <strong>五维权衡标尺</strong> 贯穿四段写作：
+    </p>
+    <div class="table-wrap">
+      <table class="gp-table">
+        <thead>
+          <tr>
+            <th>Q4 五维权衡标尺</th>
+            <th>必考自问问题（考场 2 分钟草稿打分）</th>
+            <th>4 段式满分骨架 &amp; 双边让步防护句式</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. Cost &amp; Feasibility</strong><br>成本与落地可行性</td>
+            <td>初始基建费 + 长期运营维修费能否由地方财政持续承担？技术与施工人员是否本地可及？</td>
+            <td rowspan="5">
+              <strong>段 1（定标立论）</strong>：明确推荐 Option X，并亮出 3 条核心评估尺（cost sustainability, equity, long-term effectiveness）。<br><br>
+              <strong>段 2（深证首选 · 挂钩跨源证据）</strong>：调用 Sources 1–4 实证，展开首选方案在经济、社会与治理维度的优势。<br><br>
+              <strong>段 3（正面对照淘汰另 2 项备选）</strong>：必须逐一点名另外两个落选方案！使用对比转折句式证明为何它们在成本/持久度/覆盖面上较弱。<br><br>
+              <strong>段 4（双边让步防护 + 配套缓释）</strong>：<code>Admittedly, Option X carries short-term drawbacks such as...; however, these can be effectively mitigated by combining... with...</code>（坦承 1–2 项弱点并给出分阶段补救措施，直接封顶 Level 4/5）。
+            </td>
+          </tr>
+          <tr>
+            <td><strong>2. Short vs Long-term</strong><br>短期救急 vs 长期治本</td>
+            <td>它是立刻缓解燃眉之急但易反弹，还是需 2–5 年见效却能彻底根治结构病灶？</td>
+          </tr>
+          <tr>
+            <td><strong>3. Stakeholders</strong><br>多方利益相关者公平</td>
+            <td>政策由谁买单、谁最受益？低收入弱势群体的可负担性是否被保护，还是补贴流向富裕阶层？</td>
+          </tr>
+          <tr>
+            <td><strong>4. Unintended Consequences</strong><br>隐性副作用与次生风险</td>
+            <td>会否引发污染转移、能源耗竭、价格反弹或执行腐败等意外后果？</td>
+          </tr>
+          <tr>
+            <td><strong>5. Counter-option Rejection</strong><br>备选方案对比驳斥</td>
+            <td>相比另两项方案，为什么本方案的净收益（net benefit）在 5–10 年尺度下压倒其余选择？</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>四、15 大全球议题通用三维角度库 (Economic / Social &amp; Ethical / Environmental &amp; Governance)</h4>
+    <p>
+      面对考场任意陌生背景的 Source Booklet，利用下面 <strong>2025–2027 考纲全部 15 个统一议题三维视角速查库</strong>，2 分钟内即可在草稿纸拉出 <strong>经济 · 社会伦理 · 环境治理</strong> 三层高分拓展论点，摆脱“无话可写”：
+    </p>
+    <div class="table-wrap">
+      <table class="gp-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>官方全球议题 (0457)</th>
+            <th>Economic 经济成本与激励</th>
+            <th>Social &amp; Ethical 社会公平与伦理</th>
+            <th>Environmental &amp; Governance 环境与治理</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>01</td><td><strong>Arts in society</strong><br>社会中的艺术</td><td>创意产业创收、文旅就业 vs 公共财政排挤效应</td><td>文化认同与精神福祉 vs 医疗/基础温饱优先权</td><td>传统工艺非遗保护与城市更新的法规平衡</td></tr>
+          <tr><td>02</td><td><strong>Change in culture &amp; communities</strong><br>文化与社区变迁</td><td>旅游商业化增收 vs 本土手艺廉价替代</td><td>代际价值观撕裂、方言消亡 vs 青年跨界融入</td><td>城市化扩张对社区生态与历史风貌的治理红线</td></tr>
+          <tr><td>03</td><td><strong>Climate change, energy &amp; resources</strong><br>气候、能源与资源</td><td>绿色基建初始高成本 vs 化石燃料外部损失与转型就业</td><td>能源贫困家庭电价承压 vs 气候灾害跨代不公平</td><td>碳税、水资源定价与跨国减排协定的监管核查</td></tr>
+          <tr><td>04</td><td><strong>Conflict and peace</strong><br>冲突与和平</td><td>军费与制裁引发的供应链通胀 vs 战后重建投资</td><td>平民人道危机、难民教育医疗权利与心理创伤</td><td>国际调停执法效力、停火监督与跨境环境破坏</td></tr>
+          <tr><td>05</td><td><strong>Development, trade &amp; aid</strong><br>发展、贸易与援助</td><td>外贸创汇与基建贷款 vs 免费倾销摧毁本土小农</td><td>长期“造血”技能赋能 vs 附带条件的援助依赖</td><td>受援国治理透明度、反腐审计与公平贸易准入</td></tr>
+          <tr><td>06</td><td><strong>Digital world</strong><br>数字世界</td><td>AI 与平台效率红利 vs 中低技能岗位替代冲击</td><td>数字鸿沟（城乡接入不均）、隐私权与算法成瘾</td><td>跨境数据主权、平台算法问责与未成年人立法</td></tr>
+          <tr><td>07</td><td><strong>Education for all</strong><br>全民教育</td><td>人力资本长期回报 vs 偏远硬件维护长期财政黑洞</td><td>女童/残障与低收入家庭教育平权 vs 精英选拔壁垒</td><td>公立教育财政倾斜、师资留任激励与在线标准监管</td></tr>
+          <tr><td>08</td><td><strong>Employment</strong><br>就业</td><td>零工经济降低企业用工成本 vs 劳动者收入波动</td><td>社保缺失、过劳健康权与青年结构性失业</td><td>最低工资立法、零工算法透明与职业再培训治理</td></tr>
+          <tr><td>09</td><td><strong>Environment, pollution &amp; conservation</strong><br>环境、污染与保护</td><td>治污合规成本与渔农停产补贴 vs 生态旅游收益</td><td>弱势社区邻避效应与世居生计断流赔偿公平</td><td>跨境流域污染执法、排污罚则与保护区巡护体系</td></tr>
+          <tr><td>10</td><td><strong>Globalisation</strong><br>全球化</td><td>比较优势压低物价 vs 本土制造业空心化</td><td>劳工权益“逐底竞争” vs 跨文化视野拓宽</td><td>跨国供应链碳足迹追踪与国际劳工环保准则约束</td></tr>
+          <tr><td>11</td><td><strong>Health and wellbeing</strong><br>健康与福祉</td><td>医保长期防病省费 vs 糖税/药价管制冲击商业税基</td><td>医疗资源城乡公平、专利共享与个人生活自由权</td><td>公共卫生强制立法、食品警示标签与污染致病防控</td></tr>
+          <tr><td>12</td><td><strong>Law and criminality</strong><br>法律与犯罪</td><td>重刑监禁高昂财政开支 vs 社区矫治降低再犯成本</td><td>青少年初犯教育挽救 vs 受害者社区安全感诉求</td><td>司法独立、网络跨国犯罪执法与警力资源分配</td></tr>
+          <tr><td>13</td><td><strong>Media and communication</strong><br>媒体与传播</td><td>流量经济激励极端标题党 vs 公立独立媒体资金短缺</td><td>知情权、隐私保护与言论自由边界的伦理冲突</td><td>虚假信息事实核查机制与反过度审查的法律制衡</td></tr>
+          <tr><td>14</td><td><strong>Migration and urbanisation</strong><br>移民与城市化</td><td>填补老龄化劳动力缺口与侨汇收入 vs 母国人才流失</td><td>外来务工者子女入学医保平权 vs 本地居民焦虑</td><td>特大城市水电交通基建承载力规划与户籍包容治理</td></tr>
+          <tr><td>15</td><td><strong>Political power and action</strong><br>政治权力与行动</td><td>政策反复带来的商业预期不稳 vs 透明治理降低腐败损耗</td><td>青年/少数群体政治参与代表性与草根抗议空间</td><td>强制投票、地方预算听证与政府问责落地机制</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 305" width="740" height="305" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Q3 并行逐项正面比较对比图与 Q4 五维决策雷达图">
+        <rect x="8" y="8" width="724" height="289" rx="10" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="370" y="30" text-anchor="middle" font-size="13.5" font-weight="800" fill="var(--svg-ink)">图 6.2 · Q3 并行逐项正面比较 vs 错误分述 &amp; Q4 五维政策决策雷达</text>
+
+        <!-- Left Side: Q3 Structural Contrast -->
+        <rect x="20" y="46" width="344" height="82" rx="7" fill="rgba(220, 38, 38, 0.06)" stroke="var(--svg-red)" stroke-width="1.5" />
+        <text x="192" y="63" text-anchor="middle" font-size="11" font-weight="800" fill="var(--svg-red)">❌ Level 2 错误分述：先 A 后 B 零交锋 (封顶 5–8/16)</text>
+        <rect x="32" y="74" width="140" height="40" rx="5" fill="var(--svg-bg)" stroke="var(--svg-red)" stroke-width="1.2" />
+        <text x="102" y="92" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-ink)">段1：概括 Writer A</text>
+        <text x="102" y="106" text-anchor="middle" font-size="9" fill="var(--svg-muted)">优点 + 缺点 (孤立陈述)</text>
+        <text x="184" y="98" text-anchor="middle" font-size="12" font-weight="800" fill="var(--svg-red)">→</text>
+        <rect x="196" y="74" width="156" height="40" rx="5" fill="var(--svg-bg)" stroke="var(--svg-red)" stroke-width="1.2" />
+        <text x="274" y="92" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-ink)">段2：再写 Writer B</text>
+        <text x="274" y="106" text-anchor="middle" font-size="9" fill="var(--svg-muted)">最后写一句“我同意 A”</text>
+
+        <rect x="20" y="138" width="344" height="148" rx="7" fill="rgba(22, 163, 74, 0.06)" stroke="var(--svg-green)" stroke-width="1.5" />
+        <text x="192" y="156" text-anchor="middle" font-size="11" font-weight="800" fill="var(--svg-green)">✅ Level 4 正面比较：六维同屏逐项交锋 (13–16/16)</text>
+
+        <rect x="32" y="166" width="320" height="28" rx="4" fill="var(--svg-bg)" stroke="var(--svg-green)" stroke-width="1.2" />
+        <text x="42" y="184" font-size="9.0" font-weight="700" fill="var(--svg-ink)">维度1 实证与来源：A cites 5-yr audit vs B anecdote</text>
+
+        <rect x="32" y="200" width="320" height="28" rx="4" fill="var(--svg-bg)" stroke="var(--svg-green)" stroke-width="1.2" />
+        <text x="42" y="218" font-size="9.0" font-weight="700" fill="var(--svg-ink)">维度2 因果与假设：A causal chain vs B unstated cost</text>
+
+        <rect x="32" y="234" width="320" height="28" rx="4" fill="var(--svg-bg)" stroke="var(--svg-green)" stroke-width="1.2" />
+        <text x="42" y="252" font-size="9.0" font-weight="700" fill="var(--svg-ink)">维度3 平衡与语调：A concedes limit vs B alarmist tone</text>
+
+        <text x="192" y="278" text-anchor="middle" font-size="9.6" font-weight="800" fill="var(--svg-green)">→ 终局裁决：明确判定谁的论证机制更强，而非个人偏好</text>
+
+        <!-- Right Side: Q4 Five-Dimension Decision Radar -->
+        <rect x="380" y="46" width="340" height="240" rx="8" fill="rgba(37, 99, 235, 0.05)" stroke="var(--svg-blue)" stroke-width="1.5" />
+        <text x="550" y="64" text-anchor="middle" font-size="11.2" font-weight="800" fill="var(--svg-blue)">Q4 (24分) 五维决策雷达 &amp; 四段闭环</text>
+
+        <!-- Outer Pentagon C=(550,152) R=54 -->
+        <polygon points="550,98 601,135 582,196 518,196 499,135" fill="none" stroke="var(--svg-grid)" stroke-width="1.3" />
+        <!-- Inner Pentagon r=27 -->
+        <polygon points="550,125 576,144 566,174 534,174 524,144" fill="none" stroke="var(--svg-grid)" stroke-width="1" stroke-dasharray="3,2" />
+        <!-- Radar Spokes -->
+        <line x1="550" y1="152" x2="550" y2="98" stroke="var(--svg-grid)" stroke-width="1" />
+        <line x1="550" y1="152" x2="601" y2="135" stroke="var(--svg-grid)" stroke-width="1" />
+        <line x1="550" y1="152" x2="582" y2="196" stroke="var(--svg-grid)" stroke-width="1" />
+        <line x1="550" y1="152" x2="518" y2="196" stroke="var(--svg-grid)" stroke-width="1" />
+        <line x1="550" y1="152" x2="499" y2="135" stroke="var(--svg-grid)" stroke-width="1" />
+
+        <!-- Rejected Option Polygon (Imbalanced / Red Dashed) -->
+        <polygon points="550,130 590,139 565,175 535,170 526,144" fill="rgba(220, 38, 38, 0.14)" stroke="var(--svg-red)" stroke-width="1.6" stroke-dasharray="4,3" />
+        <!-- Chosen Option Polygon (Balanced High / Blue Solid) -->
+        <polygon points="550,104 596,137 578,191 523,189 504,137" fill="rgba(37, 99, 235, 0.22)" stroke="var(--svg-blue)" stroke-width="2" />
+
+        <!-- Axis Labels (generous margin inside x=380..720) -->
+        <text x="550" y="88" text-anchor="middle" font-size="9.0" font-weight="700" fill="var(--svg-ink)">1. Cost &amp; Feasibility</text>
+        <text x="608" y="135" text-anchor="start" font-size="9.0" font-weight="700" fill="var(--svg-ink)">2. Short vs Long</text>
+        <text x="588" y="205" text-anchor="start" font-size="9.0" font-weight="700" fill="var(--svg-ink)">3. Stakeholders</text>
+        <text x="512" y="205" text-anchor="end" font-size="9.0" font-weight="700" fill="var(--svg-ink)">4. Unintended Risk</text>
+        <text x="492" y="135" text-anchor="end" font-size="9.0" font-weight="700" fill="var(--svg-ink)">5. Option Rejection</text>
+
+        <text x="550" y="223" text-anchor="middle" font-size="9.0" font-weight="700" fill="var(--svg-muted)">蓝实线: 首选综合最优方案 | 红虚线: 落选方案短板</text>
+
+        <rect x="392" y="233" width="316" height="42" rx="5" fill="var(--svg-bg)" stroke="var(--svg-blue)" stroke-width="1.2" />
+        <text x="550" y="250" text-anchor="middle" font-size="9.3" font-weight="700" fill="var(--svg-ink)">四段闭环：P1 选边定尺 → P2 跨源深证首选优势</text>
+        <text x="550" y="266" text-anchor="middle" font-size="9.3" font-weight="700" fill="var(--svg-blue)">P3 逐一淘汰另2项方案 → P4 让步承认弱点+配套缓释</text>
+      </svg>
+      <div class="svg-caption">图 6.2 · Q3 并行逐维对比 vs 块状分述误区 &amp; Q4 五维政策雷达与四段闭环</div>
+    </div>
+  </div>
+
+  <!-- F06 Interactive Lab Box -->
+  <div class="lab-box" data-lab-type="f06"></div>
+</article>
+
+<article class="topic-section sec-practice" id="sec-sme">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>3. Component 1 全真 70 分模拟卷 (Q1–Q4 · 85 分钟) 与评分标准</h3>
+      <div class="section-en-sub">Full Original Component 1 Mock Paper: Global Urban Water Scarcity (Sources 1–4 · 70 Marks) + 10 Interactive MCQs + 5 Level 4 Mark Schemes</div>
+      <div class="tier-row">
+        <span class="badge-core">Topic 03 / 09 / 14 · 全真英文阅读材料 Sources 1–4</span>
+        <span class="badge-ext">10 道考题诊断 MCQ + 5 份官方 Level 4 英文范文</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-sme">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>一、模拟卷 Source Booklet（话题：Global Urban Water Scarcity &amp; Municipal Water Security · 全 70 分）</h4>
+
+    <div class="source-box">
+      <div class="reading-title">Source 1: Global Urban Water Stress &amp; Municipal Efficiency Brief (UN-Water &amp; Urban Hydrology Monitor, 2025)</div>
+      <p style="margin-bottom: 8px;">
+        <span class="para-tag">Data Table</span> Rapid urbanisation and erratic rainfall have placed major coastal and inland cities under unprecedented hydrological pressure. According to audited municipal filings from 120 metropolitan water utilities, an average of 36% of treated drinking water is lost before reaching taps due to ageing, leaking underground pipes—compared with just 14% in cities with continuous sensor monitoring such as Singapore and Tokyo.
+      </p>
+      <div class="table-wrap" style="margin: 8px 0;">
+        <table class="gp-table">
+          <thead>
+            <tr>
+              <th>Indicator (120-City Sample)</th>
+              <th>2015 Baseline</th>
+              <th>2025 Audited</th>
+              <th>2040 Projection</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Urban residents facing seasonal water stress</td>
+              <td>930 million (24%)</td>
+              <td>1.64 billion (38%)</td>
+              <td>2.45 billion (51%, projected)</td>
+            </tr>
+            <tr>
+              <td>Average treated water lost via pipe leakage</td>
+              <td>33%</td>
+              <td>36%</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>Lifecycle cost per cubic metre: Pipe repair &amp; metering</td>
+              <td>USD 0.31</td>
+              <td>USD 0.35</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>Lifecycle cost per cubic metre: Reverse-osmosis desalination</td>
+              <td>USD 1.40</td>
+              <td>USD 1.15</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-bottom: 0;">
+        <span class="para-tag">Summary Brief</span> By 2040, intensifying summer droughts and industrial demand will push over half of all urban populations globally into acute seasonal water shortages unless municipal water loss is halved. Clean, reliable household water should be guaranteed as a basic civic entitlement rather than rationed by ability to pay private vendors.
+      </p>
+    </div>
+
+    <div class="source-box">
+      <div class="reading-title">Source 2: Ground-Level Voices from Port Solara (Field Interviews, October 2025)</div>
+      <p style="margin-bottom: 8px;">
+        <span class="para-tag">Priya Nair (Senior Municipal Pipe Engineer, 16 years service)</span> “In Port Solara’s older northern wards, cast-iron water mains laid in the 1970s burst almost weekly. Our maintenance crews spend eighty percent of their shifts patching emergency ruptures rather than replacing corroded sections because our annual capital budget was frozen five years ago. Last July, pressure dropped so low that rooftop tanks ran dry for three consecutive days across four high-density suburbs, even though our river reservoir was still half full.”
+      </p>
+      <p style="margin-bottom: 0;">
+        <span class="para-tag">Mateo Alvarez (Small Market Gardener &amp; Father of Three)</span> “When city taps stop flowing during dry months, my family must buy water from private diesel tanker trucks at three times the municipal rate. That eats nearly a fifth of my monthly income from selling vegetables, and two neighbours had to pull their teenage daughters out of afternoon study to queue at standpipes. Meanwhile, waterfront luxury resorts keep green lawns watered year-round on private boreholes.”
+      </p>
+    </div>
+
+    <div class="source-box">
+      <div class="reading-title">Source 3: “Oceans Without Limits: Why Coastal Mega-Cities Must Choose Desalination Now” (Dr Henrik Lindholm, January 2026)</div>
+      <p style="margin-bottom: 8px;">
+        <span class="para-tag">Article Extract</span> Traditional pipe-fixing programmes are slow, medieval patching that merely redistributes dwindling rainfall. Reverse-osmosis seawater desalination is the single guaranteed, drought-proof salvation for growing coastal cities like Port Solara. During an eight-month 2025 trial at our Coral Bay modular plant, steady desalinated output supplied 45,000 coastal residents without a single day of supply interruption, while public satisfaction polls recorded 89% approval among surveyed hotel managers and marina homeowners.
+      </p>
+      <p style="margin-bottom: 6px;">
+        <span class="para-tag">Commercial Offer</span> Under our new municipal partnership package, AquaNova Technologies will waive 30% of upfront plant construction costs during Years 1 and 2, delivering operational freshwater within fourteen months—far faster than decade-long underground pipe excavations.
+      </p>
+      <p style="margin-bottom: 0; font-size: 13px; color: var(--text-faint);">
+        <em>Author &amp; Footnote: Dr Henrik Lindholm holds a PhD in Membrane Chemistry and serves as Chief Innovation Officer at AquaNova Desalination Technologies Ltd. Footnote: Coral Bay trial operated on a dedicated port substation grid; municipal contracts require a 15-year indexed energy-and-membrane service tariff from Year 3 onward. Marine brine dispersion impacts were excluded from this briefing.</em>
+      </p>
+    </div>
+
+    <div class="source-box">
+      <div class="reading-title">Source 4: Municipal Water Policy Forum — Which Strategy Should Cities Prioritise?</div>
+      <p style="margin-bottom: 8px;">
+        <span class="para-tag">Writer A: Professor Nadia Al-Mansoor (Director, Centre for Sustainable Urban Infrastructure, Independent University)</span> “Smart pipe rehabilitation paired with tiered water pricing offers the highest durability and social equity per public dollar spent. A 2024 comparative audit by the World Bank and Asian Development Bank across 42 cities demonstrated that targeted pressure management and leak repairs recovered 28% of lost municipal supply within three years at roughly one-third the lifecycle cost of seawater desalination (USD 0.35 versus USD 1.15 per cubic metre). Crucially, tiered tariffs—providing the first 50 litres per person daily free as a social lifeline while charging steep rates to heavy commercial estates—discourage luxury waste without hurting low-income families. Admittedly, tearing up urban streets causes temporary traffic disruption and raising luxury water tariffs can meet political pushback, yet phased night-time repairs and transparent rebate funds effectively mitigate both obstacles.”
+      </p>
+      <p style="margin-bottom: 0;">
+        <span class="para-tag">Writer B: Councillor Victor Thorne (Regional Coastal Growth Spokesperson &amp; Former Infrastructure Consultancy Advisor)</span> “Delaying mega-scale desalination is nothing short of criminal negligence that condemns our city to third-world thirst. Last summer, when Port Solara District Hospital had to postpone routine surgeries for 48 hours during a drought shutoff, panicked nurses watched families carry buckets up four flights of stairs. Every modern coastal metropolis knows desalination makes painful water rationing and conservation obsolete forever. Introducing tiered water pricing will simply punish working families, strangle local factories, and drive foreign investors away, whereas towering desalination plants immediately guarantee boundless prosperity for all.”
+      </p>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>二、全套试卷提问区 (Component 1 · Q1–Q4 · 70 Marks · 85 Minutes)</h4>
+    <div class="formula-card">
+      <p style="margin-bottom: 6px;"><strong>Question 1 (14 marks · 建议 13 min)</strong></p>
+      <ul style="margin-bottom: 8px;">
+        <li><strong>Q1(a) [2 marks]:</strong> From Source 1, identify two contrasting statistics showing urban water stress or municipal water loss.</li>
+        <li><strong>Q1(b) [4 marks]:</strong> From Source 1, identify one <strong>Prediction</strong> and one <strong>Value Judgement</strong>. Quote each sentence and explain why it belongs to that category.</li>
+        <li><strong>Q1(c) [4 marks]:</strong> From Source 2, explain two human or economic consequences of urban water scarcity, and evaluate one strength and one limitation of Source 2 as evidence.</li>
+        <li><strong>Q1(d) [4 marks]:</strong> Using Sources 1 and 2, explain how local municipal pipe failures create wider national and global economic or social challenges.</li>
+      </ul>
+      <p style="margin-bottom: 6px;"><strong>Question 2 (16 marks · 建议 18 min)</strong></p>
+      <ul style="margin-bottom: 8px;">
+        <li><strong>Q2(a) [8 marks]:</strong> How well does the evidence in Source 3 support the argument that mega-scale desalination is the best solution to urban water scarcity? Evaluate both strengths and weaknesses.</li>
+        <li><strong>Q2(b) [8 marks]:</strong> <em>“Desalination plants harm coastal marine ecosystems and fail to lower water bills for low-income households.”</em> Explain how you could test this claim, covering sampling, research methods, cross-checking, controls, and limitations.</li>
+      </ul>
+      <p style="margin-bottom: 6px;"><strong>Question 3 (16 marks · 建议 20 min)</strong></p>
+      <p style="margin-bottom: 8px;">Which argument is more convincing, Professor Nadia Al-Mansoor’s (Writer A) or Councillor Victor Thorne’s (Writer B) in Source 4? Consider both arguments using examples from the source.</p>
+      <p style="margin-bottom: 6px;"><strong>Question 4 (24 marks · 建议 22 min)</strong></p>
+      <p style="margin-bottom: 4px;">Port Solara’s municipal government must allocate its five-year water security budget across three options: <strong>Option 1:</strong> Build Mega-Scale Coastal Desalination Plants; <strong>Option 2:</strong> Smart Pipe Rehabilitation &amp; Tiered Urban Water Pricing (with free low-income lifeline allowance); <strong>Option 3:</strong> Mandatory Household Rainwater Harvesting &amp; Greywater Recycling Subsidies.</p>
+      <p style="margin-bottom: 0;">Which course of action would you recommend? Explain your choice by weighing all three options and using evidence from Sources 1–4.</p>
+    </div>
+  </div>
+
+  <div class="practice-block">
+    <div class="practice-heading">⚡ 第一部分：10 道核心高频考场诊断 MCQ（即时检测 Q1–Q4 踩分盲区）</div>
+
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head"><span class="q-tag">诊断 1 · Q1(b) Prediction 判定</span><span class="q-marks">1 mark</span></div>
+      <div class="q-stem-en">Which sentence from Source 1 is a <strong>Prediction</strong> rather than a Fact or Value Judgement?</div>
+      <div class="q-stem-cn">从 Source 1 中选出属于“未来预测（Prediction）”的原句。</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>“An average of 36% of treated drinking water is lost before reaching taps due to ageing underground pipes.”</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>“By 2040, intensifying summer droughts and industrial demand will push over half of all urban populations into acute shortages.”</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>“Clean, reliable household water should be guaranteed as a basic civic entitlement.”</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>“In 2015, 930 million urban residents (24%) faced seasonal water stress.”</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确 (B)！By 2040 与 will push 明确指向尚未发生的未来结果，现阶段不能作为既成事实核查。A、D 是可核查的 Fact，C 含 should 属于 Value Judgement。" data-err="❌ 注意信号词：will + 未来年份 By 2040 才是 Prediction；含 should 是 Value Judgement；2015/2025 已审计数字是 Fact。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="C">
+      <div class="exam-q-head"><span class="q-tag">诊断 2 · Q1(b) Value Judgement 辨析理由</span><span class="q-marks">1 mark</span></div>
+      <div class="q-stem-en">Why does “Clean, reliable household water should be guaranteed as a basic civic entitlement rather than rationed by ability to pay” qualify as a <strong>Value Judgement</strong>?</div>
+      <div class="q-stem-cn">为什么 Source 1 末尾这句话被判定为“价值判断”？哪项解释能拿满 1 分？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>Because UN-Water proved mathematically that water pipes cost USD 0.35 per cubic metre.</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>Because the sentence predicts what municipal water tariffs will look like in 2040.</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>Because it expresses a moral and social stance on what society ought to prioritise (“should”, “entitlement”), which cannot be empirically verified as true or false.</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>Because Mateo Alvarez pays three times the municipal rate for private tanker water.</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确 (C)！必须点明“基于伦理/社会公平尺度作出应然主张（should）”以及“不可用客观实证数据验证对错”。" data-err="❌ A、D 说的是客观数据与个人事实；B 是预测。Value Judgement 核心是道德/价值应然评判且不可实证检验。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="A">
+      <div class="exam-q-head"><span class="q-tag">诊断 3 · Q1(d) Local 到 Global 因果链</span><span class="q-marks">1 mark</span></div>
+      <div class="q-stem-en">Which explanation best earns 4/4 marks in Q1(d) for linking local pipe failures to wider national and global impacts?</div>
+      <div class="q-stem-cn">Q1(d) 如何把 Source 2 的本土断水串成高分宏观因果链？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>Ageing pipes lose 36% of treated water locally, forcing low-income households onto costly private tankers (20% of income) and pulling teens out of study; scaled across cities where 38% already face stress, this deepens poverty, public health burdens, and productivity losses nationally and globally.</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>Priya Nair is tired of patching pipes and Mateo grows vegetables, so governments should give everyone free water bottles forever.</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>Cities in Singapore only lose 14% of water while desalination costs USD 1.15 per cubic metre.</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>People hate private water tankers because diesel trucks make loud traffic noise in summer.</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确 (A)！完美完成 Local (漏损 36% → 高价水车挤占收入与辍学) → National/Global (教育中断、跨代贫困与城市生产力损失) 的多步因果链。" data-err="❌ B 是主观口号且脱离全局后果；C 只是抄数字无因果连接；D 偏离材料核心经济教育机制。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="D">
+      <div class="exam-q-head"><span class="q-tag">诊断 4 · Q2(a) 双向平衡拿高分关键</span><span class="q-marks">1 mark</span></div>
+      <div class="q-stem-en">Even though Source 3 is written by a desalination company executive, why must a Level 4 answer still identify <strong>strengths</strong> in his evidence?</div>
+      <div class="q-stem-cn">明知 Source 3 作者是商业高管，为什么 Q2(a) 仍必须写出它的优点（Strengths）？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>Because candidates should agree with whatever technology sounds newer and faster.</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>Because commercial companies never publish exaggerated or selective numbers.</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>Because Dr Lindholm promises free water to Port Solara forever with zero subscription charges.</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>Because balanced evaluation requires crediting genuine technical expertise (PhD in Membrane Chemistry), currency (Jan 2026), and specific trial figures (45,000 residents) before exposing commercial vested interest and selective sampling.</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确 (D)！双向平衡是 Q2A 突破 Level 2 (3–4分) 进入 Level 4 (7–8分) 的硬性门槛：先肯定博士专业度、2026 时效与试点数字，再痛击既得利益与挑拣样本。" data-err="❌ C 完全与脚注（第3年起收15年商业服务费）矛盾；A、B 违背批判思维基本原则。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head"><span class="q-tag">诊断 5 · Q2(a) 脚注隐蔽漏洞诊断</span><span class="q-marks">1 mark</span></div>
+      <div class="q-stem-en">Which pair of hidden flaws from Source 3’s text and footnote most seriously weakens Dr Lindholm’s claim?</div>
+      <div class="q-stem-cn">Source 3 正文与脚注埋了哪一对最致命的可信度漏洞？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>The plant took 14 months to construct and Lindholm holds an engineering doctorate.</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>Severe commercial vested interest (15-year tariff lock-in from Year 3 hidden in footnote) + cherry-picked sample (polling luxury hotel managers/marina owners on a port grid, while omitting brine pollution).</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>The trial lasted eight months in 2025 instead of starting in 2015.</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>He clearly admits that pipe repairs are faster and cheaper than desalination.</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确 (B)！精准抓住“商业合同利益绑定 + 挑拣海港度假区与酒店样本 + 刻意隐瞒盐卤排放生态代价”。" data-err="❌ A、C 属于事实或优点；D 与原文完全相反（他把修管道贬为“medieval patching”）。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="C">
+      <div class="exam-q-head"><span class="q-tag">诊断 6 · Q2(b) 分层抽样与对照设计</span><span class="q-marks">1 mark</span></div>
+      <div class="q-stem-en">To test whether desalination lowers water bills for low-income households, which sampling plan best avoids Source 3’s bias?</div>
+      <div class="q-stem-cn">在 Q2(b) 检验“淡化工厂能否降低低收入家庭水费”时，哪种抽样最科学？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>Interview 15 marina homeowners and luxury resort managers who experienced the Coral Bay trial.</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>Ask 20 people outside a supermarket whether they like clean tap water.</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>Select a stratified random sample of 400 households across both low-income northern wards and affluent coastal wards, comparing audited water bills before and 3 years after plant tariffs take effect against a comparable non-desalination control city.</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>Read AquaNova’s Year 1 promotional brochure to check the 30% construction discount.</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确 (C)！同时覆盖“按收入分层抽样 + 400 户大样本 + 覆盖第 3 年商业费率生效期 + 匹配对照组城市”。" data-err="❌ A 重复挑拣富裕样本；B 样本太小且无对照；D 依赖有利益冲突的商业宣传单。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="A">
+      <div class="exam-q-head"><span class="q-tag">诊断 7 · Q2(b) 生态检验方法与局限</span><span class="q-marks">1 mark</span></div>
+      <div class="q-stem-en">Which addition completes a Level 4 (7–8/8) answer for Q2(b) when testing marine ecosystem impact?</div>
+      <div class="q-stem-cn">检验“沿海海水淡化是否伤害海洋生态”，补充哪项要素最能冲击 8/8 满分？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>Pair independent marine water salinity and biodiversity sampling (pre- vs post-outfall at 500 m and 5 km distances) with fishers’ catch logs and secondary fisheries ministry audits, while acknowledging confounding seasonal ocean currents as a limitation.</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>Simply ask Councillor Thorne whether he thinks fish are harmed by seawater plants.</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>Count how many days it rains in July and assume rain explains all changes in fish populations.</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>State that no study has any limitations as long as scientists wear lab coats.</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确 (A)！完整涵盖“实测对照（距离梯度+前后测）+ 渔民日志与渔业部二手核验 + 主动点出洋流/季节混杂局限”。" data-err="❌ B 找有偏向的政客做唯一信源；C 错误归因；D 忘记交代研究局限会丢掉最后 1–2 分。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="D">
+      <div class="exam-q-head"><span class="q-tag">诊断 8 · Q3 论证比较最致命错误</span><span class="q-marks">1 mark</span></div>
+      <div class="q-stem-en">Why is the following Q3 opening risky? “First, I will evaluate Writer A’s strengths and weaknesses. Second, I will evaluate Writer B’s strengths and weaknesses.”</div>
+      <div class="q-stem-cn">为什么 Q3 写成“第一部分写完 A 的优缺点，第二部分再写完 B 的优缺点”危险极大？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>Because candidates are only allowed to evaluate one writer in Q3.</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>Because mentioning weaknesses of either writer is forbidden in Level 4.</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>Because Source 4 writers should never be quoted directly.</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>Because sequential “all of A, then all of B” structure prevents sustained point-by-point comparison across shared criteria, usually capping the response at Level 2 (5–8/16 marks).</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确 (D)！剑桥考官明确规定 Q3 必须围绕共同标准做持续正面比较（sustained explicit comparison），先 A 后 B 会被判为“two separate accounts”。" data-err="❌ A、B、C 全错：Q3 必须同时评估双方优缺点并引用原句，关键错在“段落未做同维并置比较”。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head"><span class="q-tag">诊断 9 · Q3 隐含未证实假设拆弹</span><span class="q-marks">1 mark</span></div>
+      <div class="q-stem-en">Which critical flaw accurately exposes an <strong>unstated assumption</strong> or logical fallacy in Councillor Thorne’s (Writer B) argument?</div>
+      <div class="q-stem-cn">在 Q3 批驳 Source 4 中 Writer B（Thorne 议员）时，哪条剖析最精准击中隐含假设与逻辑谬误？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>Thorne uses a short paragraph, which proves his facts are incorrect.</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>He creates a false dilemma between desalination and factory flight, relies on the unstated assumption that energy and brine costs stay harmless forever, and uses alarmist wording (“criminal negligence”).</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>Hospital nurses carry buckets up stairs, which means all hospitals support desalination.</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>Writer A has no disadvantages in her plan at all, whereas Thorne is completely silent about water shortages.</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确 (B)！同时指出“虚假二分谬误（不建淡化厂就会赶走工厂）+ 能源与盐卤代价零风险的隐含假设 + 煽动修辞”。" data-err="❌ A 段落长短无关论证强度；C 以偏概全；D 忽略了 Writer A 自己也承认的交通施工与政治阻力局限。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="C">
+      <div class="exam-q-head"><span class="q-tag">诊断 10 · Q4 24 分最高档淘汰与缓释</span><span class="q-marks">1 mark</span></div>
+      <div class="q-stem-en">If you recommend <strong>Option 2 (Smart Pipe Rehabilitation &amp; Tiered Pricing)</strong> in Q4, what must you include to achieve 19–24/24 marks?</div>
+      <div class="q-stem-cn">在 Q4 推荐 Option 2（修管道+阶梯水价）时，必须完成哪一项动作才能冲进 19–24/24 分最高档？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>Ignore Option 3 completely because rainwater subsidies were not discussed in Source 4.</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>Claim that Option 2 repairs all 1970s water mains instantaneously at zero street inconvenience.</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>Contrast Option 2 against both Option 1 (triple lifecycle cost, Year 3 commercial fee trap, brine pollution) and Option 3 (useless during prolonged droughts &amp; unaffordable upfront for renters), while conceding street disruption/delay and proposing phased night works plus targeted emergency rainwater support.</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>Propose inventing a fourth option to import icebergs instead of choosing among the three options.</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确 (C)！Q4 满分铁律：覆盖全部 3 个官方备选方案 + 多维成本/时间/公平权衡 + 坦承首选方案短期施工与延迟短板并给出可落地缓释措施！" data-err="❌ 漏写 Option 3 直接扣分；美化首选方案无任何缺陷会锁死 Level 3；脱离题干另起第四方案属偏题。"></div>
+    </div>
+  </div>
+
+  <div class="practice-block">
+    <div class="practice-heading">🏆 第二部分：官方 Level 4 评分标准与全套英文满分示范 (5 份可展开解析)</div>
+
+    <details class="ms-details">
+      <summary>1. 展开 Question 1 (14 marks) 官方 Mark Scheme 与逐小题英文示范</summary>
+      <div class="ms-body">
+        <p><span class="ms-mark">Q1(a) · 2 marks</span> Award 1 mark per accurate statistic from Source 1 showing stress or water loss (max 2):</p>
+        <ul>
+          <li>An average of 36% of treated drinking water is lost via leaking underground pipes across 120 cities (vs 14% in sensor-monitored cities like Singapore/Tokyo) (1m).</li>
+          <li>Urban residents facing seasonal water stress rose from 930 million (24%) in 2015 to 1.64 billion (38%) in 2025 (1m).</li>
+          <li>Lifecycle cost per cubic metre is USD 0.35 for pipe repair versus USD 1.15 for desalination (1m).</li>
+        </ul>
+        <p><span class="ms-mark">Q1(b) · 4 marks</span> 1 mark for accurate quotation + 1 mark for category explanation (× 2):</p>
+        <ul>
+          <li><strong>Prediction:</strong> <em>“By 2040, intensifying summer droughts and industrial demand will push over half of all urban populations globally into acute seasonal water shortages...”</em> (1m) — This forecasts an outcome in 2040 that has not yet occurred and therefore cannot currently be objectively verified as fact (1m).</li>
+          <li><strong>Value Judgement:</strong> <em>“Clean, reliable household water should be guaranteed as a basic civic entitlement rather than rationed by ability to pay private vendors.”</em> (1m) — This expresses an ethical/moral stance on what society ought to prioritise (<em>should</em>, <em>entitlement</em>), grounded in values of fairness rather than testable empirical data (1m).</li>
+        </ul>
+        <p><span class="ms-mark">Q1(c) · 4 marks</span> 2 marks for two consequences from Source 2 + 1 mark strength + 1 mark limitation:</p>
+        <ul>
+          <li><strong>Consequences (2m):</strong> (i) Financial burden on low-income workers — families pay triple municipal rates to private tankers, consuming nearly one-fifth of Mateo’s monthly vegetable-farming income (1m); (ii) Educational disruption — teenage girls were pulled out of afternoon study to queue at public standpipes during three-day dry-tap spells (1m).</li>
+          <li><strong>Strength (1m):</strong> High first-hand authenticity — Priya Nair draws on 16 years of municipal engineering fieldwork and Mateo provides lived economic experience.</li>
+          <li><strong>Limitation (1m):</strong> Small, unrepresentative sample — only two voices from Port Solara’s older wards are cited, limiting generalisation to the entire city or other nations.</li>
+        </ul>
+        <p><span class="ms-mark">Q1(d) · 4 marks</span> Multi-step causal chain connecting local failures to national/global outcomes (Level 2 = 3–4m):</p>
+        <p><strong>Model Answer:</strong> Locally, underfunded 1970s water mains burst frequently, losing 36% of treated water (Sources 1 &amp; 2) and causing three-day tap dry-outs even when reservoirs are half full. This forces vulnerable households like Mateo’s to spend up to 20% of earnings on private water tankers and pulls teenagers out of school to queue for water (Source 2). When replicated across rapidly urbanising cities where 38% already experience water stress (Source 1), reduced educational attainment, heightened public health risks, and rising municipal inequality depress national economic productivity and strain global urban climate resilience.</p>
+      </div>
+    </details>
+
+    <details class="ms-details">
+      <summary>2. 展开 Question 2(a) (8 marks) Level 4 Mark Scheme + RAVEN 双面英文满分范文</summary>
+      <div class="ms-body">
+        <p><span class="ms-mark">Q2(a) Level 4 · 7–8 marks</span> Balanced, developed evaluation addressing <strong>both strengths and weaknesses</strong> anchored in explicit evidence from Source 3 (Expertise, Recency, Trial Data vs Vested Interest, Cherry-picked Sample, Omission, Tone).</p>
+        <p><strong>Q2(a) Model Answer (8/8):</strong><br>
+          Source 3 offers partial technical credibility, yet its overall reliability as policy evidence is severely compromised by commercial vested interest, selective sampling, and deliberate omissions. On the positive side, the author, Dr Henrik Lindholm, holds a PhD in Membrane Chemistry, providing genuine technical expertise on reverse-osmosis delivery timelines (fourteen months versus multi-year street excavations). Furthermore, the briefing is highly recent (January 2026) and cites specific quantitative pilot figures—supplying 45,000 residents over an eight-month Coral Bay trial alongside a concrete 30% Year 1–2 construction discount.<br><br>
+          However, major weaknesses undermine the strength of his support. First, as Chief Innovation Officer at AquaNova Desalination Technologies Ltd., Dr Lindholm carries an undeniable commercial vested interest: his firm directly profits from municipal contracts, and the footnote reveals a hidden 15-year indexed service tariff from Year 3 onward that masks long-term public costs. Second, the 89% approval poll relies on an unrepresentative, cherry-picked sample of hotel managers and marina homeowners rather than low-income northern-ward residents (Source 2), while operating on an idealised port power grid. Third, omitting marine brine dispersion impacts and dismissing pipe rehabilitation with emotive language (“medieval patching”, “single guaranteed salvation”) demonstrates clear promotional bias. Thus, Source 3 is useful for installation speed claims but weak as neutral policy proof.</p>
+      </div>
+    </details>
+
+    <details class="ms-details">
+      <summary>3. 展开 Question 2(b) (8 marks) Level 4 Mark Scheme + 研究设计四要素英文满分范文</summary>
+      <div class="ms-body">
+        <p><span class="ms-mark">Q2(b) Level 4 · 7–8 marks</span> Specific, well-justified research plan incorporating <strong>stratified/controlled sampling</strong>, <strong>primary triangulation</strong>, <strong>secondary longitudinal cross-checking</strong>, and <strong>bias/confounding limitations</strong>.</p>
+        <p><strong>Q2(b) Model Answer (8/8):</strong><br>
+          To rigorously test whether desalination harms coastal ecosystems and fails to lower bills for low-income households, I would conduct a three-year mixed-methods comparative study combining environmental sampling, household bill audits, and stakeholder interviews. First, for sampling, I would select a stratified random sample of 400 households across Port Solara’s low-income northern wards and affluent coastal suburbs, paired with a socio-economically matched coastal control city without desalination, to eliminate Source 3’s cherry-picking bias.<br><br>
+          Second, to measure affordability, I would compare audited municipal water bills and private-tanker receipts at baseline and again in Year 3 once commercial desalination tariffs take effect, alongside anonymous non-leading questionnaires on water-cut frequency and affordability stress. Simultaneously, independent marine biologists would sample coastal water salinity and benthic biodiversity at 500 metres and 5 kilometres from brine outfall pipes before and after commissioning, supplemented by semi-structured interviews with 30 local fishers.<br><br>
+          Third, I would cross-check primary findings against official fisheries ministry catch registries and five-year regional environmental audits to separate plant impacts from natural variation. Finally, key limitations include confounding seasonal ocean currents or regional drought severity altering fish stocks independently, as well as potential social desirability bias in interviews, requiring anonymous billing data and blind laboratory testing to maintain objectivity.</p>
+      </div>
+    </details>
+
+    <details class="ms-details">
+      <summary>4. 展开 Question 3 (16 marks) Level 4 Mark Scheme + 六维正面交锋英文满分范文</summary>
+      <div class="ms-body">
+        <p><span class="ms-mark">Q3 Level 4 · 13–16 marks</span> Sustained point-by-point comparative evaluation of <strong>both writers</strong> across evidence, reasoning/assumptions, balance, and tone/vested interest, reaching a justified judgement.</p>
+        <p><strong>Q3 Model Essay (16/16):</strong><br>
+          Overall, Professor Nadia Al-Mansoor’s argument (Writer A) is substantially more convincing than Councillor Victor Thorne’s (Writer B) because Al-Mansoor grounds her case in independent multi-city evidence, acknowledges practical trade-offs, and maintains a measured tone, whereas Thorne relies on emotional anecdotes, false dilemmas, and unsubstantiated assumptions.<br><br>
+          First, regarding evidential strength and reliability, Al-Mansoor supports her preference for smart pipe rehabilitation with an independent 2024 World Bank/Asian Development Bank audit covering 42 municipalities, demonstrating a 28% recovery of lost supply at roughly one-third the lifecycle cost of desalination (USD 0.35 versus USD 1.15 per cubic metre). Conversely, Thorne provides zero comparative cost data or long-term urban studies; he builds his entire urgency case on one emotionally charged 48-hour hospital anecdote and the unsupported universal claim that “every modern coastal metropolis knows desalination makes conservation obsolete.” Furthermore, Al-Mansoor’s independent university role lends stronger neutrality than Thorne’s background as a former infrastructure consultancy advisor.<br><br>
+          Second, in terms of logical reasoning and balance, Al-Mansoor builds a coherent causal mechanism showing how tiered pricing with a 50-litre free lifeline protects poor households while curating luxury waste. Crucially, she enhances credibility by explicitly conceding street-digging disruption and political opposition, offering phased night works as mitigation. In stark contrast, Thorne commits a false dilemma—claiming tiered tariffs will automatically “strangle local factories”—and rests on the unstated assumption that desalination energy costs and marine brine discharges carry negligible economic or ecological penalties.<br><br>
+          Finally, tone sharply separates the two arguments. Al-Mansoor adopts disciplined analytical language, whereas Thorne employs inflammatory rhetoric (“criminal negligence”, “third-world thirst”) designed to provoke fear rather than weigh evidence. Therefore, despite slower implementation timelines in Al-Mansoor’s approach, her argument is far more logically rigorous and persuasive.</p>
+      </div>
+    </details>
+
+    <details class="ms-details">
+      <summary>5. 展开 Question 4 (24 marks) Level 4/5 Mark Scheme + 四段五维决策英文满分范文</summary>
+      <div class="ms-body">
+        <p><span class="ms-mark">Q4 Level 4/5 · 19–24 marks</span> Clear recommendation + sustained multi-dimensional comparison explicitly rejecting <strong>both alternatives</strong> + evidence integrated across Sources 1–4 + acknowledged weaknesses and realistic mitigation.</p>
+        <p><strong>Q4 Model Essay (23–24/24):</strong><br>
+          To secure Port Solara’s urban water supply over the next five years, the municipal government should prioritise <strong>Option 2: Smart Pipe Rehabilitation paired with Tiered Urban Water Pricing</strong>. Assessing all three proposals against lifecycle affordability, long-term reliability, social equity, and environmental sustainability demonstrates that Option 2 outperforms both mega-scale desalination and rainwater subsidies, provided its short-term construction disruption is systematically managed.<br><br>
+          Option 2 delivers the strongest structural value and directly targets the city’s root crisis. Source 1 and Source 2 reveal that Port Solara loses water not because reservoirs are empty, but because underfunded 1970s pipes leak roughly 36% of treated supply before reaching homes. As evidenced in Source 4, the 42-city World Bank/ADB audit proves sensor-guided leak rehabilitation recovers 28% of supply within three years at USD 0.35 per cubic metre—matching Singapore and Tokyo’s 14% benchmark (Source 1). Pairing upgrades with a free 50-litre daily lifeline eliminates low-income families’ dependence on predatory water tankers (Mateo’s 20% income loss in Source 2) while charging higher tariffs to luxury estates using private lawns.<br><br>
+          By contrast, Option 1 (Mega-Scale Desalination) is financially and ecologically unsustainable. Although Source 3 claims delivery within fourteen months, desalination costs USD 1.15 per cubic metre—over triple Option 2 (Source 1)—and locks taxpayers into a 15-year commercial tariff once AquaNova’s Year 1–2 discount expires (Source 3 footnote). Worse still, high-pressure desalination still fails low-income wards if piped water continues leaking out of corroded 1970s mains, while marine brine discharge threatens coastal ecosystems. Similarly, Option 3 (Household Rainwater Harvesting Subsidies) fails under multi-year drought and urban inequality criteria: rainwater tanks become useless precisely during intensifying summer droughts projected through 2040 (Source 1), and high-density apartment renters in Port Solara’s northern wards lack roof space or capital to install greywater retrofits.<br><br>
+          Admittedly, Option 2 carries two notable limitations: temporary traffic disruption from street excavations and the three-year lag before full leak recovery takes effect, during which vulnerable wards still face summer shortages. However, the city can mitigate both drawbacks by scheduling modular sensor-guided repairs at night along worst-leaking trunks first, and deploying a targeted 10% share of budget toward municipal emergency standpipe tanks and school rainwater harvesting in high-density northern wards during the transition. By pairing Option 2’s durable infrastructure with focused transitional relief, Port Solara achieves equitable, fiscally sustainable water security.</p>
+      </div>
+    </details>
+  </div>
+</article>
+
+<article class="topic-section sec-clinic" id="sec-clinic">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>4. 个人 GP 笔试答题自诊与 AI 精批诊疗台</h3>
+      <div class="section-en-sub">Component 1 Written Exam Self-Diagnosis Matrix, Mark-Ceiling Rescue Checklist &amp; Offline Error Clinic</div>
+      <div class="tier-row">
+        <span class="badge-core">Q1–Q4 答题结构排雷 · 离线错题追踪</span>
+        <span class="badge-ext">支持一键导出清单发给 AI 逐段精批升级至 Level 4</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-clinic">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>一、10 秒自诊：Component 1 最常卡在 Level 2 的五大症状与手术式修复</h4>
+    <p>
+      把自己的模考或课堂简答/长文对照下表做 4 步自查，先定位卡档症状，再录入下方诊疗台生成 AI 精批清单：
+    </p>
+    <div class="table-wrap">
+      <table class="gp-table">
+        <thead>
+          <tr>
+            <th>题号</th>
+            <th>常见低分症状（自查信号）</th>
+            <th>官方档位天花板</th>
+            <th>手术式提分修复动作（立即增分 +4 至 +8 分）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Q1(b)</strong></td>
+            <td>只写出“Fact / Prediction”标签，未抄原句或仅写“因为它是真的/未来的”。</td>
+            <td>最多拿 2 / 4 分</td>
+            <td>固定句式：<strong>原句双引号 + 能否被独立客观核查（verify / cannot be verified yet / based on moral values）</strong>。</td>
+          </tr>
+          <tr>
+            <td><strong>Q2(a)</strong></td>
+            <td>看到商业高管来源便全篇批“有偏见不可信”，未提任何专业或时效亮点。</td>
+            <td>封顶 Level 2 (3–4/8)</td>
+            <td>强制首段用 <code>On the one hand...</code> 写清作者 PhD 资历、最新年份与具体试点数字，再用 <code>However...</code> 痛击利益与样本漏洞。</td>
+          </tr>
+          <tr>
+            <td><strong>Q2(b)</strong></td>
+            <td>只写“做问卷和查谷歌”，缺样本量、对照组、二手核验与局限反思。</td>
+            <td>封顶 Level 2 (3–4/8)</td>
+            <td>严格套用 <strong>4 要素清单</strong>：分层样本量 + 对照前后测/匿名问卷+访谈 + 官方纵贯比对 + 1 条混杂/社会期许局限。</td>
+          </tr>
+          <tr>
+            <td><strong>Q3</strong></td>
+            <td>第一段写完 Writer A，第二段写完 Writer B，末尾写“I agree with A because...”。</td>
+            <td>封顶 Level 2 (5–8/16)</td>
+            <td>撕掉两段分述！改为按 <strong>Evidence / Balance &amp; Assumptions / Tone &amp; Vested Interest</strong> 分段，每段必用 <code>Whereas</code> 同屏交锋并评估论证机制。</td>
+          </tr>
+          <tr>
+            <td><strong>Q4</strong></td>
+            <td>90% 篇幅夸首选方案，其余两个选项只写一句“too expensive / bad”，且美化首选无弱点。</td>
+            <td>封顶 Level 2–3 (10–14/24)</td>
+            <td>独立辟出第 3 段<strong>逐一对比淘汰另 2 个备选方案</strong>（挂钩材料数据），并在第 4 段坦承首选 1–2 个短期短板并附缓释措施。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- F06 Personal Error Clinic Placeholder -->
+  <div class="clinic-box" data-clinic-subject="F06"></div>
+
+  <div class="subtopic">
+    <h4>二、0457 专项精研模块直达链接（考前按薄弱题型深挖）</h4>
+    <div class="quick-links-grid">
+      <a class="quick-link-chip" href="../GP_0457_Modules/G01_Syllabus_Blueprint_and_Q1_Concepts.html">G01 Q1 概念与趋势</a>
+      <a class="quick-link-chip" href="../GP_0457_Modules/G02_Q2_Source_Evaluation_and_Research_Testing.html">G02 Q2 RAVEN 与研究设计</a>
+      <a class="quick-link-chip" href="../GP_0457_Modules/G03_Q3_Comparing_Arguments.html">G03 Q3 论证对比</a>
+      <a class="quick-link-chip" href="../GP_0457_Modules/G04_Q4_Policy_Decision_Essay.html">G04 Q4 政策决策论文</a>
+      <a class="quick-link-chip" href="../GP_0457_Modules/G08_Full_Mock_Exam_and_15_Topics_Matrix.html">G08 15 议题全矩阵与模考</a>
+    </div>
+  </div>
+</article>
+
+<article class="topic-section sec-cards" id="app-concepts">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>5. GP 0457 核心批判术语、句型与谬误速背闪卡 (20 张)</h3>
+      <div class="section-en-sub">20 Bilingual Critical Thinking Terms, Logical Fallacies &amp; High-Scoring Connectors for Component 1 Q1–Q4</div>
+      <div class="tier-row">
+        <span class="badge-core">按 Q1–Q4 分类 · 点击遮罩自测秒背</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="app-concepts">○ 标记掌握</button>
+  </div>
+
+  <div class="concept-toolbar">
+    <div class="concept-filter-group" id="conceptFilterTabs">
+      <button type="button" class="tab-btn active" data-concept-part="all">全部 (20)</button>
+      <button type="button" class="tab-btn" data-concept-part="q1">Q1 概念与趋势 (5)</button>
+      <button type="button" class="tab-btn" data-concept-part="q2">Q2 来源与研究 (5)</button>
+      <button type="button" class="tab-btn" data-concept-part="q3">Q3 交锋与谬误 (5)</button>
+      <button type="button" class="tab-btn" data-concept-part="q4">Q4 决策与句型 (5)</button>
+    </div>
+    <div class="concept-actions">
+      <span class="concept-count-pill" id="conceptCountPill">显示 20 / 20 题</span>
+      <button type="button" class="tab-btn" id="conceptQuizToggle">🙈 开启遮罩自测</button>
+    </div>
+  </div>
+
+  <div class="concept-grid" id="conceptGrid">
+    <!-- Q1 (5 cards) -->
+    <div class="concept-card" data-part="q1">
+      <div class="cq-head"><span class="q-tag">Q1-01 · Fact 核查基准</span><span class="badge-c1">Q1 概念</span></div>
+      <div class="cq-en">What makes a statement a verifiable <strong>Fact</strong> in Q1(b), and how do you justify it in English?</div>
+      <div class="cq-cn">如何用英文标准句式证明某句话是 Fact？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓答案</div>
+        <div class="cq-answer-inner">Quote the sentence with concrete figures/dates, then state: <span class="kw">“This is a fact because it can be objectively and independently verified against official records or empirical measurement.”</span></div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="q1">
+      <div class="cq-head"><span class="q-tag">Q1-02 · Prediction vs Fact</span><span class="badge-c1">Q1 概念</span></div>
+      <div class="cq-en">Even if a source states “By 2040, shortages will rise by 51%”, why is it still a <strong>Prediction</strong> rather than a Fact?</div>
+      <div class="cq-cn">为什么带具体百分比的未来预测仍不能算 Fact？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓答案</div>
+        <div class="cq-answer-inner">Because it projects an outcome that <span class="kw">has not yet occurred</span>; future projections (<span class="kw">will / by 2040</span>) cannot be verified as true today regardless of model precision.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="q1">
+      <div class="cq-head"><span class="q-tag">Q1-03 · Value Judgement</span><span class="badge-c1">Q1 概念</span></div>
+      <div class="cq-en">How do you spot and explain a <strong>Value Judgement</strong> instantly?</div>
+      <div class="cq-cn">一秒锁定“价值判断”的标志词与解释法？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓答案</div>
+        <div class="cq-answer-inner">Look for moral/prescriptive cues (<span class="kw">should / ought to / unfair / basic right</span>). Explain that it reflects an <span class="kw">ethical or value-based stance</span> rather than a testable empirical claim.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="q1">
+      <div class="cq-head"><span class="q-tag">Q1-04 · Vested Interest vs Bias</span><span class="badge-c1">Q1 概念</span></div>
+      <div class="cq-en">What is the exact distinction between <strong>Bias</strong> and <strong>Vested Interest</strong>?</div>
+      <div class="cq-cn">Bias（偏见）与 Vested Interest（既得利益）有何本质区别？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓答案</div>
+        <div class="cq-answer-inner"><span class="kw">Bias</span> is one-sided presentation/emotive framing in the text; <span class="kw">Vested Interest</span> is the author’s or sponsor’s personal, financial, or political <span class="kw">stake/gain</span> driving that slant.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="q1">
+      <div class="cq-head"><span class="q-tag">Q1-05 · Causal Chain 连词</span><span class="badge-c1">Q1 趋势</span></div>
+      <div class="cq-en">Which sentence frame turns isolated bullet points into a 4-mark <strong>Local → Global causal chain</strong> in Q1(d)?</div>
+      <div class="cq-cn">Q1(d) 拿满因果分的高级连接骨架？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓答案</div>
+        <div class="cq-answer-inner">Use multi-step links: <span class="kw">“Locally, X forces families to..., which in turn disrupts..., ultimately exacerbating national/global...”</span>（串联微观困境与宏观后果）。</div>
+      </div>
+    </div>
+
+    <!-- Q2 (5 cards) -->
+    <div class="concept-card" data-part="q2">
+      <div class="cq-head"><span class="q-tag">Q2-01 · RAVEN 五维口诀</span><span class="badge-cw">Q2A 来源</span></div>
+      <div class="cq-en">What does every letter in <strong>RAVEN</strong> stand for when evaluating Source 3?</div>
+      <div class="cq-cn">RAVEN 来源可信度评估模型的 5 个完整英文词？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓答案</div>
+        <div class="cq-answer-inner"><span class="kw">R</span>eputation（声誉） · <span class="kw">A</span>bility to see（观测视角与样本） · <span class="kw">V</span>ested interest（利益关联） · <span class="kw">E</span>xpertise（专业资历） · <span class="kw">N</span>eutrality（中立与语调）。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="q2">
+      <div class="cq-head"><span class="q-tag">Q2-02 · Cherry-Picked Sample</span><span class="badge-cw">Q2A 来源</span></div>
+      <div class="cq-en">How do you diagnose a trial that only surveyed resort managers or electrified pilot schools?</div>
+      <div class="cq-cn">批驳“挑拣最有利试点或人群”的高分英文术语？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓答案</div>
+        <div class="cq-answer-inner"><span class="kw">Cherry-picked / unrepresentative sample (selection bias)</span>：所得高满意度无法外推至缺乏基建或低收入社区（lacks generalisability）。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="q2">
+      <div class="cq-head"><span class="q-tag">Q2-03 · Proxy Measure 偷换</span><span class="badge-cw">Q2A 来源</span></div>
+      <div class="cq-en">What is wrong when a source uses “hotel manager satisfaction” to prove “universal city affordability”?</div>
+      <div class="cq-cn">用“度假酒店满意度”替代“市民可负担性”犯了什么指标错误？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓答案</div>
+        <div class="cq-answer-inner"><span class="kw">Weak operationalisation / invalid proxy indicator</span>：衡量指标与核心待证主张脱节（does not measure low-income household bills）。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="q2">
+      <div class="cq-head"><span class="q-tag">Q2-04 · Stratified &amp; Triangulation</span><span class="badge-cw">Q2B 研究</span></div>
+      <div class="cq-en">Name the two core methodological phrases that upgrade Q2(b) into Level 4 (7–8/8).</div>
+      <div class="cq-cn">Q2(b) 研究设计最核心的两个专业方法术语？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓答案</div>
+        <div class="cq-answer-inner">① <span class="kw">Stratified random sampling with a matched control group</span>（按收入/地域分层对照）；② <span class="kw">Methodological triangulation</span>（定量考分/账单 + 定性访谈 + 官方二手数据）。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="q2">
+      <div class="cq-head"><span class="q-tag">Q2-05 · Confounding &amp; Social Bias</span><span class="badge-cw">Q2B 研究</span></div>
+      <div class="cq-en">Which two realistic limitations should you acknowledge at the end of Q2(b)?</div>
+      <div class="cq-cn">Q2(b) 结尾必须主动反思哪两类真实研究局限？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓答案</div>
+        <div class="cq-answer-inner">① <span class="kw">Confounding variables</span>（季节降雨/洋流/通胀等外部混杂干扰因果）；② <span class="kw">Social desirability bias</span>（受访者迎合资助方而不讲真话，需匿名账目核查）。</div>
+      </div>
+    </div>
+
+    <!-- Q3 (5 cards) -->
+    <div class="concept-card" data-part="q3">
+      <div class="cq-head"><span class="q-tag">Q3-01 · Sustained Comparison</span><span class="badge-c1">Q3 交锋</span></div>
+      <div class="cq-en">Which linking words guarantee <strong>point-by-point clash</strong> inside every Q3 paragraph?</div>
+      <div class="cq-cn">确保 Q3 每段都在“同屏对比”而不是“分述 A/B”的关键衔接词？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓答案</div>
+        <div class="cq-answer-inner">句中强制并置：<span class="kw">Whereas Writer A..., Writer B...</span> / <span class="kw">Conversely</span> / <span class="kw">In stark contrast</span> / <span class="kw">Unlike Writer B’s reliance on..., Writer A substantiates...</span></div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="q3">
+      <div class="cq-head"><span class="q-tag">Q3-02 · Unstated Assumption</span><span class="badge-c1">Q3 谬误</span></div>
+      <div class="cq-en">How do you define and expose an <strong>Unstated Assumption</strong> in Q3?</div>
+      <div class="cq-cn">如何在 Q3 犀利揭穿作者隐藏的“未明说前提假设”？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓答案</div>
+        <div class="cq-answer-inner">Point to a hidden condition the argument takes for granted: <span class="kw">“Writer B rests on the unstated assumption that energy prices and marine brine discharge impose zero long-term costs.”</span></div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="q3">
+      <div class="cq-head"><span class="q-tag">Q3-03 · False Dilemma</span><span class="badge-c1">Q3 谬误</span></div>
+      <div class="cq-en">What logical fallacy occurs when a writer claims “Either build desalination or drive all factories away”?</div>
+      <div class="cq-cn">“不选我这招就一定完蛋”的二选一恐吓叫什么逻辑谬误？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓答案</div>
+        <div class="cq-answer-inner"><span class="kw">False dilemma / false dichotomy (虚假二分法)</span>：人为抹杀中间折中方案（如阶梯水价保留基础工业配额、分期修管道）。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="q3">
+      <div class="cq-head"><span class="q-tag">Q3-04 · Slippery Slope &amp; Overstatement</span><span class="badge-c1">Q3 谬误</span></div>
+      <div class="cq-en">How do you critique claims like “Every metropolis knows X solves shortages forever”?</div>
+      <div class="cq-cn">如何精准点评“所有大都市 / 永远彻底解决”类绝对化断语？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓答案</div>
+        <div class="cq-answer-inner">Critique it as <span class="kw">sweeping empirical overgeneralisation / unverified absolutist claim</span>（过度外推），并比对另一位作者的限定性结论（context-bound conclusion）。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="q3">
+      <div class="cq-head"><span class="q-tag">Q3-05 · Concession 平衡力</span><span class="badge-c1">Q3 交锋</span></div>
+      <div class="cq-en">Why does conceding a limitation in your own argument make a Q3 writer <strong>more convincing</strong>?</div>
+      <div class="cq-cn">为什么主动承认自身方案局限反而让 Q3 作者更有说服力？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓答案</div>
+        <div class="cq-answer-inner"><span class="kw">Explicit concession and counter-mitigation</span> signals intellectual honesty, <span class="kw">balance</span>, and anticipation of real-world obstacles—far stronger than dogmatic denial.</div>
+      </div>
+    </div>
+
+    <!-- Q4 (5 cards) -->
+    <div class="concept-card" data-part="q4">
+      <div class="cq-head"><span class="q-tag">Q4-01 · Rejected Options 铁律</span><span class="badge-ext">Q4 决策</span></div>
+      <div class="cq-en">Why is ignoring or briefly dismissing the other two Q4 options fatal to Level 4/5 (19–24/24)?</div>
+      <div class="cq-cn">为什么 Q4 不深入反驳另外两项落选方案会痛失 10 分以上？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓答案</div>
+        <div class="cq-answer-inner">Q4 explicitly assesses <span class="kw">weighing different options</span>. Without comparative criteria proving why both alternatives underperform on cost, equity, or durability, marks stay capped at <span class="kw">Level 2 (7–12)</span>.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="q4">
+      <div class="cq-head"><span class="q-tag">Q4-02 · Net Benefit 对比句型</span><span class="badge-ext">Q4 句型</span></div>
+      <div class="cq-en">What transition smoothly pivots from praising your chosen option to rejecting the other two?</div>
+      <div class="cq-cn">Q4 从第 2 段推荐方案切入第 3 段驳斥另两项方案的满分过渡句？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓答案</div>
+        <div class="cq-answer-inner"><span class="kw">“By contrast, Option 1 proves fiscally unsustainable because...; similarly, although Option 3 offers..., it fails under prolonged...”</span>（双线并驳）。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="q4">
+      <div class="cq-head"><span class="q-tag">Q4-03 · Mitigation Shield 句型</span><span class="badge-ext">Q4 句型</span></div>
+      <div class="cq-en">How should Paragraph 4 acknowledge your chosen policy’s drawback without contradicting your recommendation?</div>
+      <div class="cq-cn">Q4 第 4 段怎么做到“既承认缺点又不推翻自己结论”？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓答案</div>
+        <div class="cq-answer-inner">Use the <span class="kw">Concession + Mitigation Shield</span>：<span class="kw">“Admittedly, Option 2 entails short-term disruption/time lag; however, this can be effectively mitigated by phasing night works and providing interim relief.”</span></div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="q4">
+      <div class="cq-head"><span class="q-tag">Q4-04 · Lifecycle vs Upfront Cost</span><span class="badge-ext">Q4 权衡</span></div>
+      <div class="cq-en">Why is distinguishing <strong>upfront capital cost</strong> from <strong>5–15 year lifecycle operating cost</strong> crucial in Q4?</div>
+      <div class="cq-cn">在 Q4 成本权衡时，为什么要拆开“初期补贴”与“长期全周期运营费”？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓答案</div>
+        <div class="cq-answer-inner">Commercial pitches often mask recurring fees with Year 1 discounts; comparing <span class="kw">lifecycle cost per unit</span> exposes hidden long-term fiscal traps and locks down Economic depth.</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="q4">
+      <div class="cq-head"><span class="q-tag">Q4-05 · Cross-Source Synthesis</span><span class="badge-ext">Q4 证据</span></div>
+      <div class="cq-en">How do you avoid losing AO1 evidence marks in Q4 even when writing your own policy evaluation?</div>
+      <div class="cq-cn">如何在 Q4 写出“跨材料综合论证”而不是脱离资料空谈？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓答案</div>
+        <div class="cq-answer-inner">Weave concrete data and stakeholders across <span class="kw">all four sources</span> (e.g. Source 1 lifecycle cost + Source 2 ward impact + Source 3 footnote trap + Source 4 multi-city audit).</div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+        <nav class="chapter-pager" aria-label="学科切换导航">
+          <div><a class="pager-btn" href="F05_Chinese_0509_Final_Sprint.html">← F05 · 中文第一语言 0509 现代文阅读与双作文冲刺</a></div>
+          <div><a class="pager-btn primary" href="index.html">🎯 返回 6 科期末冲刺总控台</a></div>
+          <div><span style="color:var(--text-faint);font-size:13px;">已是最后一科</span></div>
+        </nav>
+      </div>
+    </main>
+  </div>
+
+  <button type="button" class="back-top-btn" id="backTopBtn" title="返回顶部">↑</button>
+
+  <script>
+(function () {
+  'use strict';
+
+  const THEME_KEY = 'igcse_final_sprint_theme';
+  const subCode = (document.body && document.body.getAttribute('data-chapter-code')) || 'HUB';
+  const STORAGE_PREFIX = 'igcse_final_sprint_' + subCode.toLowerCase() + '_';
+  const htmlEl = document.documentElement;
+  const bodyEl = document.body;
+
+  let currentViewMode = localStorage.getItem(STORAGE_PREFIX + 'viewMode') || 'all';
+  let activeConceptPart = 'all';
+  let quizMasked = localStorage.getItem(STORAGE_PREFIX + 'quizMasked') === '1';
+  let allMsExpanded = false;
+  let masteredIds = [];
+  let activeTimerId = null;
+  try {
+    masteredIds = JSON.parse(localStorage.getItem(STORAGE_PREFIX + 'mastered') || '[]');
+    if (!Array.isArray(masteredIds)) masteredIds = [];
+  } catch (e) {
+    masteredIds = [];
+  }
+
+  // ---------- 1. Theme ----------
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+  function applyTheme(theme) {
+    htmlEl.setAttribute('data-theme', theme);
+    if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem(THEME_KEY, theme);
+  }
+  applyTheme(localStorage.getItem(THEME_KEY) || 'light');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      applyTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  }
+
+  // ---------- 2. View Modes (All / Summary / Practice / Clinic / Cards) ----------
+  function applyViewMode(mode) {
+    currentViewMode = mode;
+    bodyEl.classList.remove('mode-summary', 'mode-practice', 'mode-clinic', 'mode-cards');
+    if (mode !== 'all') bodyEl.classList.add('mode-' + mode);
+    document.querySelectorAll('[data-view-mode]').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-view-mode') === mode);
+    });
+    localStorage.setItem(STORAGE_PREFIX + 'viewMode', mode);
+  }
+  document.querySelectorAll('[data-view-mode]').forEach(function (btn) {
+    btn.addEventListener('click', function () { applyViewMode(btn.getAttribute('data-view-mode')); });
+  });
+  applyViewMode(currentViewMode);
+
+  // ---------- 3. Sidebar ----------
+  const sidebar = document.getElementById('sidebar');
+  const menuToggle = document.getElementById('menuToggle');
+  if (menuToggle && sidebar) {
+    menuToggle.addEventListener('click', function () { sidebar.classList.toggle('open'); });
+    sidebar.querySelectorAll('.nav-link').forEach(function (lnk) {
+      lnk.addEventListener('click', function () {
+        if (window.innerWidth <= 980) sidebar.classList.remove('open');
+      });
+    });
+  }
+  document.querySelectorAll('.nav-unit-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const unit = btn.closest('.nav-unit');
+      if (unit) unit.classList.toggle('collapsed');
+    });
+  });
+
+  // ---------- 4. Mastery Progress ----------
+  const progressText = document.getElementById('progressText');
+  const progressFill = document.getElementById('progressFill');
+  const masterBtns = Array.from(document.querySelectorAll('.master-btn'));
+  const totalSections = masterBtns.length;
+  const validIds = new Set(masterBtns.map(function (b) { return b.getAttribute('data-section-id'); }));
+
+  function renderMastery() {
+    const doneList = masteredIds.filter(function (id) { return validIds.has(id); });
+    localStorage.setItem(STORAGE_PREFIX + 'total', String(totalSections));
+    if (progressText) progressText.textContent = doneList.length + '/' + totalSections;
+    if (progressFill && totalSections > 0) {
+      progressFill.style.width = Math.round((doneList.length / totalSections) * 100) + '%';
+    }
+    masterBtns.forEach(function (btn) {
+      const sid = btn.getAttribute('data-section-id');
+      const done = doneList.indexOf(sid) !== -1;
+      btn.classList.toggle('is-mastered', done);
+      btn.textContent = done ? '✓ 已掌握' : '○ 标记掌握';
+    });
+    document.querySelectorAll('.nav-link').forEach(function (lnk) {
+      const id = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('mastered', doneList.indexOf(id) !== -1);
+    });
+  }
+  masterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const sid = btn.getAttribute('data-section-id');
+      const idx = masteredIds.indexOf(sid);
+      if (idx === -1) masteredIds.push(sid);
+      else masteredIds.splice(idx, 1);
+      localStorage.setItem(STORAGE_PREFIX + 'mastered', JSON.stringify(masteredIds));
+      renderMastery();
+    });
+  });
+  if (totalSections > 0) renderMastery();
+
+  // ---------- 5. Toggle Details & Print ----------
+  const toggleAllMs = document.getElementById('toggleAllMs');
+  if (toggleAllMs) {
+    toggleAllMs.addEventListener('click', function () {
+      allMsExpanded = !allMsExpanded;
+      document.querySelectorAll('details.ms-details').forEach(function (det) { det.open = allMsExpanded; });
+      const lbl = toggleAllMs.querySelector('.btn-label');
+      if (lbl) lbl.textContent = allMsExpanded ? '收起解析' : '展开解析';
+      toggleAllMs.classList.toggle('active', allMsExpanded);
+    });
+  }
+  const printBtn = document.getElementById('printBtn');
+  if (printBtn) printBtn.addEventListener('click', function () { window.print(); });
+
+  // ---------- 6. Search ----------
+  const searchInput = document.getElementById('searchInput');
+  const searchClear = document.getElementById('searchClear');
+  const searchBar = document.getElementById('searchBar');
+  const searchSummary = document.getElementById('searchSummary');
+  const searchResetBtn = document.getElementById('searchResetBtn');
+  const emptySearchNotice = document.getElementById('emptySearchNotice');
+
+  function runSearch() {
+    if (!searchInput) return;
+    const raw = searchInput.value.trim().toLowerCase();
+    if (searchClear) searchClear.style.display = raw ? 'block' : 'none';
+    const sections = Array.from(document.querySelectorAll('.topic-section'));
+    if (!raw) {
+      sections.forEach(function (s) { s.classList.remove('search-dim'); });
+      if (searchBar) searchBar.classList.remove('visible');
+      if (emptySearchNotice) emptySearchNotice.style.display = 'none';
+      return;
+    }
+    let hits = 0;
+    sections.forEach(function (sec) {
+      const ok = sec.textContent.toLowerCase().indexOf(raw) !== -1;
+      sec.classList.toggle('search-dim', !ok);
+      if (ok) hits++;
+    });
+    if (searchBar) searchBar.classList.add('visible');
+    if (searchSummary) searchSummary.textContent = '关键词 “' + searchInput.value.trim() + '” 匹配 ' + hits + ' 个板块';
+    if (emptySearchNotice) emptySearchNotice.style.display = hits === 0 ? 'block' : 'none';
+  }
+  if (searchInput) searchInput.addEventListener('input', runSearch);
+  function resetSearch() { if (searchInput) searchInput.value = ''; runSearch(); }
+  if (searchClear) searchClear.addEventListener('click', resetSearch);
+  if (searchResetBtn) searchResetBtn.addEventListener('click', resetSearch);
+
+  // ---------- 7. Interactive MCQ ----------
+  document.querySelectorAll('.exam-q[data-mcq-answer]').forEach(function (qBox) {
+    const ans = qBox.getAttribute('data-mcq-answer');
+    const fb = qBox.querySelector('.mcq-feedback');
+    const opts = qBox.querySelectorAll('.mcq-opt');
+    opts.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const chosen = btn.getAttribute('data-opt');
+        opts.forEach(function (o) { o.classList.remove('correct', 'wrong'); });
+        if (chosen === ans) {
+          btn.classList.add('correct');
+          if (fb) { fb.textContent = fb.getAttribute('data-ok') || '✅ 回答正确！'; fb.className = 'mcq-feedback visible ok'; }
+        } else {
+          btn.classList.add('wrong');
+          opts.forEach(function (o) { if (o.getAttribute('data-opt') === ans) o.classList.add('correct'); });
+          if (fb) { fb.textContent = fb.getAttribute('data-err') || '❌ 未选对，请核对下方 Mark Scheme 解析。'; fb.className = 'mcq-feedback visible err'; }
+        }
+      });
+    });
+  });
+
+  // ---------- 8. Flashcards ----------
+  const conceptCountPill = document.getElementById('conceptCountPill');
+  const conceptQuizToggle = document.getElementById('conceptQuizToggle');
+
+  function filterConcepts() {
+    const cards = Array.from(document.querySelectorAll('#conceptGrid .concept-card'));
+    if (!cards.length) return;
+    let visible = 0;
+    cards.forEach(function (card) {
+      const part = card.getAttribute('data-part');
+      const show = activeConceptPart === 'all' || part === activeConceptPart;
+      card.classList.toggle('concept-hidden', !show);
+      if (show) visible++;
+    });
+    if (conceptCountPill) conceptCountPill.textContent = '显示 ' + visible + ' / ' + cards.length + ' 题';
+  }
+  document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      activeConceptPart = btn.getAttribute('data-concept-part');
+      document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      filterConcepts();
+    });
+  });
+  function applyQuizMask(masked) {
+    quizMasked = masked;
+    document.querySelectorAll('#conceptGrid .concept-card').forEach(function (c) { c.classList.toggle('masked', masked); });
+    if (conceptQuizToggle) {
+      conceptQuizToggle.textContent = masked ? '👁️ 显示全部答案' : '🙈 开启遮罩自测';
+      conceptQuizToggle.classList.toggle('active', masked);
+    }
+    localStorage.setItem(STORAGE_PREFIX + 'quizMasked', masked ? '1' : '0');
+  }
+  if (conceptQuizToggle) {
+    conceptQuizToggle.addEventListener('click', function () { applyQuizMask(!quizMasked); });
+  }
+  document.querySelectorAll('#conceptGrid .cq-answer').forEach(function (box) {
+    box.addEventListener('click', function () {
+      const card = box.closest('.concept-card');
+      if (card && card.classList.contains('masked')) card.classList.remove('masked');
+    });
+  });
+
+  function countWords(str) {
+    const cleaned = (str || '').trim();
+    return cleaned ? cleaned.split(/\s+/).filter(Boolean).length : 0;
+  }
+  function countChiChars(str) {
+    return (str || '').replace(/[\s\u3000]/g, '').length;
+  }
+  function setupTimer(btnStart, btnReset, clkEl, totalMinutes) {
+    let secLeft = totalMinutes * 60;
+    const fmt = function (s) {
+      const m = Math.floor(s / 60), r = s % 60;
+      return String(m).padStart(2, '0') + ':' + String(r).padStart(2, '0');
+    };
+    if (clkEl) clkEl.textContent = fmt(secLeft);
+    if (btnStart) {
+      btnStart.addEventListener('click', function () {
+        if (activeTimerId) {
+          clearInterval(activeTimerId);
+          activeTimerId = null;
+          btnStart.textContent = '▶ 继续计时';
+        } else {
+          btnStart.textContent = '⏸ 暂停计时';
+          activeTimerId = setInterval(function () {
+            if (secLeft > 0) secLeft--;
+            if (clkEl) clkEl.textContent = fmt(secLeft);
+            if (secLeft === 0) {
+              clearInterval(activeTimerId);
+              activeTimerId = null;
+              btnStart.textContent = '⏰ 时间到';
+            }
+          }, 1000);
+        }
+      });
+    }
+    if (btnReset) {
+      btnReset.addEventListener('click', function () {
+        if (activeTimerId) { clearInterval(activeTimerId); activeTimerId = null; }
+        secLeft = totalMinutes * 60;
+        if (clkEl) clkEl.textContent = fmt(secLeft);
+        if (btnStart) btnStart.textContent = '⏳ 开始计时';
+      });
+    }
+  }
+
+  // ---------- 9. Subject Interactive Labs (f01 - f06) ----------
+  function mountSprintLab(el) {
+    const t = el.getAttribute('data-lab-type');
+    if (!t) return;
+    const bindInputs = function (fn) {
+      el.querySelectorAll('input,select,textarea').forEach(function (inp) {
+        inp.addEventListener('input', fn);
+        inp.addEventListener('change', fn);
+      });
+      fn();
+    };
+
+    if (t === 'f01') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">📐 F01 交互冲刺台 · 9 章必背公式/Paper 1 易错检索 + 80 分模考估分器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>切换范围板块：<select id="f1Mod">' +
+        '<option value="ch1_2">Ch1–2 函数/反函数/二次最值与判别式</option>' +
+        '<option value="ch3_4">Ch3–4 多项式因式余数与绝对值不等式</option>' +
+        '<option value="ch5_6">Ch5–6 指数对数换底与直线/Linear Law</option>' +
+        '<option value="ch10_11">Ch10–11 排列组合/二项展开/AP-GP-S∞</option>' +
+        '<option value="ch12_14">Ch12+Ch14 基础求导法则 + 指数对数三角导数</option></select></label>' +
+        '<label>Ch1–6 (/20)：<input type="number" id="f1S1" value="17" min="0" max="20"></label>' +
+        '<label>Ch10 计数 (/20)：<input type="number" id="f1S2" value="16" min="0" max="20"></label>' +
+        '<label>Ch11 级数 (/20)：<input type="number" id="f1S3" value="17" min="0" max="20"></label>' +
+        '<label>Ch14 求导 (/20)：<input type="number" id="f1S4" value="16" min="0" max="20"></label>' +
+        '<button type="button" class="tab-btn active" id="f1Start">⏳ 120min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f1Reset">重置</button>' +
+        '<span class="timer-big" id="f1Clk">120:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f1Out"></div><div class="readout-pill" id="f1ScoreOut"></div></div></div>';
+      const notes = {
+        ch1_2: '<strong>Ch1–2 必检红线</strong>：① fg(x) 先代入里层 g(x) 再喂给 f；反函数成立条件是 <strong>1-to-1</strong>，且 Domain(f⁻¹)=Range(f)；② 判别式 b²−4ac > 0 相交两点，≤ 0 恒在 x 轴一侧时还需检查首项系数 a 符号；③ 二次不等式<strong>必须先因式分解找临界根画草图</strong>，严禁直接拆解两边开方！',
+        ch3_4: '<strong>Ch3–4 必检红线</strong>：① x−a 是因式 ⇔ f(a)=0；余数定理求得是 f(−b/a)；② 三次方程解先试 ±1, ±2 找一实根再长除/综合除法；③ |ax+b| < |cx+d| 在 P1 无计算器优先<strong>两边平方化二次不等式</strong>或画出 V 字折线求交点！',
+        ch5_6: '<strong>Ch5–6 必检红线</strong>：① logₐ(M)+logₐ(N)=logₐ(MN)，但 logₐ(M+N) 不能拆！② 解完对数方程<strong>必须回代验真数 > 0 与底数 > 0 且 ≠ 1</strong>；③ Linear Law 化成 Y = mX + c：先辨识纵轴 Y 与横轴 X，再用直线斜率 m 与截距 c 反推指数/幂函数参数！',
+        ch10_11: '<strong>Ch10–11 必检红线</strong>：① 排列看顺序 ⁿPᵣ，分组抽选不看顺序 ⁿCᵣ；“不相邻”用插空法，“至少”用总−反面；② 二项式 (a+b)ⁿ 通项 Tᵣ₊₁ = ⁿCᵣ aⁿ⁻ʳ bʳ（记住 r 比第几项小 1！）；③ S∞ = a/(1−r) <strong>必须验证 |r| < 1</strong>，且公式表虽给 Sₙ/S∞ 仍建议熟记秒杀！',
+        ch12_14: '<strong>Ch12+Ch14 求导链</strong>：① 先熟用基础求导 d/dx(xⁿ)=nxⁿ⁻¹、乘积 uv′+vu′、商法则 (vu′−uv′)/v² 与链式复合；② 再衔接 Ch14：d/dx(eᵃˣ⁺ᵇ)=aeᵃˣ⁺ᵇ，d/dx(ln(ax+b))=a/(ax+b)，d/dx(sin ax)=a cos ax，d/dx(cos ax)=−a sin ax（负号极易丢！），d/dx(tan ax)=a sec²ax（<strong>求导一律用弧度 rad</strong>）！'
+      };
+      bindInputs(function () {
+        el.querySelector('#f1Out').innerHTML = notes[el.querySelector('#f1Mod').value];
+        const v1 = Math.max(0, Math.min(20, Number(el.querySelector('#f1S1').value) || 0));
+        const v2 = Math.max(0, Math.min(20, Number(el.querySelector('#f1S2').value) || 0));
+        const v3 = Math.max(0, Math.min(20, Number(el.querySelector('#f1S3').value) || 0));
+        const v4 = Math.max(0, Math.min(20, Number(el.querySelector('#f1S4').value) || 0));
+        const tot = v1 + v2 + v3 + v4;
+        const pct = Math.round((tot / 80) * 100);
+        const band = pct >= 85 ? 'Grade A* 冲刺区间' : (pct >= 72 ? 'Grade A 稳健线' : (pct >= 58 ? 'Grade B/C 需优先回刷错题模块' : '基础漏洞明显，请先回到对应章补推导'));
+        el.querySelector('#f1ScoreOut').innerHTML = '<strong>期末模拟估分：' + tot + ' / 80（' + pct + '%）</strong> ｜ 预测表现：' + band + '。';
+      });
+      setupTimer(el.querySelector('#f1Start'), el.querySelector('#f1Reset'), el.querySelector('#f1Clk'), 120);
+    } else if (t === 'f02') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">⚙️ F02 物理 Ch 1–4 交互验算与期末估分计时台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>验算模型：<select id="f2Calc">' +
+        '<option value="density">Ch1 密度计算 ρ = m / V</option>' +
+        '<option value="accel">Ch2 匀变速加速度 a = (v − u) / t</option>' +
+        '<option value="impulse">Ch3 冲量与动量变化 FΔt = mΔv</option>' +
+        '<option value="moment">Ch4 力矩 M = F × d⊥</option></select></label>' +
+        '<label><span id="f2ALbl">质量 m (g/kg)</span>：<input type="number" id="f2A" value="250" step="any"></label>' +
+        '<label><span id="f2BLbl">体积 V (cm³/m³)</span>：<input type="number" id="f2B" value="50" step="any"></label>' +
+        '<label>Paper2 (/15)：<input type="number" id="f2_1" value="13" min="0" max="15"></label>' +
+        '<label>Paper4 (/35)：<input type="number" id="f2_2" value="30" min="0" max="35"></label>' +
+        '<label>Paper6 (/15)：<input type="number" id="f2_3" value="13" min="0" max="15"></label>' +
+        '<button type="button" class="tab-btn active" id="f2Start">⏳ 75min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f2Reset">重置</button>' +
+        '<span class="timer-big" id="f2Clk">75:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f2Out"></div><div class="readout-pill" id="f2ScoreOut"></div></div></div>';
+      const sel = el.querySelector('#f2Calc');
+      const aLbl = el.querySelector('#f2ALbl'), bLbl = el.querySelector('#f2BLbl');
+      const syncLabels = function () {
+        const m = sel.value;
+        if (m === 'density') { aLbl.textContent = '质量 m (g)'; bLbl.textContent = '体积 V (cm³)'; }
+        else if (m === 'accel') { aLbl.textContent = '速度增量 Δv (m/s)'; bLbl.textContent = '时间 t (s)'; }
+        else if (m === 'impulse') { aLbl.textContent = '合力 F (N)'; bLbl.textContent = '作用时间 Δt (s)'; }
+        else { aLbl.textContent = '力 F (N)'; bLbl.textContent = '垂直力臂 d⊥ (m)'; }
+      };
+      sel.addEventListener('change', syncLabels);
+      syncLabels();
+      bindInputs(function () {
+        const m = sel.value, a = Number(el.querySelector('#f2A').value) || 0, b = Number(el.querySelector('#f2B').value) || 0;
+        let resText = '';
+        if (m === 'density') {
+          const rho = b !== 0 ? (a / b) : 0;
+          resText = '<strong>ρ = m / V = ' + (b !== 0 ? rho.toFixed(3) : '∞（分母勿为0）') + ' g/cm³</strong>（×1000 = ' + (b !== 0 ? (rho * 1000).toFixed(1) : '—') + ' kg/m³）。<br><strong>避坑</strong>：与水 ρ=1.0 g/cm³ 比较，小于则漂浮，大于则下沉；结果保留 2–3 位有效数字！';
+        } else if (m === 'accel') {
+          const acc = b !== 0 ? (a / b) : 0;
+          resText = '<strong>a = Δv / t = ' + (b !== 0 ? acc.toFixed(3) : '∞') + ' m/s²</strong>。<br><strong>避坑</strong>：v-t 图斜率即加速度（斜率恒定为匀加速）；v-t 曲线下方面积即路程/位移！';
+        } else if (m === 'impulse') {
+          const imp = a * b;
+          resText = '<strong>Impulse = FΔt = ' + imp.toFixed(3) + ' N·s（或 kg·m/s）</strong>。<br><strong>Mark Scheme 踩分词</strong>：安全气囊/缓冲垫降低 F 的原因是 <code>increases time of collision (Δt)</code>，对同一 <code>Δp</code> 则 <code>F = Δp / Δt</code> 减小！';
+        } else {
+          const mom = a * b;
+          resText = '<strong>Moment = F × d⊥ = ' + mom.toFixed(3) + ' N·m</strong>。<br><strong>平衡双条件</strong>：① 合外力为 0；② 顺时针总力矩 = 逆时针总力矩（<code>ΣM_cw = ΣM_acw</code>），d⊥ 必须垂直于力的作用线！';
+        }
+        el.querySelector('#f2Out').innerHTML = resText;
+        const p2 = Math.max(0, Math.min(15, Number(el.querySelector('#f2_1').value) || 0));
+        const p4 = Math.max(0, Math.min(35, Number(el.querySelector('#f2_2').value) || 0));
+        const p6 = Math.max(0, Math.min(15, Number(el.querySelector('#f2_3').value) || 0));
+        const tot = p2 + p4 + p6, pct = Math.round((tot / 65) * 100);
+        el.querySelector('#f2ScoreOut').innerHTML = '<strong>Ch 1–4 模拟卷总分：' + tot + ' / 65（' + pct + '%）</strong> ｜ ' + (pct >= 80 ? '达到 A* 实力！注意保持 Paper 4 作图与 ATP 7 分设计完整性' : '建议先复盘失分集中模块（MCQ/结构简答/ATP 实验）');
+      });
+      setupTimer(el.querySelector('#f2Start'), el.querySelector('#f2Reset'), el.querySelector('#f2Clk'), 75);
+    } else if (t === 'f03') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">⚗️ F03 化学 Ch 1, 2, 4, 6 核心交互台 · 6 大电解产物与配平检查 + 65 分估分</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>选择 Ch6 电解/电池体系：<select id="f3Cell">' +
+        '<option value="pbbr2">1. 熔融溴化铅 Molten PbBr₂(l) · 碳电极</option>' +
+        '<option value="nacl_conc">2. 浓氯化钠溶液 Conc. NaCl(aq) · 碳电极</option>' +
+        '<option value="h2so4_dil">3. 稀硫酸 Dilute H₂SO₄(aq) · 碳/铂电极</option>' +
+        '<option value="cuso4_inert">4. 硫酸铜溶液 CuSO₄(aq) · 惰性碳/铂电极</option>' +
+        '<option value="cuso4_cu">5. 硫酸铜溶液 CuSO₄(aq) · 活性铜电极</option>' +
+        '<option value="fuel_cell">6. 氢氧燃料电池 H₂–O₂ Fuel Cell</option></select></label>' +
+        '<label>Paper2 (/15)：<input type="number" id="f3_1" value="13" min="0" max="15"></label>' +
+        '<label>Paper4 (/35)：<input type="number" id="f3_2" value="29" min="0" max="35"></label>' +
+        '<label>Paper6 (/15)：<input type="number" id="f3_3" value="13" min="0" max="15"></label>' +
+        '<button type="button" class="tab-btn active" id="f3Start">⏳ 75min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f3Reset">重置</button>' +
+        '<span class="timer-big" id="f3Clk">75:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f3Out"></div><div class="readout-pill" id="f3ScoreOut"></div></div></div>';
+      const cells = {
+        pbbr2: '<strong>熔融 PbBr₂(l)（必须加热至熔融才存在自由移动离子）</strong><br>• 阴极 (−) 还原：<code>Pb²⁺(l) + 2e⁻ → Pb(l)</code>（现象：银白色熔融金属珠）<br>• 阳极 (+) 氧化：<code>2Br⁻(l) → Br₂(g) + 2e⁻</code>（现象：红棕色气体 <strong>red-brown vapour</strong>）<br>⚠️ 高频坑：若题目写成室温固态 PbBr₂(s)，则完全不导电！',
+        nacl_conc: '<strong>浓 NaCl(aq) 氯碱电解（碳电极）</strong><br>• 阴极 (−)：H⁺ 排在 Na⁺ 后先得电子：<code>2H⁺(aq) + 2e⁻ → H₂(g)</code>（无色气泡，燃爆声）<br>• 阳极 (+)：高浓度 Cl⁻ 优先放电：<code>2Cl⁻(aq) → Cl₂(g) + 2e⁻</code>（黄绿色刺激气体，使湿润蓝色石蕊试纸先变红后褪色）<br>• 溶液变化：留下 Na⁺ 与 OH⁻，pH 升高呈碱性 NaOH(aq)！',
+        h2so4_dil: '<strong>稀 H₂SO₄(aq)（实质即电解水！）</strong><br>• 阴极 (−)：<code>2H⁺ + 2e⁻ → H₂(g)</code>（气体体积比 2 份）<br>• 阳极 (+)：SO₄²⁻ 从不放电，OH⁻ 氧化：<code>4OH⁻ → O₂(g) + 2H₂O + 4e⁻</code>（体积比 1 份，复燃带火星木条）<br>⚠️ 记住 H₂ : O₂ 体积比 = <strong>2 : 1</strong>！',
+        cuso4_inert: '<strong>CuSO₄(aq)（惰性石墨/铂电极）</strong><br>• 阴极 (−)：Cu²⁺ 较 H⁺ 更不活泼先还原：<code>Cu²⁺(aq) + 2e⁻ → Cu(s)</code>（红棕色固体覆盖电极）<br>• 阳极 (+)：<code>4OH⁻ → O₂(g) + 2H₂O + 4e⁻</code>（无色气泡）<br>• 溶液变化：Cu²⁺ 消耗且留下 H⁺+SO₄²⁻，<strong>蓝色变浅直至无色，pH 下降</strong>！',
+        cuso4_cu: '<strong>CuSO₄(aq)（活性铜电极 — 粗铜精炼/电镀铜）</strong><br>• 阴极 (−)：<code>Cu²⁺(aq) + 2e⁻ → Cu(s)</code>（阴极增重，纯铜析出）<br>• 阳极 (+)：铜阳极自身氧化溶解：<code>Cu(s) → Cu²⁺(aq) + 2e⁻</code>（阳极减重消耗）<br>• 溶液变化：Cu²⁺ 浓度不变，<strong>溶液始终保持蓝色且 pH 不变</strong>！',
+        fuel_cell: '<strong>氢氧燃料电池 H₂–O₂ Fuel Cell（2023+ 大纲必考！）</strong><br>• 总反应：<code>2H₂(g) + O₂(g) → 2H₂O(l)</code>（唯一产物只有水，零温室气体排放）<br>• 核心优势 vs 汽油内燃机：能量转换效率更高、污染小、无运动磨损；缺点：氢气储存/运输需高压低温且基础设施少（大多数氢气仍来自化石燃料裂解）。'
+      };
+      bindInputs(function () {
+        el.querySelector('#f3Out').innerHTML = cells[el.querySelector('#f3Cell').value];
+        const p2 = Math.max(0, Math.min(15, Number(el.querySelector('#f3_1').value) || 0));
+        const p4 = Math.max(0, Math.min(35, Number(el.querySelector('#f3_2').value) || 0));
+        const p6 = Math.max(0, Math.min(15, Number(el.querySelector('#f3_3').value) || 0));
+        const tot = p2 + p4 + p6, pct = Math.round((tot / 65) * 100);
+        el.querySelector('#f3ScoreOut').innerHTML = '<strong>Ch 1,2,4,6 模拟估分：' + tot + ' / 65（' + pct + '%）</strong> ｜ 提示：核对电化学半方程式电荷守恒与状态符号 (s)(l)(g)(aq)！';
+      });
+      setupTimer(el.querySelector('#f3Start'), el.querySelector('#f3Reset'), el.querySelector('#f3Clk'), 75);
+    } else if (t === 'f04') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🎧 F04 ESL 0510 写作词数红线仪 (120–160 词) + 听读写 100 分估分计时台</div></div>' +
+        '<div class="lab-panel write-box"><div class="lab-controls">' +
+        '<label>写作文体：<select id="f4Fmt">' +
+        '<option value="email">Ex 5 Informal Email（15m · 亲切自然）</option>' +
+        '<option value="article">Ex 6 Article（15m · 引人入胜）</option>' +
+        '<option value="review">Ex 6 Review（15m · 观点+推荐）</option>' +
+        '<option value="report">Ex 6 Formal Report（15m · 客观分段）</option></select></label>' +
+        '<span class="wc-meter wc-warn" id="f4Wc">当前词数：0 词 (目标 120–160 词)</span>' +
+        '</div><textarea class="write-textarea" id="f4Txt" placeholder="在此输入 Ex 5 / Ex 6 练习片段或完整作文，系统实时监测 120–160 词黄金靶区与文体 Checklist..."></textarea>' +
+        '<div class="lab-controls">' +
+        '<label>阅读 Ex1-4 (/30)：<input type="number" id="f4_1" value="26" min="0" max="30"></label>' +
+        '<label>写作 Ex5-6 (/30)：<input type="number" id="f4_2" value="25" min="0" max="30"></label>' +
+        '<label>听力 P2 (/40)：<input type="number" id="f4_3" value="35" min="0" max="40"></label>' +
+        '<button type="button" class="tab-btn active" id="f4Start">⏳ 120min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f4Reset">重置</button>' +
+        '<span class="timer-big" id="f4Clk">120:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f4Out"></div><div class="readout-pill" id="f4ScoreOut"></div></div></div>';
+      const fmtGuide = {
+        email: '<strong>Ex 5 Email checklist</strong>：① 3 个提示要点全部落地且各加 1–2 句细节扩展；② 用缩写（I\'m / can\'t）与自然过渡（By the way / Guessing what）；③ 禁用过分正式公文腔！',
+        article: '<strong>Ex 6 Article checklist</strong>：① 亮眼标题 + 设问 Hook 开篇；② 半正式/活泼但有逻辑的探讨；③ 结尾向读者发出行动号召或开放思考。',
+        review: '<strong>Ex 6 Review checklist</strong>：① 背景简述 + 平衡评价优缺点（绝不剧透核心结局！）；② 明确给出推荐人群与星级判断。',
+        report: '<strong>Ex 6 Report checklist</strong>：① 必备 To/From/Date/Subject 或清晰小标题（Introduction / Findings / Recommendations）；② 全篇禁缩写、少用第一人称情感词，多用被动语态与数据汇报口吻！'
+      };
+      const ta = el.querySelector('#f4Txt'), wc = el.querySelector('#f4Wc');
+      bindInputs(function () {
+        const w = countWords(ta.value);
+        wc.textContent = '当前词数：' + w + ' 词 (目标 120–160 词)';
+        wc.className = 'wc-meter ' + (w === 0 ? 'wc-warn' : (w >= 120 && w <= 160 ? 'wc-ok' : (w < 90 || w > 190 ? 'wc-err' : 'wc-warn')));
+        el.querySelector('#f4Out').innerHTML = fmtGuide[el.querySelector('#f4Fmt').value] + '<br><strong>字数反馈：</strong>' + (w === 0 ? '请在上方练习英文写作段落。' : (w < 120 ? '字数偏少，检查是否缺少扩展细节导致 Content 拿不满！' : (w > 160 ? '超出建议上限，注意精简避免冗长跑题或来不及检查语法！' : '词数精准落在 120–160 黄金区间！')));
+        const r = Math.max(0, Math.min(30, Number(el.querySelector('#f4_1').value) || 0));
+        const wr = Math.max(0, Math.min(30, Number(el.querySelector('#f4_2').value) || 0));
+        const li = Math.max(0, Math.min(40, Number(el.querySelector('#f4_3').value) || 0));
+        el.querySelector('#f4ScoreOut').innerHTML = '<strong>听读写三线总分：' + (r + wr + li) + ' / 100</strong> ｜ Reading ' + r + '/30 · Writing ' + wr + '/30 · Listening ' + li + '/40。';
+      });
+      setupTimer(el.querySelector('#f4Start'), el.querySelector('#f4Reset'), el.querySelector('#f4Clk'), 120);
+    } else if (t === 'f05') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🖋️ F05 语文 0509 双作文实测汉字计 (400–600 字) + 期末卷估分台</div></div>' +
+        '<div class="lab-panel write-box"><div class="lab-controls">' +
+        '<label>作文体裁（双 2 选 1）：<select id="f5Type">' +
+        '<option value="arg">Sec 1 议论文（鲜明立论 + 让步驳斥）</option>' +
+        '<option value="dis">Sec 1 讨论文（双面均衡辩证探讨）</option>' +
+        '<option value="desc">Sec 2 描写文（五感微雕定格画面）</option>' +
+        '<option value="narr">Sec 2 记叙文（10 秒高潮+物象回环）</option></select></label>' +
+        '<span class="wc-meter wc-warn" id="f5Wc">当前有效汉字：0 字 (目标 400–600 字)</span>' +
+        '</div><textarea class="write-textarea" id="f5Txt" placeholder="输入作文片段或成稿，实时检测 400–600 汉字区与体裁避雷提示..."></textarea>' +
+        '<div class="lab-controls">' +
+        '<label>现代文+9分赏析 (/25)：<input type="number" id="f5_1" value="21" min="0" max="25"></label>' +
+        '<label>作文 1 (/25)：<input type="number" id="f5_2" value="21" min="0" max="25"></label>' +
+        '<label>作文 2 (/25)：<input type="number" id="f5_3" value="21" min="0" max="25"></label>' +
+        '<button type="button" class="tab-btn active" id="f5Start">⏳ 120min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f5Reset">重置</button>' +
+        '<span class="timer-big" id="f5Clk">120:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f5Out"></div><div class="readout-pill" id="f5ScoreOut"></div></div></div>';
+      const guides = {
+        arg: '<strong>议论文红线</strong>：开头亮明单边立场；至少 2 个深剖分论点（切忌只堆事例不议理）；必写 1 段“诚然……然而……”让步驳斥；避免写着写着变成两边都支持的讨论文！',
+        dis: '<strong>讨论文红线</strong>：正反双面篇幅大致平衡，用语保持客观冷静（如“支持者认为……”“然而也有观察指出……”），结尾做辩证权衡而不强行喊口号！',
+        desc: '<strong>描写文红线</strong>：严禁流水账叙事！以空间或时间顺序移动镜头，调用视觉光影、听觉质感、嗅觉与触感温度刻画氛围与人物微神态。',
+        narr: '<strong>记叙文红线</strong>：聚焦单个高张力小事件，30% 篇幅精雕“高潮 10 秒慢动作与心理微变化”，用核心物象贯穿首尾回环收束！'
+      };
+      const ta = el.querySelector('#f5Txt'), wc = el.querySelector('#f5Wc');
+      bindInputs(function () {
+        const n = countChiChars(ta.value);
+        wc.textContent = '当前有效汉字：' + n + ' 字 (目标 400–600 字)';
+        wc.className = 'wc-meter ' + (n === 0 ? 'wc-warn' : (n >= 400 && n <= 600 ? 'wc-ok' : (n < 350 || n > 660 ? 'wc-err' : 'wc-warn')));
+        el.querySelector('#f5Out').innerHTML = guides[el.querySelector('#f5Type').value] + '<br><strong>字数反馈：</strong>' + (n === 0 ? '请贴入或试写现代文/作文段落（400–600 字最稳妥落在 460–560 字）。' : (n < 400 ? '偏短，低于 400 字内容结构分 (C&S) 易被压至中档！' : (n > 600 ? '略超 600 字建议红线，请压缩冗余铺垫防草率结尾或错字增多。' : '有效字数正处于 400–600 黄金得分带！')));
+        const s1 = Math.max(0, Math.min(25, Number(el.querySelector('#f5_1').value) || 0));
+        const s2 = Math.max(0, Math.min(25, Number(el.querySelector('#f5_2').value) || 0));
+        const s3 = Math.max(0, Math.min(25, Number(el.querySelector('#f5_3').value) || 0));
+        const tot = s1 + s2 + s3;
+        el.querySelector('#f5ScoreOut').innerHTML = '<strong>阅读+双作文模考估分：' + tot + ' / 75（' + Math.round((tot / 75) * 100) + '%）</strong> ｜ 阅读赏析 ' + s1 + '/25 · 作文1 ' + s2 + '/25 · 作文2 ' + s3 + '/25。';
+      });
+      setupTimer(el.querySelector('#f5Start'), el.querySelector('#f5Reset'), el.querySelector('#f5Clk'), 120);
+    } else if (t === 'f06') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🌍 F06 GP 0457 Component 1 (Q1–Q4) 答题骨架器与 70 分/85min 模考台</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>切换题型骨架：<select id="f6Q">' +
+        '<option value="q1">Q1 (约14分) · 概念辨析 (Fact/Opinion/Value/Bias) + 趋势提炼</option>' +
+        '<option value="q2a">Q2A (8分) · RAVEN 来源可信度与权威/目的评估</option>' +
+        '<option value="q2b">Q2B (8分) · 如何设计研究检验某主张 (4大核心要素)</option>' +
+        '<option value="q3">Q3 (16分) · Level 4 双论证正面交锋六维对比框架</option>' +
+        '<option value="q4">Q4 (24分) · 政策决策大作文五维权衡与四段结构</option></select></label>' +
+        '<label>Q1 (/14)：<input type="number" id="f6_1" value="12" min="0" max="14"></label>' +
+        '<label>Q2 (/16)：<input type="number" id="f6_2" value="13" min="0" max="16"></label>' +
+        '<label>Q3 (/16)：<input type="number" id="f6_3" value="13" min="0" max="16"></label>' +
+        '<label>Q4 (/24)：<input type="number" id="f6_4" value="20" min="0" max="24"></label>' +
+        '<button type="button" class="tab-btn active" id="f6Start">⏳ 85min 计时</button>' +
+        '<button type="button" class="tab-btn" id="f6Reset">重置</button>' +
+        '<span class="timer-big" id="f6Clk">85:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="f6Out"></div><div class="readout-pill" id="f6ScoreOut"></div></div></div>';
+      const fw = {
+        q1: '<strong>Q1 满分公式</strong>：① Fact（可核查数据/历史事实）vs Opinion（个人看法）vs Prediction（未来预测）vs Value Judgement（道德/好坏评判“should/unfair”）；② 辨析理由必须紧扣原句引号并点明“能否被独立核实”。',
+        q2a: '<strong>Q2A 8 分模板</strong>：从来源<strong>双面</strong>评估：① Strength（如作者专业身份/同行评审/数据样本明确/承认局限性）；② Weakness（如既得利益 vested interest、情感煽动用词、无引文孤证、样本过小/过时）——切忌空背 RAVEN 字母不结合材料！',
+        q2b: '<strong>Q2B 研究设计四要素</strong>：① <strong>Who / Sample</strong>（谁是受试/样本量与随机分层代表性）；② <strong>Method / Instrument</strong>（对照实验、问卷防诱导提问或访谈设计）；③ <strong>Secondary Verification</strong>（比对官方统计/纵贯追踪）；④ <strong>Reliability / Bias Control</strong>（消除利益冲突与季节性偏差）。',
+        q3: '<strong>Q3 Level 4 铁律</strong>：<strong>绝不把 Source A 写一段再把 Source B 写一段！</strong>每段确立 1 个对比维度（① 实证与数据支撑度 → ② 因果推理严密性 vs 逻辑谬误 → ③ 视角平衡与偏见控制），用 <code>Whereas Source A..., Source B...</code> 正面交锋并最终裁决谁更具说服力！',
+        q4: '<strong>Q4 24 分四段闭环</strong>：① 段1 鲜明选边立论；② 段2 核心理由深度展开（引用材料+自身拓展视角）；③ 段3 <strong>对比另外 1–2 个备选方案为什么较弱</strong>（可行性/成本/长期与短期副作用）；④ 段4 让步防线（承认本方案潜在阻力并给出配套缓解措施）。'
+      };
+      bindInputs(function () {
+        el.querySelector('#f6Out').innerHTML = fw[el.querySelector('#f6Q').value];
+        const s1 = Math.max(0, Math.min(14, Number(el.querySelector('#f6_1').value) || 0));
+        const s2 = Math.max(0, Math.min(16, Number(el.querySelector('#f6_2').value) || 0));
+        const s3 = Math.max(0, Math.min(16, Number(el.querySelector('#f6_3').value) || 0));
+        const s4 = Math.max(0, Math.min(24, Number(el.querySelector('#f6_4').value) || 0));
+        const tot = s1 + s2 + s3 + s4, pct = Math.round((tot / 70) * 100);
+        el.querySelector('#f6ScoreOut').innerHTML = '<strong>Component 1 总分：' + tot + ' / 70（' + pct + '%）</strong> ｜ ' + (pct >= 80 ? '冲击 A* 顶尖区间！注意 Q3 正面比较与 Q4 备选方案对比论证' : '建议强化 Q3/Q4 分值最重的段落结构');
+      });
+      setupTimer(el.querySelector('#f6Start'), el.querySelector('#f6Reset'), el.querySelector('#f6Clk'), 85);
+    }
+  }
+  document.querySelectorAll('.lab-box[data-lab-type]').forEach(mountSprintLab);
+
+  // ---------- 10. Universal Personal Error Clinic ----------
+  function mountClinic(el) {
+    const code = el.getAttribute('data-clinic-subject') || subCode;
+    const key = 'igcse_final_sprint_clinic_' + code.toLowerCase();
+    let items = [];
+    try {
+      items = JSON.parse(localStorage.getItem(key) || '[]');
+      if (!Array.isArray(items)) items = [];
+    } catch (e) { items = []; }
+
+    el.innerHTML =
+      '<div class="clinic-head"><div class="clinic-title">🩺 ' + code + ' 个人错题诊疗台（离线持久化 · 支持考前筛查与一键发给 AI 精批）</div>' +
+      '<span class="hub-clinic-pill" id="clinicPendingPill">待攻克：0 题</span></div>' +
+      '<div class="clinic-form-grid">' +
+      '<div class="clinic-field"><label>章节 / 题号出处</label><input type="text" id="clinicTopic" placeholder="如：Ch6 Linear Law Q4 / P2 Q12 / 赏析第2题"></div>' +
+      '<div class="clinic-field"><label>失分归因标签</label><select id="clinicReason">' +
+      '<option value="概念与公式不清">概念与公式不清</option>' +
+      '<option value="审题漏条件/看错单位">审题漏条件/看错单位</option>' +
+      '<option value="计算/推导中途出错">计算/推导中途出错</option>' +
+      '<option value="缺 Mark Scheme 踩分词">缺 Mark Scheme 踩分词</option>' +
+      '<option value="时间不够/字数失控">时间不够/字数失控</option></select></div>' +
+      '</div>' +
+      '<div class="clinic-form-grid">' +
+      '<div class="clinic-field"><label>原题要点 / 错在哪一步</label><textarea id="clinicStem" placeholder="记下题目关键条件和你当时为什么做错..."></textarea></div>' +
+      '<div class="clinic-field"><label>正解与防再犯铁律（二刷时用）</label><textarea id="clinicFix" placeholder="记下正确解法步骤、关键得分词或自我提醒..."></textarea></div>' +
+      '</div>' +
+      '<div class="clinic-toolbar">' +
+      '<div class="clinic-actions">' +
+      '<button type="button" class="clinic-btn clinic-btn-primary" id="clinicAddBtn">➕ 收入本科目错题本</button>' +
+      '<select id="clinicFilter" aria-label="按错因过滤">' +
+      '<option value="ALL">显示全部未攻克错题</option>' +
+      '<option value="ALL_INC">显示全部（含已攻克）</option>' +
+      '<option value="概念与公式不清">只看：概念与公式不清</option>' +
+      '<option value="审题漏条件/看错单位">只看：审题漏条件/看错单位</option>' +
+      '<option value="计算/推导中途出错">只看：计算/推导中途出错</option>' +
+      '<option value="缺 Mark Scheme 踩分词">只看：缺 Mark Scheme 踩分词</option>' +
+      '<option value="时间不够/字数失控">只看：时间不够/字数失控</option></select>' +
+      '</div>' +
+      '<div class="clinic-actions">' +
+      '<button type="button" class="clinic-btn" id="clinicExportBtn">📋 生成并复制 AI 精讲清单</button>' +
+      '</div></div>' +
+      '<textarea class="clinic-preview" id="clinicExportBox" readonly></textarea>' +
+      '<div class="clinic-list" id="clinicList"></div>';
+
+    const topicEl = el.querySelector('#clinicTopic');
+    const reasonEl = el.querySelector('#clinicReason');
+    const stemEl = el.querySelector('#clinicStem');
+    const fixEl = el.querySelector('#clinicFix');
+    const addBtn = el.querySelector('#clinicAddBtn');
+    const filterEl = el.querySelector('#clinicFilter');
+    const exportBtn = el.querySelector('#clinicExportBtn');
+    const exportBox = el.querySelector('#clinicExportBox');
+    const pendingPill = el.querySelector('#clinicPendingPill');
+    const listEl = el.querySelector('#clinicList');
+
+    function save() {
+      localStorage.setItem(key, JSON.stringify(items));
+      const pending = items.filter(function (x) { return !x.solved; }).length;
+      localStorage.setItem('igcse_final_sprint_clinic_cnt_' + code.toLowerCase(), String(pending));
+      if (pendingPill) {
+        pendingPill.textContent = '待攻克：' + pending + ' 题（总计 ' + items.length + ' 题）';
+        pendingPill.classList.toggle('has-err', pending > 0);
+      }
+    }
+
+    function escapeHtml(s) {
+      return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    function renderList() {
+      save();
+      const f = filterEl.value;
+      const shown = items.filter(function (it) {
+        if (f === 'ALL') return !it.solved;
+        if (f === 'ALL_INC') return true;
+        return it.reason === f;
+      });
+      if (!shown.length) {
+        listEl.innerHTML = '<div style="padding:14px;text-align:center;color:var(--text-faint);background:var(--bg-surface);border:1px dashed var(--border-strong);border-radius:7px;font-size:13.5px;">当前筛选下暂无错题记录。做题遇到卡壳或把近期 Quiz 错题粘贴进来，考前即可按错因集中清零！</div>';
+        return;
+      }
+      listEl.innerHTML = shown.map(function (it) {
+        return '<div class="clinic-item' + (it.solved ? ' solved' : '') + '" data-cid="' + it.id + '">' +
+          '<div class="clinic-item-top">' +
+          '<div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">' +
+          '<span class="clinic-tag">' + escapeHtml(it.topic) + '</span>' +
+          '<span class="clinic-reason">' + escapeHtml(it.reason) + '</span>' +
+          '<span style="font-size:12px;color:var(--text-faint);">' + (it.solved ? '✓ 已攻克' : '● 待二刷') + '</span></div>' +
+          '<div class="clinic-actions">' +
+          '<button type="button" class="clinic-btn clinic-toggle-btn">' + (it.solved ? '↺ 重新标红' : '✓ 标为已攻克') + '</button>' +
+          '<button type="button" class="clinic-btn clinic-del-btn">删除</button>' +
+          '</div></div>' +
+          '<div style="font-size:13.5px;margin-bottom:4px;"><strong>错题要点：</strong>' + escapeHtml(it.stem) + '</div>' +
+          (it.fix ? '<div style="font-size:13.3px;color:var(--text-muted);"><strong>正解与防错铁律：</strong>' + escapeHtml(it.fix) + '</div>' : '') +
+          '</div>';
+      }).join('');
+    }
+
+    addBtn.addEventListener('click', function () {
+      const topic = topicEl.value.trim() || '未标注章节';
+      const stem = stemEl.value.trim();
+      if (!stem) { stemEl.focus(); return; }
+      items.unshift({
+        id: String(Date.now()) + '_' + Math.random().toString(36).slice(2, 6),
+        topic: topic,
+        reason: reasonEl.value,
+        stem: stem,
+        fix: fixEl.value.trim(),
+        solved: false
+      });
+      topicEl.value = '';
+      stemEl.value = '';
+      fixEl.value = '';
+      renderList();
+    });
+
+    listEl.addEventListener('click', function (ev) {
+      const card = ev.target.closest('.clinic-item');
+      if (!card) return;
+      const cid = card.getAttribute('data-cid');
+      const idx = items.findIndex(function (x) { return x.id === cid; });
+      if (idx === -1) return;
+      if (ev.target.closest('.clinic-toggle-btn')) {
+        items[idx].solved = !items[idx].solved;
+        renderList();
+      } else if (ev.target.closest('.clinic-del-btn')) {
+        items.splice(idx, 1);
+        renderList();
+      }
+    });
+
+    filterEl.addEventListener('change', renderList);
+    exportBtn.addEventListener('click', function () {
+      const pending = items.filter(function (x) { return !x.solved; });
+      const target = pending.length ? pending : items;
+      const lines = ['### ' + code + ' 待精讲错题清单（共 ' + target.length + ' 题）'];
+      target.forEach(function (it, i) {
+        lines.push((i + 1) + '. [' + it.topic + ' | ' + it.reason + '] ' + it.stem + (it.fix ? '（我的初版订正：' + it.fix + '）' : ''));
+      });
+      if (!target.length) lines.push('（当前暂无错题记录）');
+      const md = lines.join('\n');
+      exportBox.value = md;
+      exportBox.classList.add('visible');
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(md).catch(function () {});
+      }
+      exportBtn.textContent = '✓ 已生成（可全选复制给 AI）';
+      setTimeout(function () { exportBtn.textContent = '📋 生成并复制 AI 精讲清单'; }, 2200);
+    });
+
+    renderList();
+  }
+  document.querySelectorAll('.clinic-box[data-clinic-subject]').forEach(mountClinic);
+
+  // ---------- 11. ScrollSpy & Back Top ----------
+  const navLinksAll = Array.from(document.querySelectorAll('.sidebar .nav-link[href^="#"]'));
+  const observedSections = navLinksAll
+    .map(function (l) { return document.getElementById((l.getAttribute('href') || '').slice(1)); })
+    .filter(Boolean);
+
+  if ('IntersectionObserver' in window && observedSections.length) {
+    const io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navLinksAll.forEach(function (l) {
+            l.classList.toggle('active', l.getAttribute('href') === '#' + id);
+          });
+        }
+      });
+    }, { rootMargin: '-18% 0px -70% 0px' });
+    observedSections.forEach(function (sec) { io.observe(sec); });
+  }
+
+  const backTopBtn = document.getElementById('backTopBtn');
+  if (backTopBtn) {
+    window.addEventListener('scroll', function () {
+      backTopBtn.classList.toggle('visible', window.scrollY > 420);
+    });
+    backTopBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  applyQuizMask(quizMasked);
+  filterConcepts();
+})();
+
+  </script>
+</body>
+</html>
