@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="--accent: #059669;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>G06 · Module 6: IR Evaluation, Reflection (AO2) & Harvard Referencing — IGCSE Global Perspectives (0457)</title>
+  <style>
+/* ==========================================================================
+   Cambridge IGCSE Global Perspectives (0457 · 2025–2027)
+   8-Module Exam Strategy & Coursework Suite Shared Stylesheet
+   ========================================================================== */
+
+:root {
+  --bg-page: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --bg-sidebar: #FFFFFF;
+  --bg-code: #EFF6FF;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-faint: #64748B;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+
+  --accent: #0F766E;
+  --accent-hover: #0D9488;
+  --accent-soft: #CCFBF1;
+
+  --core-bg: #E0F2FE;
+  --core-text: #075985;
+  --core-border: #BAE6FD;
+  --ext-bg: #FEF3C7;
+  --ext-text: #92400E;
+  --ext-border: #FDE68A;
+
+  --deep-bg: #EFF6FF;
+  --deep-border: #2563EB;
+  --tip-bg: #FFFBEB;
+  --tip-border: #D97706;
+  --mistake-bg: #FFF1F2;
+  --mistake-border: #E11D48;
+  --example-bg: #F0FDF4;
+  --example-border: #16A34A;
+  --formula-bg: #F8FAFC;
+  --formula-border: #0F766E;
+
+  --ok-bg: #DCFCE7;
+  --ok-text: #166534;
+  --ok-border: #86EFAC;
+  --err-bg: #FEE2E2;
+  --err-text: #991B1B;
+  --err-border: #FCA5A5;
+
+  --svg-bg: #FFFFFF;
+  --svg-grid: #E2E8F0;
+  --svg-ink: #0F172A;
+  --svg-muted: #64748B;
+  --svg-blue: #2563EB;
+  --svg-indigo: #4338CA;
+  --svg-teal: #0D9488;
+  --svg-amber: #D97706;
+  --svg-red: #DC2626;
+  --svg-green: #16A34A;
+  --svg-purple: #7C3AED;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.07);
+  --shadow-lg: 0 10px 26px rgba(15, 23, 42, 0.11);
+
+  --sidebar-w: 288px;
+  --topbar-h: 58px;
+  --radius-sm: 7px;
+  --radius-md: 11px;
+  --radius-lg: 16px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+  --font-serif: Georgia, "Times New Roman", "Songti SC", "Noto Serif SC", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+[data-theme="dark"] {
+  --bg-page: #0B1120;
+  --bg-surface: #111827;
+  --bg-subtle: #1E293B;
+  --bg-sidebar: #0F172A;
+  --bg-code: #1E293B;
+  --text-main: #F1F5F9;
+  --text-muted: #CBD5E1;
+  --text-faint: #94A3B8;
+  --border: #1E293B;
+  --border-strong: #334155;
+
+  --accent: #38BDF8 !important;
+  --accent-hover: #7DD3FC;
+  --accent-soft: rgba(56, 189, 248, 0.18);
+
+  --core-bg: rgba(56, 189, 248, 0.16);
+  --core-text: #BAE6FD;
+  --core-border: rgba(56, 189, 248, 0.36);
+  --ext-bg: rgba(245, 158, 11, 0.16);
+  --ext-text: #FDE68A;
+  --ext-border: rgba(245, 158, 11, 0.36);
+
+  --deep-bg: rgba(37, 99, 235, 0.14);
+  --deep-border: #60A5FA;
+  --tip-bg: rgba(217, 119, 6, 0.14);
+  --tip-border: #FBBF24;
+  --mistake-bg: rgba(225, 29, 72, 0.15);
+  --mistake-border: #FB7185;
+  --example-bg: rgba(22, 163, 74, 0.13);
+  --example-border: #4ADE80;
+  --formula-bg: #172033;
+  --formula-border: #38BDF8;
+
+  --ok-bg: rgba(22, 163, 74, 0.22);
+  --ok-text: #BBF7D0;
+  --ok-border: #22C55E;
+  --err-bg: rgba(220, 38, 38, 0.22);
+  --err-text: #FECACA;
+  --err-border: #EF4444;
+
+  --svg-bg: #0F172A;
+  --svg-grid: #334155;
+  --svg-ink: #F1F5F9;
+  --svg-muted: #94A3B8;
+  --svg-blue: #60A5FA;
+  --svg-indigo: #818CF8;
+  --svg-teal: #2DD4BF;
+  --svg-amber: #FBBF24;
+  --svg-red: #F87171;
+  --svg-green: #34D399;
+  --svg-purple: #A78BFA;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .seg-btn.active,
+[data-theme="dark"] .tab-btn.active,
+[data-theme="dark"] .icon-btn.active,
+[data-theme="dark"] .brand-code,
+[data-theme="dark"] .pager-btn.primary { color: #0B1120; }
+[data-theme="dark"] .hub-foot { color: #38BDF8; }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--topbar-h) + 18px); }
+body { margin: 0; font-family: var(--font-sans); background: var(--bg-page); color: var(--text-main); line-height: 1.72; font-size: 15.5px; -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4 { margin: 0 0 0.55em 0; line-height: 1.32; font-weight: 700; color: var(--text-main); }
+p { margin: 0 0 0.9em 0; }
+ul, ol { margin: 0 0 1em 0; padding-left: 1.45em; }
+li { margin-bottom: 0.35em; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { font-family: var(--font-mono); font-size: 0.9em; background: var(--bg-code); color: var(--accent); padding: 2px 6px; border-radius: 4px; }
+
+/* View Mode Filters (All / Method / Practice / Cards) */
+body.mode-method .practice-section { display: none !important; }
+body.mode-practice .method-section { display: none !important; }
+body.mode-cards .method-section,
+body.mode-cards .practice-section { display: none !important; }
+
+.badge-c1, .badge-cw, .badge-core, .badge-ext { display: inline-block; font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.badge-c1, .badge-core { background: var(--core-bg); color: var(--core-text); border: 1px solid var(--core-border); }
+.badge-cw, .badge-ext { background: var(--ext-bg); color: var(--ext-text); border: 1px solid var(--ext-border); }
+
+.formula-card { background: var(--formula-bg); border: 1.5px solid var(--border-strong); border-left: 5px solid var(--formula-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; font-size: 15px; }
+.formula-main { font-family: var(--font-serif); font-size: 16.5px; font-weight: 700; color: var(--accent); margin: 4px 0 6px 0; }
+
+.source-box, .reading-passage { background: var(--bg-page); border: 1px solid var(--border-strong); border-left: 5px solid var(--accent); border-radius: var(--radius-md); padding: 16px 20px; margin: 14px 0; font-family: var(--font-serif); font-size: 15px; line-height: 1.76; }
+.reading-title { font-family: var(--font-sans); font-size: 15.8px; font-weight: 800; color: var(--text-main); margin-bottom: 8px; }
+.para-tag { display: inline-block; font-family: var(--font-sans); font-size: 11.5px; font-weight: 800; background: var(--accent-soft); color: var(--accent); padding: 1px 7px; border-radius: 4px; margin-right: 6px; }
+
+.model-essay { background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 20px; margin: 14px 0; box-shadow: var(--shadow-sm); }
+.essay-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; padding-bottom: 10px; margin-bottom: 12px; border-bottom: 1px solid var(--border); font-size: 13px; font-weight: 700; }
+.band-pill { padding: 2px 10px; border-radius: 999px; font-size: 12px; font-weight: 800; }
+.band-high { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.band-mid { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+.essay-body { font-family: var(--font-serif); font-size: 15px; line-height: 1.76; }
+mark.hl-content { background: rgba(37, 99, 235, 0.16); color: inherit; padding: 1px 3px; border-radius: 3px; }
+mark.hl-lang { background: rgba(22, 163, 74, 0.18); color: inherit; padding: 1px 3px; border-radius: 3px; }
+mark.hl-err { background: rgba(220, 38, 38, 0.16); color: inherit; padding: 1px 3px; border-radius: 3px; text-decoration: wavy underline rgba(220, 38, 38, 0.6); }
+
+.write-box { display: flex; flex-direction: column; gap: 10px; }
+.write-textarea { width: 100%; min-height: 150px; padding: 12px 14px; border-radius: var(--radius-sm); border: 1.5px solid var(--border-strong); background: var(--bg-page); color: var(--text-main); font-family: var(--font-serif); font-size: 14.8px; line-height: 1.65; resize: vertical; }
+.write-textarea:focus { outline: none; border-color: var(--accent); }
+.wc-meter { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 800; }
+.wc-ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.wc-warn { background: var(--tip-bg); color: var(--tip-border); border: 1px solid var(--tip-border); }
+.wc-err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+.timer-big { font-family: var(--font-mono); font-size: 22px; font-weight: 800; color: var(--accent); background: var(--bg-page); border: 1.5px solid var(--border-strong); padding: 5px 12px; border-radius: var(--radius-sm); }
+
+/* Topbar */
+.topbar {
+  position: sticky; top: 0; z-index: 100; height: var(--topbar-h);
+  background: var(--bg-surface); border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm); display: flex; align-items: center;
+  justify-content: space-between; gap: 10px; padding: 0 16px;
+}
+.topbar-left { display: flex; align-items: center; gap: 8px; min-width: 0; flex-shrink: 1; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 34px; padding: 0 10px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--bg-surface); color: var(--text-main); font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; text-decoration: none; }
+.icon-btn:hover { background: var(--bg-subtle); border-color: var(--accent); text-decoration: none; }
+.icon-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.menu-toggle { display: none; }
+.brand-pill { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; white-space: nowrap; flex-shrink: 1; min-width: 0; }
+.brand-code { background: var(--accent); color: #fff; padding: 2px 8px; border-radius: 5px; font-size: 12px; letter-spacing: 0.4px; white-space: nowrap; flex-shrink: 0; }
+.brand-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 215px; }
+.search-wrap { position: relative; flex: 1 1 150px; min-width: 130px; max-width: 260px; }
+.search-input { width: 100%; height: 34px; padding: 0 30px 0 32px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--bg-subtle); color: var(--text-main); font-size: 13.5px; outline: none; }
+.search-input:focus { border-color: var(--accent); background: var(--bg-surface); }
+.search-input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.search-icon { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); color: var(--text-faint); font-size: 13px; pointer-events: none; }
+.search-clear { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); border: none; background: transparent; color: var(--text-faint); cursor: pointer; font-size: 14px; display: none; }
+.search-results-bar { display: none; background: var(--accent-soft); border-bottom: 1px solid var(--border); padding: 8px 20px; font-size: 13.5px; color: var(--text-main); align-items: center; justify-content: space-between; gap: 12px; }
+.search-results-bar.visible { display: flex; }
+.topbar-controls { display: flex; align-items: center; gap: 7px; flex-shrink: 0; }
+.seg-group { display: inline-flex; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); overflow: hidden; background: var(--bg-subtle); }
+.seg-btn { border: none; background: transparent; color: var(--text-muted); padding: 6px 8px; font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.seg-btn.active { background: var(--accent); color: #fff; }
+.progress-chip { display: flex; align-items: center; gap: 7px; padding: 4px 10px; border-radius: 999px; background: var(--bg-subtle); border: 1px solid var(--border); font-size: 12.5px; font-weight: 600; white-space: nowrap; }
+.progress-track { width: 50px; height: 7px; background: var(--border-strong); border-radius: 99px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), #0D9488); transition: width 0.25s ease; }
+
+.app-layout { display: flex; min-height: calc(100vh - var(--topbar-h)); }
+.sidebar { width: var(--sidebar-w); flex-shrink: 0; background: var(--bg-sidebar); border-right: 1px solid var(--border); position: sticky; top: var(--topbar-h); height: calc(100vh - var(--topbar-h)); overflow-y: auto; padding: 14px 10px 44px 10px; }
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 99px; }
+.nav-unit { margin-bottom: 8px; }
+.nav-unit-btn { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border: none; border-radius: var(--radius-sm); background: transparent; color: var(--text-main); font-size: 13px; font-weight: 700; text-align: left; cursor: pointer; }
+.nav-unit-btn:hover { background: var(--bg-subtle); }
+.nav-unit-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.nav-unit-title { flex: 1; display: flex; align-items: center; gap: 7px; line-height: 1.3; }
+.nav-chevron { font-size: 11px; color: var(--text-faint); transition: transform 0.2s; }
+.nav-unit.collapsed .nav-chevron { transform: rotate(-90deg); }
+.nav-unit.collapsed .nav-links { display: none; }
+.nav-links { list-style: none; padding: 2px 0 4px 12px; margin: 0 0 0 14px; border-left: 2px solid var(--border); }
+.nav-link { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 5px 9px; margin: 2px 0; border-radius: var(--radius-sm); color: var(--text-muted); font-size: 12.6px; line-height: 1.35; text-decoration: none; }
+.nav-link:hover { background: var(--bg-subtle); color: var(--text-main); text-decoration: none; }
+.nav-link.active { background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+.nav-done-mark { color: #10B981; font-weight: 800; font-size: 12px; opacity: 0; }
+.nav-link.mastered .nav-done-mark { opacity: 1; }
+.main-content { flex: 1; min-width: 0; padding: 26px 32px 80px 32px; }
+.content-inner { max-width: 960px; margin: 0 auto; }
+
+.hero-card { background: linear-gradient(135deg, #0F172A 0%, var(--accent) 58%, #0F766E 100%); color: #fff; border-radius: var(--radius-lg); padding: 28px 32px; margin-bottom: 26px; box-shadow: var(--shadow-lg); }
+.hero-card h1 { color: #fff; font-size: 25px; margin-bottom: 8px; letter-spacing: -0.3px; }
+.hero-sub { color: rgba(255,255,255,0.92); font-size: 14.8px; max-width: 820px; margin-bottom: 16px; }
+.hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.hero-pill { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.28); color: #fff; padding: 4px 11px; border-radius: 999px; font-size: 12.5px; font-weight: 600; }
+.unit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+.unit-tile { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.24); border-radius: var(--radius-md); padding: 12px 14px; color: #fff; text-decoration: none; display: block; transition: transform 0.15s, background 0.15s; }
+.unit-tile:hover { transform: translateY(-2px); background: rgba(255,255,255,0.22); text-decoration: none; }
+.unit-tile-num { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.7px; opacity: 0.85; font-weight: 700; }
+.unit-tile-title { font-size: 14.5px; font-weight: 700; margin: 3px 0; }
+
+.topic-section { background: var(--bg-surface); border: 1px solid var(--border); border-top: 4px solid var(--accent); border-radius: var(--radius-md); padding: 24px 26px; margin-bottom: 24px; box-shadow: var(--shadow-sm); }
+.topic-section.search-dim { display: none; }
+.section-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 2px solid var(--border); }
+.section-title-group h3 { font-size: 19.5px; margin-bottom: 4px; }
+.section-en-sub { font-size: 13.5px; color: var(--text-faint); font-weight: 600; }
+.tier-row { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 7px; }
+.master-btn { flex-shrink: 0; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-muted); font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.master-btn:hover { border-color: #10B981; color: #10B981; }
+.master-btn.is-mastered { background: var(--ok-bg); color: var(--ok-text); border-color: var(--ok-border); }
+.subtopic { margin-bottom: 20px; }
+.subtopic:last-of-type { margin-bottom: 12px; }
+.subtopic h4 { font-size: 16px; color: var(--accent); margin: 0 0 10px 0; padding-bottom: 4px; border-bottom: 1px dashed var(--border); display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+
+.worked-example { background: var(--example-bg); border: 1px solid var(--border); border-left: 4px solid var(--example-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; }
+.worked-title { font-weight: 800; font-size: 14px; color: var(--example-border); margin-bottom: 6px; }
+.callout { border-radius: var(--radius-sm); padding: 13px 16px; margin: 14px 0; border-left: 4px solid var(--border-strong); font-size: 14.5px; }
+.callout-title { font-weight: 800; font-size: 13.5px; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+.deep-dive { background: var(--deep-bg); border-left-color: var(--deep-border); }
+.deep-dive .callout-title { color: var(--deep-border); }
+.examiner-tip { background: var(--tip-bg); border-left-color: var(--tip-border); }
+.examiner-tip .callout-title { color: var(--tip-border); }
+.common-mistake { background: var(--mistake-bg); border-left-color: var(--mistake-border); }
+.common-mistake .callout-title { color: var(--mistake-border); }
+
+.table-wrap { width: 100%; overflow-x: auto; margin: 14px 0; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+table.gp-table, table.phy-table { width: 100%; border-collapse: collapse; font-size: 13.8px; text-align: left; }
+table.gp-table th, table.phy-table th { background: var(--bg-subtle); color: var(--text-main); font-weight: 700; padding: 9px 12px; border-bottom: 2px solid var(--border-strong); white-space: nowrap; }
+table.gp-table td, table.phy-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.gp-table tr:last-child td, table.phy-table tr:last-child td { border-bottom: none; }
+table.gp-table tbody tr:hover, table.phy-table tbody tr:hover { background: var(--bg-subtle); }
+
+.svg-figure { background: var(--svg-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px; margin: 16px 0; text-align: center; break-inside: avoid; }
+.svg-figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.svg-caption { margin-top: 8px; font-size: 13px; color: var(--text-faint); font-weight: 600; }
+
+/* Interactive GP Analysis & Coursework Labs */
+.lab-box { background: var(--bg-subtle); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px; margin: 18px 0; break-inside: avoid; }
+.lab-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+.lab-title { font-size: 15.5px; font-weight: 800; color: var(--accent); display: flex; align-items: center; gap: 7px; }
+.lab-panel { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; }
+.lab-controls { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-bottom: 12px; align-items: center; }
+.lab-controls label { font-size: 13px; font-weight: 700; color: var(--text-muted); display: inline-flex; align-items: center; gap: 6px; }
+.lab-controls input[type="number"], .lab-controls input[type="text"], .lab-controls select { padding: 5px 8px; border-radius: 6px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-main); font-size: 13.2px; font-weight: 700; }
+.lab-controls input[type="number"] { min-width: 108px; width: 112px; text-align: center; }
+.lab-controls input[type="range"] { width: 120px; accent-color: var(--accent); }
+.lab-grid-2col { display: grid; grid-template-columns: 1.12fr 1fr; gap: 14px; align-items: start; }
+@media (max-width: 820px) { .lab-grid-2col { grid-template-columns: 1fr; } }
+.tab-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.tab-btn { border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-muted); padding: 5px 10px; border-radius: 6px; font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.tab-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.lab-readout { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; font-size: 13.2px; font-weight: 600; }
+.readout-pill { background: var(--bg-page); border: 1px solid var(--border-strong); padding: 7px 10px; border-radius: 6px; width: 100%; line-height: 1.55; }
+
+/* Practice Questions & Concepts */
+.practice-block { margin-top: 18px; padding-top: 14px; border-top: 2px dashed var(--border-strong); }
+.practice-heading { font-size: 16px; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.exam-q { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 14px; break-inside: avoid; }
+.exam-q-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; font-size: 12.5px; }
+.q-tag { font-weight: 800; color: var(--accent); background: var(--accent-soft); padding: 2px 8px; border-radius: 5px; }
+.q-marks { font-weight: 700; color: var(--text-faint); }
+.q-stem-en { font-size: 14.8px; font-weight: 600; color: var(--text-main); margin-bottom: 6px; }
+.q-stem-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 12px; }
+.mcq-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin-bottom: 10px; }
+.mcq-opt { text-align: left; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 13.8px; cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.mcq-opt:hover { border-color: var(--accent); background: var(--bg-subtle); }
+.mcq-opt.correct { background: var(--ok-bg); border-color: var(--ok-border); color: var(--ok-text); font-weight: 700; }
+.mcq-opt.wrong { background: var(--err-bg); border-color: var(--err-border); color: var(--err-text); }
+.mcq-feedback { display: none; font-size: 13.5px; padding: 10px 12px; border-radius: var(--radius-sm); margin-top: 8px; }
+.mcq-feedback.visible { display: block; }
+.mcq-feedback.ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.mcq-feedback.err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+details.ms-details { margin-top: 10px; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 12px; }
+details.ms-details summary { cursor: pointer; font-weight: 700; font-size: 13.5px; color: var(--accent); user-select: none; }
+.ms-body { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 13.8px; }
+.ms-mark { display: inline-block; font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--core-text); background: var(--core-bg); padding: 1px 5px; border-radius: 4px; margin-right: 4px; }
+.ms-cn { color: var(--text-muted); margin-top: 4px; }
+
+.concept-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 14px; margin-bottom: 18px; }
+.concept-filter-group { display: flex; flex-wrap: wrap; gap: 6px; }
+.concept-actions { display: flex; align-items: center; gap: 10px; }
+.concept-count-pill { font-size: 12.5px; font-weight: 700; color: var(--text-muted); }
+.concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 14px; }
+.concept-card { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; gap: 8px; break-inside: avoid; }
+.concept-card:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
+.concept-card.concept-hidden { display: none !important; }
+.cq-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.cq-en { font-weight: 700; font-size: 14.5px; color: var(--text-main); line-height: 1.45; }
+.cq-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 2px; }
+.cq-answer { position: relative; margin-top: auto; background: var(--bg-surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius-sm); padding: 11px 13px; font-size: 13.8px; line-height: 1.6; }
+.kw { color: var(--accent); background: var(--accent-soft); padding: 0 4px; border-radius: 3px; font-weight: 700; }
+.cq-mask-hint { display: none; }
+.concept-card.masked .cq-answer { cursor: pointer; }
+.concept-card.masked .cq-answer-inner { filter: blur(7px); opacity: 0.22; user-select: none; pointer-events: none; transition: filter 0.2s, opacity 0.2s; }
+.concept-card.masked .cq-mask-hint { display: flex; align-items: center; justify-content: center; position: absolute; inset: 0; font-size: 13.5px; font-weight: 700; color: var(--accent); background: rgba(255,255,255,0.25); border-radius: var(--radius-sm); }
+[data-theme="dark"] .concept-card.masked .cq-mask-hint { background: rgba(15,23,42,0.35); }
+
+.chapter-pager { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 28px; padding: 16px 20px; background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); }
+.pager-btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: var(--radius-sm); background: var(--bg-subtle); border: 1px solid var(--border-strong); color: var(--text-main); font-size: 13.5px; font-weight: 700; text-decoration: none; }
+.pager-btn:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); text-decoration: none; }
+.pager-btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.pager-btn.primary:hover { background: var(--accent-hover); color: #fff; }
+
+.hub-block-title { font-size: 18px; font-weight: 800; margin: 26px 0 12px 0; padding-bottom: 6px; border-bottom: 2px solid var(--border-strong); display: flex; align-items: center; gap: 8px; }
+.hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 15px; }
+.hub-card { display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-surface); border: 1px solid var(--border-strong); border-top: 5px solid var(--card-color, var(--accent)); border-radius: var(--radius-md); padding: 16px 18px 14px 18px; color: var(--text-main); text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; box-shadow: var(--shadow-sm); }
+.hub-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--card-color, var(--accent)); text-decoration: none; }
+.hub-card-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+.hub-badge { font-size: 11.5px; font-weight: 800; color: #fff; background: var(--card-color, var(--accent)); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill { font-size: 12px; font-weight: 700; color: var(--text-muted); background: var(--bg-subtle); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill.done { background: var(--ok-bg); color: var(--ok-text); }
+.hub-title { font-size: 16px; font-weight: 800; margin-bottom: 3px; }
+.hub-en { font-size: 12.6px; color: var(--text-faint); font-weight: 600; margin-bottom: 8px; }
+.hub-sub { font-size: 12.8px; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; }
+.hub-foot { font-size: 13px; font-weight: 700; color: var(--card-color, var(--accent)); display: flex; align-items: center; justify-content: space-between; }
+
+.back-top-btn { position: fixed; right: 22px; bottom: 22px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); box-shadow: var(--shadow-md); cursor: pointer; display: none; align-items: center; justify-content: center; font-size: 17px; font-weight: 800; z-index: 80; }
+.back-top-btn.visible { display: flex; }
+
+@media (max-width: 1200px) {
+  .brand-title, .btn-label { display: none; }
+  .seg-btn { padding: 6px 8px; }
+}
+@media (max-width: 980px) {
+  .menu-toggle { display: inline-flex; }
+  .sidebar { position: fixed; left: 0; top: var(--topbar-h); z-index: 95; transform: translateX(-100%); transition: transform 0.22s ease; box-shadow: var(--shadow-lg); }
+  .sidebar.open { transform: translateX(0); }
+  .main-content { padding: 18px 14px 64px 14px; }
+  .topic-section { padding: 18px 16px; }
+  .progress-chip { display: none; }
+  .search-wrap { min-width: 130px; }
+}
+@media (max-width: 640px) {
+  .topbar { padding: 0 10px; gap: 6px; }
+  .search-wrap { max-width: none; }
+  .concept-grid, .hub-grid { grid-template-columns: 1fr; }
+}
+@media print {
+  .topbar, .sidebar, .search-results-bar, .back-top-btn, .master-btn, .lab-controls button, .concept-toolbar, .cq-mask-hint, .chapter-pager { display: none !important; }
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  .main-content { padding: 0 !important; }
+  .content-inner { max-width: 100% !important; }
+  .topic-section, .exam-q, .callout, .worked-example, .svg-figure, .concept-card, .model-essay, .source-box { box-shadow: none !important; break-inside: avoid; border-color: #CBD5E1 !important; }
+  details.ms-details, details.ms-details .ms-body, .mcq-feedback { display: block !important; }
+  .concept-card.masked .cq-answer-inner { filter: none !important; opacity: 1 !important; }
+}
+
+  </style>
+</head>
+<body data-chapter-code="G06">
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="展开目录">☰ 目录</button>
+      <a class="icon-btn" href="index.html" title="返回 8 专题总目录"><span>🏠</span><span class="btn-label">总目录</span></a>
+      <div class="brand-pill">
+        <span class="brand-code">G06</span>
+        <span class="brand-title">Module 6: IR Evaluation, Reflection (AO2) & Harvard Referencing</span>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="search" id="searchInput" class="search-input" placeholder="搜索 RAVEN、比较维度、反思句型与真题..." autocomplete="off" />
+      <button type="button" class="search-clear" id="searchClear" title="清空搜索">✕</button>
+    </div>
+
+    <div class="topbar-controls">
+      <div class="seg-group" role="group" aria-label="内容视图筛选">
+        <button type="button" class="seg-btn active" data-view-mode="all">All</button>
+        <button type="button" class="seg-btn" data-view-mode="method">方法</button>
+        <button type="button" class="seg-btn" data-view-mode="practice">练习</button>
+        <button type="button" class="seg-btn" data-view-mode="cards">术语卡</button>
+      </div>
+
+      <div class="progress-chip" title="本专题方法与实战模块掌握进度">
+        <span id="progressText">0/0</span>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+
+      <button type="button" class="icon-btn" id="toggleAllMs" title="展开或收起全部解析"><span>📝</span><span class="btn-label">展开解析</span></button>
+      <button type="button" class="icon-btn" id="themeToggle" title="切换亮色/暗色主题"><span id="themeIcon">🌙</span><span class="btn-label">主题</span></button>
+      <button type="button" class="icon-btn" id="printBtn" title="打印或导出为 PDF"><span>🖨️</span><span class="btn-label">导出 PDF</span></button>
+    </div>
+  </header>
+
+  <div class="search-results-bar" id="searchBar">
+    <span id="searchSummary">找到 0 个匹配板块</span>
+    <button type="button" class="icon-btn" id="searchResetBtn">重置过滤</button>
+  </div>
+
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="本专题 GP 知识点导航">
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #059669;"></span>G06 本专题板块导航</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#sec-6-1"><span>6.1 嵌入式来源批判 (Embedded Evaluation) 与受约束的有效行动方案</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-6-2"><span>6.2 AO2 (10 分) 个人立场演变四步模板与 AO3 (10 分) Harvard 零抄袭铁律</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-sme"><span>6.3 Harvard 引用纠错、反思质量辨析与低分段落升格特训</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#app-concepts"><span>6.4 随文来源批判、立场转变钩子句与 Harvard 引用规范卡片 (16 张)</span><span class="nav-done-mark">✓</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #0D9488;"></span>全书 8 专题快速切换</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="G01_Syllabus_Blueprint_and_Q1_Concepts.html"><span>G01 · 2025–2027 考纲权重与 Q1 批判性概念辨析</span></a></li>
+          <li><a class="nav-link" href="G02_Q2_Source_Evaluation_and_Research_Testing.html"><span>G02 · Q2A 来源可信度 (RAVEN) 与 Q2B 8 分研究设计四要素</span></a></li>
+          <li><a class="nav-link" href="G03_Q3_Comparing_Arguments.html"><span>G03 · Q3 双源论证强度六维比较框架与 Level 4 精批</span></a></li>
+          <li><a class="nav-link" href="G04_Q4_Policy_Decision_Essay.html"><span>G04 · Q4 24 分压轴政策决策论文：五维权衡与四段结构</span></a></li>
+          <li><a class="nav-link" href="G05_Individual_Report_Design_and_Perspectives.html"><span>G05 · IR 个人报告：A* 选题公式与真三视角深度结构</span></a></li>
+          <li><a class="nav-link active" href="G06_Individual_Report_Evaluation_Reflection_Citations.html"><span>G06 · IR 嵌入式批判、AO2 个人立场演变与 Harvard 零抄袭</span></a></li>
+          <li><a class="nav-link" href="G07_Team_Project_and_Reflective_Paper.html"><span>G07 · Team Project 本土行动、300–400 词 ERP 与 45 分反思论文</span></a></li>
+          <li><a class="nav-link" href="G08_Full_Mock_Exam_and_15_Topics_Matrix.html"><span>G08 · Component 1 (70 分) 全真模拟卷与 15 大议题视角库</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-inner">
+        <section class="hero-card" id="top">
+          <h1>Module 6: IR Evaluation, Reflection (AO2) & Harvard Referencing · 第 6 专题 · IR 嵌入式批判、AO2 个人立场演变与 Harvard 零抄袭</h1>
+          <p class="hero-sub">
+            严格围绕 <strong>Cambridge IGCSE Global Perspectives (0457 · 2025–2027 考纲 · Component 1 35% + Individual Report 30% + Team Project 35%)</strong> 评分细则、分析评估框架与高分写作示范：<code>AO1(40)+AO2(10)+AO3(10) · 把来源可信度融进正文论证 · “起初以为→受某证据冲击→最终立意转变”反思与规范引用</code>，配齐 Level 4 红笔范文、课程作业规范检查台与中英学术术语默写库。
+          </p>
+          <div class="hero-badges">
+            <span class="hero-pill">🌍 0457 (2025–2027) 新考纲</span>
+            <span class="hero-pill">⚖️ RAVEN / 论证对比 / 政策决策全法</span>
+            <span class="hero-pill">⚡ 词数红线 / 引用生成 / 70分估分台</span>
+            <a class="hero-pill" href="#sec-sme" style="text-decoration: none;">📝 直达全真练习 →</a>
+            <a class="hero-pill" href="#app-concepts" style="text-decoration: none; background: rgba(255,255,255,0.24);">🧠 直达批判思维术语卡 →</a>
+          </div>
+          <div class="unit-grid">
+            <a class="unit-tile" href="#sec-6-1">
+              <div class="unit-tile-num">Section 6-1</div>
+              <div class="unit-tile-title">6.1 嵌入式来源批判 (Embedded Evaluation) 与受约束的有效行动方案</div>
+            </a>
+            <a class="unit-tile" href="#sec-6-2">
+              <div class="unit-tile-num">Section 6-2</div>
+              <div class="unit-tile-title">6.2 AO2 (10 分) 个人立场演变四步模板与 AO3 (10 分) Harvard 零抄袭铁律</div>
+            </a>
+            <a class="unit-tile" href="#sec-sme">
+              <div class="unit-tile-num">Section sme</div>
+              <div class="unit-tile-title">6.3 Harvard 引用纠错、反思质量辨析与低分段落升格特训</div>
+            </a>
+            <a class="unit-tile" href="#app-concepts">
+              <div class="unit-tile-num">术语与公式库</div>
+              <div class="unit-tile-title">6.4 随文来源批判、立场转变钩子句与 Harvard 引用规范卡片 (16 张)</div>
+            </a>
+          </div>
+        </section>
+
+        <div id="emptySearchNotice" class="callout deep-dive" style="display: none;">
+          <div class="callout-title">🔍 未找到匹配内容</div>
+          <p style="margin-bottom: 0;">请尝试更换关键词，或点击右上角“重置过滤”恢复显示。</p>
+        </div>
+
+<!-- ==================== MODULE 6: IR SOURCE EVALUATION, REFLECTION & HARVARD CITATIONS ==================== -->
+<article class="topic-section method-section" id="sec-6-1">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>6.1 嵌入式来源批判 (Embedded Evaluation) 与受约束的有效行动方案</h3>
+      <div class="section-en-sub">Weaving Source Reliability into AO1 Analysis &amp; Designing Root-Cause-Aligned Courses of Action</div>
+      <div class="tier-row">
+        <span class="badge-cw">一次性拉升 AO1 (40分)</span>
+        <span class="badge-c1">告别文末附录式来源堆砌 · 杜绝空洞“教育口号”</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-6-1">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>6.1.1 为什么“把来源评估单独扔在文末附录/独立表”是低分重灾区？</h4>
+    <p>
+      在准备 Component 2 Individual Report 时，大量学生受传统研究笔记习惯误导，在文章正文写完后（或单独辟出一整段 250–350 词）做一张《Source Evaluation》表格或评估清单：“Source 1 是 WHO，很权威；Source 2 是博客，不太可靠……”。
+    </p>
+    <div class="callout common-mistake">
+      <div class="callout-title">⚠️ 单独堆砌来源批判的三大硬伤（考官报告连续多年警告！）</div>
+      <ul style="margin-bottom: 0;">
+        <li><strong>硬伤 1 · 论证与证据脱节：</strong>你在前文已经把 Source 2 的数据当成既成事实推进了整个论点，末尾才突然说“Source 2 有偏见且样本很小”——这等于自己推翻前文逻辑！</li>
+        <li><strong>硬伤 2 · 严重烧光 2,000 词宝贵配额：</strong>一张单独的来源评估表往往吃掉 250–350 词（表格内文字<strong>全部计入 2,000 词上限</strong>），直接导致后文行动方案或 AO2 反思被迫删减甚至被截断。</li>
+        <li><strong>硬伤 3 · 无法体现 AO1 最高段“动态权衡”能力：</strong>Top Band（33–40/40 分）要求考生在引用某来源的那一瞬间，同步掂量它的分量轻重，并用更可靠的独立来源做交叉印证（Corroboration）。</li>
+      </ul>
+    </div>
+
+    <p>
+      正确做法是 <strong>嵌入式来源批判（Embedded Evaluation）</strong>：用 12–25 词的让步从句、插入语或转折句，直接在分析段正文中自然点出 <strong>Author Credibility（作者权威性与背景）、Vested Interest（利益关联）、Sample Bias（样本量与抽样偏误）、Publication Date（时效性）</strong> 四大核心维度的组合。
+    </p>
+
+    <div class="table-wrap">
+      <table class="gp-table">
+        <thead>
+          <tr>
+            <th>批判维度</th>
+            <th>必须随文紧盯的评估问号</th>
+            <th>随文嵌入式高分英文短句示范（直接套用）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. Author Credibility &amp; Expertise</strong><br>作者权威性与同行评议</td>
+            <td>作者是领域内独立学者、联合国机构、政府统计局，还是无资质匿名博主/普通媒体转述？是否经过 Peer Review？</td>
+            <td><code>Drawing on a peer-reviewed longitudinal study by Oxford researchers (Patel, 2024)...</code> ／ <code>Although widely circulated, this opinion blog lacks academic peer review or primary methodology...</code></td>
+          </tr>
+          <tr>
+            <td><strong>2. Vested Interest &amp; Funding Bias</strong><br>既得利益与资助立场偏见</td>
+            <td>报告由谁出资赞助？是否可能为了商业公关（Greenwashing）或游说立法而挑选性披露有利数据？</td>
+            <td><code>While an industry-funded 2023 white paper claims voluntary pledges cut emissions by 40%, its reliability is tempered by clear commercial vested interest...</code></td>
+          </tr>
+          <tr>
+            <td><strong>3. Sample Bias &amp; Methodology</strong><br>样本代表性与调查方法漏洞</td>
+            <td>样本量多大？是否仅局限于单一富裕城市高校或线上自愿填报（Self-selection bias）？是否能推广至农村或低收入群体？</td>
+            <td><code>Because this pilot survey sampled only 120 urban university students, its optimistic conclusions cannot be generalised to low-income rural households...</code></td>
+          </tr>
+          <tr>
+            <td><strong>4. Publication Date &amp; Currency</strong><br>数据时效性与语境演变</td>
+            <td>数据是 2016 年以前的旧资料，还是生成式 AI、疫后供应链重构、最新法规落地后的近 3 年实证数据？</td>
+            <td><code>Although earlier pre-pandemic estimates (2018) projected modest telework adoption, post-2022 labour surveys reveal a sharper structural shift...</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="model-essay">
+      <div class="essay-head">
+        <span>实景对比：低分“孤立照抄” vs A*“随文嵌入式批判 + 交叉印证”</span>
+        <span class="band-pill band-high">AO1 提分关键动作</span>
+      </div>
+      <div class="essay-body">
+        <p><span class="band-pill band-mid">❌ 低分孤立引用（零批判，直接照信）</span><br>
+        <mark class="hl-err">Fast fashion brands are already solving textile waste. According to Brand X (2023), 75% of its returned garments are recycled into new fibres. This proves voluntary corporate recycling works very well.</mark></p>
+        <p style="margin-bottom:0;"><span class="band-pill band-high">✅ A* 嵌入式随文批判（125 词一步到位：利益偏见 + 样本/定义漏洞 + 权威交叉验证）</span><br>
+        Proponents of self-regulation often cite corporate sustainability disclosures; for instance, <mark class="hl-content">Brand X (2023) reports that 75% of collected garments are “recycled”</mark>. <mark class="hl-lang">However, this figure must be treated cautiously due to clear commercial vested interest in avoiding binding legislation, alongside the report's omission of what proportion was merely downcycled into low-grade insulation or exported abroad.</mark> <mark class="hl-content">Cross-referencing this claim against an independent peer-reviewed audit by the Ellen MacArthur Foundation (2024)</mark> reveals that <mark class="hl-lang">less than 1% of global textile fibre is closed-loop recycled into new clothing</mark>. Consequently, relying solely on unverified corporate metrics risks overstating market progress while delaying structural waste reform.</p>
+      </div>
+    </div>
+
+    <div class="callout deep-dive">
+      <div class="callout-title">🗂️ 6–10 个高质量多元来源配比矩阵（Diversity of Sources）</div>
+      <p style="margin-bottom: 0;">
+        IR 切忌所有引用全来自同一类新闻或维基百科。最佳文献组合应当包含 <strong>6–10 个经过核实的独立来源</strong>：① <strong>1–2 份多边权威机构数据</strong>（UN, WHO, UNESCO, World Bank, OECD, IPCC）；② <strong>2–3 篇近 4 年同行评审期刊论文</strong>（提供因果机制与大样本验证）；③ <strong>1–2 份本土/国家政府政策或立法文本</strong>（支撑本土落地视角）；④ <strong>1–2 份利益相关方或行业报告</strong>（故意纳入以展示你能识别其商业偏见！）；⑤ <strong>1–2 篇深度调查新闻或质性田野访谈记录</strong>（赋予基层社群真实声音）。
+      </p>
+    </div>
+  </div>
+
+  <!-- Static SVG 6.1 -->
+  <div class="svg-figure">
+    <svg viewBox="0 0 760 345" width="760" height="345" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="独立堆砌来源批判与嵌入式随文批判结构对比图">
+      <defs>
+        <marker id="g06-arr-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--svg-red)"/>
+        </marker>
+        <marker id="g06-arr-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--svg-teal)"/>
+        </marker>
+      </defs>
+      <rect x="0" y="0" width="760" height="345" rx="10" fill="none"/>
+      <text x="380" y="24" text-anchor="middle" font-size="14" font-weight="800" fill="var(--svg-ink)">图 6.1 · 独立堆砌来源批判 (低分) vs 嵌入式随文批判 (A*) 结构图</text>
+      <text x="380" y="43" text-anchor="middle" font-size="11.5" font-weight="600" fill="var(--svg-muted)">省出 300 词宝贵篇幅，同时让来源评估直接为 AO1 (40 分) 的论证深度服务</text>
+
+      <!-- Top Track: Low Score Separated -->
+      <rect x="20" y="58" width="720" height="122" rx="8" fill="rgba(220,38,38,0.06)" stroke="var(--svg-red)" stroke-width="1.5"/>
+      <text x="36" y="80" font-size="12.5" font-weight="800" fill="var(--svg-red)">❌ 低分隔离结构（割裂式堆砌 · 极易爆词且论证自我打架）</text>
+
+      <rect x="36" y="94" width="194" height="68" rx="6" fill="var(--svg-bg)" stroke="var(--svg-red)" stroke-width="1.2"/>
+      <text x="133" y="114" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-ink)">正文盲目摘抄数据</text>
+      <text x="133" y="133" text-anchor="middle" font-size="10.2" fill="var(--svg-muted)">照搬企业/博客数字作铁证</text>
+      <text x="133" y="150" text-anchor="middle" font-size="10.2" fill="var(--svg-red)">（假定所有来源 100% 客观）</text>
+
+      <line x1="234" y1="128" x2="262" y2="128" stroke="var(--svg-red)" stroke-width="1.8" marker-end="url(#g06-arr-red)"/>
+
+      <rect x="268" y="94" width="222" height="68" rx="6" fill="var(--svg-bg)" stroke="var(--svg-red)" stroke-width="1.2"/>
+      <text x="379" y="114" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-ink)">文末硬塞“Source Table”</text>
+      <text x="379" y="133" text-anchor="middle" font-size="10.2" fill="var(--svg-muted)">另占 250–350 词机械贴标签</text>
+      <text x="379" y="150" text-anchor="middle" font-size="10.2" fill="var(--svg-red)">（“Source A 可靠，Source B 有偏见”）</text>
+
+      <line x1="494" y1="128" x2="522" y2="128" stroke="var(--svg-red)" stroke-width="1.8" marker-end="url(#g06-arr-red)"/>
+
+      <rect x="528" y="94" width="196" height="68" rx="6" fill="rgba(220,38,38,0.12)" stroke="var(--svg-red)" stroke-width="1.3"/>
+      <text x="626" y="114" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-red)">双重扣分结果</text>
+      <text x="626" y="133" text-anchor="middle" font-size="10.2" fill="var(--svg-ink)">后文拆穿前文，逻辑断裂</text>
+      <text x="626" y="150" text-anchor="middle" font-size="10.2" fill="var(--svg-ink)">超 2,000 词挤垮 AO2 反思</text>
+
+      <!-- Bottom Track: A* Embedded -->
+      <rect x="20" y="196" width="720" height="134" rx="8" fill="rgba(13,148,136,0.06)" stroke="var(--svg-teal)" stroke-width="1.6"/>
+      <text x="36" y="218" font-size="12.5" font-weight="800" fill="var(--svg-teal)">✅ A* 随文嵌入式结构（Embedded Evaluation · 边引边评、边比边立）</text>
+
+      <rect x="36" y="232" width="150" height="80" rx="6" fill="var(--svg-bg)" stroke="var(--svg-teal)" stroke-width="1.2"/>
+      <text x="111" y="253" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-ink)">① 视角论点+引注</text>
+      <text x="111" y="272" text-anchor="middle" font-size="10.2" fill="var(--svg-muted)">先亮出该群体的主张</text>
+      <text x="111" y="290" text-anchor="middle" font-size="10.2" fill="var(--svg-teal)">并附 (Author, Year)</text>
+
+      <line x1="190" y1="272" x2="214" y2="272" stroke="var(--svg-teal)" stroke-width="1.8" marker-end="url(#g06-arr-teal)"/>
+
+      <rect x="220" y="232" width="166" height="80" rx="6" fill="var(--svg-bg)" stroke="var(--svg-teal)" stroke-width="1.2"/>
+      <text x="303" y="253" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-ink)">② 15 词随文微批判</text>
+      <text x="303" y="272" text-anchor="middle" font-size="10.2" fill="var(--svg-muted)">点破商业资助 / 样本局限</text>
+      <text x="303" y="290" text-anchor="middle" font-size="10.2" fill="var(--svg-teal)">或肯定其近 3 年同行评议</text>
+
+      <line x1="390" y1="272" x2="414" y2="272" stroke="var(--svg-teal)" stroke-width="1.8" marker-end="url(#g06-arr-teal)"/>
+
+      <rect x="420" y="232" width="148" height="80" rx="6" fill="var(--svg-bg)" stroke="var(--svg-teal)" stroke-width="1.2"/>
+      <text x="494" y="253" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-ink)">③ 独立源交叉验证</text>
+      <text x="494" y="272" text-anchor="middle" font-size="10.2" fill="var(--svg-muted)">对比联合国/学者实证</text>
+      <text x="494" y="290" text-anchor="middle" font-size="10.2" fill="var(--svg-teal)">校准结论可信边界</text>
+
+      <line x1="572" y1="272" x2="596" y2="272" stroke="var(--svg-teal)" stroke-width="1.8" marker-end="url(#g06-arr-teal)"/>
+
+      <rect x="602" y="232" width="122" height="80" rx="6" fill="rgba(22,163,74,0.14)" stroke="var(--svg-green)" stroke-width="1.4"/>
+      <text x="663" y="254" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-green)">④ 稳冲 Top Band</text>
+      <text x="663" y="273" text-anchor="middle" font-size="10.2" fill="var(--svg-ink)">节省 300 词空间</text>
+      <text x="663" y="291" text-anchor="middle" font-size="10.2" fill="var(--svg-ink)">AO1 论证浑然一体</text>
+    </svg>
+    <div class="svg-caption">图 6.1：将来源可信度检验化作分析段内的让步与交叉核验句，不再单独耗费 300 词做文末评估表。</div>
+  </div>
+
+  <div class="subtopic">
+    <h4>6.1.2 有效行动方案评估（Courses of Action）：为什么严禁“教育大家就好”？</h4>
+    <p>
+      IR 第 4 节要求针对研究问题提出并评估可行的解决路径。考官最常给低分的一类行动方案叫<strong>“空话三件套”</strong>：<em>“Governments should pass strict laws, schools should educate students, and citizens must raise awareness.”</em> 这类方案之所以只能拿 Band 1–2，是因为它们无视<strong>财政预算约束、地方执行基建能力、与前文根因的对应关系以及潜在副作用</strong>。
+    </p>
+    <div class="formula-card">
+      <div class="formula-main">
+        A* 行动方案四维框 = [1. 直击前文具体根因] + [2. 明确执行主体与政策工具] + [3. 财政/基建约束现实检视] + [4. 副作用缓释配套]
+      </div>
+      <p style="margin-bottom: 0;">
+        写完措施本身后，必须用至少 40% 的篇幅<strong>反过来评估它的可行性局限与折中补偿条件</strong>——承认“没有完美免费方案”，正是考官眼中的政策成熟度！
+      </p>
+    </div>
+
+    <div class="table-wrap">
+      <table class="gp-table">
+        <thead>
+          <tr>
+            <th>议题情境</th>
+            <th>低分“口号空话方案”（必扣分）</th>
+            <th>A* 受约束且紧扣根因的具体方案与评估</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>塑料与废品管理</strong><br>Environment</td>
+            <td><em>“The government should ban all plastic and educate citizens to recycle properly.”</em></td>
+            <td>针对前文“回收分拣基建不足+非正式拾荒者生计依赖”，提出<strong>押金返还制（Deposit-Return Scheme）+ 市政收购站绑定社区合作社</strong>；同时坦承农村地区冷链与回收点建设受制于地方财政赤字，宜优先在人口高密度城市试点。</td>
+          </tr>
+          <tr>
+            <td><strong>青少年算法成瘾</strong><br>Digital world</td>
+            <td><em>“Parents should take away teens' phones and schools should hold lectures about health.”</em></td>
+            <td>针对“推荐算法夜间变现激励”这一根因，提出<strong>立法强制平台对未成年账号默认关闭 22:00 后自动连播与个性化推送（Safety by Design）</strong>；评估指出年龄核验面临生物隐私与跨境合规阻力，故需辅以第三方隐私保护审计。</td>
+          </tr>
+          <tr>
+            <td><strong>能源退煤转型</strong><br>Climate &amp; Energy</td>
+            <td><em>“Every country should shut down coal plants immediately and teach factories to be green.”</em></td>
+            <td>针对“储能成本高与矿区失业”根因，提出<strong>发达国家出资的公正能源转型伙伴关系（JETP）低息信贷 + 矿工定向再培训券</strong>；同时评估跨国气候融资拨款周期长、地方电网升级滞后风险，需分 5 年阶梯替代。</td>
+          </tr>
+          <tr>
+            <td><strong>乡村AI教育鸿沟</strong><br>Education for all</td>
+            <td><em>“Schools should buy free AI tablets for every poor student in the world.”</em></td>
+            <td>针对“硬件只是表层，稳定电力、带宽与师资运维才是真根因”，评估发现纯发平板在缺网村庄会沦为废铁；因此优先提出<strong>离线本地部署微服务器 + 区域中心学校教师数字教学共研补贴</strong>，在有限教育预算内压缩长期维护费。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</article>
+
+<!-- ==================== SECTION 6.2: AO2 REFLECTION & HARVARD CITATIONS ==================== -->
+<article class="topic-section method-section" id="sec-6-2">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>6.2 AO2 (10 分) 个人立场演变四步模板与 AO3 (10 分) Harvard 零抄袭铁律</h3>
+      <div class="section-en-sub">Four-Stage Personal Perspective Development &amp; Strict Harvard Referencing Integrity</div>
+      <div class="tier-row">
+        <span class="badge-cw">AO2 反思 10 分 · AO3 引注 10 分</span>
+        <span class="badge-c1">含交互式 Harvard 引用生成器</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-6-2">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>6.2.1 AO2 (10 分) 个人立场演变反思四步高分模板</h4>
+    <p>
+      IR 结尾的 <strong>250–280 词</strong>决定 AO2 的 <strong>10 分</strong>归属。考官明确指出：AO2 考的不是“你最终支持哪一边”，也不是“总结全文写过的要点”，而是 <strong>Personal Perspective Development（你的个人世界观如何因为这次实证调研而发生真实演变）</strong>。哪怕你最终依然大体倾向原来的方向，也必须精准交代中间受到了哪块证据的冲击，让你的观点变得更严谨、更有边界、更有条件限制。
+    </p>
+    <div class="table-wrap">
+      <table class="gp-table">
+        <thead>
+          <tr>
+            <th>四步演化节拍</th>
+            <th>核心认知动作</th>
+            <th>考官最青睐的高分英文钩子句（Hooks）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Step 1 · 初始预设与未审视偏见</strong><br>Initial Assumption</td>
+            <td>坦言研究前受个人生活圈、主流媒体或情绪直觉影响，曾持有某种简化、绝对的初始看法。</td>
+            <td><em>“Prior to conducting this investigation, I uncritically assumed that [an immediate nationwide ban / simple technological fix] would straightforwardly resolve...”</em></td>
+          </tr>
+          <tr>
+            <td><strong>Step 2 · 认知冲击点（关键转折！）</strong><br>Catalyst Evidence</td>
+            <td>点名具体某一篇文献 <code>(Author, Year)</code> 里的反常数据、弱势群体案例或意外副作用，说明它如何动摇或打脸了 Step 1 的天真预设。</td>
+            <td><em>“However, examining [Author/Org, Year]’s empirical findings on [unintended economic fallout / rural infrastructure limits] directly challenged that assumption by demonstrating...”</em></td>
+          </tr>
+          <tr>
+            <td><strong>Step 3 · 重新权衡多方价值排序</strong><br>Re-evaluating Trade-offs</td>
+            <td>展示自己如何在两个合理诉求之间进行艰难权衡，看清为什么对方群体并非“自私冷漠”，而是受结构性现实驱动。</td>
+            <td><em>“This forced me to weigh [ecological urgency / long-term public health] against [immediate household livelihood / fiscal equity], revealing that opposing stakeholders are constrained by...”</em></td>
+          </tr>
+          <tr>
+            <td><strong>Step 4 · 形成带条件修正的新立场</strong><br>Nuanced New Position</td>
+            <td>提出一个比开头更立体、包含前置条件与分阶段折中的成熟新结论，并说明后续仍需持续关注的研究留白。</td>
+            <td><em>“Consequently, my perspective has evolved: while I still maintain that [core goal] is essential, I now favour a conditional, phased model paired with [mitigation measure] rather than blunt prohibition.”</em></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Static SVG 6.2 -->
+    <div class="svg-figure">
+      <svg viewBox="0 0 760 345" width="760" height="345" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AO2 10分个人观点演化弧结构图">
+        <defs>
+          <marker id="g06-arc-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--svg-blue)"/>
+          </marker>
+        </defs>
+        <rect x="0" y="0" width="760" height="345" rx="10" fill="none"/>
+        <text x="380" y="24" text-anchor="middle" font-size="14" font-weight="800" fill="var(--svg-ink)">图 6.2 · AO2 (10 分) 个人观点演化弧（初始假设 → 反常证据 → 自我推翻 → 成熟立场）</text>
+        <text x="380" y="43" text-anchor="middle" font-size="11.5" font-weight="600" fill="var(--svg-muted)">考官评判标准：有没有展现“被可靠证据修正认知”的思维成长轨迹？</text>
+
+        <!-- Node 1: Initial Assumption -->
+        <rect x="24" y="182" width="154" height="84" rx="8" fill="rgba(100,116,139,0.12)" stroke="var(--svg-muted)" stroke-width="1.5"/>
+        <text x="101" y="203" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-ink)">1. 初始简化预设</text>
+        <text x="101" y="221" text-anchor="middle" font-size="10.2" fill="var(--svg-muted)">直觉/单一媒体偏见</text>
+        <text x="101" y="239" text-anchor="middle" font-size="10.2" fill="var(--svg-muted)">“一刀切禁令最快”</text>
+        <text x="101" y="256" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-ink)">Prior to research...</text>
+
+        <path d="M 181 224 Q 194 202, 207 182" fill="none" stroke="var(--svg-blue)" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#g06-arc-arr)"/>
+
+        <!-- Node 2: Counter-intuitive Evidence -->
+        <rect x="210" y="138" width="158" height="84" rx="8" fill="rgba(217,119,6,0.12)" stroke="var(--svg-amber)" stroke-width="1.6"/>
+        <text x="289" y="159" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-amber)">2. 反常证据冲击</text>
+        <text x="289" y="177" text-anchor="middle" font-size="10.2" fill="var(--svg-ink)">引注 (Author, Year)</text>
+        <text x="289" y="195" text-anchor="middle" font-size="10.2" fill="var(--svg-muted)">揭示意外民生副作用</text>
+        <text x="289" y="212" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-amber)">Challenged my view...</text>
+
+        <path d="M 371 180 Q 384 158, 397 140" fill="none" stroke="var(--svg-blue)" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#g06-arc-arr)"/>
+
+        <!-- Node 3: Self-Reassessment -->
+        <rect x="400" y="96" width="156" height="84" rx="8" fill="rgba(124,58,237,0.12)" stroke="var(--svg-purple)" stroke-width="1.6"/>
+        <text x="478" y="117" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-purple)">3. 自我推翻与权衡</text>
+        <text x="478" y="135" text-anchor="middle" font-size="10.2" fill="var(--svg-ink)">重排各方利益优先级</text>
+        <text x="478" y="153" text-anchor="middle" font-size="10.2" fill="var(--svg-muted)">理解对立群体结构束缚</text>
+        <text x="478" y="170" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-purple)">Forced me to weigh...</text>
+
+        <path d="M 559 138 Q 572 118, 583 102" fill="none" stroke="var(--svg-blue)" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#g06-arc-arr)"/>
+
+        <!-- Node 4: Mature Conditional Stance -->
+        <rect x="586" y="58" width="152" height="86" rx="8" fill="rgba(22,163,74,0.14)" stroke="var(--svg-green)" stroke-width="1.7"/>
+        <text x="662" y="79" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-green)">4. 成熟带条件立场</text>
+        <text x="662" y="97" text-anchor="middle" font-size="10.2" fill="var(--svg-ink)">告别二元绝对化</text>
+        <text x="662" y="115" text-anchor="middle" font-size="10.2" fill="var(--svg-muted)">分阶段方案+配套补偿</text>
+        <text x="662" y="132" text-anchor="middle" font-size="10" font-weight="700" fill="var(--svg-green)">View evolved toward...</text>
+
+        <!-- Bottom Contrast Strip -->
+        <rect x="24" y="284" width="348" height="44" rx="6" fill="rgba(220,38,38,0.10)" stroke="var(--svg-red)" stroke-width="1.2"/>
+        <text x="198" y="302" text-anchor="middle" font-size="10.5" font-weight="800" fill="var(--svg-red)">❌ 假反思 (1–3/10)：只写“我一直支持环保”</text>
+        <text x="198" y="319" text-anchor="middle" font-size="10" fill="var(--svg-muted)">零证据冲击、零立场演变、等同普通作文结尾段</text>
+
+        <rect x="388" y="284" width="350" height="44" rx="6" fill="rgba(22,163,74,0.12)" stroke="var(--svg-green)" stroke-width="1.2"/>
+        <text x="563" y="302" text-anchor="middle" font-size="10.5" font-weight="800" fill="var(--svg-green)">✅ 真演化 (9–10/10)：原以为 X → 证据冲击 → 修正 Z</text>
+        <text x="563" y="319" text-anchor="middle" font-size="10" fill="var(--svg-muted)">紧扣具体文献引注，展现受证据驱动的思维成长</text>
+      </svg>
+      <div class="svg-caption">图 6.2：AO2 最核心的得分动作是“第 2 步与第 3 步”——明确说出哪条证据推翻或修正了你的原始看法。</div>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>6.2.2 AO3 (10 分) Harvard 引用规范与零抄袭铁律</h4>
+    <p>
+      <strong>AO3（10 分）</strong>不仅评估英文流畅度与结构清晰度，更将 <strong>Academic Integrity（学术诚信与规范引注）</strong> 列为核心红线。在提交前学校会进行严格查重与 AI 检测，同时考官会逐一核对文内夹注与文末 <strong>Bibliography / Reference List</strong> 是否严格对应。
+    </p>
+
+    <div class="callout examiner-tip">
+      <div class="callout-title">🚫 什么是隐性抄袭“拼凑洗稿 (Patchwriting)”？</div>
+      <p style="margin-bottom: 0;">
+        很多同学以为只要把原文的几个词换成同义词（比如把 <em>“rapidly depleting groundwater”</em> 改成 <em>“quickly reducing underground water”</em>），保留原句主干结构却不加引号，就不算抄袭——<strong>错！</strong>剑桥将这种只换零星词汇的拼凑改写视为 <strong>Patchwriting（隐性抄袭）</strong>。<br>
+        <strong>安全做法（True Paraphrasing）：</strong>读完原文段落后<strong>合上原文</strong>，用完全不同的句式结构和自己的学术提炼语言写出核心逻辑，并在句末加上 <code>(Author, Year)</code>。只有当原文用词极其精妙、或需要剖析其情绪化措辞时，才用<strong>短直接引语 + 双引号 + 精确页码</strong>。
+      </p>
+    </div>
+
+    <div class="table-wrap">
+      <table class="gp-table">
+        <thead>
+          <tr>
+            <th>引用场景</th>
+            <th>规范 Harvard 文内夹注 (In-text Citation)</th>
+            <th>高频低级扣分错法（严禁出现）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. 间接转述（首选主力方式）</strong><br>Paraphrasing</td>
+            <td><code>... exacerbates rural poverty (World Bank, 2024).</code><br>或作者作主语：<code>According to Sen (2023), ...</code></td>
+            <td>仅在句末写 <code>(World Bank)</code> 缺年份；或把完整网页链接 <code>(https://www.worldbank.org/...)</code> 直接塞进正文括号！</td>
+          </tr>
+          <tr>
+            <td><strong>2. 直接短引（限 10–15 词以内）</strong><br>Direct Quotation</td>
+            <td><code>The union described the tariff as "economically regressive" (Chen, 2023, p. 14).</code></td>
+            <td>大段抄录 40 词原文不加引号；或加了引号却漏掉年份与页码（如有页码）。</td>
+          </tr>
+          <tr>
+            <td><strong>3. 两位 / 三位及以上作者</strong><br>Multiple Authors</td>
+            <td>两位：<code>(Patel and Kim, 2023)</code><br>三位及以上：<code>(Garcia et al., 2024)</code>（注意 <code>et al.</code> 后必须有句点！）</td>
+            <td>把四位作者全写进正文括号；或漏写 <code>et al.</code> 缩写句点；或写成 <code>(Garcia etc., 2024)</code>。</td>
+          </tr>
+          <tr>
+            <td><strong>4. 同一论点交叉印证两份源</strong><br>Multiple Sources</td>
+            <td><code>(OECD, 2023; UNICEF, 2024)</code>（按年份或字母排序并用分号隔开）</td>
+            <td>用加号或乱序堆砌多个来源。</td>
+          </tr>
+          <tr>
+            <td><strong>5. 转引（仅当无法获取一手原文）</strong><br>Secondary Referencing</td>
+            <td><code>(Morales, 2019, cited in Johnson, 2024)</code>（文末只列你实际阅读过的 Johnson, 2024）</td>
+            <td>明明只读了 Johnson 的二手书，却假装读过 Morales 原著并在 Bibliography 抄其书目。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="worked-example">
+      <div class="worked-title">📚 文末 Bibliography / Reference List 全格示范（按第一作者/机构字母 A–Z 排序 · 不计入 2,000 词上限）</div>
+      <ul style="margin-bottom: 0;">
+        <li><strong>学术期刊论文 (Journal Article)：</strong><br>
+          Garcia, L., Tan, W. and Okafor, C. (2024) 'Microplastic shedding in synthetic fast-fashion textiles: A comparative wash-cycle audit', <em>Environmental Science &amp; Policy</em>, 152, pp. 44–56.</li>
+        <li><strong>国际组织 / 政府报告 (Report / Institutional Document)：</strong><br>
+          United Nations Environment Programme (UNEP) (2023) <em>Global Plastic Pollution Outlook: Circularity Pathways to 2040</em>. Nairobi: UNEP. Available at: https://www.unep.org/resources/plastic-outlook (Accessed: 14 October 2025).</li>
+        <li><strong>权威线上新闻 / 网页 (Online Article / Webpage)：</strong><br>
+          Patel, R. (2024) 'Why rural clinics struggle after medical brain drain', <em>BBC Future</em>, 18 March. Available at: https://www.bbc.com/future/article/example (Accessed: 02 November 2025).</li>
+        <li><strong>学术专著 (Book)：</strong><br>
+          Raworth, K. (2017) <em>Doughnut Economics: Seven Ways to Think Like a 21st-Century Economist</em>. London: Random House Business.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="lab-box" data-lab-type="g06"></div>
+</article>
+
+<!-- ==================== PRACTICE SECTION G06 ==================== -->
+<article class="topic-section practice-section" id="sec-sme">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>6.3 Harvard 引用纠错、反思质量辨析与低分段落升格特训</h3>
+      <div class="section-en-sub">6 Interactive Referencing &amp; Reflection MCQs + 3 Authentic IR Paragraph-Upgrade Drills</div>
+      <div class="tier-row">
+        <span class="badge-cw">互动即时诊断</span>
+        <span class="badge-c1">含完整 A* 英文修改示范段与得分点注释</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-sme">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>Section A · 6 道 Harvard 引用纠错与反思质量辨析互动单选</h4>
+
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head"><span class="q-tag">G06 MCQ 1 · Harvard 文内夹注排错</span><span class="q-marks">[1 mark]</span></div>
+      <div class="q-stem-en">Which sentence follows strict Harvard in-text referencing conventions in an IGCSE Individual Report?</div>
+      <div class="q-stem-cn">以下哪一句完全符合 IGCSE IR 对 Harvard 文内夹注（In-text Citation）的规范要求？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>Over 60% of e-waste goes unrecycled globally (https://www.who.int/news/ewaste-2024).</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>Informal e-waste dismantling exposes children to neurotoxic heavy metals, disproportionately affecting low-income neighbourhoods (World Health Organization, 2024).</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>According to a study by Smith, Johnson, Miller, and Davis, solar subsidies boost adoption (2023).</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>The report warns that coastal flooding will double by 2040 (UNEP).</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！B 采用学术转述并用规范的 (机构名, 年份) 括号夹注，简洁准确且直接对应文末书目。" data-err="❌ A 把完整长 URL 塞进了正文（极其不规范且浪费正文字数）；C 有四位作者却未用 Smith et al. (2023)；D 缺少出版年份！"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="D">
+      <div class="exam-q-head"><span class="q-tag">G06 MCQ 2 · 识别隐性抄袭 (Patchwriting)</span><span class="q-marks">[1 mark]</span></div>
+      <div class="q-stem-en">Original source (Lee, 2024): <em>“Algorithmic feeds amplify divisive emotional content because outrage prolongs user session duration and ad impressions.”</em> Which student attempt constitutes unacceptable <strong>patchwriting</strong>?</div>
+      <div class="q-stem-cn">对照上面 Lee (2024) 的原句，学生哪种写法属于依然涉嫌抄袭的“拼凑洗稿 (Patchwriting)”？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>Platform ranking systems favour polarising posts in order to maximise viewing time and advertising revenue (Lee, 2024).</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>Lee (2024) argues that platform business models monetise outrage by using algorithms that keep users scrolling longer.</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>Lee (2024, p. 8) explicitly highlights how “outrage prolongs user session duration” to drive ad impressions.</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>Algorithmic streams boost split emotional posts since anger lengthens user stay length and advertisement views.</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！D 一字一句照着原句语法骨架替换近义词（feeds→streams, amplify→boost, divisive→split, outrage→anger），而且居然连 (Lee, 2024) 的引用署名都省略了！这是典型的抄袭红线。" data-err="❌ A、B 用全新的句式进行了真正的学术转述并附带了引注；C 使用了标准双引号短引加页码，均合规。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="C">
+      <div class="exam-q-head"><span class="q-tag">G06 MCQ 3 · 辨别高分嵌入式来源批判</span><span class="q-marks">[1 mark]</span></div>
+      <div class="q-stem-en">Which sentence best demonstrates <strong>Embedded Source Evaluation</strong> that boosts AO1 marks inside an analytical paragraph?</div>
+      <div class="q-stem-cn">以下哪句话在分析段正文中自然完成了高分“随文来源评估”？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>Source 3 is very reliable because it ends in .org and was written by a famous journalist in 2024.</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>National Plastics Association (2023) proves plastic bans hurt jobs; I will evaluate this source later in my appendix table.</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>Although the National Plastics Association (2023) projects 50,000 job losses from packaging bans, this forecast should be treated cautiously given industry vested interest; an independent OECD review (2024) estimates net employment growth in reuse logistics.</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>Everyone knows business associations always lie about numbers, so we must completely ignore National Plastics Association (2023).</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！C 在引用行业协会预测的同一时刻，点明其“既得利益立场偏见”，并用独立国际组织 OECD (2024) 做交叉印证，一举拿下 AO1 动态评估高分。" data-err="❌ A 以域名“.org”武断定可信；B 把评估推到附录表格；D 情绪化全盘否定（“always lie”），失去平衡客观性。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="A">
+      <div class="exam-q-head"><span class="q-tag">G06 MCQ 4 · 筛出有效行动方案（拒绝口号）</span><span class="q-marks">[1 mark]</span></div>
+      <div class="q-stem-en">In an IR investigating <em>food waste in low-income urban areas</em>, which Course of Action shows strong feasibility and constraint awareness?</div>
+      <div class="q-stem-cn">针对“低收入城市社区食物浪费与冷链缺失”，哪项行动方案体现了受预算/基建约束的成熟可行性？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>Municipal authorities could subsidise solar-powered cold-storage hubs at wholesale markets, though high upfront capital costs require phased rollout via public-private partnerships and vendor fee exemptions.</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>Every citizen should simply stop buying extra vegetables and learn to love leftovers through school posters.</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>Supermarkets must immediately give all unsold food to poor people for free without any transport or safety costs.</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>Governments should pass a strict law banning households from throwing away any food from tomorrow onwards.</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！A 直击底层供应链腐损根因（缺冷链），提出了具体工具（市场光伏冷库），同时诚实剖析财政前期投入制约及分阶段公私合营缓解机制。" data-err="❌ B 是空洞道德口号；C 无视物流与食品安全责任成本；D 脱离居民厨房执法可行性。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="D">
+      <div class="exam-q-head"><span class="q-tag">G06 MCQ 5 · 甄别 AO2 满分立场演变反思</span><span class="q-marks">[1 mark]</span></div>
+      <div class="q-stem-en">Which Personal Perspective extract best achieves Top Band (9–10/10 marks) for <strong>AO2 Reflection</strong>?</div>
+      <div class="q-stem-cn">以下哪段个人反思最符合 AO2（10 分）最高档的“四步观点演化弧”标准？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>In conclusion, climate change is a huge global problem and I have always believed governments must use more green energy.</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>During this research, I read eight articles and learned many shocking facts about carbon emissions in developing nations.</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>I completely changed my mind from supporting clean energy to supporting coal power because coal is cheaper.</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>Initially I favoured immediate carbon tariffs on all imported goods; however, reviewing UNCTAD (2024) data on small exporter compliance costs made me recognise the risk of deepening rural poverty, shifting my view toward pairing border tariffs with transitional green-tech aid.</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！D 完整走通“初始假设（一刀切碳关税）→ 具体证据冲击（UNCTAD 2024 对小出口商与农村贫困的影响）→ 价值权衡 → 带条件修正的成熟新立场（关税+转型援助并行）”。" data-err="❌ A 毫无认知转变（“always believed”）；B 只是流水账说学到很多知识，未说明观点如何变化；C 走向另一端的粗糙绝对化。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head"><span class="q-tag">G06 MCQ 6 · Bibliography 书目排错检查</span><span class="q-marks">[1 mark]</span></div>
+      <div class="q-stem-en">Inspect this Bibliography entry for a web report: <em>“World Health Organization (2024). Global Air Quality Update. Available at: https://www.who.int/air2024”</em>. What essential Harvard detail is missing?</div>
+      <div class="q-stem-cn">检查这条线上报告的 Harvard 参考文献条目，遗漏了哪项核心规范要素？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>The word count of the WHO report.</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>The date the student accessed the webpage, e.g. <code>(Accessed: 18 November 2025)</code>, plus italicisation of the report title.</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>A 100-word summary evaluating whether WHO is trustworthy.</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>The student's own candidate number next to the URL.</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！网页及在线报告的 Harvard 书目必须标注访问日期 (Accessed: Day Month Year)，因为网页内容可能更新或失效，且文献标题应使用斜体。" data-err="❌ A、D 完全不需要；C 绝对不能把来源批判堆在 Bibliography 里，评价应嵌入正文论证中。"></div>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>Section B · 3 组真实 IR 低分段落升格大题（附 A* 英文改造示范与得分点注释）</h4>
+    <p>这 3 组低分原稿直接取材自真实考场失分重灾区。先思考如何动手术改造它们，再点开 <strong>A* 英文示范段</strong> 逐句对照得分批注。</p>
+
+    <!-- Upgrade Drill 1 -->
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">升格大题 1 · 孤立堆砌数据 + 零来源批判段</span><span class="q-marks">[AO1 Embedded Evaluation Upgrade]</span></div>
+      <div class="q-stem-en">
+        <strong>Weak IR Draft (Band 2):</strong><br>
+        <em>“Online tutoring AI apps can make every rural child smart. An advertising brochure by EduTech Corp (2024) says 92% of students who used its app improved their maths score in just two weeks! Another blog I found on Google says AI will replace human teachers completely by 2030. Therefore, AI proves rural education inequality is already solved.”</em>
+      </div>
+      <div class="q-stem-cn">诊断该段在商业利益偏见、样本/方法漏洞与来源权威性上的缺陷，并升格为嵌入式随文批判的 A* 论证段。</div>
+      <details class="ms-details">
+        <summary>查看 A* 英文改造示范段（约 130 词）与考官逐点批注</summary>
+        <div class="ms-body">
+          <div class="model-essay" style="margin:6px 0 10px 0;">
+            <div class="essay-head">
+              <span>A* 升格示范段 · Embedded Evaluation &amp; Cross-Referencing</span>
+              <span class="band-pill band-high">Top Band AO1</span>
+            </div>
+            <div class="essay-body">
+              <p style="margin-bottom:0;">Proponents of educational technology argue that generative AI tutors can rapidly narrow urban-rural achievement gaps. <mark class="hl-content">For example, EduTech Corp (2024) reports that 92% of pilot users raised their mathematics scores within two weeks.</mark> <mark class="hl-lang">However, this claim requires critical scrutiny: as a commercial vendor marketing paid subscriptions, the company holds a clear vested interest in showcasing short-term gains, while its two-week trial omits sample demographics and relies on self-selected urban subscribers with stable broadband.</mark> <mark class="hl-content">Cross-referencing this with an independent UNESCO (2024) field review</mark> reveals that <mark class="hl-lang">in low-income rural districts lacking reliable electricity or teacher facilitation, unguided software deployment yields negligible learning gains and occasionally widens pre-existing disparities.</mark> Consequently, technological optimism overlooks infrastructural barriers.</p>
+            </div>
+          </div>
+          <p><span class="ms-mark">[得分点 1 · 商业利益偏见]</span> 精准点破 EduTech Corp 作为付费软件商存在推广订阅的 <code>vested interest</code>，不盲信“92% 提分”广告宣传。<br>
+          <span class="ms-mark">[得分点 2 · 方法与样本局限]</span> 随文指出“仅两周试用期太短”以及“自愿付费的城市宽带用户样本无法代表农村”（Sample bias），直接替代无名博客。<br>
+          <span class="ms-mark">[得分点 3 · 权威交叉验证]</span> 用独立多边机构 <code>UNESCO (2024)</code> 田野调查校准结论，顺势完成从“技术乌托邦”向“基础设施差距”的深刻衔接。</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- Upgrade Drill 2 -->
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">升格大题 2 · 空洞口号型“行动方案段”</span><span class="q-marks">[Course of Action &amp; Constraints Upgrade]</span></div>
+      <div class="q-stem-en">
+        <strong>Weak IR Draft (Band 1–2):</strong><br>
+        <em>“To stop ocean microplastic pollution from fast fashion, governments must make strict laws immediately to ban synthetic polyester clothes. Also, schools should educate teenagers to love nature and stop shopping online. If everyone cooperates, the ocean will become clean.”</em>
+      </div>
+      <div class="q-stem-cn">把上面忽略工业成本、服装价格与执法边界的“天真口号方案”，升格为受预算、基建与社会公平约束的可行方案评估段。</div>
+      <details class="ms-details">
+        <summary>查看 A* 英文改造示范段（约 138 词）与考官逐点批注</summary>
+        <div class="ms-body">
+          <div class="model-essay" style="margin:6px 0 10px 0;">
+            <div class="essay-head">
+              <span>A* 升格示范段 · Root-Cause-Aligned &amp; Constrained Action</span>
+              <span class="band-pill band-high">Top Band AO1</span>
+            </div>
+            <div class="essay-body">
+              <p style="margin-bottom:0;">Rather than an abrupt ban on synthetic fibres—which would <mark class="hl-lang">disproportionately inflate clothing prices for low-income households</mark> and disrupt export garment jobs—a more viable course of action targets the primary shedding mechanism directly: <mark class="hl-content">mandating microfibre-capture filters in newly manufactured domestic washing machines (France, 2025 model) paired with Extended Producer Responsibility (EPR) levies on ultra-fast retailers</mark>. <mark class="hl-lang">Nevertheless, this approach faces tangible implementation constraints.</mark> Retrofitting older municipal wastewater plants demands substantial upfront fiscal investment, while low-income households often rely on second-hand appliances lacking built-in filtration. <mark class="hl-content">To prevent regressive economic harm, EPR fees collected from high-volume brands could be ring-fenced to subsidise affordable add-on filters for community laundries and lower-income homes.</mark> This phased, funded mechanism links environmental enforcement directly to social equity.</p>
+            </div>
+          </div>
+          <p><span class="ms-mark">[得分点 1 · 淘汰天真禁令]</span> 先解释为何“立即禁绝涤纶”不可行——会推高低收入家庭衣物开销并冲击纺织就业。<br>
+          <span class="ms-mark">[得分点 2 · 机制精准对齐根因]</span> 锚定微纤维脱落最主要途径（家用洗涤排水），提出“新机强制过滤 + 品牌 EPR 生态税”具体工具。<br>
+          <span class="ms-mark">[得分点 3 · 承认基建预算约束+缓释]</span> 主动承认市政水厂改造耗资巨大且低收入家庭使用旧洗衣机，随之提出将品牌 EPR 税专项补贴（ring-fenced）社区洗衣房与加装滤网，逻辑闭环完美！</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- Upgrade Drill 3 -->
+    <div class="exam-q">
+      <div class="exam-q-head"><span class="q-tag">升格大题 3 · 干瘪“复述结论型”AO2 个人反思段</span><span class="q-marks">[AO2 10-Mark Reflection Upgrade]</span></div>
+      <div class="q-stem-en">
+        <strong>Weak IR Draft (2/10 Marks for AO2):</strong><br>
+        <em>“In conclusion, my research taught me a lot about urban congestion taxes. There are both advantages and disadvantages, as rich people can drive while poor drivers pay more. Overall, my personal opinion has not changed because I still think reducing car traffic is very important for clean air in cities.”</em>
+      </div>
+      <div class="q-stem-cn">把这段只有 2 分的静态总结段，用“AO2 四步演化弧模板”升格为能拿满 9–10/10 分的个人视角演变反思段（约 170 词）。</div>
+      <details class="ms-details">
+        <summary>查看 A* 英文改造示范段（约 168 词）与考官逐点批注</summary>
+        <div class="ms-body">
+          <div class="model-essay" style="margin:6px 0 10px 0;">
+            <div class="essay-head">
+              <span>A* 升格示范段 · 4-Stage AO2 Personal Perspective Arc</span>
+              <span class="band-pill band-high">AO2 · 9–10 / 10</span>
+            </div>
+            <div class="essay-body">
+              <p style="margin-bottom:0;"><mark class="hl-content">Prior to undertaking this investigation, I uncritically assumed that strict city-centre congestion charges were an unambiguously fair tool to curb urban emissions.</mark> <mark class="hl-lang">However, evaluating municipal transport surveys from outer suburban boroughs (Transport for London, 2023; Morales, 2024) significantly challenged that initial assumption.</mark> These sources revealed that night-shift healthcare aides and self-employed tradespeople residing in transit-poor suburbs lack viable rail alternatives, meaning flat daily charges act as a regressive tax on essential workers rather than merely deterring luxury commuters. <mark class="hl-lang">This forced me to weigh environmental urgency against spatial socio-economic equity.</mark> <mark class="hl-content">Consequently, while I still maintain that disincentivising private car dependency is vital for long-term respiratory health, my perspective has evolved away from endorsing uniform flat fees.</mark> I now favour tiered, income-sensitive exemptions paired with pre-funded suburban electric bus corridors, recognising that environmental policy succeeds only when viable public alternatives precede financial penalties.</p>
+            </div>
+          </div>
+          <p><span class="ms-mark">[Step 1 · 初始偏见]</span> 坦承原本直觉认为“拥堵费天然公平有效”。<br>
+          <span class="ms-mark">[Step 2 · 具体来源震撼]</span> 引用 <code>Transport for London (2023)</code> 与 <code>Morales (2024)</code> 揭示远郊夜班医护与个体技工“无地铁可坐”的出行盲区。<br>
+          <span class="ms-mark">[Step 3 · 价值权衡]</span> 清晰呈现“减排紧迫性 vs 空间与阶层公平”的内心再权衡。<br>
+          <span class="ms-mark">[Step 4 · 带条件成熟立场]</span> 没有全盘否定减排目标，而是把方案修正为“阶梯豁免 + 先修远郊电动公交走廊后再收费”，展现极高的思辨成熟度！</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</article>
+
+<!-- ==================== CONCEPT BANK G06 (16 CARDS) ==================== -->
+<article class="topic-section" id="app-concepts">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>6.4 随文来源批判、立场转变钩子句与 Harvard 引用规范卡片 (16 张)</h3>
+      <div class="section-en-sub">16 Interactive Cards: Embedded Source Critique, AO2 Reflection Hooks &amp; Referencing Rules</div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="app-concepts">○ 标记掌握</button>
+  </div>
+
+  <div class="concept-toolbar">
+    <div class="concept-filter-group" id="conceptFilterTabs">
+      <button type="button" class="tab-btn active" data-concept-part="all">全部 16 张</button>
+      <button type="button" class="tab-btn" data-concept-part="p1">随文来源肯定与交叉验证 (4张)</button>
+      <button type="button" class="tab-btn" data-concept-part="p2">揭露偏见、样本与时效瑕疵 (4张)</button>
+      <button type="button" class="tab-btn" data-concept-part="p3">AO2 立场转变四步钩子句 (4张)</button>
+      <button type="button" class="tab-btn" data-concept-part="p4">行动约束与 Harvard 规范 (4张)</button>
+    </div>
+    <div class="concept-actions">
+      <span class="concept-count-pill" id="conceptCountPill">显示 16 / 16 题</span>
+      <button type="button" class="icon-btn" id="conceptQuizToggle">🙈 开启遮罩自测</button>
+    </div>
+  </div>
+
+  <div class="concept-grid" id="conceptGrid">
+    <!-- p1: 4 cards -->
+    <div class="concept-card" data-part="p1">
+      <div class="cq-head"><span class="q-tag">G06-C01 · Academic Credibility</span><span class="badge-cw">嵌入批判</span></div>
+      <div class="cq-en">Embed a brief praise of a source's peer-reviewed expertise and recent publication date inside an argument sentence.</div>
+      <div class="cq-cn">如何用一句简短插入语随文点明某来源“经同行评议且时效最新”，顺势提升论证可信度？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考表达</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 句式：</strong>Drawing on a <span class="kw">peer-reviewed longitudinal study</span> by <span class="kw">(Author, 2024)</span>, this finding <span class="kw">carries high empirical weight</span> due to its recent post-pandemic dataset.</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 用法：</strong>用 <code>peer-reviewed</code> 与 <code>longitudinal</code>（纵向追踪）精准描述高可信来源，切忌写空泛的 <code>very reliable</code>。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p1">
+      <div class="cq-head"><span class="q-tag">G06-C02 · Corroboration</span><span class="badge-cw">交叉印证</span></div>
+      <div class="cq-en">Show that two independent sources confirm the same trend despite coming from different institutional backgrounds.</div>
+      <div class="cq-cn">两份背景独立的来源互相印证同一个数据趋势时，怎么写出这种“证据合力”？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考表达</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 句式：</strong>This conclusion is <span class="kw">independently corroborated by</span> <span class="kw">[Org A, 2023]</span> and <span class="kw">[Author B, 2024]</span>, strengthening confidence that...</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 用法：</strong><code>independently corroborated by</code>（独立交叉印证）是考官极度青睐的研究素养关键词。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p1">
+      <div class="cq-head"><span class="q-tag">G06-C03 · Qualified Trust</span><span class="badge-c1">平衡肯定</span></div>
+      <div class="cq-en">Acknowledge the statistical value of a government report while subtly noting one regional limitation.</div>
+      <div class="cq-cn">如何在肯定政府官方统计样本庞大的同时，平衡指出其覆盖盲区？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考表达</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 句式：</strong>Although <span class="kw">[Ministry, 2024]</span> draws on a <span class="kw">nationally representative sample</span>, its figures <span class="kw">exclude informal-sector workers</span>, leaving a partial blind spot.</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 用法：</strong>先褒其样本量，再点出结构遗漏（如非正式就业人员），展现成熟双向评估。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p1">
+      <div class="cq-head"><span class="q-tag">G06-C04 · Qualitative Value</span><span class="badge-c1">质性价值</span></div>
+      <div class="cq-en">Justify why a small-scale local interview source is still valuable despite lacking statistical generalisability.</div>
+      <div class="cq-cn">小样本质性访谈虽然无法统计外推，但为何在探讨本土视角时依然不可或缺？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考表达</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 句式：</strong>While <span class="kw">too narrow to generalise nationally</span>, <span class="kw">(Author, 2024)’s qualitative interviews</span> capture <span class="kw">lived community barriers</span> invisible in macro aggregates.</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 用法：</strong>明确区分宏观统计（广度）与草根访谈（深度），说明为何需要二者互补。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- p2: 4 cards -->
+    <div class="concept-card" data-part="p2">
+      <div class="cq-head"><span class="q-tag">G06-C05 · Vested Interest</span><span class="badge-cw">揭露偏见</span></div>
+      <div class="cq-en">Challenge a corporate-funded or lobbying report cleanly inside the analytical paragraph without sounding emotional.</div>
+      <div class="cq-cn">如何在正文中冷静、得体地拆穿企业赞助或游说团体的利益冲突偏见？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考表达</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 句式：</strong>This optimistic projection must be <span class="kw">treated cautiously</span>, as the report is <span class="kw">funded by [industry body]</span>, creating a <span class="kw">clear commercial vested interest</span> in opposing regulation.</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 用法：</strong>用 <code>treated cautiously</code> 和 <code>vested interest</code> 替代情绪化词汇如 <code>biased lies</code>。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p2">
+      <div class="cq-head"><span class="q-tag">G06-C06 · Sample Bias</span><span class="badge-cw">样本局限</span></div>
+      <div class="cq-en">Expose an unrepresentative sample (urban-only or self-selected online respondents) in one compact clause.</div>
+      <div class="cq-cn">用紧凑从句随文点破调查样本存在城市单一性或自愿填报偏差。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考表达</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 句式：</strong>However, because the survey relied on a <span class="kw">self-selected online sample of urban youths</span>, its findings <span class="kw">cannot be extrapolated</span> to rural or elderly populations.</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 用法：</strong><code>self-selected sample</code>（自选偏差）与 <code>extrapolated</code>（外推）是方法批判核心词。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p2">
+      <div class="cq-head"><span class="q-tag">G06-C07 · Outdated Data</span><span class="badge-c1">时效瑕疵</span></div>
+      <div class="cq-en">Critique an older source whose data predates major technological or post-pandemic economic shifts.</div>
+      <div class="cq-cn">指出一篇较早研究因未覆盖疫后或新技术变革而使结论削弱的句式。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考表达</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 句式：</strong>Although <span class="kw">(Author, 2017)</span> offers useful baseline context, its relevance is <span class="kw">dated</span> because it <span class="kw">predates the post-2022 surge in</span> generative AI / inflation.</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 用法：</strong>解释“为什么过时”（具体发生了哪项结构性变化），而不只说年份太老。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p2">
+      <div class="cq-head"><span class="q-tag">G06-C08 · Correlation Trap</span><span class="badge-c1">逻辑谬误</span></div>
+      <div class="cq-en">Critique a source that confuses statistical correlation with direct causation (e.g. screen-time surveys).</div>
+      <div class="cq-cn">批评某研究仅依赖横断面相关性调查，却武断声称直接因果关系的句框。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考表达</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 句式：</strong>Since this study uses <span class="kw">cross-sectional self-reported data</span>, it demonstrates <span class="kw">correlation rather than proven causation</span>.</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 用法：</strong>区分 <code>correlation</code>（相关）与 <code>causation</code>（因果），瞬间彰显最高阶批判思维。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- p3: 4 cards -->
+    <div class="concept-card" data-part="p3">
+      <div class="cq-head"><span class="q-tag">G06-C09 · Step 1 Assumption</span><span class="badge-cw">AO2 第一步</span></div>
+      <div class="cq-en">Confess an unexamined, overly simplistic assumption held at the start of your research.</div>
+      <div class="cq-cn">AO2 反思首句如何自然交代自己调研前的“天真或单一预设”？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考表达</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 句式：</strong><span class="kw">Prior to undertaking this investigation, I uncritically assumed that</span> [strict regulation / pure technology] was an <span class="kw">unambiguously effective solution</span>.</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 点睛：</strong><code>uncritically assumed</code> 瞬间拉出前后反差弧的起点高度。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p3">
+      <div class="cq-head"><span class="q-tag">G06-C10 · Step 2 Catalyst</span><span class="badge-cw">AO2 第二步</span></div>
+      <div class="cq-en">Pinpoint the specific piece of cited evidence that disrupted or complicated your initial stance.</div>
+      <div class="cq-cn">如何在 AO2 中精准指明“被哪篇引用证据震撼或推翻了原先看法”？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考表达</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 句式：</strong>However, <span class="kw">evaluating (Author, Year)’s empirical evidence</span> on <span class="kw">[unintended side-effect]</span> <span class="kw">forced me to reconsider</span> my original stance.</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 点睛：</strong>反思段里再次写出具体 <code>(Author, Year)</code> 是 AO2 拿 9–10 分的铁证动作！</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p3">
+      <div class="cq-head"><span class="q-tag">G06-C11 · Step 3 Re-weighing</span><span class="badge-cw">AO2 第三步</span></div>
+      <div class="cq-en">Articulate how you re-evaluated competing ethical, economic, or social priorities between stakeholders.</div>
+      <div class="cq-cn">怎样写出调研后重新权衡两难价值排序的内心挣扎与认知深化？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考表达</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 句式：</strong>This pushed me to <span class="kw">re-evaluate the trade-off between</span> <span class="kw">[Value A]</span> and <span class="kw">[Value B]</span>, recognising that local resistance stems from <span class="kw">structural necessity rather than apathy</span>.</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 点睛：</strong><code>structural necessity rather than apathy</code>（出于现实刚需而非冷漠）展现极深共情与洞察。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p3">
+      <div class="cq-head"><span class="q-tag">G06-C12 · Step 4 Nuanced Stance</span><span class="badge-cw">AO2 第四步</span></div>
+      <div class="cq-en">State your matured, conditional final perspective that integrates safeguards for vulnerable groups.</div>
+      <div class="cq-cn">如何写出“既保留核心关切，又加入保护条件修正”的成熟最终立场？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考表达</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 句式：</strong>Consequently, <span class="kw">my perspective has evolved</span>: while I still support <span class="kw">[Goal X]</span>, I now advocate <span class="kw">a phased model conditional upon [Safeguard Y]</span>.</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 点睛：</strong>由绝对变有条件（<code>conditional upon...</code>），直接宣告认知成熟。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- p4: 4 cards -->
+    <div class="concept-card" data-part="p4">
+      <div class="cq-head"><span class="q-tag">G06-C13 · Fiscal / Infra Constraint</span><span class="badge-c1">行动评估</span></div>
+      <div class="cq-en">Critique why an expensive national intervention struggles in regions with tight public budgets or weak infrastructure.</div>
+      <div class="cq-cn">评估行动方案时，怎么专业地道地写出财政预算与执行基建限制？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考表达</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 句式：</strong>Despite its conceptual promise, nationwide deployment is <span class="kw">constrained by high upfront capital expenditure</span> and <span class="kw">uneven municipal enforcement capacity</span>.</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 用法：</strong>用具体资本支出与基层执法瓶颈代替空泛的“it costs too much”。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p4">
+      <div class="cq-head"><span class="q-tag">G06-C14 · Ring-Fenced Funding</span><span class="badge-c1">缓解配套</span></div>
+      <div class="cq-en">Propose a realistic funding mechanism that prevents a green or health tax from hurting low-income citizens.</div>
+      <div class="cq-cn">如何为政策副作用提出财政闭环缓释方案（专款定向补偿弱势群体）？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考表达</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 句式：</strong>To <span class="kw">mitigate regressive financial burdens</span>, revenues from <span class="kw">[levy/tax]</span> should be <span class="kw">ring-fenced to subsidise</span> targeted transitions for <span class="kw">[vulnerable group]</span>.</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 用法：</strong><code>ring-fenced</code>（专款专用隔离保护）体现极高政策素养。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p4">
+      <div class="cq-head"><span class="q-tag">G06-C15 · In-Text Et Al. Rule</span><span class="badge-c1">Harvard 规范</span></div>
+      <div class="cq-en">State the exact Harvard rule for citing a source written by 3 or more authors in-text versus in the Bibliography.</div>
+      <div class="cq-cn">三位及以上作者的论文，在文内夹注和文末书目中各有什么准确写法？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考表达</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 规范：</strong>In-text uses <span class="kw">(FirstAuthor et al., Year)</span>; the Bibliography normally lists <span class="kw">all authors' surnames and initials</span> in full (check institutional consistency).</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 提醒：</strong>注意 <code>et al.</code> 中的 <code>al.</code> 后面必须带句点，且前后格式需全篇绝对一致。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p4">
+      <div class="cq-head"><span class="q-tag">G06-C16 · Web Reference Format</span><span class="badge-c1">Harvard 规范</span></div>
+      <div class="cq-en">Give the complete 5-element Harvard Bibliography formula for an online organisation report or webpage.</div>
+      <div class="cq-cn">背熟网页或电子报告文末 Harvard 参考文献条目的五要素黄金公式。</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看参考表达</div>
+        <div class="cq-answer-inner">
+          <div><strong>EN 公式：</strong><span class="kw">Author/Organisation (Year)</span> <em>Title in italics</em>. <span class="kw">Available at: [URL]</span> <span class="kw">(Accessed: Day Month Year)</span>.</div>
+          <div style="margin-top:4px;color:var(--text-muted);"><strong>CN 提醒：</strong>文末 Bibliography <strong>不计入 2,000 词上限</strong>，按作者姓氏/机构首字母 A–Z 严格排列！</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+        <nav class="chapter-pager" aria-label="专题切换导航">
+          <div><a class="pager-btn" href="G05_Individual_Report_Design_and_Perspectives.html">← G05 IR 个人报告：A* 选题公式与真三视角深度结构</a></div>
+          <div><a class="pager-btn primary" href="index.html">🏠 返回 8 专题总目录</a></div>
+          <div><a class="pager-btn" href="G07_Team_Project_and_Reflective_Paper.html">G07 Team Project 本土行动、300–400 词 ERP 与 45 分反思论文 →</a></div>
+        </nav>
+      </div>
+    </main>
+  </div>
+
+  <button type="button" class="back-top-btn" id="backTopBtn" title="返回顶部">↑</button>
+
+  <script>
+(function () {
+  'use strict';
+
+  const THEME_KEY = 'igcse_gp0457_theme';
+  const modCode = (document.body && document.body.getAttribute('data-chapter-code')) || 'HUB';
+  const STORAGE_PREFIX = 'igcse_gp0457_' + modCode.toLowerCase() + '_';
+  const htmlEl = document.documentElement;
+  const bodyEl = document.body;
+
+  // All state variables declared cleanly at top of IIFE (prevents TDZ errors)
+  let currentViewMode = localStorage.getItem(STORAGE_PREFIX + 'viewMode') || 'all';
+  let activeConceptPart = 'all';
+  let quizMasked = localStorage.getItem(STORAGE_PREFIX + 'quizMasked') === '1';
+  let allMsExpanded = false;
+  let masteredIds = [];
+  let gpTimerId = null;
+  try {
+    masteredIds = JSON.parse(localStorage.getItem(STORAGE_PREFIX + 'mastered') || '[]');
+    if (!Array.isArray(masteredIds)) masteredIds = [];
+  } catch (e) {
+    masteredIds = [];
+  }
+
+  // ---------- 1. Theme Toggle ----------
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+
+  function applyTheme(theme) {
+    htmlEl.setAttribute('data-theme', theme);
+    if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem(THEME_KEY, theme);
+  }
+  applyTheme(localStorage.getItem(THEME_KEY) || 'light');
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      applyTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  }
+
+  // ---------- 2. View Mode Filter (All / Method / Practice / Cards) ----------
+  function applyViewMode(mode) {
+    currentViewMode = mode;
+    bodyEl.classList.remove('mode-method', 'mode-practice', 'mode-cards');
+    if (mode === 'method') bodyEl.classList.add('mode-method');
+    if (mode === 'practice') bodyEl.classList.add('mode-practice');
+    if (mode === 'cards') bodyEl.classList.add('mode-cards');
+    document.querySelectorAll('[data-view-mode]').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-view-mode') === mode);
+    });
+    localStorage.setItem(STORAGE_PREFIX + 'viewMode', mode);
+  }
+  document.querySelectorAll('[data-view-mode]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      applyViewMode(btn.getAttribute('data-view-mode'));
+    });
+  });
+
+  // ---------- 3. Sidebar Drawer & Accordion ----------
+  const sidebar = document.getElementById('sidebar');
+  const menuToggle = document.getElementById('menuToggle');
+  if (menuToggle && sidebar) {
+    menuToggle.addEventListener('click', function () { sidebar.classList.toggle('open'); });
+    sidebar.querySelectorAll('.nav-link').forEach(function (lnk) {
+      lnk.addEventListener('click', function () {
+        if (window.innerWidth <= 980) sidebar.classList.remove('open');
+      });
+    });
+  }
+  document.querySelectorAll('.nav-unit-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const unit = btn.closest('.nav-unit');
+      if (unit) unit.classList.toggle('collapsed');
+    });
+  });
+
+  // ---------- 4. Mastery Progress Tracker ----------
+  const progressText = document.getElementById('progressText');
+  const progressFill = document.getElementById('progressFill');
+  const masterBtns = Array.from(document.querySelectorAll('.master-btn'));
+  const totalSections = masterBtns.length;
+  const validIds = new Set(masterBtns.map(function (b) { return b.getAttribute('data-section-id'); }));
+
+  function renderMastery() {
+    const doneList = masteredIds.filter(function (id) { return validIds.has(id); });
+    localStorage.setItem(STORAGE_PREFIX + 'total', String(totalSections));
+    if (progressText) progressText.textContent = doneList.length + '/' + totalSections;
+    if (progressFill && totalSections > 0) {
+      progressFill.style.width = Math.round((doneList.length / totalSections) * 100) + '%';
+    }
+    masterBtns.forEach(function (btn) {
+      const sid = btn.getAttribute('data-section-id');
+      const done = doneList.indexOf(sid) !== -1;
+      btn.classList.toggle('is-mastered', done);
+      btn.textContent = done ? '✓ 已掌握' : '○ 标记掌握';
+    });
+    document.querySelectorAll('.nav-link').forEach(function (lnk) {
+      const id = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('mastered', doneList.indexOf(id) !== -1);
+    });
+  }
+  masterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const sid = btn.getAttribute('data-section-id');
+      const idx = masteredIds.indexOf(sid);
+      if (idx === -1) masteredIds.push(sid);
+      else masteredIds.splice(idx, 1);
+      localStorage.setItem(STORAGE_PREFIX + 'mastered', JSON.stringify(masteredIds));
+      renderMastery();
+    });
+  });
+  if (totalSections > 0) renderMastery();
+
+  // ---------- 5. Global Toggle Details & Print ----------
+  const toggleAllMs = document.getElementById('toggleAllMs');
+  if (toggleAllMs) {
+    toggleAllMs.addEventListener('click', function () {
+      allMsExpanded = !allMsExpanded;
+      document.querySelectorAll('details.ms-details').forEach(function (det) { det.open = allMsExpanded; });
+      const lbl = toggleAllMs.querySelector('.btn-label');
+      if (lbl) lbl.textContent = allMsExpanded ? '收起解析' : '展开解析';
+      toggleAllMs.classList.toggle('active', allMsExpanded);
+    });
+  }
+  const printBtn = document.getElementById('printBtn');
+  if (printBtn) printBtn.addEventListener('click', function () { window.print(); });
+
+  // ---------- 6. Instant Search ----------
+  const searchInput = document.getElementById('searchInput');
+  const searchClear = document.getElementById('searchClear');
+  const searchBar = document.getElementById('searchBar');
+  const searchSummary = document.getElementById('searchSummary');
+  const searchResetBtn = document.getElementById('searchResetBtn');
+  const emptySearchNotice = document.getElementById('emptySearchNotice');
+
+  function runSearch() {
+    if (!searchInput) return;
+    const raw = searchInput.value.trim().toLowerCase();
+    if (searchClear) searchClear.style.display = raw ? 'block' : 'none';
+    const sections = Array.from(document.querySelectorAll('.topic-section'));
+    if (!raw) {
+      sections.forEach(function (s) { s.classList.remove('search-dim'); });
+      if (searchBar) searchBar.classList.remove('visible');
+      if (emptySearchNotice) emptySearchNotice.style.display = 'none';
+      return;
+    }
+    let hits = 0;
+    sections.forEach(function (sec) {
+      const ok = sec.textContent.toLowerCase().indexOf(raw) !== -1;
+      sec.classList.toggle('search-dim', !ok);
+      if (ok) hits++;
+    });
+    if (searchBar) searchBar.classList.add('visible');
+    if (searchSummary) searchSummary.textContent = '关键词 “' + searchInput.value.trim() + '” 匹配 ' + hits + ' 个板块';
+    if (emptySearchNotice) emptySearchNotice.style.display = hits === 0 ? 'block' : 'none';
+  }
+  if (searchInput) searchInput.addEventListener('input', runSearch);
+  function resetSearch() { if (searchInput) searchInput.value = ''; runSearch(); }
+  if (searchClear) searchClear.addEventListener('click', resetSearch);
+  if (searchResetBtn) searchResetBtn.addEventListener('click', resetSearch);
+
+  // ---------- 7. Interactive MCQ Grading ----------
+  document.querySelectorAll('.exam-q[data-mcq-answer]').forEach(function (qBox) {
+    const ans = qBox.getAttribute('data-mcq-answer');
+    const fb = qBox.querySelector('.mcq-feedback');
+    const opts = qBox.querySelectorAll('.mcq-opt');
+    opts.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const chosen = btn.getAttribute('data-opt');
+        opts.forEach(function (o) { o.classList.remove('correct', 'wrong'); });
+        if (chosen === ans) {
+          btn.classList.add('correct');
+          if (fb) { fb.textContent = fb.getAttribute('data-ok') || '✅ 回答正确！'; fb.className = 'mcq-feedback visible ok'; }
+        } else {
+          btn.classList.add('wrong');
+          opts.forEach(function (o) { if (o.getAttribute('data-opt') === ans) o.classList.add('correct'); });
+          if (fb) { fb.textContent = fb.getAttribute('data-err') || '❌ 未选对，请核对评分标准解析。'; fb.className = 'mcq-feedback visible err'; }
+        }
+      });
+    });
+  });
+
+  // ---------- 8. Flashcards Filter & Mask ----------
+  const conceptCountPill = document.getElementById('conceptCountPill');
+  const conceptQuizToggle = document.getElementById('conceptQuizToggle');
+
+  function filterConcepts() {
+    const cards = Array.from(document.querySelectorAll('#conceptGrid .concept-card'));
+    if (!cards.length) return;
+    let visible = 0;
+    cards.forEach(function (card) {
+      const part = card.getAttribute('data-part');
+      const show = activeConceptPart === 'all' || part === activeConceptPart;
+      card.classList.toggle('concept-hidden', !show);
+      if (show) visible++;
+    });
+    if (conceptCountPill) conceptCountPill.textContent = '显示 ' + visible + ' / ' + cards.length + ' 题';
+  }
+
+  document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      activeConceptPart = btn.getAttribute('data-concept-part');
+      document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      filterConcepts();
+    });
+  });
+
+  function applyQuizMask(masked) {
+    quizMasked = masked;
+    document.querySelectorAll('#conceptGrid .concept-card').forEach(function (c) { c.classList.toggle('masked', masked); });
+    if (conceptQuizToggle) {
+      conceptQuizToggle.textContent = masked ? '👁️ 显示全部答案' : '🙈 开启遮罩自测';
+      conceptQuizToggle.classList.toggle('active', masked);
+    }
+    localStorage.setItem(STORAGE_PREFIX + 'quizMasked', masked ? '1' : '0');
+  }
+  if (conceptQuizToggle) {
+    conceptQuizToggle.addEventListener('click', function () { applyQuizMask(!quizMasked); });
+  }
+  document.querySelectorAll('#conceptGrid .cq-answer').forEach(function (box) {
+    box.addEventListener('click', function () {
+      const card = box.closest('.concept-card');
+      if (card && card.classList.contains('masked')) card.classList.remove('masked');
+    });
+  });
+
+  function countWords(str) {
+    const cleaned = (str || '').trim();
+    return cleaned ? cleaned.split(/\s+/).filter(Boolean).length : 0;
+  }
+
+  // ---------- 9. All 8 Interactive GP 0457 Strategy Labs (g01 – g08) ----------
+  function mountGpLab(el) {
+    const t = el.getAttribute('data-lab-type');
+    if (!t) return;
+    const bindInputs = function (fn) {
+      el.querySelectorAll('input,select,textarea').forEach(function (inp) {
+        inp.addEventListener('input', fn);
+        inp.addEventListener('change', fn);
+      });
+      fn();
+    };
+
+    if (t === 'g01') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">⏱️ G01 演练台 · Component 1 (85 分钟) 配时策略 & 批判性陈述四类辨析</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>陈述例句：<select id="g1St"><option value="f">“In 2023, 62% of urban households in Country X recycled plastic.” (UN Report)</option><option value="o">“Mandatory recycling fines are unfairly harsh on low-income tenants.”</option><option value="p">“Global lithium demand will almost certainly triple by 2032.”</option><option value="vj">“Governments have a moral duty to prioritise public transport over highways.”</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="g1Out"></div></div></div>';
+      const mp = {
+        f: '<strong>Fact (事实)</strong>：具明确可核查年份、数据比例与来源，能被客观验证真伪（哪怕数据存在局限性也属于可核验事实陈述）。<br><strong>85 分钟配时建议：</strong>读 Booklet 7 min → Q1 (13 min) → Q2 (17 min) → Q3 (20 min) → Q4 (23 min) → 5 min 检查。',
+        o: '<strong>Opinion / Value Judgement 混合判断</strong>：使用情感/评价词 <em>unfairly harsh</em>，无法通过单一统计直接证明对错，反映作者立场。',
+        p: '<strong>Prediction (预测)</strong>：围绕未来尚未发生的趋势（<em>will... by 2032</em>），属于对未来的推论而非既成事实！',
+        vj: '<strong>Value Judgement (价值判断)</strong>：基于伦理道德准则与“应当怎么做”(<em>moral duty / should</em>) 的主观价值取舍。'
+      };
+      bindInputs(function () { el.querySelector('#g1Out').innerHTML = mp[el.querySelector('#g1St').value]; });
+    } else if (t === 'g02') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🔍 G02 实战演练台 · RAVEN 来源可信度构造器 & Q2B (8分) 研究方法检查仪</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>材料类型：<select id="g2Src"><option value="blog">个人环保博主博客 (无参考文献)</option><option value="corp">大型油企赞助的能源报告</option><option value="peer">大学近2年同行评审期刊 (含大样本)</option></select></label>' +
+        '<label>Q2B 检查：<select id="g2Res"><option value="full">完整 4 要素 (方法+样本+变量+局限/效度)</option><option value="weak">常见丢分模板 (“I will ask people on the street”)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="g2Out"></div></div></div>';
+      const sMap = {
+        blog: '<strong>RAVEN 评估</strong>：<strong>Expertise/Ability</strong> 未知或偏弱（非学者）且缺乏一手引用 (<strong>Evidence</strong> 弱)，可能受个人热忱立场影响 (<strong>Bias</strong>)，但若提供直观草根经验仍具备局部参考价值（双向平衡才是满分！）。',
+        corp: '<strong>RAVEN 评估</strong>：拥有专业团队 (<strong>Expertise</strong> 强) 与充足资金调查，但存在高度利益冲突与既得利益立场偏见 (<strong>Vested interest</strong> — 极可能隐藏不利化石燃料的数据)。',
+        peer: '<strong>RAVEN 评估</strong>：近年实效性强 (<strong>Recent</strong>)、经同行评议 (<strong>Authoritative</strong>)、大样本且具原始方法披露 (<strong>Neutral/Evidence</strong>)，可信度高，但仍需留意研究地域/样本人口代表性限制。'
+      };
+      const rMap = {
+        full: '<span style="color:var(--ok-text);">✅ Q2B (8分 Level 4) 模板：</span>① <strong>具体工具</strong>（分层问卷+半结构访谈+政府近5年账单数据）；② <strong>明确对象/样本量/抽样法</strong>（如 200 名跨年龄与职业层代表样本）；③ <strong>验证维度/对比标准</strong>（前测后测对比）；④ <strong>评估该方法局限</strong>（如受访者社会期许偏差）。',
+        weak: '<span style="color:var(--err-text);">❌ 仅 2–3 分写法：</span>只说“问路人”或“上网搜 Google”，缺少样本代表性、具体可测量变量与多方法三角验证，无法拿齐 Q2B 高段分！'
+      };
+      bindInputs(function () {
+        el.querySelector('#g2Out').innerHTML = '<div>' + sMap[el.querySelector('#g2Src').value] + '</div><div style="margin-top:6px;">' + rMap[el.querySelector('#g2Res').value] + '</div>';
+      });
+    } else if (t === 'g03') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">⚖️ G03 演练台 · Q3 (15–16 分) 双源论证“六维比较”句型组装器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>比较维度：<select id="g3Dim"><option value="ev">1. 证据类型与具体性 (Evidence Quality)</option><option value="bal">2. 论证平衡度与反驳 (Balance &amp; Counter-argument)</option><option value="bias">3. 立场偏见与情绪语言 (Bias &amp; Emotive Tone)</option><option value="logic">4. 因果推论链与逻辑跳跃 (Logical Coherence)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="g3Out"></div></div></div>';
+      const dims = {
+        ev: '<strong>万能对比英文框：</strong><em>“Both writers address [topic], yet Writer A is notably stronger because they substantiate their claim with verifiable statistics from [Organisation, Year], whereas Writer B relies purely on uncorroborated personal anecdotes.”</em>',
+        bal: '<strong>万能对比英文框：</strong><em>“While Writer A adopts a balanced approach by explicitly acknowledging potential financial drawbacks before refuting them, Writer B presents a strictly one-sided view that omits any counter-evidence.”</em>',
+        bias: '<strong>万能对比英文框：</strong><em>“Writer B’s reasoning is undermined by heavily emotive language (e.g. ‘catastrophic’, ‘reckless’) and a clear vested interest as an industry spokesperson, whereas Writer A maintains a measured, objective tone.”</em>',
+        logic: '<strong>万能对比英文框：</strong><em>“Writer A builds a clear causal chain linking [cause] to [effect]; by contrast, Writer B commits a logical leap / generalisation by assuming a single pilot programme guarantees nationwide success.”</em>'
+      };
+      bindInputs(function () { el.querySelector('#g3Out').innerHTML = dims[el.querySelector('#g3Dim').value]; });
+    } else if (t === 'g04') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🏛️ G04 演练台 · Q4 (20–24 分) 压轴政策方案“五维评估矩阵”生成器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>方案评估角度：<select id="g4Ang"><option value="cost">经济成本与可行性 (Cost &amp; Feasibility)</option><option value="time">短期应急 vs 长期治本 (Timescale)</option><option value="stake">不同利益相关方得失 (Stakeholders)</option><option value="rej">为何不选其他两项 (Rejecting Alternatives)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="g4Out"></div></div></div>';
+      const angs = {
+        cost: '<strong>高分剖析</strong>：不要只空喊 “Option 1 is cheap”，要对比财政预算来源、后期维护成本与当地执行基建能力（<em>In developing regions, capital-intensive subsidies may divert funds from essential healthcare</em>）。',
+        time: '<strong>高分剖析</strong>：把“立刻止血”和“长期转型”结合——例如解释某项教育或激励法案在短期虽见效慢，但十年后能形成自我造血的长期优势；而单纯罚款只治标不治本。',
+        stake: '<strong>高分剖析</strong>：必须至少点出两类受损或受益群体之间的利益拉锯（如中小企业主面临合规负担 vs 低收入家庭受益于补贴与生活成本下降）。',
+        rej: '<strong>Q4 Level 4 硬要求</strong>：必须用整段话直接对比并评估<strong>另外两个未被选中的方案</strong>的致命局限性（即使承认它们各自有一项微弱优点，再论证为何总体性价比仍不及首选方案！）。'
+      };
+      bindInputs(function () { el.querySelector('#g4Out').innerHTML = angs[el.querySelector('#g4Ang').value]; });
+    } else if (t === 'g05') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧭 G05 诊断台 · Individual Report (IR) 选题质量诊断 & 1500–2000 词结构配额</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>选题案例诊断：<select id="g5Q"><option value="bad1">烂题1：What is climate change and why is it bad?</option><option value="bad2">烂题2：Does fast fashion destroy the environment? (Yes/No封闭)</option><option value="good">A* 选题：To what extent should fast-fashion brands be legally accountable for microplastic pollution in coastal cities?</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="g5Out"></div></div></div>';
+      const qs = {
+        bad1: '<span style="color:var(--err-text);">❌ 低分科普报告陷阱：</span>导致整篇文章变成复制百科“什么是气候变化+危害”，没有争议点、没有不同利益视角冲突，AO1 极难过半！',
+        bad2: '<span style="color:var(--err-text);">❌ 封闭是非题陷阱：</span>答案几乎是一边倒的 “Yes”，写不出真正有说服力的相反/替代视角与多维度权衡！',
+        good: '<span style="color:var(--ok-text);">✅ A* 开放性程度探讨题：</span>用 <strong>To what extent...</strong> 留下深度拉锯空间——<strong>黄金篇幅分配 (1,750 词目标)</strong>：引言与定义 (~200 词) + 全球视角+来源批判 (~500 词) + 国家/本土冲突视角+来源批判 (~500 词) + 行动方案可行性 (~300 词) + AO2 立场演变反思与结论 (~250 词)！'
+      };
+      bindInputs(function () { el.querySelector('#g5Out').innerHTML = qs[el.querySelector('#g5Q').value]; });
+    } else if (t === 'g06') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">📚 G06 工具台 · Harvard 学术引用生成器 & AO2 立场演变反思框架</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>作者/机构：<input type="text" id="g6Au" value="World Health Organization" style="width:170px;text-align:left;"></label>' +
+        '<label>年份：<input type="text" id="g6Yr" value="2024" style="width:74px;"></label>' +
+        '<label>文章/报告标题：<input type="text" id="g6Ti" value="Urban Air Quality Guidelines" style="width:190px;text-align:left;"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="g6Out"></div></div></div>';
+      bindInputs(function () {
+        const au = (el.querySelector('#g6Au').value || 'Author').trim();
+        const yr = (el.querySelector('#g6Yr').value || '2024').trim();
+        const ti = (el.querySelector('#g6Ti').value || 'Title').trim();
+        el.querySelector('#g6Out').innerHTML =
+          '<div><strong>文内夹注 (In-text citation)：</strong><code>(' + au + ', ' + yr + ')</code></div>' +
+          '<div style="margin-top:4px;"><strong>文末书目 (Bibliography · 不计入 2000 词上限)：</strong>' + au + ' (' + yr + ') <em>' + ti + '</em>. Available at: [URL] (Accessed: [Day Month Year]).</div>' +
+          '<div style="margin-top:4px;"><strong>AO2 (10分) 反思高分钩：</strong>务必指明“我起初如何看待问题 → 读到 <code>' + au + ' (' + yr + ')</code> 的具体反常数据后如何改变/修正了我的原始偏见”！</div>';
+      });
+    } else if (t === 'g07') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🚨 G07 写作字数红线台 · Team Project ERP (300–400 词) vs Reflective Paper (750–1,000 词)</div></div>' +
+        '<div class="lab-panel write-box">' +
+        '<div class="lab-controls">' +
+        '<label>切换文件：<select id="g7Doc"><option value="erp">团队规划书 ERP (300–400 词 · Team Element)</option><option value="rp">个人反思论文 Reflective Paper (750–1,000 词 · 单占 45 分!)</option></select></label>' +
+        '<span class="wc-meter wc-warn" id="g7Wc">当前词数：0 词 (硬性上限不可超！)</span>' +
+        '</div>' +
+        '<textarea class="write-textarea" id="g7Txt" placeholder="在此输入或粘贴你的 ERP 或 Reflective Paper 草稿（注意：Reflective Paper 考官对超过 1,000 words 后的文字直接截断不予给分！）..."></textarea>' +
+        '<div class="lab-readout"><div class="readout-pill" id="g7Out"></div></div></div>';
+      const docSel = el.querySelector('#g7Doc'), ta = el.querySelector('#g7Txt'), wc = el.querySelector('#g7Wc'), out = el.querySelector('#g7Out');
+      const chk = function () {
+        const n = countWords(ta.value), tp = docSel.value;
+        const minW = tp === 'erp' ? 300 : 750;
+        const maxW = tp === 'erp' ? 400 : 1000;
+        wc.textContent = '当前词数：' + n + ' 词 (标准 ' + minW + '–' + maxW + ' 词)';
+        if (n >= minW && n <= maxW) wc.className = 'wc-meter wc-ok';
+        else if (n > maxW) wc.className = 'wc-meter wc-err';
+        else wc.className = 'wc-meter wc-warn';
+        if (n > maxW) {
+          out.innerHTML = '<span style="color:var(--err-text);">🚨 <strong>严重超限警告！已超出上限 ' + (n - maxW) + ' 词！</strong>考纲明文规定超出 ' + maxW + ' 词后的结论与个人反思部分<strong>考官直接不阅、不计分</strong>！请立即删减冗余叙事！</span>';
+        } else if (tp === 'erp') {
+          out.innerHTML = '<strong>ERP (300–400 词) 必备</strong>：① 本土议题背景+项目目标；② 具体调研分工与时间表；③ 行动成果衡量标准（如前后测问卷数据/参与者数）。';
+        } else {
+          out.innerHTML = '<strong>Reflective Paper (45/70 分!) 五大得分段</strong>：① 行动成果与局限实证评估（用前/后数字证明）；② 个人优势与失误自我批判；③ 团队冲突磨合与沟通得失（对高分至关重要！）；④ 调研中发现的文化/不同视角；⑤ 个人立场变化与后续改善计划。';
+        }
+      };
+      docSel.addEventListener('change', chk);
+      ta.addEventListener('input', chk);
+      chk();
+    } else if (t === 'g08') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">📊 G08 冲刺驾驶舱 · Component 1 (70 分 / 85min) 智能估分器 & 15 议题视角卡</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>Q1 概念提取 (/14)：<input type="number" id="g8_1" value="12" min="0" max="14"></label>' +
+        '<label>Q2 来源研究 (/16)：<input type="number" id="g8_2" value="13" min="0" max="16"></label>' +
+        '<label>Q3 双源对比 (/16)：<input type="number" id="g8_3" value="13" min="0" max="16"></label>' +
+        '<label>Q4 决策评估 (/24)：<input type="number" id="g8_4" value="20" min="0" max="24"></label>' +
+        '<button type="button" class="tab-btn active" id="g8Start">⏳ 85min 笔试计时</button>' +
+        '<button type="button" class="tab-btn" id="g8Reset">重置</button>' +
+        '<span class="timer-big" id="g8Clk" style="font-size:18px;padding:4px 10px;">85:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="g8Out"></div></div></div>';
+      const calc = function () {
+        const s1 = Math.min(14, Math.max(0, Number(el.querySelector('#g8_1').value) || 0));
+        const s2 = Math.min(16, Math.max(0, Number(el.querySelector('#g8_2').value) || 0));
+        const s3 = Math.min(16, Math.max(0, Number(el.querySelector('#g8_3').value) || 0));
+        const s4 = Math.min(24, Math.max(0, Number(el.querySelector('#g8_4').value) || 0));
+        const tot = s1 + s2 + s3 + s4;
+        const pct = Math.round((tot / 70) * 100);
+        let tier = '夯实 Q2 RAVEN 双向平衡与 Q4 落选方案批判可大幅提分';
+        if (pct >= 80) tier = '笔试稳居 A* 领跑线（配合 IR 48+/60 与 TP 56+/70 可高稳 A*）';
+        else if (pct >= 68) tier = '稳居 A 档区间（重点防 Q3 只写单边摘要、补足 Q4 五维利益相关方）';
+        el.querySelector('#g8Out').innerHTML =
+          '<div><strong>Component 1 总分：' + tot + ' / 70（约 ' + pct + '% · 占全科 35%）</strong>｜Q3+Q4 占比 ' + (s3 + s4) + '/40</div>' +
+          '<div>策略诊断：<strong>' + tier + '</strong></div>';
+      };
+      bindInputs(calc);
+      el.querySelector('#g8Start').addEventListener('click', function () {
+        if (gpTimerId) { clearInterval(gpTimerId); gpTimerId = null; }
+        let rem = 85 * 60;
+        gpTimerId = setInterval(function () {
+          rem--;
+          const m = Math.floor(rem / 60), r = rem % 60;
+          el.querySelector('#g8Clk').textContent = (m < 10 ? '0' : '') + m + ':' + (r < 10 ? '0' : '') + r;
+          if (rem <= 0) { clearInterval(gpTimerId); gpTimerId = null; }
+        }, 1000);
+      });
+      el.querySelector('#g8Reset').addEventListener('click', function () {
+        if (gpTimerId) { clearInterval(gpTimerId); gpTimerId = null; }
+        el.querySelector('#g8Clk').textContent = '85:00';
+      });
+    }
+  }
+
+  document.querySelectorAll('.lab-box[data-lab-type]').forEach(mountGpLab);
+
+  // ---------- 10. Initialize View & Scroll Spy ----------
+  applyViewMode(currentViewMode);
+  applyQuizMask(quizMasked);
+
+  const backTopBtn = document.getElementById('backTopBtn');
+  const trackedSections = Array.from(document.querySelectorAll('.topic-section[id]'));
+  const navLinks = Array.from(document.querySelectorAll('.sidebar .nav-link'));
+
+  window.addEventListener('scroll', function () {
+    if (backTopBtn) backTopBtn.classList.toggle('visible', window.scrollY > 360);
+    const y = window.scrollY + 110;
+    let currentId = '';
+    trackedSections.forEach(function (sec) {
+      if (sec.offsetTop <= y) currentId = sec.id;
+    });
+    if (currentId) {
+      navLinks.forEach(function (lnk) {
+        const href = lnk.getAttribute('href') || '';
+        if (href.charAt(0) === '#') {
+          lnk.classList.toggle('active', href === '#' + currentId);
+        }
+      });
+    }
+  }, { passive: true });
+
+  if (backTopBtn) {
+    backTopBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+})();
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,2076 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="--accent: #D97706;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C07 · Module 7: Style, 50 Classical Words & Error Clinic — IGCSE 中文第一语言 (0509)</title>
+  <style>
+/* ==========================================================================
+   Cambridge IGCSE First Language Chinese (0509 · 2024–2027)
+   8-Module Strategy & Practice Suite Shared Stylesheet
+   ========================================================================== */
+
+:root {
+  --bg-page: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --bg-sidebar: #FFFFFF;
+  --bg-code: #EFF6FF;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-faint: #64748B;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+
+  --accent: #0284C7;
+  --accent-hover: #0369A1;
+  --accent-soft: #E0F2FE;
+
+  --core-bg: #E0F2FE;
+  --core-text: #075985;
+  --core-border: #BAE6FD;
+  --ext-bg: #FEF3C7;
+  --ext-text: #92400E;
+  --ext-border: #FDE68A;
+
+  --deep-bg: #EFF6FF;
+  --deep-border: #2563EB;
+  --tip-bg: #FFFBEB;
+  --tip-border: #D97706;
+  --mistake-bg: #FFF1F2;
+  --mistake-border: #E11D48;
+  --example-bg: #F0FDF4;
+  --example-border: #16A34A;
+  --formula-bg: #F8FAFC;
+  --formula-border: #0284C7;
+
+  --ok-bg: #DCFCE7;
+  --ok-text: #166534;
+  --ok-border: #86EFAC;
+  --err-bg: #FEE2E2;
+  --err-text: #991B1B;
+  --err-border: #FCA5A5;
+
+  --svg-bg: #FFFFFF;
+  --svg-grid: #E2E8F0;
+  --svg-ink: #0F172A;
+  --svg-muted: #64748B;
+  --svg-blue: #2563EB;
+  --svg-indigo: #4338CA;
+  --svg-teal: #0D9488;
+  --svg-amber: #D97706;
+  --svg-red: #DC2626;
+  --svg-green: #16A34A;
+  --svg-purple: #7C3AED;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.07);
+  --shadow-lg: 0 10px 26px rgba(15, 23, 42, 0.11);
+
+  --sidebar-w: 288px;
+  --topbar-h: 58px;
+  --radius-sm: 7px;
+  --radius-md: 11px;
+  --radius-lg: 16px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Songti SC", "Noto Serif SC", Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+[data-theme="dark"] {
+  --bg-page: #0B1120;
+  --bg-surface: #111827;
+  --bg-subtle: #1E293B;
+  --bg-sidebar: #0F172A;
+  --bg-code: #1E293B;
+  --text-main: #F1F5F9;
+  --text-muted: #CBD5E1;
+  --text-faint: #94A3B8;
+  --border: #1E293B;
+  --border-strong: #334155;
+
+  --accent: #38BDF8 !important;
+  --accent-hover: #7DD3FC;
+  --accent-soft: rgba(56, 189, 248, 0.18);
+
+  --core-bg: rgba(56, 189, 248, 0.16);
+  --core-text: #BAE6FD;
+  --core-border: rgba(56, 189, 248, 0.36);
+  --ext-bg: rgba(245, 158, 11, 0.16);
+  --ext-text: #FDE68A;
+  --ext-border: rgba(245, 158, 11, 0.36);
+
+  --deep-bg: rgba(37, 99, 235, 0.14);
+  --deep-border: #60A5FA;
+  --tip-bg: rgba(217, 119, 6, 0.14);
+  --tip-border: #FBBF24;
+  --mistake-bg: rgba(225, 29, 72, 0.15);
+  --mistake-border: #FB7185;
+  --example-bg: rgba(22, 163, 74, 0.13);
+  --example-border: #4ADE80;
+  --formula-bg: #172033;
+  --formula-border: #38BDF8;
+
+  --ok-bg: rgba(22, 163, 74, 0.22);
+  --ok-text: #BBF7D0;
+  --ok-border: #22C55E;
+  --err-bg: rgba(220, 38, 38, 0.22);
+  --err-text: #FECACA;
+  --err-border: #EF4444;
+
+  --svg-bg: #0F172A;
+  --svg-grid: #334155;
+  --svg-ink: #F1F5F9;
+  --svg-muted: #94A3B8;
+  --svg-blue: #60A5FA;
+  --svg-indigo: #818CF8;
+  --svg-teal: #2DD4BF;
+  --svg-amber: #FBBF24;
+  --svg-red: #F87171;
+  --svg-green: #34D399;
+  --svg-purple: #A78BFA;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .seg-btn.active,
+[data-theme="dark"] .tab-btn.active,
+[data-theme="dark"] .icon-btn.active,
+[data-theme="dark"] .brand-code,
+[data-theme="dark"] .pager-btn.primary { color: #0B1120; }
+[data-theme="dark"] .hub-foot { color: #38BDF8; }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--topbar-h) + 18px); }
+body { margin: 0; font-family: var(--font-sans); background: var(--bg-page); color: var(--text-main); line-height: 1.72; font-size: 15.5px; -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4 { margin: 0 0 0.55em 0; line-height: 1.32; font-weight: 700; color: var(--text-main); }
+p { margin: 0 0 0.9em 0; }
+ul, ol { margin: 0 0 1em 0; padding-left: 1.45em; }
+li { margin-bottom: 0.35em; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { font-family: var(--font-mono); font-size: 0.9em; background: var(--bg-code); color: var(--accent); padding: 2px 6px; border-radius: 4px; }
+
+/* View Mode Filters (All / Method / Practice / Cards) */
+body.mode-method .practice-section { display: none !important; }
+body.mode-practice .method-section { display: none !important; }
+body.mode-cards .method-section,
+body.mode-cards .practice-section { display: none !important; }
+
+.badge-p1, .badge-p2, .badge-core, .badge-ext { display: inline-block; font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.badge-p1, .badge-core { background: var(--core-bg); color: var(--core-text); border: 1px solid var(--core-border); }
+.badge-p2, .badge-ext { background: var(--ext-bg); color: var(--ext-text); border: 1px solid var(--ext-border); }
+
+.formula-card { background: var(--formula-bg); border: 1.5px solid var(--border-strong); border-left: 5px solid var(--formula-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; font-size: 15px; }
+.formula-main { font-family: var(--font-serif); font-size: 16.5px; font-weight: 700; color: var(--accent); margin: 4px 0 6px 0; }
+
+.reading-passage, .classical-box { background: var(--bg-page); border: 1px solid var(--border-strong); border-left: 5px solid var(--accent); border-radius: var(--radius-md); padding: 16px 20px; margin: 14px 0; font-family: var(--font-serif); font-size: 15.5px; line-height: 1.84; }
+.classical-box { border-left-color: #4338CA; background: var(--formula-bg); }
+.reading-title { font-family: var(--font-sans); font-size: 16px; font-weight: 800; color: var(--text-main); margin-bottom: 8px; }
+.para-tag { display: inline-block; font-family: var(--font-sans); font-size: 11.5px; font-weight: 800; background: var(--accent-soft); color: var(--accent); padding: 1px 7px; border-radius: 4px; margin-right: 6px; }
+
+.model-essay { background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 20px; margin: 14px 0; box-shadow: var(--shadow-sm); }
+.essay-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; padding-bottom: 10px; margin-bottom: 12px; border-bottom: 1px solid var(--border); font-size: 13px; font-weight: 700; }
+.band-pill { padding: 2px 10px; border-radius: 999px; font-size: 12px; font-weight: 800; }
+.band-high { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.band-mid { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+.essay-body { font-family: var(--font-serif); font-size: 15.4px; line-height: 1.82; }
+mark.hl-content { background: rgba(37, 99, 235, 0.16); color: inherit; padding: 1px 3px; border-radius: 3px; }
+mark.hl-lang { background: rgba(22, 163, 74, 0.18); color: inherit; padding: 1px 3px; border-radius: 3px; }
+mark.hl-err { background: rgba(220, 38, 38, 0.16); color: inherit; padding: 1px 3px; border-radius: 3px; text-decoration: wavy underline rgba(220, 38, 38, 0.6); }
+
+.write-box { display: flex; flex-direction: column; gap: 10px; }
+.write-textarea { width: 100%; min-height: 150px; padding: 12px 14px; border-radius: var(--radius-sm); border: 1.5px solid var(--border-strong); background: var(--bg-page); color: var(--text-main); font-family: var(--font-serif); font-size: 15px; line-height: 1.72; resize: vertical; }
+.write-textarea:focus { outline: none; border-color: var(--accent); }
+.wc-meter { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 800; }
+.wc-ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.wc-warn { background: var(--tip-bg); color: var(--tip-border); border: 1px solid var(--tip-border); }
+.wc-err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+.timer-big { font-family: var(--font-mono); font-size: 22px; font-weight: 800; color: var(--accent); background: var(--bg-page); border: 1.5px solid var(--border-strong); padding: 5px 12px; border-radius: var(--radius-sm); }
+
+/* Topbar */
+.topbar {
+  position: sticky; top: 0; z-index: 100; height: var(--topbar-h);
+  background: var(--bg-surface); border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm); display: flex; align-items: center;
+  justify-content: space-between; gap: 10px; padding: 0 16px;
+}
+.topbar-left { display: flex; align-items: center; gap: 8px; min-width: 0; flex-shrink: 1; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 34px; padding: 0 10px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--bg-surface); color: var(--text-main); font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; text-decoration: none; }
+.icon-btn:hover { background: var(--bg-subtle); border-color: var(--accent); text-decoration: none; }
+.icon-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.menu-toggle { display: none; }
+.brand-pill { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; white-space: nowrap; flex-shrink: 1; min-width: 0; }
+.brand-code { background: var(--accent); color: #fff; padding: 2px 8px; border-radius: 5px; font-size: 12px; letter-spacing: 0.4px; white-space: nowrap; flex-shrink: 0; }
+.brand-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 215px; }
+.search-wrap { position: relative; flex: 1 1 150px; min-width: 130px; max-width: 260px; }
+.search-input { width: 100%; height: 34px; padding: 0 30px 0 32px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--bg-subtle); color: var(--text-main); font-size: 13.5px; outline: none; }
+.search-input:focus { border-color: var(--accent); background: var(--bg-surface); }
+.search-input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.search-icon { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); color: var(--text-faint); font-size: 13px; pointer-events: none; }
+.search-clear { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); border: none; background: transparent; color: var(--text-faint); cursor: pointer; font-size: 14px; display: none; }
+.search-results-bar { display: none; background: var(--accent-soft); border-bottom: 1px solid var(--border); padding: 8px 20px; font-size: 13.5px; color: var(--text-main); align-items: center; justify-content: space-between; gap: 12px; }
+.search-results-bar.visible { display: flex; }
+.topbar-controls { display: flex; align-items: center; gap: 7px; flex-shrink: 0; }
+.seg-group { display: inline-flex; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); overflow: hidden; background: var(--bg-subtle); }
+.seg-btn { border: none; background: transparent; color: var(--text-muted); padding: 6px 8px; font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.seg-btn.active { background: var(--accent); color: #fff; }
+.progress-chip { display: flex; align-items: center; gap: 7px; padding: 4px 10px; border-radius: 999px; background: var(--bg-subtle); border: 1px solid var(--border); font-size: 12.5px; font-weight: 600; white-space: nowrap; }
+.progress-track { width: 50px; height: 7px; background: var(--border-strong); border-radius: 99px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), #0D9488); transition: width 0.25s ease; }
+
+.app-layout { display: flex; min-height: calc(100vh - var(--topbar-h)); }
+.sidebar { width: var(--sidebar-w); flex-shrink: 0; background: var(--bg-sidebar); border-right: 1px solid var(--border); position: sticky; top: var(--topbar-h); height: calc(100vh - var(--topbar-h)); overflow-y: auto; padding: 14px 10px 44px 10px; }
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 99px; }
+.nav-unit { margin-bottom: 8px; }
+.nav-unit-btn { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border: none; border-radius: var(--radius-sm); background: transparent; color: var(--text-main); font-size: 13px; font-weight: 700; text-align: left; cursor: pointer; }
+.nav-unit-btn:hover { background: var(--bg-subtle); }
+.nav-unit-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.nav-unit-title { flex: 1; display: flex; align-items: center; gap: 7px; line-height: 1.3; }
+.nav-chevron { font-size: 11px; color: var(--text-faint); transition: transform 0.2s; }
+.nav-unit.collapsed .nav-chevron { transform: rotate(-90deg); }
+.nav-unit.collapsed .nav-links { display: none; }
+.nav-links { list-style: none; padding: 2px 0 4px 12px; margin: 0 0 0 14px; border-left: 2px solid var(--border); }
+.nav-link { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 5px 9px; margin: 2px 0; border-radius: var(--radius-sm); color: var(--text-muted); font-size: 12.6px; line-height: 1.35; text-decoration: none; }
+.nav-link:hover { background: var(--bg-subtle); color: var(--text-main); text-decoration: none; }
+.nav-link.active { background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+.nav-done-mark { color: #10B981; font-weight: 800; font-size: 12px; opacity: 0; }
+.nav-link.mastered .nav-done-mark { opacity: 1; }
+.main-content { flex: 1; min-width: 0; padding: 26px 32px 80px 32px; }
+.content-inner { max-width: 960px; margin: 0 auto; }
+
+.hero-card { background: linear-gradient(135deg, #0F172A 0%, var(--accent) 58%, #0F766E 100%); color: #fff; border-radius: var(--radius-lg); padding: 28px 32px; margin-bottom: 26px; box-shadow: var(--shadow-lg); }
+.hero-card h1 { color: #fff; font-size: 25px; margin-bottom: 8px; letter-spacing: -0.3px; }
+.hero-sub { color: rgba(255,255,255,0.92); font-size: 14.8px; max-width: 820px; margin-bottom: 16px; }
+.hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.hero-pill { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.28); color: #fff; padding: 4px 11px; border-radius: 999px; font-size: 12.5px; font-weight: 600; }
+.unit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+.unit-tile { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.24); border-radius: var(--radius-md); padding: 12px 14px; color: #fff; text-decoration: none; display: block; transition: transform 0.15s, background 0.15s; }
+.unit-tile:hover { transform: translateY(-2px); background: rgba(255,255,255,0.22); text-decoration: none; }
+.unit-tile-num { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.7px; opacity: 0.85; font-weight: 700; }
+.unit-tile-title { font-size: 14.5px; font-weight: 700; margin: 3px 0; }
+
+.topic-section { background: var(--bg-surface); border: 1px solid var(--border); border-top: 4px solid var(--accent); border-radius: var(--radius-md); padding: 24px 26px; margin-bottom: 24px; box-shadow: var(--shadow-sm); }
+.topic-section.search-dim { display: none; }
+.section-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 2px solid var(--border); }
+.section-title-group h3 { font-size: 19.5px; margin-bottom: 4px; }
+.section-en-sub { font-size: 13.5px; color: var(--text-faint); font-weight: 600; }
+.tier-row { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 7px; }
+.master-btn { flex-shrink: 0; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-muted); font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.master-btn:hover { border-color: #10B981; color: #10B981; }
+.master-btn.is-mastered { background: var(--ok-bg); color: var(--ok-text); border-color: var(--ok-border); }
+.subtopic { margin-bottom: 20px; }
+.subtopic:last-of-type { margin-bottom: 12px; }
+.subtopic h4 { font-size: 16px; color: var(--accent); margin: 0 0 10px 0; padding-bottom: 4px; border-bottom: 1px dashed var(--border); display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+
+.worked-example { background: var(--example-bg); border: 1px solid var(--border); border-left: 4px solid var(--example-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; }
+.worked-title { font-weight: 800; font-size: 14px; color: var(--example-border); margin-bottom: 6px; }
+.callout { border-radius: var(--radius-sm); padding: 13px 16px; margin: 14px 0; border-left: 4px solid var(--border-strong); font-size: 14.5px; }
+.callout-title { font-weight: 800; font-size: 13.5px; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+.deep-dive { background: var(--deep-bg); border-left-color: var(--deep-border); }
+.deep-dive .callout-title { color: var(--deep-border); }
+.examiner-tip { background: var(--tip-bg); border-left-color: var(--tip-border); }
+.examiner-tip .callout-title { color: var(--tip-border); }
+.common-mistake { background: var(--mistake-bg); border-left-color: var(--mistake-border); }
+.common-mistake .callout-title { color: var(--mistake-border); }
+
+.table-wrap { width: 100%; overflow-x: auto; margin: 14px 0; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+table.chi-table, table.phy-table { width: 100%; border-collapse: collapse; font-size: 13.8px; text-align: left; }
+table.chi-table th, table.phy-table th { background: var(--bg-subtle); color: var(--text-main); font-weight: 700; padding: 9px 12px; border-bottom: 2px solid var(--border-strong); white-space: nowrap; }
+table.chi-table td, table.phy-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.chi-table tr:last-child td, table.phy-table tr:last-child td { border-bottom: none; }
+table.chi-table tbody tr:hover, table.phy-table tbody tr:hover { background: var(--bg-subtle); }
+
+.svg-figure { background: var(--svg-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px; margin: 16px 0; text-align: center; break-inside: avoid; }
+.svg-figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.svg-caption { margin-top: 8px; font-size: 13px; color: var(--text-faint); font-weight: 600; }
+
+/* Interactive Chinese Strategy & Writing Labs */
+.lab-box { background: var(--bg-subtle); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px; margin: 18px 0; break-inside: avoid; }
+.lab-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+.lab-title { font-size: 15.5px; font-weight: 800; color: var(--accent); display: flex; align-items: center; gap: 7px; }
+.lab-panel { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; }
+.lab-controls { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-bottom: 12px; align-items: center; }
+.lab-controls label { font-size: 13px; font-weight: 700; color: var(--text-muted); display: inline-flex; align-items: center; gap: 6px; }
+.lab-controls input[type="number"], .lab-controls input[type="text"], .lab-controls select { padding: 5px 8px; border-radius: 6px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-main); font-size: 13.2px; font-weight: 700; }
+.lab-controls input[type="number"] { min-width: 108px; width: 112px; text-align: center; }
+.lab-controls input[type="range"] { width: 120px; accent-color: var(--accent); }
+.lab-grid-2col { display: grid; grid-template-columns: 1.12fr 1fr; gap: 14px; align-items: start; }
+@media (max-width: 820px) { .lab-grid-2col { grid-template-columns: 1fr; } }
+.tab-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.tab-btn { border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-muted); padding: 5px 10px; border-radius: 6px; font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.tab-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.lab-readout { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; font-size: 13.2px; font-weight: 600; }
+.readout-pill { background: var(--bg-page); border: 1px solid var(--border-strong); padding: 7px 10px; border-radius: 6px; width: 100%; line-height: 1.55; }
+
+/* Practice Questions & Concepts */
+.practice-block { margin-top: 18px; padding-top: 14px; border-top: 2px dashed var(--border-strong); }
+.practice-heading { font-size: 16px; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.exam-q { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 14px; break-inside: avoid; }
+.exam-q-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; font-size: 12.5px; }
+.q-tag { font-weight: 800; color: var(--accent); background: var(--accent-soft); padding: 2px 8px; border-radius: 5px; }
+.q-marks { font-weight: 700; color: var(--text-faint); }
+.q-stem-en { font-size: 14.8px; font-weight: 600; color: var(--text-main); margin-bottom: 6px; }
+.q-stem-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 12px; }
+.mcq-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin-bottom: 10px; }
+.mcq-opt { text-align: left; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 13.8px; cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.mcq-opt:hover { border-color: var(--accent); background: var(--bg-subtle); }
+.mcq-opt.correct { background: var(--ok-bg); border-color: var(--ok-border); color: var(--ok-text); font-weight: 700; }
+.mcq-opt.wrong { background: var(--err-bg); border-color: var(--err-border); color: var(--err-text); }
+.mcq-feedback { display: none; font-size: 13.5px; padding: 10px 12px; border-radius: var(--radius-sm); margin-top: 8px; }
+.mcq-feedback.visible { display: block; }
+.mcq-feedback.ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.mcq-feedback.err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+details.ms-details { margin-top: 10px; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 12px; }
+details.ms-details summary { cursor: pointer; font-weight: 700; font-size: 13.5px; color: var(--accent); user-select: none; }
+.ms-body { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 13.8px; }
+.ms-mark { display: inline-block; font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--core-text); background: var(--core-bg); padding: 1px 5px; border-radius: 4px; margin-right: 4px; }
+.ms-cn { color: var(--text-muted); margin-top: 4px; }
+
+.concept-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 14px; margin-bottom: 18px; }
+.concept-filter-group { display: flex; flex-wrap: wrap; gap: 6px; }
+.concept-actions { display: flex; align-items: center; gap: 10px; }
+.concept-count-pill { font-size: 12.5px; font-weight: 700; color: var(--text-muted); }
+.concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 14px; }
+.concept-card { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; gap: 8px; break-inside: avoid; }
+.concept-card:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
+.concept-card.concept-hidden { display: none !important; }
+.cq-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.cq-en { font-weight: 700; font-size: 14.5px; color: var(--text-main); line-height: 1.45; }
+.cq-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 2px; }
+.cq-answer { position: relative; margin-top: auto; background: var(--bg-surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius-sm); padding: 11px 13px; font-size: 13.8px; line-height: 1.6; }
+.kw { color: var(--accent); background: var(--accent-soft); padding: 0 4px; border-radius: 3px; font-weight: 700; }
+.cq-mask-hint { display: none; }
+.concept-card.masked .cq-answer { cursor: pointer; }
+.concept-card.masked .cq-answer-inner { filter: blur(7px); opacity: 0.22; user-select: none; pointer-events: none; transition: filter 0.2s, opacity 0.2s; }
+.concept-card.masked .cq-mask-hint { display: flex; align-items: center; justify-content: center; position: absolute; inset: 0; font-size: 13.5px; font-weight: 700; color: var(--accent); background: rgba(255,255,255,0.25); border-radius: var(--radius-sm); }
+[data-theme="dark"] .concept-card.masked .cq-mask-hint { background: rgba(15,23,42,0.35); }
+
+.chapter-pager { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 28px; padding: 16px 20px; background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); }
+.pager-btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: var(--radius-sm); background: var(--bg-subtle); border: 1px solid var(--border-strong); color: var(--text-main); font-size: 13.5px; font-weight: 700; text-decoration: none; }
+.pager-btn:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); text-decoration: none; }
+.pager-btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.pager-btn.primary:hover { background: var(--accent-hover); color: #fff; }
+
+.hub-block-title { font-size: 18px; font-weight: 800; margin: 26px 0 12px 0; padding-bottom: 6px; border-bottom: 2px solid var(--border-strong); display: flex; align-items: center; gap: 8px; }
+.hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 15px; }
+.hub-card { display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-surface); border: 1px solid var(--border-strong); border-top: 5px solid var(--card-color, var(--accent)); border-radius: var(--radius-md); padding: 16px 18px 14px 18px; color: var(--text-main); text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; box-shadow: var(--shadow-sm); }
+.hub-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--card-color, var(--accent)); text-decoration: none; }
+.hub-card-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+.hub-badge { font-size: 11.5px; font-weight: 800; color: #fff; background: var(--card-color, var(--accent)); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill { font-size: 12px; font-weight: 700; color: var(--text-muted); background: var(--bg-subtle); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill.done { background: var(--ok-bg); color: var(--ok-text); }
+.hub-title { font-size: 16px; font-weight: 800; margin-bottom: 3px; }
+.hub-en { font-size: 12.6px; color: var(--text-faint); font-weight: 600; margin-bottom: 8px; }
+.hub-sub { font-size: 12.8px; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; }
+.hub-foot { font-size: 13px; font-weight: 700; color: var(--card-color, var(--accent)); display: flex; align-items: center; justify-content: space-between; }
+
+.back-top-btn { position: fixed; right: 22px; bottom: 22px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); box-shadow: var(--shadow-md); cursor: pointer; display: none; align-items: center; justify-content: center; font-size: 17px; font-weight: 800; z-index: 80; }
+.back-top-btn.visible { display: flex; }
+
+@media (max-width: 1200px) {
+  .brand-title, .btn-label { display: none; }
+  .seg-btn { padding: 6px 8px; }
+}
+@media (max-width: 980px) {
+  .menu-toggle { display: inline-flex; }
+  .sidebar { position: fixed; left: 0; top: var(--topbar-h); z-index: 95; transform: translateX(-100%); transition: transform 0.22s ease; box-shadow: var(--shadow-lg); }
+  .sidebar.open { transform: translateX(0); }
+  .main-content { padding: 18px 14px 64px 14px; }
+  .topic-section { padding: 18px 16px; }
+  .progress-chip { display: none; }
+  .search-wrap { min-width: 130px; }
+}
+@media (max-width: 640px) {
+  .topbar { padding: 0 10px; gap: 6px; }
+  .search-wrap { max-width: none; }
+  .concept-grid, .hub-grid { grid-template-columns: 1fr; }
+}
+@media print {
+  .topbar, .sidebar, .search-results-bar, .back-top-btn, .master-btn, .lab-controls button, .concept-toolbar, .cq-mask-hint, .chapter-pager { display: none !important; }
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  .main-content { padding: 0 !important; }
+  .content-inner { max-width: 100% !important; }
+  .topic-section, .exam-q, .callout, .worked-example, .svg-figure, .concept-card, .model-essay, .reading-passage, .classical-box { box-shadow: none !important; break-inside: avoid; border-color: #CBD5E1 !important; }
+  details.ms-details, details.ms-details .ms-body, .mcq-feedback { display: block !important; }
+  .concept-card.masked .cq-answer-inner { filter: none !important; opacity: 1 !important; }
+}
+
+  </style>
+</head>
+<body data-chapter-code="C07">
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="展开目录">☰ 目录</button>
+      <a class="icon-btn" href="index.html" title="返回 8 专题总目录"><span>🏠</span><span class="btn-label">总目录</span></a>
+      <div class="brand-pill">
+        <span class="brand-code">C07</span>
+        <span class="brand-title">第 7 专题 · 汉语病句错别字诊所、50 文言必背实词与雅言升格库</span>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="search" id="searchInput" class="search-input" placeholder="搜索阅读技巧、虚词实词、范文与真题..." autocomplete="off" />
+      <button type="button" class="search-clear" id="searchClear" title="清空搜索">✕</button>
+    </div>
+
+    <div class="topbar-controls">
+      <div class="seg-group" role="group" aria-label="内容视图筛选">
+        <button type="button" class="seg-btn active" data-view-mode="all">All</button>
+        <button type="button" class="seg-btn" data-view-mode="method">方法</button>
+        <button type="button" class="seg-btn" data-view-mode="practice">练习</button>
+        <button type="button" class="seg-btn" data-view-mode="cards">背诵卡</button>
+      </div>
+
+      <div class="progress-chip" title="本专题方法与实战模块掌握进度">
+        <span id="progressText">0/0</span>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+
+      <button type="button" class="icon-btn" id="toggleAllMs" title="展开或收起全部解析"><span>📝</span><span class="btn-label">展开解析</span></button>
+      <button type="button" class="icon-btn" id="themeToggle" title="切换亮色/暗色主题"><span id="themeIcon">🌙</span><span class="btn-label">主题</span></button>
+      <button type="button" class="icon-btn" id="printBtn" title="打印或导出为 PDF"><span>🖨️</span><span class="btn-label">导出 PDF</span></button>
+    </div>
+  </header>
+
+  <div class="search-results-bar" id="searchBar">
+    <span id="searchSummary">找到 0 个匹配板块</span>
+    <button type="button" class="icon-btn" id="searchResetBtn">重置过滤</button>
+  </div>
+
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="本专题语文知识点导航">
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #D97706;"></span>C07 本专题板块导航</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#sec-7-1"><span>7.1 IGCSE 0509 Style &amp; Accuracy 十大病句错别字诊所与雅言升格库</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-7-2"><span>7.2 课外文言文 50 个必背高频多义实词总表与错别字对比</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-sme"><span>7.3 语言诊所实战：8 道辨析互动小题 + 2 段真实病文红笔升格</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#app-concepts"><span>7.4 易错成语、文言多义实词与雅言衔接词默写卡 (20 张)</span><span class="nav-done-mark">✓</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #0D9488;"></span>全书 8 专题快速切换</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="C01_Blueprint_and_Comprehension.html"><span>C01 · 0509 考纲配时全景、简繁规范与现代文理解转述法</span></a></li>
+          <li><a class="nav-link" href="C02_Language_Analysis_Writers_Effect.html"><span>C02 · 9 分语言赏析四步满分公式与拒空洞套话修辞库</span></a></li>
+          <li><a class="nav-link" href="C03_Directed_Writing_Mastery.html"><span>C03 · 指导写作 25 分通关：R-A-P-F-T、四大文体与双篇评估</span></a></li>
+          <li><a class="nav-link" href="C04_Classical_Chinese_Mastery.html"><span>C04 · 课外文言文 12 分全攻略：18 虚词、词类活用与直译六字诀</span></a></li>
+          <li><a class="nav-link" href="C05_Argumentative_and_Discursive_Writing.html"><span>C05 · Paper 2 议论文 vs 讨论文高分架构与十大思辨弹药库</span></a></li>
+          <li><a class="nav-link" href="C06_Descriptive_and_Narrative_Writing.html"><span>C06 · Paper 2 描写文五感微雕与记叙文张力弧高分写法</span></a></li>
+          <li><a class="nav-link active" href="C07_Chinese_Style_Lexis_and_Error_Clinic.html"><span>C07 · 汉语病句错别字诊所、50 文言必背实词与雅言升格库</span></a></li>
+          <li><a class="nav-link" href="C08_Full_Mock_Paper1_and_Paper2_Sprint.html"><span>C08 · Paper 1 (60 分) 全真模拟卷 + Paper 2 审题立意与考前清单</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-inner">
+        <section class="hero-card" id="top">
+          <h1>第 7 专题 · 汉语病句错别字诊所、50 文言必背实词与雅言升格库</h1>
+          <p class="hero-sub">
+            紧扣 <strong>Cambridge IGCSE First Language Chinese (0509 · 2024–2027 考纲 · Paper 1 60 分 + Paper 2 50 分)</strong> 官方评分维度与高分作答法：<code>简繁混用/欧化长句/成分残缺/标点穿插排雷 · 50 个课外文言核心多义实词交互速查 + 书面衔接雅言与 10 题改错</code>，配齐现代文精析、指导写作与大作文 Band 1 红笔批注范文、文言精译真题与互动字数演练台。
+          </p>
+          <div class="hero-badges">
+            <span class="hero-pill">📖 0509 (2024–2027) 两卷全覆盖</span>
+            <span class="hero-pill">✍️ 官方 AO 评分细则 + Band 1 范文</span>
+            <span class="hero-pill">⚡ 汉字实时计数 / 文言检索交互台</span>
+            <a class="hero-pill" href="#sec-sme" style="text-decoration: none;">📝 直达全真练习 →</a>
+            <a class="hero-pill" href="#app-concepts" style="text-decoration: none; background: rgba(255,255,255,0.24);">🧠 直达必背模板与实词卡 →</a>
+          </div>
+          <div class="unit-grid">
+            <a class="unit-tile" href="#sec-7-1">
+              <div class="unit-tile-num">Section 7-1</div>
+              <div class="unit-tile-title">7.1 IGCSE 0509 Style &amp; Accuracy 十大病句错别字诊所与雅言升格库</div>
+            </a>
+            <a class="unit-tile" href="#sec-7-2">
+              <div class="unit-tile-num">Section 7-2</div>
+              <div class="unit-tile-title">7.2 课外文言文 50 个必背高频多义实词总表与错别字对比</div>
+            </a>
+            <a class="unit-tile" href="#sec-sme">
+              <div class="unit-tile-num">Section sme</div>
+              <div class="unit-tile-title">7.3 语言诊所实战：8 道辨析互动小题 + 2 段真实病文红笔升格</div>
+            </a>
+            <a class="unit-tile" href="#app-concepts">
+              <div class="unit-tile-num">核心背诵库</div>
+              <div class="unit-tile-title">7.4 易错成语、文言多义实词与雅言衔接词默写卡 (20 张)</div>
+            </a>
+          </div>
+        </section>
+
+        <div id="emptySearchNotice" class="callout deep-dive" style="display: none;">
+          <div class="callout-title">🔍 未找到匹配内容</div>
+          <p style="margin-bottom: 0;">请尝试更换关键词，或点击右上角“重置过滤”恢复显示。</p>
+        </div>
+
+<!-- ==========================================================================
+     Module 7 · Style, 50 Classical Words & Error Clinic (IGCSE Chinese 0509)
+     ========================================================================== -->
+<article class="topic-section method-section" id="sec-7-1">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>7.1 IGCSE 0509 Style &amp; Accuracy 十大病句错别字诊所与雅言升格库</h3>
+      <div class="section-en-sub">Top 10 Style &amp; Accuracy Traps (Simplified/Traditional, Syntax, Idioms, Punctuation) &amp; Formal Lexical Upgrades</div>
+      <div class="tier-row">
+        <span class="badge-p1">Paper 1 Sec 2 语言表达 10 分</span>
+        <span class="badge-p2">Paper 2 每篇 Style &amp; Accuracy 13 分</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-7-1">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>7.1.1 为什么 Style &amp; Accuracy 是 0509 冲刺 A* 的决胜关键？</h4>
+    <p>
+      在 Cambridge IGCSE First Language Chinese (0509 · 2024–2027) 考纲中，语言准确度与文风（Style &amp; Accuracy）占 <strong>Paper 1 Sec 2 指导写作 10 / 25 分</strong>，更占 <strong>Paper 2 每篇大作文 13 / 25 分（超过一半分数！）</strong>。许多双语考生立意深刻、故事感人，却因“简繁混写、欧化长句、一逗到底、成语望文生义或口语杂糅”，被考官压在 Band 2–3（7–9/13）。只有扫清以下<strong>十大高发雷区</strong>，才稳稳拿住 Band 1（11–13/13）的语言保底高分。
+    </p>
+
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 310" width="740" height="310" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Style and Accuracy 13分四维守门盾牌图">
+        <defs>
+          <marker id="c07-f1-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--svg-muted)" />
+          </marker>
+        </defs>
+
+        <text x="370" y="24" text-anchor="middle" font-size="13.5" font-weight="800" fill="var(--svg-ink)">Style &amp; Accuracy 13 分四维守门盾牌（Band 1 11–13/13 铁律）</text>
+        <text x="370" y="42" text-anchor="middle" font-size="10.5" font-weight="600" fill="var(--svg-muted)">0509 Paper 1 (10W) &amp; Paper 2 (13S×2) 共同适用 · 任一维度塌方即跌出 Band 1</text>
+
+        <!-- Central Shield -->
+        <path d="M 370 72 L 452 96 L 444 196 Q 436 244 370 278 Q 304 244 296 196 L 288 96 Z" fill="var(--svg-bg)" stroke="var(--svg-amber)" stroke-width="2.6" />
+        <path d="M 370 84 L 440 105 L 433 192 Q 426 233 370 264 Q 314 233 307 192 L 300 105 Z" fill="rgba(217,119,6,0.10)" stroke="var(--svg-amber)" stroke-width="1.2" stroke-dasharray="4 3" />
+        <text x="370" y="138" text-anchor="middle" font-size="12" font-weight="800" fill="var(--svg-amber)">Band 1 语言守门盾</text>
+        <text x="370" y="166" text-anchor="middle" font-size="22" font-weight="800" fill="var(--svg-ink)">13 / 13</text>
+        <text x="370" y="188" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--svg-muted)">准确 · 流畅 · 雅致</text>
+        <line x1="322" y1="202" x2="418" y2="202" stroke="var(--svg-grid)" stroke-width="1.2" />
+        <text x="370" y="220" text-anchor="middle" font-size="10" font-weight="600" fill="var(--svg-green)">✓ 零明显病句与错别字</text>
+        <text x="370" y="236" text-anchor="middle" font-size="10" font-weight="600" fill="var(--svg-green)">✓ 长短句错落富有节奏</text>
+
+        <!-- Quadrant 1: Top-Left (Simplified / Traditional) -->
+        <rect x="20" y="64" width="234" height="94" rx="10" fill="var(--svg-bg)" stroke="var(--svg-blue)" stroke-width="1.8" />
+        <rect x="20" y="64" width="234" height="26" rx="10" fill="var(--svg-blue)" />
+        <text x="137" y="81" text-anchor="middle" font-size="11.5" font-weight="800" fill="#FFFFFF">① 简繁严格统一 (Character Consistency)</text>
+        <text x="32" y="108" font-size="10.5" font-weight="700" fill="var(--svg-ink)">• 选定简体或繁体，全卷绝不混写</text>
+        <text x="32" y="126" font-size="10" font-weight="600" fill="var(--svg-red)">✗ 忌：“這个问题很複杂、學习”</text>
+        <text x="32" y="144" font-size="10" font-weight="600" fill="var(--svg-green)">✓ 守：引用/标题/落款同步自查字体</text>
+        <line x1="254" y1="114" x2="294" y2="128" stroke="var(--svg-blue)" stroke-width="1.6" marker-end="url(#c07-f1-arr)" />
+
+        <!-- Quadrant 2: Top-Right (Syntax Integrity) -->
+        <rect x="486" y="64" width="234" height="94" rx="10" fill="var(--svg-bg)" stroke="var(--svg-teal)" stroke-width="1.8" />
+        <rect x="486" y="64" width="234" height="26" rx="10" fill="var(--svg-teal)" />
+        <text x="603" y="81" text-anchor="middle" font-size="11.5" font-weight="800" fill="#FFFFFF">② 句法完整无残缺 (Syntax Purity)</text>
+        <text x="498" y="108" font-size="10.5" font-weight="700" fill="var(--svg-ink)">• 主谓宾完整，拒英文直译腔</text>
+        <text x="498" y="126" font-size="10" font-weight="600" fill="var(--svg-red)">✗ 忌：“通过……使我……”“提高态度”</text>
+        <text x="498" y="144" font-size="10" font-weight="600" fill="var(--svg-green)">✓ 守：拆长定语为顺畅短分句流水句</text>
+        <line x1="486" y1="114" x2="446" y2="128" stroke="var(--svg-teal)" stroke-width="1.6" marker-end="url(#c07-f1-arr)" />
+
+        <!-- Quadrant 3: Bottom-Left (Idiom & Lexis) -->
+        <rect x="20" y="182" width="234" height="94" rx="10" fill="var(--svg-bg)" stroke="var(--svg-amber)" stroke-width="1.8" />
+        <rect x="20" y="182" width="234" height="26" rx="10" fill="var(--svg-amber)" />
+        <text x="137" y="199" text-anchor="middle" font-size="11.5" font-weight="800" fill="#FFFFFF">③ 成语与用词精准 (Accurate Idioms)</text>
+        <text x="32" y="226" font-size="10.5" font-weight="700" fill="var(--svg-ink)">• 吃透褒贬与本义，杜绝望文生义</text>
+        <text x="32" y="244" font-size="10" font-weight="600" fill="var(--svg-red)">✗ 忌：错用“首当其冲/差强人意”</text>
+        <text x="32" y="262" font-size="10" font-weight="600" fill="var(--svg-green)">✓ 守：不确定的生僻成语宁不用不乱用</text>
+        <line x1="254" y1="224" x2="296" y2="206" stroke="var(--svg-amber)" stroke-width="1.6" marker-end="url(#c07-f1-arr)" />
+
+        <!-- Quadrant 4: Bottom-Right (Register & Punctuation) -->
+        <rect x="486" y="182" width="234" height="94" rx="10" fill="var(--svg-bg)" stroke="var(--svg-purple)" stroke-width="1.8" />
+        <rect x="486" y="182" width="234" height="26" rx="10" fill="var(--svg-purple)" />
+        <text x="603" y="199" text-anchor="middle" font-size="11.5" font-weight="800" fill="#FFFFFF">④ 语体与标点得体 (Register &amp; Marks)</text>
+        <text x="498" y="226" font-size="10.5" font-weight="700" fill="var(--svg-ink)">• 议论/报告用雅言，拒口语一逗到底</text>
+        <text x="498" y="244" font-size="10" font-weight="600" fill="var(--svg-red)">✗ 忌：句末写“.”、大段逗号不断句</text>
+        <text x="498" y="262" font-size="10" font-weight="600" fill="var(--svg-green)">✓ 守：规范实心句号“。”与书面衔接词</text>
+        <line x1="486" y1="224" x2="444" y2="206" stroke="var(--svg-purple)" stroke-width="1.6" marker-end="url(#c07-f1-arr)" />
+      </svg>
+      <div class="svg-caption">图 7.1 Style &amp; Accuracy 13 分四维守门盾牌（简繁统一 / 句法完整 / 成语准确 / 语体得体）</div>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>7.1.2 IGCSE 0509 十大病句与错别字高发雷区诊所（附原句对照修订）</h4>
+    <div class="table-wrap">
+      <table class="chi-table">
+        <thead>
+          <tr>
+            <th>编号与雷区类型</th>
+            <th>考场常见错例（病例原句 ❌）</th>
+            <th>病理诊断与考官扣分点</th>
+            <th>满分修订方案（✅）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. 简繁字混用</strong><br><span class="badge-p1">格式红线</span></td>
+            <td>在这篇報導里，作者表達了对傳统手藝的怀念，我們應该学会珍惜。</td>
+            <td>同一卷内同时出现繁体（報/達/傳/藝/們/應）与简体（这/对/统/怀/该/学），违反 0509 考纲“简繁一致”明文规定，直接限制语言档位上限。</td>
+            <td>全篇统一简体：在这篇<strong>报道</strong>里，作者<strong>表达</strong>了对<strong>传统手艺</strong>的怀念，<strong>我们应该</strong>学会珍惜。（或全篇纯繁亦可，严禁混写）</td>
+          </tr>
+          <tr>
+            <td><strong>2. 成分残缺（缺主语/缺宾语）</strong></td>
+            <td>通过阅读这篇文章，使我深深懂得了诚实守信。</td>
+            <td>介词“通过……”与兼语动词“使……”连用导致全句没有主语；同时“懂得”后缺少宾语中心语“的重要性/道理”。</td>
+            <td>删去“通过”或删去“使”，并补齐宾语：<strong>阅读这篇文章，使我深深懂得了诚实守信的可贵品质。</strong></td>
+          </tr>
+          <tr>
+            <td><strong>3. 动宾/主谓搭配不当</strong></td>
+            <td>学校不仅要提高学生的学习态度，更要改善校园里垃圾桶不足的问题。</td>
+            <td>“提高”不能与“态度”搭配；“改善”通常搭配条件/环境/关系，不能直接搭配“问题”。双语考生极易因英文 <em>improve attitude / improve problems</em> 直译出错。</td>
+            <td>改换准确动词搭配：学校不仅要<strong>端正</strong>学生的学习态度，更要<strong>解决</strong>校园里垃圾桶不足的问题（或<strong>改善</strong>卫生设施条件）。</td>
+          </tr>
+          <tr>
+            <td><strong>4. 欧化长句累赘（直译腔）</strong></td>
+            <td>那个昨天被语文老师在演讲厅当众表扬了的非常努力准备比赛的女生是我的同桌。</td>
+            <td>把英文定语从句硬塞入单个“……的……”结构，定语长达 31 字且套嵌被动句“被……”，喘不过气且汉语节奏全失。</td>
+            <td>化长定语为汉语流水短句：<strong>我的同桌备赛十分刻苦，昨天在演讲厅得到了语文老师的当众表扬。</strong></td>
+          </tr>
+          <tr>
+            <td><strong>5. 一逗到底标点病</strong></td>
+            <td>清晨我走进老街，空气里飘着豆浆香味，巷口的大爷已经摆好了摊子，阳光照在青石板上，真让人感到无比温暖.</td>
+            <td>① 全段 4 个完整句子连用逗号不断句；② 句末误用英文实心小圆点 <code>.</code> 代替中文空心句号 <code>。</code>；③ 常见还把 <code>……</code> 写成 <code>...</code>、把 <code>“”</code> 写成直引号 <code>""</code>。</td>
+            <td>合理切分短句并规范使用中文标点：<strong>清晨我走进老街，空气里飘着豆浆香味。巷口的大爷已摆好摊子，阳光照在青石板上，令人倍感温暖。</strong></td>
+          </tr>
+          <tr>
+            <td><strong>6. 成语望文生义与褒贬误用</strong></td>
+            <td>面对校园减塑倡议，班长首当其冲报了名，他的不刊之论令同学们十分佩服；可惜活动效果差强人意，大家非常失望。</td>
+            <td>连犯三错：① <strong>首当其冲</strong>指最先受到攻击/遭遇灾难（贬/中性突发），非“冲在最前带头”；② <strong>不刊之论</strong>指不可磨灭的正确言论（此处夸得莫名，反过来不少学生又把它错当“不能发表的言论”）；③ <strong>差强人意</strong>是“勉强让人满意”（偏正），不是“很差劲”。</td>
+            <td><strong>班长一马当先（或率先）报了名，他的真知灼见令同学们深感佩服；可惜活动效果未如人意（或仍显逊色），大家难免有些失望。</strong></td>
+          </tr>
+          <tr>
+            <td><strong>7. 语体口语杂糅</strong></td>
+            <td>（报告/议论文）我觉得学校取消纸质作业超级划算，反正学生本来就贼讨厌抄写，老师批起来也挺麻烦的吧。</td>
+            <td>报告与议论文属正式书面语域（Formal Register），出现“超级划算 / 贼讨厌 / 反正 / 挺……的吧”等随意口语，瞬间拉低文章学术公信力。</td>
+            <td>升格为正式书面语体：<strong>窃以为（或笔者认为）推行无纸化作业利大于弊：既可减轻学生机械抄写的负担，亦能提升教师批阅的整体效率。</strong></td>
+          </tr>
+          <tr>
+            <td><strong>8. 高频同音形近错别字</strong></td>
+            <td>尽管初赛失利，他仍迫不急待想在决赛再接再励，可面对难题一时一愁莫展，只能甘败下风。</td>
+            <td>一句四字全错：“迫不及待”（非“急”）、“再接再厉”（“厉”通磨刀石，非“励”）、“一筹莫展”（“筹”指计策筹码，非“愁”）、“甘拜下风”（“拜”表礼敬认输，非“败”）。</td>
+            <td><strong>尽管初赛失利，他仍迫不及待想在决赛中再接再厉；然面对难题一时一筹莫展，只得甘拜下风。</strong></td>
+          </tr>
+          <tr>
+            <td><strong>9. 否定失当与两面对一面</strong></td>
+            <td>① 为防止此类安全事故不再发生，学校加强了巡逻。② 能否考出理想成绩，关键在于考前认真复习。</td>
+            <td>① “防止”自带否定意义，再加“不”变成“希望它再次发生”，逻辑反了；② 前半句“能否”包含正反两面，后半句“认真复习”仅对应正面，两面对一面照应失衡。</td>
+            <td>① 删去“不”：<strong>为防止此类安全事故再次发生……</strong><br>② 两面对应两面：<strong>能否考出理想成绩，关键在于考前是否认真复习。</strong></td>
+          </tr>
+          <tr>
+            <td><strong>10. 指代不明与语序倒置</strong></td>
+            <td>① 陈明叮嘱林浩，他明天一早必须把实验报告交给张老师。② 我买了一本旧书在旧书摊昨天下午。</td>
+            <td>① “他”既可指陈明也可指林浩，造成歧义；② 英文思维把地点状语、时间状语全部甩到句末，违背汉语“时间+地点+谓语+宾语”语序。</td>
+            <td>① 明确人称：<strong>陈明叮嘱林浩，让林浩明天一早……</strong>（或“陈明对林浩说自己明天……”）；② 调整状语前置：<strong>昨天下午，我在旧书摊买了一本旧书。</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout common-mistake">
+      <div class="callout-title">⚠️ 考场同音形近错别字“黑名单 Top 12”（交卷前逐字扫雷）</div>
+      <p style="margin-bottom: 0;">
+        ① <strong>再接再厉</strong>（非“励”）｜② <strong>迫不及待</strong>（非“急”）｜③ <strong>一筹莫展</strong>（非“愁”）｜④ <strong>甘拜下风</strong>（非“败”）｜⑤ <strong>墨守成规</strong>（非“陈”）｜⑥ <strong>脉搏</strong>（非“膊”）｜⑦ <strong>既然</strong>（既然……就）vs <strong>即使</strong>（即使……也）｜⑧ <strong>竟然</strong>（出乎意料）vs <strong>竞争</strong>｜⑨ <strong>辩论/分辨</strong> vs <strong>辨别/辫子</strong>｜⑩ <strong>烦躁/急躁</strong>（足旁）vs <strong>干燥/燥热</strong>（火旁）｜⑪ <strong>振奋/振兴</strong> vs <strong>震撼/地震</strong>｜⑫ <strong>察觉/观察</strong> vs <strong>检查/查阅</strong>。
+      </p>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>7.1.3 高分书面雅言与逻辑衔接词升级库（Band 3 → Band 1 一键升格）</h4>
+    <p>
+      改掉病句只是保底“不失分”；想让 Style &amp; Accuracy 冲上 <strong>12–13 / 13</strong>，必须把平淡重复的日常白话（如“很多人觉得”“但是”“还有”“所以”“做”“看”）替换为精准优雅的<strong>书面雅言与逻辑衔接词</strong>。
+    </p>
+    <div class="table-wrap">
+      <table class="chi-table">
+        <thead>
+          <tr>
+            <th>表达功能 / 常见平淡口语 ❌</th>
+            <th>Band 1 书面衔接与雅言升级词库 ✅</th>
+            <th>考场高分例句示范（适用于 P1 指导写作 &amp; P2 议论/讨论文）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>引出争议 / 观点</strong><br>（“很多人说……”）</td>
+            <td>坊间议论纷纷 · 舆论莫衷一是 · 近年来备受瞩目 · 不绝于耳 · 亟待审视</td>
+            <td>关于校园引入人工智能批改一事，<strong>舆论莫衷一是</strong>，各方观点<strong>亟待理性审视</strong>。</td>
+          </tr>
+          <tr>
+            <td><strong>转折与让步驳斥</strong><br>（“但是 / 不过”）</td>
+            <td>诚然……然则…… · 固然……殊不知…… · 反观之 · 实则不然 · 岂料 / 岂知</td>
+            <td><strong>诚然</strong>，算法批改效率惊人；<strong>然则</strong>文章之温度与思想锋芒，绝非冰冷代码所能丈量。</td>
+          </tr>
+          <tr>
+            <td><strong>递进深化</strong><br>（“而且 / 还有”）</td>
+            <td>不仅如是，更甚者 · 尤有甚者 · 进而言之 · 与此相辅相成的是 · 兼之</td>
+            <td>过度依赖屏幕阅读不仅削弱专注力，<strong>进而言之</strong>，更易使青年丧失深度思辨之耐心。</td>
+          </tr>
+          <tr>
+            <td><strong>因果推论与归纳</strong><br>（“所以 / 总而言之”）</td>
+            <td>职是之故 / 缘此 · 归根结底 · 概而言之 · 循此以往 · 毋庸置疑 · 由是观之</td>
+            <td><strong>归根结底</strong>，科技理应赋能人文而非取而代之；<strong>由是观之</strong>，人机协同方为正途。</td>
+          </tr>
+          <tr>
+            <td><strong>高频单调动词升级</strong><br>（“说 / 做 / 有 / 看 / 用”）</td>
+            <td><strong>说</strong>→直言/阐明/剖析/倡议；<strong>做</strong>→践行/落实/推进；<strong>有</strong>→具备/蕴含/涌现；<strong>看</strong>→审视/洞察/瞩目；<strong>用</strong>→依托/借助/发挥</td>
+            <td>我们应<strong>依托</strong>社区志愿平台，将环保理念真正<strong>践行</strong>于日常细节之中，方能<strong>洞察</strong>微光汇聚之力。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <details class="ms-details">
+      <summary>🧠 展开雅言升格即学即练：将 4 句“口语平淡句”一键改写为 Band 1 书面高分句</summary>
+      <div class="ms-body">
+        <p><span class="ms-mark">练 1</span> <strong>原句：</strong>“大家都觉得玩手机太多不好，但是很多同学就是管不住自己。”<br>
+        <strong>升格：</strong>诚然，过度沉溺电子屏幕之弊端早已人尽皆知；<strong>然则</strong>面对即时反馈的诱惑，不少同窗仍难免自律失守。</p>
+        <p><span class="ms-mark">练 2</span> <strong>原句：</strong>“还有，老字号店面太旧了，所以年轻人不爱去。”<br>
+        <strong>升格：</strong><strong>兼之</strong>老字号店面陈设略显陈旧，审美与当代青年脱节，<strong>缘此</strong>客源日渐流失。</p>
+        <p><span class="ms-mark">练 3</span> <strong>原句：</strong>“我认为学校可以用科技来帮忙，但不能全部依靠它。”<br>
+        <strong>升格：</strong>笔者以为，校方大可<strong>依托</strong>智能工具辅助教学，却切忌舍本逐末、陷入全面依赖之误区。</p>
+        <p><span class="ms-mark">练 4</span> <strong>原句：</strong>“总而言之，我们应该从自己做起。”<br>
+        <strong>升格：</strong><strong>概而言之</strong>，移风易俗非朝夕之功，唯有从自身微末处<strong>践行</strong>，方能久久为功。</p>
+      </div>
+    </details>
+  </div>
+</article>
+
+<!-- ==================== SECTION 7.2 ==================== -->
+<article class="topic-section method-section" id="sec-7-2">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>7.2 课外文言文 50 个必背高频多义实词总表与错别字对比</h3>
+      <div class="section-en-sub">50 Essential Classical Chinese Content Words (实词) &amp; Misused Idiom/Character Signboard</div>
+      <div class="tier-row">
+        <span class="badge-p1">Paper 1 Sec 3 实词翻译核心库</span>
+        <span class="badge-p2">完整 50 实词 · 交互检索台 z07</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-7-2">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>7.2.1 十大高频错别字与望文生义成语正误对比牌</h4>
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 350" width="740" height="350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="十大高频错别字与望文生义成语正误对比牌">
+        <text x="370" y="24" text-anchor="middle" font-size="13.5" font-weight="800" fill="var(--svg-ink)">十大高频错别字与望文生义成语“红黑正误对比牌”</text>
+        <text x="370" y="42" text-anchor="middle" font-size="10.5" font-weight="600" fill="var(--svg-muted)">考场写作失分重灾区对照表 · 写作自查 60 秒扫清高危错字与误用成语</text>
+
+        <!-- Left Board: 5 High-Frequency Typos -->
+        <rect x="20" y="58" width="340" height="274" rx="10" fill="var(--svg-bg)" stroke="var(--svg-red)" stroke-width="1.8" />
+        <rect x="20" y="58" width="340" height="30" rx="10" fill="var(--svg-red)" />
+        <text x="190" y="78" text-anchor="middle" font-size="12" font-weight="800" fill="#FFFFFF">左牌 · 5 大高频错别字 (错写 ❌ vs 正字 ✅)</text>
+
+        <rect x="34" y="100" width="312" height="38" rx="6" fill="rgba(220,38,38,0.06)" stroke="var(--svg-grid)" stroke-width="1" />
+        <text x="44" y="117" font-size="11" font-weight="800" fill="var(--svg-red)">1. ❌ 再接再励</text>
+        <text x="172" y="117" font-size="11" font-weight="800" fill="var(--svg-green)">✅ 再接再厉</text>
+        <text x="44" y="132" font-size="9.5" font-weight="600" fill="var(--svg-muted)">“厉”通砥砺(磨嘴准备再斗)，绝非“鼓励”</text>
+
+        <rect x="34" y="146" width="312" height="38" rx="6" fill="rgba(220,38,38,0.06)" stroke="var(--svg-grid)" stroke-width="1" />
+        <text x="44" y="163" font-size="11" font-weight="800" fill="var(--svg-red)">2. ❌ 迫不急待</text>
+        <text x="172" y="163" font-size="11" font-weight="800" fill="var(--svg-green)">✅ 迫不及待</text>
+        <text x="44" y="178" font-size="9.5" font-weight="600" fill="var(--svg-muted)">“及”意为“等到”(急切到等不及)，非“急”</text>
+
+        <rect x="34" y="192" width="312" height="38" rx="6" fill="rgba(220,38,38,0.06)" stroke="var(--svg-grid)" stroke-width="1" />
+        <text x="44" y="209" font-size="11" font-weight="800" fill="var(--svg-red)">3. ❌ 一愁莫展</text>
+        <text x="172" y="209" font-size="11" font-weight="800" fill="var(--svg-green)">✅ 一筹莫展</text>
+        <text x="44" y="224" font-size="9.5" font-weight="600" fill="var(--svg-muted)">“筹”为计策筹码(一条计策也想不出)，非“愁”</text>
+
+        <rect x="34" y="238" width="312" height="38" rx="6" fill="rgba(220,38,38,0.06)" stroke="var(--svg-grid)" stroke-width="1" />
+        <text x="44" y="255" font-size="11" font-weight="800" fill="var(--svg-red)">4. ❌ 甘败下风</text>
+        <text x="172" y="255" font-size="11" font-weight="800" fill="var(--svg-green)">✅ 甘拜下风</text>
+        <text x="44" y="270" font-size="9.5" font-weight="600" fill="var(--svg-muted)">“拜”为俯首行礼认输，而非“失败”</text>
+
+        <rect x="34" y="284" width="312" height="38" rx="6" fill="rgba(220,38,38,0.06)" stroke="var(--svg-grid)" stroke-width="1" />
+        <text x="44" y="301" font-size="11" font-weight="800" fill="var(--svg-red)">5. ❌ 墨守陈规</text>
+        <text x="172" y="301" font-size="11" font-weight="800" fill="var(--svg-green)">✅ 墨守成规</text>
+        <text x="44" y="316" font-size="9.5" font-weight="600" fill="var(--svg-muted)">“成规”指既成之旧规(墨子守城典故)，非“陈”</text>
+
+        <!-- Right Board: 5 Misunderstood Idioms -->
+        <rect x="380" y="58" width="340" height="274" rx="10" fill="var(--svg-bg)" stroke="var(--svg-amber)" stroke-width="1.8" />
+        <rect x="380" y="58" width="340" height="30" rx="10" fill="var(--svg-amber)" />
+        <text x="550" y="78" text-anchor="middle" font-size="12" font-weight="800" fill="#FFFFFF">右牌 · 5 大望文生义成语 (误用 ❌ vs 本义 ✅)</text>
+
+        <rect x="394" y="100" width="312" height="38" rx="6" fill="rgba(217,119,6,0.06)" stroke="var(--svg-grid)" stroke-width="1" />
+        <text x="404" y="117" font-size="11" font-weight="800" fill="var(--svg-ink)">1. 首当其冲</text>
+        <text x="478" y="117" font-size="10.5" font-weight="700" fill="var(--svg-green)">✅ 最先遭冲击/受灾难</text>
+        <text x="404" y="132" font-size="9.5" font-weight="600" fill="var(--svg-red)">❌ 误：当成“勇往直前冲在最前面带头”</text>
+
+        <rect x="394" y="146" width="312" height="38" rx="6" fill="rgba(217,119,6,0.06)" stroke="var(--svg-grid)" stroke-width="1" />
+        <text x="404" y="163" font-size="11" font-weight="800" fill="var(--svg-ink)">2. 不刊之论</text>
+        <text x="478" y="163" font-size="10.5" font-weight="700" fill="var(--svg-green)">✅ 不可删改的正确定论</text>
+        <text x="404" y="178" font-size="9.5" font-weight="600" fill="var(--svg-red)">❌ 误：当成“不能刊登发表的错误文章”</text>
+
+        <rect x="394" y="192" width="312" height="38" rx="6" fill="rgba(217,119,6,0.06)" stroke="var(--svg-grid)" stroke-width="1" />
+        <text x="404" y="209" font-size="11" font-weight="800" fill="var(--svg-ink)">3. 差强人意</text>
+        <text x="478" y="209" font-size="10.5" font-weight="700" fill="var(--svg-green)">✅ 大致/勉强还令人满意</text>
+        <text x="404" y="224" font-size="9.5" font-weight="600" fill="var(--svg-red)">❌ 误：当成“表现很差、让人大失所望”</text>
+
+        <rect x="394" y="238" width="312" height="38" rx="6" fill="rgba(217,119,6,0.06)" stroke="var(--svg-grid)" stroke-width="1" />
+        <text x="404" y="255" font-size="11" font-weight="800" fill="var(--svg-ink)">4. 万人空巷</text>
+        <text x="478" y="255" font-size="10.5" font-weight="700" fill="var(--svg-green)">✅ 全城倾巢出动欢呼盛况</text>
+        <text x="404" y="270" font-size="9.5" font-weight="600" fill="var(--svg-red)">❌ 误：当成“街道冷清、空无一人”</text>
+
+        <rect x="394" y="284" width="312" height="38" rx="6" fill="rgba(217,119,6,0.06)" stroke="var(--svg-grid)" stroke-width="1" />
+        <text x="404" y="301" font-size="11" font-weight="800" fill="var(--svg-ink)">5. 罪不容诛</text>
+        <text x="478" y="301" font-size="10.5" font-weight="700" fill="var(--svg-green)">✅ 罪大恶极、杀也不够抵罪</text>
+        <text x="404" y="316" font-size="9.5" font-weight="600" fill="var(--svg-red)">❌ 误：当成“罪行较轻、不应当判死罪”</text>
+      </svg>
+      <div class="svg-caption">图 7.2 十大高频错别字与望文生义成语正误对比牌</div>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>7.2.2 课外文言文 50 个必背高频多义实词交互检索台 &amp; 完整总表</h4>
+    <p>
+      Paper 1 Sec 3 课外文言文总计 12 分，其中<strong>实词解释（4 分）</strong>与<strong>整句翻译踩分关键词（4 分）</strong>合计占 8 分之多！下方的速查交互检索台支持按重点词或义项秒查，而下方总表系统汇编了《史记》《资治通鉴》《宋史》《世说新语》及唐宋笔记中复现率最高的 <strong>50 个多义实词（安 → 素）</strong>。
+    </p>
+
+    <div class="lab-box" data-lab-type="z07"></div>
+
+    <div class="table-wrap">
+      <table class="chi-table">
+        <thead>
+          <tr>
+            <th>序号 / 实词</th>
+            <th>2–4 个核心高频义项</th>
+            <th>经典真题例句（重点词加粗）</th>
+            <th>考场语境秒判点拨</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>01. 安</strong></td>
+            <td>① 形容词：安定、安稳<br>② 疑问代词：怎么、哪里<br>③ 动词：安抚、使……安定</td>
+            <td>① 然后知生于忧患，而死于<strong>安</strong>乐也（安逸）<br>② <strong>安</strong>能辨我是雄雌？（怎么）<br>③ 既来之，则<strong>安</strong>之（使……安居）</td>
+            <td>句首接动词“能/敢/知”必译“怎么”；接宾语常为使动“使……安定”。</td>
+          </tr>
+          <tr>
+            <td><strong>02. 兵</strong></td>
+            <td>① 名词：兵器、武器<br>② 名词：军队、士兵<br>③ 名词：战争、军事</td>
+            <td>① <strong>兵</strong>革非不坚利也（兵器）<br>② 可汗大点<strong>兵</strong>（士兵/军队）<br>③ 必以长安君为质，<strong>兵</strong>乃出（军队）</td>
+            <td>先秦两汉文献“兵”九成先译“兵器”或“士兵/军队”，极少指单个小兵。</td>
+          </tr>
+          <tr>
+            <td><strong>03. 察</strong></td>
+            <td>① 动词：仔细看、详察<br>② 动词：看清、体察实情<br>③ 动词：考察举荐</td>
+            <td>① 明<strong>察</strong>秋毫（仔细看清）<br>② 小大之狱，虽不能<strong>察</strong>（明察实情）<br>③ <strong>察</strong>举孝廉（考察推荐）</td>
+            <td>诉讼断案语境常译“明察、查明”；遇“察纳雅言”译“仔细思考并采纳”。</td>
+          </tr>
+          <tr>
+            <td><strong>04. 乘</strong></td>
+            <td>① 动词(chéng)：乘坐、驾车<br>② 动词(chéng)：趁着、冒着<br>③ 量词(shèng)：一车四马</td>
+            <td>① 公与之<strong>乘</strong>（共乘一辆车）<br>② 因利<strong>乘</strong>便 / <strong>乘</strong>虚而入（趁着）<br>③ 致万<strong>乘</strong>之势（辆）</td>
+            <td>接交通工具译“乘坐”；接“机/便/胜/醉”等抽象时机必译“趁着”。</td>
+          </tr>
+          <tr>
+            <td><strong>05. 池</strong></td>
+            <td>① 名词：护城河<br>② 名词：水池、池塘</td>
+            <td>① 城非不高也，<strong>池</strong>非不深也（护城河）<br>② 临<strong>池</strong>学书（池塘）</td>
+            <td>只要与“城”“郭”并举（城池、金城汤池），“池”100% 译为“护城河”！</td>
+          </tr>
+          <tr>
+            <td><strong>06. 辞</strong></td>
+            <td>① 名词：言辞、文辞<br>② 动词：推辞、拒绝<br>③ 动词：告别、离开</td>
+            <td>① 其文约，其<strong>辞</strong>微（言辞）<br>② 大礼不<strong>辞</strong>小让（计较/推辞）<br>③ 停数日，<strong>辞</strong>去（告别）</td>
+            <td>“辞去/辞别”译“告别”；接任务、赏赐或责难多译“推辞、推脱”。</td>
+          </tr>
+          <tr>
+            <td><strong>07. 道</strong></td>
+            <td>① 名词：道路<br>② 名词：规律、道义、方法<br>③ 动词：说、谈论</td>
+            <td>① 会天大雨，<strong>道</strong>不通（道路）<br>② 得<strong>道</strong>者多助 / 策之不以其<strong>道</strong>（道义 / 方法）<br>③ 不足为外人<strong>道</strong>也（说、讲述）</td>
+            <td>“为……道”或接话语对象多为动词“说出/讲起”。</td>
+          </tr>
+          <tr>
+            <td><strong>08. 得</strong></td>
+            <td>① 动词：得到、获得<br>② 助动词：能够、可以<br>③ 通“德”：感激、恩惠</td>
+            <td>① 二者不可<strong>得</strong>兼（获得）<br>② 复前行，欲穷其林，不<strong>得</strong>入（能够）<br>③ 所识穷乏者<strong>得</strong>我与（感激）</td>
+            <td>“不得+动词”表“不能/不能够……”；受人帮助语境中注意通假“感激”。</td>
+          </tr>
+          <tr>
+            <td><strong>09. 度</strong></td>
+            <td>① 名词(dù)：尺度、标准<br>② 动词(duó)：揣度、估量<br>③ 动词(dù)：越过、度过</td>
+            <td>① 先自<strong>度</strong>其足（量一量）<br>② <strong>度</strong>义而后动（估量、权衡）<br>③ 关山<strong>度</strong>若飞（越过）</td>
+            <td>“度德量力”“以己度人”作动词读 duó，译为“揣测、估量”。</td>
+          </tr>
+          <tr>
+            <td><strong>10. 非</strong></td>
+            <td>① 动词：不是<br>② 副词：无、没有<br>③ 形容词/动词：错误 / 责怪</td>
+            <td>① 城<strong>非</strong>不高也（不是）<br>② <strong>非</strong>学无以广才（没有/如果不）<br>③ 觉今是而昨<strong>非</strong>（不对、错误）</td>
+            <td>“非……无以……”固定译“不……就没有办法……”；“是非”常考“对与错”。</td>
+          </tr>
+          <tr>
+            <td><strong>11. 复</strong></td>
+            <td>① 副词：又、再<br>② 动词：恢复、复原<br>③ 动词：回答、报答</td>
+            <td>① <strong>复</strong>前行，欲穷其林（又、再）<br>② 兴<strong>复</strong>汉室（恢复）<br>③ 不敢<strong>复</strong>命（回复、汇报）</td>
+            <td>“复+动词”绝大多数直接译“又、再次”；“复奏如初”即“再次上奏”。</td>
+          </tr>
+          <tr>
+            <td><strong>12. 负</strong></td>
+            <td>① 动词：背着、背负<br>② 动词：依仗、凭借<br>③ 动词：辜负、违背 / 失败</td>
+            <td>① 命夸娥氏二子<strong>负</strong>二山（背）<br>② <strong>负</strong>势竞上（依仗、凭借）<br>③ 不<strong>负</strong>重托 / 胜<strong>负</strong>未决（辜负 / 败）</td>
+            <td>遇山河险要（如“负隅”“负险”“负势”）必译“依仗、凭借”。</td>
+          </tr>
+          <tr>
+            <td><strong>13. 故</strong></td>
+            <td>① 名词：原因、缘故<br>② 连词：所以、因此<br>③ 形容词/副词：旧的 / 故意</td>
+            <td>① 既克，公问其<strong>故</strong>（原因）<br>② <strong>故</strong>天将降大任于是人也（所以）<br>③ 温<strong>故</strong>而知新 / <strong>故</strong>数言欲亡（旧知识 / 故意）</td>
+            <td>放句首引出结果译“因此”；放“问/知/何”后作宾语译“原因、缘故”。</td>
+          </tr>
+          <tr>
+            <td><strong>14. 顾</strong></td>
+            <td>① 动词：回头看、看<br>② 动词：拜访、看望<br>③ 副词：反而、难道</td>
+            <td>① <strong>顾</strong>野有麦场（回头看/环视）<br>② 三<strong>顾</strong>臣于草庐之中（拜访）<br>③ <strong>顾</strong>不如蜀鄙之僧哉（反而、难道）</td>
+            <td>句首“顾”接“不如/安能”多作副词“反而、难道”；“相顾”译“互相看着”。</td>
+          </tr>
+          <tr>
+            <td><strong>15. 观</strong></td>
+            <td>① 动词(guān)：看、观察<br>② 名词(guān)：景象、景观<br>③ 名词(guàn)：道观、高台</td>
+            <td>① 予<strong>观</strong>夫巴陵胜状（观看、欣赏）<br>② 此则岳阳楼之大<strong>观</strong>也（景象）<br>③ 游玄都<strong>观</strong>（道观）</td>
+            <td>“大观”“奇观”均指“宏伟/奇特的景象”，非现代“观念”。</td>
+          </tr>
+          <tr>
+            <td><strong>16. 过</strong></td>
+            <td>① 动词：经过、路过<br>② 动词：超过、胜过<br>③ 名词/动词：过错 / 责备<br>④ 动词：拜访</td>
+            <td>① 及鲁肃<strong>过</strong>寻阳（经过）<br>② <strong>过</strong>犹不及（超过）<br>③ 闻大王有意督<strong>过</strong>之 / 人恒<strong>过</strong>（责备 / 犯错）<br>④ <strong>过</strong>故人庄（拜访）</td>
+            <td>“过”带人名宾语时常考“拜访”或“责备某人（督过）”。</td>
+          </tr>
+          <tr>
+            <td><strong>17. 或</strong></td>
+            <td>① 代词：有人、有的<br>② 副词：或许、也许<br>③ 副词：有时</td>
+            <td>① <strong>或</strong>以为死，<strong>或</strong>以为亡（有的人）<br>② <strong>或</strong>异二者之为（或许、也许）<br>③ 而<strong>或</strong>长烟一空（有时）</td>
+            <td>古文里的“或”极少作现代选择连词“或者”！放主语位九成译“有的人/有的事”。</td>
+          </tr>
+          <tr>
+            <td><strong>18. 疾</strong></td>
+            <td>① 名词：疾病、重病<br>② 形容词：快、迅猛<br>③ 动词：痛恨、厌恶</td>
+            <td>① 君有<strong>疾</strong>在腠理（小病/病患）<br>② 虽乘奔御风，不以<strong>疾</strong>也（快）<br>③ 深恶痛<strong>疾</strong> / <strong>疾</strong>恶如仇（痛恨）</td>
+            <td>形容风、水、车马或写字动作时，“疾”必译“快、迅速”。</td>
+          </tr>
+          <tr>
+            <td><strong>19. 及</strong></td>
+            <td>① 动词：到、赶上<br>② 介词：趁着、等到<br>③ 连词：和、与</td>
+            <td>① <strong>及</strong>郡下，诣太守（到达）<br>② <strong>及</strong>次日临政（等到）<br>③ 若有作奸犯科<strong>及</strong>为忠善者（和、以及）</td>
+            <td>“及”接时间词译“等到”；接地方译“到达”；“不及”常译“赶不上/比不上”。</td>
+          </tr>
+          <tr>
+            <td><strong>20. 既</strong></td>
+            <td>① 副词：已经<br>② 连词：既然<br>③ 副词：全、尽</td>
+            <td>① <strong>既</strong>克，公问其故（已经）<br>② <strong>既</strong>来之，则安之（既然）<br>③ <strong>既</strong>醉而退（全/已经）</td>
+            <td>叙事文段开头“既而”“既薨”必译“不久”和“已经去世之后”。</td>
+          </tr>
+          <tr>
+            <td><strong>21. 加</strong></td>
+            <td>① 动词：增加、加上<br>② 动词：虚报、夸大 / 益处<br>③ 动词：施加、欺凌</td>
+            <td>① 山不<strong>加</strong>增（再增高）<br>② 弗敢<strong>加</strong>也 / 万钟于我何<strong>加</strong>焉（虚报 / 益处）<br>③ 吾欲之，勿<strong>加</strong>诸我也（施加）</td>
+            <td>“加”考频率极高的是《曹刿论战》“弗敢加也（虚夸）”和“何加（有什么益处）”。</td>
+          </tr>
+          <tr>
+            <td><strong>22. 假</strong></td>
+            <td>① 动词：借、借用<br>② 动词：凭借、借助<br>③ 连词：如果、假使</td>
+            <td>① 每<strong>假</strong>借于藏书之家（借）<br>② <strong>假</strong>舟楫者，非能水也（借助）<br>③ <strong>假</strong>令天子在位（假使）</td>
+            <td>现代“真假”义在古文中极罕见！课外文言 90% 考“借”或“凭借”。</td>
+          </tr>
+          <tr>
+            <td><strong>23. 间</strong></td>
+            <td>① 名词(jiān)：中间、期间<br>② 动词(jiàn)：参与 / 挑拨离间<br>③ 副词(jiàn)：暗中、秘密地</td>
+            <td>① 奉命于危难之<strong>间</strong>（期间）<br>② 又何<strong>间</strong>焉（参与）<br>③ <strong>间</strong>令吴广之次所（暗中、秘密地）</td>
+            <td>“间令/间行/间道”中均读 jiàn，译为“暗中、从小路秘密地”。</td>
+          </tr>
+          <tr>
+            <td><strong>24. 举</strong></td>
+            <td>① 动词：抬起、举起<br>② 动词：推举、任用<br>③ 动词：发动、攻克<br>④ 副词：全、整个</td>
+            <td>① <strong>举</strong>头望明月（抬起）<br>② 傅说<strong>举</strong>于版筑之间（被推举）<br>③ <strong>举</strong>大计亦死（发动）<br>④ <strong>举</strong>世混浊（全、整个）</td>
+            <td>看宾语判断：+官员=“推举”；+兵/事=“发动”；+国/世=“全、整个”。</td>
+          </tr>
+          <tr>
+            <td><strong>25. 绝</strong></td>
+            <td>① 动词：断绝、隔绝<br>② 副词：极、最、非常<br>③ 动词：横渡、穿过<br>④ 动词：停止、消失</td>
+            <td>① 率妻子邑人来此<strong>绝</strong>境（与世隔绝）<br>② 佛印<strong>绝</strong>类弥勒（极、非常）<br>③ 而<strong>绝</strong>江河（横渡）<br>④ 哀转久<strong>绝</strong>（消失、停止）</td>
+            <td>“绝”修饰形容词（绝美/绝类）译“极”；接江海译“横渡”；“绝境”为古今异义！</td>
+          </tr>
+          <tr>
+            <td><strong>26. 克</strong></td>
+            <td>① 动词：战胜、攻克<br>② 助动词：能够<br>③ 动词：克制、约束</td>
+            <td>① 既<strong>克</strong>，公问其故（战胜）<br>② 不<strong>克</strong>成行（能够）<br>③ <strong>克</strong>己复礼（克制）</td>
+            <td>若“克”后直接跟另一个动词（如“克终”“克成”），多译为“能够”。</td>
+          </tr>
+          <tr>
+            <td><strong>27. 类</strong></td>
+            <td>① 名词：种类、同类<br>② 动词：像、类似<br>③ 副词：大都、大抵</td>
+            <td>① 物以<strong>类</strong>聚（同类）<br>② 绝<strong>类</strong>弥勒（像）<br>③ <strong>类</strong>如此（大抵、大概）</td>
+            <td>“类+人名/物名”十有八九作动词“像、相似”。</td>
+          </tr>
+          <tr>
+            <td><strong>28. 临</strong></td>
+            <td>① 动词：面对、靠近<br>② 动词：来到、统治管理<br>③ 副词：将要、快到</td>
+            <td>① <strong>临</strong>溪而渔 / 把酒<strong>临</strong>风（面对、靠近）<br>② 及次日<strong>临</strong>政（处理政务）<br>③ <strong>临</strong>别赠言（将要）</td>
+            <td>人物居高或靠水边译“面对/靠近”；官员“临政/临民”译“处理政务/面对百姓”。</td>
+          </tr>
+          <tr>
+            <td><strong>29. 名</strong></td>
+            <td>① 名词：名字、名称 / 声望<br>② 动词：命名、取名<br>③ 动词：说出 / 出名</td>
+            <td>① 莫<strong>名</strong>其妙（说出）<br>② <strong>名</strong>之者谁？太守自谓也（命名）<br>③ 山不在高，有仙则<strong>名</strong>（出名、闻名）</td>
+            <td>“名”置于“之/以”等代词前多为动词“命名/说出”。</td>
+          </tr>
+          <tr>
+            <td><strong>30. 莫</strong></td>
+            <td>① 代词：没有谁、没有什么<br>② 副词：不要、不<br>③ 通“暮”：傍晚</td>
+            <td>① <strong>莫</strong>敢仰视（没有谁）<br>② <strong>莫</strong>愁前路无知己（不要）<br>③ 至<strong>莫</strong>夜月明（傍晚）</td>
+            <td>放动词前作主语（莫知/莫能/莫敢）必译“没有谁/没有人”。</td>
+          </tr>
+          <tr>
+            <td><strong>31. 期</strong></td>
+            <td>① 动词/名词：约定 / 期限<br>② 动词：期望、盼望<br>③ 名词(jī)：一周年、一整月</td>
+            <td>① 陈太丘与友<strong>期</strong>行（约定）<br>② 不<strong>期</strong>而遇（约定/预料）<br>③ <strong>期</strong>年之后（满一年）</td>
+            <td>见到“期行”“期日中”“不期”，一律先想“约定（时间）”；“期年”=满一年。</td>
+          </tr>
+          <tr>
+            <td><strong>32. 奇</strong></td>
+            <td>① 形容词(qí)：奇特、珍奇<br>② 意动(qí)：以……为奇<br>③ 名词(jī)：零数、单数</td>
+            <td>① <strong>奇</strong>山异水（奇特）<br>② 邑人<strong>奇</strong>之（对……感到惊奇）<br>③ 舟首尾长约八分有<strong>奇</strong>（零头）</td>
+            <td>“奇之”为典型意动用法，切勿译成“奇怪他”，要译“认为他奇特/对他感到惊奇”。</td>
+          </tr>
+          <tr>
+            <td><strong>33. 迁</strong></td>
+            <td>① 动词：调动官职（降或升）<br>② 动词：迁移、搬迁<br>③ 动词：改变、变迁</td>
+            <td>① <strong>迁</strong>客骚人（被贬谪降职的人）<br>② <strong>迁</strong>徙（搬迁）<br>③ 情随事<strong>迁</strong>（改变）</td>
+            <td>古代官职变动中，“左迁”必为降职，“迁”无“左”字时须看上下文判断升/贬/平调。</td>
+          </tr>
+          <tr>
+            <td><strong>34. 请</strong></td>
+            <td>① 动词：请求、恳求<br>② 动词：请允许我（谦敬）<br>③ 动词：邀请、延请</td>
+            <td>① 曹刿<strong>请</strong>见（请求拜见）<br>② 战则<strong>请</strong>从（请允许我跟随）<br>③ <strong>请</strong>宾客（邀请）</td>
+            <td>下对上或自己行动前用“请+动词”，多译为“请允许我……”。</td>
+          </tr>
+          <tr>
+            <td><strong>35. 穷</strong></td>
+            <td>① 动词/形容词：穷尽、走到尽头<br>② 形容词：处境困厄、不得志<br>③ 副词：极、非常</td>
+            <td>① 欲<strong>穷</strong>其林（走到……尽头）<br>② <strong>穷</strong>则独善其身（不得志、困窘）<br>③ <strong>穷</strong>冬烈风（极冷的冬天）</td>
+            <td>切勿一见“穷”就译成“没钱”！九成考“走到尽头”或“仕途困窘不得志”。</td>
+          </tr>
+          <tr>
+            <td><strong>36. 求</strong></td>
+            <td>① 动词：寻找、探求<br>② 动词：请求、要求<br>③ 动词：索取、贪求</td>
+            <td>① 予尝<strong>求</strong>古仁人之心（探求）<br>② 不<strong>求</strong>闻达于诸侯（谋求）<br>③ 苛<strong>求</strong>（索求）</td>
+            <td>“求剑”“求仁人之心”均侧重“寻找、探求”。</td>
+          </tr>
+          <tr>
+            <td><strong>37. 去</strong></td>
+            <td>① 动词：离开<br>② 动词：距离<br>③ 动词：除掉、删去</td>
+            <td>① 停数日，辞<strong>去</strong>（离开）<br>② 我以日始出时<strong>去</strong>人近（距离）<br>③ <strong>去</strong>伪存真（除掉）</td>
+            <td>古文最常考“离开”与“距离”！千万别受现代汉语干扰误译成“前往”。</td>
+          </tr>
+          <tr>
+            <td><strong>38. 劝</strong></td>
+            <td>① 动词：勉励、鼓励<br>② 动词：劝说、规劝</td>
+            <td>① 太祖常<strong>劝</strong>以读书（勉励）<br>② <strong>劝</strong>谏 / <strong>劝</strong>止（规劝）</td>
+            <td>上对下或书名《劝学》皆为正面“勉励、鼓励”，而非现代仅指“劝阻”。</td>
+          </tr>
+          <tr>
+            <td><strong>39. 却</strong></td>
+            <td>① 动词：退却、击退<br>② 动词：推辞、拒绝<br>③ 副词：反而、回头</td>
+            <td>① 威震敌胆，<strong>却</strong>敌百里（击退）<br>② <strong>却</strong>之不恭（拒绝）<br>③ <strong>却</strong>看妻子愁何在（回头看）</td>
+            <td>带敌军作宾语为使动“使……退却（击退）”；接礼物多译“推辞、拒绝”。</td>
+          </tr>
+          <tr>
+            <td><strong>40. 善</strong></td>
+            <td>① 形容词：好、善良 / 好的做法<br>② 动词：擅长、善于<br>③ 动词：交好、友善</td>
+            <td>① 择其<strong>善</strong>者而从之（好的方面）<br>② 京中有<strong>善</strong>口技者（擅长）<br>③ 素与留侯<strong>善</strong>（交好、关系好）</td>
+            <td>“善+人名”译“与某人交好”；“善+技能/动词”译“擅长、善于”。</td>
+          </tr>
+          <tr>
+            <td><strong>41. 涉</strong></td>
+            <td>① 动词：徒步渡水、经历<br>② 动词：阅读、浏览<br>③ 动词：牵涉、关联</td>
+            <td>① <strong>涉</strong>江采芙蓉（渡过）<br>② <strong>涉</strong>猎群书（广泛阅读）<br>③ 不<strong>涉</strong>此案（关联、牵涉）</td>
+            <td>遇山水险阻译“渡过/经过”；遇书籍学问译“广泛阅读”。</td>
+          </tr>
+          <tr>
+            <td><strong>42. 胜</strong></td>
+            <td>① 动词(shèng)：战胜 / 优美<br>② 动词(shēng)：禁得起、承受<br>③ 副词(shēng)：尽、完</td>
+            <td>① 予观夫巴陵<strong>胜</strong>状（优美的）<br>② 驴不<strong>胜</strong>怒（承受不住）<br>③ 不可<strong>胜</strong>数（尽、数完）</td>
+            <td>景物名词前（胜状/胜地）译“优美”；“不胜”多译“禁不住/无法承受”。</td>
+          </tr>
+          <tr>
+            <td><strong>43. 识</strong></td>
+            <td>① 动词(shí)：认识、懂得<br>② 名词(shí)：见识、学识<br>③ 动词(zhì)：记住、做标记</td>
+            <td>① <strong>识</strong>大体（懂得）<br>② 才<strong>识</strong>过人（见识）<br>③ 默而<strong>识</strong>之（记住）</td>
+            <td>“默而识之”是高频真题句，读 zhì，译为“默默地记在心里”。</td>
+          </tr>
+          <tr>
+            <td><strong>44. 使</strong></td>
+            <td>① 动词：派遣、出使<br>② 动词：让、命令<br>③ 连词：假使 / 名词：使者</td>
+            <td>① 齐<strong>使</strong>者如梁 / <strong>使</strong>安陵（使者 / 出使）<br>② <strong>使</strong>人听此凋朱颜（让、使）<br>③ 向<strong>使</strong>三国各爱其地（假使）</td>
+            <td>接地点名词译“出使”；接人后接动词译“让/派遣”。</td>
+          </tr>
+          <tr>
+            <td><strong>45. 是</strong></td>
+            <td>① 代词：这、这样<br>② 形容词：正确、对<br>③ 意动：认为……正确</td>
+            <td>① 天将降大任于<strong>是</strong>人也（这）<br>② 觉今<strong>是</strong>而昨非（正确）<br>③ 各<strong>是</strong>其所是（认为……是对的）</td>
+            <td>先秦散文中“是”70% 以上作指示代词“这”！（如“于是”=在这个时候/在这种情况下）。</td>
+          </tr>
+          <tr>
+            <td><strong>46. 适</strong></td>
+            <td>① 动词：到……去、前往<br>② 副词：恰巧、刚才<br>③ 动词：适合、顺从</td>
+            <td>① 余自齐安舟行<strong>适</strong>临汝（前往）<br>② <strong>适</strong>逢其会 / <strong>适</strong>从何来（恰巧 / 刚才）<br>③ 削足<strong>适</strong>履（适应、迁就）</td>
+            <td>与“之”相似，“适+地名”必译为动词“到……去、前往”。</td>
+          </tr>
+          <tr>
+            <td><strong>47. 书</strong></td>
+            <td>① 名词：书信<br>② 名词：书籍、文字<br>③ 动词：写、记载</td>
+            <td>① 烽火连三月，家<strong>书</strong>抵万金（书信）<br>② 读<strong>书</strong>万卷（书籍）<br>③ 乃丹<strong>书</strong>帛曰“陈胜王”（书写）</td>
+            <td>“书信”义在传记题最常见（如“得书”“报书”“上书”分别为收到信、回信、上奏章）。</td>
+          </tr>
+          <tr>
+            <td><strong>48. 孰</strong></td>
+            <td>① 代词：谁、哪一个<br>② 代词：什么<br>③ 通“熟”：仔细</td>
+            <td>① 吾与徐公<strong>孰</strong>美？（谁/哪一个）<br>② 是可忍，<strong>孰</strong>不可忍？（什么）<br>③ 唯大王与群臣<strong>孰</strong>计议之（仔细）</td>
+            <td>“孰与……”是固定比较句式，译为“跟……相比，哪一个更……？”。</td>
+          </tr>
+          <tr>
+            <td><strong>49. 属</strong></td>
+            <td>① 动词(zhǔ)：嘱托、托付<br>② 动词(zhǔ)：接连、跟随<br>③ 名词(shǔ)：类、一类人</td>
+            <td>① <strong>属</strong>予作文以记之（嘱托）<br>② <strong>属</strong>引凄异（连续不断）<br>③ 忠之<strong>属</strong>也 / 桑竹之<strong>属</strong>（这类人 / 这类事物）</td>
+            <td>“……之属”固定译“……这一类（人/物）”；后接人托办事译“嘱托”。</td>
+          </tr>
+          <tr>
+            <td><strong>50. 素</strong></td>
+            <td>① 形容词：白色的、朴素的<br>② 副词：向来、一向<br>③ 名词：本色、未染色的丝绸</td>
+            <td>① <strong>素</strong>湍绿潭（白色的）<br>② 吴广<strong>素</strong>爱人（向来、一向）<br>③ 可以调<strong>素</strong>琴（不加雕饰的）</td>
+            <td>修饰人物性情与人际关系（素善/素爱/素不识）时，必译为“向来、一向”！</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</article>
+
+<!-- ==================== PRACTICE SECTION C07 ==================== -->
+<article class="topic-section practice-section" id="sec-sme">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>7.3 语言诊所实战：8 道辨析互动小题 + 2 段真实病文红笔升格</h3>
+      <div class="section-en-sub">8 Interactive Style, Idiom &amp; Classical Lexis MCQs + 2 Full Paragraph Error-Correction Drills</div>
+      <div class="tier-row">
+        <span class="badge-p1">8 道即点即评小题</span>
+        <span class="badge-p2">2 段真实考场病文红笔精批</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-sme">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>7.3.1 病句、成语与 50 实词辨析互动闯关 (Q1 – Q8)</h4>
+
+    <div class="exam-q" data-mcq-answer="C">
+      <div class="exam-q-head"><span class="q-tag">诊所 Q1 · 病句辨析</span><span><span class="badge-p2">Style &amp; Syntax</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">下列四个句子中，完全没有语病、搭配得当且表意清晰的一项是（ ）。</div>
+      <div class="q-stem-cn">重点排查“成分残缺无主语”“搭配不当”与“否定失当”三类高频病症：</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>通过开展这次社区环保实践活动，使同学们深刻体会到了垃圾分类的意义。</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>学校采取多项措施提高学生的阅读态度，防止不健康的网络信息不再流入校园。</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>校园广播站不仅播报每日时事新闻，还增设了“每周古诗微赏析”栏目以涵养文风。</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>能否在考场上稳稳守住 250–350 字数红线，主要取决于考前做了大量真题训练。</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！C 项主谓宾完整，‘播报新闻’‘增设栏目’‘涵养文风’搭配精准且递进自然。" data-err="❌ 排查语病：A 项‘通过……使……’掩盖主语；B 项犯两处错（‘提高……态度’搭配不当，且‘防止……不再’否定失当）；D 项‘能否’两面对一面！故仅 C 项无语病。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head"><span class="q-tag">诊所 Q2 · 欧化长句改写</span><span><span class="badge-p2">Style &amp; Rhythm</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">原欧化病句：“那本昨天被图书馆管理员推荐给全校初三学生的很有启发性的现代散文集已经被借空了。” 最地道流畅的汉语改写是（ ）。</div>
+      <div class="q-stem-cn">遵循汉语“化长定语为流水短分句、弱化生硬被动‘被’字”的原则：</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>已经被借空了的那本现代散文集是图书馆管理员昨天推荐给初三学生的很有启发性的。</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>图书馆管理员昨天向全校初三学生推荐了一本颇具启发性的现代散文集，如今已被借阅一空。</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>图书馆管理员把那本很有启发性的被全校初三学生借空了的现代散文集推荐在昨天。</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>那本现代散文集因为昨天被图书馆管理员推荐并且很有启发性，所以全校初三学生借空了它。</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！B 项按事件先后顺势展开（先推荐→后被借空），去除了 30 字连环定语与生硬翻译腔，节奏明快地道。" data-err="❌ A 项依旧堆砌‘……的’且句末残缺；C 项将时间状语‘在昨天’错甩句尾；D 项‘被推荐’‘借空了它’仍是浓郁英文直译腔。B 项最流畅自然！"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="D">
+      <div class="exam-q-head"><span class="q-tag">诊所 Q3 · 成语望文生义辨析</span><span><span class="badge-p1">Lexis</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">下列句子中加粗成语使用完全正确的一项是（ ）。</div>
+      <div class="q-stem-cn">紧盯“首当其冲 / 不刊之论 / 差强人意 / 万人空巷”四个考场重灾区成语：</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>大雨将至，志愿者们<strong>首当其冲</strong>冲向低洼街区，挨家挨户通知居民转移。</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>这篇文章观点荒谬、漏洞百出，真可谓一篇<strong>不刊之论</strong>，难怪遭编辑退稿。</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>本次模考我的作文写得太糟糕了，成绩简直<strong>差强人意</strong>，令我十分沮丧。</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>校运会百米决赛一鸣枪，看台上瞬间沸腾，几乎达到<strong>万人空巷</strong>、全校聚焦的盛况。</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！D 项用‘万人空巷’形容众人倾巢而出关注盛况，本义精准！" data-err="❌ A 错用‘首当其冲’（应指最先遭受灾害打击，而非带头冲锋）；B 错用‘不刊之论’（指不可更改的正确名言，不能当‘不可发表’）；C 错用‘差强人意’（指勉强令人满意，不是‘非常差劲’）。唯有 D 正确！"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="A">
+      <div class="exam-q-head"><span class="q-tag">诊所 Q4 · 高发错别字辨析</span><span><span class="badge-p2">Spelling</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">下列四组词语中，字形完全正确、无任何错别字或简繁混用的一组是（ ）。</div>
+      <div class="q-stem-cn">请逐字核查偏旁与同音替代错误：</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>再接再厉 · 迫不及待 · 一筹莫展 · 甘拜下风</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>再接再励 · 墨守陈规 · 迫不急待 · 甘败下风</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>莫名其妙 · 急燥不安 · 脉膊跳动 · 振奋人心</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>既然如此 · 發展迅速 · 一愁莫展 · 察觉异常</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！A 组四词字形全部规范无误。" data-err="❌ B 项四词全错（应为厉/成/及/拜）；C 项‘急躁’应用足旁、‘脉搏’应用提手旁；D 项‘發展’混入繁体字，且‘一筹莫展’误作‘愁’。只有 A 组完全正确！"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="C">
+      <div class="exam-q-head"><span class="q-tag">诊所 Q5 · 标点符号与语体判断</span><span><span class="badge-p1">Punctuation &amp; Register</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">下列适合写入 Paper 1 正式调查报告（Report）且标点完全规范的句子是（ ）。</div>
+      <div class="q-stem-cn">核查顿号/逗号/书名号规范，同时排查口语化杂质：</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>同学们平时读过“朝花夕拾”，觉得超级有意思，但是没空细看。</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>调查表明、八成学生赞成增加课间运动时间、并希望开放体育馆、</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>调查显示，受访师生普遍认同增设读书角、举办名著沙龙及优化借阅流程三项举措。</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>老师们说反正只要学生开心就行, 其他配套设备以后再慢慢搞定吧...</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！C 项语体客观庄重（‘调查显示’‘普遍认同’），并列短语间恰当使用顿号、句末使用规范实心句号。" data-err="❌ A 项书名错用引号（应为《朝花夕拾》）且夹杂口语‘超级有意思’；B 项滥用顿号断句（一顿到底）；D 项口语杂糅、英文半角逗号及三点省略号全错。唯有 C 符合正式报告规范！"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head"><span class="q-tag">诊所 Q6 · 文言实词辨析 (去 / 假 / 绝 / 顾)</span><span><span class="badge-p1">Sec 3 实词</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">下列文言句子中加粗实词的解释，<strong>有误</strong>的一项是（ ）。</div>
+      <div class="q-stem-cn">请对照本专题 50 实词表，辨别古今异义与语境词义：</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>停数日，辞<strong>去</strong>（离开）</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><strong>假</strong>舟楫者，非能水也，而绝江河（假装）</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>佛印<strong>绝</strong>类弥勒（极、非常）</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>三<strong>顾</strong>臣于草庐之中（拜访）</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！B 项有误：‘假舟楫者’的‘假’是‘凭借、借助’之意（借助船桨的人），并非现代‘假装’！" data-err="❌ A（离开）、C（极/非常）、D（拜访）三项解释全部精准。只有 B 项把‘假’望文生义错解为‘假装’，应为‘凭借、借助’。"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="D">
+      <div class="exam-q-head"><span class="q-tag">诊所 Q7 · 文言实词辨析 (兵 / 迁 / 适 / 素)</span><span><span class="badge-p1">Sec 3 实词</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">下列句子中的“适”字，与“余自齐安舟行<strong>适</strong>临汝”中“适”字意义相同的一项是（ ）。</div>
+      <div class="q-stem-cn">先判断例句“适+地名”的词性与含义，再比对四项语境：</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>削足<strong>适</strong>履，实非良策（适应、迁就）</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span><strong>适</strong>逢大雨，遂止宿村舍（恰巧）</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>少无<strong>适</strong>俗韵，性本爱丘山（顺从、迎合）</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>贫者语于富者曰：“吾欲之南海，何如？”……明年，贫者自南海还，以告富者，有<strong>适</strong>楚者（前往、到……去）</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！题干与 D 项均为‘适+地名（临汝/楚）’，作动词译为‘到……去、前往’！" data-err="❌ 例句中‘适临汝’意为‘乘船前往临汝’。A 是‘迁就适应’，B 是‘恰巧’，C 是‘迎合’，唯有 D 项‘适楚’同样是‘到楚地去’！"></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="A">
+      <div class="exam-q-head"><span class="q-tag">诊所 Q8 · 文言实词辨析 (克 / 临 / 属 / 负)</span><span><span class="badge-p1">Sec 3 实词</span> <span class="q-marks">[1 mark]</span></span></div>
+      <div class="q-stem-en">读句：“普性深沉有岸谷，虽多忌克，而能以天下事为己任。及次日<strong>临</strong>政，处决如流。” 与句中“临”及常用词“属”“负”判断完全正确的一项是（ ）。</div>
+      <div class="q-stem-cn">结合官场实务语境与 50 实词固定搭配作答：</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>“临政”意为处理政务；“属予作文以记之”中“属”同“嘱”，意为嘱托。</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>“临政”意为临时治理；“忠之属也”中“属”意为嘱托。</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>“临政”意为将要执政；“负势竞上”中“负”意为背着书包。</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>“临政”意为靠近政敌；“城非不高，池非不深”中“池”意为小水池。</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确！‘临政’指面对/处理政务；‘属予作文’的‘属’通‘嘱’，意为嘱托。" data-err="❌ B 项把‘临’误作‘临时’，且‘忠之属也’的‘属’意为‘这类（人/事）’；C 项‘负势竞上’的‘负’意为‘依仗、凭借’；D 项‘池’与‘城’连用必译‘护城河’。故仅 A 完全准确！"></div>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>7.3.2 真实考场病文段落改错与雅言润色大题（2 篇完整红笔精批）</h4>
+
+    <!-- Diagnostic Essay 1 -->
+    <div class="model-essay">
+      <div class="essay-head">
+        <span>📝 病文诊所大题一 · 议论文初稿（含 8 处典型语言病症）</span>
+        <span class="band-pill band-mid">原稿评级：Band 3 (7/13) → 待升格</span>
+      </div>
+      <div class="essay-body">
+        <p style="margin-bottom: 0;">
+          <mark class="hl-err">通過</mark>学校开展无手机课堂实验，<mark class="hl-err">使</mark>同学们真正<mark class="hl-err">提高了学习态度</mark>，大家平时<mark class="hl-err">迫不急待</mark>想在课间刷视频的坏习惯也改掉不少，老师讲课的时候大家听得<mark class="hl-err">超级认真</mark>。<mark class="hl-err">有人对这项改革抱有怀疑，认为这是不刊之论，会阻碍学生搜寻资料，其实效果一直差强人意，很多人反对</mark>，可是那些被我们用来和朋友面对面聊天的非常珍贵的下课十分钟难道不比低头看冷冰冰的屏幕有意思多了吗.<br>
+          总而言之，为了防止手机不会继续影响课堂纪律，我们要养成专注思考。
+        </p>
+      </div>
+    </div>
+
+    <details class="ms-details">
+      <summary>🔴 展开大题一：逐处红笔病历诊断（9 处精准排雷）＋ Band 1 满分润色范段</summary>
+      <div class="ms-body">
+        <p><span class="ms-mark">红笔逐处诊断</span></p>
+        <ul>
+          <li><strong>① 简繁混用：</strong>句首“通過”为繁体，下文“实验/同学/习惯/讲课”全为简体，必须统一为“通过”。</li>
+          <li><strong>② 成分残缺（缺主语）：</strong>“通过……使……”连用导致主语丢失；结尾“养成专注思考”缺宾语“的习惯”。</li>
+          <li><strong>③ 搭配不当：</strong>“提高了学习态度”应改为“端正了学习态度”（或“激发了学习热情”）。</li>
+          <li><strong>④ 错别字：</strong>“迫不急待”应为“迫不及待”。</li>
+          <li><strong>⑤ 语体口语杂糅：</strong>“超级认真”“有意思多了吗”属随意口语，需升格为书面议论文雅言。</li>
+          <li><strong>⑥ 成语双错：</strong>“不刊之论”意为不可修改的至理名言，与“怀疑”完全冲突；“差强人意”指勉强满意，却被误当成“令人反对的差劲效果”。</li>
+          <li><strong>⑦ 一逗到底+英文句点：</strong>中间长句五个分句一逗到底，且反问句后错用英文句点 <code>.</code> 代替问号 <code>？</code>（或句号）。</li>
+          <li><strong>⑧ 欧化长定语：</strong>“被我们用来和朋友面对面聊天的非常珍贵的下课十分钟”累赘拗口。</li>
+          <li><strong>⑨ 否定失当：</strong>“防止手机不会继续影响”三重否定把语义写反，应删去“不会”。</li>
+        </ul>
+        <div class="worked-example" style="margin-top: 12px;">
+          <div class="worked-title">✅ 升格后 Band 1 满分议论范段（12–13 / 13 Style 示范）</div>
+          <p style="margin-bottom: 0; font-family: var(--font-serif);">
+            <strong>学校开展“无手机课堂”实验以来，同学们的学习态度明显端正</strong>，过去课间<strong>迫不及待</strong>刷看短视频的浮躁习惯亦大为收敛，课堂听讲愈发专注。<strong>诚然</strong>，舆论对此举措莫衷一是，部分质疑者认为禁用设备实乃因噎废食，恐会阻滞即时查证资料，此项改革的推行实则<strong>未如人意</strong>；<strong>然则</strong>试想，课间十分钟珍贵无比，同窗彼此畅谈切磋、面对面交流，岂非远胜于各自低头俯视冰冷屏幕？<strong>概而言之</strong>，唯有防止手机持续侵扰课堂秩序，方能涵养青年深度专注、独立思考之优良习惯。
+          </p>
+        </div>
+      </div>
+    </details>
+
+    <!-- Diagnostic Essay 2 -->
+    <div class="model-essay" style="margin-top: 16px;">
+      <div class="essay-head">
+        <span>📝 病文诊所大题二 · 记叙/描写文初稿（欧化腔与直白平淡诊所）</span>
+        <span class="band-pill band-mid">原稿评级：Band 3 (7/13) → 待升格</span>
+      </div>
+      <div class="essay-body">
+        <p style="margin-bottom: 0;">
+          那件昨天<mark class="hl-err">被外婆在灯下花了三个小时补好了的旧毛衣</mark>被我拿在手里，当时我的心情<mark class="hl-err">十分激动和感动</mark>。<mark class="hl-err">外婆做了一个深呼吸的动作，她对我说：</mark><mark class="hl-err">"天冷了，你明天走的时候穿上它吧..."</mark> 屋子外面下着很大的雨，雨滴打在窗户上发出声音，我觉得这个房间虽然很小很破旧，但是里面特别温暖，让我<mark class="hl-err">再接再励</mark>地面对接下来的寄宿生活，我心里充满了力量。
+        </p>
+      </div>
+    </div>
+
+    <details class="ms-details">
+      <summary>🔴 展开大题二：欧化句与“空洞情感标签”红笔诊断 ＋ Band 1 五感微雕范段</summary>
+      <div class="ms-body">
+        <p><span class="ms-mark">红笔逐处诊断</span></p>
+        <ul>
+          <li><strong>① 英文式被字长定语：</strong>“被外婆在灯下花了三个小时补好了的旧毛衣被我拿在手里”双“被”套嵌极度别扭，应改为短句动作链。</li>
+          <li><strong>② 轻动词冗赘：</strong>“做了一个深呼吸的动作”典型翻译腔（<em>made a deep breath movement</em>），直接写“轻轻吐出一口长气 / 深吸一口气”。</li>
+          <li><strong>③ 标点不规范：</strong>使用半角直引号 <code>""</code> 与英文三点 <code>...</code>，应改为规范中文全角弯引号 <code>“”</code> 与六点省略号 <code>……</code>。</li>
+          <li><strong>④ 错别字与搭配：</strong>“再接再励”错字（应为“厉”），且“面对生活”多用“从容/坦然”而非“再接再厉地面对”。</li>
+          <li><strong>⑤ 空洞“告诉情绪”而非“展现画面”：</strong>“十分激动和感动”“特别温暖”“充满了力量”全是抽象情感标签，缺乏五感细节，在 Paper 2 Sec 2 极难上 Band 1！</li>
+        </ul>
+        <div class="worked-example" style="margin-top: 12px;">
+          <div class="worked-title">✅ 升格后 Band 1 满分五感微雕范段（Show, Don't Tell）</div>
+          <p style="margin-bottom: 0; font-family: var(--font-serif);">
+            我轻轻捧起那件旧毛衣——外婆昨夜在台灯下缝补了整整三个钟头，肘弯处新织的几行毛线还残留着她掌心的温热。外婆微微舒出一口长气，粗糙的指腹替我理平领口，低声道：<strong>“秋深了，明早启程记着套上……”</strong>窗外秋雨淅沥，细密地敲打着蒙尘的玻璃；可这方窄小斑驳的旧屋里，暖黄灯光漫过毛线微绒的质感，却将寒意悄然隔在门外。指尖攥紧衣角那一刻，我胸腔里仿佛多了一股沉实而安稳的底气，足以支撑我坦然迎向未来的独立岁月。
+          </p>
+        </div>
+      </div>
+    </details>
+
+    <details class="ms-details">
+      <summary>📜 展开附加微练：50 实词课外短文快译实战（5 句一词多义一网打尽）</summary>
+      <div class="ms-body">
+        <p><span class="ms-mark">文言例句</span> ① 或问其故，乃顾左右而笑曰：“吾素不善辞，安能及君哉？” ② 适逢荒年，民多穷乏，守令乃劝民勤耕，复发仓以济之。</p>
+        <p><strong>精准翻译：</strong><br>
+        ① <strong>有人</strong>（或）询问其中的<strong>原因</strong>（故），（他）于是<strong>回头看</strong>（顾）身边随从笑着说：“我<strong>向来</strong>（素）不<strong>擅长</strong>（善）言辞/辞令（辞），<strong>怎么</strong>（安）能<strong>比得上</strong>（及）您呢？”<br>
+        ② <strong>恰巧遇到</strong>（适）灾荒之年，百姓大都生活<strong>困窘贫乏</strong>（穷），太守县令于是<strong>勉励</strong>（劝）百姓勤勉耕作，<strong>又</strong>（复）打开粮仓来救济他们。</p>
+      </div>
+    </details>
+  </div>
+</article>
+
+<!-- ==================== CONCEPT BANK C07 ==================== -->
+<article class="topic-section" id="app-concepts">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>7.4 易错成语、文言多义实词与雅言衔接词默写卡 (20 张)</h3>
+      <div class="section-en-sub">20 Active-Recall Flashcards: Misused Idioms, Classical Polysemy &amp; Formal Lexical Upgrades</div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="app-concepts">○ 标记掌握</button>
+  </div>
+
+  <div class="concept-toolbar">
+    <div class="concept-filter-group" id="conceptFilterTabs">
+      <button type="button" class="tab-btn active" data-concept-part="all">全部 20 张</button>
+      <button type="button" class="tab-btn" data-concept-part="p1">病句与易错成语 (7)</button>
+      <button type="button" class="tab-btn" data-concept-part="p2">文言核心实词 (8)</button>
+      <button type="button" class="tab-btn" data-concept-part="p3">雅言与逻辑衔接 (5)</button>
+    </div>
+    <div class="concept-actions">
+      <span class="concept-count-pill" id="conceptCountPill">显示 20 / 20 题</span>
+      <button type="button" class="icon-btn" id="conceptQuizToggle">🙈 开启遮罩自测</button>
+    </div>
+  </div>
+
+  <div class="concept-grid" id="conceptGrid">
+    <!-- Part 1: 7 Idioms & Error Clinic Cards -->
+    <div class="concept-card" data-part="p1">
+      <div class="cq-head"><span class="q-tag">C01 · Idiom Trap</span><span class="badge-p1">成语正误</span></div>
+      <div class="cq-en">首当其冲</div>
+      <div class="cq-cn">为何不能用来夸志愿者“冲锋在前”？它的真正含义是什么？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看正解</div>
+        <div class="cq-answer-inner">意为<span class="kw">最先受到攻击、冲击或遭遇灾难</span>（如“海滨渔村首当其冲”），绝非“带头冲在最前”！</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p1">
+      <div class="cq-head"><span class="q-tag">C02 · Idiom Trap</span><span class="badge-p1">成语正误</span></div>
+      <div class="cq-en">不刊之论</div>
+      <div class="cq-cn">里面的“刊”是什么意思？是“不能发表”还是“高度赞誉”？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看正解</div>
+        <div class="cq-answer-inner">“刊”指古代削去错字修改竹简。<span class="kw">不刊之论 = 不可改动或磨灭的正确言论</span>（褒义极高）。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p1">
+      <div class="cq-head"><span class="q-tag">C03 · Idiom Trap</span><span class="badge-p1">成语正误</span></div>
+      <div class="cq-en">差强人意</div>
+      <div class="cq-cn">考场把成绩“差强人意”写成“让人很失望”，错在哪里？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看正解</div>
+        <div class="cq-answer-inner">“差”读 chā 意为大致、“强”意为振奋；全词指<span class="kw">勉强还让人满意</span>（偏正面，非“很差劲”）。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p1">
+      <div class="cq-head"><span class="q-tag">C04 · Idiom Trap</span><span class="badge-p1">成语正误</span></div>
+      <div class="cq-en">万人空巷</div>
+      <div class="cq-cn">形容“深夜街道冷清没人”，用“万人空巷”为何彻底用反了？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看正解</div>
+        <div class="cq-answer-inner">意为家家户户都走出小巷到街上看热闹，形容<span class="kw">极其轰动、盛大热闹的场面</span>！</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p1">
+      <div class="cq-head"><span class="q-tag">C05 · Typo Clinic</span><span class="badge-p2">错别字</span></div>
+      <div class="cq-en">再接再____ · 迫不____待 · 一____莫展 · 甘____下风</div>
+      <div class="cq-cn">一秒默写这四个考场错别字“重灾区”的正确字形：</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看正解</div>
+        <div class="cq-answer-inner"><span class="kw">再接再厉</span>（磨砺）、<span class="kw">迫不及待</span>（等到）、<span class="kw">一筹莫展</span>（筹码）、<span class="kw">甘拜下风</span>（行礼认输）。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p1">
+      <div class="cq-head"><span class="q-tag">C06 · Syntax Fix</span><span class="badge-p2">句法诊所</span></div>
+      <div class="cq-en">“通过……使……” 与 “提高……态度”</div>
+      <div class="cq-cn">分别属于哪两类高频病句？怎么一刀改对？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看正解</div>
+        <div class="cq-answer-inner">① <span class="kw">成分残缺（缺主语）</span>：删掉“通过”或“使”；② <span class="kw">动宾搭配不当</span>：改为“端正态度”。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p1">
+      <div class="cq-head"><span class="q-tag">C07 · Punctuation &amp; Negation</span><span class="badge-p2">标点逻辑</span></div>
+      <div class="cq-en">“防止不再发生” 与 “一逗到底 / 英文句点 .”</div>
+      <div class="cq-cn">指出两项错误的具体扣分原因：</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看正解</div>
+        <div class="cq-answer-inner">① “防止”含否定，再加“不”变成“希望它再发生”（<span class="kw">删“不”</span>）；② 中文须用全角空心句号 <span class="kw">。</span> 并合理断句。</div>
+      </div>
+    </div>
+
+    <!-- Part 2: 8 Classical Content Words -->
+    <div class="concept-card" data-part="p2">
+      <div class="cq-head"><span class="q-tag">C08 · 实词 · 去 &amp; 适</span><span class="badge-p1">古今异义</span></div>
+      <div class="cq-en">去（辞去 / 去人近） &amp; 适（适临汝 / 适逢）</div>
+      <div class="cq-cn">为什么不能把“去”译成“前往”，而要把“适+地名”译成“前往”？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看正解</div>
+        <div class="cq-answer-inner">古文中 <span class="kw">“去” = 离开 / 距离</span>；<span class="kw">“适+地名” = 到……去、前往</span>，“适逢” = 恰巧！</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p2">
+      <div class="cq-head"><span class="q-tag">C09 · 实词 · 假 &amp; 绝</span><span class="badge-p1">一词多义</span></div>
+      <div class="cq-en">假（假舟楫 / 假借） &amp; 绝（绝境 / 绝类 / 绝江河）</div>
+      <div class="cq-cn">分别列出“假”的高频考义与“绝”的三个核心义项：</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看正解</div>
+        <div class="cq-answer-inner">“假” = <span class="kw">借用 / 凭借</span>（极少指真假）；“绝” = <span class="kw">断绝隔绝 / 极、最 / 横渡</span>。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p2">
+      <div class="cq-head"><span class="q-tag">C10 · 实词 · 顾 &amp; 却</span><span class="badge-p1">一词多义</span></div>
+      <div class="cq-en">顾（顾野 / 三顾 / 顾不如） &amp; 却（却敌 / 却看）</div>
+      <div class="cq-cn">“顾”和“却”作副词和作动词时，分别有哪些常考义项？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看正解</div>
+        <div class="cq-answer-inner">“顾” = <span class="kw">回头看 / 拜访 / 反而难道</span>；“却” = <span class="kw">击退、退却 / 拒绝 / 回头</span>。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p2">
+      <div class="cq-head"><span class="q-tag">C11 · 实词 · 池 &amp; 兵</span><span class="badge-p1">古今异义</span></div>
+      <div class="cq-en">城非不高也，池非不深也 / 兵革非不坚利也</div>
+      <div class="cq-cn">“池”与“兵”在先秦两汉史传中最核心的古义是什么？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看正解</div>
+        <div class="cq-answer-inner">“池” = <span class="kw">护城河</span>（非小水池）；“兵” = <span class="kw">兵器 / 军队 / 战争</span>（极少指单个小兵）。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p2">
+      <div class="cq-head"><span class="q-tag">C12 · 实词 · 期 &amp; 穷</span><span class="badge-p1">高频考词</span></div>
+      <div class="cq-en">陈太丘与友期行 / 期年之后 / 欲穷其林</div>
+      <div class="cq-cn">指出“期”“期年”与“穷”在古文中最容易翻错的考点：</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看正解</div>
+        <div class="cq-answer-inner">“期” = <span class="kw">约定</span>；“期(jī)年” = <span class="kw">满一年</span>；“穷” = <span class="kw">走到尽头 / 困窘不得志</span>（莫都译“没钱”）。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p2">
+      <div class="cq-head"><span class="q-tag">C13 · 实词 · 或 &amp; 莫</span><span class="badge-p1">代词特考</span></div>
+      <div class="cq-en">或以为死，或以为亡 / 莫敢仰视</div>
+      <div class="cq-cn">古文中“或”和“莫”作主语时，应该如何精确翻译？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看正解</div>
+        <div class="cq-answer-inner">“或” = <span class="kw">有的人 / 有的……</span>（非“或者”）；“莫” = <span class="kw">没有谁 / 没有什么</span>。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p2">
+      <div class="cq-head"><span class="q-tag">C14 · 实词 · 素 &amp; 善</span><span class="badge-p1">传记高频</span></div>
+      <div class="cq-en">吴广素爱人 / 素与留侯善 / 善口技者</div>
+      <div class="cq-cn">传记类文言文看到“素”和“善”，一秒匹配哪几个高频义？</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看正解</div>
+        <div class="cq-answer-inner">“素” = <span class="kw">向来、一向</span>（或白色的）；“善” = <span class="kw">擅长 / 与……交好 / 好的方面</span>。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p2">
+      <div class="cq-head"><span class="q-tag">C15 · 实词 · 属 &amp; 属/临/克</span><span class="badge-p1">通假与词义</span></div>
+      <div class="cq-en">属予作文 / 忠之属也 / 次日临政 / 既克</div>
+      <div class="cq-cn">区分“属”的两种用法，以及“临政”“克”的精准释义：</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看正解</div>
+        <div class="cq-answer-inner">“属予”读 zhǔ 同“嘱”=<span class="kw">嘱托</span>；“之属”=<span class="kw">这一类</span>；“临政”=<span class="kw">处理政务</span>；“克”=<span class="kw">战胜 / 能够</span>。</div>
+      </div>
+    </div>
+
+    <!-- Part 3: 5 Formal Upgrades -->
+    <div class="concept-card" data-part="p3">
+      <div class="cq-head"><span class="q-tag">C16 · Transition</span><span class="badge-p2">雅言衔接</span></div>
+      <div class="cq-en">替换口语“很多人对这件事看法不一样”</div>
+      <div class="cq-cn">写出两个可直接放进议论/讨论/报告开头的 Band 1 四字雅言：</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看正解</div>
+        <div class="cq-answer-inner"><span class="kw">舆论莫衷一是</span> / <span class="kw">坊间议论纷纷</span> / <span class="kw">各方观点亟待理性审视</span>。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p3">
+      <div class="cq-head"><span class="q-tag">C17 · Concession</span><span class="badge-p2">让步反驳</span></div>
+      <div class="cq-en">替换平淡“虽然……但是……”</div>
+      <div class="cq-cn">给出一组在 Paper 2 议论文驳斥段瞬间提气的书面关联词：</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看正解</div>
+        <div class="cq-answer-inner"><span class="kw">诚然……然则……</span> / <span class="kw">固然……殊不知……</span> / <span class="kw">纵使……岂可……</span>。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p3">
+      <div class="cq-head"><span class="q-tag">C18 · Progression</span><span class="badge-p2">递进升格</span></div>
+      <div class="cq-en">替换“还有 / 而且更严重的是”</div>
+      <div class="cq-cn">写出一组用于分论点层层推进的书面连接词：</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看正解</div>
+        <div class="cq-answer-inner"><span class="kw">进而言之</span> / <span class="kw">尤有甚者</span> / <span class="kw">兼之</span> / <span class="kw">与此相辅相成的是</span>。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p3">
+      <div class="cq-head"><span class="q-tag">C19 · Conclusion</span><span class="badge-p2">归纳收束</span></div>
+      <div class="cq-en">替换“所以 / 总而言之”</div>
+      <div class="cq-cn">写出三个用于议论文或 P1 指导写作收尾的凝练书面短语：</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看正解</div>
+        <div class="cq-answer-inner"><span class="kw">归根结底</span> / <span class="kw">由是观之</span> / <span class="kw">概而言之</span> / <span class="kw">职是之故</span>（因此之故）。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="p3">
+      <div class="cq-head"><span class="q-tag">C20 · Verb Upgrade</span><span class="badge-p2">动词精准化</span></div>
+      <div class="cq-en">替换万金油动词“说 / 做 / 用 / 看”</div>
+      <div class="cq-cn">分别匹配一个高分书面双音节动词，杜绝“用科技、做活动、说观点”：</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">👆 点击查看正解</div>
+        <div class="cq-answer-inner">说→<span class="kw">阐明/剖析</span>；做→<span class="kw">践行/落实</span>；用→<span class="kw">依托/借助</span>；看→<span class="kw">审视/洞察</span>。</div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+        <nav class="chapter-pager" aria-label="专题切换导航">
+          <div><a class="pager-btn" href="C06_Descriptive_and_Narrative_Writing.html">← C06 Paper 2 描写文五感微雕与记叙文张力弧高分写法</a></div>
+          <div><a class="pager-btn primary" href="index.html">🏠 返回 8 专题总目录</a></div>
+          <div><a class="pager-btn" href="C08_Full_Mock_Paper1_and_Paper2_Sprint.html">C08 Paper 1 (60 分) 全真模拟卷 + Paper 2 审题立意与考前清单 →</a></div>
+        </nav>
+      </div>
+    </main>
+  </div>
+
+  <button type="button" class="back-top-btn" id="backTopBtn" title="返回顶部">↑</button>
+
+  <script>
+(function () {
+  'use strict';
+
+  const THEME_KEY = 'igcse_chi0509_theme';
+  const modCode = (document.body && document.body.getAttribute('data-chapter-code')) || 'HUB';
+  const STORAGE_PREFIX = 'igcse_chi0509_' + modCode.toLowerCase() + '_';
+  const htmlEl = document.documentElement;
+  const bodyEl = document.body;
+
+  // All state variables declared cleanly at top of IIFE (prevents TDZ errors)
+  let currentViewMode = localStorage.getItem(STORAGE_PREFIX + 'viewMode') || 'all';
+  let activeConceptPart = 'all';
+  let quizMasked = localStorage.getItem(STORAGE_PREFIX + 'quizMasked') === '1';
+  let allMsExpanded = false;
+  let masteredIds = [];
+  let p1TimerId = null;
+  try {
+    masteredIds = JSON.parse(localStorage.getItem(STORAGE_PREFIX + 'mastered') || '[]');
+    if (!Array.isArray(masteredIds)) masteredIds = [];
+  } catch (e) {
+    masteredIds = [];
+  }
+
+  // ---------- 1. Theme Toggle ----------
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+
+  function applyTheme(theme) {
+    htmlEl.setAttribute('data-theme', theme);
+    if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem(THEME_KEY, theme);
+  }
+  applyTheme(localStorage.getItem(THEME_KEY) || 'light');
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      applyTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  }
+
+  // ---------- 2. View Mode Filter (All / Method / Practice / Cards) ----------
+  function applyViewMode(mode) {
+    currentViewMode = mode;
+    bodyEl.classList.remove('mode-method', 'mode-practice', 'mode-cards');
+    if (mode === 'method') bodyEl.classList.add('mode-method');
+    if (mode === 'practice') bodyEl.classList.add('mode-practice');
+    if (mode === 'cards') bodyEl.classList.add('mode-cards');
+    document.querySelectorAll('[data-view-mode]').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-view-mode') === mode);
+    });
+    localStorage.setItem(STORAGE_PREFIX + 'viewMode', mode);
+  }
+  document.querySelectorAll('[data-view-mode]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      applyViewMode(btn.getAttribute('data-view-mode'));
+    });
+  });
+
+  // ---------- 3. Sidebar Drawer & Accordion ----------
+  const sidebar = document.getElementById('sidebar');
+  const menuToggle = document.getElementById('menuToggle');
+  if (menuToggle && sidebar) {
+    menuToggle.addEventListener('click', function () { sidebar.classList.toggle('open'); });
+    sidebar.querySelectorAll('.nav-link').forEach(function (lnk) {
+      lnk.addEventListener('click', function () {
+        if (window.innerWidth <= 980) sidebar.classList.remove('open');
+      });
+    });
+  }
+  document.querySelectorAll('.nav-unit-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const unit = btn.closest('.nav-unit');
+      if (unit) unit.classList.toggle('collapsed');
+    });
+  });
+
+  // ---------- 4. Mastery Progress Tracker ----------
+  const progressText = document.getElementById('progressText');
+  const progressFill = document.getElementById('progressFill');
+  const masterBtns = Array.from(document.querySelectorAll('.master-btn'));
+  const totalSections = masterBtns.length;
+  const validIds = new Set(masterBtns.map(function (b) { return b.getAttribute('data-section-id'); }));
+
+  function renderMastery() {
+    const doneList = masteredIds.filter(function (id) { return validIds.has(id); });
+    localStorage.setItem(STORAGE_PREFIX + 'total', String(totalSections));
+    if (progressText) progressText.textContent = doneList.length + '/' + totalSections;
+    if (progressFill && totalSections > 0) {
+      progressFill.style.width = Math.round((doneList.length / totalSections) * 100) + '%';
+    }
+    masterBtns.forEach(function (btn) {
+      const sid = btn.getAttribute('data-section-id');
+      const done = doneList.indexOf(sid) !== -1;
+      btn.classList.toggle('is-mastered', done);
+      btn.textContent = done ? '✓ 已掌握' : '○ 标记掌握';
+    });
+    document.querySelectorAll('.nav-link').forEach(function (lnk) {
+      const id = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('mastered', doneList.indexOf(id) !== -1);
+    });
+  }
+  masterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const sid = btn.getAttribute('data-section-id');
+      const idx = masteredIds.indexOf(sid);
+      if (idx === -1) masteredIds.push(sid);
+      else masteredIds.splice(idx, 1);
+      localStorage.setItem(STORAGE_PREFIX + 'mastered', JSON.stringify(masteredIds));
+      renderMastery();
+    });
+  });
+  if (totalSections > 0) renderMastery();
+
+  // ---------- 5. Global Toggle Details & Print ----------
+  const toggleAllMs = document.getElementById('toggleAllMs');
+  if (toggleAllMs) {
+    toggleAllMs.addEventListener('click', function () {
+      allMsExpanded = !allMsExpanded;
+      document.querySelectorAll('details.ms-details').forEach(function (det) { det.open = allMsExpanded; });
+      const lbl = toggleAllMs.querySelector('.btn-label');
+      if (lbl) lbl.textContent = allMsExpanded ? '收起解析' : '展开解析';
+      toggleAllMs.classList.toggle('active', allMsExpanded);
+    });
+  }
+  const printBtn = document.getElementById('printBtn');
+  if (printBtn) printBtn.addEventListener('click', function () { window.print(); });
+
+  // ---------- 6. Instant Search ----------
+  const searchInput = document.getElementById('searchInput');
+  const searchClear = document.getElementById('searchClear');
+  const searchBar = document.getElementById('searchBar');
+  const searchSummary = document.getElementById('searchSummary');
+  const searchResetBtn = document.getElementById('searchResetBtn');
+  const emptySearchNotice = document.getElementById('emptySearchNotice');
+
+  function runSearch() {
+    if (!searchInput) return;
+    const raw = searchInput.value.trim().toLowerCase();
+    if (searchClear) searchClear.style.display = raw ? 'block' : 'none';
+    const sections = Array.from(document.querySelectorAll('.topic-section'));
+    if (!raw) {
+      sections.forEach(function (s) { s.classList.remove('search-dim'); });
+      if (searchBar) searchBar.classList.remove('visible');
+      if (emptySearchNotice) emptySearchNotice.style.display = 'none';
+      return;
+    }
+    let hits = 0;
+    sections.forEach(function (sec) {
+      const ok = sec.textContent.toLowerCase().indexOf(raw) !== -1;
+      sec.classList.toggle('search-dim', !ok);
+      if (ok) hits++;
+    });
+    if (searchBar) searchBar.classList.add('visible');
+    if (searchSummary) searchSummary.textContent = '关键词 “' + searchInput.value.trim() + '” 匹配 ' + hits + ' 个板块';
+    if (emptySearchNotice) emptySearchNotice.style.display = hits === 0 ? 'block' : 'none';
+  }
+  if (searchInput) searchInput.addEventListener('input', runSearch);
+  function resetSearch() { if (searchInput) searchInput.value = ''; runSearch(); }
+  if (searchClear) searchClear.addEventListener('click', resetSearch);
+  if (searchResetBtn) searchResetBtn.addEventListener('click', resetSearch);
+
+  // ---------- 7. Interactive MCQ Grading ----------
+  document.querySelectorAll('.exam-q[data-mcq-answer]').forEach(function (qBox) {
+    const ans = qBox.getAttribute('data-mcq-answer');
+    const fb = qBox.querySelector('.mcq-feedback');
+    const opts = qBox.querySelectorAll('.mcq-opt');
+    opts.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const chosen = btn.getAttribute('data-opt');
+        opts.forEach(function (o) { o.classList.remove('correct', 'wrong'); });
+        if (chosen === ans) {
+          btn.classList.add('correct');
+          if (fb) { fb.textContent = fb.getAttribute('data-ok') || '✅ 回答正确！'; fb.className = 'mcq-feedback visible ok'; }
+        } else {
+          btn.classList.add('wrong');
+          opts.forEach(function (o) { if (o.getAttribute('data-opt') === ans) o.classList.add('correct'); });
+          if (fb) { fb.textContent = fb.getAttribute('data-err') || '❌ 未选对，请对照考点解析复盘。'; fb.className = 'mcq-feedback visible err'; }
+        }
+      });
+    });
+  });
+
+  // ---------- 8. Flashcards Filter & Mask ----------
+  const conceptCountPill = document.getElementById('conceptCountPill');
+  const conceptQuizToggle = document.getElementById('conceptQuizToggle');
+
+  function filterConcepts() {
+    const cards = Array.from(document.querySelectorAll('#conceptGrid .concept-card'));
+    if (!cards.length) return;
+    let visible = 0;
+    cards.forEach(function (card) {
+      const part = card.getAttribute('data-part');
+      const show = activeConceptPart === 'all' || part === activeConceptPart;
+      card.classList.toggle('concept-hidden', !show);
+      if (show) visible++;
+    });
+    if (conceptCountPill) conceptCountPill.textContent = '显示 ' + visible + ' / ' + cards.length + ' 题';
+  }
+
+  document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      activeConceptPart = btn.getAttribute('data-concept-part');
+      document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      filterConcepts();
+    });
+  });
+
+  function applyQuizMask(masked) {
+    quizMasked = masked;
+    document.querySelectorAll('#conceptGrid .concept-card').forEach(function (c) { c.classList.toggle('masked', masked); });
+    if (conceptQuizToggle) {
+      conceptQuizToggle.textContent = masked ? '👁️ 显示全部答案' : '🙈 开启遮罩自测';
+      conceptQuizToggle.classList.toggle('active', masked);
+    }
+    localStorage.setItem(STORAGE_PREFIX + 'quizMasked', masked ? '1' : '0');
+  }
+  if (conceptQuizToggle) {
+    conceptQuizToggle.addEventListener('click', function () { applyQuizMask(!quizMasked); });
+  }
+  document.querySelectorAll('#conceptGrid .cq-answer').forEach(function (box) {
+    box.addEventListener('click', function () {
+      const card = box.closest('.concept-card');
+      if (card && card.classList.contains('masked')) card.classList.remove('masked');
+    });
+  });
+
+  function countChiChars(str) {
+    return (str || '').replace(/\s+/g, '').length;
+  }
+
+  // ---------- 9. All 8 Interactive Chinese 0509 Strategy Labs (z01 – z08) ----------
+  function mountChiLab(el) {
+    const t = el.getAttribute('data-lab-type');
+    if (!t) return;
+    const bindInputs = function (fn) {
+      el.querySelectorAll('input,select,textarea').forEach(function (inp) {
+        inp.addEventListener('input', fn);
+        inp.addEventListener('change', fn);
+      });
+      fn();
+    };
+
+    if (t === 'z01') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">⏱️ C01 考场演练台 · Paper 1 (135min) 双卷配时与“用自己的话”转述对比</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>试卷配时模式：<select id="z1P"><option value="p1_std">Paper 1 标准稳健配时 (135 分钟)</option><option value="p2_std">Paper 2 双作文黄金配时 (120 分钟)</option></select></label>' +
+        '<label>转述例句：<select id="z1Ex"><option value="exA">例 1：描写人物局促不安</option><option value="exB">例 2：概括老街拆除原因</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="z1Out"></div></div></div>';
+      const plans = {
+        p1_std: '<strong>Paper 1 (135 min / 60分)</strong>：Sec 1 现代文 <strong>48 min</strong>（读文 10 + 简答 18 + 9分赏析 20）→ Sec 3 文言文 <strong>25 min</strong>（先趁热拿稳客观虚实词与直译）→ Sec 2 指导写作 <strong>55 min</strong>（读双篇理清立场 12 + 列提纲 5 + 成文 32 + 查字数错字 6）→ <strong>7 min 全局补漏</strong>。',
+        p2_std: '<strong>Paper 2 (120 min / 50分)</strong>：Sec 1 议论/讨论文 <strong>60 min</strong>（审题立意+三段提纲 10 + 写 450–550 字 44 + 通读查病句 6）→ Sec 2 描写/记叙文 <strong>60 min</strong>（构思镜头/线索 10 + 写 450–550 字 44 + 查繁简/错字/标点 6）。'
+      };
+      const exs = {
+        exA: '<span style="color:var(--err-text);">❌ 直接抄原文：</span>“他攥紧衣角，鞋尖反复蹭着地板，耳根涨得通红。”<br><span style="color:var(--ok-text);">✅ 用自己的话转述（抽象概括心理动作）：</span>“他因<strong>内心窘迫羞赧、极度紧张不安</strong>，而无意识地做出细微防御性动作。”',
+        exB: '<span style="color:var(--err-text);">❌ 直接抄原文：</span>“年久失修的木楼遇到暴雨就会渗漏，狭窄巷道让消防车进不来，年轻人全搬走了。”<br><span style="color:var(--ok-text);">✅ 用自己的话转述：</span>“老街面临<strong>建筑老化失修带来安全隐患</strong>，加之<strong>原住青年外迁流失</strong>，因而被迫改造拆除。”'
+      };
+      bindInputs(function () {
+        el.querySelector('#z1Out').innerHTML = '<div>' + plans[el.querySelector('#z1P').value] + '</div><div style="margin-top:6px;">' + exs[el.querySelector('#z1Ex').value] + '</div>';
+      });
+    } else if (t === 'z02') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🔍 C02 实战演练台 · 9 分语言赏析四步公式拼装与“拒绝套话”检测</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>原文佳句：<select id="z2S"><option value="s1">“寒风像一把生锈的钝锯，慢条斯理地拉扯着破败的窗棂。”</option><option value="s2">“母亲没有说话，只是把碗里仅有的两块瘦肉拨进我碗里，自己低头扒拉着白饭。”</option><option value="s3">“街灯一盏接一盏暗下去，人群散尽，广场骤然跌入一声深沉的叹息。”</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="z2Out"></div></div></div>';
+      const ans = {
+        s1: '①<strong>技巧词+引词</strong>：运用明喻与拟人，将寒风比作“生锈的钝锯”，并用“慢条斯理”赋予风以冷酷恶意；<br>②<strong>字面义+画面</strong>：钝锯割物不仅痛且滞涩漫长，凸显寒风持久刺骨的穿透感；<br>③<strong>情感与主题效果</strong>：生动烘托出旧屋的凄清破败与人物内心难以逃脱的困顿煎熬（切忌只写“生动形象，表达了作者心情”空洞套话！）。',
+        s2: '①<strong>动作白描+对比</strong>：精准抓出“拨”与“扒拉”两组动词；<br>②<strong>语境深意</strong>：“拨”显轻柔克制的偏爱，“扒拉”则见日常操劳的匆忙与将就，配合前文“没有说话”的留白；<br>③<strong>效果</strong>：无一句直抒爱意，却以克制隐忍的生活细节将母亲无声却厚重的牺牲与疼惜刻画得极具感染力。',
+        s3: '①<strong>移情拟人+短促动词</strong>：“跌入”与“一声深沉的叹息”赋予广场以人的感官疲惫；<br>②<strong>画面节奏</strong>：灯灭人散的动态渐渐归零，“跌入”写出寂静骤临的沉重失落感；<br>③<strong>效果</strong>：借环境由喧闹骤转死寂的反差，含蓄外化主人公散场后的孤寂落寞与失意。'
+      };
+      bindInputs(function () { el.querySelector('#z2Out').innerHTML = ans[el.querySelector('#z2S').value]; });
+    } else if (t === 'z03') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">✍️ C03 交互写作台 · Paper 1 指导写作 (250–350 汉字) 实时字数与文体核验</div></div>' +
+        '<div class="lab-panel write-box">' +
+        '<div class="lab-controls">' +
+        '<label>指定文体：<select id="z3F"><option value="speech">演讲稿 Speech</option><option value="letter">书信 Letter</option><option value="article">校刊/报纸文章 Article</option><option value="report">调查报告 Report</option></select></label>' +
+        '<span class="wc-meter wc-warn" id="z3Wc">当前有效汉字（不含空格）：0 字 (目标 250–350 字)</span>' +
+        '</div>' +
+        '<textarea class="write-textarea" id="z3Txt" placeholder="在此试写 Paper 1 Sec 2 指导写作段落（例：尊敬的老师、亲爱的同学们：大家好！……），系统将按考卷方格稿纸规则实时统计非空白字符数..."></textarea>' +
+        '<div class="lab-readout"><div class="readout-pill" id="z3Out"></div></div></div>';
+      const f = el.querySelector('#z3F'), ta = el.querySelector('#z3Txt'), wc = el.querySelector('#z3Wc'), out = el.querySelector('#z3Out');
+      const guides = {
+        speech: '<strong>演讲稿要点</strong>：① 开篇尊称听众（如“尊敬的校长、老师，亲爱的同学们：”）；② 用设问或排比增强现场号召力；③ 紧扣双篇材料逐一回应支持与质疑双方观点，结尾发出明确倡议。',
+        letter: '<strong>书信要点</strong>：① 顶格称呼对方 + 明确写信缘由；② 兼顾双方材料，给出有针对性的评估与建议（勿只抄文章原文）；③ 规范致敬/祝福落款（如“此致\n敬礼”或“祝学习进步！\n学生会成员 李明”）。',
+        article: '<strong>校刊文章要点</strong>：① 拟定简明有感染力的小标题；② 开篇贴合读者群体拉近距离；③ 正反评估双篇文本要点后表达明确主张。',
+        report: '<strong>正式报告要点</strong>：① 建议拟定标题及分项小标题（如“一、调研背景 / 二、现存优势与顾虑 / 三、改进建议”）；② 用“调查显示 / 值得留意的是”保持客观语域，禁用情绪化口语！'
+      };
+      const chk = function () {
+        const n = countChiChars(ta.value);
+        wc.textContent = '当前有效汉字（不含空格）：' + n + ' 字 (目标 250–350 字)';
+        wc.className = 'wc-meter ' + (n === 0 ? 'wc-warn' : (n >= 250 && n <= 350 ? 'wc-ok' : (n < 200 || n > 400 ? 'wc-err' : 'wc-warn')));
+        out.innerHTML = guides[f.value] + '<br><strong>字数建议：</strong>' + (n === 0 ? '请保持 250–350 字左右（建议约 300–330 字），留出充分论证深度又不挤占阅读/文言时间。' : (n < 250 ? '字数偏少，检查是否漏掉两篇材料之一的核心反驳点。' : (n > 350 ? '略超 350 字建议线（虽无硬性扣分，但考场请收束以免挤占 Sec 3 时间）。' : '字数正处于 250–350 黄金靶区！')));
+      };
+      f.addEventListener('change', chk);
+      ta.addEventListener('input', chk);
+      chk();
+    } else if (t === 'z04') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">📜 C04 实战演练台 · 18 高频文言虚词秒杀辨析与句式判断器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>选择高频虚词：<select id="z4W"><option value="zhi">之 (代词/助词/主谓间/到)</option><option value="er">而 (并列/转折/修饰/承接)</option><option value="qi">其 (代词/表反问/表揣测)</option><option value="yi">以 (用/因为/用来/按照)</option><option value="yu">于 (在/比/被/对)</option><option value="zhe">者 (……的人/表判断停顿)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="z4Out"></div></div></div>';
+      const mp = {
+        zhi: '<strong>“之”</strong>：① 动词后作<strong>代词</strong>（他/它/这件事：<code>择其善者而从之</code>）；② 名词间作<strong>助词“的”</strong>；③ 主谓之间<strong>取消句子独立性</strong>（不译：<code>予独爱莲之出淤泥而不染</code>）；④ 作动词<strong>“到、往”</strong>（<code>辍耕之垄上</code>）。',
+        er: '<strong>“而”</strong>：① <strong>表转折“却、但是”</strong>（前褒后贬/语义反转，考频最高！<code>出淤泥而不染</code>）；② <strong>表顺承“然后/就”</strong>；③ <strong>表修饰“地/着”</strong>（状语+而+动词：<code>面山而居</code>）；④ <strong>表并列“又/并且”</strong>。',
+        qi: '<strong>“其”</strong>：① 代词“他/他的/其中的”（<code>其真无马邪？</code>前为“难道”表反问）；② 句首/副词表<strong>揣测语气“大概/恐怕”</strong>；③ 表祈使“可要/应当”。',
+        yi: '<strong>“以”</strong>：① 介词<strong>“用、拿、凭借”</strong>（<code>以刀劈狼首</code>）；② 介词<strong>“因为”</strong>（<code>不以物喜</code>）；③ 连词表目的<strong>“来/以便”</strong>（<code>属予作文以记之</code>）；④ 动词“认为”（<code>自以为不如</code>）。',
+        yu: '<strong>“于”</strong>：① <strong>“在/到/从”</strong>（<code>战于长勺</code>）；② 形容词后表比较<strong>“比”</strong>（<code>苛政猛于虎</code>）；③ 动词后表被动<strong>“被”</strong>；④ <strong>“对/向”</strong>（<code>告之于帝</code>）。',
+        zhe: '<strong>“者”</strong>：① 附于形容词/动词短语后译为<strong>“……的人 / ……的事物”</strong>（<code>贤者能之</code>）；② 与“也”呼应作判断句主语停顿（不译：<code>陈胜者，阳城人也</code>）。'
+      };
+      bindInputs(function () { el.querySelector('#z4Out').innerHTML = mp[el.querySelector('#z4W').value]; });
+    } else if (t === 'z05') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">⚖️ C05 交互写作台 · Paper 2 议论 vs 讨论文 (400–600 字) 防跑偏检查器</div></div>' +
+        '<div class="lab-panel write-box">' +
+        '<div class="lab-controls">' +
+        '<label>体裁选择：<select id="z5T"><option value="arg">议论文 Argumentative（鲜明立场 + 让步反驳）</option><option value="dis">讨论文 Discursive（客观中立分析双面）</option></select></label>' +
+        '<span class="wc-meter wc-warn" id="z5Wc">当前有效汉字：0 字 (目标 400–600 字)</span>' +
+        '</div>' +
+        '<textarea class="write-textarea" id="z5Txt" placeholder="在此输入 Paper 2 Sec 1 段落，实时检测 400–600 汉字区与论证/讨论平衡度..."></textarea>' +
+        '<div class="lab-readout"><div class="readout-pill" id="z5Out"></div></div></div>';
+      const sel = el.querySelector('#z5T'), ta = el.querySelector('#z5Txt'), wc = el.querySelector('#z5Wc'), out = el.querySelector('#z5Out');
+      const fn = function () {
+        const n = countChiChars(ta.value), tp = sel.value;
+        wc.textContent = '当前有效汉字：' + n + ' 字 (目标 400–600 字)';
+        wc.className = 'wc-meter ' + (n === 0 ? 'wc-warn' : (n >= 400 && n <= 600 ? 'wc-ok' : (n < 350 || n > 660 ? 'wc-err' : 'wc-warn')));
+        out.innerHTML = tp === 'arg'
+          ? '<strong>议论文铁律</strong>：开篇必须亮明<strong>鲜明单边立场</strong>，主体包含 2 个分论点 + <strong>1 段“诚然……然而……”让步驳斥</strong>，千万不要写着写着变成两边都对的“墙头草”！'
+          : '<strong>讨论文铁律</strong>：开头先引出争议不匆忙下结论，正反双面应分配<strong>大致对等篇幅</strong>（如各写 180 字并具具体案例），结尾再作辩证权衡收束！';
+      };
+      sel.addEventListener('change', fn);
+      ta.addEventListener('input', fn);
+      fn();
+    } else if (t === 'z06') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🎬 C06 交互写作台 · 描写文五感与记叙文细节“慢镜头” (400–600 字) 自检台</div></div>' +
+        '<div class="lab-panel write-box">' +
+        '<div class="lab-controls">' +
+        '<label>体裁：<select id="z6T"><option value="desc">描写文 Descriptive（纯氛围/人物/画面雕刻）</option><option value="narr">记叙文 Narrative（起承转合+情感波澜）</option></select></label>' +
+        '<span class="wc-meter wc-warn" id="z6Wc">当前有效汉字：0 字 (目标 400–600 字)</span>' +
+        '</div>' +
+        '<textarea class="write-textarea" id="z6Txt" placeholder="试写一段场面描写或人物关键转折细节，检查字数与感官描写丰富度..."></textarea>' +
+        '<div class="lab-readout"><div class="readout-pill" id="z6Out"></div></div></div>';
+      const sel = el.querySelector('#z6T'), ta = el.querySelector('#z6Txt'), wc = el.querySelector('#z6Wc'), out = el.querySelector('#z6Out');
+      const fn = function () {
+        const n = countChiChars(ta.value), tp = sel.value;
+        wc.textContent = '当前有效汉字：' + n + ' 字 (目标 400–600 字)';
+        wc.className = 'wc-meter ' + (n === 0 ? 'wc-warn' : (n >= 400 && n <= 600 ? 'wc-ok' : (n < 350 || n > 660 ? 'wc-err' : 'wc-warn')));
+        out.innerHTML = tp === 'desc'
+          ? '<strong>描写文防坑</strong>：切忌写成“清晨我去市场→买了菜→回家”的流水账！请像摄像机一样用<strong>移步换景 / 由远及近 + 五感细节（光影色彩/声音质感/气味/触感温度）</strong>定格氛围。'
+          : '<strong>记叙文高分秘诀</strong>：避免平铺直叙大事件，聚焦<strong>“一个微小却有情感撞击的瞬间”</strong>，利用<strong>环境铺垫 + 冲突误会/心理微动作 + 首尾物象呼应</strong>拉满 Band 1 张力！';
+      };
+      sel.addEventListener('change', fn);
+      ta.addEventListener('input', fn);
+      fn();
+    } else if (t === 'z07') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">📚 C07 速查实验室 · 50 个课外文言核心多义实词交互检索器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>检索实词或义项：<input type="text" id="z7Q" placeholder="如：绝 / 顾 / 曾 / 期 / 兵 / 亡..." style="width:190px;text-align:left;"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="z7Out"></div></div></div>';
+      const dict = [
+        ['绝', '① 隔绝/断绝；② 极、最（绝妙）；③ 横渡（绝江而渡）'],
+        ['顾', '① 回头看（顾视）；② 拜访（三顾茅庐）；③ 反而/难道'],
+        ['期', '① 约定/期限（不期而遇）；② 期望（期许）；③ 一周年（期年）'],
+        ['曾', '① 竟然（曾不若孀妻弱子）；② 曾经；③ 增益（同“增”）'],
+        ['兵', '① 兵器/武器；② 军队/士兵；③ 战争'],
+        ['亡', '① 逃跑（亡命/亡羊补牢）；② 灭亡；③ 通“无”没有'],
+        ['故', '① 原因/缘故；② 所以/因此；③ 旧的/特意（故人/故犯）'],
+        ['信', '① 诚信/信用；② 相信；③ 确实/实在；④ 信使'],
+        ['治', '① 治理/管理；② 安定/太平（治世）；③ 惩处'],
+        ['闻', '① 听见；② 闻名/声望；③ 使……听到（闻之于君）'],
+        ['举', '① 抬起/举起；② 推举/任用；③ 发动/攻克；④ 全（举国）'],
+        ['易', '① 交换（以物易物）；② 改变；③ 容易；④ 轻视']
+      ];
+      const inp = el.querySelector('#z7Q'), out = el.querySelector('#z7Out');
+      const runQ = function () {
+        const q = (inp.value || '').trim();
+        const hits = q ? dict.filter(function (r) { return r[0].indexOf(q) !== -1 || r[1].indexOf(q) !== -1; }) : dict.slice(0, 6);
+        out.innerHTML = hits.length
+          ? hits.map(function (r) { return '<div><strong>【' + r[0] + '】</strong> ' + r[1] + '</div>'; }).join('')
+          : '未在快捷例词中匹配到 “' + q + '”，请查阅本页下方完整 50 实词总表！';
+      };
+      inp.addEventListener('input', runQ);
+      runQ();
+    } else if (t === 'z08') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">📊 C08 模考驾驶舱 · 0509 双卷 (110 分) 智能估分诊断 & 135 分钟倒计时</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>P1 Sec1 现代文 (/23)：<input type="number" id="z8_1" value="19" min="0" max="23"></label>' +
+        '<label>P1 Sec2 指导 (/25)：<input type="number" id="z8_2" value="21" min="0" max="25"></label>' +
+        '<label>P1 Sec3 文言 (/12)：<input type="number" id="z8_3" value="10" min="0" max="12"></label>' +
+        '<label>P2 Sec1 议论/讨论 (/25)：<input type="number" id="z8_4" value="21" min="0" max="25"></label>' +
+        '<label>P2 Sec2 描写/记叙 (/25)：<input type="number" id="z8_5" value="21" min="0" max="25"></label>' +
+        '<button type="button" class="tab-btn active" id="z8Start">⏳ P1 135min 计时</button>' +
+        '<button type="button" class="tab-btn" id="z8Reset">重置</button>' +
+        '<span class="timer-big" id="z8Clk" style="font-size:18px;padding:4px 10px;">135:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="z8Out"></div></div></div>';
+      const calc = function () {
+        const s1 = Math.min(23, Math.max(0, Number(el.querySelector('#z8_1').value) || 0));
+        const s2 = Math.min(25, Math.max(0, Number(el.querySelector('#z8_2').value) || 0));
+        const s3 = Math.min(12, Math.max(0, Number(el.querySelector('#z8_3').value) || 0));
+        const s4 = Math.min(25, Math.max(0, Number(el.querySelector('#z8_4').value) || 0));
+        const s5 = Math.min(25, Math.max(0, Number(el.querySelector('#z8_5').value) || 0));
+        const p1 = s1 + s2 + s3, p2 = s4 + s5, tot = p1 + p2;
+        const pct = Math.round((tot / 110) * 100);
+        let tier = '冲击 A 档区间，重点扫除赏析套话与文言虚词丢分';
+        if (pct >= 84) tier = '稳居 A* 强势区间（≥84% 参考线，继续严控错别字与繁简一致性）';
+        else if (pct >= 74) tier = '稳居 A 档区间（74%–83%，重点拔高指导写作评估深度与描写细节）';
+        el.querySelector('#z8Out').innerHTML =
+          '<div><strong>双卷总分：' + tot + ' / 110（约 ' + pct + '%）</strong>｜Paper 1：' + p1 + '/60 · Paper 2：' + p2 + '/50</div>' +
+          '<div>备考处方：<strong>' + tier + '</strong></div>';
+      };
+      bindInputs(calc);
+      el.querySelector('#z8Start').addEventListener('click', function () {
+        if (p1TimerId) { clearInterval(p1TimerId); p1TimerId = null; }
+        let rem = 135 * 60;
+        p1TimerId = setInterval(function () {
+          rem--;
+          const m = Math.floor(rem / 60), r = rem % 60;
+          el.querySelector('#z8Clk').textContent = (m < 10 ? '0' : '') + m + ':' + (r < 10 ? '0' : '') + r;
+          if (rem <= 0) { clearInterval(p1TimerId); p1TimerId = null; }
+        }, 1000);
+      });
+      el.querySelector('#z8Reset').addEventListener('click', function () {
+        if (p1TimerId) { clearInterval(p1TimerId); p1TimerId = null; }
+        el.querySelector('#z8Clk').textContent = '135:00';
+      });
+    }
+  }
+
+  document.querySelectorAll('.lab-box[data-lab-type]').forEach(mountChiLab);
+
+  // ---------- 10. Initialize View & Scroll Spy ----------
+  applyViewMode(currentViewMode);
+  applyQuizMask(quizMasked);
+
+  const backTopBtn = document.getElementById('backTopBtn');
+  const trackedSections = Array.from(document.querySelectorAll('.topic-section[id]'));
+  const navLinks = Array.from(document.querySelectorAll('.sidebar .nav-link'));
+
+  window.addEventListener('scroll', function () {
+    if (backTopBtn) backTopBtn.classList.toggle('visible', window.scrollY > 360);
+    const y = window.scrollY + 110;
+    let currentId = '';
+    trackedSections.forEach(function (sec) {
+      if (sec.offsetTop <= y) currentId = sec.id;
+    });
+    if (currentId) {
+      navLinks.forEach(function (lnk) {
+        const href = lnk.getAttribute('href') || '';
+        if (href.charAt(0) === '#') {
+          lnk.classList.toggle('active', href === '#' + currentId);
+        }
+      });
+    }
+  }, { passive: true });
+
+  if (backTopBtn) {
+    backTopBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+})();
+
+  </script>
+</body>
+</html>

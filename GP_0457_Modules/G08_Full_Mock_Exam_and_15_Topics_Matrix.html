@@ -1,0 +1,1728 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="--accent: #BE123C;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>G08 · Module 8: Full 70-Mark Mock Exam & 15 Topics Matrix — IGCSE Global Perspectives (0457)</title>
+  <style>
+/* ==========================================================================
+   Cambridge IGCSE Global Perspectives (0457 · 2025–2027)
+   8-Module Exam Strategy & Coursework Suite Shared Stylesheet
+   ========================================================================== */
+
+:root {
+  --bg-page: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --bg-sidebar: #FFFFFF;
+  --bg-code: #EFF6FF;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-faint: #64748B;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+
+  --accent: #0F766E;
+  --accent-hover: #0D9488;
+  --accent-soft: #CCFBF1;
+
+  --core-bg: #E0F2FE;
+  --core-text: #075985;
+  --core-border: #BAE6FD;
+  --ext-bg: #FEF3C7;
+  --ext-text: #92400E;
+  --ext-border: #FDE68A;
+
+  --deep-bg: #EFF6FF;
+  --deep-border: #2563EB;
+  --tip-bg: #FFFBEB;
+  --tip-border: #D97706;
+  --mistake-bg: #FFF1F2;
+  --mistake-border: #E11D48;
+  --example-bg: #F0FDF4;
+  --example-border: #16A34A;
+  --formula-bg: #F8FAFC;
+  --formula-border: #0F766E;
+
+  --ok-bg: #DCFCE7;
+  --ok-text: #166534;
+  --ok-border: #86EFAC;
+  --err-bg: #FEE2E2;
+  --err-text: #991B1B;
+  --err-border: #FCA5A5;
+
+  --svg-bg: #FFFFFF;
+  --svg-grid: #E2E8F0;
+  --svg-ink: #0F172A;
+  --svg-muted: #64748B;
+  --svg-blue: #2563EB;
+  --svg-indigo: #4338CA;
+  --svg-teal: #0D9488;
+  --svg-amber: #D97706;
+  --svg-red: #DC2626;
+  --svg-green: #16A34A;
+  --svg-purple: #7C3AED;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.07);
+  --shadow-lg: 0 10px 26px rgba(15, 23, 42, 0.11);
+
+  --sidebar-w: 288px;
+  --topbar-h: 58px;
+  --radius-sm: 7px;
+  --radius-md: 11px;
+  --radius-lg: 16px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+  --font-serif: Georgia, "Times New Roman", "Songti SC", "Noto Serif SC", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+[data-theme="dark"] {
+  --bg-page: #0B1120;
+  --bg-surface: #111827;
+  --bg-subtle: #1E293B;
+  --bg-sidebar: #0F172A;
+  --bg-code: #1E293B;
+  --text-main: #F1F5F9;
+  --text-muted: #CBD5E1;
+  --text-faint: #94A3B8;
+  --border: #1E293B;
+  --border-strong: #334155;
+
+  --accent: #38BDF8 !important;
+  --accent-hover: #7DD3FC;
+  --accent-soft: rgba(56, 189, 248, 0.18);
+
+  --core-bg: rgba(56, 189, 248, 0.16);
+  --core-text: #BAE6FD;
+  --core-border: rgba(56, 189, 248, 0.36);
+  --ext-bg: rgba(245, 158, 11, 0.16);
+  --ext-text: #FDE68A;
+  --ext-border: rgba(245, 158, 11, 0.36);
+
+  --deep-bg: rgba(37, 99, 235, 0.14);
+  --deep-border: #60A5FA;
+  --tip-bg: rgba(217, 119, 6, 0.14);
+  --tip-border: #FBBF24;
+  --mistake-bg: rgba(225, 29, 72, 0.15);
+  --mistake-border: #FB7185;
+  --example-bg: rgba(22, 163, 74, 0.13);
+  --example-border: #4ADE80;
+  --formula-bg: #172033;
+  --formula-border: #38BDF8;
+
+  --ok-bg: rgba(22, 163, 74, 0.22);
+  --ok-text: #BBF7D0;
+  --ok-border: #22C55E;
+  --err-bg: rgba(220, 38, 38, 0.22);
+  --err-text: #FECACA;
+  --err-border: #EF4444;
+
+  --svg-bg: #0F172A;
+  --svg-grid: #334155;
+  --svg-ink: #F1F5F9;
+  --svg-muted: #94A3B8;
+  --svg-blue: #60A5FA;
+  --svg-indigo: #818CF8;
+  --svg-teal: #2DD4BF;
+  --svg-amber: #FBBF24;
+  --svg-red: #F87171;
+  --svg-green: #34D399;
+  --svg-purple: #A78BFA;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .seg-btn.active,
+[data-theme="dark"] .tab-btn.active,
+[data-theme="dark"] .icon-btn.active,
+[data-theme="dark"] .brand-code,
+[data-theme="dark"] .pager-btn.primary { color: #0B1120; }
+[data-theme="dark"] .hub-foot { color: #38BDF8; }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--topbar-h) + 18px); }
+body { margin: 0; font-family: var(--font-sans); background: var(--bg-page); color: var(--text-main); line-height: 1.72; font-size: 15.5px; -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4 { margin: 0 0 0.55em 0; line-height: 1.32; font-weight: 700; color: var(--text-main); }
+p { margin: 0 0 0.9em 0; }
+ul, ol { margin: 0 0 1em 0; padding-left: 1.45em; }
+li { margin-bottom: 0.35em; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { font-family: var(--font-mono); font-size: 0.9em; background: var(--bg-code); color: var(--accent); padding: 2px 6px; border-radius: 4px; }
+
+/* View Mode Filters (All / Method / Practice / Cards) */
+body.mode-method .practice-section { display: none !important; }
+body.mode-practice .method-section { display: none !important; }
+body.mode-cards .method-section,
+body.mode-cards .practice-section { display: none !important; }
+
+.badge-c1, .badge-cw, .badge-core, .badge-ext { display: inline-block; font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.badge-c1, .badge-core { background: var(--core-bg); color: var(--core-text); border: 1px solid var(--core-border); }
+.badge-cw, .badge-ext { background: var(--ext-bg); color: var(--ext-text); border: 1px solid var(--ext-border); }
+
+.formula-card { background: var(--formula-bg); border: 1.5px solid var(--border-strong); border-left: 5px solid var(--formula-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; font-size: 15px; }
+.formula-main { font-family: var(--font-serif); font-size: 16.5px; font-weight: 700; color: var(--accent); margin: 4px 0 6px 0; }
+
+.source-box, .reading-passage { background: var(--bg-page); border: 1px solid var(--border-strong); border-left: 5px solid var(--accent); border-radius: var(--radius-md); padding: 16px 20px; margin: 14px 0; font-family: var(--font-serif); font-size: 15px; line-height: 1.76; }
+.reading-title { font-family: var(--font-sans); font-size: 15.8px; font-weight: 800; color: var(--text-main); margin-bottom: 8px; }
+.para-tag { display: inline-block; font-family: var(--font-sans); font-size: 11.5px; font-weight: 800; background: var(--accent-soft); color: var(--accent); padding: 1px 7px; border-radius: 4px; margin-right: 6px; }
+
+.model-essay { background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 20px; margin: 14px 0; box-shadow: var(--shadow-sm); }
+.essay-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; padding-bottom: 10px; margin-bottom: 12px; border-bottom: 1px solid var(--border); font-size: 13px; font-weight: 700; }
+.band-pill { padding: 2px 10px; border-radius: 999px; font-size: 12px; font-weight: 800; }
+.band-high { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.band-mid { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+.essay-body { font-family: var(--font-serif); font-size: 15px; line-height: 1.76; }
+mark.hl-content { background: rgba(37, 99, 235, 0.16); color: inherit; padding: 1px 3px; border-radius: 3px; }
+mark.hl-lang { background: rgba(22, 163, 74, 0.18); color: inherit; padding: 1px 3px; border-radius: 3px; }
+mark.hl-err { background: rgba(220, 38, 38, 0.16); color: inherit; padding: 1px 3px; border-radius: 3px; text-decoration: wavy underline rgba(220, 38, 38, 0.6); }
+
+.write-box { display: flex; flex-direction: column; gap: 10px; }
+.write-textarea { width: 100%; min-height: 150px; padding: 12px 14px; border-radius: var(--radius-sm); border: 1.5px solid var(--border-strong); background: var(--bg-page); color: var(--text-main); font-family: var(--font-serif); font-size: 14.8px; line-height: 1.65; resize: vertical; }
+.write-textarea:focus { outline: none; border-color: var(--accent); }
+.wc-meter { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 800; }
+.wc-ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.wc-warn { background: var(--tip-bg); color: var(--tip-border); border: 1px solid var(--tip-border); }
+.wc-err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+.timer-big { font-family: var(--font-mono); font-size: 22px; font-weight: 800; color: var(--accent); background: var(--bg-page); border: 1.5px solid var(--border-strong); padding: 5px 12px; border-radius: var(--radius-sm); }
+
+/* Topbar */
+.topbar {
+  position: sticky; top: 0; z-index: 100; height: var(--topbar-h);
+  background: var(--bg-surface); border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm); display: flex; align-items: center;
+  justify-content: space-between; gap: 10px; padding: 0 16px;
+}
+.topbar-left { display: flex; align-items: center; gap: 8px; min-width: 0; flex-shrink: 1; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 34px; padding: 0 10px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--bg-surface); color: var(--text-main); font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; text-decoration: none; }
+.icon-btn:hover { background: var(--bg-subtle); border-color: var(--accent); text-decoration: none; }
+.icon-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.menu-toggle { display: none; }
+.brand-pill { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; white-space: nowrap; flex-shrink: 1; min-width: 0; }
+.brand-code { background: var(--accent); color: #fff; padding: 2px 8px; border-radius: 5px; font-size: 12px; letter-spacing: 0.4px; white-space: nowrap; flex-shrink: 0; }
+.brand-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 215px; }
+.search-wrap { position: relative; flex: 1 1 150px; min-width: 130px; max-width: 260px; }
+.search-input { width: 100%; height: 34px; padding: 0 30px 0 32px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--bg-subtle); color: var(--text-main); font-size: 13.5px; outline: none; }
+.search-input:focus { border-color: var(--accent); background: var(--bg-surface); }
+.search-input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.search-icon { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); color: var(--text-faint); font-size: 13px; pointer-events: none; }
+.search-clear { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); border: none; background: transparent; color: var(--text-faint); cursor: pointer; font-size: 14px; display: none; }
+.search-results-bar { display: none; background: var(--accent-soft); border-bottom: 1px solid var(--border); padding: 8px 20px; font-size: 13.5px; color: var(--text-main); align-items: center; justify-content: space-between; gap: 12px; }
+.search-results-bar.visible { display: flex; }
+.topbar-controls { display: flex; align-items: center; gap: 7px; flex-shrink: 0; }
+.seg-group { display: inline-flex; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); overflow: hidden; background: var(--bg-subtle); }
+.seg-btn { border: none; background: transparent; color: var(--text-muted); padding: 6px 8px; font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.seg-btn.active { background: var(--accent); color: #fff; }
+.progress-chip { display: flex; align-items: center; gap: 7px; padding: 4px 10px; border-radius: 999px; background: var(--bg-subtle); border: 1px solid var(--border); font-size: 12.5px; font-weight: 600; white-space: nowrap; }
+.progress-track { width: 50px; height: 7px; background: var(--border-strong); border-radius: 99px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), #0D9488); transition: width 0.25s ease; }
+
+.app-layout { display: flex; min-height: calc(100vh - var(--topbar-h)); }
+.sidebar { width: var(--sidebar-w); flex-shrink: 0; background: var(--bg-sidebar); border-right: 1px solid var(--border); position: sticky; top: var(--topbar-h); height: calc(100vh - var(--topbar-h)); overflow-y: auto; padding: 14px 10px 44px 10px; }
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 99px; }
+.nav-unit { margin-bottom: 8px; }
+.nav-unit-btn { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border: none; border-radius: var(--radius-sm); background: transparent; color: var(--text-main); font-size: 13px; font-weight: 700; text-align: left; cursor: pointer; }
+.nav-unit-btn:hover { background: var(--bg-subtle); }
+.nav-unit-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.nav-unit-title { flex: 1; display: flex; align-items: center; gap: 7px; line-height: 1.3; }
+.nav-chevron { font-size: 11px; color: var(--text-faint); transition: transform 0.2s; }
+.nav-unit.collapsed .nav-chevron { transform: rotate(-90deg); }
+.nav-unit.collapsed .nav-links { display: none; }
+.nav-links { list-style: none; padding: 2px 0 4px 12px; margin: 0 0 0 14px; border-left: 2px solid var(--border); }
+.nav-link { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 5px 9px; margin: 2px 0; border-radius: var(--radius-sm); color: var(--text-muted); font-size: 12.6px; line-height: 1.35; text-decoration: none; }
+.nav-link:hover { background: var(--bg-subtle); color: var(--text-main); text-decoration: none; }
+.nav-link.active { background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+.nav-done-mark { color: #10B981; font-weight: 800; font-size: 12px; opacity: 0; }
+.nav-link.mastered .nav-done-mark { opacity: 1; }
+.main-content { flex: 1; min-width: 0; padding: 26px 32px 80px 32px; }
+.content-inner { max-width: 960px; margin: 0 auto; }
+
+.hero-card { background: linear-gradient(135deg, #0F172A 0%, var(--accent) 58%, #0F766E 100%); color: #fff; border-radius: var(--radius-lg); padding: 28px 32px; margin-bottom: 26px; box-shadow: var(--shadow-lg); }
+.hero-card h1 { color: #fff; font-size: 25px; margin-bottom: 8px; letter-spacing: -0.3px; }
+.hero-sub { color: rgba(255,255,255,0.92); font-size: 14.8px; max-width: 820px; margin-bottom: 16px; }
+.hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.hero-pill { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.28); color: #fff; padding: 4px 11px; border-radius: 999px; font-size: 12.5px; font-weight: 600; }
+.unit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+.unit-tile { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.24); border-radius: var(--radius-md); padding: 12px 14px; color: #fff; text-decoration: none; display: block; transition: transform 0.15s, background 0.15s; }
+.unit-tile:hover { transform: translateY(-2px); background: rgba(255,255,255,0.22); text-decoration: none; }
+.unit-tile-num { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.7px; opacity: 0.85; font-weight: 700; }
+.unit-tile-title { font-size: 14.5px; font-weight: 700; margin: 3px 0; }
+
+.topic-section { background: var(--bg-surface); border: 1px solid var(--border); border-top: 4px solid var(--accent); border-radius: var(--radius-md); padding: 24px 26px; margin-bottom: 24px; box-shadow: var(--shadow-sm); }
+.topic-section.search-dim { display: none; }
+.section-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 2px solid var(--border); }
+.section-title-group h3 { font-size: 19.5px; margin-bottom: 4px; }
+.section-en-sub { font-size: 13.5px; color: var(--text-faint); font-weight: 600; }
+.tier-row { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 7px; }
+.master-btn { flex-shrink: 0; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-muted); font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.master-btn:hover { border-color: #10B981; color: #10B981; }
+.master-btn.is-mastered { background: var(--ok-bg); color: var(--ok-text); border-color: var(--ok-border); }
+.subtopic { margin-bottom: 20px; }
+.subtopic:last-of-type { margin-bottom: 12px; }
+.subtopic h4 { font-size: 16px; color: var(--accent); margin: 0 0 10px 0; padding-bottom: 4px; border-bottom: 1px dashed var(--border); display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+
+.worked-example { background: var(--example-bg); border: 1px solid var(--border); border-left: 4px solid var(--example-border); border-radius: var(--radius-md); padding: 14px 18px; margin: 14px 0; }
+.worked-title { font-weight: 800; font-size: 14px; color: var(--example-border); margin-bottom: 6px; }
+.callout { border-radius: var(--radius-sm); padding: 13px 16px; margin: 14px 0; border-left: 4px solid var(--border-strong); font-size: 14.5px; }
+.callout-title { font-weight: 800; font-size: 13.5px; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+.deep-dive { background: var(--deep-bg); border-left-color: var(--deep-border); }
+.deep-dive .callout-title { color: var(--deep-border); }
+.examiner-tip { background: var(--tip-bg); border-left-color: var(--tip-border); }
+.examiner-tip .callout-title { color: var(--tip-border); }
+.common-mistake { background: var(--mistake-bg); border-left-color: var(--mistake-border); }
+.common-mistake .callout-title { color: var(--mistake-border); }
+
+.table-wrap { width: 100%; overflow-x: auto; margin: 14px 0; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+table.gp-table, table.phy-table { width: 100%; border-collapse: collapse; font-size: 13.8px; text-align: left; }
+table.gp-table th, table.phy-table th { background: var(--bg-subtle); color: var(--text-main); font-weight: 700; padding: 9px 12px; border-bottom: 2px solid var(--border-strong); white-space: nowrap; }
+table.gp-table td, table.phy-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.gp-table tr:last-child td, table.phy-table tr:last-child td { border-bottom: none; }
+table.gp-table tbody tr:hover, table.phy-table tbody tr:hover { background: var(--bg-subtle); }
+
+.svg-figure { background: var(--svg-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px; margin: 16px 0; text-align: center; break-inside: avoid; }
+.svg-figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.svg-caption { margin-top: 8px; font-size: 13px; color: var(--text-faint); font-weight: 600; }
+
+/* Interactive GP Analysis & Coursework Labs */
+.lab-box { background: var(--bg-subtle); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px; margin: 18px 0; break-inside: avoid; }
+.lab-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+.lab-title { font-size: 15.5px; font-weight: 800; color: var(--accent); display: flex; align-items: center; gap: 7px; }
+.lab-panel { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; }
+.lab-controls { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-bottom: 12px; align-items: center; }
+.lab-controls label { font-size: 13px; font-weight: 700; color: var(--text-muted); display: inline-flex; align-items: center; gap: 6px; }
+.lab-controls input[type="number"], .lab-controls input[type="text"], .lab-controls select { padding: 5px 8px; border-radius: 6px; border: 1px solid var(--border-strong); background: var(--bg-subtle); color: var(--text-main); font-size: 13.2px; font-weight: 700; }
+.lab-controls input[type="number"] { min-width: 108px; width: 112px; text-align: center; }
+.lab-controls input[type="range"] { width: 120px; accent-color: var(--accent); }
+.lab-grid-2col { display: grid; grid-template-columns: 1.12fr 1fr; gap: 14px; align-items: start; }
+@media (max-width: 820px) { .lab-grid-2col { grid-template-columns: 1fr; } }
+.tab-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.tab-btn { border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-muted); padding: 5px 10px; border-radius: 6px; font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.tab-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.lab-readout { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; font-size: 13.2px; font-weight: 600; }
+.readout-pill { background: var(--bg-page); border: 1px solid var(--border-strong); padding: 7px 10px; border-radius: 6px; width: 100%; line-height: 1.55; }
+
+/* Practice Questions & Concepts */
+.practice-block { margin-top: 18px; padding-top: 14px; border-top: 2px dashed var(--border-strong); }
+.practice-heading { font-size: 16px; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.exam-q { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 14px; break-inside: avoid; }
+.exam-q-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; font-size: 12.5px; }
+.q-tag { font-weight: 800; color: var(--accent); background: var(--accent-soft); padding: 2px 8px; border-radius: 5px; }
+.q-marks { font-weight: 700; color: var(--text-faint); }
+.q-stem-en { font-size: 14.8px; font-weight: 600; color: var(--text-main); margin-bottom: 6px; }
+.q-stem-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 12px; }
+.mcq-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin-bottom: 10px; }
+.mcq-opt { text-align: left; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); font-size: 13.8px; cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+.mcq-opt:hover { border-color: var(--accent); background: var(--bg-subtle); }
+.mcq-opt.correct { background: var(--ok-bg); border-color: var(--ok-border); color: var(--ok-text); font-weight: 700; }
+.mcq-opt.wrong { background: var(--err-bg); border-color: var(--err-border); color: var(--err-text); }
+.mcq-feedback { display: none; font-size: 13.5px; padding: 10px 12px; border-radius: var(--radius-sm); margin-top: 8px; }
+.mcq-feedback.visible { display: block; }
+.mcq-feedback.ok { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+.mcq-feedback.err { background: var(--err-bg); color: var(--err-text); border: 1px solid var(--err-border); }
+details.ms-details { margin-top: 10px; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 12px; }
+details.ms-details summary { cursor: pointer; font-weight: 700; font-size: 13.5px; color: var(--accent); user-select: none; }
+.ms-body { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 13.8px; }
+.ms-mark { display: inline-block; font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--core-text); background: var(--core-bg); padding: 1px 5px; border-radius: 4px; margin-right: 4px; }
+.ms-cn { color: var(--text-muted); margin-top: 4px; }
+
+.concept-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 14px; margin-bottom: 18px; }
+.concept-filter-group { display: flex; flex-wrap: wrap; gap: 6px; }
+.concept-actions { display: flex; align-items: center; gap: 10px; }
+.concept-count-pill { font-size: 12.5px; font-weight: 700; color: var(--text-muted); }
+.concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 14px; }
+.concept-card { background: var(--bg-page); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; gap: 8px; break-inside: avoid; }
+.concept-card:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
+.concept-card.concept-hidden { display: none !important; }
+.cq-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.cq-en { font-weight: 700; font-size: 14.5px; color: var(--text-main); line-height: 1.45; }
+.cq-cn { font-size: 13.5px; color: var(--text-muted); margin-bottom: 2px; }
+.cq-answer { position: relative; margin-top: auto; background: var(--bg-surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius-sm); padding: 11px 13px; font-size: 13.8px; line-height: 1.6; }
+.kw { color: var(--accent); background: var(--accent-soft); padding: 0 4px; border-radius: 3px; font-weight: 700; }
+.cq-mask-hint { display: none; }
+.concept-card.masked .cq-answer { cursor: pointer; }
+.concept-card.masked .cq-answer-inner { filter: blur(7px); opacity: 0.22; user-select: none; pointer-events: none; transition: filter 0.2s, opacity 0.2s; }
+.concept-card.masked .cq-mask-hint { display: flex; align-items: center; justify-content: center; position: absolute; inset: 0; font-size: 13.5px; font-weight: 700; color: var(--accent); background: rgba(255,255,255,0.25); border-radius: var(--radius-sm); }
+[data-theme="dark"] .concept-card.masked .cq-mask-hint { background: rgba(15,23,42,0.35); }
+
+.chapter-pager { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 28px; padding: 16px 20px; background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); }
+.pager-btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: var(--radius-sm); background: var(--bg-subtle); border: 1px solid var(--border-strong); color: var(--text-main); font-size: 13.5px; font-weight: 700; text-decoration: none; }
+.pager-btn:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); text-decoration: none; }
+.pager-btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.pager-btn.primary:hover { background: var(--accent-hover); color: #fff; }
+
+.hub-block-title { font-size: 18px; font-weight: 800; margin: 26px 0 12px 0; padding-bottom: 6px; border-bottom: 2px solid var(--border-strong); display: flex; align-items: center; gap: 8px; }
+.hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 15px; }
+.hub-card { display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-surface); border: 1px solid var(--border-strong); border-top: 5px solid var(--card-color, var(--accent)); border-radius: var(--radius-md); padding: 16px 18px 14px 18px; color: var(--text-main); text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; box-shadow: var(--shadow-sm); }
+.hub-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--card-color, var(--accent)); text-decoration: none; }
+.hub-card-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+.hub-badge { font-size: 11.5px; font-weight: 800; color: #fff; background: var(--card-color, var(--accent)); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill { font-size: 12px; font-weight: 700; color: var(--text-muted); background: var(--bg-subtle); padding: 2px 8px; border-radius: 999px; }
+.hub-prog-pill.done { background: var(--ok-bg); color: var(--ok-text); }
+.hub-title { font-size: 16px; font-weight: 800; margin-bottom: 3px; }
+.hub-en { font-size: 12.6px; color: var(--text-faint); font-weight: 600; margin-bottom: 8px; }
+.hub-sub { font-size: 12.8px; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; }
+.hub-foot { font-size: 13px; font-weight: 700; color: var(--card-color, var(--accent)); display: flex; align-items: center; justify-content: space-between; }
+
+.back-top-btn { position: fixed; right: 22px; bottom: 22px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-strong); background: var(--bg-surface); color: var(--text-main); box-shadow: var(--shadow-md); cursor: pointer; display: none; align-items: center; justify-content: center; font-size: 17px; font-weight: 800; z-index: 80; }
+.back-top-btn.visible { display: flex; }
+
+@media (max-width: 1200px) {
+  .brand-title, .btn-label { display: none; }
+  .seg-btn { padding: 6px 8px; }
+}
+@media (max-width: 980px) {
+  .menu-toggle { display: inline-flex; }
+  .sidebar { position: fixed; left: 0; top: var(--topbar-h); z-index: 95; transform: translateX(-100%); transition: transform 0.22s ease; box-shadow: var(--shadow-lg); }
+  .sidebar.open { transform: translateX(0); }
+  .main-content { padding: 18px 14px 64px 14px; }
+  .topic-section { padding: 18px 16px; }
+  .progress-chip { display: none; }
+  .search-wrap { min-width: 130px; }
+}
+@media (max-width: 640px) {
+  .topbar { padding: 0 10px; gap: 6px; }
+  .search-wrap { max-width: none; }
+  .concept-grid, .hub-grid { grid-template-columns: 1fr; }
+}
+@media print {
+  .topbar, .sidebar, .search-results-bar, .back-top-btn, .master-btn, .lab-controls button, .concept-toolbar, .cq-mask-hint, .chapter-pager { display: none !important; }
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  .main-content { padding: 0 !important; }
+  .content-inner { max-width: 100% !important; }
+  .topic-section, .exam-q, .callout, .worked-example, .svg-figure, .concept-card, .model-essay, .source-box { box-shadow: none !important; break-inside: avoid; border-color: #CBD5E1 !important; }
+  details.ms-details, details.ms-details .ms-body, .mcq-feedback { display: block !important; }
+  .concept-card.masked .cq-answer-inner { filter: none !important; opacity: 1 !important; }
+}
+
+  </style>
+</head>
+<body data-chapter-code="G08">
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="展开目录">☰ 目录</button>
+      <a class="icon-btn" href="index.html" title="返回 8 专题总目录"><span>🏠</span><span class="btn-label">总目录</span></a>
+      <div class="brand-pill">
+        <span class="brand-code">G08</span>
+        <span class="brand-title">Module 8: Full 70-Mark Mock Exam & 15 Topics Matrix</span>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="search" id="searchInput" class="search-input" placeholder="搜索 RAVEN、比较维度、反思句型与真题..." autocomplete="off" />
+      <button type="button" class="search-clear" id="searchClear" title="清空搜索">✕</button>
+    </div>
+
+    <div class="topbar-controls">
+      <div class="seg-group" role="group" aria-label="内容视图筛选">
+        <button type="button" class="seg-btn active" data-view-mode="all">All</button>
+        <button type="button" class="seg-btn" data-view-mode="method">方法</button>
+        <button type="button" class="seg-btn" data-view-mode="practice">练习</button>
+        <button type="button" class="seg-btn" data-view-mode="cards">术语卡</button>
+      </div>
+
+      <div class="progress-chip" title="本专题方法与实战模块掌握进度">
+        <span id="progressText">0/0</span>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+
+      <button type="button" class="icon-btn" id="toggleAllMs" title="展开或收起全部解析"><span>📝</span><span class="btn-label">展开解析</span></button>
+      <button type="button" class="icon-btn" id="themeToggle" title="切换亮色/暗色主题"><span id="themeIcon">🌙</span><span class="btn-label">主题</span></button>
+      <button type="button" class="icon-btn" id="printBtn" title="打印或导出为 PDF"><span>🖨️</span><span class="btn-label">导出 PDF</span></button>
+    </div>
+  </header>
+
+  <div class="search-results-bar" id="searchBar">
+    <span id="searchSummary">找到 0 个匹配板块</span>
+    <button type="button" class="icon-btn" id="searchResetBtn">重置过滤</button>
+  </div>
+
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="本专题 GP 知识点导航">
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #BE123C;"></span>G08 本专题板块导航</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#sec-8-1"><span>8.1 2025–2027 考纲 15 大全球议题三视角矩阵与 70 分笔试驾驶舱</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#sec-sme"><span>8.2 Component 1 (70 分 · 85 分钟) 全真原创模拟卷：Global Digital Divide &amp; Rural Connectivity</span><span class="nav-done-mark">✓</span></a></li>
+          <li><a class="nav-link" href="#app-concepts"><span>8.3 考场应急术语、研究方法与全科终极避坑卡片 (16 张)</span><span class="nav-done-mark">✓</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-unit">
+        <button class="nav-unit-btn" type="button">
+          <span class="nav-unit-title"><span class="nav-unit-dot" style="background: #0D9488;"></span>全书 8 专题快速切换</span>
+          <span class="nav-chevron">▾</span>
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="G01_Syllabus_Blueprint_and_Q1_Concepts.html"><span>G01 · 2025–2027 考纲权重与 Q1 批判性概念辨析</span></a></li>
+          <li><a class="nav-link" href="G02_Q2_Source_Evaluation_and_Research_Testing.html"><span>G02 · Q2A 来源可信度 (RAVEN) 与 Q2B 8 分研究设计四要素</span></a></li>
+          <li><a class="nav-link" href="G03_Q3_Comparing_Arguments.html"><span>G03 · Q3 双源论证强度六维比较框架与 Level 4 精批</span></a></li>
+          <li><a class="nav-link" href="G04_Q4_Policy_Decision_Essay.html"><span>G04 · Q4 24 分压轴政策决策论文：五维权衡与四段结构</span></a></li>
+          <li><a class="nav-link" href="G05_Individual_Report_Design_and_Perspectives.html"><span>G05 · IR 个人报告：A* 选题公式与真三视角深度结构</span></a></li>
+          <li><a class="nav-link" href="G06_Individual_Report_Evaluation_Reflection_Citations.html"><span>G06 · IR 嵌入式批判、AO2 个人立场演变与 Harvard 零抄袭</span></a></li>
+          <li><a class="nav-link" href="G07_Team_Project_and_Reflective_Paper.html"><span>G07 · Team Project 本土行动、300–400 词 ERP 与 45 分反思论文</span></a></li>
+          <li><a class="nav-link active" href="G08_Full_Mock_Exam_and_15_Topics_Matrix.html"><span>G08 · Component 1 (70 分) 全真模拟卷与 15 大议题视角库</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-inner">
+        <section class="hero-card" id="top">
+          <h1>Module 8: Full 70-Mark Mock Exam & 15 Topics Matrix · 第 8 专题 · Component 1 (70 分) 全真模拟卷与 15 大议题视角库</h1>
+          <p class="hero-sub">
+            严格围绕 <strong>Cambridge IGCSE Global Perspectives (0457 · 2025–2027 考纲 · Component 1 35% + Individual Report 30% + Team Project 35%)</strong> 评分细则、分析评估框架与高分写作示范：<code>完整原创 4 则 Source Booklet + Q1–Q4 (70分) 全真模拟卷配 Level 4 Mark Scheme · 85 分钟计时与 15 议题速查</code>，配齐 Level 4 红笔范文、课程作业规范检查台与中英学术术语默写库。
+          </p>
+          <div class="hero-badges">
+            <span class="hero-pill">🌍 0457 (2025–2027) 新考纲</span>
+            <span class="hero-pill">⚖️ RAVEN / 论证对比 / 政策决策全法</span>
+            <span class="hero-pill">⚡ 词数红线 / 引用生成 / 70分估分台</span>
+            <a class="hero-pill" href="#sec-sme" style="text-decoration: none;">📝 直达全真练习 →</a>
+            <a class="hero-pill" href="#app-concepts" style="text-decoration: none; background: rgba(255,255,255,0.24);">🧠 直达批判思维术语卡 →</a>
+          </div>
+          <div class="unit-grid">
+            <a class="unit-tile" href="#sec-8-1">
+              <div class="unit-tile-num">Section 8-1</div>
+              <div class="unit-tile-title">8.1 2025–2027 考纲 15 大全球议题三视角矩阵与 70 分笔试驾驶舱</div>
+            </a>
+            <a class="unit-tile" href="#sec-sme">
+              <div class="unit-tile-num">Section sme</div>
+              <div class="unit-tile-title">8.2 Component 1 (70 分 · 85 分钟) 全真原创模拟卷：Global Digital Divide &amp; Rural Connectivity</div>
+            </a>
+            <a class="unit-tile" href="#app-concepts">
+              <div class="unit-tile-num">术语与公式库</div>
+              <div class="unit-tile-title">8.3 考场应急术语、研究方法与全科终极避坑卡片 (16 张)</div>
+            </a>
+          </div>
+        </section>
+
+        <div id="emptySearchNotice" class="callout deep-dive" style="display: none;">
+          <div class="callout-title">🔍 未找到匹配内容</div>
+          <p style="margin-bottom: 0;">请尝试更换关键词，或点击右上角“重置过滤”恢复显示。</p>
+        </div>
+
+<!-- ==========================================================================
+     Module 08 · Full 70-Mark Mock Exam & 15 Topics Matrix (IGCSE GP 0457 · 2025–2027)
+     ========================================================================== -->
+<article class="topic-section method-section" id="sec-8-1">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>8.1 2025–2027 考纲 15 大全球议题三视角矩阵与 70 分笔试驾驶舱</h3>
+      <div class="section-en-sub">Unified 15 Official Syllabus Topics (Global / National / Local) + Component 1 (70m / 85min) Strategy Lab</div>
+      <div class="tier-row">
+        <span class="badge-c1">Exam + IR + TP 统一议题库</span>
+        <span class="badge-cw">含 70 分估分台 &amp; 85 分钟倒计时 #g08</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-8-1">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>8.1.1 2025–2027 考纲统一 15 大全球议题 × 三视角 (Global / National / Local) 破题速查表</h4>
+    <p>
+      <strong>2025–2027 最新考纲重大整合</strong>：Component 1 笔试、Component 2 (IR) 与 Component 3 (TP) 现已<strong>彻底统一共享同一套 15 个全球议题</strong>。下表逐一列出官方英文原名，并拆解每个议题如何无缝跨越 <strong>Global（国际准则/跨国系统）↔ National（国家税制/立法/财政取舍）↔ Local（社区/校园/家庭切身冲突）</strong> 三层视角，供 IR 选题、TP 找痛点与 C1 笔试背景激活一站式速查：
+    </p>
+
+    <div class="table-wrap">
+      <table class="gp-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>官方议题原名 &amp; 中文</th>
+            <th>核心研究切入点 (A* 争辩焦点)</th>
+            <th>Global 视角</th>
+            <th>National 视角</th>
+            <th>Local 视角与核心冲突</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>01</td>
+            <td><strong>Arts in society</strong><br>社会中的艺术</td>
+            <td>公共财政缩紧时，国家是否应削减艺术馆与非遗补贴以优先保障 STEM 与基建？</td>
+            <td>UNESCO 倡导非遗保护与文化多样性作为人类共同财富。</td>
+            <td>财政部需平衡文化软实力输出与医疗、基础教育预算缺口。</td>
+            <td>地方剧团与社区画室靠补贴维持生计，家长却普遍施压学校多排理科课时。</td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td><strong>Change in culture and communities</strong><br>文化与社区变迁</td>
+            <td>城市化与全球流行文化在多大程度上加速了方言与地方传统的消亡？</td>
+            <td>跨国媒体与通用语降低跨文化交流门槛、扩大青年机遇。</td>
+            <td>国家语言政策在标准化办公语言与少数族群语言保护间摇摆。</td>
+            <td>乡村长辈担忧宗族节庆与母语断代，年轻一代却向往都市现代生活方式。</td>
+          </tr>
+          <tr>
+            <td>03</td>
+            <td><strong>Climate change, energy and resources</strong><br>气候变化、能源与资源</td>
+            <td>高收入国家是否应为发展中工业国承担绿色转型资金，而非单方面征收碳关税？</td>
+            <td>IPCC 呼吁各国立即退煤以守住 1.5°C 全球温升安全防线。</td>
+            <td>发展中国家把廉价煤炭电力视为工业脱贫与能源主权的刚需。</td>
+            <td>矿区家庭忧虑煤矿关停导致失业，沿海低洼村庄却已饱受咸潮与洪涝冲击。</td>
+          </tr>
+          <tr>
+            <td>04</td>
+            <td><strong>Conflict and peace</strong><br>冲突与和平</td>
+            <td>全面经济制裁能否有效制止武装冲突，还是反而对平民造成不成比例的人道伤害？</td>
+            <td>联合国与外交联盟主张以非武力经济施压维护国际法准则。</td>
+            <td>受制裁国政府将制裁塑造为外部威胁并收紧国内资源配给。</td>
+            <td>当地医院遭遇进口药品短缺与恶性通胀，普通家庭沦为最直接受害者。</td>
+          </tr>
+          <tr>
+            <td>05</td>
+            <td><strong>Development, trade and aid</strong><br>发展、贸易与援助</td>
+            <td>在长期脱贫效果上，直接基础设施投资是否优于紧急人道物资援助？</td>
+            <td>多边发展银行推动长期造血项目与公平贸易准入机制。</td>
+            <td>受援国政府警惕附加政治条款的外援，倾向自主主权基建合作。</td>
+            <td>当地小农户常因免费进口粮食倾销而破产，质疑短期救济破坏本地市场。</td>
+          </tr>
+          <tr>
+            <td>06</td>
+            <td><strong>Digital world</strong><br>数字世界</td>
+            <td>政府应强制实施青少年社交媒体年龄验证，还是优先推进校园数字素养教育？</td>
+            <td>跨国科技平台推崇无国界数据互联与算法自由创新效率。</td>
+            <td>立法机构必须在保护未成年人心理健康与兼顾数字经济活力间取舍。</td>
+            <td>偏远乡村缺乏宽带设备（接入鸿沟），而城市家长焦虑算法成瘾与隐私泄露。</td>
+          </tr>
+          <tr>
+            <td>07</td>
+            <td><strong>Education for all</strong><br>全民教育</td>
+            <td>生成式 AI 辅导工具能否真正缩小城乡教育差距，还是会进一步拉大不平等？</td>
+            <td>UNESCO 视普及优质基础教育为打破跨代贫困的核心人权。</td>
+            <td>教育部在有限财政下难以同时升级农村硬件与高薪留住偏远师资。</td>
+            <td>乡村家庭受限于网费、停电与农忙用工需求，学生即便有账号也难以稳定上线。</td>
+          </tr>
+          <tr>
+            <td>08</td>
+            <td><strong>Employment</strong><br>就业</td>
+            <td>面对自动化与零工经济扩张，全民基本收入 (UBI) 或强力技能再培训哪项更可行？</td>
+            <td>ILO 警告跨境供应链压低劳工保障，呼吁全球最低体面劳动标准。</td>
+            <td>国家担心过度管制零工平台与重税补贴会削弱企业投资竞争力。</td>
+            <td>外卖骑手依赖弹性接单维持月薪，却面对无医保与算法罚单的日常困境。</td>
+          </tr>
+          <tr>
+            <td>09</td>
+            <td><strong>Environment, pollution and conservation</strong><br>环境、污染与生态保护</td>
+            <td>沿海地区应划定严厉海洋禁渔保护区，还是补贴低影响传统渔业实现折中转型？</td>
+            <td>国际生物多样性公约推动 2030 年保护 30% 海洋生态恢复鱼群。</td>
+            <td>渔业部门兼顾水产出口创汇与远洋生态执法巡逻的高昂成本。</td>
+            <td>世居小渔村面临生计断流与补偿不到位危机，校园则聚焦一次性塑料减量。</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td><strong>Globalisation</strong><br>全球化</td>
+            <td>跨国制造业外包究竟提升了新兴经济体工资，还是加剧了“逐底竞争”？</td>
+            <td>WTO 框架依托比较优势压低消费品价格并促进跨境资本流动。</td>
+            <td>发达国家面对本土产业空心化焦虑，新兴国则争抢外资建厂红利。</td>
+            <td>工业小镇居民一边享受就业机会，一边承受河水污染与高强度加班压力。</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td><strong>Health and wellbeing</strong><br>健康与福祉</td>
+            <td>遏制青少年肥胖与超加工食品危害，应征收糖税还是彻底改革校园供餐标准？</td>
+            <td>WHO 倡导公共卫生优先于商业游说，主张高糖高脂产品警示标签。</td>
+            <td>财政部门权衡食品制造业税收、就业岗位与长期医保支出攀升压力。</td>
+            <td>低收入社区缺乏平价生鲜超市（食物荒漠），校园食堂依赖高利润瓶装饮料创收。</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td><strong>Law and criminality</strong><br>法律与犯罪</td>
+            <td>面对青少年初犯，修复性司法与社区矫治是否比强制最低刑期更能降低再犯率？</td>
+            <td>联合国少年司法准则强调教育重塑与减少监禁带来的标签化效应。</td>
+            <td>司法预算紧缺使得狱政扩建与社区社工跟踪长期存在资源竞争。</td>
+            <td>经历偷盗的社区商户出于安全焦虑呼吁重判威慑，社工却指出贫困家庭诱因。</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td><strong>Media and communication</strong><br>媒体与传播</td>
+            <td>社交媒体平台应对算法放大选举虚假信息负直接法律责任吗？</td>
+            <td>跨国信息战无视国界，国际学界讨论平台算法透明度强制审计。</td>
+            <td>政府需严防假借“打击谣言”为由实施过度审查并挤压公民独立新闻空间。</td>
+            <td>地方传统纸媒倒闭使基层社区失去核实市政新闻的本地记者，谣言在群聊滋生。</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td><strong>Migration and urbanisation</strong><br>移民与城市化</td>
+            <td>高技能医护与工程人才跨国流失，给母国带来“人才枯竭”还是“侨汇反哺”？</td>
+            <td>老龄化发达国家通过快速签证吸收全球护理与 STEM 人才填补缺口。</td>
+            <td>输出国财政出资培养了大学毕业生，却无法提供匹配国际水平的薪资留人。</td>
+            <td>输出国乡村诊所遭遇医生荒，特大城市城中村外来务工者则面对高房租与户籍壁垒。</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td><strong>Political power and action</strong><br>政治权力与公民行动</td>
+            <td>将法定投票年龄降至 16 岁或实行强制投票，能否真正解决青年政治冷漠？</td>
+            <td>民主治理研究关注低青年投票率如何削弱长期代际政策合法性。</td>
+            <td>执政体系在扩大选民基数与担忧年轻群体易受民粹短视频操纵间拉锯。</td>
+            <td>高中生质疑“如果市政厅从不回应校园安全提案，投一张选票又有何意义”。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>8.1.2 Component 1 (70 分 / 85 分钟) 考场驾驶舱与 15 议题全科连通网</h4>
+
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 315" width="740" height="315" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Component 1 70分 85分钟 Q1到Q4 得分与用时驾驶舱图">
+        <rect x="12" y="10" width="716" height="295" rx="10" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="370" y="34" text-anchor="middle" font-size="14" font-weight="800" fill="var(--svg-ink)">Component 1 (70 分 / 85 分钟) Q1–Q4 得分-用时驾驶舱</text>
+        <text x="370" y="52" text-anchor="middle" font-size="11.2" fill="var(--svg-muted)">铁律：阅读 7m + Q1 (13m) + Q2 (18m) + Q3 (20m) + Q4 (22m) + 终查 5m = 85 分钟硬封顶</text>
+
+        <!-- Proportional timeline bar across 85 min: x=26 to x=714 (width=688px -> ~8.09px/min, using clean gaps) -->
+        <!-- Read: 7m -> 54px (x=26..80) -->
+        <rect x="26" y="70" width="54" height="58" rx="5" fill="rgba(100, 116, 139, 0.16)" stroke="var(--svg-muted)" stroke-width="1.5" />
+        <text x="53" y="92" text-anchor="middle" font-size="10.5" font-weight="800" fill="var(--svg-ink)">精读</text>
+        <text x="53" y="107" text-anchor="middle" font-size="9.5" fill="var(--svg-ink)">7 min</text>
+        <text x="53" y="120" text-anchor="middle" font-size="8.8" fill="var(--svg-muted)">划RAVEN</text>
+
+        <!-- Q1: 13m / 14 marks -> 102px (x=84..186) -->
+        <rect x="84" y="70" width="102" height="58" rx="5" fill="rgba(2, 132, 199, 0.16)" stroke="var(--svg-blue)" stroke-width="1.6" />
+        <text x="135" y="91" text-anchor="middle" font-size="11" font-weight="800" fill="var(--svg-blue)">Q1 · 14 分</text>
+        <text x="135" y="106" text-anchor="middle" font-size="9.8" fill="var(--svg-ink)">13 min (20%)</text>
+        <text x="135" y="120" text-anchor="middle" font-size="9" fill="var(--svg-muted)">事实/预测/因果</text>
+
+        <!-- Q2: 18m / 16 marks -> 142px (x=190..332) -->
+        <rect x="190" y="70" width="142" height="58" rx="5" fill="rgba(13, 148, 136, 0.16)" stroke="var(--svg-teal)" stroke-width="1.6" />
+        <text x="261" y="91" text-anchor="middle" font-size="11" font-weight="800" fill="var(--svg-teal)">Q2A + Q2B · 16 分</text>
+        <text x="261" y="106" text-anchor="middle" font-size="9.8" fill="var(--svg-ink)">18 min (9m+9m)</text>
+        <text x="261" y="120" text-anchor="middle" font-size="9" fill="var(--svg-muted)">RAVEN + 4要素设计</text>
+
+        <!-- Q3: 20m / 16 marks -> 158px (x=336..494) -->
+        <rect x="336" y="70" width="158" height="58" rx="5" fill="rgba(124, 58, 237, 0.16)" stroke="var(--svg-purple)" stroke-width="1.6" />
+        <text x="415" y="91" text-anchor="middle" font-size="11" font-weight="800" fill="var(--svg-purple)">Q3 对比论证 · 16 分</text>
+        <text x="415" y="106" text-anchor="middle" font-size="9.8" fill="var(--svg-ink)">20 min (23%)</text>
+        <text x="415" y="120" text-anchor="middle" font-size="9" fill="var(--svg-muted)">逐维对比+谁更强</text>
+
+        <!-- Q4: 22m / 24 marks -> 174px (x=498..672) -->
+        <rect x="498" y="70" width="174" height="58" rx="5" fill="rgba(190, 18, 60, 0.16)" stroke="var(--svg-red)" stroke-width="1.6" />
+        <text x="585" y="91" text-anchor="middle" font-size="11.2" font-weight="800" fill="var(--svg-red)">Q4 压轴决策 · 24 分!</text>
+        <text x="585" y="106" text-anchor="middle" font-size="9.8" fill="var(--svg-ink)">22 min (34.3% 分值!)</text>
+        <text x="585" y="120" text-anchor="middle" font-size="9" fill="var(--svg-muted)">选优+淘汰另2项+缓释</text>
+
+        <!-- Check: 5m -> 38px (x=676..714) -->
+        <rect x="676" y="70" width="38" height="58" rx="5" fill="rgba(22, 163, 74, 0.18)" stroke="var(--svg-green)" stroke-width="1.6" />
+        <text x="695" y="94" text-anchor="middle" font-size="10" font-weight="800" fill="var(--svg-green)">5m</text>
+        <text x="695" y="111" text-anchor="middle" font-size="9" font-weight="700" fill="var(--svg-green)">复查</text>
+
+        <!-- Bottom Strategic Panels -->
+        <rect x="26" y="144" width="336" height="146" rx="8" fill="rgba(37, 99, 235, 0.06)" stroke="var(--svg-blue)" stroke-width="1.4" />
+        <text x="194" y="166" text-anchor="middle" font-size="11.8" font-weight="800" fill="var(--svg-blue)">前 38 分钟：稳拿 Q1 + Q2 基础盘 (30/70 分)</text>
+        <text x="38" y="188" font-size="10.2" fill="var(--svg-ink)">• 7m 读 Booklet：直接用红笔圈出数据日期、资助方与情绪词</text>
+        <text x="38" y="208" font-size="10.2" fill="var(--svg-ink)">• Q1 (14分)：预测盯 will/by 2030，价值判断盯 should/right</text>
+        <text x="38" y="228" font-size="10.2" fill="var(--svg-ink)">• Q2A (8分)：必须双向评估（既写博士权威/样本，又写商业利益）</text>
+        <text x="38" y="248" font-size="10.2" fill="var(--svg-ink)">• Q2B (8分)：工具 + 分层抽样 + 对照指标 + 1 条研究局限</text>
+        <text x="38" y="272" font-size="10" font-weight="700" fill="var(--svg-red)">⚠️ 红线：第 38 分钟必须无条件切入 Q3，绝不恋战 Q1/Q2！</text>
+
+        <rect x="378" y="144" width="336" height="146" rx="8" fill="rgba(190, 18, 60, 0.06)" stroke="var(--svg-red)" stroke-width="1.4" />
+        <text x="546" y="166" text-anchor="middle" font-size="11.8" font-weight="800" fill="var(--svg-red)">后 42+5 分钟：决胜 Q3 + Q4 占全卷 57% (40/70 分)</text>
+        <text x="390" y="188" font-size="10.2" fill="var(--svg-ink)">• Q3 (16分)：禁写“先写完 A 再写 B”，每段用 Whereas 对比一维</text>
+        <text x="390" y="208" font-size="10.2" fill="var(--svg-ink)">• Q3 破局：揭露隐藏前提 (unstated assumption) 与商业偏见</text>
+        <text x="390" y="228" font-size="10.2" fill="var(--svg-ink)">• Q4 (24分)：用规模/成本/时效/公平四尺打败另两项方案</text>
+        <text x="390" y="248" font-size="10.2" fill="var(--svg-ink)">• Q4 封顶：坦承首选方案 1 项短期弱点并提出分阶段缓释办法</text>
+        <text x="390" y="272" font-size="10" font-weight="700" fill="var(--svg-green)">✅ 终极 5m：核查 Q3 给出明确裁决、Q4 写齐全部三个选项</text>
+      </svg>
+      <div class="svg-caption">图 8.1 · Component 1 (70 分 / 85 分钟) Q1–Q4 得分-用时驾驶舱与提分铁律</div>
+    </div>
+
+    <div class="svg-figure">
+      <svg viewBox="0 0 740 310" width="740" height="310" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="15 大全球议题横跨 Exam IR TP 三视角连通网图">
+        <rect x="12" y="10" width="716" height="290" rx="10" fill="none" stroke="var(--svg-grid)" stroke-width="1.5" />
+        <text x="370" y="34" text-anchor="middle" font-size="14" font-weight="800" fill="var(--svg-ink)">2025–2027 考纲 15 大全球议题 × 三大组件 × 三层级视角连通网</text>
+        <text x="370" y="52" text-anchor="middle" font-size="11" fill="var(--svg-muted)">同一个核心议题（如 Digital world）同时驱动 Exam 答题、IR 研究与 TP 本土行动</text>
+
+        <!-- Left Column: 4 Topic Clusters (x=18..214) -->
+        <rect x="18" y="72" width="196" height="46" rx="6" fill="rgba(2, 132, 199, 0.14)" stroke="var(--svg-blue)" stroke-width="1.4" />
+        <text x="116" y="91" text-anchor="middle" font-size="10.4" font-weight="800" fill="var(--svg-blue)">地球与生态 (Topics 03, 09)</text>
+        <text x="116" y="107" text-anchor="middle" font-size="9.0" fill="var(--svg-ink)">Climate/Energy · Environment</text>
+
+        <rect x="18" y="126" width="196" height="46" rx="6" fill="rgba(124, 58, 237, 0.14)" stroke="var(--svg-purple)" stroke-width="1.4" />
+        <text x="116" y="145" text-anchor="middle" font-size="10.2" font-weight="800" fill="var(--svg-purple)">数字与科教健康 (06, 07, 11, 13)</text>
+        <text x="116" y="161" text-anchor="middle" font-size="9.0" fill="var(--svg-ink)">Digital · Education · Health · Media</text>
+
+        <rect x="18" y="180" width="196" height="46" rx="6" fill="rgba(13, 148, 136, 0.14)" stroke="var(--svg-teal)" stroke-width="1.4" />
+        <text x="116" y="199" text-anchor="middle" font-size="10.2" font-weight="800" fill="var(--svg-teal)">经济、发展与劳动 (05, 08, 10)</text>
+        <text x="116" y="215" text-anchor="middle" font-size="8.8" fill="var(--svg-ink)">Trade/Aid · Employment · Globalisation</text>
+
+        <rect x="18" y="234" width="196" height="50" rx="6" fill="rgba(217, 119, 6, 0.14)" stroke="var(--svg-amber)" stroke-width="1.4" />
+        <text x="116" y="253" text-anchor="middle" font-size="10.0" font-weight="800" fill="var(--svg-amber)">社会治理与和平 (01,02,04,12,14,15)</text>
+        <text x="116" y="269" text-anchor="middle" font-size="7.9" fill="var(--svg-ink)">Arts·Culture·Conflict·Law·Migration·Power</text>
+
+        <!-- Connectors Left -> Center -->
+        <line x1="214" y1="95" x2="270" y2="160" stroke="var(--svg-blue)" stroke-width="1.6" />
+        <line x1="214" y1="149" x2="270" y2="170" stroke="var(--svg-purple)" stroke-width="1.8" />
+        <line x1="214" y1="203" x2="270" y2="184" stroke="var(--svg-teal)" stroke-width="1.6" />
+        <line x1="214" y1="259" x2="270" y2="196" stroke="var(--svg-amber)" stroke-width="1.6" />
+
+        <!-- Center Hub: 3 Perspective Layers (x=270..456) -->
+        <rect x="270" y="76" width="186" height="206" rx="10" fill="rgba(15, 23, 42, 0.05)" stroke="var(--svg-ink)" stroke-width="1.8" />
+        <text x="363" y="98" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-ink)">三层级因果视角引擎</text>
+
+        <rect x="284" y="109" width="158" height="44" rx="6" fill="#0369A1" />
+        <text x="363" y="128" text-anchor="middle" font-size="11" font-weight="800" fill="#FFFFFF">🌍 Global 全球视角</text>
+        <text x="363" y="144" text-anchor="middle" font-size="9.5" fill="#E0F2FE">UN/WHO/跨国准则与系统规律</text>
+
+        <line x1="363" y1="153" x2="363" y2="164" stroke="var(--svg-ink)" stroke-width="2" />
+
+        <rect x="284" y="164" width="158" height="44" rx="6" fill="#0F766E" />
+        <text x="363" y="183" text-anchor="middle" font-size="11" font-weight="800" fill="#FFFFFF">🏛️ National 国家视角</text>
+        <text x="363" y="199" text-anchor="middle" font-size="9.5" fill="#CCFBF1">财政预算/税制/行业法规权衡</text>
+
+        <line x1="363" y1="208" x2="363" y2="219" stroke="var(--svg-ink)" stroke-width="2" />
+
+        <rect x="284" y="219" width="158" height="44" rx="6" fill="#7C3AED" />
+        <text x="363" y="238" text-anchor="middle" font-size="11" font-weight="800" fill="#FFFFFF">🏘️ Local 本土/社区视角</text>
+        <text x="363" y="254" text-anchor="middle" font-size="9.5" fill="#EDE9FE">校园/农户/家庭日常痛点冲突</text>
+
+        <!-- Connectors Center -> Right -->
+        <line x1="456" y1="131" x2="514" y2="106" stroke="var(--svg-blue)" stroke-width="1.8" />
+        <line x1="456" y1="186" x2="514" y2="179" stroke="var(--svg-teal)" stroke-width="1.8" />
+        <line x1="456" y1="241" x2="514" y2="252" stroke="var(--svg-red)" stroke-width="1.8" />
+
+        <!-- Right Column: 3 Components (x=514..712) -->
+        <rect x="514" y="74" width="198" height="64" rx="8" fill="rgba(37, 99, 235, 0.12)" stroke="var(--svg-blue)" stroke-width="1.6" />
+        <text x="613" y="96" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-blue)">C1 Written Exam (35%)</text>
+        <text x="613" y="114" text-anchor="middle" font-size="9.8" fill="var(--svg-ink)">70 分 · 85 分钟闭卷评估</text>
+        <text x="613" y="129" text-anchor="middle" font-size="9.2" fill="var(--svg-muted)">考跨视角因果、来源批判与决策</text>
+
+        <rect x="514" y="147" width="198" height="64" rx="8" fill="rgba(15, 118, 110, 0.12)" stroke="var(--svg-teal)" stroke-width="1.6" />
+        <text x="613" y="169" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-teal)">C2 Individual Report (30%)</text>
+        <text x="613" y="187" text-anchor="middle" font-size="9.8" fill="var(--svg-ink)">60 分 · 1,500–2,000 词独立研究</text>
+        <text x="613" y="202" text-anchor="middle" font-size="9.2" fill="var(--svg-muted)">全球 vs 国家/本土深层价值观对撞</text>
+
+        <rect x="514" y="220" width="198" height="64" rx="8" fill="rgba(190, 18, 60, 0.12)" stroke="var(--svg-red)" stroke-width="1.6" />
+        <text x="613" y="242" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--svg-red)">C3 Team Project (35%)</text>
+        <text x="613" y="260" text-anchor="middle" font-size="9.8" fill="var(--svg-ink)">70 分 (团队25 + 个人反思45)</text>
+        <text x="613" y="275" text-anchor="middle" font-size="9.2" fill="var(--svg-muted)">切入本土痛点行动+前后量化复盘</text>
+      </svg>
+      <div class="svg-caption">图 8.2 · 15 大全球议题横跨 Component 1 + IR + TP 与 Global/National/Local 三视角连通网络</div>
+    </div>
+  </div>
+
+  <div class="lab-box" data-lab-type="g08"></div>
+</article>
+
+<article class="topic-section practice-section" id="sec-sme">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>8.2 Component 1 (70 分 · 85 分钟) 全真原创模拟卷：Global Digital Divide &amp; Rural Connectivity</h3>
+      <div class="section-en-sub">Full 70-Mark Mock Paper (4 Sources + Q1–Q4) + 6 Interactive Self-Checks + 4 Level 4 Model Mark Schemes</div>
+      <div class="tier-row">
+        <span class="badge-c1">Topics 06 Digital world &amp; 07 Education for all</span>
+        <span class="badge-cw">请先启动上方 85 分钟计时器闭卷演练</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="sec-sme">○ 标记掌握</button>
+  </div>
+
+  <div class="subtopic">
+    <h4>📄 Source Booklet (共 4 则材料 · 建议精读标记时间：7 分钟)</h4>
+
+    <div class="source-box">
+      <div class="reading-title">Source 1 — Global Connectivity Monitor (GCM), Annual Digital Equity Report 2025</div>
+      <p style="margin-bottom: 8px;">
+        <span class="para-tag">International Briefing</span> According to data published in January 2025, 67% of the global population now uses the internet regularly, yet penetration falls to just 29% across rural districts in low-income nations. Within secondary education, 84% of urban schools report reliable high-speed broadband, compared with only 31% of schools in remote agricultural provinces. Between 2020 and 2025, average mobile data tariffs declined by 18% worldwide; nevertheless, low-income rural households still spend up to 9.4% of monthly income on a basic 2 GB mobile plan—nearly five times above the United Nations affordability benchmark of 2%.
+      </p>
+      <p style="margin-bottom: 0;">
+        GCM researchers warn that by 2030, cloud-based examination platforms and artificial intelligence tutoring tools will widen academic achievement gaps between connected and disconnected regions by at least 25% unless rural bandwidth expands rapidly. Universal digital access should be treated as a fundamental human right rather than a commercial luxury. <em>[Methodological Note: Figures are compiled from self-reported national telecom audits across 42 participating countries and exclude off-grid nomadic settlements.]</em>
+      </p>
+    </div>
+
+    <div class="source-box">
+      <div class="reading-title">Source 2 — Field Interview Excerpts: Voices from a Remote Mountain District, Northern Province (2025)</div>
+      <p style="margin-bottom: 8px;">
+        <span class="para-tag">Teacher · Ms Lin Mei</span> <em>(Science teacher for 14 years at a 280-pupil rural boarding school)</em>: “People in cities think uploading online assignments solves everything, yet many of my pupils walk three kilometres uphill after sunset just to catch a faint 3G signal. Half our families share one ageing feature phone among four relatives, and our grid electricity cuts out three or four evenings every week. Last year a charity donated twenty laptops, but within eight months nine screens cracked or batteries failed with no technician within eighty kilometres to repair them.”
+      </p>
+      <p style="margin-bottom: 0;">
+        <span class="para-tag">Student · Karan, aged 16</span> <em>(Lives in a farming village 18 km from town)</em>: “During harvest months I help my parents until dusk, so I cannot join afternoon live video lessons. An offline revision tablet charged by a small solar panel would help me study past papers at night without wasting money on mobile data. Still, I worry that pre-loaded quizzes cannot answer my chemistry questions when I get stuck.”
+      </p>
+    </div>
+
+    <div class="source-box">
+      <div class="reading-title">Source 3 — Corporate White Paper: AeroBeam Satellites Inc., “SkyLink Education Initiative”, March 2025</div>
+      <p style="margin-bottom: 8px;">
+        <span class="para-tag">Written by Dr Marcus Vance</span> <em>(PhD in Telecommunications Engineering; Vice President of Public Partnerships at AeroBeam Satellites Inc.)</em>: “Satellite broadband is the only rapid, future-proof cure for rural educational inequality. Unlike slow fibre cables that take a decade to lay across mountain ridges, our low-Earth-orbit classroom dish installs in two hours. During our six-month pilot across 12 selected rural schools, average weekly online quiz completion jumped by 38%, proving that high-speed connectivity immediately transforms student outcomes.”
+      </p>
+      <p style="margin-bottom: 0;">
+        “Under our SkyLink Education partnership, regional ministries receive a 40% introductory discount on satellite hardware terminals for Year 1, allowing budgets to deliver instant digital equity. Waiting for local library buildings is outdated bureaucracy when space-based internet already brings world-class teachers into every classroom.” <em>[Footnote: Standard commercial subscription tariffs apply from Year 2 onward; the 12 pilot schools were chosen for having paved road access and backup diesel generators.]</em>
+      </p>
+    </div>
+
+    <div class="source-box">
+      <div class="reading-title">Source 4 — Policy Forum Debate: How Should Governments Narrow the Rural Digital Divide?</div>
+      <p style="margin-bottom: 8px;">
+        <span class="para-tag">Writer A · Prof. Amara Okafor</span> <em>(Director of Public Infrastructure Policy, Independent Education Research Institute)</em>: “Rather than locking school budgets into costly recurring satellite contracts or handing out fragile personal gadgets, regional authorities should invest in solar-powered Community Digital Hubs inside rural towns and central schools. A 2024 OECD/UNESCO comparative audit of 90 rural districts found that shared community centres lowered five-year per-pupil operating costs by 52% and kept 78% of desktop equipment functional after four years—compared with only 34% survival for individual tablet giveaways. Crucially, staffed hubs provide trained local facilitators who maintain hardware and guide pupils through difficult concepts. Admittedly, students living in distant hamlets face travel barriers after school hours; however, pairing hubs with staggered weekend shuttle routes and extended evening lighting resolves access equitably without draining public budgets.”
+      </p>
+      <p style="margin-bottom: 0;">
+        <span class="para-tag">Writer B · Elena Rostova</span> <em>(Founder of ‘ConnectEveryChild’ Advocacy Group &amp; Former EdTech Marketing Director)</em>: “Waiting years for government committees to construct concrete hubs is a moral betrayal of an entire rural generation! Last summer I visited a mountain village where three children literally cried with joy when handed solar-charged tablets pre-loaded with offline maths games—nothing beats owning your own personal screen. Everyone knows individual devices triple test scores overnight because pupils learn independently at their own pace from home. Public computer rooms inevitably turn into locked, dusty closets managed by indifferent officials. Governments should immediately distribute low-cost offline tablets to every rural pupil or pay satellite firms to wire remote rooftops without delay.”
+      </p>
+    </div>
+  </div>
+
+  <div class="subtopic">
+    <h4>📝 完整 70 分试卷试题 (Question 1 – Question 4 · 总分 70 分)</h4>
+    <div class="table-wrap">
+      <table class="gp-table">
+        <thead>
+          <tr>
+            <th>题号</th>
+            <th>分值</th>
+            <th>全真模拟题目（严格按 Cambridge 0457 设问风格命制）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Q1(a)</strong></td>
+            <td>2 marks</td>
+            <td>From <strong>Source 1</strong>, identify <strong>two</strong> statistical facts showing the gap in digital access between urban/global averages and rural/low-income regions.</td>
+          </tr>
+          <tr>
+            <td><strong>Q1(b)</strong></td>
+            <td>4 marks</td>
+            <td>From <strong>Source 1</strong>, identify <strong>one prediction</strong> and <strong>one value judgement</strong>. Explain briefly why each statement belongs to that category.</td>
+          </tr>
+          <tr>
+            <td><strong>Q1(c)</strong></td>
+            <td>4 marks</td>
+            <td>Using <strong>Source 2</strong>, explain <strong>two</strong> practical barriers preventing rural pupils from relying on online lessons, and evaluate <strong>one strength and one limitation</strong> of Source 2 as evidence.</td>
+          </tr>
+          <tr>
+            <td><strong>Q1(d)</strong></td>
+            <td>4 marks</td>
+            <td>Using <strong>Sources 1 and 2</strong>, explain how economic and infrastructural factors reinforce educational inequality across local and global scales.</td>
+          </tr>
+          <tr>
+            <td><strong>Q2(a)</strong></td>
+            <td>8 marks</td>
+            <td>Evaluate the <strong>strengths and weaknesses</strong> of <strong>Source 3</strong> (AeroBeam Satellites Inc. white paper) as evidence about how to solve the rural digital divide.</td>
+          </tr>
+          <tr>
+            <td><strong>Q2(b)</strong></td>
+            <td>8 marks</td>
+            <td>A regional education ministry wants to test the claim in Source 3 that <em>“high-speed satellite broadband improves rural exam performance more effectively than offline resources.”</em> Design a <strong>research plan</strong> to test this claim, explaining your methods, sampling, comparison measures, and one limitation of your plan.</td>
+          </tr>
+          <tr>
+            <td><strong>Q3</strong></td>
+            <td>16 marks</td>
+            <td>Compare the arguments of <strong>Professor Amara Okafor (Writer A)</strong> and <strong>Elena Rostova (Writer B)</strong> in <strong>Source 4</strong>. Which argument is <strong>more convincing</strong>? Explain your answer by considering both arguments and using examples from Source 4.</td>
+          </tr>
+          <tr>
+            <td><strong>Q4</strong></td>
+            <td>24 marks</td>
+            <td>A regional government can fund one primary five-year strategy to narrow the rural educational digital divide:<br>
+              • <strong>Option 1:</strong> Subsidise private commercial satellite internet contracts for rural schools.<br>
+              • <strong>Option 2:</strong> Build solar-powered public Community Digital Hubs with trained staff.<br>
+              • <strong>Option 3:</strong> Distribute low-cost solar tablets pre-loaded with offline curricula to every rural student.<br>
+              Which course of action would you recommend? Explain your choice by comparing all three options and using evidence from the sources.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="practice-block">
+    <div class="practice-heading">🎯 第一部分：全真卷核心判分点互动自测 (6 小题 · 先自测再看解析)</div>
+
+    <div class="exam-q" data-mcq-answer="D">
+      <div class="exam-q-head"><span class="q-tag">模拟卷自测 1 · Q1(b) 概念精准识别</span><span class="q-marks">1 mark</span></div>
+      <div class="q-stem-en">Which sentence from Source 1 is a <strong>Value Judgement</strong> rather than a Fact or Prediction?</div>
+      <div class="q-stem-cn">从 Source 1 中选出属于“价值判断 (Value Judgement)”的一句陈述：</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>“67% of the global population now uses the internet regularly.”</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>“Low-income rural households still spend up to 9.4% of monthly income on a 2 GB plan.”</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>“By 2030, cloud-based learning platforms will widen academic achievement gaps by at least 25%.”</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>“Universal digital access should be treated as a fundamental human right rather than a commercial luxury.”</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确 (D)！出现典型道德准则标志词 should be treated as a fundamental human right，反映社会伦理优先级，无法通过单一统计证实或证伪。" data-err="❌ A、B 为可核验的统计 Fact；C 含未来时间状语 By 2030 + will，属于 Prediction；只有 D 含道德义务词 should 与人权伦理取舍。" ></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head"><span class="q-tag">模拟卷自测 2 · Source 1 数据方法缺陷</span><span class="q-marks">1 mark</span></div>
+      <div class="q-stem-en">Why must an examiner or researcher treat Source 1’s statistics cautiously despite its institutional authority?</div>
+      <div class="q-stem-cn">尽管 Source 1 来自国际组织报告，作答来源评估时为何仍需提醒注意其方法学局限？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>数据年代过于久远，来自十年前的旧统计。</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>仅涵盖 42 国且依赖各电信部门自报数据（易美化），并排除了最边缘的无电网游牧群落，可能低估实际数字鸿沟。</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>文章作者是卫星公司高管，具有严重商业推销私利。</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>报告里没有任何百分比数字，纯属个人回忆轶事。</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确 (B)！材料末尾括号注释清晰提示两大漏洞：self-reported（可能报喜不报忧）+ 排除 off-grid nomadic settlements（导致边缘缺口被系统性低估）。" data-err="❌ 报告写明是 2025 年 1 月最新数据（排除 A）且含大量百分比（排除 D）；卫星公司高管是 Source 3（排除 C）。" ></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="A">
+      <div class="exam-q-head"><span class="q-tag">模拟卷自测 3 · Q2(a) Source 3 核心漏洞诊断</span><span class="q-marks">1 mark</span></div>
+      <div class="q-stem-en">Which pair of critical weaknesses most severely undermines the reliability of Source 3 (AeroBeam Satellites Inc.)?</div>
+      <div class="q-stem-cn">在评估 Source 3 可信度时，哪一组弱点搭配最致命且直击材料脚注伏笔？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>强烈商业既得利益（第 2 年起恢复高额商业订阅费）+ 仅挑选 12 所已有柏油路与柴油发电机的“挑拣样本”。</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>作者缺乏工程学历背景，完全不懂卫星通信技术原理。</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>材料发布时间过早，未包含 2025 年任何试点数据。</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>文章承认了所有农村基建困难，态度过于悲观消极。</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确 (A)！同时踩中 Vested Interest（卖终端赚第 2 年长期续费）与 Cherry-picked unrepresentative sample（只挑有电有路的 12 所试点校却推广到全农村，且只测了测验完成率而非期末大考成绩）！" data-err="❌ Dr Vance 拥有电信工程博士学位（B 错）且报告写于 2025 年 3 月（C 错），这恰恰是 Q2A 应当在“优点”里写出的双向平衡点！" ></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="C">
+      <div class="exam-q-head"><span class="q-tag">模拟卷自测 4 · Q2(b) Level 4 研究设计判断</span><span class="q-marks">1 mark</span></div>
+      <div class="q-stem-en">Which student proposal for Question 2(b) would achieve Level 4 (7–8/8 marks) in testing Source 3’s claim?</div>
+      <div class="q-stem-cn">以下哪位考生针对 Q2(b)“检验卫星网络是否比离线资源更有效提分”的方案能稳拿 7–8/8 分？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>“我会去问 20 个农村学生和家长喜不喜欢高速卫星上网，再查一查卫星公司官网的宣传视频。”</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>“给一所农村学校装上卫星，一年后看看大家有没有全部考上好大学。”</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>“开展一学年随机对照田野实验：在电网与基线成绩相近的 20 所农村校中，10 所配卫星、10 所配离线太阳能源板，比较前测与统考成绩增幅并辅以师生半结构访谈，同时指出农忙缺勤或师资差异等混杂限制。”</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>“我认为卫星一定比离线好，因为在线课程有视频动画更生动，所以我只需采访支持卫星的校长。”</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确 (C)！完美具备 Q2B 四要素：① 对照组实验+访谈三角验证；② 分层/匹配抽样 20 所校；③ 明确前测后测学业成绩对比指标；④ 主动反思混杂变量与社会期许/季节农忙局限。" data-err="❌ A 样本太小且受主观偏好误导；B 没有离线资源对照组，无法验证“more effectively than offline”；D 犯了证实偏误与预设立场。" ></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="D">
+      <div class="exam-q-head"><span class="q-tag">模拟卷自测 5 · Q3 双源对比论证核心</span><span class="q-marks">1 mark</span></div>
+      <div class="q-stem-en">Which analytical point best explains why Professor Okafor’s argument (Writer A) is more convincing than Elena Rostova’s (Writer B) in Source 4?</div>
+      <div class="q-stem-cn">在 Q3 对比 Source 4 两位作者时，哪一项批判最精准切中“论证机制优劣”？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>Professor Okafor 是男性或女性教授，而且社区数字中心这个主意比发平板更好。</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>Writer A 写了更多专业词汇，而 Writer B 的段落稍微短了一点。</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>Writer A 毫无任何局限或偏见，完美无缺；Writer B 全篇没有一句话是真的。</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>Writer A 以 90 区的 OECD/UNESCO 跨年对比审计支撑论点、主动承认偏远学生通勤局限并提出周末班车缓解；而 Writer B 依赖情绪化修辞（“moral betrayal”）、孤立轶事（三个孩子哭）以及“孩子拿到离线屏幕无需老师即可自动成绩翻三倍”的未证实假设。</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确 (D)！既比对了实证证据链（90 区长期审计 vs 3 个孩子轶事+无来源“triple test scores overnight”），又对比了平衡度与反驳能力，还挖出了 Writer B 的隐含假设！" data-err="❌ A 是脱离论证质量的个人立场站队；B 是表面字数评判；C 违背 GP 双向平衡原则（A 的方案也面临偏远通勤阻力）。" ></div>
+    </div>
+
+    <div class="exam-q" data-mcq-answer="B">
+      <div class="exam-q-head"><span class="q-tag">模拟卷自测 6 · Q4 24 分最高档决策铁律</span><span class="q-marks">1 mark</span></div>
+      <div class="q-stem-en">If a candidate recommends <strong>Option 2 (Community Digital Hubs)</strong> in Question 4, what is mandatory to break into Level 4/5 (19–24 marks)?</div>
+      <div class="q-stem-cn">若在 Q4 压轴题中推荐 Option 2（兴建公办社区数字中心），想突破 19–24 分必须同时做到哪一步？</div>
+      <div class="mcq-options">
+        <button type="button" class="mcq-opt" data-opt="A"><span><strong>A.</strong></span><span>整篇文章 100% 赞美 Option 2 没有任何缺点，对 Option 1 和 Option 3 只字不提以免跑题。</span></button>
+        <button type="button" class="mcq-opt" data-opt="B"><span><strong>B.</strong></span><span>用成本持久性、师资维护与公平度对比论证为何淘汰 Option 1（第 2 年商业续费无底洞+供电断点）与 Option 3（无教师答疑+34% 损坏率），同时坦承 Option 2 偏远村落通勤障碍并提出周末接驳与分批离线借阅缓解策略。</span></button>
+        <button type="button" class="mcq-opt" data-opt="C"><span><strong>C.</strong></span><span>给出一个完全自创的第四方案“给每个家庭发一部智能手机”，忽略题目提供的三个选项。</span></button>
+        <button type="button" class="mcq-opt" data-opt="D"><span><strong>D.</strong></span><span>把 Source 1–4 从头到尾按顺序摘要一遍，最后写一句“我喜欢 Option 2”。</span></button>
+      </div>
+      <div class="mcq-feedback" data-ok="✅ 正确 (B)！拿满 Q4 24 分必须做到“三选一全面对比淘汰 + 跨源证据调用 + 坦承首选方案弱点并给出可行缓释 (mitigation)”。" data-err="❌ 不对比淘汰另两项，Q4 最高只能卡在 12–14 分中档；脱离题目三选一另起炉灶也会严重扣分。" ></div>
+    </div>
+  </div>
+
+  <div class="practice-block">
+    <div class="practice-heading">🏆 第二部分：全卷 70 分 Level 4 官方标准 Mark Scheme 与高分完整英文范文 (4 个展开面板)</div>
+
+    <details class="ms-details">
+      <summary>1. 展开 Question 1 (14 marks) 完整 Mark Scheme 与逐小题英文满分示范</summary>
+      <div class="ms-body">
+        <p><span class="ms-mark">Q1(a) · 2 marks</span> Award 1 mark per accurate statistic from Source 1 showing access disparity (max 2):</p>
+        <ul>
+          <li>Global internet penetration is 67%, whereas rural districts in low-income nations stand at only 29% (1m).</li>
+          <li>84% of urban secondary schools have reliable broadband compared with 31% in remote agricultural provinces (1m).</li>
+          <li>Low-income rural households spend up to 9.4% of monthly income for 2 GB data vs the UN 2% affordability benchmark (1m).</li>
+        </ul>
+        <p><span class="ms-mark">Q1(b) · 4 marks</span> 1 mark for accurate identification + 1 mark for category explanation (× 2):</p>
+        <ul>
+          <li><strong>Prediction:</strong> <em>“By 2030, cloud-based learning platforms and AI tutoring tools will widen academic achievement gaps... by at least 25%.”</em> (1m) — This makes a projection about a future outcome that has not yet occurred and cannot currently be verified as fact (1m).</li>
+          <li><strong>Value Judgement:</strong> <em>“Universal digital access should be treated as a fundamental human right rather than a commercial luxury.”</em> (1m) — This expresses an ethical/moral stance about what society ought to prioritise (<em>should</em>), grounded in values rather than objective data (1m).</li>
+        </ul>
+        <p><span class="ms-mark">Q1(c) · 4 marks</span> 2 marks for two barriers from Source 2 + 1 mark strength + 1 mark limitation:</p>
+        <ul>
+          <li><strong>Barriers (2m):</strong> (i) Poor connectivity/shared hardware — pupils walk 3 km uphill for weak 3G and share one feature phone among four family members (1m); (ii) Unreliable electricity &amp; zero local maintenance — grid blackouts occur 3–4 evenings weekly and 9 of 20 donated laptops broke within 8 months with no repair technician within 80 km (1m).</li>
+          <li><strong>Strength (1m):</strong> High experiential relevance/authenticity — Ms Lin Mei has 14 years of first-hand rural teaching experience and Karan provides direct student perspective on harvest-time schedule conflicts.</li>
+          <li><strong>Limitation (1m):</strong> Small, non-representative sample — draws on only two voices from a single mountain district, so findings cannot safely be generalised to all rural regions nationally.</li>
+        </ul>
+        <p><span class="ms-mark">Q1(d) · 4 marks</span> Explains multi-step causal chain connecting economic &amp; infrastructural barriers across local/global scales (Level 2 = 3–4m):</p>
+        <p><strong>Model Answer:</strong> Locally, low family incomes mean rural households spend up to 9.4% of monthly earnings on basic mobile data (Source 1) and must share one ageing phone while teens undertake farm labour during harvests (Source 2). Without reliable grid power or repair technicians nearby, even donated laptops quickly fail (Source 2). Globally, as urban and wealthier school systems adopt cloud-based platforms and AI tutors (84% urban broadband vs 31% rural, Source 1), rural pupils fall further behind in examination readiness, limiting higher-education and formal employment prospects and locking disconnected communities into intergenerational economic disadvantage.</p>
+      </div>
+    </details>
+
+    <details class="ms-details">
+      <summary>2. 展开 Question 2A (8 marks) &amp; Question 2B (8 marks) Level 4 Mark Scheme + 英文完整高分范文</summary>
+      <div class="ms-body">
+        <p><span class="ms-mark">Q2(a) Level 4 · 7–8 marks</span> Must evaluate <strong>both strengths and weaknesses</strong> explicitly with specific evidence from Source 3 (RAVEN: Expertise, Recency, Evidence vs Vested Interest, Cherry-picked Sample, Omission, Tone).</p>
+        <p><strong>Q2(a) Model Answer (8/8):</strong><br>
+          Source 3 possesses notable strengths as evidence, yet its reliability is severely compromised by commercial vested interest and selective sampling. On the positive side, the author, Dr Marcus Vance, holds a PhD in Telecommunications Engineering, lending technical expertise regarding satellite installation speed (two hours versus years for mountain fibre). The source is also highly recent (March 2025) and cites a concrete quantitative pilot outcome—a 38% increase in weekly online quiz completion across 12 rural schools—alongside a specific Year 1 40% hardware discount.<br><br>
+          However, major weaknesses undermine its credibility. First, as Vice President of AeroBeam Satellites Inc., Dr Vance has an undeniable commercial vested interest: his firm directly profits from securing multi-year government contracts, and the footnote admits standard commercial subscription fees apply from Year 2 onward, omitting long-term recurring costs. Second, the 12 pilot schools represent a tiny, cherry-picked non-random sample chosen specifically for paved roads and backup diesel generators—conditions absent in truly remote districts like Ms Lin Mei’s (Source 2). Third, measuring “weekly quiz completion” does not prove higher final exam attainment, and his absolutist language (“the only rapid, future-proof cure”, “outdated bureaucracy”) shows clear promotional bias. Overall, Source 3 is partially useful for technical installation claims but weak as neutral policy evidence.</p>
+
+        <hr style="border:none;border-top:1px dashed var(--border-strong);margin:12px 0;">
+
+        <p><span class="ms-mark">Q2(b) Level 4 · 7–8 marks</span> Must specify <strong>research methods (triangulation)</strong>, <strong>sample size/control comparison</strong>, <strong>measurable comparison indicators</strong>, and <strong>methodological limitations</strong>.</p>
+        <p><strong>Q2(b) Model Answer (8/8):</strong><br>
+          To test whether high-speed satellite broadband raises rural exam performance more effectively than offline resources, I would design a one-academic-year comparative quasi-experimental study combining quantitative attainment data with qualitative interviews. First, I would select a stratified sample of 20 rural secondary schools matched by baseline exam scores, household income, and electricity reliability, randomly assigning 10 schools to receive satellite broadband and 10 comparable schools to receive solar-powered tablets pre-loaded with identical offline curriculum materials.<br><br>
+          Second, to isolate academic impact rather than merely quiz clicks, all Year 10–11 pupils (around 1,500 learners) would sit a standardised pre-test in Maths and Science in Week 1 and an externally marked mock examination after 36 weeks, comparing mean percentage-score gains between the two groups. Third, I would conduct semi-structured interviews with 30 teachers and 40 pupils across both arms to examine practical barriers such as power cuts, repair delays, and lack of live feedback.<br><br>
+          Finally, a key limitation of this plan is confounding teacher-quality variation and seasonal harvest absenteeism, which could skew test scores independently of technology; additionally, interviewees might give socially desirable praise if they fear losing free equipment, requiring anonymous survey triangulation.</p>
+      </div>
+    </details>
+
+    <details class="ms-details">
+      <summary>3. 展开 Question 3 (16 marks) Level 4 Mark Scheme + 英文完整逐维对比满分范文</summary>
+      <div class="ms-body">
+        <p><span class="ms-mark">Q3 Level 4 · 13–16 marks</span> Point-by-point comparative evaluation of <strong>both arguments</strong> (evidence quality, reasoning/assumptions, balance/concessions, tone/vested interest) + clear supported judgement on which is more convincing.</p>
+        <p><strong>Q3 Model Essay (16/16):</strong><br>
+          Overall, Professor Amara Okafor’s argument (Writer A) is significantly more convincing than Elena Rostova’s (Writer B) because Okafor substantiates her case with independent longitudinal evidence, anticipates counter-arguments, and maintains an objective tone, whereas Rostova relies on emotive anecdotes, sweeping unverified claims, and unstated assumptions.<br><br>
+          First, in terms of evidence quality and authority, Okafor cites a credible, independent 2024 OECD/UNESCO comparative audit spanning 90 rural districts, providing concrete metrics showing shared digital hubs cut five-year per-pupil costs by 52% and retain 78% equipment functionality versus 34% for individual handouts. In stark contrast, Rostova offers zero verifiable statistical studies. She grounds her position in a single emotionally charged personal anecdote (“three children literally cried with joy”) and an unsubstantiated generalisation (“Everyone knows individual devices triple test scores overnight”), which constitutes an empirical overstatement.<br><br>
+          Second, regarding balance and logical reasoning, Okafor constructs a clear causal link connecting shared hubs with trained facilitators who solve hardware maintenance—a real barrier echoed in Source 2. Crucially, she demonstrates balanced reasoning by explicitly conceding a major drawback—that pupils in distant hamlets face after-school commute barriers—before proposing practical mitigation via weekend shuttles and extended lighting. Conversely, Rostova presents a strictly one-sided dismissal of public centres (“locked, dusty closets”) and relies on the unstated assumption that rural teenagers can master complex curricula autonomously on offline screens without trained instructors or repair support.<br><br>
+          Finally, tone and potential bias sharpen this contrast. Okafor adopts measured academic language appropriate for her independent policy role, whereas Rostova employs alarmist rhetoric (“moral betrayal of an entire generation”) and exhibits potential ideological or commercial bias given her background as a former EdTech marketing director and advocacy founder. Therefore, despite minor logistical hurdles in Okafor’s hub model, her argument is far more rigorously reasoned and persuasive.</p>
+      </div>
+    </details>
+
+    <details class="ms-details">
+      <summary>4. 展开 Question 4 (24 marks) Level 4/5 Mark Scheme + 英文完整四段政策决策满分范文</summary>
+      <div class="ms-body">
+        <p><span class="ms-mark">Q4 Level 4/5 · 19–24 marks</span> Clear recommendation + sustained comparison against <strong>all other options</strong> using multi-dimensional criteria (cost sustainability, longevity/maintenance, equity/access, pedagogical support) + explicit acknowledgement and mitigation of chosen option’s drawbacks + integrated evidence across Sources 1–4.</p>
+        <p><strong>Q4 Model Essay (23–24/24):</strong><br>
+          To narrow the rural educational digital divide over a five-year horizon, the regional government should prioritise <strong>Option 2: building solar-powered public Community Digital Hubs with trained staff</strong>. Evaluating all three strategies across financial sustainability, hardware longevity, and pedagogical equity reveals that Option 2 outperforms both commercial satellite subsidies and mass tablet giveaways, provided its geographical commute limitations are actively mitigated.<br><br>
+          Option 2 offers the strongest long-term value for money and operational durability. As demonstrated in Source 4, the 2024 OECD/UNESCO audit across 90 rural districts shows shared centres reduce five-year per-pupil operating costs by 52% while keeping 78% of equipment functional after four years. Incorporating solar power directly addresses the frequent grid blackouts reported by Ms Lin Mei in Source 2, while employing trained facilitators eliminates the acute maintenance crisis where donated laptops broke within months with no technician for eighty kilometres. Furthermore, staffed centres preserve human instructional guidance, overcoming Karan’s concern (Source 2) that automated tools cannot answer difficult science questions.<br><br>
+          By contrast, Option 1 (subsidising private satellite contracts) is financially unsustainable and narrow in impact. Although Source 3 claims satellite dishes install in two hours and lifted quiz completion by 38%, its Year 1 40% discount conceals steep commercial subscription fees from Year 2 onward, threatening to drain public education budgets indefinitely. Moreover, satellite connections alone fail when households lack reliable electricity or repairable student devices (Source 2). Similarly, Option 3 (distributing pre-loaded solar tablets) offers immediate household portability for harvest-working students like Karan, yet fails on durability and educational depth. Source 4 indicates that individual device giveaways suffer a 66% failure rate within four years (only 34% survival), making nationwide replacement prohibitively expensive, while offline static content still leaves disadvantaged pupils behind as global curricula shift toward interactive assessment (Source 1).<br><br>
+          Admittedly, Option 2 has two notable drawbacks: high upfront capital construction time and travel barriers for pupils in isolated villages like Karan’s (18 km away), particularly during evening hours or harvest peaks. However, the ministry can mitigate both weaknesses by converting existing rural school libraries or town halls into solar hubs immediately rather than constructing new buildings, pairing centres with subsidised weekend bus shuttles, and keeping a small lending pool of offline solar tablets at hubs specifically for remote agricultural seasons. By combining Option 2’s durable infrastructure with targeted Option 3 support, the government delivers equitable, cost-effective progress over five years.</p>
+      </div>
+    </details>
+  </div>
+</article>
+
+<article class="topic-section" id="app-concepts">
+  <div class="section-header">
+    <div class="section-title-group">
+      <h3>8.3 考场应急术语、研究方法与全科终极避坑卡片 (16 张)</h3>
+      <div class="section-en-sub">16 Final Sprint Flashcards: Component 1 Emergency Triggers, Research Methodology &amp; All-Component Traps</div>
+      <div class="tier-row">
+        <span class="badge-c1">考前 24 小时终极扫雷 · 支持遮罩自测</span>
+      </div>
+    </div>
+    <button type="button" class="master-btn" data-section-id="app-concepts">○ 标记掌握</button>
+  </div>
+
+  <div class="concept-toolbar">
+    <div class="concept-filter-group" id="conceptFilterTabs">
+      <button type="button" class="tab-btn active" data-concept-part="all">全部 (16)</button>
+      <button type="button" class="tab-btn" data-concept-part="exam">考场应急与提分口诀 (6)</button>
+      <button type="button" class="tab-btn" data-concept-part="research">研究方法与来源批判词 (5)</button>
+      <button type="button" class="tab-btn" data-concept-part="coursework">IR &amp; TP 全科终极避坑 (5)</button>
+    </div>
+    <div class="concept-actions">
+      <span class="concept-count-pill" id="conceptCountPill">显示 16 / 16 题</span>
+      <button type="button" class="tab-btn" id="conceptQuizToggle">🙈 开启遮罩自测</button>
+    </div>
+  </div>
+
+  <div class="concept-grid" id="conceptGrid">
+    <div class="concept-card" data-part="exam">
+      <div class="cq-head"><span class="q-tag">M01 · 85 分钟硬切线</span><span class="badge-c1">Exam Strategy</span></div>
+      <div class="cq-en">Component 1 只有 85 分钟却要写 Q1–Q4 共 70 分，第 38 分钟必须在哪儿？</div>
+      <div class="cq-cn">全局控时第一铁律</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓口诀</div>
+        <div class="cq-answer-inner">7m 读材料 + 13m Q1 + 18m Q2 = <span class="kw">38 分钟必须收官前 30 分</span>，强行进入占 <span class="kw">40/70 分 (57%)</span> 的 Q3 与 Q4！</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="exam">
+      <div class="cq-head"><span class="q-tag">M02 · Q1 概念零失误</span><span class="badge-c1">Exam Strategy</span></div>
+      <div class="cq-en">一秒区分 Prediction（预测）与 Value Judgement（价值判断）的核心关键词钩子？</div>
+      <div class="cq-cn">Q1 送分防错口诀</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓口诀</div>
+        <div class="cq-answer-inner">Prediction 必指<span class="kw">尚未发生的未来</span>（<em>will / by 2030 / projected to</em>）；Value Judgement 必含<span class="kw">道德应然尺度</span>（<em>should / human right / unfair / moral</em>）。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="exam">
+      <div class="cq-head"><span class="q-tag">M03 · Q2A 双向平衡铁律</span><span class="badge-c1">Exam Strategy</span></div>
+      <div class="cq-en">即使材料明显来自商业公司（如 Source 3 卫星高管），为什么 Q2A 绝对不能只写缺点？</div>
+      <div class="cq-cn">避免非黑即白降档</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓口诀</div>
+        <div class="cq-answer-inner">考题要求评估 <span class="kw">strengths AND weaknesses</span>！必须先肯定其 <span class="kw">PhD expertise / recency / specific pilot figures</span>，再转折剖析商业利益与挑拣样本偏误。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="exam">
+      <div class="cq-head"><span class="q-tag">M04 · Q3 逐维对比不拆段</span><span class="badge-c1">Exam Strategy</span></div>
+      <div class="cq-en">Q3（16 分）从 Level 2/3 (7–10 分) 跃升 Level 4 (13–16 分) 的排版结构密码？</div>
+      <div class="cq-cn">点对点比较架构</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓口诀</div>
+        <div class="cq-answer-inner">严禁先写半页 A 再写半页 B！改为按<span class="kw">证据力度 / 平衡让步 / 语调与隐含前提</span>分段，每段内用 <span class="kw">Whereas / Conversely</span> 同屏拉踩，首尾明断谁更强。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="exam">
+      <div class="cq-head"><span class="q-tag">M05 · Q4 淘汰与缓释闭环</span><span class="badge-c1">Exam Strategy</span></div>
+      <div class="cq-en">Q4（24 分）写了推荐方案的好处后，拿满 Level 5 还要补齐哪两块核心拼图？</div>
+      <div class="cq-cn">最高分值压轴题守则</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓口诀</div>
+        <div class="cq-answer-inner">① 逐一用成本/可行/公平标尺论证<span class="kw">为何淘汰另两个方案</span>；② 坦承所选方案 1–2 项弱点并提出<span class="kw">可落地缓释举措 (mitigation)</span>。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="exam">
+      <div class="cq-head"><span class="q-tag">M06 · 揭穿隐含前提假设</span><span class="badge-c1">Exam Strategy</span></div>
+      <div class="cq-en">Q3 批驳看似有道理的论点时，最犀利的 Level 4 高阶批评句型是什么？</div>
+      <div class="cq-cn">高阶逻辑拆弹</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓口诀</div>
+        <div class="cq-answer-inner"><span class="kw">unstated assumption / oversimplification</span>（如：<em>Rostova rests on the unstated assumption that rural teens can master complex science without teacher support.</em>）</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="research">
+      <div class="cq-head"><span class="q-tag">R01 · 三角验证法</span><span class="badge-cw">Research</span></div>
+      <div class="cq-en">在 Q2(b) 研究设计中，同时结合统考成绩定量数据与师生访谈定性剖析的专业术语？</div>
+      <div class="cq-cn">Mixed-methods 加分核武器</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓术语</div>
+        <div class="cq-answer-inner"><span class="kw">methodological triangulation</span>（三角验证）：用客观考分对比验证“是否提分”，用访谈揭示“为什么有效或受阻”。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="research">
+      <div class="cq-head"><span class="q-tag">R02 · 分层匹配抽样</span><span class="badge-cw">Research</span></div>
+      <div class="cq-en">怎样避免像 Source 3 那样只挑有供电的学校导致样本偏差，用英文表达科学抽样法？</div>
+      <div class="cq-cn">Q2(b) 样本代表性防坑</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓术语</div>
+        <div class="cq-answer-inner"><span class="kw">stratified random sampling / matched control group</span>（按基线成绩、电网条件与收入分层后随机分组对照，严防 cherry-picking）。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="research">
+      <div class="cq-head"><span class="q-tag">R03 · 社会期许偏误</span><span class="badge-cw">Research</span></div>
+      <div class="cq-en">为什么受助学校校长接受采访时往往只说免费设备好话？Q2(b) 局限分析怎么命名？</div>
+      <div class="cq-cn">访谈类常见方法局限</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓术语</div>
+        <div class="cq-answer-inner"><span class="kw">social desirability bias / observer effect</span>（受访者为保住资助或迎合研究者而掩饰真实故障，需匿名问卷核对）。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="research">
+      <div class="cq-head"><span class="q-tag">R04 · 混杂变量干扰</span><span class="badge-cw">Research</span></div>
+      <div class="cq-en">如果通网学校成绩提高其实是因为刚好新调来优秀教师或农忙未停课，这种干扰叫什么？</div>
+      <div class="cq-cn">Q2(a)/Q2(b) 因果质疑利器</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓术语</div>
+        <div class="cq-answer-inner"><span class="kw">confounding variables / correlation does not equal causation</span>（混杂变量干扰，测验完成率提升≠单靠网络本身导致大考提分）。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="research">
+      <div class="cq-head"><span class="q-tag">R05 · 纵向追踪审计</span><span class="badge-cw">Research</span></div>
+      <div class="cq-en">为什么 Source 4 的“四年设备留存率审计”比 Source 3 的“六个月试点”更有说服力？</div>
+      <div class="cq-cn">研究周期对比视角</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓术语</div>
+        <div class="cq-answer-inner"><span class="kw">longitudinal comparative audit</span>（纵向跨年追踪能暴露保修耗损、续费枯竭等中长期真实成本，而 6 个月试点只看初期蜜月期）。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="coursework">
+      <div class="cq-head"><span class="q-tag">C01 · 全科字数硬截断</span><span class="badge-c1">All-Coursework</span></div>
+      <div class="cq-en">默写 0457 全部三份 Coursework 文档各自绝对不可逾越的考官停笔截断红线？</div>
+      <div class="cq-cn">保住结论分生死线</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓口诀</div>
+        <div class="cq-answer-inner">IR：<span class="kw">1,500–2,000 词</span>；TP 规划书 ERP：<span class="kw">300–400 词</span>；TP 个人反思论文：<span class="kw">750–1,000 词</span>（超出部分一律直接截断不给分！）。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="coursework">
+      <div class="cq-head"><span class="q-tag">C02 · 视角≠例子</span><span class="badge-c1">All-Coursework</span></div>
+      <div class="cq-en">如何一句话验证自己写出的究竟是“True Perspective”而不是国家举例？</div>
+      <div class="cq-cn">IR &amp; Exam 通用试金石</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓口诀</div>
+        <div class="cq-answer-inner">看是否写出了群体背后的<span class="kw">经济、文化或伦理价值观排序</span>（Why they value X over Y），而不是仅甩出一句某国统计数字。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="coursework">
+      <div class="cq-head"><span class="q-tag">C03 · TP 45分反彩虹屁</span><span class="badge-c1">All-Coursework</span></div>
+      <div class="cq-en">Component 3 中分值最高、最容易被“夸队友+流水账”毁掉的单篇文件及拿分密码？</div>
+      <div class="cq-cn">35% 总成绩命门</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓口诀</div>
+        <div class="cq-answer-inner"><span class="kw">Reflective Paper (45/70 分)</span>：用第一人称 <span class="kw">I</span> 诚实剖析团队冲突、自我失误与行动局限数据，拒绝空泛喊口号。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="coursework">
+      <div class="cq-head"><span class="q-tag">C04 · 引注防抄袭铁律</span><span class="badge-c1">All-Coursework</span></div>
+      <div class="cq-en">Harvard 引注中哪部分计入字数上限，哪部分不计入？</div>
+      <div class="cq-cn">AO3 学术诚信规范</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓口诀</div>
+        <div class="cq-answer-inner">正文括号夹注 <code>(GCM, 2025)</code> <span class="kw">计入词数</span>；文末完整 <span class="kw">Bibliography / Reference List 不计入上限</span>。</div>
+      </div>
+    </div>
+
+    <div class="concept-card" data-part="coursework">
+      <div class="cq-head"><span class="q-tag">C05 · 考前终极避坑清单</span><span class="badge-c1">All-Coursework</span></div>
+      <div class="cq-en">概括 IGCSE GP 0457 冲刺 A* 的终极三句话防丢分铁律？</div>
+      <div class="cq-cn">全科总复盘口诀</div>
+      <div class="cq-answer">
+        <div class="cq-mask-hint">🙈 点击揭晓口诀</div>
+        <div class="cq-answer-inner">笔试<span class="kw">重机制对比与政策权衡</span>；IR <span class="kw">重全球本土价值冲突与嵌入式批判</span>；TP <span class="kw">重小切口实证行动与严守千词尖锐自省</span>！</div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+        <nav class="chapter-pager" aria-label="专题切换导航">
+          <div><a class="pager-btn" href="G07_Team_Project_and_Reflective_Paper.html">← G07 Team Project 本土行动、300–400 词 ERP 与 45 分反思论文</a></div>
+          <div><a class="pager-btn primary" href="index.html">🏠 返回 8 专题总目录</a></div>
+          <div><span style="color:var(--text-faint);font-size:13px;">已是最后一个专题</span></div>
+        </nav>
+      </div>
+    </main>
+  </div>
+
+  <button type="button" class="back-top-btn" id="backTopBtn" title="返回顶部">↑</button>
+
+  <script>
+(function () {
+  'use strict';
+
+  const THEME_KEY = 'igcse_gp0457_theme';
+  const modCode = (document.body && document.body.getAttribute('data-chapter-code')) || 'HUB';
+  const STORAGE_PREFIX = 'igcse_gp0457_' + modCode.toLowerCase() + '_';
+  const htmlEl = document.documentElement;
+  const bodyEl = document.body;
+
+  // All state variables declared cleanly at top of IIFE (prevents TDZ errors)
+  let currentViewMode = localStorage.getItem(STORAGE_PREFIX + 'viewMode') || 'all';
+  let activeConceptPart = 'all';
+  let quizMasked = localStorage.getItem(STORAGE_PREFIX + 'quizMasked') === '1';
+  let allMsExpanded = false;
+  let masteredIds = [];
+  let gpTimerId = null;
+  try {
+    masteredIds = JSON.parse(localStorage.getItem(STORAGE_PREFIX + 'mastered') || '[]');
+    if (!Array.isArray(masteredIds)) masteredIds = [];
+  } catch (e) {
+    masteredIds = [];
+  }
+
+  // ---------- 1. Theme Toggle ----------
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+
+  function applyTheme(theme) {
+    htmlEl.setAttribute('data-theme', theme);
+    if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem(THEME_KEY, theme);
+  }
+  applyTheme(localStorage.getItem(THEME_KEY) || 'light');
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      applyTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  }
+
+  // ---------- 2. View Mode Filter (All / Method / Practice / Cards) ----------
+  function applyViewMode(mode) {
+    currentViewMode = mode;
+    bodyEl.classList.remove('mode-method', 'mode-practice', 'mode-cards');
+    if (mode === 'method') bodyEl.classList.add('mode-method');
+    if (mode === 'practice') bodyEl.classList.add('mode-practice');
+    if (mode === 'cards') bodyEl.classList.add('mode-cards');
+    document.querySelectorAll('[data-view-mode]').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-view-mode') === mode);
+    });
+    localStorage.setItem(STORAGE_PREFIX + 'viewMode', mode);
+  }
+  document.querySelectorAll('[data-view-mode]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      applyViewMode(btn.getAttribute('data-view-mode'));
+    });
+  });
+
+  // ---------- 3. Sidebar Drawer & Accordion ----------
+  const sidebar = document.getElementById('sidebar');
+  const menuToggle = document.getElementById('menuToggle');
+  if (menuToggle && sidebar) {
+    menuToggle.addEventListener('click', function () { sidebar.classList.toggle('open'); });
+    sidebar.querySelectorAll('.nav-link').forEach(function (lnk) {
+      lnk.addEventListener('click', function () {
+        if (window.innerWidth <= 980) sidebar.classList.remove('open');
+      });
+    });
+  }
+  document.querySelectorAll('.nav-unit-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const unit = btn.closest('.nav-unit');
+      if (unit) unit.classList.toggle('collapsed');
+    });
+  });
+
+  // ---------- 4. Mastery Progress Tracker ----------
+  const progressText = document.getElementById('progressText');
+  const progressFill = document.getElementById('progressFill');
+  const masterBtns = Array.from(document.querySelectorAll('.master-btn'));
+  const totalSections = masterBtns.length;
+  const validIds = new Set(masterBtns.map(function (b) { return b.getAttribute('data-section-id'); }));
+
+  function renderMastery() {
+    const doneList = masteredIds.filter(function (id) { return validIds.has(id); });
+    localStorage.setItem(STORAGE_PREFIX + 'total', String(totalSections));
+    if (progressText) progressText.textContent = doneList.length + '/' + totalSections;
+    if (progressFill && totalSections > 0) {
+      progressFill.style.width = Math.round((doneList.length / totalSections) * 100) + '%';
+    }
+    masterBtns.forEach(function (btn) {
+      const sid = btn.getAttribute('data-section-id');
+      const done = doneList.indexOf(sid) !== -1;
+      btn.classList.toggle('is-mastered', done);
+      btn.textContent = done ? '✓ 已掌握' : '○ 标记掌握';
+    });
+    document.querySelectorAll('.nav-link').forEach(function (lnk) {
+      const id = (lnk.getAttribute('href') || '').replace('#', '');
+      lnk.classList.toggle('mastered', doneList.indexOf(id) !== -1);
+    });
+  }
+  masterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const sid = btn.getAttribute('data-section-id');
+      const idx = masteredIds.indexOf(sid);
+      if (idx === -1) masteredIds.push(sid);
+      else masteredIds.splice(idx, 1);
+      localStorage.setItem(STORAGE_PREFIX + 'mastered', JSON.stringify(masteredIds));
+      renderMastery();
+    });
+  });
+  if (totalSections > 0) renderMastery();
+
+  // ---------- 5. Global Toggle Details & Print ----------
+  const toggleAllMs = document.getElementById('toggleAllMs');
+  if (toggleAllMs) {
+    toggleAllMs.addEventListener('click', function () {
+      allMsExpanded = !allMsExpanded;
+      document.querySelectorAll('details.ms-details').forEach(function (det) { det.open = allMsExpanded; });
+      const lbl = toggleAllMs.querySelector('.btn-label');
+      if (lbl) lbl.textContent = allMsExpanded ? '收起解析' : '展开解析';
+      toggleAllMs.classList.toggle('active', allMsExpanded);
+    });
+  }
+  const printBtn = document.getElementById('printBtn');
+  if (printBtn) printBtn.addEventListener('click', function () { window.print(); });
+
+  // ---------- 6. Instant Search ----------
+  const searchInput = document.getElementById('searchInput');
+  const searchClear = document.getElementById('searchClear');
+  const searchBar = document.getElementById('searchBar');
+  const searchSummary = document.getElementById('searchSummary');
+  const searchResetBtn = document.getElementById('searchResetBtn');
+  const emptySearchNotice = document.getElementById('emptySearchNotice');
+
+  function runSearch() {
+    if (!searchInput) return;
+    const raw = searchInput.value.trim().toLowerCase();
+    if (searchClear) searchClear.style.display = raw ? 'block' : 'none';
+    const sections = Array.from(document.querySelectorAll('.topic-section'));
+    if (!raw) {
+      sections.forEach(function (s) { s.classList.remove('search-dim'); });
+      if (searchBar) searchBar.classList.remove('visible');
+      if (emptySearchNotice) emptySearchNotice.style.display = 'none';
+      return;
+    }
+    let hits = 0;
+    sections.forEach(function (sec) {
+      const ok = sec.textContent.toLowerCase().indexOf(raw) !== -1;
+      sec.classList.toggle('search-dim', !ok);
+      if (ok) hits++;
+    });
+    if (searchBar) searchBar.classList.add('visible');
+    if (searchSummary) searchSummary.textContent = '关键词 “' + searchInput.value.trim() + '” 匹配 ' + hits + ' 个板块';
+    if (emptySearchNotice) emptySearchNotice.style.display = hits === 0 ? 'block' : 'none';
+  }
+  if (searchInput) searchInput.addEventListener('input', runSearch);
+  function resetSearch() { if (searchInput) searchInput.value = ''; runSearch(); }
+  if (searchClear) searchClear.addEventListener('click', resetSearch);
+  if (searchResetBtn) searchResetBtn.addEventListener('click', resetSearch);
+
+  // ---------- 7. Interactive MCQ Grading ----------
+  document.querySelectorAll('.exam-q[data-mcq-answer]').forEach(function (qBox) {
+    const ans = qBox.getAttribute('data-mcq-answer');
+    const fb = qBox.querySelector('.mcq-feedback');
+    const opts = qBox.querySelectorAll('.mcq-opt');
+    opts.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const chosen = btn.getAttribute('data-opt');
+        opts.forEach(function (o) { o.classList.remove('correct', 'wrong'); });
+        if (chosen === ans) {
+          btn.classList.add('correct');
+          if (fb) { fb.textContent = fb.getAttribute('data-ok') || '✅ 回答正确！'; fb.className = 'mcq-feedback visible ok'; }
+        } else {
+          btn.classList.add('wrong');
+          opts.forEach(function (o) { if (o.getAttribute('data-opt') === ans) o.classList.add('correct'); });
+          if (fb) { fb.textContent = fb.getAttribute('data-err') || '❌ 未选对，请核对评分标准解析。'; fb.className = 'mcq-feedback visible err'; }
+        }
+      });
+    });
+  });
+
+  // ---------- 8. Flashcards Filter & Mask ----------
+  const conceptCountPill = document.getElementById('conceptCountPill');
+  const conceptQuizToggle = document.getElementById('conceptQuizToggle');
+
+  function filterConcepts() {
+    const cards = Array.from(document.querySelectorAll('#conceptGrid .concept-card'));
+    if (!cards.length) return;
+    let visible = 0;
+    cards.forEach(function (card) {
+      const part = card.getAttribute('data-part');
+      const show = activeConceptPart === 'all' || part === activeConceptPart;
+      card.classList.toggle('concept-hidden', !show);
+      if (show) visible++;
+    });
+    if (conceptCountPill) conceptCountPill.textContent = '显示 ' + visible + ' / ' + cards.length + ' 题';
+  }
+
+  document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      activeConceptPart = btn.getAttribute('data-concept-part');
+      document.querySelectorAll('#conceptFilterTabs [data-concept-part]').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      filterConcepts();
+    });
+  });
+
+  function applyQuizMask(masked) {
+    quizMasked = masked;
+    document.querySelectorAll('#conceptGrid .concept-card').forEach(function (c) { c.classList.toggle('masked', masked); });
+    if (conceptQuizToggle) {
+      conceptQuizToggle.textContent = masked ? '👁️ 显示全部答案' : '🙈 开启遮罩自测';
+      conceptQuizToggle.classList.toggle('active', masked);
+    }
+    localStorage.setItem(STORAGE_PREFIX + 'quizMasked', masked ? '1' : '0');
+  }
+  if (conceptQuizToggle) {
+    conceptQuizToggle.addEventListener('click', function () { applyQuizMask(!quizMasked); });
+  }
+  document.querySelectorAll('#conceptGrid .cq-answer').forEach(function (box) {
+    box.addEventListener('click', function () {
+      const card = box.closest('.concept-card');
+      if (card && card.classList.contains('masked')) card.classList.remove('masked');
+    });
+  });
+
+  function countWords(str) {
+    const cleaned = (str || '').trim();
+    return cleaned ? cleaned.split(/\s+/).filter(Boolean).length : 0;
+  }
+
+  // ---------- 9. All 8 Interactive GP 0457 Strategy Labs (g01 – g08) ----------
+  function mountGpLab(el) {
+    const t = el.getAttribute('data-lab-type');
+    if (!t) return;
+    const bindInputs = function (fn) {
+      el.querySelectorAll('input,select,textarea').forEach(function (inp) {
+        inp.addEventListener('input', fn);
+        inp.addEventListener('change', fn);
+      });
+      fn();
+    };
+
+    if (t === 'g01') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">⏱️ G01 演练台 · Component 1 (85 分钟) 配时策略 & 批判性陈述四类辨析</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>陈述例句：<select id="g1St"><option value="f">“In 2023, 62% of urban households in Country X recycled plastic.” (UN Report)</option><option value="o">“Mandatory recycling fines are unfairly harsh on low-income tenants.”</option><option value="p">“Global lithium demand will almost certainly triple by 2032.”</option><option value="vj">“Governments have a moral duty to prioritise public transport over highways.”</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="g1Out"></div></div></div>';
+      const mp = {
+        f: '<strong>Fact (事实)</strong>：具明确可核查年份、数据比例与来源，能被客观验证真伪（哪怕数据存在局限性也属于可核验事实陈述）。<br><strong>85 分钟配时建议：</strong>读 Booklet 7 min → Q1 (13 min) → Q2 (17 min) → Q3 (20 min) → Q4 (23 min) → 5 min 检查。',
+        o: '<strong>Opinion / Value Judgement 混合判断</strong>：使用情感/评价词 <em>unfairly harsh</em>，无法通过单一统计直接证明对错，反映作者立场。',
+        p: '<strong>Prediction (预测)</strong>：围绕未来尚未发生的趋势（<em>will... by 2032</em>），属于对未来的推论而非既成事实！',
+        vj: '<strong>Value Judgement (价值判断)</strong>：基于伦理道德准则与“应当怎么做”(<em>moral duty / should</em>) 的主观价值取舍。'
+      };
+      bindInputs(function () { el.querySelector('#g1Out').innerHTML = mp[el.querySelector('#g1St').value]; });
+    } else if (t === 'g02') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🔍 G02 实战演练台 · RAVEN 来源可信度构造器 & Q2B (8分) 研究方法检查仪</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>材料类型：<select id="g2Src"><option value="blog">个人环保博主博客 (无参考文献)</option><option value="corp">大型油企赞助的能源报告</option><option value="peer">大学近2年同行评审期刊 (含大样本)</option></select></label>' +
+        '<label>Q2B 检查：<select id="g2Res"><option value="full">完整 4 要素 (方法+样本+变量+局限/效度)</option><option value="weak">常见丢分模板 (“I will ask people on the street”)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="g2Out"></div></div></div>';
+      const sMap = {
+        blog: '<strong>RAVEN 评估</strong>：<strong>Expertise/Ability</strong> 未知或偏弱（非学者）且缺乏一手引用 (<strong>Evidence</strong> 弱)，可能受个人热忱立场影响 (<strong>Bias</strong>)，但若提供直观草根经验仍具备局部参考价值（双向平衡才是满分！）。',
+        corp: '<strong>RAVEN 评估</strong>：拥有专业团队 (<strong>Expertise</strong> 强) 与充足资金调查，但存在高度利益冲突与既得利益立场偏见 (<strong>Vested interest</strong> — 极可能隐藏不利化石燃料的数据)。',
+        peer: '<strong>RAVEN 评估</strong>：近年实效性强 (<strong>Recent</strong>)、经同行评议 (<strong>Authoritative</strong>)、大样本且具原始方法披露 (<strong>Neutral/Evidence</strong>)，可信度高，但仍需留意研究地域/样本人口代表性限制。'
+      };
+      const rMap = {
+        full: '<span style="color:var(--ok-text);">✅ Q2B (8分 Level 4) 模板：</span>① <strong>具体工具</strong>（分层问卷+半结构访谈+政府近5年账单数据）；② <strong>明确对象/样本量/抽样法</strong>（如 200 名跨年龄与职业层代表样本）；③ <strong>验证维度/对比标准</strong>（前测后测对比）；④ <strong>评估该方法局限</strong>（如受访者社会期许偏差）。',
+        weak: '<span style="color:var(--err-text);">❌ 仅 2–3 分写法：</span>只说“问路人”或“上网搜 Google”，缺少样本代表性、具体可测量变量与多方法三角验证，无法拿齐 Q2B 高段分！'
+      };
+      bindInputs(function () {
+        el.querySelector('#g2Out').innerHTML = '<div>' + sMap[el.querySelector('#g2Src').value] + '</div><div style="margin-top:6px;">' + rMap[el.querySelector('#g2Res').value] + '</div>';
+      });
+    } else if (t === 'g03') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">⚖️ G03 演练台 · Q3 (15–16 分) 双源论证“六维比较”句型组装器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>比较维度：<select id="g3Dim"><option value="ev">1. 证据类型与具体性 (Evidence Quality)</option><option value="bal">2. 论证平衡度与反驳 (Balance &amp; Counter-argument)</option><option value="bias">3. 立场偏见与情绪语言 (Bias &amp; Emotive Tone)</option><option value="logic">4. 因果推论链与逻辑跳跃 (Logical Coherence)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="g3Out"></div></div></div>';
+      const dims = {
+        ev: '<strong>万能对比英文框：</strong><em>“Both writers address [topic], yet Writer A is notably stronger because they substantiate their claim with verifiable statistics from [Organisation, Year], whereas Writer B relies purely on uncorroborated personal anecdotes.”</em>',
+        bal: '<strong>万能对比英文框：</strong><em>“While Writer A adopts a balanced approach by explicitly acknowledging potential financial drawbacks before refuting them, Writer B presents a strictly one-sided view that omits any counter-evidence.”</em>',
+        bias: '<strong>万能对比英文框：</strong><em>“Writer B’s reasoning is undermined by heavily emotive language (e.g. ‘catastrophic’, ‘reckless’) and a clear vested interest as an industry spokesperson, whereas Writer A maintains a measured, objective tone.”</em>',
+        logic: '<strong>万能对比英文框：</strong><em>“Writer A builds a clear causal chain linking [cause] to [effect]; by contrast, Writer B commits a logical leap / generalisation by assuming a single pilot programme guarantees nationwide success.”</em>'
+      };
+      bindInputs(function () { el.querySelector('#g3Out').innerHTML = dims[el.querySelector('#g3Dim').value]; });
+    } else if (t === 'g04') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🏛️ G04 演练台 · Q4 (20–24 分) 压轴政策方案“五维评估矩阵”生成器</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>方案评估角度：<select id="g4Ang"><option value="cost">经济成本与可行性 (Cost &amp; Feasibility)</option><option value="time">短期应急 vs 长期治本 (Timescale)</option><option value="stake">不同利益相关方得失 (Stakeholders)</option><option value="rej">为何不选其他两项 (Rejecting Alternatives)</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="g4Out"></div></div></div>';
+      const angs = {
+        cost: '<strong>高分剖析</strong>：不要只空喊 “Option 1 is cheap”，要对比财政预算来源、后期维护成本与当地执行基建能力（<em>In developing regions, capital-intensive subsidies may divert funds from essential healthcare</em>）。',
+        time: '<strong>高分剖析</strong>：把“立刻止血”和“长期转型”结合——例如解释某项教育或激励法案在短期虽见效慢，但十年后能形成自我造血的长期优势；而单纯罚款只治标不治本。',
+        stake: '<strong>高分剖析</strong>：必须至少点出两类受损或受益群体之间的利益拉锯（如中小企业主面临合规负担 vs 低收入家庭受益于补贴与生活成本下降）。',
+        rej: '<strong>Q4 Level 4 硬要求</strong>：必须用整段话直接对比并评估<strong>另外两个未被选中的方案</strong>的致命局限性（即使承认它们各自有一项微弱优点，再论证为何总体性价比仍不及首选方案！）。'
+      };
+      bindInputs(function () { el.querySelector('#g4Out').innerHTML = angs[el.querySelector('#g4Ang').value]; });
+    } else if (t === 'g05') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🧭 G05 诊断台 · Individual Report (IR) 选题质量诊断 & 1500–2000 词结构配额</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>选题案例诊断：<select id="g5Q"><option value="bad1">烂题1：What is climate change and why is it bad?</option><option value="bad2">烂题2：Does fast fashion destroy the environment? (Yes/No封闭)</option><option value="good">A* 选题：To what extent should fast-fashion brands be legally accountable for microplastic pollution in coastal cities?</option></select></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="g5Out"></div></div></div>';
+      const qs = {
+        bad1: '<span style="color:var(--err-text);">❌ 低分科普报告陷阱：</span>导致整篇文章变成复制百科“什么是气候变化+危害”，没有争议点、没有不同利益视角冲突，AO1 极难过半！',
+        bad2: '<span style="color:var(--err-text);">❌ 封闭是非题陷阱：</span>答案几乎是一边倒的 “Yes”，写不出真正有说服力的相反/替代视角与多维度权衡！',
+        good: '<span style="color:var(--ok-text);">✅ A* 开放性程度探讨题：</span>用 <strong>To what extent...</strong> 留下深度拉锯空间——<strong>黄金篇幅分配 (1,750 词目标)</strong>：引言与定义 (~200 词) + 全球视角+来源批判 (~500 词) + 国家/本土冲突视角+来源批判 (~500 词) + 行动方案可行性 (~300 词) + AO2 立场演变反思与结论 (~250 词)！'
+      };
+      bindInputs(function () { el.querySelector('#g5Out').innerHTML = qs[el.querySelector('#g5Q').value]; });
+    } else if (t === 'g06') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">📚 G06 工具台 · Harvard 学术引用生成器 & AO2 立场演变反思框架</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>作者/机构：<input type="text" id="g6Au" value="World Health Organization" style="width:170px;text-align:left;"></label>' +
+        '<label>年份：<input type="text" id="g6Yr" value="2024" style="width:74px;"></label>' +
+        '<label>文章/报告标题：<input type="text" id="g6Ti" value="Urban Air Quality Guidelines" style="width:190px;text-align:left;"></label>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="g6Out"></div></div></div>';
+      bindInputs(function () {
+        const au = (el.querySelector('#g6Au').value || 'Author').trim();
+        const yr = (el.querySelector('#g6Yr').value || '2024').trim();
+        const ti = (el.querySelector('#g6Ti').value || 'Title').trim();
+        el.querySelector('#g6Out').innerHTML =
+          '<div><strong>文内夹注 (In-text citation)：</strong><code>(' + au + ', ' + yr + ')</code></div>' +
+          '<div style="margin-top:4px;"><strong>文末书目 (Bibliography · 不计入 2000 词上限)：</strong>' + au + ' (' + yr + ') <em>' + ti + '</em>. Available at: [URL] (Accessed: [Day Month Year]).</div>' +
+          '<div style="margin-top:4px;"><strong>AO2 (10分) 反思高分钩：</strong>务必指明“我起初如何看待问题 → 读到 <code>' + au + ' (' + yr + ')</code> 的具体反常数据后如何改变/修正了我的原始偏见”！</div>';
+      });
+    } else if (t === 'g07') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">🚨 G07 写作字数红线台 · Team Project ERP (300–400 词) vs Reflective Paper (750–1,000 词)</div></div>' +
+        '<div class="lab-panel write-box">' +
+        '<div class="lab-controls">' +
+        '<label>切换文件：<select id="g7Doc"><option value="erp">团队规划书 ERP (300–400 词 · Team Element)</option><option value="rp">个人反思论文 Reflective Paper (750–1,000 词 · 单占 45 分!)</option></select></label>' +
+        '<span class="wc-meter wc-warn" id="g7Wc">当前词数：0 词 (硬性上限不可超！)</span>' +
+        '</div>' +
+        '<textarea class="write-textarea" id="g7Txt" placeholder="在此输入或粘贴你的 ERP 或 Reflective Paper 草稿（注意：Reflective Paper 考官对超过 1,000 words 后的文字直接截断不予给分！）..."></textarea>' +
+        '<div class="lab-readout"><div class="readout-pill" id="g7Out"></div></div></div>';
+      const docSel = el.querySelector('#g7Doc'), ta = el.querySelector('#g7Txt'), wc = el.querySelector('#g7Wc'), out = el.querySelector('#g7Out');
+      const chk = function () {
+        const n = countWords(ta.value), tp = docSel.value;
+        const minW = tp === 'erp' ? 300 : 750;
+        const maxW = tp === 'erp' ? 400 : 1000;
+        wc.textContent = '当前词数：' + n + ' 词 (标准 ' + minW + '–' + maxW + ' 词)';
+        if (n >= minW && n <= maxW) wc.className = 'wc-meter wc-ok';
+        else if (n > maxW) wc.className = 'wc-meter wc-err';
+        else wc.className = 'wc-meter wc-warn';
+        if (n > maxW) {
+          out.innerHTML = '<span style="color:var(--err-text);">🚨 <strong>严重超限警告！已超出上限 ' + (n - maxW) + ' 词！</strong>考纲明文规定超出 ' + maxW + ' 词后的结论与个人反思部分<strong>考官直接不阅、不计分</strong>！请立即删减冗余叙事！</span>';
+        } else if (tp === 'erp') {
+          out.innerHTML = '<strong>ERP (300–400 词) 必备</strong>：① 本土议题背景+项目目标；② 具体调研分工与时间表；③ 行动成果衡量标准（如前后测问卷数据/参与者数）。';
+        } else {
+          out.innerHTML = '<strong>Reflective Paper (45/70 分!) 五大得分段</strong>：① 行动成果与局限实证评估（用前/后数字证明）；② 个人优势与失误自我批判；③ 团队冲突磨合与沟通得失（对高分至关重要！）；④ 调研中发现的文化/不同视角；⑤ 个人立场变化与后续改善计划。';
+        }
+      };
+      docSel.addEventListener('change', chk);
+      ta.addEventListener('input', chk);
+      chk();
+    } else if (t === 'g08') {
+      el.innerHTML =
+        '<div class="lab-header"><div class="lab-title">📊 G08 冲刺驾驶舱 · Component 1 (70 分 / 85min) 智能估分器 & 15 议题视角卡</div></div>' +
+        '<div class="lab-panel"><div class="lab-controls">' +
+        '<label>Q1 概念提取 (/14)：<input type="number" id="g8_1" value="12" min="0" max="14"></label>' +
+        '<label>Q2 来源研究 (/16)：<input type="number" id="g8_2" value="13" min="0" max="16"></label>' +
+        '<label>Q3 双源对比 (/16)：<input type="number" id="g8_3" value="13" min="0" max="16"></label>' +
+        '<label>Q4 决策评估 (/24)：<input type="number" id="g8_4" value="20" min="0" max="24"></label>' +
+        '<button type="button" class="tab-btn active" id="g8Start">⏳ 85min 笔试计时</button>' +
+        '<button type="button" class="tab-btn" id="g8Reset">重置</button>' +
+        '<span class="timer-big" id="g8Clk" style="font-size:18px;padding:4px 10px;">85:00</span>' +
+        '</div><div class="lab-readout"><div class="readout-pill" id="g8Out"></div></div></div>';
+      const calc = function () {
+        const s1 = Math.min(14, Math.max(0, Number(el.querySelector('#g8_1').value) || 0));
+        const s2 = Math.min(16, Math.max(0, Number(el.querySelector('#g8_2').value) || 0));
+        const s3 = Math.min(16, Math.max(0, Number(el.querySelector('#g8_3').value) || 0));
+        const s4 = Math.min(24, Math.max(0, Number(el.querySelector('#g8_4').value) || 0));
+        const tot = s1 + s2 + s3 + s4;
+        const pct = Math.round((tot / 70) * 100);
+        let tier = '夯实 Q2 RAVEN 双向平衡与 Q4 落选方案批判可大幅提分';
+        if (pct >= 80) tier = '笔试稳居 A* 领跑线（配合 IR 48+/60 与 TP 56+/70 可高稳 A*）';
+        else if (pct >= 68) tier = '稳居 A 档区间（重点防 Q3 只写单边摘要、补足 Q4 五维利益相关方）';
+        el.querySelector('#g8Out').innerHTML =
+          '<div><strong>Component 1 总分：' + tot + ' / 70（约 ' + pct + '% · 占全科 35%）</strong>｜Q3+Q4 占比 ' + (s3 + s4) + '/40</div>' +
+          '<div>策略诊断：<strong>' + tier + '</strong></div>';
+      };
+      bindInputs(calc);
+      el.querySelector('#g8Start').addEventListener('click', function () {
+        if (gpTimerId) { clearInterval(gpTimerId); gpTimerId = null; }
+        let rem = 85 * 60;
+        gpTimerId = setInterval(function () {
+          rem--;
+          const m = Math.floor(rem / 60), r = rem % 60;
+          el.querySelector('#g8Clk').textContent = (m < 10 ? '0' : '') + m + ':' + (r < 10 ? '0' : '') + r;
+          if (rem <= 0) { clearInterval(gpTimerId); gpTimerId = null; }
+        }, 1000);
+      });
+      el.querySelector('#g8Reset').addEventListener('click', function () {
+        if (gpTimerId) { clearInterval(gpTimerId); gpTimerId = null; }
+        el.querySelector('#g8Clk').textContent = '85:00';
+      });
+    }
+  }
+
+  document.querySelectorAll('.lab-box[data-lab-type]').forEach(mountGpLab);
+
+  // ---------- 10. Initialize View & Scroll Spy ----------
+  applyViewMode(currentViewMode);
+  applyQuizMask(quizMasked);
+
+  const backTopBtn = document.getElementById('backTopBtn');
+  const trackedSections = Array.from(document.querySelectorAll('.topic-section[id]'));
+  const navLinks = Array.from(document.querySelectorAll('.sidebar .nav-link'));
+
+  window.addEventListener('scroll', function () {
+    if (backTopBtn) backTopBtn.classList.toggle('visible', window.scrollY > 360);
+    const y = window.scrollY + 110;
+    let currentId = '';
+    trackedSections.forEach(function (sec) {
+      if (sec.offsetTop <= y) currentId = sec.id;
+    });
+    if (currentId) {
+      navLinks.forEach(function (lnk) {
+        const href = lnk.getAttribute('href') || '';
+        if (href.charAt(0) === '#') {
+          lnk.classList.toggle('active', href === '#' + currentId);
+        }
+      });
+    }
+  }, { passive: true });
+
+  if (backTopBtn) {
+    backTopBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+})();
+
+  </script>
+</body>
+</html>
